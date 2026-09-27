@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Devourer2"
+
+	statuseffecttooltip="State_Devourer_Ability2_Other"
+	icon="/heroes/Devourer/alt14/ability_02/icon.dds"
+	
+	anim="ability_2"
+	casttime="0"
+	castactiontime="0"
+	frontqueue="true"
+	inheritmovement="true"
+	noninterrupting="true"
+	nobreakchannel="true"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="toggle"
+	targetradius="250"
+	
+	casteffecttype=""
+	noresponse="true"
+	
+	manacost="0"
+	cooldowntime="0"
+	
+	targetscheme=""
+	
+	dynamicprecache="effects/decay.effect"
+>
+	<onlearn />
+	
+	<ontoggleon>
+		<spawnaffector name="Affector_Devourer_Ability2" istoggle="true" />
+		<applystate name="State_Devourer_Ability2_Self" istoggle="true" />
+	</ontoggleon>
+	
+	<onimpact effectdescription="true"/>
+
+	<!-- Make the aura only heroes, not toggleable, and not work on illusions for krosmode -->
+	<modifier key="krosmode" modpriority="101"
+	>
+		<ontoggleon>
+			<spawnaffector name="Affector_Devourer_Ability2" istoggle="true" />
+			<applystate name="State_Devourer_Ability2_Self" istoggle="true" stack="true" />
+		</ontoggleon>
+	</modifier>
+
+	<ondamaged>
+		<targettype type="self" />
+		<else>
+			<applystate name="State_Devourer_Ability2_Cantdeny" target="this_owner_entity" duration="1000" />
+			<starttimer duration="1000" />
+		</else>
+	</ondamaged>
+
+	<modifier key="decay_active" condition="toggle_active" modpriority="100"
+		casttime="0"
+		anim=""
+	/>
+	
+	<modifier key="devourerult_stage1_1" modpriority="80"
+		targetradius="280"
+	>
+	</modifier>
+	
+	<modifier key="devourerult_stage1_2" modpriority="80"
+		targetradius="310"
+	>
+	</modifier>
+	
+	<modifier key="devourerult_stage1_3" modpriority="80"
+		targetradius="340"
+	>
+	</modifier>
+	
+	<modifier key="devourerult_stage2_1" modpriority="90"
+		targetradius="290"
+	>
+	</modifier>
+	
+	<modifier key="devourerult_stage2_2" modpriority="90"
+		targetradius="330"
+	>
+	</modifier>
+	
+	<modifier key="devourerult_stage2_3" modpriority="90"
+		targetradius="370"
+	>
+	</modifier>
+
+	<modifier key="devourerult_stage3_1" modpriority="100"
+		targetradius="300"
+	>
+	</modifier>
+	
+	<modifier key="devourerult_stage3_2" modpriority="100"
+		targetradius="350"
+	>
+	</modifier>
+	
+	<modifier key="devourerult_stage3_3" modpriority="100"
+		targetradius="400"
+	>
+	</modifier>
+</ability>

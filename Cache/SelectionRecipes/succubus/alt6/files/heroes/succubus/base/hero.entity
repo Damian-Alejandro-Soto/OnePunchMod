@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Succubus"
+
+	team="Hellbourne"
+	icon="/heroes/succubis/alt6/icon.dds"
+	portrait="/heroes/succubis/alt6/icon.dds"
+	model="/heroes/succubis/alt6/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/succubis/alt6/effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/succubis/alt6/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/succubis/alt6/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/succubis/alt6/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/succubis/alt6/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/succubis/alt6/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/succubis/alt6/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/succubis/alt6/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/succubis/alt6/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.8"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="48"
+	targetoffset="0 0 92"
+
+	category="cc magic"
+	difficulty="3.5"
+
+	midrating="2"
+	junglerating="0"
+	carryrating="0"
+	hardsupportrating="5"
+	softsupportrating="0"
+	offlanerating="3"
+	soloofflanerating="0"
+	rangedrating="4"
+	meleerating="0"
+	
+	movespeed="305"
+	turnrate="720"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="0.8"
+	magicarmor="5"
+
+	inventory0="Ability_Succubus1"
+	inventory1="Ability_Succubus2"
+	inventory2="Ability_Succubus3"
+	inventory3="Ability_Succubus4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="300"
+	attackcooldown="1700"
+	attackdamagemin="33"
+	attackdamagemax="39"
+	attacknumanims="2"
+	attackoffset="0 30 100"
+	attackprojectile="Projectile_SuccubusAttack"
+	attackrange="500"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Intelligence"
+	strength="20"
+	strengthperlevel="2.1"
+	agility="20"
+	agilityperlevel="2.1"
+	intelligence="20"
+	intelligenceperlevel="2.1"
+	
+	corpsetime="2000"
+	corpsefadetime="2000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	
+	portraitcampos="12 5 33"
+	
+	previewmodel="/heroes/succubis/alt6/preview.mdf"
+	previewpos="0 0 -80"
+	previewangles="0 0 0"
+	previewscale="1.55"
+	
+	storemodel="/heroes/succubis/alt6/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.3"
+ attackanim="attack_%"
+        icon2="/heroes/succubis/alt6/icon.dds">
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_WardOfSight" />
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_TalismanOfExile" />
+	<recommendeditem name="Item_GhostMarchers" />
+	<recommendeditem name="Item_NomesWisdom" />
+	<recommendeditem name="Item_ShrunkenHead" />
+	<recommendeditem name="Item_Puzzlebox" />
+	<recommendeditem name="Item_StaffOfTheMaster" />
+	<recommendeditem name="Item_KuldrasSheepstick" />
+	
+	<modifier key="ult_boost" modpriority="101"
+	>
+		<aura state="State_Succubus_Ult_Boost" radius="0" targetscheme="self"/>
+	</modifier>
+	
+	<modifier key="iamsheeped" modpriority="1000" passiveeffect="" />
+	
+</hero>

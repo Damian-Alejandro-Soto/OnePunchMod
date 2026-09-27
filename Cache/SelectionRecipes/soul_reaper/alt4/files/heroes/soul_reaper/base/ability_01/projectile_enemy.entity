@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_SoulReaper_Ability1_Enemy"
+
+	speed="600"
+	gravity="0"
+	flying="true"
+	flyheight="100"
+	
+	modelscale="2"
+	model="effects/reaper/model.mdf"
+
+	traileffect="/heroes/helldemon/alt4/ability_01/effects/trail_enemy.effect"
+>
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<setstr0 a="altavatar_path" b="effects/impact_enemy.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" source="target_entity" target="" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="effects/impact_enemy.effect" source="target_entity" target="" />
+				</else>
+				<damage effecttype="Magic" amount="75,150,225,300" target="target_entity" />
+			</onimpact>
+		</combatevent>
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100">
+		<onimpact>
+			<combatevent effecttype="AbilityBasedProjectile">
+				<onimpact>
+					<targettype type="Boss" >
+						<setstr0 a="altavatar_path" b="effects/impact_enemy.effect" op="add" />
+						<exists path="str0">
+							<playeffectdynamic effect="str0" source="target_entity" target="" />
+						</exists>
+						<else>
+							<playeffectdynamic effect="effects/impact_enemy.effect" source="target_entity" target="" />
+						</else>
+						<damage effecttype="Magic" amount="75,150,225,300" target="target_entity" />
+					</targettype>
+					<else>
+						<setstr0 a="altavatar_path" b="effects/impact_enemy.effect" op="add" />
+						<exists path="str0">
+							<playeffectdynamic effect="str0" source="target_entity" target="" />
+						</exists>
+						<else>
+							<playeffectdynamic effect="effects/impact_enemy.effect" source="target_entity" target="" />
+						</else>
+						<evaluate a="target_health" b="0.1" op="mult" />
+						<damage effecttype="Magic" amount="75,150,225,300" b="result" op="add" target="target_entity" />
+					</else>
+				</onimpact>
+			</combatevent>
+		</onimpact>
+	</modifier>
+</projectile>

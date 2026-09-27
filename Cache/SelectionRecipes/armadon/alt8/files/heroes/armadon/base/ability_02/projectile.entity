@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Armadon_Ability2"
+
+	speed="2700"
+	gravity="2500"
+	impactstealth="true"
+
+	modelscale=".4"
+	model="/shared/models/invis.mdf"
+
+	impacteffect="effects/impact.effect"
+ traileffect="/heroes/armadon/alt8/ability_02/effects/trail.effect">
+	<onimpact>
+		<applystate name="State_Armadon_Ability2" target="target_entity" duration="13000" />
+	</onimpact>
+
+</projectile>

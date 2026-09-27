@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Myrmidon_Ability3_MagicArmor"
+
+	icon="/heroes/hydromancer/alt5/ability_03/icon.dds"
+	passiveeffect="/heroes/hydromancer/alt5/ability_03/effects/state.effect"
+	magicarmor="-1,-2,-3,-4"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+>
+	<modifier key="nobossarmor" modpriority="100" condition="Boss" notooltooltip="true"
+		magicarmor="0"
+	/>
+</state>

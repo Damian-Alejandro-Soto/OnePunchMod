@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Armadon_Ability4"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/armadon/alt5/ability_04/effects/state.effect"
+	
+	movespeedmultiplier="0.04,0.05,0.06"
+	movespeedmultiplierpercharge=".01,.02,.03"
+	damage="10,20,30"
+	damagepercharge="8,12,16"
+	
+	effecttype="StatusBuff"
+	allowtransfer="true"
+>
+	
+	<onrefresh>
+		<addcharges count="1" timed="true" />
+	</onrefresh>
+
+</state>

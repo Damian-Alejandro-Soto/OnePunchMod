@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Pharaoh_Ability4"
+
+	gravity="0"
+	useexactlifetime="true"
+	lifetime="500"
+
+	modelscale="1.8"
+	model="/shared/models/invis.mdf"
+	
+	impacteffect="effects/impact.effect"
+	traileffect="/heroes/mumra/alt5/ability_04/effects/projectile.effect"
+	
+	canturn="false"
+	flying="1"
+	flyheight="100"
+	
+	touchradius="125"
+	touchtargetscheme="nonneutral_enemy_units"
+	toucheffecttype="SuperiorMagic"
+	maxtouches="1"
+>
+	<ontouch>
+		<cantarget targetscheme="nonneutral_enemy_units">
+			<delete target="this_entity" />
+			<applystate name="State_Stunned" duration="500" /> 
+			<spawnunit name="Gadget_Pharaoh_Ability4_Draglocation" count="1" target="target_entity" pushentity="true" />
+			<unbind target="this_owner_entity" />
+			<spawnprojectile name="Projectile_Pharaoh_Ability4_Drag" count="1" proxy="stack_entity" target="stack_entity" bind="this_owner_entity" bindturn="true" bindstate="State_Pharaoh_Ability4_Drag" />
+			<playanim name="ability_4_fly" source="this_owner_entity" target="this_owner_entity" />
+		</cantarget>
+	</ontouch>
+</projectile>

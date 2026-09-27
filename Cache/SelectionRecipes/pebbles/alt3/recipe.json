@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "hero": "pebbles",
+  "avatar": "alt3",
+  "files": [
+    "heroes\\pebbles\\base\\hero.entity",
+    "heroes\\pebbles\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\pebbles\\base\\state_ult_boost.entity",
+    "heroes\\pebbles\\base\\state_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\pebbles\\base\\ability_02\\ability.entity",
+    "heroes\\pebbles\\base\\ability_02\\ability.entity.onepunch_ability_managed",
+    "heroes\\pebbles\\base\\ability_02\\state.entity",
+    "heroes\\pebbles\\base\\ability_02\\state.entity.onepunch_ability_managed",
+    "heroes\\pebbles\\base\\ability_04\\ability.entity",
+    "heroes\\pebbles\\base\\ability_04\\ability.entity.onepunch_ability_managed"
+  ]
+}

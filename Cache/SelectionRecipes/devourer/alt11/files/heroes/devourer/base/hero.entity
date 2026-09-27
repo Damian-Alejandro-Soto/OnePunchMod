@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Devourer"
+	
+	team="Hellbourne"
+	icon="/heroes/devourer/alt11/icon.dds"
+	portrait="/heroes/devourer/alt11/icon.dds"
+	model="/heroes/devourer/alt11/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/devourer/alt11/effects/body.effect"
+	spawneffect=""  
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/devourer/alt11/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/devourer/alt11/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/devourer/alt11/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/devourer/alt11/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/devourer/alt11/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/devourer/alt11/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/devourer/alt11/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/devourer/alt11/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="2.5"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="240"
+	boundsradius="36"
+	selectionradius="62"
+	targetoffset="0 0 92"
+
+	category="tank cc"
+	difficulty="4"
+
+	midrating="5"
+	junglerating="0"
+	carryrating="1"
+	hardsupportrating="0"
+	softsupportrating="4"
+	offlanerating="2"
+	soloofflanerating="1"
+	rangedrating="0"
+	meleerating="5"
+	
+	movespeed="285" 
+	turnrate="630"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="0.24"
+	magicarmor="5"
+
+	inventory0="Ability_Devourer1"
+	inventory1="Ability_Devourer2"
+	inventory2="Ability_Devourer3"
+	inventory3="Ability_Devourer4"
+	inventory4="Ability_AttributeBoost"
+	inventory5="Ability_Devourer4_Staff"
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="500"
+	attackcooldown="1700"
+
+	attackdamagemin="27"
+	attackdamagemax="33"
+
+	attacknumanims="2"
+	attackoffset="0 50 100"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+	
+	corpsetime="5000"
+	corpsefadetime="5000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+	primaryattribute="strength"
+	strength="25"
+	strengthperlevel="3.0"
+	agility="14"
+	agilityperlevel="1.5"
+	intelligence="14"
+	intelligenceperlevel="1.5"
+	
+
+	previewpos="0 0 -60"
+	previewangles="0 0 0"
+	previewscale="1.6"
+	
+	storemodel="/heroes/devourer/alt11/preview.mdf"
+	storepos="0 0 -17"
+	storeangles="0 0 0"
+	storescale="2.0"
+ attackanim="attack_%"
+        icon2="/heroes/devourer/alt11/icon.dds"
+        infoheight="300"
+        previewmodel="/heroes/devourer/alt11/preview.mdf"
+        storepassiveeffect="/heroes/devourer/alt11/effects/body_store.effect">
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_PortalKey" />
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_BloodChalice" />
+	<recommendeditem name="Item_PlatedGreaves" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_PostHaste" />
+	<recommendeditem name="Item_PegasusBoots" />
+	<recommendeditem name="Item_Soultrap" />
+	<recommendeditem name="Item_KuldrasSheepstick" />
+	<recommendeditem name="Item_JadeSpire" />
+	<recommendeditem name="Item_StaffoftheMaster" />
+	<recommendeditem name="Item_IronShield" />
+	<recommendeditem name="Item_ShamansHeadress" />
+	<recommendeditem name="Item_HelmoftheBlackLegion" />
+	<recommendeditem name="Item_UltorsHeavyPlate" />
+	<recommendeditem name="Item_ShieldoftheFive" />
+	<recommendeditem name="Item_BarrierIdol" />
+	<recommendeditem name="Item_FrostfieldPlate" />
+	
+	<gooditemagainst name="Item_MysticVestments" />
+	<gooditemagainst name="Item_Stormspirit" />
+	<gooditemagainst name="Item_KuldrasSheepstick" />
+	<gooditemagainst name="Item_NullStone" />
+	<gooditemagainst name="Item_AdevesCloak" />
+	<gooditemagainst name="Item_Riftshards" />
+	<gooditemagainst name="Item_NullfireBlade" />
+	
+	<modifier key="iamsheeped" modpriority="201"
+		passiveeffect=""
+	/>
+	
+	<!-- Staff of the master upgrade effect-->
+	<modifier key="ult_boost" modpriority="100"
+		passiveeffect=""
+	>
+		<aura state="State_Devourer_Ult_Boost" radius="0" targetscheme="self"/>
+	</modifier>
+	
+	<modifier key="devourerult_stage1" modpriority="80"
+		preglobalscale="2.8"
+	/>
+
+	<modifier key="devourerult_stage2" modpriority="90"
+		preglobalscale="3.2"
+	/>
+
+	<modifier key="devourerult_stage3" modpriority="100"
+		preglobalscale="3.6"
+	/>
+</hero>

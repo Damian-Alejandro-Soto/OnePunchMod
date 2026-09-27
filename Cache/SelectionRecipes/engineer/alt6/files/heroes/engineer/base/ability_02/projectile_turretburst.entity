@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_EngineerTurretAttackBurst"
+
+	speed="5000"
+	gravity="0"
+
+	modelscale=".3"
+	model="/heroes/engineer/base/ability_02/turret/bullet/bullet.mdf"
+	
+	traileffect="/heroes/engineer/alt6/ability_02/effects/trail.effect"
+	
+	flying="true"
+	flyheight="70"
+>	
+	
+</projectile>

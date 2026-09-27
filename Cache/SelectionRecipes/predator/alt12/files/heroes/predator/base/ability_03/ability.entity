@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Predator3"
+
+	icon="../../icon.dds"
+	anim="ability_3"
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	passiveeffect="/heroes/predator/alt12/ability_03/effects/state.effect"
+	actiontype="passive"
+	modifierkey="Predator_E_Leveled"
+	dynamicprecache="effects/state_onattack.effect,effects/impact.effect"
+>
+	<onattackimpact effectdescription="true" >
+		<cantarget targetscheme="enemy_nonboss_units">
+			<setvar0 a="target_health" />
+			<setvar0 a="0.02,0.04,0.06,0.08" b="var0" op="mult" />
+			<targettype type="illusion" target="source_entity" >
+				<heal target="source_entity" a="var0" b="0.33" op="mult" />
+				<damage effecttype="Physical" amount="0.33" b="var0" op="mult" nonlethal="true" />
+			</targettype>
+			<else>
+				<heal target="source_entity" a="var0" />
+				<damage effecttype="Physical" amount="1" b="var0" op="mult" nonlethal="true" />
+			</else>
+		</cantarget>
+
+		<!-- VFX -->
+		<setstr0 a="altavatar_path" b="effects/state_onattack.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="target_entity"/>
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/state_onattack.effect" target="target_entity"/>
+		</else>
+
+		<setstr1 a="altavatar_path" b="effects/impact.effect" op="add" />
+		<exists path="str1">
+			<playeffectdynamic effect="str1" source="target_entity" target="target_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impact.effect" source="target_entity" target="target_entity" />
+		</else>
+	</onattackimpact>
+</ability>

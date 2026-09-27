@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_DrunkenMaster_Ability1_Orbit"
+
+	lifetime="1500"
+	useexactlifetime="true"
+	
+	modelscale=".75"
+	model="/shared/models/invis.mdf"
+
+	effectscale="1.0"
+	impacteffect=""
+	traileffect="/heroes/drunkenmaster/alt10/ability_01/effects/circle_trail.effect"
+	
+	canturn="true"
+	flying="true"
+	flyheight="0"
+	
+	orbitclockwise="true"
+	orbit="true"
+	orbitradius="60"
+	orbitspeed="240"
+	orbitmaxspeed="240"
+	orbitmaxtouchespertarget="1"
+	orbitmodelangles="0"
+	
+	touchradius="1"
+	touchtargetactivescheme="nonillusion_nonself_stealth"
+	touchtargetscheme="enemy_units"
+	toucheffecttype="Magic"
+>
+	<ondisjointed>		
+		<expirestate name="State_DrunkenMaster_Ability1_Stun" target="target_entity" />
+		<expirestate name="State_DrunkenMaster_Ability1_CircleDisarm" target="this_owner_entity" />
+	</ondisjointed>
+
+	<ontouch>
+	
+	</ontouch>	
+</projectile>

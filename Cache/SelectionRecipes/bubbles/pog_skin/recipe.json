@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "bubbles",
+  "avatar": "pog_skin",
+  "files": [
+    "heroes\\bubbles\\base\\hero.entity",
+    "heroes\\bubbles\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\bubbles\\base\\ability_01\\gadget.entity",
+    "heroes\\bubbles\\base\\ability_01\\gadget.entity.onepunch_ability_managed"
+  ]
+}

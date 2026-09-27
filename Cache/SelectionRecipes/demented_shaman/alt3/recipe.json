@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "hero": "demented_shaman",
+  "avatar": "alt3",
+  "files": [
+    "heroes\\demented_shaman\\base\\hero.entity",
+    "heroes\\demented_shaman\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\demented_shaman\\base\\ability_01\\ability.entity",
+    "heroes\\demented_shaman\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\demented_shaman\\base\\ability_01\\state_dot.entity",
+    "heroes\\demented_shaman\\base\\ability_01\\state_dot.entity.onepunch_ability_managed",
+    "heroes\\demented_shaman\\base\\ability_01\\state_snare.entity",
+    "heroes\\demented_shaman\\base\\ability_01\\state_snare.entity.onepunch_ability_managed",
+    "heroes\\demented_shaman\\base\\ability_04\\ability.entity",
+    "heroes\\demented_shaman\\base\\ability_04\\ability.entity.onepunch_ability_managed",
+    "heroes\\demented_shaman\\base\\ability_04\\state_allies.entity",
+    "heroes\\demented_shaman\\base\\ability_04\\state_allies.entity.onepunch_ability_managed",
+    "heroes\\demented_shaman\\base\\ability_04\\state_enemies.entity",
+    "heroes\\demented_shaman\\base\\ability_04\\state_enemies.entity.onepunch_ability_managed",
+    "heroes\\demented_shaman\\base\\projectile\\projectile.entity",
+    "heroes\\demented_shaman\\base\\projectile\\projectile.entity.onepunch_ability_managed"
+  ]
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Gunblade_Ability4_Art"
+
+	speed="2500"
+	gravity="1000"
+
+	modelscale="3.5"
+	model="/shared/models/invis.mdf"
+
+	traileffect="/heroes/gunblade/alt8/ability_04/effects/trail.effect"
+	impacteffect="/heroes/gunblade/alt5/ability_04/effects/impact.effect"
+
+>
+
+</projectile>

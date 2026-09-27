@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "hero": "magebane",
+  "avatar": "alt7",
+  "files": [
+    "heroes\\magebane\\base\\hero.entity",
+    "heroes\\magebane\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\magebane\\base\\ability_01\\ability.entity",
+    "heroes\\magebane\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\magebane\\base\\ability_02\\ability.entity",
+    "heroes\\magebane\\base\\ability_02\\ability.entity.onepunch_ability_managed",
+    "heroes\\magebane\\base\\ability_02\\state_shield.entity",
+    "heroes\\magebane\\base\\ability_02\\state_shield.entity.onepunch_ability_managed",
+    "heroes\\magebane\\base\\ability_03\\state_mana.entity",
+    "heroes\\magebane\\base\\ability_03\\state_mana.entity.onepunch_ability_managed",
+    "heroes\\magebane\\base\\ability_03\\state_mana_aura.entity",
+    "heroes\\magebane\\base\\ability_03\\state_mana_aura.entity.onepunch_ability_managed",
+    "heroes\\magebane\\base\\ability_04\\ability.entity",
+    "heroes\\magebane\\base\\ability_04\\ability.entity.onepunch_ability_managed",
+    "heroes\\magebane\\base\\ability_04\\affector.entity",
+    "heroes\\magebane\\base\\ability_04\\affector.entity.onepunch_ability_managed"
+  ]
+}

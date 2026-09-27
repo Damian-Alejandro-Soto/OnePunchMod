@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "hero": "predator",
+  "avatar": "alt11",
+  "files": [
+    "heroes\\predator\\base\\hero.entity",
+    "heroes\\predator\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\predator\\base\\ability_04\\state_buff.entity",
+    "heroes\\predator\\base\\ability_04\\state_buff.entity.onepunch_ability_managed",
+    "heroes\\predator\\base\\ability_04\\state_buff_sotm.entity",
+    "heroes\\predator\\base\\ability_04\\state_buff_sotm.entity.onepunch_ability_managed"
+  ]
+}

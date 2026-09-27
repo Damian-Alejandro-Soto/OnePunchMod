@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Monarch_Attack"
+
+	speed="1000"
+	gravity="0"
+	
+	canturn="false"
+	flying="true"
+	flyheight="90"
+
+	modelscale=".5"
+	model="/shared/models/invis.mdf"
+
+	effectscale="1.8"
+	impacteffect="/heroes/monarch/alt6/effects/impact.effect"
+	traileffect="/heroes/monarch/alt6/effects/trail.effect"
+>
+
+</projectile>

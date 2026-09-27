@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_MoonQueen"
+
+	team="Legion"
+	icon="/heroes/krixi/reskin/icon.dds"
+	animatedportrait=""
+	portrait="/heroes/krixi/reskin/icon.dds"
+	model="/heroes/krixi/reskin/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/krixi/reskin/effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.71"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="280"
+	boundsradius="24"
+	selectionradius="51"
+	targetoffset="0 0 64"
+
+	category="physical magic"
+	difficulty="1"
+
+	midrating="2"
+	junglerating="0"
+	carryrating="5"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="0"
+	soloofflanerating="0"
+	rangedrating="3"
+	meleerating="0"
+	
+	movespeed="320"
+	turnrate="540"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="0"
+	magicarmor="5.0"
+
+	inventory0="Ability_MoonQueen1"
+	inventory1="Ability_MoonQueen2"
+	inventory2="Ability_MoonQueen3"
+	inventory3="Ability_MoonQueen4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="405"
+	attackcooldown="1700"
+	attackdamagemin="28"
+	attackdamagemax="34"
+	attacknumanims="2"
+	attackoffset="25 20 120"
+	attackprojectile="Projectile_MoonQueenAttackAlt"
+	attackrange="350"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="agility"
+	strength="17"
+	strengthperlevel="2.2"
+	agility="20"
+	agilityperlevel="3.2"
+	intelligence="16"
+	intelligenceperlevel="1.9"
+	
+
+	previewpos="0 0 -100"
+	previewangles="0 0 0"
+	previewscale="1.8"
+	
+	storemodel="/heroes/krixi/reskin/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.5"
+
+        icon2="/heroes/krixi/reskin/icon.dds"
+        infoheight="185"
+        previewmodel="/heroes/krixi/reskin/preview.mdf">
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_SoulscreamRing" />
+	<recommendeditem name="Item_Firebrand" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_KuldrasSheepstick" />
+	<recommendeditem name="Item_Energizer" />
+	<recommendeditem name="Item_AssassinsShroud" />
+	<recommendeditem name="Item_ShrunkenHead" />
+	<recommendeditem name="Item_Genjuro" />
+	<recommendeditem name="Item_Wingbow" />
+	<recommendeditem name="Item_Riftshards" />
+	<recommendeditem name="Item_GeometersBane" />
+	<recommendeditem name="Item_SavageMace" />
+	<recommendeditem name="Item_FauxBow" />
+	<recommendeditem name="Item_WhisperingHelm" />
+	<recommendeditem name="Item_SymboloftheRage" />
+	
+	<gooditemagainst name="Item_MysticVestments" />
+	<gooditemagainst name="Item_Stormspirit" />
+	<gooditemagainst name="Item_KuldrasSheepstick" />
+	<gooditemagainst name="Item_IronShield" />
+	<gooditemagainst name="Item_BarbedArmor" />
+	<gooditemagainst name="Item_Wingbow" />
+	<gooditemagainst name="Item_FrostfieldPlate" />
+	<gooditemagainst name="Item_Brutalizer" />
+	<gooditemagainst name="Item_SpikedBola" />
+	
+	
+	
+	<modifier key="iamsheeped" modpriority="201"
+		passiveeffect=""
+	/>
+	
+	<modifier key="Krixi_E" modpriority="101"
+		sightrangenight="1600"
+	/>
+
+	<!-- Staff of the master upgrade effect-->
+	<modifier key="ult_boost" modpriority="100"
+		passiveeffect="effects/boost.effect"
+	>
+	</modifier>
+</hero>

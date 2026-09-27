@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Gauntlet2"
+	
+	icon="/heroes/gauntlet/alt4/ability_02/icon.dds"
+	
+	anim="ability_2"
+	casttime="800"
+	castactiontime="250"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	casteffecttype="Physical Push"
+	targetscheme="all_other_heroes"
+	
+	manacost="90,100,110,120"
+	cooldowntime="16000"
+	cooldowntype="Gauntlet_Grapple"
+
+	range="800,900,1000,1100"
+	targetradius="80"
+	
+	modifierkey="Gauntlet_W1,Gauntlet_W2,Gauntlet_W3,Gauntlet_W4"
+	
+	showlinecast="true"
+	linecastrange="830,930,1030,1130"
+	linecastwidth="80"
+	
+	showrangeandradiusintooltip="true"
+	dynamicprecache="effects/impact.effect"
+>
+	<onlearn>
+		<hasmodifier entity="source_entity" name="track_abilities">
+			<setgameplaystat index="0" target="source_entity" a="0" /> <!-- Attempts to grapple -->
+			<setgameplaystat index="1" target="source_entity" a="0" /> <!-- grapple hits -->
+		</hasmodifier>
+	</onlearn>
+
+	<onimpact>
+		<spawnunit name="Gadget_Gauntlet_Ability2" target="target_position" duration="-1" pushentity="true" />
+		<setproxy target="stack_entity" />
+		<distance target="stack_entity" />
+		<compare a="result" b="75" op="lt">
+			<delete target="stack_entity" />
+			<setpos0 entity="source_entity" offset="0 80 0" offsetspace="source_entity" />
+			<spawnunit name="Gadget_Gauntlet_Ability2" target="pos0" duration="-1" pushentity="true" />
+			<setproxy target="stack_entity" />
+			<spawnprojectile name="Projectile_Gauntlet_Ability2" source="source_entity" target="pos0" proxy="this_proxy_entity" offset="0 75 0" />
+		</compare>
+		<else>
+			<spawnprojectile name="Projectile_Gauntlet_Ability2" source="source_entity" target="target_position" proxy="this_proxy_entity" offset="0 75 0" />
+		</else>
+
+		<hasmodifier entity="source_entity" name="track_abilities">
+			<setgameplaystat index="0" target="source_entity" a="target_gameplaystat0" b="1" op="add" /> <!-- Grapple Attempt! +1 -->
+		</hasmodifier>
+	</onimpact>
+
+	<modifier key="krosmode" modpriority="100"
+		cooldowntype=""
+		interface="single"
+		modifierkey=""
+	>
+	</modifier>
+</ability>

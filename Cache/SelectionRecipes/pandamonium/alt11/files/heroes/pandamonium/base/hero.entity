@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Pandamonium"
+
+	team="Legion"
+	icon="/heroes/panda/alt11/icon.dds"
+	portrait="/heroes/panda/alt11/icon.dds"
+	model="/heroes/panda/alt11/model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/panda/alt11/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/panda/alt11/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/panda/alt11/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/panda/alt11/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/panda/alt11/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/panda/alt11/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/panda/alt11/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/panda/alt11/sounds/voice/taunt_after.wav"
+	preglobalscale="1.5"
+
+	infoheight="185"
+
+	modelscale="0.95"
+	effectscale="1"
+	boundsheight="140"
+	boundsradius="24"
+	selectionradius="55"
+	targetoffset="0 0 64"
+
+	category="cc physical"
+	difficulty="4"
+
+	midrating="5"
+	junglerating="0"
+	carryrating="3"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="4"
+	soloofflanerating="2"
+	rangedrating="0"
+	meleerating="5"
+
+	movespeed="295"
+	turnrate="1080"
+	turnsmoothing="0.1"
+	
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="1.12"
+	magicarmor="5"
+
+	inventory0="Ability_Pandamonium1"
+	inventory1="Ability_Pandamonium2"
+	inventory2="Ability_Pandamonium3"
+	inventory3="Ability_Pandamonium4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="900"
+	attackactiontime="400"
+	attackcooldown="1700"
+	attackdamagemin="25"
+	attackdamagemax="34"
+	attacknumanims="3"
+	attackoffset="20 64 100"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="/heroes/panda/alt11/effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+	
+	corpsetime="2000"
+	corpsefadetime="3000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+	primaryattribute="strength"
+	strength="25"
+	strengthperlevel="3.0"
+	agility="17"
+	agilityperlevel="1.7"
+	intelligence="17"
+	intelligenceperlevel="1.8"
+	
+
+	previewpos="0 0 -70"
+	previewangles="0 0 0"
+	previewscale="1.7"
+	
+	storemodel="/heroes/panda/alt11/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.5"
+	
+ attackanim="attack_%"
+        icon2="/heroes/panda/alt11/icon.dds"
+        previewmodel="/heroes/panda/alt11/preview.mdf"
+        portraitcampos="-20 40 15">
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_PortalKey" />
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_BloodChalice" />
+	<recommendeditem name="Item_GhostMarchers" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_Soultrap" />
+	<recommendeditem name="Item_SolsBulwark" />
+	<recommendeditem name="Item_ShrunkenHead" />
+	<recommendeditem name="Item_BehemothsHeart" />
+	<recommendeditem name="Item_DaemonicBreastplate" />
+	<recommendeditem name="Item_Riftshards" />
+	<recommendeditem name="Item_Insanitarius" />
+	
+	<gooditemagainst name="Item_PlatedGreaves" />
+	<gooditemagainst name="Item_KuldrasSheepstick" />
+	<gooditemagainst name="Item_DaemonicBreastplate" />
+	<gooditemagainst name="Item_ShieldoftheFive" />
+	<gooditemagainst name="Item_AdevesCloak" />
+	<gooditemagainst name="Item_Brutalizer" />
+	<gooditemagainst name="Item_SpikedBola" />
+	
+	
+	
+	<oninflicted>
+		<entitytype type="State_Taunting" target="inflictor_entity">
+			<setproxy entity="this_entity" target="inflictor_entity" />
+		</entitytype>
+	</oninflicted>
+
+	<modifier key="ult_boost" modpriority="101"
+    >
+        <aura state="State_Pandamonium_Ult_Boost" radius="0" targetscheme="self"/>
+    </modifier>
+
+	<modifier key="night_set_pandaalt11" model="/heroes/panda/alt10/model.mdf" attackimpacteffect="/heroes/panda/alt10/effects/impact.effect" />
+</hero>

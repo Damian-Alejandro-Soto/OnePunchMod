@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Accursed_Ability4"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/accursed/alt5/ability_04/effects/ability.effect"
+	effecttype=""
+	
+	displaylevel="true"
+	modifierkey="blue_sword"
+	dynamicprecache="effects/impact.effect"	
+>
+	<ondamaged priority="1">
+		<heal source="source_entity" target="source_entity" a="source_damage" />
+		<scaledamage scale="0.0" />
+	</ondamaged>
+
+	<onattackimpact>
+		<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_entity" target="" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impact.effect" source="target_entity" target="" />
+		</else>
+	</onattackimpact>
+	
+	<onframe />
+</state>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Chronos3"
+
+	icon="/heroes/chronos/alt9/ability_03/icon.dds"
+	statuseffecttooltip="State_Chronos_Ability3"
+	statuseffecttooltip2="State_Chronos_Ability3_Self"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="passive"
+	cooldowntype="bashing"
+	cooldowntime="1300"
+>
+	
+	<onlearn>
+		<!-- Proc chance = 25% -->
+		<setaccumulator value="0.08474" />
+	</onlearn>
+	
+	<onattackimpact>
+		<canactivate>
+			<cantarget targetscheme="enemy_units" effecttype="Magic">			
+				<!-- Proc chance increases by 3x if target is affected by Chronofield -->
+				<hasmodifier name="chronos_ability4_Affected" entity="target_entity">
+					<setaccumulator value="accumulator" valueb="3" valueop="mult" />
+				</hasmodifier>
+			
+				<chance threshold="accumulator">
+					<!-- Illusion script -->
+					<targettype type="illusion" target="source_entity" >
+						<damage effecttype="Magic" amount="0.33" b="45,70,95,120" op="mult" />
+					</targettype>
+					<else>
+						<applystate name="State_Chronos_Ability3_Timelock" duration="1000" />
+						<damage effecttype="Magic" amount="45,70,95,120" />
+						<setaccumulator value="0.08474" />
+					</else>
+					
+					<startcooldown />
+				</chance>
+				<else>
+					<!-- If target was affected by Chronofield, then halve accumulator before adjusting it again -->
+					<hasmodifier name="chronos_ability4_Affected" entity="target_entity">
+						<setaccumulator value="accumulator" valueb="3" valueop="div" />
+					</hasmodifier>
+					
+					<setaccumulator value="accumulator" valueb="0.08474" valueop="add" />
+				</else>
+			</cantarget>
+		</canactivate>
+	</onattackimpact>
+	
+	<modifier key="chronos_ability4_Haste" modpriority="100"
+		cooldowntime="0"
+	>
+	</modifier>
+</ability>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_ShadowBlade"
+
+	team="Hellbourne"
+	icon="/heroes/shadowblade/alt6/icon.dds"
+	portrait="/heroes/shadowblade/alt6/icon.dds"
+	model="/heroes/shadowblade/alt6/model.mdf"
+	skin=""
+
+	passiveeffect="/heroes/shadowblade/alt6/effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/shadowblade/alt6/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/shadowblade/alt6/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/shadowblade/alt6/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/shadowblade/alt6/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/shadowblade/alt6/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/shadowblade/alt6/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/shadowblade/alt6/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/shadowblade/alt6/sounds/voice/taunt_after.wav"
+
+	preglobalscale="1.9"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="48"
+	targetoffset="0 0 92"
+
+	category="physical magic"
+	difficulty="2.5"
+
+	midrating="0"
+	junglerating="0"
+	carryrating="4"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="0"
+	soloofflanerating="0"
+	rangedrating="0"
+	meleerating="5"
+
+	movespeed="305"
+	turnrate="720"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="1.0"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="1"
+	magicarmor="5.0"
+
+	inventory0="Ability_ShadowBlade1"
+	inventory1="Ability_ShadowBlade2"
+	inventory2="Ability_ShadowBlade3"
+	inventory3="Ability_ShadowBlade4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="500"
+	attackcooldown="1700"
+	attackdamagemin="29"
+	attackdamagemax="33"
+	attacknumanims="2"
+	attackoffset="0 30 100"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Agility"
+	strength="22"
+	strengthperlevel="2.2"
+	agility="22"
+	agilityperlevel="2.2"
+	intelligence="22"
+	intelligenceperlevel="2.2"
+
+	corpsetime="1000"
+	corpsefadetime="1000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+
+	previewpos="0 0 -70"
+	previewangles="0 0 0"
+	previewscale="1.7"
+
+	storemodel="/heroes/shadowblade/alt6/preview.mdf"
+	storepos="0 0 -25"
+	storeangles="0 0 0"
+	storescale="1.5"
+	storepassiveeffect=""
+ attackanim="attack_%"
+        portraitcampos="25 -10 25"
+        icon2="/heroes/shadowblade/alt6/icon.dds"
+        infoheight="185"
+        previewmodel="/heroes/shadowblade/alt6/store.mdf">
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	<recommendeditem name="Item_LoggersHatchet" />
+
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_Insanitarius" />
+	<recommendeditem name="Item_ShrunkenHead" />
+	<recommendeditem name="Item_Riftshards" />
+	<recommendeditem name="Item_SymbolOfRage" />
+	<recommendeditem name="Item_DaemonicBreastplate" />
+	<recommendeditem name="Item_BehemothsHeart" />
+
+	<modifier key="iamsheeped" modpriority="101"
+		passiveeffect=""
+	/>
+
+	<modifier key="ult_boost" modpriority="100"
+	>
+		<aura state="State_Shadowblade_Ult_Boost" radius="0" targetscheme="self"/>
+	</modifier>
+
+	<modifier key="ShadowBlade_Q_Form" modpriority="100"
+		passiveeffect="/heroes/shadowblade/alt6/effects/str_body.effect"
+		model="/heroes/shadowblade/alt6/ability_01/effects/shadowq/model.mdf"
+		preglobalscale="1.8"
+		attackimpacteffect="/heroes/shadowblade/alt6/effects/impact_strength.effect"
+	 effectscale="1.2"/>
+
+	<modifier key="ShadowBlade_W_Form" modpriority="100"
+		passiveeffect="/heroes/shadowblade/alt6/effects/agi_body.effect"
+		model="/heroes/shadowblade/alt6/ability_02/effects/shadoww/model.mdf"
+		preglobalscale="2"
+		attackimpacteffect="ability_02/effects/shadoww/effects/impact.effect"
+	/>
+
+	<modifier key="ShadowBlade_E_Form" modpriority="100"
+		passiveeffect="/heroes/shadowblade/alt6/effects/int_body.effect"
+		model="/heroes/shadowblade/alt6/ability_03/effects/shadowe/model.mdf"
+		preglobalscale="1.7"
+		attackprojectile="Projectile_ShadowBlade_Ability3"
+		attackimpacteffect="ability_03/effects/shadowe/effects/impact.effect"
+		attackcooldown="1700"
+		attackoffset="0 100 70"
+		attackrange="550"
+		attacktype="ranged"
+		aggrorange="800"
+	/>
+
+	<modifier key="Shadowblade_R_Int" modpriority="100"
+		primaryattribute="Intelligence"
+	/>
+
+	<modifier key="Shadowblade_R_Str" modpriority="100"
+		primaryattribute="Strength"
+	/>
+
+	<modifier key="Shadowblade_R_Agi" modpriority="100"
+		primaryattribute="Agility"
+	/>
+</hero>

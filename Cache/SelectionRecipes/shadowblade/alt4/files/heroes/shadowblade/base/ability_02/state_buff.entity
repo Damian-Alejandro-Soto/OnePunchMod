@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Shadowblade_Ability2_Buff"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/shadowblade/alt4/ability_02/effects/state_self.effect"
+	
+	effecttype=""
+	allowtransfer="false"
+	
+	damagepercharge="1"
+>
+	<onframe />
+</state>

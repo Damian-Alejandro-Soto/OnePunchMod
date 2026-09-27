@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Midas"
+
+	team="Legion"
+	icon="/heroes/midas/alt6/icon.dds"
+	animatedportrait=""
+	portrait="/heroes/midas/alt6/icon.dds"
+	model="/heroes/midas/alt6/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/midas/alt6/effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/midas/alt6/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/midas/alt6/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/midas/alt6/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/midas/alt6/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/midas/alt6/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/midas/alt6/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/midas/alt6/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/midas/alt6/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.90"
+	modelscale="1.0"
+	effectscale="1"
+	boundsheight="140"
+	boundsradius="24"
+	selectionradius="48"
+	targetoffset="0 0 64"
+	infoheight="180"
+
+	category="magic cc"
+	difficulty="5"
+
+	midrating="5"
+	junglerating="0"
+	carryrating="0"
+	hardsupportrating="0"
+	softsupportrating="4"
+	offlanerating="3"
+	soloofflanerating="4"
+	rangedrating="4"
+	meleerating="0"
+
+	movespeed="300"
+	turnrate="720"
+	turnsmoothing="0.05"
+	
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="1.3"
+	magicarmor="5"
+
+	inventory0="Ability_Midas1"
+	inventory1="Ability_Midas2"
+	inventory2="Ability_Midas3"
+	inventory3="Ability_Midas4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="350"
+	attackcooldown="1700"
+	attackdamagemin="28"
+	attackdamagemax="34"
+	attacknumanims="2"
+	attackoffset="-55 50 80"
+	attackprojectile="Projectile_Midas_Attack"
+	attackrange="500"
+	attackstarteffect=""
+	attackactioneffect="/heroes/midas/alt6/effects/attack.effect"
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+	
+	corpsetime="1000"
+	corpsefadetime="3000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+	primaryattribute="intelligence"
+	strength="20"
+	strengthperlevel="2.0"
+	agility="12"
+	agilityperlevel="1.2"
+	intelligence="22"
+	intelligenceperlevel="3"
+	
+
+	previewpos="0 0 -50"
+	previewangles="0 0 0"
+	previewscale="1.4"
+	
+	storemodel="/shared/models/invis.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.55"
+ attackanim="attack_%"
+        icon2="/heroes/midas/alt6/icon.dds"
+        portraitcampos="15 -40 20"
+        previewmodel="/shared/models/invis.mdf"
+        storepassiveeffect="/heroes/midas/alt6/effects/body_lvl_4_store.effect">
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_PowerSupply" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_BloodChalice" />
+	<recommendeditem name="Item_GhostMarchers" />
+	<recommendeditem name="Item_TabletOfCommand" />
+	<recommendeditem name="Item_Astrolabe" />
+	
+	<recommendeditem name="Item_NomesWisdom" />
+	<recommendeditem name="Item_PortalKey" />
+	<recommendeditem name="Item_Stormspirit" />
+	<recommendeditem name="Item_Frostburn" />
+	<recommendeditem name="Item_BehemothsHeart" />
+
+	<modifier key="alt6_level_1" model="/heroes/midas/alt6/lvl_1/model.mdf" />
+	<modifier key="alt6_level_2" passiveeffect="/heroes/midas/alt6/effects/body_lvl_1.effect" />
+	<modifier key="alt6_level_4" model="/heroes/midas/alt6/lvl_2/model.mdf" />
+	<modifier key="alt6_level_5" passiveeffect="/heroes/midas/alt6/effects/body_lvl_2.effect" />
+	<modifier key="alt6_level_7" model="/heroes/midas/alt6/lvl_3/model.mdf" />
+	<modifier key="alt6_level_8" passiveeffect="/heroes/midas/alt6/effects/body_lvl_3.effect" />
+	<modifier key="alt6_level_10" passiveeffect="/heroes/midas/alt6/effects/body_lvl_4.effect" />
+</hero>

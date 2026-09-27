@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Jeraziah3_Art"
+	
+	icon="/heroes/jereziah/alt9/ability_03/icon.dds"
+	passiveeffect=""
+	
+	effecttype=""
+	
+	ishidden="true"
+	
+	modifierkey="Jeraziah_Ability3"
+>
+	<modifier key="iamsheeped" modpriority="1001"
+		passiveeffect=""
+	/>
+</state>

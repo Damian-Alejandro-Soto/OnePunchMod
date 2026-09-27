@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_MalikenAttack"
+
+	speed="1200"
+	gravity="0"
+	modelscale="1.25"
+	model="effects/skull.mdf"
+	
+	traileffect="/heroes/maliken/alt6/effects/projectile/trail.effect"
+	impacteffect="/heroes/maliken/alt6/effects/projectile/impact.effect"
+>
+</projectile>

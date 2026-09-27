@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "hero": "armadon",
+  "avatar": "alt3",
+  "files": [
+    "heroes\\armadon\\base\\hero.entity",
+    "heroes\\armadon\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\armadon\\base\\ability_02\\projectile.entity",
+    "heroes\\armadon\\base\\ability_02\\projectile.entity.onepunch_ability_managed",
+    "heroes\\armadon\\base\\ability_04\\projectile.entity",
+    "heroes\\armadon\\base\\ability_04\\projectile.entity.onepunch_ability_managed"
+  ]
+}

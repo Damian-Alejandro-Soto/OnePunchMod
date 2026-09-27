@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "plague_rider",
+  "avatar": "pog_skin",
+  "files": [
+    "heroes\\plague_rider\\base\\hero.entity",
+    "heroes\\plague_rider\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

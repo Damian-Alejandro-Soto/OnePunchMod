@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Slither_Ability1"
+
+	speed="1500"
+	gravity="0"
+	lifetime="666"
+	
+	impacteffect="/heroes/ebulus/alt7/ability_01/effects/impact.effect"
+	traileffect="/heroes/ebulus/alt7/ability_01/effects/trail.effect"
+	model="/shared/models/invis.mdf"
+	
+	canturn="false"
+	flying="true"
+	flyheight="100"
+	
+	touchradius="125"
+	maxtouchespertarget="1"
+	touchtargetscheme="enemy_units"
+	toucheffecttype="Magic"
+	touchradiusdiradjust="true"
+>
+
+	<ontouch>
+		<damage effecttype="Magic" amount="75,90,105,120" />
+		<popup name="poison" a="result" source="target_entity" target="source_entity" />
+		<applystate name="State_Slither_Ability1" duration="6000" />
+		<applystate name="State_Slither_Ability1_DoT" duration="10000" />
+	</ontouch>
+</projectile>

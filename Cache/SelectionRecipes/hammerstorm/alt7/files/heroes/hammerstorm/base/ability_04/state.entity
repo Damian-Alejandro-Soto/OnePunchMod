@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hammerstorm_Ability4"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/hammerstorm/alt7/ability_04/effects/state.effect"
+	displaylevel="true"
+	
+	basedamagemultiplier="0.8,1.15,1.5"
+	
+	modifierkey="ability4"
+	
+	effecttype=""
+>
+	<onframe>
+		<hasmodifier entity="this_owner_entity" name="iamsheeped">
+			<activatemodifierkey entity="this_entity" name="iamsheeped" />
+		</hasmodifier>
+		<else>
+			<deactivatemodifierkey entity="this_entity" name="iamsheeped" />
+		</else>
+	</onframe>
+	
+	<modifier key="ult_boost" modpriority="100">
+		<aura name="hammerstorm_R_sotm" state="State_Hammerstorm_Ability4_Aura" radius="900" targetscheme="other_ally_heroes" effecttype="" />
+		
+		<onframe>
+			<hasmodifier entity="this_owner_entity" name="iamsheeped">
+				<activatemodifierkey entity="this_entity" name="iamsheeped" />
+			</hasmodifier>
+			<else>
+				<deactivatemodifierkey entity="this_entity" name="iamsheeped" />
+			</else>
+		</onframe>
+	</modifier>
+
+	<modifier key="iamsheeped" modpriority="9999"
+		passiveeffect=""
+	/>
+</state>

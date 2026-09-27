@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_WretchedHag_Ability1"
+
+	icon="/heroes/babayaga/alt2/ability_01/icon.dds"
+	
+	movespeedslowstart="0.2,0.3,0.4,0.5"
+	movespeedslowmid="0.2,0.3,0.4,0.5"
+	movespeedslowend="0.0"
+	movespeedslowduration="7000"
+	movespeedslowmidpos="0.2"
+	deniable="true"
+	
+	impactinterval="3000"
+	
+	passiveeffect="/heroes/babayaga/alt2/ability_01/effects/state.effect"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+
+	negativeeffect="slowed"
+	
+	dynamicprecache="effects/impact.effect"
+>
+	<onframe />
+	
+	<oninflict>
+		
+		<!-- Initial Damage -->
+		<damage effecttype="Magic" amount="50,75,100,125" />
+	</oninflict>
+	
+	<onrefresh>
+		<damage effecttype="Magic" amount="50,75,100,125" />
+	</onrefresh>
+
+	<onimpact>
+		<damage effecttype="Magic DOT" amount="15,25,40,50" />
+		<popup name="poison" a="result" source="target_entity" target="source_entity" />
+		
+		<!-- Dynamic visual effects -->
+		<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impact.effect" source="target_entity" occlude="true" />
+		</else>
+	</onimpact>
+</state>

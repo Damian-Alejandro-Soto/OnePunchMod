@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Vindicator1"
+
+	icon="/heroes/vindicator/alt9/ability_01/icon.dds"
+	statuseffecttooltip=""
+	
+	anim="ability_1"
+	casttime="550"
+	castactiontime="300"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	targetscheme="enemy_units"
+	casteffecttype="Magic"
+	targetradius="300"
+	targetmaterial="/shared/materials/area_cast_indicator.material"
+	casteffect=""
+	range="700"
+	
+	manacost="80,100,120,140"
+	cooldowntime="14000,12000,10000,8000"
+	novoiceresponse="true"
+	
+	showareacast="true"
+	areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+	
+	showrangeandradiusintooltip="true"
+	dynamicprecache="effects/cast_impact.effect,effects/aoe.effect,effects/impact.effect,effects/drain.effect"
+>
+	<onimpact>
+		<!-- Art; has 1 effect on Vindicator, and 1 effect at the target position -->
+		<setstr0 a="altavatar_path" b="effects/cast_impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="" source="source_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/cast_impact.effect" target="" source="source_entity" />
+		</else>
+		<setstr0 a="altavatar_path" b="effects/aoe.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="target_position" source="target_position" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/aoe.effect" target="target_position" source="target_position" occlude="true" />
+		</else>
+		
+		<!-- More art -->
+		<areaofeffect
+			radius="300"
+			targetselection="all"
+			targetscheme="enemy_heroes"
+			effecttype="Magic"
+		>	
+			<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" />
+			</else>
+			<setstr0 a="altavatar_path" b="effects/drain.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" target="target_entity" source="source_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/drain.effect" target="target_entity" source="source_entity" />
+			</else>
+		</areaofeffect>
+		
+		<areaofeffect
+			radius="300"
+			targetselection="all"
+			targetscheme="enemy_units"
+			effecttype="Magic"
+		>
+			<targettype type="player_controlled">
+				<applystate name="State_Vindicator_Ability1_Enemy" duration="1000,1250,1500,1750" target="target_entity" />
+			</targettype>
+			<damage amount="95,150,205,260" effecttype="Magic" />
+		</areaofeffect>
+	</onimpact>
+</ability>

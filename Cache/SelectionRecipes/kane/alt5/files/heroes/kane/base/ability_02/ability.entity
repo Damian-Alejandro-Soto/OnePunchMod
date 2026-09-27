@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Kane2"
+	icon="../../icon.dds"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	
+	anim=""
+	casttime="0"
+	castactiontime="0"
+	frontqueue="true"
+	inheritmovement="true"
+	noninterrupting="true"
+	nobreakchannel="true"
+	noresponse="true"
+	nonaggressive="true"
+
+	actiontype="target_self"
+	casteffecttype=""
+	
+	manacost="15"
+	cooldowntime="2000"
+	targetradius="800"
+
+	modifierkey=""
+	dynamicprecache="effects/switch_sound.effect"
+>
+	<onlearn>
+		<setactivemodifierkey name="Kane_Offense" />
+		<setaccumulator value="0" />
+	</onlearn>
+	
+	<onimpact />
+	
+	<onframe>
+		<compare a="accumulator" b="0.05" op="gt">			
+			<setaccumulator value="accumulator" valueb="0.05" valueop="sub" />
+		</compare>
+	</onframe>
+	
+	<ondamaged>
+		<compare a="source_damage" b="0" op="gt">
+			<starttimer duration="8000" />
+		</compare>
+	</ondamaged>
+	
+	<modifier key="iamsheeped" modpriority="200"
+		passiveeffect=""
+	/>
+
+	<modifier key="Kane_Offense" modpriority="100"
+		icon="/heroes/kane/ability_02/icon.dds"
+		displayname="true"
+		passiveeffect="/heroes/kane/alt5/ability_02/effects/self_offense.effect"
+		
+		modifierkey="Kane_Offense_Stance"
+	>
+		<onimpact>
+			<setstr0 a="altavatar_path" b="effects/switch_sound.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" proxy="this_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/switch_sound.effect" proxy="this_entity" />
+			</else>
+			<applystate name="State_Kane_Ability2_Switch_Defense" duration="2000" proxy="this_entity" />
+		</onimpact>
+		
+		<aura state="State_Kane_Ability2_Crit" radius="800" targetscheme="ally_heroes" ignoreinvulnerable="true" propagatetoillusions="false" notooltip="true" />
+		<aura state="State_Kane_Ability2_Regen_Mana" radius="800" targetscheme="ally_heroes" ignoreinvulnerable="true" duration="5000" propagatetoillusions="false" notooltip="true" />
+	</modifier>
+	
+	<modifier key="Kane_Defense" modpriority="100"
+		icon="/heroes/kane/ability_02/icon_b.dds"
+		displayname="true"
+		passiveeffect="/heroes/kane/alt5/ability_02/effects/self_defense.effect"
+		
+		modifierkey="Kane_Defense_Stance"
+		modifierkey2="taunt_anim_2"
+	>
+		<onimpact>
+			<setstr0 a="altavatar_path" b="effects/switch_sound.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" proxy="this_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/switch_sound.effect" proxy="this_entity" />
+			</else>
+			<applystate name="State_Kane_Ability2_Switch_Offense" duration="2000" proxy="this_entity" />
+		</onimpact>
+
+		<!-- Duration on regen aura is there to prevent the unit from avoiding the damage-within-last-3-seconds check by running in & out of the aura radius -->
+		<aura state="State_Kane_Ability2_Armor" radius="800" targetscheme="ally_heroes" ignoreinvulnerable="true" propagatetoillusions="false" notooltip="true" />
+		<aura state="State_Kane_Ability2_Regen" radius="800" targetscheme="ally_heroes" ignoreinvulnerable="true" duration="5000" propagatetoillusions="false" notooltip="true" />
+	</modifier>
+</ability>

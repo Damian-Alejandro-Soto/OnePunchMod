@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Revenant_Ability3_Armor"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/revenant/alt/ability_03/effects/passive.effect"
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	
+	armorpercharge="-1,-2,-3,-4"
+>
+	<onframe />
+	
+	<oninflict>
+		<addcharges count="1" />
+	</oninflict>
+	
+	<onrefresh>
+		<addcharges count="1" />
+	</onrefresh>
+</state>

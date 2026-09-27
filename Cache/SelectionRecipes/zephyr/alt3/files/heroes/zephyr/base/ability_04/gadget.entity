@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Zephyr_Ability4"
+	
+	model="/shared/models/invis.mdf"
+	passiveeffect="/heroes/zephyr/alt3/ability_04/effects/steamer.effect"
+	isselectable="false"
+	drawonmap="false"
+	
+	ismobile="false"
+	invulnerable="true"
+	
+	sightrangeday="600"
+	sightrangenight="600"
+	clearvision="true"
+
+	lifetime="6000,8000,10000"
+	
+	corpsetiltfactor="0"
+	noblockneutralspawn="true"
+>
+	<aura state="State_Zephyr_Ability4_Tornado" radius="60" targetscheme="enemy_units" effecttype="SuperiorMagic" /> 
+	<aura state="State_Zephyr_Ability4_Debuff" radius="550" targetscheme="enemy_units" effecttype="SuperiorMagic" disablenegativeeffectpopuponrefresh="true" /> 
+	
+	<onspawn>
+		<killtrees radius="600" />
+	</onspawn>
+	
+	<modifier key="ult_boost" modpriority="100"
+		lifetime="8000,10000,12000"
+		sightrangeday="825"
+		sightrangenight="825"
+		passiveeffect="/heroes/zephyr/alt3/ability_04/effects/steamer_sotm.effect"
+	>
+		<aura state="State_Zephyr_Ability4_Tornado" radius="90" targetscheme="enemy_units" effecttype="SuperiorMagic" />
+		<aura state="State_Zephyr_Ability4_Debuff" radius="825" targetscheme="enemy_units" effecttype="SuperiorMagic" disablenegativeeffectpopuponrefresh="true" />
+	</modifier>
+</gadget>

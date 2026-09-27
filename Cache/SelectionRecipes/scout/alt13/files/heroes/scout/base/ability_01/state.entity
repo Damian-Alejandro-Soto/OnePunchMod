@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Scout_Ability1"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/scout/alt13/ability_01/effects/state.effect"
+	
+	stealthtype="hero"
+	hideshadow="true"
+	fadetime="500"
+	unitwalking="true"
+	movespeedmultiplier="0.10,0.15,0.20,0.25"
+	
+	effecttype="StatusStealth"
+	
+	modifierkey="Scout1_Active"
+>
+	<oninflict>
+		<forgetattacks />
+		<startfade />
+	</oninflict>
+	
+	<onattack>
+		<toggleoff name="Ability_Scout1" />
+		<expire />
+	</onattack>
+	
+	<onactivatepreimpact>
+		<entitytype type="Ability_Scout1" target="inflictor_entity" source="inflictor_entity" />
+		<else>
+			<entitytype type="Ability_Scout2" target="inflictor_entity" source="inflictor_entity" />
+			<else>
+				<entitytype type="Ability_Scout2_Detonate" target="inflictor_entity" source="inflictor_entity" />
+				<else>
+					<expire />
+				</else>
+			</else>
+		</else>
+	</onactivatepreimpact>
+	
+	<onexpired>
+		<toggleoff name="Ability_Scout1" />
+	</onexpired>
+	
+	<modifier key="ult_boost" modpriority="100">
+		<onactivatepreimpact>
+			<entitytype type="Ability_Scout1" target="inflictor_entity" source="inflictor_entity" />
+			<else>
+				<entitytype type="Ability_Scout2" target="inflictor_entity" source="inflictor_entity" />
+				<else>
+					<entitytype type="Ability_Scout2_Detonate" target="inflictor_entity" source="inflictor_entity" />
+					<else>
+						<entitytype type="Ability_Scout4" target="inflictor_entity" source="inflictor_entity" />
+						<else>
+							<expire />
+						</else>
+					</else>
+				</else>
+			</else>
+		</onactivatepreimpact>
+	</modifier>
+</state>

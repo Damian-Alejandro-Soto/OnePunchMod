@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_DementedShaman_Ability3"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/shaman/alt9/ability_04/effects/state.effect"
+	dynamicprecache="/heroes/shaman/alt9/ability_04/effects/heal.effect"
+
+	effecttype=""
+	allowtransfer="false"
+>
+	<onspawn>
+	</onspawn>
+
+	<onframe />
+
+	<ondamaged>
+		<!-- Use <updatehealth /> to update the health for each damage instance to avoid calculation bugs -->
+		<updatehealth entity="source_entity" />
+		<setvar0 a="damage_applied" />
+		<compare a="source_health" b="var0" op="le">
+			<!-- This accumulator prevents changehealth loops -->
+			<setaccumulator value="-1" />
+			<changehealth target="this_owner_entity" a="var0" />
+			
+			<!-- Heal value -->
+			<setvar1 a="0.03,0.04,0.05,0.06" b="source_maxhealth" op="mult" />
+			<setvar2 a="100,180,260,340" b="var1" op="add" />
+			<evaluate a="var2" b="source_health" op="sub" />
+			<changehealth target="this_owner_entity" a="result" />
+			
+			<!-- Art -->
+			<setstr0 a="altavatar_path" b="effects/heal.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" target="source_entity" source="source_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/heal.effect" target="source_entity" source="source_entity" />
+			</else>
+			
+			<expire />
+		</compare>
+	</ondamaged>
+	
+	<onchangehealth>
+		<compare a="accumulator" b="-1" op="ne">
+			<!-- Use <updatehealth /> to update the health now, rather than at the end of the frame -->
+			<updatehealth entity="source_entity" />
+			<compare a="source_health" b="1" op="le">
+				<!-- Heal value -->
+				<setvar1 a="0.03,0.04,0.05,0.06" b="source_maxhealth" op="mult" />
+				<setvar2 a="100,180,260,340" b="var1" op="add" />
+				<setvar3 a="var2" b="source_health" op="sub" />
+				<setaccumulator value="-1" />
+				<changehealth target="this_owner_entity" a="var3" b="source_health" op="max" />
+				
+				<!-- Art -->
+				<setstr0 a="altavatar_path" b="effects/heal.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" target="source_entity" source="source_entity" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="effects/heal.effect" target="source_entity" source="source_entity" />
+				</else>
+				
+				<expire />
+			</compare>
+		</compare>
+	</onchangehealth>
+
+	<onexpired>
+		<compare a="accumulator" b="-1" op="ne">
+			<compare a="dispelled" b="0" op="eq">
+				<!-- If Circe is source_entity, then this state was spawned by Circe's mimic. Don't apply the state if this is true -->
+				<entitytype type="Hero_Circe" target="source_entity" />
+				<else>
+					<applystate name="State_DementedShaman_Ability3" target="this_inflictor_entity" continuous="true" />
+					<pushtool name="Ability_DementedShaman3" source="this_inflictor_entity" />
+					<startcooldown duration="20000" entity="stack_entity" />					
+				</else>
+			</compare>
+			<else>
+				<pushtool name="Ability_DementedShaman3" source="this_inflictor_entity" />
+				<startcooldown duration="20000" entity="stack_entity" />
+			</else>
+		</compare>
+		<else>
+			<pushtool name="Ability_DementedShaman3" source="this_inflictor_entity" />
+			<startcooldown entity="stack_entity" />
+		</else>
+		
+		<expirestate name="State_DementedShaman_Ability3_Self_Damage" target="source_entity" />
+	</onexpired>
+	
+	<modifier key="dsham_unbreakable_active" modpriority="100"
+		damage="20,30,40,50"
+		passiveeffect="effects/state_ally.effect"
+	>
+	</modifier>
+
+	<!-- Midwars-only changes -->
+	<modifier key="OnlyMidMap" modpriority="101">
+		<onframe />
+
+		<ondamaged>
+			<!-- Use <updatehealth /> to update the health for each damage instance to avoid calculation bugs -->
+			<updatehealth entity="source_entity" />
+			<setvar0 a="damage_applied" />
+			<compare a="source_health" b="var0" op="le">
+				<!-- This accumulator prevents changehealth loops -->
+				<setaccumulator value="-1" />
+				<changehealth target="this_owner_entity" a="var0" />
+
+				<!-- Heal value -->
+				<setvar1 a="0.02,0.03,0.04,0.05" b="source_maxhealth" op="mult" />
+				<setvar2 a="80,150,220,290" b="var1" op="add" />
+				<evaluate a="var2" b="source_health" op="sub" />
+				<changehealth target="this_owner_entity" a="result" />
+
+				<!-- Art -->
+				<setstr0 a="altavatar_path" b="effects/heal.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" target="source_entity" source="source_entity" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="effects/heal.effect" target="source_entity" source="source_entity" />
+				</else>
+
+				<expire />
+			</compare>
+		</ondamaged>
+
+		<onchangehealth>
+			<compare a="accumulator" b="-1" op="ne">
+				<!-- Use <updatehealth /> to update the health now, rather than at the end of the frame -->
+				<updatehealth entity="source_entity" />
+				<compare a="source_health" b="1" op="le">
+					<!-- Heal value -->
+					<setvar1 a="0.02,0.03,0.04,0.05" b="source_maxhealth" op="mult" />
+					<setvar2 a="80,150,220,290" b="var1" op="add" />
+					<setvar3 a="var2" b="source_health" op="sub" />
+					<setaccumulator value="-1" />
+					<changehealth target="this_owner_entity" a="var3" b="source_health" op="max" />
+
+					<!-- Art -->
+					<setstr0 a="altavatar_path" b="effects/heal.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" target="source_entity" source="source_entity" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/heal.effect" target="source_entity" source="source_entity" />
+					</else>
+
+					<expire />
+				</compare>
+			</compare>
+		</onchangehealth>
+	</modifier>
+</state>

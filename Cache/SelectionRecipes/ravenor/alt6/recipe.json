@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "hero": "ravenor",
+  "avatar": "alt6",
+  "files": [
+    "heroes\\ravenor\\base\\hero.entity",
+    "heroes\\ravenor\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\ravenor\\base\\ability_01\\projectile.entity",
+    "heroes\\ravenor\\base\\ability_01\\projectile.entity.onepunch_ability_managed",
+    "heroes\\ravenor\\base\\ability_01\\state_enemy.entity",
+    "heroes\\ravenor\\base\\ability_01\\state_enemy.entity.onepunch_ability_managed",
+    "heroes\\ravenor\\base\\ability_02\\affector.entity",
+    "heroes\\ravenor\\base\\ability_02\\affector.entity.onepunch_ability_managed",
+    "heroes\\ravenor\\base\\ability_02\\state.entity",
+    "heroes\\ravenor\\base\\ability_02\\state.entity.onepunch_ability_managed"
+  ],
+  "dependencies": [
+    "heroes/andromeda/ability_03/effects/orbit.mdf",
+    "heroes/artesia/ability_01/effects/sphere/orb2.mdf",
+    "heroes/artesia/projectile/effects/orb/orb.mdf",
+    "heroes/midas/alt2/projectile/effects/snowball/model.mdf"
+  ]
+}

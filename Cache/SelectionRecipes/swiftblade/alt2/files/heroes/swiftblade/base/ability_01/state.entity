@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Swiftblade_Ability1"
+
+	icon="icon.tga"
+	passiveeffect="/heroes/hiro/alt2/effects/ability_01/fury.effect"
+	forceanim="ability_1"
+	
+	immunitytype="MagicImmunity1"
+	silenced="true"
+	perplexed="false"
+	
+	modifierkey="activation_modifier"
+
+	effecttype=""
+	dynamicprecache="effects/impact.effect,effects/impact_audio.effect,effects/cast.effect"
+>
+	
+	<onframe>
+		<areaofeffect
+			radius="250"
+			effecttype="Magic"
+			targetselection="all"
+			targetscheme="enemy_units"
+		>
+			<damage effecttype="Magic DOT" amount="75,95,115,135" b="frametime" op="mult" />
+			<applystate name="State_Swiftblade_Ability1_Tooltip" continuous="true" timeout="frametime" />
+		
+			<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" />
+			</else>				
+			<setstr0 a="altavatar_path" b="effects/impact_audio.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="target_entity" stack="false" allowtransfer="false" target="target_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/impact_audio.effect" source="target_entity" stack="false" allowtransfer="false" target="target_entity" />
+			</else>				
+		</areaofeffect>
+	</onframe>
+
+	<onattackimpact>
+		<setstr0 a="altavatar_path" b="effects/cast.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="target_entity" source="source_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/cast.effect" target="target_entity" source="source_entity" />
+		</else>
+	</onattackimpact>
+</state>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_PollywogPriest_Ability2"
+
+	icon="icon.tga"
+	passiveeffect="/heroes/pollywogpriest/alt6/ability_02/effects/body.effect"
+	
+	disarmed="true"
+	silenced="true"
+	perplexed="true"
+	restrained="true"
+	movespeedslow="1"
+
+	morphpriority="101"
+	morphmodel="effects/model.mdf"
+	morphpreglobalscale=".9"
+	morphmodelscale="1.0"
+	morpheffectscale="1.0"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	
+	modifierkey="iamsheeped"
+
+	negativeeffect="polymorphed"
+>
+	<onframe />
+	
+	<onattackedpreimpact priority="-9999">
+		<setvalue name="combat_evasion" a="0" />
+	</onattackedpreimpact>
+	
+	<onattackedpredamage priority="-9999">
+		<setvalue name="combat_deflection" a="0" />
+	</onattackedpredamage>
+</state>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Prisoner3"
+
+	icon="/heroes/prisoner/alt9/ability_03/icon.dds"
+	
+	baselevel="1"
+	maxlevel="5"
+	requiredlevel="0,1,3,5,7"
+	
+	disabled="true,false"
+	actiontype="no_target,passive"
+	
+	basedamagemultiplier="0,0.15,0.20,0.25,0.30"
+	basedamagemultiplierpercharge="0,0.15,0.20,0.25,0.30"
+	
+	targetradius="700"
+>
+	<onframe>
+		<setaccumulator value="0" />
+		
+		<areaofeffect
+			radius="700"
+			targetscheme="visible_enemy_heroes_not_heropets"
+			targetselection="all"
+		>			
+			<setaccumulator value="accumulator" valueb="0,1" valueop="add" />
+		</areaofeffect>
+		
+		<setcharges a="accumulator" />
+	</onframe>
+	
+	<modifier key="Prisoner_W" modpriority="100"
+		cooldowntype="Prisoner_W"
+		actiontype="no_target"
+		disabled="false"
+		
+		noresponse="true"		
+		showrangeandradiusintooltip="true"
+	>
+		<checkcost>
+			<areaofeffect
+				radius="450"
+				effecttype=""
+				targetscheme="visible_enemy_heroes"
+				targetselection="all"
+				maxtotalimpacts="1"
+			>
+			</areaofeffect>
+			<compare a="result" b="1" op="lt">
+				<invalidate />
+			</compare>
+		</checkcost>
+		
+		<onimpact>
+			<areaofeffect
+				radius="450"
+				effecttype=""
+				targetscheme="visible_enemy_heroes"
+				targetselection="closest"
+				maxtotalimpacts="1"				
+			>
+				<useability slot="1" source="source_entity" target="target_entity" />
+			</areaofeffect>
+		</onimpact>
+	</modifier>
+</ability>

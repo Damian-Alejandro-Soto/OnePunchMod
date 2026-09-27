@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Solstice_Ability2_Link"
+	icon="../../icon.dds"
+	ishidden="false"
+	passiveeffect="/heroes/solstice/alt6/ability_02/effects/pillar/link.effect"
+>
+	
+</state>

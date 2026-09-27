@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_KingKlout1"
+
+	icon="/heroes/king_klout/alt3/ability_01/pet_normal/icon.dds"
+
+	anim="ability_1"
+	casttime="500"
+	castactiontime="150"
+	casteffect=""
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+
+	manacost="40,45,50,55"
+	cooldowntime="700"
+
+	range="510,540,570,600"
+
+	showareacast="true"
+	areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+	
+	targetradius=""
+	targetmaterial=""
+	showrangeandradiusintooltip="false"
+
+	maxcharges="7"
+
+	counter="1"
+	dynamicprecache="effects/poof_1.effect,effects/poof_2.effect,effects/poof_3.effect,effects/impact_1.effect,effects/impact_2.effect"
+>
+	<!-- Pet_KingKlout_Ability1_Normal is the base, then Pet_KingKlout_Ability1_Big is the red one, and then Pet_KingKlout_Ability1_Super is the biggest bad boy -->
+	<!-- Proxy of this ability always points to the next one in line -->
+	<!-- Level of the gadget in line shows it's place -->
+	<!-- Accumulator is used to track the "Big one every 5th" -->
+
+	<aura state="State_KingKlout_Ability1_Aura" radius="1150" targetscheme="enemy_heroes" stack="true" notooltip="true" />
+
+	<onlearn>
+		<setcharges a="7" />
+
+		<!-- Pet 7 -->
+		<spawnunit name="Pet_KingKlout_Ability1_Normal" count="1" target="source_position" offsetspace="source_entity" offset="0 100" proxy="" pushentity="true" />
+		<setlevel entity="stack_entity" value="7" />
+		<setproxy entity="this_entity" target="stack_entity" />
+
+		<!-- Pet 6 -->
+		<spawnunit name="Pet_KingKlout_Ability1_Normal" count="1" target="source_position" offsetspace="source_entity" offset="0 150" proxy="stack_entity" pushentity="true" />
+		<setlevel entity="stack_entity" value="6" />
+		<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+
+		<!-- Pet 5 -->
+		<spawnunit name="Pet_KingKlout_Ability1_Big" count="1" target="source_position" offsetspace="source_entity" offset="100 0" proxy="stack_entity" pushentity="true" />
+		<setlevel entity="stack_entity" value="5" />
+		<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+
+		<!-- Pet 4 -->
+		<spawnunit name="Pet_KingKlout_Ability1_Normal" count="1" target="source_position" offsetspace="source_entity" offset="150 0" proxy="stack_entity" pushentity="true" />
+		<setlevel entity="stack_entity" value="4" />
+		<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+
+		<!-- Pet 3 -->
+		<spawnunit name="Pet_KingKlout_Ability1_Normal" count="1" target="source_position" offsetspace="source_entity" offset="100 100" proxy="stack_entity" pushentity="true" />
+		<setlevel entity="stack_entity" value="3" />
+		<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+
+		<!-- Pet 2 -->
+		<spawnunit name="Pet_KingKlout_Ability1_Normal" count="1" target="source_position" offsetspace="source_entity" offset="150 150" proxy="stack_entity" pushentity="true" />
+		<setlevel entity="stack_entity" value="2" />
+		<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+
+		<!-- Pet 1 -->
+		<spawnunit name="Pet_KingKlout_Ability1_Normal" count="1" target="source_position" offsetspace="source_entity" offset="50 50" proxy="stack_entity" pushentity="true" />
+		<setlevel entity="stack_entity" value="1" />
+		<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+		<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="source_entity" continuous="true" />
+
+		<setaccumulator value="2" /> <!-- When accumulator hits 5, spawn a Big one (chance of a bigger one) -->
+	</onlearn>
+
+	<onrespawn>
+		<!-- Proxy always points to the next one in line -->
+
+		<!-- Pet 7 -->
+		<spawnunit name="Pet_KingKlout_Ability1_Normal" count="1" target="source_position" offsetspace="source_entity" offset="0 100" proxy="" pushentity="true" />
+		<setlevel entity="stack_entity" value="7" />
+		<setproxy entity="this_entity" target="stack_entity" />
+
+		<!-- Pet 6 -->
+		<spawnunit name="Pet_KingKlout_Ability1_Normal" count="1" target="source_position" offsetspace="source_entity" offset="0 150" proxy="stack_entity" pushentity="true" />
+		<setlevel entity="stack_entity" value="6" />
+		<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+
+		<!-- Pet 5 -->
+		<spawnunit name="Pet_KingKlout_Ability1_Big" count="1" target="source_position" offsetspace="source_entity" offset="100 0" proxy="stack_entity" pushentity="true" />
+		<setlevel entity="stack_entity" value="5" />
+		<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+
+		<!-- Pet 4 -->
+		<spawnunit name="Pet_KingKlout_Ability1_Normal" count="1" target="source_position" offsetspace="source_entity" offset="150 0" proxy="stack_entity" pushentity="true" />
+		<setlevel entity="stack_entity" value="4" />
+		<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+
+		<!-- Pet 3 -->
+		<spawnunit name="Pet_KingKlout_Ability1_Normal" count="1" target="source_position" offsetspace="source_entity" offset="100 100" proxy="stack_entity" pushentity="true" />
+		<setlevel entity="stack_entity" value="3" />
+		<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+
+		<!-- Pet 2 -->
+		<spawnunit name="Pet_KingKlout_Ability1_Normal" count="1" target="source_position" offsetspace="source_entity" offset="150 150" proxy="stack_entity" pushentity="true" />
+		<setlevel entity="stack_entity" value="2" />
+		<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+
+		<!-- Pet 1 -->
+		<spawnunit name="Pet_KingKlout_Ability1_Normal" count="1" target="source_position" offsetspace="source_entity" offset="50 50" proxy="stack_entity" pushentity="true" />
+		<setlevel entity="stack_entity" value="1" />
+		<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+		<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="source_entity" continuous="true" />
+
+		<setaccumulator value="2" /> <!-- When accumulator hits 5, spawn a Big one (chance of a bigger one) -->
+	</onrespawn>
+	
+	<onorderdisjointed>
+		<foreachproxy>
+			<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="source_entity" continuous="true" />
+		</foreachproxy>
+	</onorderdisjointed>
+
+	<ondeath>
+		<setcharges a="7" />
+		<resettimer />
+	</ondeath>
+
+	<checkcost>
+		<!-- Disable the ability if you go to 0 charges -->
+		<compare a="charges" b="0" op="eq">
+			<invalidate />
+		</compare>
+	</checkcost>
+
+	<ontimer>
+		<compare a="charges" b="7" op="lt">
+			<!-- SFX -->
+			<chance threshold="0.30">
+				<pausevoiceovers duration="2000" />
+				<play2dsound sample="/heroes/king_klout/base/sounds/ab4_spawn_vox_%.wav" channel="76" volume="1.0" dampen=".7" sourceonly="true" targetonly="true" />
+			</chance>  
+			
+			<addcharges count="1" />
+			<setaccumulator value="accumulator" valueb="1" valueop="add" />
+			
+			<compare a="this_proxy_entity" b="0" op="eq"> <!-- If all of them are dead, spawn a new one -->
+				<compare a="accumulator" b="5" op="ge"> <!-- Once every 5, spawn a big one instead of normal -->
+					<chance threshold="0.25"> <!-- 25% chance to spawn a SUPER one -->
+						<spawnunit name="Pet_KingKlout_Ability1_Super" count="1" target="source_position" proxy="" pushentity="true" /> <!-- New pet -->
+						<setlevel entity="stack_entity" value="1" />
+						<setproxy entity="this_entity" target="stack_entity" />
+						<applystate name="State_KingKlout_Ability1_Pet_Movement" target="stack_entity" proxy="source_entity" continuous="true" />
+					</chance>
+					<else> <!-- spawn a big one once every 5 -->
+						<spawnunit name="Pet_KingKlout_Ability1_Big" count="1" target="source_position" proxy="" pushentity="true" /> <!-- New pet -->
+						<setlevel entity="stack_entity" value="1" />
+						<setproxy entity="this_entity" target="stack_entity" />
+						<applystate name="State_KingKlout_Ability1_Pet_Movement" target="stack_entity" proxy="source_entity" continuous="true" />
+					</else>
+				</compare>
+				<else>
+					<chance threshold="0.10">
+						<chance threshold="0.25"> <!-- 10% of a 25% chance to spawn a SUPER one -->
+							<spawnunit name="Pet_KingKlout_Ability1_Super" count="1" target="source_position" proxy="" pushentity="true" /> <!-- New pet -->
+							<setlevel entity="stack_entity" value="1" />
+							<setproxy entity="this_entity" target="stack_entity" />
+							<applystate name="State_KingKlout_Ability1_Pet_Movement" target="stack_entity" proxy="source_entity" continuous="true" />
+						</chance>
+						<else> <!-- 10% chance to spawn a big one -->
+							<spawnunit name="Pet_KingKlout_Ability1_Big" count="1" target="source_position" proxy="" pushentity="true" /> <!-- New pet -->
+							<setlevel entity="stack_entity" value="1" />
+							<setproxy entity="this_entity" target="stack_entity" />
+							<applystate name="State_KingKlout_Ability1_Pet_Movement" target="stack_entity" proxy="source_entity" continuous="true" />
+						</else>
+					</chance>
+					<else> <!-- Otherwise spawn a normal one -->
+						<spawnunit name="Pet_KingKlout_Ability1_Normal" count="1" target="source_position" proxy="" pushentity="true" /> <!-- New pet -->
+						<setlevel entity="stack_entity" value="1" />
+						<setproxy entity="this_entity" target="stack_entity" />
+						<applystate name="State_KingKlout_Ability1_Pet_Movement" target="stack_entity" proxy="source_entity" continuous="true" />
+					</else>
+				</else>
+			</compare>
+			<else> <!-- Not all of them are dead -->
+				<spawnunit name="Gadget_KingKlout_Ability1" count="1" target="source_position" proxy="" fixedposition="true" pushentity="true" />
+				<setent0 entity="stack_entity" />
+				<setproxy entity="stack_entity" target="this_proxy_entity" /> <!-- Use the gadget to store a proxy for 1 frame -->
+
+				<foreachproxy>
+					<setproxy entity="this_entity" target="target_entity" />
+				</foreachproxy>
+
+				<compare a="accumulator" b="5" op="ge"> <!-- Once every 5, spawn a big one instead of normal -->
+					<chance threshold="0.25"> <!-- 10% chance to spawn a SUPER one -->
+						<spawnunit name="Pet_KingKlout_Ability1_Super" count="1" target="source_position" proxy="" pushentity="true" /> <!-- New pet -->
+						<applystate name="State_KingKlout_Ability1_Pet_Movement" target="stack_entity" proxy="this_proxy_entity" continuous="true" />
+						<evaluate target="this_proxy_entity" a="target_level" b="1" op="add" />
+						<setlevel entity="stack_entity" value="result" />
+						<setproxy entity="this_proxy_entity" target="stack_entity" /> <!-- Chain it to the end of the chain -->
+					</chance>
+					<else> <!-- spawn a big one once every 5 -->
+						<spawnunit name="Pet_KingKlout_Ability1_Big" count="1" target="source_position" proxy="" pushentity="true" /> <!-- New pet -->
+						<applystate name="State_KingKlout_Ability1_Pet_Movement" target="stack_entity" proxy="this_proxy_entity" continuous="true" />
+						<evaluate target="this_proxy_entity" a="target_level" b="1" op="add" />
+						<setlevel entity="stack_entity" value="result" />
+						<setproxy entity="this_proxy_entity" target="stack_entity" /> <!-- Chain it to the end of the chain -->
+					</else>
+					<setaccumulator value="0" />
+				</compare>
+				<else>
+					<chance threshold="0.10">
+						<chance threshold="0.25"> <!-- 10% of a 10% chance to spawn a SUPER one -->
+							<spawnunit name="Pet_KingKlout_Ability1_Super" count="1" target="source_position" proxy="" pushentity="true" /> <!-- New pet -->
+							<applystate name="State_KingKlout_Ability1_Pet_Movement" target="stack_entity" proxy="this_proxy_entity" continuous="true" />
+							<evaluate target="this_proxy_entity" a="target_level" b="1" op="add" />
+							<setlevel entity="stack_entity" value="result" />
+							<setproxy entity="this_proxy_entity" target="stack_entity" /> <!-- Chain it to the end of the chain -->
+						</chance>
+						<else> <!-- 10% chance to spawn a big one -->
+							<spawnunit name="Pet_KingKlout_Ability1_Big" count="1" target="source_position" proxy="" pushentity="true" /> <!-- New pet -->
+							<applystate name="State_KingKlout_Ability1_Pet_Movement" target="stack_entity" proxy="this_proxy_entity" continuous="true" />
+							<evaluate target="this_proxy_entity" a="target_level" b="1" op="add" />
+							<setlevel entity="stack_entity" value="result" />
+							<setproxy entity="this_proxy_entity" target="stack_entity" /> <!-- Chain it to the end of the chain -->
+						</else>
+					</chance>
+					<else> <!-- Otherwise spawn a normal one -->
+						<spawnunit name="Pet_KingKlout_Ability1_Normal" count="1" target="source_position" proxy="" pushentity="true" /> <!-- New pet -->
+						<applystate name="State_KingKlout_Ability1_Pet_Movement" target="stack_entity" proxy="this_proxy_entity" continuous="true" />
+						<evaluate target="this_proxy_entity" a="target_level" b="1" op="add" />
+						<setlevel entity="stack_entity" value="result" />
+						<setproxy entity="this_proxy_entity" target="stack_entity" /> <!-- Chain it to the end of the chain -->
+					</else>
+				</else>
+
+				<pushentity entity="ent0" />
+				<setproxy entity="this_entity" target="stack_proxy_entity" /> <!-- Reset the chain to the first -->
+				<delete target="ent0" /> <!-- Deleting the gadget for cleanup -->
+			</else>
+
+			<compare a="charges" b="7" op="ge" />
+			<else>
+				<starttimer duration="6000" />
+			</else>
+		</compare>
+	</ontimer>
+
+	<onstart>
+		<entitytype target="this_proxy_entity" type="Pet_KingKlout_Ability1_Normal">
+			<setstr0 a="altavatar_path" b="effects/poof_1.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="this_proxy_position" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/poof_1.effect" source="this_proxy_position" />
+			</else>
+		</entitytype>
+		<entitytype target="this_proxy_entity" type="Pet_KingKlout_Ability1_Big">
+			<setstr0 a="altavatar_path" b="effects/poof_2.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="this_proxy_position" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/poof_2.effect" source="this_proxy_position" />
+			</else>
+		</entitytype>
+		<entitytype target="this_proxy_entity" type="Pet_KingKlout_Ability1_Super">
+			<setstr0 a="altavatar_path" b="effects/poof_3.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="this_proxy_position" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/poof_3.effect" source="this_proxy_position" />
+			</else>
+		</entitytype>
+		
+		<bind target="this_proxy_entity" entity="this_owner_entity" attachto="1" attachtoboneindex="0" noninterrupting="true" nointerpolate="true" />
+		<playanim name="flying_1" target="this_proxy_entity" />
+	</onstart>
+
+	<oncancel>
+		<unbind target="this_proxy_entity" entity="this_owner_entity" />
+		<playanim name="idle" target="this_proxy_entity" />
+	</oncancel>
+
+	<onabilityfinish>
+		<entitytype type="Ability_KingKlout1" source="inflictor_entity" target="inflictor_entity">
+			<pushentity entity="this_proxy_entity" />
+
+			<compare source="this_proxy_entity" a="source_accumulator" b="0" op="eq"> <!-- If the ability was negated, delete the unit -->
+				<delete target="this_proxy_entity" />
+			</compare>
+
+			<setproxy entity="this_entity" target="stack_proxy_entity" />
+
+			<spawnunit name="Gadget_KingKlout_Ability1" count="1" target="source_position" fixedposition="true" pushentity="true" proxy="this_proxy_entity" /> <!-- Use the gadget to store a proxy for 1 frame -->
+			<setent0 entity="stack_entity" />
+
+			<foreachproxy>
+				<compare a="target_level" b="2" op="eq">
+					<applystate name="State_KingKlout_Ability1_Pet_Movement" target="target_entity" proxy="source_entity" continuous="true" />
+					<setproxy entity="this_entity" target="target_entity" />
+					<evaluate a="target_level" b="1" op="sub" />
+					<setlevel entity="target_entity" value="result" />
+				</compare>
+				<else>
+					<applystate name="State_KingKlout_Ability1_Pet_Movement" target="target_entity" proxy="this_proxy_entity" continuous="true" />
+					<setproxy entity="this_entity" target="target_entity" />
+					<evaluate a="target_level" b="1" op="sub" />
+					<setlevel entity="target_entity" value="result" />
+				</else>
+			</foreachproxy>
+
+			<pushentity entity="ent0" />
+			<setproxy entity="this_entity" target="stack_proxy_entity" /> <!-- Reset the chain to the first -->
+			<delete target="ent0" /> <!-- Deleting the gadget for cleanup -->
+			
+			<compare a="charges" b="7" op="ge">
+				<hasmodifier name="ult_boost" entity="source_entity">
+					<starttimer duration="3000" />
+				</hasmodifier>
+				<else>
+					<starttimer duration="6000" />
+				</else>				
+			</compare>
+
+			<removecharge />
+
+			<compare a="charges" b="0" op="eq">
+				<setactivemodifierkey entity="this_entity" name="" /> <!-- Reset the icon to default when you don't have any one alive -->
+			</compare>
+		</entitytype>
+	</onabilityfinish>
+
+	<onframe>
+		<entitytype target="this_proxy_entity" type="Pet_KingKlout_Ability1_Normal">
+			<setactivemodifierkey entity="this_entity" name="KingKlout_NormalAbility" />
+		</entitytype>
+
+		<entitytype target="this_proxy_entity" type="Pet_KingKlout_Ability1_Big">
+			<setactivemodifierkey entity="this_entity" name="KingKlout_BigAbility" />
+		</entitytype>
+
+		<entitytype target="this_proxy_entity" type="Pet_KingKlout_Ability1_Super">
+			<setactivemodifierkey entity="this_entity" name="KingKlout_SuperAbility" />
+		</entitytype>
+	</onframe>
+
+	<onimpact>
+		<!-- Spawn projectiles -->
+		<unbind target="this_proxy_entity" />
+		<entitytype target="this_proxy_entity" type="Pet_KingKlout_Ability1_Normal">
+			<spawnprojectile name="Projectile_KingKlout_Ability1_Normal" source="source_entity" offset="15 85 90" offsetspace="source_entity" target="target_entity" noresponse="true" proxy="this_proxy_entity" pushentity="true" />
+			<bind target="this_proxy_entity" entity="stack_entity" nointerpolate="true" turnwithobject="true" vertical="true" />
+			<playanim name="flying_1" target="this_proxy_entity" />
+			<activatemodifierkey name="Minion_is_flying" entity="this_proxy_entity" />
+		</entitytype>
+		<entitytype target="this_proxy_entity" type="Pet_KingKlout_Ability1_Big">
+			<spawnprojectile name="Projectile_KingKlout_Ability1_Big" source="source_entity" offset="15 85 90" offsetspace="source_entity" target="target_entity" noresponse="true" proxy="this_proxy_entity" pushentity="true" />
+			<bind target="this_proxy_entity" entity="stack_entity" nointerpolate="true" turnwithobject="true" vertical="true" />
+			<playanim name="flying_2" target="this_proxy_entity" />
+			<activatemodifierkey name="Minion_is_flying" entity="this_proxy_entity" />
+		</entitytype>
+		<entitytype target="this_proxy_entity" type="Pet_KingKlout_Ability1_Super">
+			<spawnprojectile name="Projectile_KingKlout_Ability1_Super" source="source_entity" offset="15 85 90" offsetspace="source_entity" target="target_entity" noresponse="true" proxy="this_proxy_entity" pushentity="true" />
+			<bind target="this_proxy_entity" entity="stack_entity" nointerpolate="true" turnwithobject="true" vertical="true" />
+			<playanim name="flying_3" target="this_proxy_entity" />
+			<activatemodifierkey name="Minion_is_flying" entity="this_proxy_entity" />
+		</entitytype>
+		
+		<setaccumulator value="1" entity="this_proxy_entity" />
+	</onimpact>
+
+	<onkill propagatetoillusions="false">
+		<targettype type="hero">
+			<targettype type="illusion" />
+			<else>
+				<targettype type="mimic" />
+				<else> 
+					<targettype type="self" />
+					<else>
+						<targettype type="heropet" />
+						<else>
+							<compare a="owner_counter" b="0" op="gt">
+								<applystate name="State_KingKlout_Ability1_BigSpawn" target="source_entity" duration="1000" />
+							</compare>
+						</else>
+					</else>
+				</else>
+			</else>
+		</targettype>
+	</onkill>
+
+	<modifier key="KingKlout_NormalAbility" modpriority="1"
+		icon="/heroes/king_klout/alt3/ability_01/pet_normal/icon.dds"
+		
+		targetradius="400"
+		targetmaterial="/shared/materials/area_cast_indicator_simple.material"
+		showrangeandradiusintooltip="true"
+	>
+	</modifier>
+
+	<modifier key="KingKlout_BigAbility" modpriority="1"
+		icon="/heroes/king_klout/alt3/ability_01/pet_big/icon.dds"
+
+		targetradius="200"
+		targetmaterial="/shared/materials/area_cast_indicator_simple.material"
+		showrangeandradiusintooltip="true"
+	>
+	</modifier>
+
+	<modifier key="KingKlout_SuperAbility" modpriority="1"
+		icon="/heroes/king_klout/alt3/ability_01/pet_super/icon.dds"
+
+		targetradius="400"
+		targetmaterial="/shared/materials/area_cast_indicator_simple.material"
+		showrangeandradiusintooltip="true"
+	>
+	</modifier>
+	
+	<modifier key="ult_boost" modpriority="110">
+		<!-- SotM: King Klout respawns each minion with +1 rank compared to non-SotM version -->
+		<onrespawn>
+			<!-- Proxy always points to the next one in line -->
+
+			<!-- Pet 7 -->
+			<spawnunit name="Pet_KingKlout_Ability1_Super" count="1" target="source_position" offsetspace="source_entity" offset="0 100" proxy="" pushentity="true" />
+			<setlevel entity="stack_entity" value="7" />
+			<setproxy entity="this_entity" target="stack_entity" />
+
+			<!-- Pet 6 -->
+			<spawnunit name="Pet_KingKlout_Ability1_Big" count="1" target="source_position" offsetspace="source_entity" offset="0 150" proxy="stack_entity" pushentity="true" />
+			<setlevel entity="stack_entity" value="6" />
+			<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+			<setproxy entity="this_entity" target="stack_entity" />
+
+			<!-- Pet 5 -->
+			<spawnunit name="Pet_KingKlout_Ability1_Super" count="1" target="source_position" offsetspace="source_entity" offset="100 0" proxy="stack_entity" pushentity="true" />
+			<setlevel entity="stack_entity" value="5" />
+			<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+			<setproxy entity="this_entity" target="stack_entity" />
+
+			<!-- Pet 4 -->
+			<spawnunit name="Pet_KingKlout_Ability1_Big" count="1" target="source_position" offsetspace="source_entity" offset="150 0" proxy="stack_entity" pushentity="true" />
+			<setlevel entity="stack_entity" value="4" />
+			<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+			<setproxy entity="this_entity" target="stack_entity" />
+
+			<!-- Pet 3 -->
+			<spawnunit name="Pet_KingKlout_Ability1_Super" count="1" target="source_position" offsetspace="source_entity" offset="100 100" proxy="stack_entity" pushentity="true" />
+			<setlevel entity="stack_entity" value="3" />
+			<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+			<setproxy entity="this_entity" target="stack_entity" />
+
+			<!-- Pet 2 -->
+			<spawnunit name="Pet_KingKlout_Ability1_Big" count="1" target="source_position" offsetspace="source_entity" offset="150 150" proxy="stack_entity" pushentity="true" />
+			<setlevel entity="stack_entity" value="2" />
+			<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+			<setproxy entity="this_entity" target="stack_entity" />
+
+			<!-- Pet 1 -->
+			<spawnunit name="Pet_KingKlout_Ability1_Big" count="1" target="source_position" offsetspace="source_entity" offset="50 50" proxy="stack_entity" pushentity="true" />
+			<setlevel entity="stack_entity" value="1" />
+			<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="stack_entity" continuous="true" />
+			<setproxy entity="this_entity" target="stack_entity" />
+			<applystate name="State_KingKlout_Ability1_Pet_Movement" target="this_proxy_entity" proxy="source_entity" continuous="true" />
+
+			<setaccumulator value="2" /> <!-- When accumulator hits 5, spawn a Big one (chance of a bigger one) -->
+		</onrespawn>
+		
+		<!-- SotM: no longer spawns Blue ("Normal") minions -->
+		<ontimer>
+			<compare a="charges" b="7" op="lt">
+				<!-- SFX -->
+				<chance threshold="0.30">
+					<pausevoiceovers duration="2000" />
+					<play2dsound sample="/heroes/king_klout/base/sounds/ab4_spawn_vox_%.wav" channel="76" volume="1.0" dampen=".7" sourceonly="true" targetonly="true" />
+				</chance>  
+				
+				<addcharges count="1" />
+				<setaccumulator value="accumulator" valueb="1" valueop="add" />
+				
+				<compare a="this_proxy_entity" b="0" op="eq"> <!-- If all of them are dead, spawn a new one -->
+					<chance threshold="0.5"> <!-- Chance to spawn a SUPER one -->
+						<spawnunit name="Pet_KingKlout_Ability1_Super" count="1" target="source_position" proxy="" pushentity="true" /> <!-- New pet -->
+						<setlevel entity="stack_entity" value="1" />
+						<setproxy entity="this_entity" target="stack_entity" />
+						<applystate name="State_KingKlout_Ability1_Pet_Movement" target="stack_entity" proxy="source_entity" continuous="true" />
+					</chance>
+					<else> <!-- Chance to spawn a big one -->
+						<spawnunit name="Pet_KingKlout_Ability1_Big" count="1" target="source_position" proxy="" pushentity="true" /> <!-- New pet -->
+						<setlevel entity="stack_entity" value="1" />
+						<setproxy entity="this_entity" target="stack_entity" />
+						<applystate name="State_KingKlout_Ability1_Pet_Movement" target="stack_entity" proxy="source_entity" continuous="true" />
+					</else>
+				</compare>
+				<else> <!-- Not all of them are dead -->
+					<spawnunit name="Gadget_KingKlout_Ability1" count="1" target="source_position" proxy="" fixedposition="true" pushentity="true" />
+					<setent0 entity="stack_entity" />
+					<setproxy entity="stack_entity" target="this_proxy_entity" /> <!-- Use the gadget to store a proxy for 1 frame -->
+
+					<foreachproxy>
+						<setproxy entity="this_entity" target="target_entity" />
+					</foreachproxy>
+
+					<chance threshold="0.5"> <!-- Chance to spawn a SUPER one -->
+						<spawnunit name="Pet_KingKlout_Ability1_Super" count="1" target="source_position" proxy="" pushentity="true" /> <!-- New pet -->
+						<applystate name="State_KingKlout_Ability1_Pet_Movement" target="stack_entity" proxy="this_proxy_entity" continuous="true" />
+						<evaluate target="this_proxy_entity" a="target_level" b="1" op="add" />
+						<setlevel entity="stack_entity" value="result" />
+						<setproxy entity="this_proxy_entity" target="stack_entity" /> <!-- Chain it to the end of the chain -->
+					</chance>
+					<else> <!-- Chance to spawn a big one -->
+						<spawnunit name="Pet_KingKlout_Ability1_Big" count="1" target="source_position" proxy="" pushentity="true" /> <!-- New pet -->
+						<applystate name="State_KingKlout_Ability1_Pet_Movement" target="stack_entity" proxy="this_proxy_entity" continuous="true" />
+						<evaluate target="this_proxy_entity" a="target_level" b="1" op="add" />
+						<setlevel entity="stack_entity" value="result" />
+						<setproxy entity="this_proxy_entity" target="stack_entity" /> <!-- Chain it to the end of the chain -->
+					</else>
+
+					<pushentity entity="ent0" />
+					<setproxy entity="this_entity" target="stack_proxy_entity" /> <!-- Reset the chain to the first -->
+					<delete target="ent0" /> <!-- Deleting the gadget for cleanup -->
+				</else>
+
+				<compare a="charges" b="7" op="ge" />
+				<else>
+					<starttimer duration="2000" />
+				</else>
+			</compare>
+		</ontimer>
+	</modifier>
+</ability>

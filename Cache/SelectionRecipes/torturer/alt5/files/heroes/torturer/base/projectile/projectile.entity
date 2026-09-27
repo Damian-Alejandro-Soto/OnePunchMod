@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_TorturerAttack"
+
+	speed="900"
+	gravity="0"
+
+	modelscale="1.0"
+	model="/heroes/xalynx/alt5/projectile/effects/hook/model.mdf"
+
+	impacteffect=""
+	traileffect="/heroes/xalynx/alt5/projectile/effects/trail.effect"
+>
+
+</projectile>

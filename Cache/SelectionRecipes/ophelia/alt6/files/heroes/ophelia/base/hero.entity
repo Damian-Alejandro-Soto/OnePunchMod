@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Ophelia"
+
+	team="Legion"
+	icon="/heroes/ophelia/alt6/icon.dds"
+	portrait="/heroes/ophelia/alt6/icon.dds"
+	model="/heroes/ophelia/alt6/model.mdf"
+	skin=""
+	
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/ophelia/alt6/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/ophelia/alt6/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/ophelia/alt6/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/ophelia/alt6/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/ophelia/alt6/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/ophelia/alt6/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/ophelia/alt6/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/ophelia/alt6/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.75"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="40"
+	targetoffset="0 0 64"
+
+	category="muc protective"
+	difficulty="4.5"
+
+	midrating="0"
+	junglerating="5"
+	carryrating="0"
+	hardsupportrating="3"
+	softsupportrating="3"
+	offlanerating="0"
+	soloofflanerating="0"
+	rangedrating="5"
+	meleerating="0"
+
+	movespeed="300"
+	turnrate="720"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="0.4"
+	magicarmor="5"
+
+	inventory0="Ability_Ophelia1"
+	inventory1="Ability_Ophelia2"
+	inventory2="Ability_Ophelia3"
+	inventory3="Ability_Ophelia4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="500"
+	attackcooldown="1700"
+	attackdamagemin="24"
+	attackdamagemax="30"
+	attacknumanims="2"
+	attackoffset="0 140 70"
+	attackprojectile="Projectile_Ophelia_Attack"
+	attackrange="550"
+	attackstarteffect=""
+	attackactioneffect="/heroes/ophelia/alt6/projectile/effects/cast.effect"
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="intelligence"
+	strength="20"
+	strengthperlevel="1.8"
+	agility="15"
+	agilityperlevel="2.0"
+	intelligence="21"
+	intelligenceperlevel="2.8"
+	
+	corpsetime="5000"
+	corpsefadetime="5000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	
+
+	previewpos="0 0 -60"
+	previewangles="0 0 0"
+	previewscale="1.95"
+	
+	storemodel="/heroes/ophelia/alt6/store_model.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.65"
+ attackanim="attack_%"
+        icon2="/heroes/ophelia/alt6/icon.dds"
+        passiveeffect="/heroes/ophelia/alt6/effects/body.effect"
+        previewmodel="/heroes/ophelia/alt6/preview.mdf"
+        infoheight="185"
+        portraitcampos="24 -20 23">
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_PlatedGreaves" />
+	<recommendeditem name="Item_PostHaste" />
+	<recommendeditem name="Item_SorceryBoots" />
+	<recommendeditem name="Item_PegasusBoots" />
+	<recommendeditem name="Item_RingoftheTeacher" />
+	<recommendeditem name="Item_RefreshingOrnament" />
+	<recommendeditem name="Item_RingofSorcery" />
+	<recommendeditem name="Item_ShieldoftheFive" />
+	
+	<gooditemagainst name="Item_AlchemistsBones" />
+	<gooditemagainst name="Item_PlatedGreaves" />
+	<gooditemagainst name="Item_ShieldoftheFive" />
+	<gooditemagainst name="Item_RunedCleaver" />
+	
+	
+	
+	<onspawn>
+		<setactivemodifierkey name="Ophelia_Sound" />
+	</onspawn>
+	
+	<onrespawn>
+		<setactivemodifierkey name="Ophelia_Sound" />
+	</onrespawn>
+	
+	<modifier key="iamsheeped" modpriority="1000" passiveeffect=""/>
+	
+	<modifier key="ult_boost" modpriority="101"
+	>
+		<aura state="State_Ophelia_Ult_Boost" radius="0" targetscheme="self"/>
+	</modifier>
+</hero>

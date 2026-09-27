@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Bombardier_Attack"
+
+	speed="1000"
+	gravity="2000"
+
+	modelscale="1.45"
+	model="/heroes/bomb/alt9/projectile/effects/model.mdf"
+
+	traileffect="/heroes/bomb/alt9/projectile/effects/trail.effect"
+	impacteffect="/heroes/bomb/alt9/projectile/effects/impact.effect"
+>
+</projectile>

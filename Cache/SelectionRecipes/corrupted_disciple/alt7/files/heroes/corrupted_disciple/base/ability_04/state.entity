@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_CorruptedDisciple_Ability4_Self"
+
+	icon="../../icon.dds"
+	
+	impactinterval="800,700,600"
+	passiveeffect="/heroes/corrupted_disciple/alt7/ability_04/effects/state.effect"
+	effecttype="Physical"
+>
+	<oninflict>
+		<!-- Initialize accumulator -->
+		<setaccumulator value="50000" />
+		
+		<areaofeffect
+			radius="525"
+			targetselection="all"
+			targetscheme="nonboss_visible_enemy_units"
+			effecttype="Physical"
+		>
+			<!-- Prioritize an enemy target with Corrupted Conduit -->
+			<hasmodifier name="corruptedConduit" entity="target_entity">
+				<setproxy entity="this_entity" target="target_entity" />
+				<setaccumulator entity="this_entity" value="-1" /> <!-- Set accumulator to be less than 0 to prevent further checks -->
+			</hasmodifier>
+			
+			<compare a="target_health" b="accumulator" op="lt">
+				<setproxy entity="this_entity" target="target_entity" />
+				<setvar0 a="target_health" />
+				<setaccumulator entity="this_entity" value="var0" />
+			</compare>
+		</areaofeffect>
+		<compare a="result" b="0" op="eq">
+			<setproxy entity="this_entity" target="" />
+		</compare>
+		<else>
+			<spawnprojectile name="Projectile_CorruptedDisciple_Ability4" source="source_entity" target="this_proxy_entity" offset="0 0 150" noresponse="true" />
+		</else>
+		
+		<!-- Reset accumulator -->
+		<setaccumulator value="50000" />
+	</oninflict>
+
+	<onimpact>
+		<areaofeffect
+			radius="525"
+			targetselection="all"
+			targetscheme="nonboss_visible_enemy_units"
+			effecttype="Physical"
+		>
+			<!-- Prioritize an enemy target with Corrupted Conduit -->
+			<hasmodifier name="corruptedConduit" entity="target_entity">
+				<setproxy entity="this_entity" target="target_entity" />
+				<setaccumulator entity="this_entity" value="-1" /> <!-- Set accumulator to be less than 0 to prevent further checks -->
+			</hasmodifier>
+			
+			<compare a="target_health" b="accumulator" op="lt">
+				<setproxy entity="this_entity" target="target_entity" />
+				<setvar0 a="target_health" />
+				<setaccumulator entity="this_entity" value="var0" />
+			</compare>
+		</areaofeffect>
+		<compare a="result" b="0" op="eq">
+			<setproxy entity="this_entity" target="" />
+		</compare>
+		<else>
+			<spawnprojectile name="Projectile_CorruptedDisciple_Ability4" source="source_entity" target="this_proxy_entity" offset="0 0 150" noresponse="true" />
+		</else>
+		
+		<!-- Reset accumulator -->
+		<setaccumulator value="50000" />
+	</onimpact>
+
+	<modifier key="ult_boost" modpriority="100"
+		impactinterval="700,600,500"
+	/>	
+</state>

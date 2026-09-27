@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_FlintBeastwood2"
+
+	icon="/heroes/flint_beastwood/alt13/ability_02/icon.dds"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="passive"
+	dynamicprecache="../projectile/effects/attack_hollowpoint.effect,effects/impact.effect"
+>
+	<onattackstart>
+		<setaccumulator value="0.4" />
+		<cantarget targetscheme="enemy_units">
+			<chance threshold="accumulator">
+				<setaccumulator value="1" />
+				<setattackprojectile name="Projectile_FlintBeastwoodAttack_Invis" />
+				<playanim name="ability_2" speed="source_attackspeed" target="source_entity" />
+				
+				<!-- Start of Art Stuff -->
+				<setattackactioneffect effect="../projectile/effects/attack_hollowpoint.effect" source="source_entity" target="source_entity" />
+				<!-- End of Artsy Stuff -->
+			</chance>
+			<else>
+				<setaccumulator value="0" />
+			</else>
+		</cantarget>
+	</onattackstart>
+	
+	<onattackimpact>
+		<compare a="accumulator" b="1" op="eq">
+			<!-- Damage -->
+			<setvar0 a="16,34,52,70" />
+			<cantarget targetscheme="enemy_units">
+				<targettype type="illusion" target="source_entity" >
+					<damage effecttype="Physical" amount="0.33" b="var0" op="mult" />
+				</targettype>
+				<else>
+					<cantarget effecttype="Magic">
+						<applystate name="State_Stunned_Static" duration="50,100,150,200" />
+					</cantarget>
+				
+					<damage effecttype="Physical" amount="1" b="var0" op="mult" />
+				</else>
+			</cantarget>
+		</compare>
+	</onattackimpact>
+	
+	<onattackdamageevent activateonbounces="true">
+		<compare a="accumulator" b="1" op="eq">
+			<damagesupertype supertype="attack">
+				<!--Audio impact-->				
+				<setvar0 a="damage_attempted" />
+				<calculatedamage amount="var0" effecttype="Physical" />
+				<compare a="target_health" b="var2" op="le">
+					<!-- Start of Art Stuff -->
+						<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+						<exists path="str0">
+							<playeffectdynamic effect="str0" target="source_entity" />
+						</exists>
+						<else>
+							<playeffectdynamic effect="effects/impact.effect" target="source_entity" />
+						</else>
+					<!-- End of Artsy Stuff -->
+				</compare>
+			</damagesupertype>
+		</compare>
+	</onattackdamageevent>	
+
+	<!-- Midwars-only changes -->
+	<modifier key="OnlyMidMap" modpriority="100">
+		<onattackstart>
+			<setaccumulator value="0.30" />
+			<cantarget targetscheme="enemy_units">
+				<chance threshold="accumulator">
+					<setaccumulator value="1" />
+					<setattackprojectile name="Projectile_FlintBeastwoodAttack_Invis" />
+					<playanim name="ability_2" speed="source_attackspeed" target="source_entity" />
+					
+					<!-- Start of Art Stuff -->
+					<setattackactioneffect effect="../projectile/effects/attack_hollowpoint.effect" source="source_entity" target="source_entity" />
+					<!-- End of Artsy Stuff -->
+				</chance>
+				<else>
+					<setaccumulator value="0" />
+				</else>
+			</cantarget>
+		</onattackstart>
+
+		<onattackimpact>
+			<compare a="accumulator" b="1" op="eq">
+				<!-- Damage -->
+				<setvar0 a="16,34,52,70" />
+				<cantarget targetscheme="enemy_units">
+					<targettype type="illusion" target="source_entity" >
+						<damage effecttype="Physical" amount="0.33" b="var0" op="mult" />
+					</targettype>
+					<else>
+						<cantarget effecttype="Magic">
+							<applystate name="State_Stunned_Static" duration="40,80,120,160" />
+						</cantarget>
+					
+						<damage effecttype="Physical" amount="1" b="var0" op="mult" />
+					</else>
+				</cantarget>
+			</compare>
+		</onattackimpact>
+	</modifier>
+</ability>

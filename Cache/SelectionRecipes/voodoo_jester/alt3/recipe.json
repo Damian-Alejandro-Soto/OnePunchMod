@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "hero": "voodoo_jester",
+  "avatar": "alt3",
+  "files": [
+    "heroes\\voodoo_jester\\base\\hero.entity",
+    "heroes\\voodoo_jester\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\voodoo_jester\\base\\ability_01\\projectile.entity",
+    "heroes\\voodoo_jester\\base\\ability_01\\projectile.entity.onepunch_ability_managed",
+    "heroes\\voodoo_jester\\base\\ability_01\\projectile_bounce.entity",
+    "heroes\\voodoo_jester\\base\\ability_01\\projectile_bounce.entity.onepunch_ability_managed",
+    "heroes\\voodoo_jester\\base\\ability_04\\gadget.entity",
+    "heroes\\voodoo_jester\\base\\ability_04\\gadget.entity.onepunch_ability_managed",
+    "heroes\\voodoo_jester\\base\\ability_04\\projectile.entity",
+    "heroes\\voodoo_jester\\base\\ability_04\\projectile.entity.onepunch_ability_managed"
+  ]
+}

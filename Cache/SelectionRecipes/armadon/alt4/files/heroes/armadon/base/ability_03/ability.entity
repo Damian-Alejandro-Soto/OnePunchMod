@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Armadon3"
+
+	icon="/heroes/armadon/alt4/ability_03/icon.dds"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="passive"
+	dynamicprecache="../ability_02/effects/cast.effect"
+>
+	<onlearn>
+		<setcharges a="0" />
+		<setaccumulator value="0" />
+	</onlearn>
+
+	<ondeath>
+		<setcharges a="0" />
+		<setaccumulator value="0" />
+	</ondeath>
+
+	<ondamaged priority="-1">
+		<targettype type="alive" target="source_entity">
+			<hasmodifier name="Armadon_R_SotM" entity="source_entity">
+				<!-- Damage reduction -->
+				<evaluate a="0.40" />
+
+				<setvar3 a="1" b="result" op="sub" />
+				<scaledamage scale="var3" />
+
+				<!-- Charges gained = Final_Damage * (1/Damage_Reduction_Factor - 1) -->
+				<setvar2 a="result" />
+				<evaluate a="1" b="var3" op="div" />
+				<evaluate a="result" b="1" op="sub" />
+				<setvar2 a="var2" b="result" op="mult" />
+				
+				<!-- Actually add the charges here -->
+				<changeaccumulator b="var2" op="add" />
+				<setcharges a="accumulator" />
+			</hasmodifier>
+			<else>
+				<evaluate a="back_impact_angle" />
+				<compare a="result" b="100" op="le">
+					<!-- Regression table URL (Google Sheets): https://docs.google.com/spreadsheets/d/1V1XNzmaqXzanYoUcCyWNSw0zfm3vz8pfNLk59jvQt-U/edit#gid=1 -->
+					<!-- Regression formula: Damage reduction (%) = a(x^2) + bx + c = -0.152266(x^2) -0.002477 + 39.8871 -->
+					<evaluate a="back_impact_angle" b="back_impact_angle" op="mult" />
+					<setvar1 a="result" b="-0.00247734" op="mult" /> <!-- a -->
+					<evaluate a="back_impact_angle" b="-0.152266" op="mult" /> <!-- b -->
+					<setvar1 a="var1" b="result" op="add" />
+					<setvar1 a="var1" b="39.8871" op="add" /> <!-- c -->
+
+					<!-- var1 = 1 - (Damage reduction %)/100 ; this normalizes the number from 0 to 1 in most cases -->
+					<setvar1 a="var1" b="100" op="div" />
+
+					<!-- Save damage reduction % value for later -->
+					<setvar3 a="var1" />
+
+					<setvar1 a="1" b="var1" op="sub" />
+
+					<!-- Regression formula is not perfect, so sometimes it will give a negative value. Do nothing if this happens -->
+					<compare a="var1" b="0" op="gt">
+						<!-- Make sure you account for the level of the ability -->
+						<!-- Level 1/2/3/4 is 16/24/32/40% damage reduction, so it's 40/60/80/100% of the level 4 strength)  -->
+						<!-- Damage Reduction -->
+						<evaluate a="1" b="var1" op="sub" />
+						<evaluate a="result" b="0.4,0.6,0.8,1" op="mult" />
+						<evaluate a="1" b="result" op="sub" />
+						<setvar1 a="result" />
+						<scaledamage scale="var1" />
+
+						<!-- Charges gained = Final_Damage * (1/Damage_Reduction_Factor - 1) -->
+						<setvar2 a="result" />
+						<evaluate a="1" b="var1" op="div" />
+						<evaluate a="result" b="1" op="sub" />
+						<setvar2 a="var2" b="result" op="mult" />
+
+						<!-- Actually add the charges here -->
+						<changeaccumulator b="var2" op="add" />
+						<setcharges a="accumulator" />
+					</compare>
+				</compare>
+			</else>
+
+			<!-- Trigger Spine Burst when meeting blocked damage threshold -->
+			<setvar0 a="130" /> <!-- Damage threshold -->
+			
+			<compare a="accumulator" b="var0" op="ge">
+				<pushtool name="Ability_Armadon2" />
+				<setvar1 a="source_level" source="stack_entity" />
+				<compare a="var1" b="0" op="gt">
+					<setstr0 a="altavatar_path" b="../ability_02/effects/cast.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" source="source_entity" target="" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="../ability_02/effects/cast.effect" source="source_entity" target="" />
+				</else>
+					<spawnaffector name="Affector_Armadon_Ability2" target="source_position" level="var1" attribution="Ability_Armadon2" />
+				</compare>
+				
+				<setvar2 a="accumulator" b="130" op="sub" />
+				<setaccumulator value="var2" />
+				
+				<!-- Update charges -->
+				<setcharges a="accumulator" />
+			</compare>
+		</targettype>
+	</ondamaged>
+
+	<!-- Midwars-only: rear damage reduction reduced to 8/16/24/32% -->
+	<modifier key="OnlyMidMap" modpriority="100">
+		<ondamaged priority="-1">
+			<targettype type="alive" target="source_entity">
+				<hasmodifier name="Armadon_R_SotM" entity="source_entity">
+					<!-- Damage reduction -->
+					<evaluate a="0.40" />
+
+					<setvar3 a="1" b="result" op="sub" />
+					<scaledamage scale="var3" />
+
+					<!-- Charges gained = Final_Damage * (1/Damage_Reduction_Factor - 1) -->
+					<setvar2 a="result" />
+					<evaluate a="1" b="var3" op="div" />
+					<evaluate a="result" b="1" op="sub" />
+					<setvar2 a="var2" b="result" op="mult" />
+					
+					<!-- Actually add the charges here -->
+					<changeaccumulator b="var2" op="add" />
+					<setcharges a="accumulator" />
+				</hasmodifier>
+				<else>
+					<evaluate a="back_impact_angle" />
+					<compare a="result" b="100" op="le">
+						<!-- Regression formula: Damage reduction (%) = a(x^2) + bx + c = -0.152266(x^2) -0.002477 + 39.8871 -->
+						<evaluate a="back_impact_angle" b="back_impact_angle" op="mult" />
+						<setvar1 a="result" b="-0.00247734" op="mult" /> <!-- a -->
+						<evaluate a="back_impact_angle" b="-0.152266" op="mult" /> <!-- b -->
+						<setvar1 a="var1" b="result" op="add" />
+						<setvar1 a="var1" b="39.8871" op="add" /> <!-- c -->
+
+						<setvar1 a="var1" b="100" op="div" />
+						<setvar3 a="var1" />
+						<setvar1 a="1" b="var1" op="sub" />
+
+						<compare a="var1" b="0" op="gt">
+							<!-- Level 1/2/3/4 is 8/16/24/32% damage reduction, so it's 20/40/60/80% of the level 4 strength -->
+							<evaluate a="1" b="var1" op="sub" />
+							<evaluate a="result" b="0.2,0.4,0.6,0.8" op="mult" />
+							<evaluate a="1" b="result" op="sub" />
+							<setvar1 a="result" />
+							<scaledamage scale="var1" />
+
+							<!-- Charges gained = Final_Damage * (1/Damage_Reduction_Factor - 1) -->
+							<setvar2 a="result" />
+							<evaluate a="1" b="var1" op="div" />
+							<evaluate a="result" b="1" op="sub" />
+							<setvar2 a="var2" b="result" op="mult" />
+
+							<!-- Actually add the charges here -->
+							<changeaccumulator b="var2" op="add" />
+							<setcharges a="accumulator" />
+						</compare>
+					</compare>
+				</else>
+
+				<!-- Trigger Spine Burst when meeting blocked damage threshold -->
+				<setvar0 a="130" /> <!-- Damage threshold -->
+				
+				<compare a="accumulator" b="var0" op="ge">
+					<pushtool name="Ability_Armadon2" />
+					<setvar1 a="source_level" source="stack_entity" />
+					<compare a="var1" b="0" op="gt">
+						<setstr0 a="altavatar_path" b="../ability_02/effects/cast.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" source="source_entity" target="" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="../ability_02/effects/cast.effect" source="source_entity" target="" />
+					</else>
+						<spawnaffector name="Affector_Armadon_Ability2" target="source_position" level="var1" attribution="Ability_Armadon2" />
+					</compare>
+					
+					<setvar2 a="accumulator" b="130" op="sub" />
+					<setaccumulator value="var2" />
+					
+					<!-- Update charges -->
+					<setcharges a="accumulator" />
+				</compare>
+			</targettype>
+		</ondamaged>
+	</modifier>
+
+</ability>

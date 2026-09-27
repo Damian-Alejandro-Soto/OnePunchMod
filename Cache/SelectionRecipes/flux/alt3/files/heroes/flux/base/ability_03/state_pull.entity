@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Flux_Ability3_Pull"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/flux/alt3/effects/body_pull.effect"
+	ishidden="true"
+	
+	deathpersist="true"
+
+	effecttype=""
+	
+	modifierkey="Fluxpull"
+>
+	<modifier key="krosmode" modpriority="100"
+		passiveeffect=""
+		deathpersist="false"
+	>
+	</modifier>
+	
+	<modifier key="iamsheeped" modpriority="1000"
+		passiveeffect=""
+	/>
+</state>

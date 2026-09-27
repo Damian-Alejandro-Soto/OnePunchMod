@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Riftwalker_Ability4_Art"
+	
+	icon="../../icon.dds"
+	portrait=""
+	
+	model="/shared/models/invis.mdf"
+	passiveeffect="/heroes/riftmage/alt2/ability_04/effects/wormhole_bottom.effect"
+	preglobalscale="1.25"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="64"
+	isselectable="false"
+	iscontrollable="false"
+	
+	drawonmap="false"
+
+	targetoffset="0 0 0"
+
+	canrotate="true"
+	ismobile="false"
+	nothreat="true"
+
+	attacktype="none"
+	combattype="Ranged"
+
+	stealthtype="unrevealable"
+	fadetime="0"
+	
+	sightrangeday="0"
+	sightrangenight="0"
+	unitwalking="true"
+	canattack="false"
+
+	flying="false"
+	clearvision="true"
+	
+	corpsetime="0"
+	deathtime="0"
+	
+	lifetime="2000"
+	noblockneutralspawn="true"
+>
+
+</gadget>

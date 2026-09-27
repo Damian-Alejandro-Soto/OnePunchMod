@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_KingKlout"
+
+	team="Hellbourne"
+	icon="/heroes/king_klout/alt/icon.dds"
+	portrait="/heroes/king_klout/alt/icon.dds"
+	model="/heroes/king_klout/alt/model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/king_klout/alt/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/king_klout/alt/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/king_klout/alt/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/king_klout/alt/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/king_klout/alt/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/king_klout/alt/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/king_klout/alt/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/king_klout/alt/sounds/voice/taunt_after.wav"
+	preglobalscale="1"
+
+	infoheight="180"
+	overheadoffset="-20"
+
+	modelscale="1.5"
+	effectscale="1.0"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="48"
+	targetoffset="0 0 64"
+
+	category="cc magic"
+	difficulty="3"
+
+	midrating="5"
+	junglerating="0"
+	carryrating="1"
+	hardsupportrating="0"
+	softsupportrating="1"
+	offlanerating="3"
+	soloofflanerating="0"
+	rangedrating="0"
+	meleerating="5"
+
+	movespeed="300"
+	turnrate="1080"
+	turnsmoothing="0.1"
+	
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="1.04"
+	magicarmor="5"
+
+	inventory0="Ability_KingKlout1"
+	inventory1="Ability_KingKlout2"
+	inventory2="Ability_KingKlout3"
+	inventory3="Ability_KingKlout4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+	
+	attackduration="900"
+	attackactiontime="400"
+	attackcooldown="1700"
+	attackdamagemin="26"
+	attackdamagemax="30"
+	attacknumanims="2"
+	attackoffset="20 64 100"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+	
+	corpsetime="2000"
+	corpsefadetime="3000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+	primaryattribute="strength"
+	strength="22"
+	strengthperlevel="2.5"
+	agility="14"
+	agilityperlevel="1.5"
+	intelligence="22"
+	intelligenceperlevel="2.0"
+	
+
+	previewpos="0 0 -60"
+	previewangles="0 0 0"
+	previewscale="1.7"
+	
+	storemodel="/heroes/king_klout/alt/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.65"
+
+	portraitcampos="5 -30 35"
+	portraitangles="0 0 0"
+	portraitscale="1"
+	dynamicprecache="sounds/interactions/spawn.effect,sounds/interactions/levelup.effect"
+	
+ attackanim="attack_%"
+        icon2="/heroes/king_klout/alt/icon.dds"
+        previewmodel="/heroes/king_klout/alt/preview.mdf">
+
+	<onspawn>
+		<activatemodifierkey name="Klout_Sound" />
+		<chance threshold="0.50">
+			<pausevoiceovers duration="6135" />
+			<setstr0 a="altavatar_path" b="sounds/interactions/spawn.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="source_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="sounds/interactions/spawn.effect" source="source_entity" />
+			</else>
+		</chance>
+	</onspawn>
+
+	<onlevelup>
+		<compare a="level" b="6" op="ge">
+			<setstr0 a="altavatar_path" b="sounds/interactions/levelup.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="source_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="sounds/interactions/levelup.effect" source="source_entity" />
+			</else>
+		</compare>
+	</onlevelup>
+
+	<modifier key="ult_boost" modpriority="101"
+    >
+        <aura state="State_KingKlout_Ult_Boost" radius="0" targetscheme="self" />
+    </modifier>
+</hero>

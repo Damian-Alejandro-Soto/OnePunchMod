@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Solstice_Ability1_Armor"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/solstice/alt4/ability_01/effects/state_armor.effect"
+	
+	armor="2,4,6,8"
+	magicarmor="1,2,3,4"
+	allowtransfer="true"
+	effecttype="StatusBuff"
+	impactinterval="1000"
+	
+>
+	<onimpact>
+		<hasmodifier name="SolsticeAbility1Charging" entity="source_entity" >
+			<changeduration b="3000" op="max" />
+		</hasmodifier>
+	</onimpact>
+</state>

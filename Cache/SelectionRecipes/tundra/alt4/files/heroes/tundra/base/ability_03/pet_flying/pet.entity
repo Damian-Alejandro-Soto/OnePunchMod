@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Pet_Tundra_Ability3_Flying"
+	
+	icon="../../../icon.dds"
+	portrait="../../../icon.dds"
+	model="/heroes/tundra/alt4/ability_02/pet_flying/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/tundra/alt4/ability_02/pet_flying/effects/body.effect"
+	spawneffect=""
+
+	preglobalscale="1.3"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="32"
+	targetoffset="0 0 0"
+
+	movespeed="300,325,350,375"
+	turnrate="450"
+	turnsmoothing="0.05"
+
+	maxhealth="1"
+	healthregen="1"
+	maxmana="0"
+	manaregen="0"
+
+	armor="0"
+	magicarmor="0"
+	immunity="IndirectImmunity"
+
+	
+	inventory0="Ability_Tundra3_Pet"
+	inventory1="Ability_Tundra3_Pet2"
+	inventory2=""
+	inventory3=""
+
+	mapicon="/shared/icons/minimap_scoutowl.tga"
+	mapiconsize="0.05"
+	mapiconcolor="1 1 1 1"
+	
+	canattack="false"
+	attacktargetscheme="nothing"
+	attacktype="none"
+	combattype="Melee"
+
+	aggrorange="0"
+	sightrangeday="750,900,1050,1200"
+	sightrangenight="750,900,1050,1200"
+	clearvision="true"
+	
+	goldbountymin="15,15,15,15"
+	goldbountymax="15,15,15,15"
+	experiencebounty="15,15,15,15"
+	
+	flying="true"
+	iscontrollable="true"
+	
+	diewithowner="true"
+	
+	unittype="summoned TundraBird"
+
+	stealthtype="hero"
+	hideshadow="true"
+>
+	
+	<onframe>
+		<entitytype type="Hero_Tundra" target="source_owner_entity">
+			<!-- Kill the bird if it spawns from Tundra's Tombstone via Deadlift's ultimate -->
+			<hasmodifier name="Deadlift_Ghost" entity="this_owner_entity">
+				<kill target="this_entity" source="" />
+			</hasmodifier>
+			
+			<!-- Teleport check logic -->
+			<hasmodifier entity="this_proxy_entity" name="tundra_ability3_Away" />
+			<else>
+				<hasmodifier entity="this_entity" name="tundra_E_notfollow" />
+				<else>
+					<distance source="this_entity" target="this_owner_entity" />
+					<compare a="result" b="3000" op="gt">
+						<teleport source="this_entity" target="this_owner_entity" />
+						<order command="follow" source="this_entity" target="this_owner_entity" />
+					</compare>
+				</else>
+			</else>
+			
+			<!-- If shiver is within a certain radius, he can be spotted -->
+			<areaofeffect
+				center="this_entity"
+				radius="500"
+				targetselection="all"
+				targetscheme="enemy_heroes"
+				ignoreinvulnerable="true"
+				maxtotalimpacts="1"
+			>
+				<applystate name="State_Tundra_Ability3_Sight" source="target_entity" inflictor="target_entity" target="this_entity" continuous="true" timeout="frametime" />
+			</areaofeffect>
+		</entitytype>
+		
+		<!-- Parasite Infest corner case -->
+		<else>
+			<setactivemodifierkey entity="this_proxy_entity" name="" />
+			<targettype type="alive" target="this_owner_entity">
+				<startcooldown entity="this_proxy_entity" duration="80000,70000,60000,50000" />
+			</targettype>
+		</else>
+	</onframe>
+	
+	<ondamaged>
+		<changedamage b="1" op="min" />
+		<applystate name="State_Tundra_Ability3_NoRegen" target="this_entity" duration="5000" />
+	</ondamaged>
+	
+	<ondeath>
+		<setactivemodifierkey entity="this_proxy_entity" name="" />
+		<targettype type="alive" target="this_owner_entity">
+			<startcooldown entity="this_proxy_entity" duration="80000,70000,60000,50000" />
+		</targettype>
+	</ondeath>
+	
+	<ontargetacquired>
+		<compare source="this_owner_entity" target="target_entity" a="source_entity" b="target_entity" op="eq">
+			<setactivemodifierkey entity="this_proxy_entity" name="" />
+		</compare>
+		<else>
+			<setactivemodifierkey entity="this_proxy_entity" name="tundra_ability3_Away" />
+			<applystate name="State_Tundra_Ability3_NotFollow" inflictor="this_entity" source="this_entity" target="this_entity" continuous="true" proxy="this_proxy_entity" />
+		</else>
+	</ontargetacquired>
+</pet>

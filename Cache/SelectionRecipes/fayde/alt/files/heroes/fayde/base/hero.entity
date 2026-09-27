@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Fayde"
+	
+	team="Hellbourne"
+	icon="/heroes/fade/alt/icon.dds"
+	animatedportrait=""
+	portrait="/heroes/fade/alt/icon.dds"
+	model="/heroes/fade/alt/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/fade/effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="2.25"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="160"
+	boundsradius="24"
+	selectionradius="55"
+	targetoffset="0 0 64"
+
+	category="magic cc"
+	difficulty="3"
+
+	midrating="4"
+	junglerating="0"
+	carryrating="1"
+	hardsupportrating="0"
+	softsupportrating="3"
+	offlanerating="3"
+	soloofflanerating="3"
+	rangedrating="0"
+	meleerating="5"
+
+	movespeed="290"
+	turnrate="720"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="1.48"
+	magicarmor="5.0"
+
+	inventory0="Ability_Fayde1"
+	inventory1="Ability_Fayde2"
+	inventory2="Ability_Fayde3"
+	inventory3="Ability_Fayde4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="400"
+	attackcooldown="1700"
+	attackdamagemin="28"
+	attackdamagemax="34"
+	attacknumanims="2"
+	attackoffset="0 0 0"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect="effects/impact2.effect"
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="intelligence"
+	strength="18"
+	strengthperlevel="2.2"
+	agility="18"
+	agilityperlevel="2.1"
+	intelligence="18"
+	intelligenceperlevel="2.3"
+	
+
+	previewpos="-10 0 -70"
+	previewangles="0 0 0"
+	previewscale="1.95"
+	
+	storemodel="/heroes/fade/alt/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.85"
+ attackanim="attack_%"
+        icon2="/heroes/fade/alt/icon.dds"
+        previewmodel="/heroes/fade/alt/preview.mdf">
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_PostHaste" />
+	<recommendeditem name="Item_PegasusBoots" />
+	<recommendeditem name="Item_Soultrap" />
+	<recommendeditem name="Item_Spellshards" />
+	<recommendeditem name="Item_Codex" />
+	<recommendeditem name="Item_Hellflower" />
+	<recommendeditem name="Item_GrimoireofPower" />
+	
+	<gooditemagainst name="Item_MysticVestments" />
+	<gooditemagainst name="Item_AdevesCloak" />
+	
+	
+
+	<modifier key="iamsheeped" modpriority="201"
+		passiveeffect=""
+	/>
+
+	<modifier key="fadereflectionstealth" modpriority="100"
+		attackduration="100"
+		attackactiontime="100"
+	/>
+	
+	<modifier key="fade_umbral" modpriority="100"
+		attackduration="100"
+		attackactiontime="100"
+	/>
+
+	<modifier key="ult_boost" modpriority="101"
+    >
+        <aura state="State_Fayde_Ult_Boost" radius="0" targetscheme="self"/>
+    </modifier>
+</hero>

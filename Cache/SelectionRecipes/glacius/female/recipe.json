@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "hero": "glacius",
+  "avatar": "female",
+  "files": [
+    "heroes\\glacius\\base\\hero.entity",
+    "heroes\\glacius\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\glacius\\base\\state_frosty_ult_boost.entity",
+    "heroes\\glacius\\base\\state_frosty_ult_boost.entity.onepunch_ability_managed"
+  ],
+  "dependencies": []
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Empath_Ability3"
+
+	icon="/heroes/empath/alt7/ability_03/icon.dds"
+	passiveeffect=""
+	displaylevel="true"
+
+	healthregen="1,2,3,4"
+	healthregenpercent="0.001,0.002,0.003,0.004"
+>
+
+</state>

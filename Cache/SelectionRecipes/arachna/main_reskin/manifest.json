@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "arachna",
+  "legacy_folder": "arachna",
+  "avatar": "main_reskin",
+  "counts": {
+    "files": 53,
+    "models": 17,
+    "materials": 3,
+    "textures": 12,
+    "effects": 1,
+    "sounds": 20,
+    "icons": 2,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

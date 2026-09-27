@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Rhapsody3"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/rhapsody/alt3/ability_03/effects/sound_loop.effect"
+	
+	anim="ability_3"
+	casttime="0"
+	castactiontime="0"
+	
+	maxlevel="5"
+	baselevel="1"
+	requiredlevel="0,1,3,5,7"
+
+	actiontype="passive"
+	disabled="true"
+
+>
+	<aura state="State_Rhapsody_Ability3" radius="0,900" targetscheme="nothing,ally_heroes" ignoreinvulnerable="true" />
+	
+	<modifier key="rhapsody_W" modpriority="100"
+		disabled="false"
+		actiontype="target_self"		
+		frontqueue="true"
+		inheritmovement="true"
+		noninterrupting="true"
+		
+		manacost="85,95,105,115"
+		cooldowntime="15000"		
+		cooldowntype="rhapsody_w"
+	>
+		<onimpact>
+			<!-- Get level of W -->
+			<pushtool name="Ability_Rhapsody2" />
+			<setvar0 a="source_level" source="stack_entity" />
+			<compare a="var0" b="0" op="gt">
+				<spawnaffector name="Affector_Rhapsody_Ability2_Enemies" target="source_entity" level="var0" />
+				<spawnaffector name="Affector_Rhapsody_Ability2_Allies" target="source_entity" level="var0" />
+				<spawnunit name="Gadget_Rhapsody_Ability2" target="source_entity" bind="source_entity" level="var0" />
+			</compare>
+		</onimpact>
+	</modifier>
+	
+	<modifier key="rhapsody_W1" modpriority="110"
+		manacost="85"
+	>	
+	</modifier>
+	
+	<modifier key="rhapsody_W2" modpriority="120"
+		manacost="95"
+	>	
+	</modifier>
+	
+	<modifier key="rhapsody_W3" modpriority="130"
+		manacost="105"
+	>	
+	</modifier>
+	
+	<modifier key="rhapsody_W4" modpriority="140"
+		manacost="115"
+	>	
+	</modifier>
+</ability>

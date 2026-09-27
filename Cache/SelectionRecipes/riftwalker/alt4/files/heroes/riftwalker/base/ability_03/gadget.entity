@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Riftwalker_Ability3"
+	
+	icon="../../icon.dds"
+	portrait=""
+	
+	model="/shared/models/invis.mdf"
+	passiveeffect="/heroes/riftmage/alt4/ability_03/effects/wormhole_bottom.effect"
+	preglobalscale="0.93"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="64"
+	isselectable="false"
+	iscontrollable="false"
+	invulnerable="true"
+	
+	drawonmap="false"
+
+	targetoffset="0 0 0"
+
+	canrotate="true"
+	ismobile="false"
+	nothreat="true"
+
+	attacktype="none"
+	combattype="Ranged"
+	
+	sightrangeday="0"
+	sightrangenight="0"
+	unitwalking="true"
+	canattack="false"
+
+	flying="false"
+	clearvision="true"
+	corpsetime="0"
+	deathtime="0"
+	
+	lifetime="3600"
+	noblockneutralspawn="true"
+	dynamicprecache="effects/shake.effect" 
+>
+
+	<onspawn>
+		<setstr0 a="altavatar_path" b="effects/shake.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="this_position" target="" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/shake.effect" source="this_position" target="" occlude="true" />
+		</else>
+	</onspawn>
+</gadget>

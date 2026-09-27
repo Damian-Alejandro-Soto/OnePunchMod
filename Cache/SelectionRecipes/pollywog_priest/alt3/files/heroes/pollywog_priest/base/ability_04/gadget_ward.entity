@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_PollywogPriestWard"
+
+	icon="icon.tga"
+	portrait="icon.tga"
+	model="/heroes/pollywogpriest/alt3/ability_04/wards/top.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/pollywogpriest/alt3/ability_04/wards/base.effect"
+	spawneffect="wards/effects/spawn.effect"
+	
+	
+	isselectable="true"
+	
+	expirenumanims="0"
+	
+	preglobalscale="2"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="26"
+	targetoffset="0 0 64"
+
+	blocking="true"
+
+	movespeed="0"
+	turnrate="540"
+	turnsmoothing="0.05"
+	ismobile="false"
+	canrotate="true"
+
+	maxhealth="2"
+	healthregen="0"
+	maxmana="0"
+	manaregen="0"
+
+	armor="0"
+	magicarmor="0"
+	immunity="GadgetImmunity"
+
+	canattack="true"
+	
+	attackduration="1500"
+	attackactiontime="550"
+	attackcooldown="1500"
+	attackdamagemin="40,65,90"
+	attackdamagemax="40,65,90"
+	attacknumanims="1"
+	attackoffset="0 0 135"
+	attackprojectile="Projectile_PollywogPriestWardAttack"
+	attackrange="600"
+	attackstarteffect="/heroes/pollywog_priest/base/ability_04/wards/effects/laser_start.effect"
+	attackactioneffect=""
+	attackimpacteffect=""
+	attackeffecttype=""
+	attacktype="ranged"
+	combattype="Ranged"
+
+	aggrorange="600"
+	sightrangeday="1200"
+	sightrangenight="800"
+
+	experiencebounty="15"
+	goldbountymin="23"
+	goldbountymax="38"
+	
+	lifetime="45000"
+	showlifetime="true"
+>
+	<ondamaged>
+		<damageeffecttype effecttype="Returned">
+			<changedamage b="0" op="min"/>
+		</damageeffecttype>
+		<else>
+			<changedamage b="1" op="min"/>
+		</else>
+	</ondamaged>
+
+	<onattackingdamageevent>
+		<cantarget targetscheme="enemy_buildings">
+			<setvar0 a="0.75" />
+			<setvalue name="damage_attempted" a="damage_attempted" b="var0" op="mult" />
+		</cantarget>
+	</onattackingdamageevent>
+	
+	<modifier key="ult_boost" modpriority="105"
+		passiveeffect="/heroes/pollywogpriest/alt3/ability_04/wards/base_boost.effect"
+		attackprojectile="Projectile_PollywogPriestWardAttack_Boost"
+	>
+	</modifier>
+</gadget>

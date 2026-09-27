@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_AlunaAttack"
+
+	speed="1050"
+	gravity="800"
+
+	modelscale=".5"
+	model="effects/projectile.mdf"
+
+	traileffect="/heroes/aluna/alt8/projectile/effects/trail.effect"
+	impacteffect="/heroes/aluna/alt8/projectile/effects/projectile_impact.effect"
+>
+</projectile>

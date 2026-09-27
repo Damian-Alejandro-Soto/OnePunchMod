@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_EmeraldWardenpet_Ability1_Cooldown"
+
+	icon="/heroes/emerald_warden/alt9/ability_04/effects/ability_01/icon.dds"
+	passiveeffect=""
+	
+	modifierkey="Gawain_1"
+>
+</state>

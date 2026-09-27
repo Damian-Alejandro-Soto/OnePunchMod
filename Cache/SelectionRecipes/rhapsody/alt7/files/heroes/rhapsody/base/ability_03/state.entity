@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rhapsody_Ability3"
+	
+	icon="../../icon.dds"
+	displaylevel="true"
+	passiveeffect="/heroes/rhapsody/alt7/ability_03/effects/state.effect"
+	
+	castspeed="0,0.2,0.4,0.6,0.8"
+	totalhealmultiplier="0,0.08,0.12,0.16,0.20"
+>
+
+	<onframe />
+
+	<onattackingdamageevent>
+		<setvar0 a="0,0.5,1,1.5,2" />
+		<setvalue name="damage_magicarmorpierce" a="damage_magicarmorpierce" b="var0" op="add" />
+	</onattackingdamageevent>
+</state>

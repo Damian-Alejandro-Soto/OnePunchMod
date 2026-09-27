@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "hero": "aluna",
+  "avatar": "alt2",
+  "files": [
+    "heroes\\aluna\\base\\hero.entity",
+    "heroes\\aluna\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\aluna\\base\\ability_01\\ability.entity",
+    "heroes\\aluna\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\aluna\\base\\ability_02\\projectile.entity",
+    "heroes\\aluna\\base\\ability_02\\projectile.entity.onepunch_ability_managed",
+    "heroes\\aluna\\base\\ability_02\\projectilered.entity",
+    "heroes\\aluna\\base\\ability_02\\projectilered.entity.onepunch_ability_managed",
+    "heroes\\aluna\\base\\ability_03\\ability.entity",
+    "heroes\\aluna\\base\\ability_03\\ability.entity.onepunch_ability_managed",
+    "heroes\\aluna\\base\\ability_03\\gadget_image.entity",
+    "heroes\\aluna\\base\\ability_03\\gadget_image.entity.onepunch_ability_managed",
+    "heroes\\aluna\\base\\ability_03\\projectile.entity",
+    "heroes\\aluna\\base\\ability_03\\projectile.entity.onepunch_ability_managed",
+    "heroes\\aluna\\base\\ability_03\\state.entity",
+    "heroes\\aluna\\base\\ability_03\\state.entity.onepunch_ability_managed"
+  ]
+}

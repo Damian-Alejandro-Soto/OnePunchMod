@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_ShadowBlade_Ability4_Agility"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/shadowblade/alt6/ability_04/effects/passiveagi.effect"
+	displaylevel="true"
+	propagatetoillusions="true"
+	
+	agilitypercharge="1"
+	
+	modifierkey="Shadowblade_R_Agi"
+	modifierkey2=""
+	deathpersist="true"
+	
+	effecttype=""
+>
+	<onframe>
+		<targettype type="alive" target="this_owner_entity">
+			<deactivatemodifierkey name="dead" />
+			<hasmodifier name="iamsheeped" entity="this_owner_entity" >
+				<activatemodifierkey name="iamsheeped" />
+			</hasmodifier>
+			<else>
+				<deactivatemodifierkey name="iamsheeped" />
+			</else>
+		</targettype>
+		<else>
+			<activatemodifierkey name="dead" />
+			<deactivatemodifierkey name="iamsheeped" />
+		</else>
+	</onframe>
+	
+	<onattackpreimpact />
+	
+	<onattackimpact />
+
+	<modifier key="iamsheeped" modpriority="1000"
+		passiveeffect=""
+	/>
+
+	<modifier key="dead" modpriority="1000"
+		passiveeffect=""
+	/>
+	
+	<modifier key="ult_boost" modpriority="101"
+		unitwalking="true"
+		truestrike="true"
+	>
+	</modifier>
+
+	<modifier key="krosmode" modpriority="100"
+		deathpersist="false"
+	/>
+	
+</state>

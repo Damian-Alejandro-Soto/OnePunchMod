@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_PollywogPriestWardAttack_Boost"
+
+	speed="3000"
+	gravity="0"
+	canturn="false"
+	model="/shared/models/invis.mdf"
+
+
+	impacteffect="/heroes/pollywogpriest/alt7/ability_04/wards/effects/impact.effect"
+	traileffect="/heroes/pollywogpriest/alt7/ability_04/wards/effects/projectile.effect"
+>
+
+</projectile>

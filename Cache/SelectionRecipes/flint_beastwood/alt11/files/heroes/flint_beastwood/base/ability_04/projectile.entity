@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_FlintBeastwood_Ability4"
+
+	speed="2500"
+	gravity="500"
+
+	modelscale=".8"
+	model="../projectile/effects/bullet/bullet.mdf"
+
+	effectscale="1"
+	impacteffect="/heroes/flint_beastwood/alt11/ability_04/effects/impact.effect"
+	traileffect="/heroes/flint_beastwood/alt11/ability_04/effects/trail.effect"
+>
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<applystate name="State_Stunned_Static" duration="200" />
+				<damage effecttype="Magic" amount="350,525,700" />
+				<setvar0 a="350,525,700" />
+				<calculatedamage amount="var0" effecttype="Magic" />
+				<setvar2 a="result" />
+				
+				<!-- VFX/SFX -->
+				<applystate name="State_FlintBeastwood_Ability4_Sound" target="target_entity" duration="0" />
+			</onimpact>
+		</combatevent>
+	</onimpact>	
+</projectile>

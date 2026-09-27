@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_SirBenzington_Ability4_Shadow"
+
+	icon=""
+	portrait=""
+	model="/shared/models/invis.mdf" 
+	skin=""
+
+	effectinheritsstart="true"
+
+	passiveeffect=""
+	spawneffect=""
+	
+	isselectable="false"
+	iscontrollable="false"
+	invulnerable="true"
+	
+	
+	unitwalking="true"
+
+	preglobalscale="1.1"
+	modelscale="0.63"
+	effectscale="1.0"
+	boundsheight="38"
+	boundsradius="42"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+	flying="false"
+	clearvision="false"
+	drawonmap="false"
+
+	attacktype="none"
+
+	lifetime="3000"
+	deathtime="0"
+	corpsetime="0"
+	corpsefadetime="0"
+
+	antiblocking="true"
+	noblockneutralspawn="true"
+
+	dynamicprecache="effects/vox_land.effect"
+>
+
+	<onexpired>
+		<!-- VFX -->
+		<playeffect effect="effects/impact_400.effect,effects/impact_500.effect,effects/impact_600.effect" target="source_position" source="source_position" occlude="true" />
+
+		<!-- Landing voice line. Split out of the impact effects because those are one shared
+		     per-level trio that a single str0 cannot select from, so an avatar could not
+		     override just the sound without cloning all three. -->
+		<setstr0 a="altavatar_path" b="effects/vox_land.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="source_position" source="source_position" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/vox_land.effect" target="source_position" source="source_position" occlude="true" />
+		</else>
+
+		<unbind target="this_owner_entity" />
+		<disjoint target="this_owner_entity" />
+		<teleport source="this_owner_entity" target="source_entity" />
+		<playanim name="ability_4_end" target="this_owner_entity" />
+		<spawnaffector name="Affector_SirBenzington_Ability4_Outer" proxy="source_owner_entity" target="source_position" />
+	</onexpired>
+
+	<modifier key="benzington_ability4_ShadowRender" modpriority="90"
+		passiveeffect="/heroes/sir_benzington/alt11/ability_04/effects/shadow_400.effect,../alt11/ability_04/effects/shadow_500.effect,../alt11/ability_04/effects/shadow_600.effect"
+	>
+	</modifier>
+</gadget>

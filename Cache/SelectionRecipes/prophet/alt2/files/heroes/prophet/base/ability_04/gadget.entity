@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Prophet_Ability4"
+	
+	model="/shared/models/invis.mdf"
+	passiveeffect="/heroes/prophet/alt/ability_04/effects/affector.effect"
+
+	preglobalscale="1.0"
+	modelscale="1.8"
+	effectscale="0.9"
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	iscontrollable="false"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+	canattack="false"
+
+	deathtime="0"
+	corpsetime="0"
+	
+	invulnerable="true"
+	unitwalking="true"
+	buildingwalking="true"
+	treewalking="true"
+	cliffwalking="true"
+	flying="false"
+	clearvision="true"
+	drawonmap="false"
+
+	lifetime="2000"
+>
+	<onspawn />
+</gadget>

@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "deadwood",
+  "avatar": "pog_skin",
+  "files": [
+    "heroes\\deadwood\\base\\hero.entity",
+    "heroes\\deadwood\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

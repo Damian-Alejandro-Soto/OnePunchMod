@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hero": "jeraziah",
+  "avatar": "alt",
+  "files": [
+    "heroes\\jeraziah\\base\\hero.entity",
+    "heroes\\jeraziah\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\jeraziah\\base\\ability_01\\affector.entity",
+    "heroes\\jeraziah\\base\\ability_01\\affector.entity.onepunch_ability_managed",
+    "heroes\\jeraziah\\base\\ability_02\\ability.entity",
+    "heroes\\jeraziah\\base\\ability_02\\ability.entity.onepunch_ability_managed",
+    "heroes\\jeraziah\\base\\ability_02\\state.entity",
+    "heroes\\jeraziah\\base\\ability_02\\state.entity.onepunch_ability_managed",
+    "heroes\\jeraziah\\base\\ability_03\\ability.entity",
+    "heroes\\jeraziah\\base\\ability_03\\ability.entity.onepunch_ability_managed",
+    "heroes\\jeraziah\\base\\ability_04\\state.entity",
+    "heroes\\jeraziah\\base\\ability_04\\state.entity.onepunch_ability_managed",
+    "heroes\\jeraziah\\base\\ability_04\\state_building.entity",
+    "heroes\\jeraziah\\base\\ability_04\\state_building.entity.onepunch_ability_managed"
+  ]
+}

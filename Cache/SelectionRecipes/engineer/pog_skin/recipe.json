@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "engineer",
+  "avatar": "pog_skin",
+  "files": [
+    "heroes\\engineer\\base\\hero.entity",
+    "heroes\\engineer\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

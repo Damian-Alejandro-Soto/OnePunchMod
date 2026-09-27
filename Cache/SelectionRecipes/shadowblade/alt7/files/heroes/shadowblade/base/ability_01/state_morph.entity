@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_ShadowBlade_Ability1_Morph"
+	
+	icon="/heroes/shadowblade/alt7/ability_01/icon.dds"
+	passiveeffect=""
+	displaylevel="true"
+	propagatetoillusions="true"
+	
+	armor="3,6,9,12"
+	magicarmor="1,2,3,4"
+	strength="4,8,12,16"
+
+	modifierkey="ShadowBlade_Q_Form"
+	
+	effecttype=""
+	dynamicprecache="effects/transform.effect"
+>	
+	<onframe>
+		<evaluate a="frametime" b="1000" op="mult" />
+		<changeaccumulator b="result" op="add" />
+		<compare a="accumulator" b="3500" op="ge">
+			<activatemodifierkey name="shadowblade_Q_noarmor" entity="this_entity" />
+		</compare>
+	</onframe>
+	
+	<oninflict>
+		<expirestate name="State_ShadowBlade_Ability2_Morph" target="source_entity" />
+		<expirestate name="State_ShadowBlade_Ability3_Morph" target="source_entity" />
+		<expirestate name="State_ShadowBlade_Ability4_Morph" target="source_entity" />
+	</oninflict>
+	
+	<onrefresh>
+		<setaccumulator value="0" />
+	</onrefresh>
+	
+	<onexpired>
+		<setstr0 a="altavatar_path" b="effects/transform.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_entity" target="source_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffect effect="effects/transform.effect" source="source_entity" target="source_entity" />
+		</else>
+	</onexpired>
+	
+	<modifier key="shadowblade_Q_noarmor" modpriority="100"
+		armor="0"
+		magicarmor="0"
+	>
+		<onframe />
+	</modifier>
+</state>

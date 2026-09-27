@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Aluna_Ability3"
+	icon="../../icon.dds"	
+	passiveeffect="/heroes/aluna/alt3/ability_03/effects/state.effect"
+	effecttype=""
+	movespeedmultiplier="0.30,0.35,0.40,0.45"
+	
+	unitwalking="true"
+>
+	<modifier key="aluna_red" modpriority="100"
+		passiveeffect="/heroes/aluna/alt3/ability_03/effects/state_red.effect"
+		evasion="1.0"
+		icon="/heroes/aluna/ability_03/icon_b.dds"
+		movespeedmultiplier="0.45,0.50,0.55,0.60"
+	>
+		<oninflict>
+			<spawnaffector name="Affector_Aluna_Ability4" target="source_entity" pushentity="true" />
+			<setproxy target="stack_entity" />
+		</oninflict>
+
+		<onexpired>
+			<delete source="source_entity" target="this_proxy_entity" />
+		</onexpired>
+	</modifier>
+
+</state>

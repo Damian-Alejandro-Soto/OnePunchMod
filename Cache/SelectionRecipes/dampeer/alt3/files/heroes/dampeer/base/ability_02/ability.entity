@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Dampeer2"
+	
+	icon="../../icon.dds"
+	
+	anim="ability_2"
+	casttime="200"
+	castactiontime="100"
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	
+	activatescheme="movement"
+	actiontype="target_entity"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	manacost="75"
+	cooldowntime="13000,12000,11000,10000"
+	
+	casteffect="/heroes/dampeer/alt3/ability_02/effects/walk.effect"
+	novoiceresponse="true"
+	range="550,575,600,625"
+	targetradius="145"
+	
+	showareacast="true"
+	areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+	
+	showrangeandradiusintooltip="true"
+
+	targetpriorities="enemy_heroes"
+	dynamicprecache="effects/impact.effect,effects/impact_sound.effect"
+>
+	<onimpact>
+		<pushtool name="Ability_Dampeer4" />
+		<compare source="stack_entity" a="source_level" b="1" op="ge">
+			<addcharges entity="stack_entity" count="0" />
+			<setaccumulator value="result" />
+		</compare>
+		<else>
+			<setaccumulator value="0" />
+		</else>
+		<spawnprojectile name="Projectile_Dampeer_Ability2" unbindondeath="true" source="source_entity" target="target_entity" bind="source_entity" bindstate="State_Dampeer_Ability2_Self" bindturn="true" param="accumulator" />
+	</onimpact>
+</ability>

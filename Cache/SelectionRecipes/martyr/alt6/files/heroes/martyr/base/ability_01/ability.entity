@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Martyr1"
+	
+	icon="../../icon.dds"
+	
+	anim="ability_1"
+	casttime="600"
+	castactiontime="300"
+	casteffect="effects/cast.effect"
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	targetradius="250"
+	targetmaterial="/shared/materials/area_cast_indicator_pointed.material"
+	
+	manacost="90,100,110,120"
+	cooldowntime="10000"
+	
+	projectile="/heroes/martyr/ability_01/Projectile_Martyr_Ability1_Alt6"
+	range="600"
+	
+	showareacast="true"
+	areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+
+	showrangeandradiusintooltip="true"
+>
+	<onimpact>
+		<setvar0 a="source_health" b="source_maxhealth" op="div" />
+		<setvar1 a="1" b="var0" op="sub" /> <!-- Missing Health % -->		
+		<evaluate a="source_intelligence" b="0.002" op="mult" /> <!-- Add a % of Intelligence to the missing Health % value -->
+		<setvar1 a="var1" b="result" op="add" />
+		<setvar1 a="var1" b="1.0" op="min" /> <!-- Caps at 100% missing Health -->
+		
+		<setvar2 a="100,200,300,400" b="var1" op="mult" />
+		<setvar3 a="75,100,125,150" b="var2" op="add" /> <!-- Base Damage ; Damage is % of missing health * up to 400 + up to 150 -->
+		<setvar0 a="100" b="var1" op="mult" /> <!-- Returns number of charges we apply -->
+		
+		<popup name="execution" a="var3" source="target_entity" target="target_entity" />	
+		<areaofeffect
+			radius="250"
+			targetselection="all"
+			targetscheme="enemy_units"
+			effecttype="Magic"
+			center="target_position"
+		>
+			<damage effecttype="Magic" amount="1" b="var3" op="mult" />
+			<applystate name="State_Martyr_Ability1" duration="3000" pushentity="true" />
+			<addcharges count="var0" entity="stack_entity" />
+		</areaofeffect>
+	</onimpact>
+</ability>

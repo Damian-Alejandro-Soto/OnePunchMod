@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Nomad"
+	
+	team="Legion"
+	icon="/heroes/nomad/trophy_skin/icon.dds"
+	animatedportrait=""
+	portrait="/heroes/nomad/trophy_skin/icon.dds"
+	model="/heroes/nomad/trophy_skin/model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.8"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="40"
+	targetoffset="0 0 64"
+	infoheight="175"
+
+	category="physical"
+	difficulty="3.5"
+
+	midrating="3"
+	junglerating="0"
+	carryrating="5"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="3"
+	soloofflanerating="2"
+	rangedrating="0"
+	meleerating="5"
+	
+	movespeed="310"
+	turnrate="630"
+	turnsmoothing="0.05"
+	
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-.5"
+	magicarmor="5.0"
+
+	inventory0="Ability_Nomad1"
+	inventory1="Ability_Nomad2"
+	inventory2="Ability_Nomad3"
+	inventory3="Ability_Nomad4"
+	inventory4="Ability_AttributeBoost"
+	inventory5="Ability_Nomad2a"
+	inventory6="Ability_Nomad2b"
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="330"
+	attackcooldown="1700"
+	attackdamagemin="32"
+	attackdamagemax="36"
+	attacknumanims="2"
+	attackoffset="0 0 0"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/attack_impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="agility"
+	strength="18"
+	strengthperlevel="2"
+	agility="22"
+	agilityperlevel="3"
+	intelligence="20"
+	intelligenceperlevel="2.2"
+	
+
+	previewpos="0 0 -50"
+	previewangles="0 0 0"
+	previewscale="1.6"
+	
+	storemodel="/heroes/nomad/trophy_skin/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.65"
+	
+	corpsetime="2000"
+	corpsefadetime="5000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+	unittype="masters_legacy_valid"
+>
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_SoulscreamRing" />
+	<recommendeditem name="Item_IronShield" />
+	<recommendeditem name="Item_BloodChalice" />
+	<recommendeditem name="Item_GhostMarchers" />
+	<recommendeditem name="Item_NullfireBlade" />
+	
+	<recommendeditem name="Item_Shieldbreaker" />
+	<recommendeditem name="Item_Frostburn" />
+	<recommendeditem name="Item_NullStone" />
+	<recommendeditem name="Item_SavageMace" />
+	<recommendeditem name="Item_Wingbow" />
+
+</hero>

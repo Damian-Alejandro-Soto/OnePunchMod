@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fayde_Ability4_Umbral"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/fade/set_ascension/ability_04/effects/state.effect"
+	
+	modifierkey="fade_umbral"
+	
+	effecttype=""
+	allowtransfer="false"
+	
+	maxcharges="3"
+	
+	ishidden="true"
+>
+	<onframe />
+	
+	<onexpired>
+		<pushtool name="Ability_Fayde4" />
+		<setcharges a="0" entity="stack_entity" />
+	</onexpired>
+</state>

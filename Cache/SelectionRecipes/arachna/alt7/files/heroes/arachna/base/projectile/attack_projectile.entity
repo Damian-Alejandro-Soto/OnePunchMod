@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_ArachnaAttack"
+
+	speed="1200"
+	gravity="0"
+	modelscale="2.0"
+	model="/shared/models/invis.mdf"
+
+	impacteffect="/heroes/arachna/alt7/projectile/effects/impact.effect"
+	traileffect="/heroes/arachna/alt7/projectile/effects/trail.effect"
+>
+
+</projectile>

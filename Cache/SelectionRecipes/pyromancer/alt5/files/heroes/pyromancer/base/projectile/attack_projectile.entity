@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_PyromancerAttack"
+
+	speed="900"
+	gravity="2200"
+
+	modelscale=".7"
+	model="/heroes/pyromancer/alt5/projectile/skull/model.mdf"
+
+	impacteffect="/heroes/pyromancer/alt5/projectile/impact.effect"
+>
+
+</projectile>

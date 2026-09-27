@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_AmunRa_Ability3"
+
+	icon="../../icon.dds"
+	passiveeffect=""
+	
+	ishidden="false"
+	
+	effecttype=""
+	
+	maxcharges="20,30,40,50"
+
+	impactinterval="1500"
+>
+	<onframe>
+		<areaofeffect
+			radius="400"
+			targetselection="all"
+			targetscheme="enemy_units"
+			effecttype="Magic"
+		>
+			<applystate name="State_AmunRa_Ability3_Damage" continuous="true" timeout="frametime" pushentity="true" />
+			<setcharges entity="stack_entity" a="charges" />
+		</areaofeffect>
+		
+		<compare a="charges" b="0" op="eq">
+			<expire />
+		</compare>
+		
+		<compare a="charges" b="10" op="lt">
+			<setactivemodifierkey name="Rassj0" />
+		</compare>
+		<else>
+			<compare a="charges" b="20" op="lt">
+				<setactivemodifierkey name="Rassj1" />
+			</compare>
+			<else>
+				<compare a="charges" b="30" op="lt">
+					<setactivemodifierkey name="Rassj2" />
+				</compare>
+				<else>
+					<compare a="charges" b="40" op="lt">
+						<setactivemodifierkey name="Rassj3" />
+					</compare>
+					<else>
+						<setactivemodifierkey name="Rassj4" />
+					</else>
+				</else>
+			</else>
+		</else>
+	</onframe>
+	
+	<modifier key="ult_boost" modpriority="100">
+		<onimpact>
+			<compare a="charges" b="20,30,40,50" op="ge">
+				<pushtool name="Ability_AmunRa2" />
+				<setvar0 a="source_level" source="stack_entity" />
+				<areaofeffect
+					radius="550"
+					maxtotalimpacts="1"
+					targetselection="random"
+					targetscheme="visible_enemy_heroes"
+				>
+					<setpos0 position="source_entity" positionend="target_entity" positionmodifier="pointpastline" positionvalue="550" />
+					<spawnprojectile name="Projectile_AmunRa_Ability2" source="source_entity" target="pos0" />
+				</areaofeffect>
+				<compare a="result" b="0" op="eq">
+					<areaofeffect
+						radius="550"
+						maxtotalimpacts="1"
+						targetselection="random"
+						targetscheme="visible_enemy_units"
+					>
+						<setpos0 position="source_entity" positionend="target_entity" positionmodifier="pointpastline" positionvalue="550" />
+						<spawnprojectile name="Projectile_AmunRa_Ability2" source="source_entity" target="pos0" />
+					</areaofeffect>
+				</compare>
+			</compare>
+		</onimpact>
+	</modifier>
+	
+	<modifier key="Rassj1" modpriority="100"
+		passiveeffect="/heroes/ra/alt8/ability_03/effects/state1.effect"
+	>
+	</modifier>
+	
+	<modifier key="Rassj2" modpriority="100"
+		passiveeffect="/heroes/ra/alt8/ability_03/effects/state2.effect"
+	>
+	</modifier>
+
+	<modifier key="Rassj3" modpriority="100"
+		passiveeffect="/heroes/ra/alt8/ability_03/effects/state3.effect"
+	>
+	</modifier>
+	
+	<modifier key="Rassj4" modpriority="100"
+		passiveeffect="/heroes/ra/alt8/ability_03/effects/state4.effect"
+	>
+	</modifier>
+	
+	<onexpired>
+		<setcharges entity="this_proxy_entity" a="0" />
+	</onexpired>
+</state>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_MonkeyKing_Ability3_Toss"
+	
+	icon="/heroes/monkey_king/alt15/ability_03/icon.dds"
+	ishidden="true"
+	
+	stunned="true"
+	stunnedreduction="ignore"
+>
+	
+</state>

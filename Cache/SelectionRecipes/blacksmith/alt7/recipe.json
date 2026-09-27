@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "hero": "blacksmith",
+  "avatar": "alt7",
+  "files": [
+    "heroes\\blacksmith\\base\\hero.entity",
+    "heroes\\blacksmith\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\blacksmith\\base\\state_blacksmith_ult_boost.entity",
+    "heroes\\blacksmith\\base\\state_blacksmith_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\blacksmith\\base\\ability_01\\ability.entity",
+    "heroes\\blacksmith\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\blacksmith\\base\\ability_02\\ability.entity",
+    "heroes\\blacksmith\\base\\ability_02\\ability.entity.onepunch_ability_managed",
+    "heroes\\blacksmith\\base\\ability_02\\projectile.entity",
+    "heroes\\blacksmith\\base\\ability_02\\projectile.entity.onepunch_ability_managed",
+    "heroes\\blacksmith\\base\\ability_02\\state.entity",
+    "heroes\\blacksmith\\base\\ability_02\\state.entity.onepunch_ability_managed",
+    "heroes\\blacksmith\\base\\ability_03\\ability.entity",
+    "heroes\\blacksmith\\base\\ability_03\\ability.entity.onepunch_ability_managed",
+    "heroes\\blacksmith\\base\\ability_03\\state.entity",
+    "heroes\\blacksmith\\base\\ability_03\\state.entity.onepunch_ability_managed"
+  ]
+}

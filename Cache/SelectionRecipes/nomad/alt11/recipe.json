@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "nomad",
+  "avatar": "alt11",
+  "files": [
+    "heroes\\nomad\\base\\hero.entity",
+    "heroes\\nomad\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

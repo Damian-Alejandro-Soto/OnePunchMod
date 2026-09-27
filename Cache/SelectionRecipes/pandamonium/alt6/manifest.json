@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "pandamonium",
+  "legacy_folder": "panda",
+  "avatar": "alt6",
+  "counts": {
+    "files": 86,
+    "models": 24,
+    "materials": 1,
+    "textures": 4,
+    "effects": 7,
+    "sounds": 50,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

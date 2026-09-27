@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Lodestone_Ability1"
+	
+	icon=""
+	portrait=""
+	model="/shared/models/invis.mdf"
+	passiveeffect="/heroes/lodestone/alt6/ability_01/effects/gadget_passive.effect"
+	
+	preglobalscale="2.5"
+	modelscale="1.5"
+	effectscale="1.0"
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="0"
+	sightrangenight="0"
+	unitwalking="true"
+	canattack="false"
+	deathtime="0"
+	corpsetime="0"
+	lifetime="12000"
+	invulnerable="true"
+	flying="false"
+	drawonmap="false"
+	iscontrollable="false"
+	
+	unittype="lodestone_Q_gadget"
+	noblockneutralspawn="true"
+	dynamicprecache="effects/link.effect"
+>
+	<onspawn>
+		<!-- VFX -->
+		<setstr0 a="altavatar_path" b="effects/link.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="this_entity" target="this_owner_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/link.effect" source="this_entity" target="this_owner_entity" />
+		</else>
+
+		<expirestate name="Lodestone_Refresher_Orb_Ability1" target="source_entity" />
+	</onspawn>
+	
+	<onframe />
+	
+	<ondeath />
+	
+	<onexpired>
+		<spawnprojectile name="Projectile_ReturnDrill_Lodestone_Ability1" offset="0 0 15" source="this_position" target="this_owner_entity" proxy="this_owner_entity" />
+	</onexpired>
+</gadget>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_TempestAttack"
+
+	speed="900"
+	gravity="1000"
+
+    model="effects/spinner.mdf"
+	modelscale="1"
+	
+	impacteffect="/heroes/tempest/alt7/effects/impact.effect"
+	traileffect="/heroes/tempest/alt7/effects/trail.effect"
+>
+
+</projectile>

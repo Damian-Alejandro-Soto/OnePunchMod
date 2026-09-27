@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Teleport_Lodestone_Ability1"
+	
+	icon="/heroes/lodestone/alt5/ability_01/icon.dds"
+	passiveeffect=""
+	
+	modifierkey="LodestoneTeleport"
+	dynamicprecache="effects/link.effect"
+>
+	<onframe>
+		<distance target="this_proxy_entity" source="source_entity" />
+		<compare a="result" b="1200" op="gt" >
+			<expire />
+		</compare>		
+	</onframe>
+
+	<onexpired>
+		<spawnprojectile name="Projectile_ReturnDrill_Lodestone_Ability1" offset="0 0 150" source="this_proxy_entity" target="source_entity" proxy="source_entity" />
+		<kill source="" target="this_proxy_entity" />
+	</onexpired>
+</state>

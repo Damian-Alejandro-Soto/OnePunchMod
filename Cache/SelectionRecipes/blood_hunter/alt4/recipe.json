@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "blood_hunter",
+  "avatar": "alt4",
+  "files": [
+    "heroes\\blood_hunter\\base\\hero.entity",
+    "heroes\\blood_hunter\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

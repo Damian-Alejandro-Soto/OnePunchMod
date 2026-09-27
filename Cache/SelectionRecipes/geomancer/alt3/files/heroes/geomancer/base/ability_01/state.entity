@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Geomancer_Ability1_Self"
+	
+	icon="../../icon.dds"
+	
+	ishidden="true"
+	
+	passiveeffect=""
+	disarmed="true"
+	
+	unitwalking="true"
+	cliffwalking="true"
+	buildingwalking="true"
+	treewalking="true"
+	invulnerable="true"
+	modifierkey="Geomancerburrow"
+	dynamicprecache="effects/appear.effect"
+>
+	<onexpired>
+		<playanim name="ability_1_burst" target="source_entity" />
+		<setstr0 a="altavatar_path" b="effects/appear.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_position" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/appear.effect" source="source_position" occlude="true" />
+		</else>
+		<spawnaffector name="Affector_Geomancer_Ability1" target="source_entity" />
+	</onexpired>
+	
+	<modifier key="ult_boost" modpriority="100" 
+		passiveeffect="/heroes/geomancer/alt3/effects/boost.effect"
+	/>
+</state>

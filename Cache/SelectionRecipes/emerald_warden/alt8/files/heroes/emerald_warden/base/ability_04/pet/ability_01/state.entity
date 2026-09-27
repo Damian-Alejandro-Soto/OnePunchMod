@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_EmeraldWardenpet_Ability1_Self"
+
+	
+	
+	icon="../../../../icon.dds"
+	passiveeffect="/heroes/emerald_warden/alt8/ability_04/effects/pet/ability_01/effects/warp.effect"
+	invulnerable="true"
+	silenced="true"
+	perplexed="true"
+	immobilized="true"
+	disarmed="true"
+>
+	<onexpired>
+		<playanim name="walk_1" target="this_owner_entity" />
+	</onexpired>
+</state>

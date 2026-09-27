@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+    name="Ability_ForsakenArcher3"
+
+    icon="/heroes/forsaken_archer/alt9/ability_03/icon.dds"
+    statuseffecttooltip="State_ForsakenArcher_Ability3"
+    maxlevel="4"
+    requiredlevel="1,3,5,7"
+
+    actiontype="passive"
+    dontshowhovercast="true"
+
+    manacost="0"
+    toggleoffmanacost="0"
+
+    cooldowntime="5000"
+
+    noresponse="true"
+
+    maxcharges="3"
+>
+
+    <onattackimpact>
+        <isready>
+            <cantarget targetscheme="enemy_units" effecttype="Magic">
+                <startcooldown />
+
+                <random min="0" max="360" />
+                <evaluate a="result" b="180" op="sub" />
+                <spawnunit name="Pet_ForsakenArcher_Ability3_Other" target="target_position" owner="this_owner_entity" proxy="target_entity" angle="result" pushentity="true" />
+                <applystate name="State_ForsakenArcher_Ability3" target="stack_entity" continuous="true" owner="this_owner_entity" proxy="this_owner_entity" />
+                <setpos0 position="stack_entity" offsetspace="stack_entity" offset="0 -300 0" />
+                <teleport source="stack_entity" target="pos0" />
+            </cantarget>
+        </isready>
+    </onattackimpact>
+
+    <ondamage>
+        <cantarget targetscheme="visible_enemy_units" effecttype="Magic" source="this_owner_entity" target="target_entity">
+            <damageeffecttype effecttype="DOT" />
+            <else>
+                <chance threshold="0.2">
+                    <random min="0" max="360" />
+                    <evaluate a="result" b="180" op="sub" />
+                    <spawnunit name="Pet_ForsakenArcher_Ability3_Other" target="target_position" owner="this_owner_entity" proxy="target_entity" angle="result" pushentity="true" />
+                    <applystate name="State_ForsakenArcher_Ability3" target="stack_entity" continuous="true" owner="this_owner_entity" proxy="this_owner_entity" />
+                    <setpos0 position="stack_entity" offsetspace="stack_entity" offset="0 -300 0" />
+                    <teleport source="stack_entity" target="pos0" />
+                </chance>
+            </else>
+        </cantarget>
+    </ondamage>
+
+    <modifier key="ult_boost" modpriority="90"
+        cooldowntime="1000"
+    >
+
+        <onattackimpact>
+            <isready>
+                <cantarget targetscheme="enemy_units" effecttype="SuperiorMagic">
+                    <startcooldown />
+
+                    <random min="0" max="360" />
+                    <evaluate a="result" b="180" op="sub" />
+                    <spawnunit name="Pet_ForsakenArcher_Ability3_Other_SOTM" target="target_position" owner="this_owner_entity" proxy="target_entity" angle="result" pushentity="true" />
+                    <applystate name="State_ForsakenArcher_Ability3_Boosted" target="stack_entity" continuous="true" owner="this_owner_entity" proxy="this_owner_entity" />
+                    <setpos0 position="stack_entity" offsetspace="stack_entity" offset="0 -300 0" />
+                    <teleport source="stack_entity" target="pos0" />
+                </cantarget>
+            </isready>
+        </onattackimpact>
+
+        <ondamage>
+            <cantarget targetscheme="visible_enemy_units" effecttype="SuperiorMagic" source="this_owner_entity" target="target_entity">
+                <damageeffecttype effecttype="DOT" />
+                <else>
+                    <chance threshold="0.2">
+                        <random min="0" max="360" />
+                        <evaluate a="result" b="180" op="sub" />
+                        <spawnunit name="Pet_ForsakenArcher_Ability3_Other_SOTM" target="target_position" owner="this_owner_entity" proxy="target_entity" angle="result" pushentity="true" />
+                        <applystate name="State_ForsakenArcher_Ability3_Boosted" target="stack_entity" continuous="true" owner="this_owner_entity" proxy="this_owner_entity" />
+                        <setpos0 position="stack_entity" offsetspace="stack_entity" offset="0 -300 0" />
+                        <teleport source="stack_entity" target="pos0" />
+                    </chance>
+                </else>
+            </cantarget>
+        </ondamage>
+    </modifier>
+
+</ability>

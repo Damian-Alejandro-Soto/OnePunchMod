@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Riptide_Ability2"
+
+	gravity="0"
+	speed="1000"
+
+	model="/shared/models/invis.mdf"
+	traileffect="/heroes/riptide/alt2/ability_02/projectile/trail.effect"
+	impacteffect=""
+	
+	dynamicprecache="/heroes/riptide/alt2/ability_02/projectile/splash.effect"
+>
+	<ondeath>
+		<spawnunit name="Gadget_Riptide_Ability2_Vision" target="this_position" />
+		<kill target="this_proxy_entity" source="" />
+		
+		<!-- Dynamic visual effects -->
+				<setstr0 a="altavatar_path" b="projectile/wave/splash.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="this_position" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="projectile/wave/splash.effect" source="this_position" occlude="true" />
+		</else>
+	</ondeath>
+
+</projectile>

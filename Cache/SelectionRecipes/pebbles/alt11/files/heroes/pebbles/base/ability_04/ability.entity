@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Pebbles4"
+
+	icon="/heroes/rocky/alt11/ability_04/icon.dds"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+	movespeed="10,20,30"
+
+	actiontype="passive"
+	modifierkey="Rocky_Grow1,Rocky_Grow2,Rocky_Grow3"
+
+	noshuffle="true"
+	dynamicprecache="/heroes/rocky/alt11/ability_02/effects/launch.effect"
+>
+	<onlearn>
+		<isstealthed entity="source_entity" />
+		<else>
+			<setstr0 a="altavatar_path" b="effects/cast.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="source_position" target="" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/cast.effect" source="source_position" target="" occlude="true" />
+			</else>
+		</else>
+
+		<!-- Art -->
+	</onlearn>
+
+	<onupgrade>
+		<isstealthed entity="source_entity" />
+		<else>
+			<setstr0 a="altavatar_path" b="effects/cast_sotm.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="source_position" target="" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/cast_sotm.effect" source="source_position" target="" occlude="true" />
+			</else>
+		</else>
+	</onupgrade>
+
+	<onframe>
+		<isready>
+			<targettype type="alive" target="source_entity">
+				<entitytype type="Hero_Pebbles" />
+				<else>
+					<applystate name="State_Pebbles_Ability4" continuous="true" />
+				</else>
+			</targettype>
+		</isready>
+	</onframe>
+
+	<modifier
+		key="ult_boost"
+		modpriority="100"
+		anim="ability_02"
+		casttime="600"
+		castactiontime="0"
+
+		actiontype="target_entity"
+		targetradius="300"
+		targetmaterial="/shared/materials/area_cast_indicator_simple.material"
+		casteffecttype="SuperiorMagic"
+		targetscheme="all_visible_units"
+		manacost="120"
+		cooldowntime="10000"
+		cooldowntype="Rocky_Toss"
+
+		range="1100"
+
+		useproxy="true"
+		proxytargetscheme="chuck_targets"
+		proxyeffecttype=""
+		proxyselectionradius="325"
+		proxyselectionmethod="closest"
+		proxytargetmaterial="/shared/materials/area_cast_indicator_simple.material"
+
+		showareacast="true"
+		areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+
+		showrangeandradiusintooltip="true"
+		doubleactivate="true"
+	>
+
+		<activatecost>
+			<setaccumulator value="0" />
+
+			<!-- Check if there are any valid Chuck targets (including the main grab target, this_proxy_entity) & invalidate if no valid grab targets -->
+			<areaofeffect
+				radius="325"
+				maximpactspertarget="1"
+				effecttype=""
+				targetselection="closest"
+				targetscheme="chuck_targets"
+				center="source_entity"
+			>
+				<compare a="accumulator" b="0" op="eq">
+					<targettype type="enemy" target="target_entity">
+						<cantarget effecttype="Magic Push" target="target_entity">
+							<changeaccumulator b="1" op="add" />
+						</cantarget>
+					</targettype>
+					<else>
+						<!-- For ally units, throw only if they don't have Push Immunity -->
+						<cantarget effecttype="Push" target="target_entity">
+							<changeaccumulator b="1" op="add" />
+						</cantarget>
+					</else>
+				</compare>
+			</areaofeffect>
+
+			<compare a="accumulator" b="0" op="eq">
+				<invalidate />
+			</compare>			
+		</activatecost>
+
+		<onimpact>
+			<setaccumulator value="0" /> <!-- Reset accumulator at start of event -->
+			<setent1 entity="target_entity" />	<!-- Main target -->
+			<areaofeffect
+				radius="325"
+				maximpactspertarget="1"
+				effecttype=""
+				targetselection="closest"
+				targetscheme="chuck_targets"
+				center="source_entity"
+				ignore="this_proxy_entity"
+			/>
+
+			<setvar0 a="result" />	<!-- Number of max theoretical valid additional grab targets -->
+			<setvar1 a="0.5" />
+			<setvar2 a="0.625" />
+
+			<!-- Logic for throwing additional grab targets -->
+			<compare a="var0" b="0" op="gt">
+				<!-- Actually grab targets, but exclude enemy units with Magic resistance first -->
+				<areaofeffect
+					radius="325"
+					maximpactspertarget="1"
+					effecttype=""
+					targetselection="closest"
+					targetscheme="chuck_targets"
+					center="source_entity"
+					ignore="this_proxy_entity"
+				>
+					<!-- First actual thrown unit (accumulator is 0) -->
+					<compare a="accumulator" b="0" op="eq">
+						<!-- For enemy units, throw only if they have don't have Magic or Push Immunity -->
+						<targettype type="enemy" target="target_entity">
+							<cantarget effecttype="Magic Push" target="target_entity">
+								<unbind target="target_entity" />
+								<spawnprojectile name="Projectile_Pebbles_Ability4_Boost" proxy="target_entity" source="target_entity" target="ent1" bind="target_entity" bindstate="State_Pebbles_Ability4_Projectile" ignoretargetoffset="true" noresponse="true" param="var1" />
+								<targettype type="ally" target="target_entity">
+									<spawnunit name="Gadget_Pebbles_Ability4" mount="target_entity" />
+								</targettype>
+								<changeaccumulator b="1" op="add" />
+							</cantarget>
+						</targettype>
+						<else>
+							<!-- For ally units, throw only if they don't have Push Immunity -->
+							<cantarget effecttype="Push" target="target_entity">
+								<unbind target="target_entity" />
+								<spawnprojectile name="Projectile_Pebbles_Ability4_Boost" proxy="target_entity" source="target_entity" target="ent1" bind="target_entity" bindstate="State_Pebbles_Ability4_Projectile" ignoretargetoffset="true" noresponse="true" param="var1" />
+								<targettype type="ally" target="target_entity">
+									<spawnunit name="Gadget_Pebbles_Ability4" mount="target_entity" />
+								</targettype>
+								<changeaccumulator b="1" op="add" />
+							</cantarget>
+						</else>
+					</compare>
+
+					<!-- Second actual thrown unit (accumulator is 1), uses Projectile_Pebbles_Ability4_Booster (different projectile lifetime) -->
+					<else>
+						<compare a="accumulator" b="1" op="eq">
+							<!-- For enemy units, throw only if they have don't have Magic or Push Immunity, otherwise throw non-hero units regardless -->
+							<targettype type="enemy" target="target_entity">
+								<cantarget effecttype="Magic Push" target="target_entity">
+									<unbind target="target_entity" />
+									<spawnprojectile name="Projectile_Pebbles_Ability4_Booster" proxy="target_entity" source="target_entity" target="ent1" bind="target_entity" bindstate="State_Pebbles_Ability4_Projectile" ignoretargetoffset="true" noresponse="true" param="var1" />
+									<targettype type="ally" target="target_entity">
+										<spawnunit name="Gadget_Pebbles_Ability4" mount="target_entity" />
+									</targettype>
+									<changeaccumulator b="1" op="add" />
+								</cantarget>
+							</targettype>
+							<else>
+								<!-- For ally units, throw only if they don't have Push Immunity -->
+								<cantarget effecttype="Push" target="target_entity">
+									<unbind target="target_entity" />
+									<spawnprojectile name="Projectile_Pebbles_Ability4_Booster" proxy="target_entity" source="target_entity" target="ent1" bind="target_entity" bindstate="State_Pebbles_Ability4_Projectile" ignoretargetoffset="true" noresponse="true" param="var1" />
+									<targettype type="ally" target="target_entity">
+										<spawnunit name="Gadget_Pebbles_Ability4" mount="target_entity" />
+									</targettype>
+									<changeaccumulator b="1" op="add" />
+								</cantarget>
+							</else>
+						</compare>
+					</else>
+
+					<!-- If accumulator does not meet above conditions, will not execute logic for additional theoretical grab units -->
+				</areaofeffect>
+
+				<!-- Dynamic visual effects -->
+				<setstr0 a="altavatar_path" b="../ability_02/effects/launch.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" source="this_proxy_position" target="" occlude="true" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="../ability_02/effects/launch.effect" source="this_proxy_position" target="" occlude="true" />
+				</else>
+			</compare>
+
+			<!-- Logic for throwing the primary grabbed target (this_proxy_entity) -->
+
+			<!-- For enemy units, throw only if they have don't have Magic or Push Immunity, otherwise throw non-hero units regardless -->
+			<targettype type="enemy" target="this_proxy_entity">
+				<cantarget effecttype="Magic Push" target="this_proxy_entity">
+					<unbind target="this_proxy_entity" />
+					<spawnprojectile name="Projectile_Pebbles_Ability4" proxy="this_proxy_entity" source="this_proxy_entity" target="ent1" bind="this_proxy_entity" bindstate="State_Pebbles_Ability4_Projectile" ignoretargetoffset="true" noresponse="true" param="1" />
+					<targettype type="ally" target="this_proxy_entity">
+						<spawnunit name="Gadget_Pebbles_Ability4" mount="this_proxy_entity" />
+					</targettype>
+
+					<!-- Dynamic visual effects -->
+				<setstr0 a="altavatar_path" b="../ability_02/effects/launch.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" source="this_proxy_position" target="" occlude="true" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="../ability_02/effects/launch.effect" source="this_proxy_position" target="" occlude="true" />
+				</else>
+				</cantarget>
+			</targettype>
+			<else>
+				<cantarget effecttype="Push" target="this_proxy_entity">
+					<unbind target="this_proxy_entity" />
+					<spawnprojectile name="Projectile_Pebbles_Ability4" proxy="this_proxy_entity" source="this_proxy_entity" target="ent1" bind="this_proxy_entity" bindstate="State_Pebbles_Ability4_Projectile" ignoretargetoffset="true" noresponse="true" param="1" />
+					<targettype type="ally" target="this_proxy_entity">
+						<spawnunit name="Gadget_Pebbles_Ability4" mount="this_proxy_entity" />
+					</targettype>
+
+					<!-- Dynamic visual effects -->
+				<setstr0 a="altavatar_path" b="../ability_02/effects/launch.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" source="this_proxy_position" target="" occlude="true" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="../ability_02/effects/launch.effect" source="this_proxy_position" target="" occlude="true" />
+				</else>
+				</cantarget>
+			</else>
+		</onimpact>
+		
+		<ondoubleactivate>
+			<useability slot="3" target="source_entity" />
+		</ondoubleactivate>
+
+		<oncancel>
+			<playanim name="idle" target="source_entity" />
+		</oncancel>
+	</modifier>
+</ability>

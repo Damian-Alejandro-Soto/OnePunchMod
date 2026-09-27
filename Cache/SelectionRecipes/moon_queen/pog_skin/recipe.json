@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "moon_queen",
+  "avatar": "pog_skin",
+  "files": [
+    "heroes\\moon_queen\\base\\hero.entity",
+    "heroes\\moon_queen\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

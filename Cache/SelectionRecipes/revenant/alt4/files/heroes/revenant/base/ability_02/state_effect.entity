@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Revenant_Ability2_Effect"
+
+	icon=""
+	passiveeffect="/heroes/revenant/alt4/ability_02/effects/state.effect"
+	ishidden="true"
+
+	effecttype=""
+	
+>
+</state>

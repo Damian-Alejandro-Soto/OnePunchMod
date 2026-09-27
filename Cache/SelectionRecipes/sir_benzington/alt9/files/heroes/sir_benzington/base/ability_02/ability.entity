@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_SirBenzington2"
+
+	icon="/heroes/sir_benzington/alt8/ability_03/icon.dds"
+	anim="ability_3"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_self"
+	casttime="0"
+	castactiontime="0"
+	frontqueue="true"
+	inheritmovement="true"
+	nonaggressive="true"
+	
+	manacost="60,70,80,90"
+	cooldowntime="14000"
+	
+	maxcharges="3"
+	
+	allowautocast="true"
+>
+	<onattackstart>
+		<distance source="source_entity" target="target_entity" />
+		<setvar0 a="result" />
+		<random min="0" max="1"/>
+		<!-- Animation 1 -->
+		<compare a="result" b="0" op="eq">
+			<compare a="var0" b="200" op="le">
+				<playanim name="attack_1" speed="source_attackspeed" target="source_entity" />
+			</compare>
+			<else>
+				<compare a="var0" b="250" op="le">
+					<playanim name="attack_1_lvl2" speed="source_attackspeed" target="source_entity" />
+				</compare>
+				<else>
+					<compare a="var0" b="300" op="le">
+						<playanim name="attack_1_lvl3" speed="source_attackspeed" target="source_entity" />
+					</compare>
+					<else>
+						<compare a="var0" b="350" op="le">
+							<playanim name="attack_1_lvl4" speed="source_attackspeed" target="source_entity" />
+						</compare>
+						<else>
+							<playanim name="attack_1_lvl5" speed="source_attackspeed" target="source_entity" />
+						</else>
+					</else>
+				</else>
+			</else>
+		</compare>
+		<!-- Animation 2 -->
+		<else>
+			<compare a="var0" b="200" op="le">
+				<playanim name="attack_2" speed="source_attackspeed" target="source_entity" />
+			</compare>
+			<else>
+				<compare a="var0" b="250" op="le">
+					<playanim name="attack_2_lvl2" speed="source_attackspeed" target="source_entity" />
+				</compare>
+				<else>
+					<compare a="var0" b="300" op="le">
+						<playanim name="attack_2_lvl3" speed="source_attackspeed" target="source_entity" />
+					</compare>
+					<else>
+						<compare a="var0" b="350" op="le">
+							<playanim name="attack_2_lvl4" speed="source_attackspeed" target="source_entity" />
+						</compare>
+						<else>
+							<playanim name="attack_2_lvl5" speed="source_attackspeed" target="source_entity" />
+						</else>
+					</else>
+				</else>
+			</else>
+		</else>
+	</onattackstart>
+
+	<onattackimpact>
+		<addcharges count="1" entity="this_entity" />
+		<applystate name="State_SirBenzington_Ability2" target="source_entity" duration="6000" proxy="this_entity" statelevel="charges"/>
+		<starttimer duration="6000" />
+	</onattackimpact>
+	
+	<onimpact>
+		<applystate name="State_SirBenzington_Active_Ability2" target="source_entity" duration="4000" pushentity="true" />
+		<addcharges count="charges" entity="stack_entity" />
+		<resetattackcooldown />
+	</onimpact>
+
+	<ontimer />
+	
+	<modifier key="ult_boost" modpriority="100"
+		cooldowntime="5000"
+		attackrange="250"
+	>
+	
+	</modifier>
+	
+	<modifier key="benzington_ability2_AutoActive" condition="toggle_active" modpriority="99"
+	>
+		<onattackstart>
+			<distance source="source_entity" target="target_entity" />
+			<setvar0 a="result" />
+			<random min="0" max="1"/>
+			<!-- Animation 1 -->
+			<compare a="result" b="0" op="eq">
+				<compare a="var0" b="200" op="le">
+					<playanim name="attack_1" speed="source_attackspeed" target="source_entity" />
+				</compare>
+				<else>
+					<compare a="var0" b="250" op="le">
+						<playanim name="attack_1_lvl2" speed="source_attackspeed" target="source_entity" />
+					</compare>
+					<else>
+						<compare a="var0" b="300" op="le">
+							<playanim name="attack_1_lvl3" speed="source_attackspeed" target="source_entity" />
+						</compare>
+						<else>
+							<compare a="var0" b="350" op="le">
+								<playanim name="attack_1_lvl4" speed="source_attackspeed" target="source_entity" />
+							</compare>
+							<else>
+								<playanim name="attack_1_lvl5" speed="source_attackspeed" target="source_entity" />
+							</else>
+						</else>
+					</else>
+				</else>
+			</compare>
+			<!-- Animation 2 -->
+			<else>
+				<compare a="var0" b="200" op="le">
+					<playanim name="attack_2" speed="source_attackspeed" target="source_entity" />
+				</compare>
+				<else>
+					<compare a="var0" b="250" op="le">
+						<playanim name="attack_2_lvl2" speed="source_attackspeed" target="source_entity" />
+					</compare>
+					<else>
+						<compare a="var0" b="300" op="le">
+							<playanim name="attack_2_lvl3" speed="source_attackspeed" target="source_entity" />
+						</compare>
+						<else>
+							<compare a="var0" b="350" op="le">
+								<playanim name="attack_2_lvl4" speed="source_attackspeed" target="source_entity" />
+							</compare>
+							<else>
+								<playanim name="attack_2_lvl5" speed="source_attackspeed" target="source_entity" />
+							</else>
+						</else>
+					</else>
+				</else>
+			</else>
+			
+			<compare a="charges" b="3" op="ge">
+				<isready>
+					<compare a="source_mana" b="60,70,80,90" op="ge">
+						<cantarget targetscheme="enemy_units" effecttype="Magic">
+							<applystate name="State_SirBenzington_Active_Ability2" target="source_entity" duration="4000" pushentity="true" stack="true" />
+							<addcharges count="charges" entity="stack_entity" />
+							<startcooldown />
+							<givemana source="this_owner_entity" target="this_owner_entity" amount="-60,-70,-80,-90" />
+						</cantarget>
+					</compare>
+				</isready>
+			</compare>
+		</onattackstart>
+	</modifier>
+
+	<modifier key="krosmode" modpriority="100">
+		<onattackstart />
+
+		<onimpact>
+			<applystate name="State_SirBenzington_Active_Ability2" target="source_entity" duration="4000" pushentity="true" stack="true" />
+			<addcharges count="charges" entity="stack_entity" />
+		</onimpact>
+
+		<onattackimpact>
+			<addcharges count="1" entity="this_entity" />
+			<starttimer duration="6000" />
+		</onattackimpact>
+
+		<ontimer>
+			<setcharges entity="this_entity" a="0" />
+		</ontimer>
+	</modifier>
+</ability>

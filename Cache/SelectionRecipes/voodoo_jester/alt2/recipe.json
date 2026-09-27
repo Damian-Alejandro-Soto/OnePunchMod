@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "voodoo_jester",
+  "avatar": "alt2",
+  "files": [
+    "heroes\\voodoo_jester\\base\\hero.entity",
+    "heroes\\voodoo_jester\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Gadget_Arachna_Ability4_Spiderling_Adult"
+
+	icon="../../icon.dds"
+	portrait="../../icon.dds"
+	model="/heroes/arachna/reskin/ability_04/adult_spider/model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect="../summon/effects/spawn.effect"
+	
+	
+	preglobalscale="3.5"
+	modelscale="1.0"
+	effectscale="1.5"
+	boundsheight="64"
+	boundsradius="16"
+	isselectable="true"
+	iscontrollable="true"
+	selectionradius="40"
+	targetoffset="0 0 0"
+	
+	portraitcampos="13 -25 4"
+	
+	maxhealth="500"
+	armor="5"
+	healthregen="0"
+
+	movespeed="350"
+	turnrate="900"
+	turnsmoothing="0.05"
+
+	
+	unitwalking="false"
+	
+	deathtime="0"
+	corpsetime="2000"
+
+	deathnumanims="1"
+	deathanim="death_%"
+	
+	expirenumanims="1"
+	expireanim="death_%"	
+	immunity=""
+	
+	canattack="true"
+	ismobile="true"
+	attackduration="1000"
+	attackactiontime="400"
+	attackcooldown="1000"
+	attackdamagemin="50,75,100"
+	attackdamagemax="50,75,100"
+	attacknumanims="1"
+	attackoffset="0 60 100"
+	attackprojectile=""
+	attackrange="100"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="../summon/effects/impact.effect"
+	attacktype="melee"
+	combattype="Melee"
+	drawonmap="true"
+	sightrangeday="600"
+	sightrangenight="600"
+	
+	unittype="summoned"
+	goldbountymin="20"
+	goldbountymax="20"
+	aggrorange="600"
+	
+	lifetime="50000"
+	showlifetime="true"
+>
+	
+	<onattackimpact>
+		<cantarget targetscheme="enemy_units">
+			<applystate name="State_Arachna_Ability4_Pet_SotM" source="this_owner_entity" inflictor="this_owner_entity" target="target_entity" duration="5000" disablenegativeeffectpopuponrefresh="true" />
+		</cantarget>
+	</onattackimpact>
+	
+	<modifier key="rapidfire" modpriority="100"
+		healthregenreduction="1.0"
+	>
+	</modifier>
+</pet>

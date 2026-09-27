@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "hero": "forsaken_archer",
+  "avatar": "alt2",
+  "files": [
+    "heroes\\forsaken_archer\\base\\hero.entity",
+    "heroes\\forsaken_archer\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\forsaken_archer\\base\\ability_02\\gadget.entity",
+    "heroes\\forsaken_archer\\base\\ability_02\\gadget.entity.onepunch_ability_managed",
+    "heroes\\forsaken_archer\\base\\ability_03\\ability.entity",
+    "heroes\\forsaken_archer\\base\\ability_03\\ability.entity.onepunch_ability_managed",
+    "heroes\\forsaken_archer\\base\\ability_03\\pet.entity",
+    "heroes\\forsaken_archer\\base\\ability_03\\pet.entity.onepunch_ability_managed",
+    "heroes\\forsaken_archer\\base\\ability_04\\gadget.entity",
+    "heroes\\forsaken_archer\\base\\ability_04\\gadget.entity.onepunch_ability_managed"
+  ]
+}

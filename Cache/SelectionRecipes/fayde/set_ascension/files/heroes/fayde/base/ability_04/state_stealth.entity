@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fayde_Ability4_Stealth"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/fade/set_ascension/ability_04/effects/state.effect"
+	
+	stealthtype="hero"
+	hideshadow="true"
+	fadetime="0"
+	unitwalking="true"
+	treewalking="true"
+	
+	movespeedmultiplier="0.15"
+	
+	modifierkey="fadereflectionstealth"
+	
+	effecttype="StatusStealth"
+>
+	<onframe />
+
+	<oninflict>
+		<forgetattacks />
+		<startfade />
+	</oninflict>
+	
+	<onactivatepreimpact>
+		<expire />
+	</onactivatepreimpact>
+	
+	<onattackstart>
+		<playanim name="ability_4_attack" speed="source_attackspeed" target="source_entity" />
+	</onattackstart>
+	
+	<onattackpreimpact>
+		<cantarget targetscheme="enemy_units">
+			<applystate name="State_Fayde_Ability4_DoT" duration="2000" target="target_entity" />
+			<applystate name="State_Fayde_Ability4_AntiHeal" duration="4000" target="target_entity" />
+		</cantarget>
+		<expire />
+	</onattackpreimpact>
+	
+	<onexpired>
+		<startexpire entity="this_proxy_entity" />
+	</onexpired>
+	
+	<modifier key="ult_boost" modpriority="100"
+		passiveeffect=""
+	>
+		<onactivatepreimpact>
+			<setvar3 a="5000" /> <!-- Timer duration -->
+			
+			<!-- Adjust properties of R umbral state -->
+			<startexpire entity="this_proxy_entity" />
+			<pushtool name="Ability_Fayde4" />
+			<starttimer duration="var3" entity="stack_entity" />
+			<changeduration b="var3" op="min" entity="stack_proxy_entity" />
+			<changeduration b="var3" op="max" entity="stack_proxy_entity" />			
+			
+			<!-- Adjust this state's properties -->
+			<changeduration b="var3" op="min" entity="this_entity" />
+			<changeduration b="var3" op="max" entity="this_entity" />
+			<setactivemodifierkey name="fade_umbral_keep_attack" />
+		</onactivatepreimpact>
+		
+		<onattackpreimpact>
+			<setvar3 a="5000" /> <!-- Timer duration -->
+			
+			<cantarget targetscheme="enemy_units">
+				<applystate name="State_Fayde_Ability4_DoT" duration="2000" target="target_entity" />
+				<applystate name="State_Fayde_Ability4_AntiHeal" duration="var3" target="target_entity" />
+			</cantarget>
+			<expire />
+			
+			<!-- Adjust charges on main ability -->
+			<pushtool name="Ability_Fayde4" />
+			<removecharge entity="stack_entity" />
+			
+			<!-- Apply E to self -->
+			<applystate name="State_Fayde_Ability3" duration="1000" target="source_entity" />
+		</onattackpreimpact>
+			
+		<onexpired>
+			<setvar3 a="5000" /> <!-- Timer duration -->
+			<startexpire entity="this_proxy_entity" />
+			
+			<!-- Adjust properties of R umbral state -->
+			<pushtool name="Ability_Fayde4" />
+			<starttimer duration="var3" entity="stack_entity" />
+			<changeduration b="var3" op="min" entity="stack_proxy_entity" />
+			<changeduration b="var3" op="max" entity="stack_proxy_entity" />
+		</onexpired>
+	</modifier>
+	
+	<modifier key="fade_umbral_keep_attack" modpriority="100"	
+		stealthtype=""
+		unitwalking="false"
+		treewalking="false"
+		
+		movespeedmultiplier="0"
+		
+		modifierkey=""
+		effecttype=""
+		
+		passiveeffect=""
+	>		
+		<onactivatepreimpact />
+	</modifier>
+</state>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Empath_Ability4_Speed"
+
+	icon="icon_sub.tga"
+	passiveeffect="/heroes/empath/trophy_skin/model_03/ability_04/effects/state_speed.effect"
+	
+	movespeedstart="200"
+	movespeedmidpos="0.66"
+	movespeedend="0"
+	
+	effecttype="StatusBuff"
+	allowtransfer="true"
+>
+
+</state>

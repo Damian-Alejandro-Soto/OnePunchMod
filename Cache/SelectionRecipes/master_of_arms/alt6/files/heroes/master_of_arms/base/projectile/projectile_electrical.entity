@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_MasterOfArmsAttack_Electrical"
+
+	speed="1200"
+	gravity="0"
+
+	modelscale="2.75"
+	model="/shared/models/invis.mdf"
+
+	traileffect="/heroes/master_of_arms/alt6/projectile/effects/projectile_electrical.effect"
+	impacteffect="/heroes/master_of_arms/alt6/projectile/effects/projectile_electrical_impact.effect"
+>
+
+</projectile>

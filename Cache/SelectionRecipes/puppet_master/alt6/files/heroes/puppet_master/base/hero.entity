@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_PuppetMaster"
+	
+	team="Hellbourne"
+	icon="/heroes/puppetmaster/alt6/icon.dds"
+	portrait="/heroes/puppetmaster/alt6/icon.dds"
+	model="/heroes/puppetmaster/alt6/model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/puppetmaster/alt6/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/puppetmaster/alt6/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/puppetmaster/alt6/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/puppetmaster/alt6/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/puppetmaster/alt6/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/puppetmaster/alt6/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/puppetmaster/alt6/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/puppetmaster/alt6/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="2"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="55"
+	targetoffset="0 0 64"
+
+	category="cc physical"
+	difficulty="3"
+
+	midrating="3"
+	junglerating="0"
+	carryrating="5"
+	hardsupportrating="0"
+	softsupportrating="1"
+	offlanerating="3"
+	soloofflanerating="0"
+	rangedrating="5"
+	meleerating="0"
+	
+	movespeed="295"
+	turnrate="720"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="0"
+	magicarmor="5"
+
+	inventory0="Ability_PuppetMaster1"
+	inventory1="Ability_PuppetMaster2"
+	inventory2="Ability_PuppetMaster3"
+	inventory3="Ability_PuppetMaster4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1370"
+	attackactiontime="400"
+	attackcooldown="1700"
+	attackdamagemin="28"
+	attackdamagemax="36"
+	attacknumanims="2"
+	attackoffset="-12 80 100"
+	attackprojectile="Projectile_PuppetMasterAttack"
+	attackrange="575"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="intelligence"
+	strength="18"
+	strengthperlevel="1.9"
+	agility="20"
+	agilityperlevel="2"
+	intelligence="21"
+	intelligenceperlevel="3.1"
+	
+
+	previewpos="-20 0 -70"
+	previewangles=" 0 35"
+	previewscale="2"
+	
+	storemodel="/heroes/puppetmaster/alt6/preview.mdf"
+	storepos="0 0 -27"
+	storeangles="0 0 0"
+	storescale="1.8"
+	
+	corpsetime="1000"
+	corpsefadetime="5000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+ attackanim="attack_%"
+        icon2="/heroes/puppetmaster/alt6/icon.dds"
+        portraitcampos="10 -10 25"
+        previewmodel="/heroes/puppetmaster/alt6/preview.mdf"
+        infoheight="225">
+
+    <onspawn>
+		<setactivemodifierkey name="Puppetmaster_Sound" />
+		<setstr0 a="altavatar_path" b="sounds/interactions/spawn.effect" op="add" />
+		<exists path="str0">
+			<pausevoiceovers duration="8000" />
+			<playeffectdynamic effect="str0" target="source_entity" />
+		</exists>
+	</onspawn>
+	
+	<onrespawn>
+		<setactivemodifierkey name="Puppetmaster_Sound" />
+	</onrespawn>
+	
+	<onkill>
+		<setstr0 a="altavatar_path" b="sounds/interactions/kill_audio.effect" op="add" />
+		<exists path="str0">
+			<!-- Interaction -->
+			<targettype type="illusion" />
+			<else>
+			<cantarget targetscheme="enemy_heroes" >
+				<pushentityproxy entity="this_proxy_entity" />
+					<chance threshold="0.30">  
+						<compare a="stack_entity" b="inflictor_entity" op="ne"> <!--To prevent interaction to play if you have taunted them-->
+							<playeffect effect="sounds/interactions/kill_audio.effect" source="this_entity" target="this_entity" />
+							<pausevoiceovers duration="3000" /> 
+							<delayannouncer duration="3000" source="target_entity" sourceonly="true"/>
+							<delayannouncer duration="3000" source="this_entity" sourceonly="true"/>
+						</compare>
+					</chance>
+				</cantarget>
+			</else>
+		</exists>
+	</onkill>
+	
+	<onassist>
+		<setstr0 a="altavatar_path" b="sounds/interactions/assists_audio.effect" op="add" />
+		<exists path="str0">
+			<!-- Interaction -->
+			<chance threshold="0.30">  
+				<pausevoiceovers duration="4000" />
+				<delayannouncer duration="4000" source="target_entity" sourceonly="true"/>
+				<delayannouncer duration="4000" source="this_entity" sourceonly="true"/>
+				<playeffect effect="sounds/interactions/assists_audio.effect" source="this_entity" target="this_entity" />
+			</chance>
+		</exists>
+	</onassist>
+		
+	<onlevelup>
+		<targettype type="illusion" />
+		<else>
+			<compare a="level" b="16" op="eq">
+				<setstr0 a="altavatar_path" b="sounds/interactions/level_16.wav" op="add" />
+				<exists path="str0"> 
+						<pausevoiceovers duration="4000" /> 
+						<delayannouncer duration="4000" source="source_entity" sourceonly="true"/>
+						<play2dsound sample="sounds/interactions/level_16.wav" channel="68" volume="1.0" dampen="0.5" sourceonly="true" targetonly="true" />
+				</exists>
+			</compare>
+			<else>
+				<compare a="level" b="11" op="eq">
+					<setstr0 a="altavatar_path" b="sounds/interactions/level_11.wav" op="add" />
+					<exists path="str0">
+						<pausevoiceovers duration="4000" /> 
+						<delayannouncer duration="4000" source="source_entity" sourceonly="true"/>
+						<play2dsound sample="sounds/interactions/level_11.wav" channel="68" volume="1.0" dampen="0.5" sourceonly="true" targetonly="true" />
+					</exists>
+				</compare>
+				<else>
+					<compare a="level" b="6" op="eq">
+						<setstr0 a="altavatar_path" b="sounds/interactions/level_6.wav" op="add" />
+						<exists path="str0">
+							<pausevoiceovers duration="3000" /> 
+							<delayannouncer duration="3000" source="source_entity" sourceonly="true"/>
+							<play2dsound sample="sounds/interactions/level_6.wav" channel="68" volume="1.0" dampen="0.5" sourceonly="true" targetonly="true" />
+						</exists>
+					</compare>
+					<else>
+					</else>
+				</else>
+			</else>
+		</else>
+	</onlevelup>
+	
+	<ondeath>
+		<targettype type="illusion" />
+		<else>
+			<chance threshold="0.30"> 
+				<setstr0 a="altavatar_path" b="sounds/interactions/death_%.wav" op="add" />
+				<exists path="str0">
+					<delayannouncer duration="8000" source="source_entity" sourceonly="true"/>
+					<play2dsound sample="sounds/interactions/death_%.wav" channel="68" volume="1.0" dampen="0.5" sourceonly="true" targetonly="true" />
+				</exists>
+			</chance> 
+		</else>
+	</ondeath>
+
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_SearingLight" />
+	<recommendeditem name="Item_AssassinsShroud" />
+	<recommendeditem name="Item_ShrunkenHead" />
+	<recommendeditem name="Item_Genjuro" />
+	<recommendeditem name="Item_Riftshards" />
+	<recommendeditem name="Item_Hellflower" />
+	<recommendeditem name="Item_SavageMace" />
+	<recommendeditem name="Item_WhisperingHelm" />
+	<recommendeditem name="Item_Shieldbreaker" />
+	<recommendeditem name="Item_SymboloftheRage" />
+	<recommendeditem name="Item_ElderParasite" />
+	<recommendeditem name="Item_Hypercrown" />
+	
+	<gooditemagainst name="Item_BarbedArmor" />
+	<gooditemagainst name="Item_SpikedBola" />
+	
+	<modifier key="iamsheeped" modpriority="201"
+		passiveeffect=""
+	/>
+</hero>

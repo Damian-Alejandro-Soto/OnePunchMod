@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_CorruptedDisciple"
+
+	team="Hellbourne"
+	icon="/heroes/corrupted_disciple/alt9/icon.dds"
+	animatedportrait=""
+	portrait="/heroes/corrupted_disciple/alt9/icon.dds"
+	model="/heroes/corrupted_disciple/alt9/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/corrupted_disciple/alt9/effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/corrupted_disciple/alt9/alt4/sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.6"
+	modelscale="1.0"
+	effectscale="1"
+	boundsheight="140"
+	boundsradius="24"
+	selectionradius="62"
+	targetoffset="0 0 64"
+
+	category="physical"
+	difficulty="2.5"
+
+	midrating="4"
+	junglerating="0"
+	carryrating="5"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="2"
+	soloofflanerating="2"
+	rangedrating="3"
+	meleerating="0"
+
+	movespeed="300"
+	turnrate="810"
+	turnsmoothing="0.05"
+	
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-.98"
+	magicarmor="5"
+
+	inventory0="Ability_CorruptedDisciple1"
+	inventory1="Ability_CorruptedDisciple2"
+	inventory2="Ability_CorruptedDisciple3"
+	inventory3="Ability_CorruptedDisciple4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="300"
+	attackcooldown="1700"
+	attackdamagemin="25"
+	attackdamagemax="29"
+	attacknumanims="2"
+	attackoffset="20 24 100"
+	attackprojectile="Projectile_CorruptedDisciple_Attack"
+	attackrange="475"
+	attackstarteffect=""
+	attackactioneffect="/heroes/corrupted_disciple/alt9/effects/attack_impact.effect"
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+	
+	corpsetime="3300"
+	corpsefadetime="3000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+	primaryattribute="agility"
+	strength="19"
+	strengthperlevel="1.9"
+	agility="22"
+	agilityperlevel="2.8"
+	intelligence="19"
+	intelligenceperlevel="1.8"
+	
+
+	previewpos="0 0 -80"
+	previewangles="0 0 0"
+	previewscale="1.35"
+	
+	storemodel="/heroes/corrupted_disciple/alt9/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.35"
+	
+ attackanim="attack_%"
+        icon2="/heroes/corrupted_disciple/alt9/icon.dds"
+        previewmodel="/heroes/corrupted_disciple/alt9/preview.mdf">
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_SoulscreamRing" />
+	<recommendeditem name="Item_BloodChalice" />
+	<recommendeditem name="Item_Firebrand" />
+	<recommendeditem name="Item_GhostMarchers" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_Lightbrand" />
+	<recommendeditem name="Item_SearingLight" />
+	<recommendeditem name="Item_KuldrasSheepstick" />
+	<recommendeditem name="Item_Energizer" />
+	<recommendeditem name="Item_SolsBulwark" />
+	<recommendeditem name="Item_ShamansHeadress" />
+	<recommendeditem name="Item_HelmoftheBlackLegion" />
+	<recommendeditem name="Item_AssassinsShroud" />
+	<recommendeditem name="Item_ShrunkenHead" />
+	<recommendeditem name="Item_UltorsHeavyPlate" />
+	<recommendeditem name="Item_BehemothsHeart" />
+	<recommendeditem name="Item_Genjuro" />
+	<recommendeditem name="Item_Wingbow" />
+	<recommendeditem name="Item_BarrierIdol" />
+	<recommendeditem name="Item_Riftshards" />
+	<recommendeditem name="Item_GeometersBane" />
+	<recommendeditem name="Item_WhisperingHelm" />
+	<recommendeditem name="Item_SymboloftheRage" />
+	
+	<gooditemagainst name="Item_PlatedGreaves" />
+	<gooditemagainst name="Item_KuldrasSheepstick" />
+	<gooditemagainst name="Item_IronShield" />
+	<gooditemagainst name="Item_BarbedArmor" />
+	<gooditemagainst name="Item_NullStone" />
+	<gooditemagainst name="Item_Wingbow" />
+	<gooditemagainst name="Item_ShieldoftheFive" />
+	<gooditemagainst name="Item_FrostfieldPlate" />
+	<gooditemagainst name="Item_Brutalizer" />
+	<gooditemagainst name="Item_SpikedBola" />
+	
+	
+	
+	<modifier key="iamsheeped"
+		passiveeffect=""
+	/>
+
+	<modifier key="ult_boost" modpriority="101"
+	>
+		<aura state="State_CorruptedDisciple_Ult_Boost" radius="0" targetscheme="self"/>
+	</modifier>
+	
+	<onspawn>
+		<activatemodifierkey name="CorruptedDisciple_Sound" />
+	</onspawn>
+</hero>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Nymphora4"
+	
+	statuseffecttooltip=""
+	
+	icon="../../icon.dds"
+	
+	anim="ability_4"
+	casttime="0"
+	castactiontime="0"
+	channeltime="5000"
+	ischanneling="true"
+	safechannel="true"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+	
+	actiontype="target_position"
+	targetradius="250"
+	casteffecttype="SuperiorMagic Push"
+	targetscheme="nonillusion_other_willing_ally_heroes"
+	casteffect="/heroes/fairy/trophy_skin/ability_04/channel01.effect"
+	
+	manacost="120,180,240"
+	cooldowntime="100000,85000,70000"
+	
+	notargetradius="3700"
+	notargetmaterial="/shared/materials/area_cast_indicator_simple_red.material"
+	notargetscheme="Nymphora_NoPortGadget"
+	notargetignoreinvulnerable="true"
+	
+	range="999999"
+	hoverareacastrange="250"
+	
+	showrangeandradiusintooltip="true"
+>
+	<onimpact />
+	
+	<onchannelstart>
+		<spawnunit name="Gadget_Nymphora_Ability4" target="target_position" pushentity="true" ischannel="true" />
+		<spawnaffector name="Affector_Nymphora_Ability4" target="source_entity" proxy="stack_entity" ischannel="true" />
+	</onchannelstart>
+	
+	<onchannelend>
+		<!-- Teleport allies -->
+		<setpos0 position="target_position" />		
+		<areaofeffect
+			source="source_entity"
+			center="source_entity"
+			radius="250"
+			targetselection="closest"
+			maxtotalimpacts="1,2,3"
+			targetscheme="nonillusion_other_willing_ally_heroes"
+			maximpactspertarget="1"
+		>
+			<unbind target="target_entity" />
+			<teleport source="target_entity" target="pos0" interpolate="false" />
+			<disjoint target="target_entity" />
+		</areaofeffect>		
+		
+		<!-- Teleport self -->
+		<unbind target="source_entity" />
+		<teleport source="source_entity" target="target_position" interpolate="false" />
+		<disjoint target="source_entity" />		
+	</onchannelend>
+	
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+		channeltime="3500"
+		casteffect="/heroes/fairy/trophy_skin/ability_04/channel_sotm01.effect"
+		targetradius="600"
+		targetmaterial="/shared/materials/area_cast_indicator_pointed.material"
+		hoverareacastrange="600"
+	>
+		<onimpact />
+		
+		<onchannelend>
+			<!-- Copy of above -->
+			<!-- Teleport allies -->
+			<setpos0 position="target_position" />
+			<areaofeffect
+				source="source_entity"
+				center="source_entity"
+				radius="600"
+				targetselection="closest"
+				maxtotalimpacts="3,4,5"
+				targetscheme="nonillusion_other_willing_ally_heroes"
+				maximpactspertarget="1"
+			>
+				<unbind target="target_entity" />
+				<teleport source="target_entity" target="pos0" interpolate="false" />
+				<disjoint target="target_entity" />
+			</areaofeffect>
+			
+			<!-- Teleport self -->
+			<unbind target="source_entity" />
+			<teleport source="source_entity" target="target_position" interpolate="false" />
+			<disjoint target="source_entity" />
+			
+			<!-- SotM specific -->
+			<!-- Volatile Pod (Q) -->
+			<spawnunit name="Gadget_Nymphora_Ability1" target="target_position" pushentity="true" />
+			<setlevel entity="stack_entity" value="4" />
+			
+			<!-- Nymphora's Zeal (W) -->
+			<setpos0 position="target_position" offset="0 950 0" offsetspace="source_entity" />
+			<spawnprojectile name="Projectile_Nymphora_Ability2" source="source_entity" target="pos0" pushentity="true" level="4" />
+			<setactivemodifierkey name="Fairy_R_SotM" entity="stack_entity" />
+			<setpos0 position="target_position" offset="0 -950 0" offsetspace="source_entity" />
+			<spawnprojectile name="Projectile_Nymphora_Ability2" source="source_entity" target="pos0" pushentity="true" level="4" />
+			<setactivemodifierkey name="Fairy_R_SotM" entity="stack_entity" />
+			<setpos0 position="target_position" offset="950 0 0" offsetspace="source_entity" />
+			<spawnprojectile name="Projectile_Nymphora_Ability2" source="source_entity" target="pos0" pushentity="true" level="4" />
+			<setactivemodifierkey name="Fairy_R_SotM" entity="stack_entity" />
+			<setpos0 position="target_position" offset="-950 0 0" offsetspace="source_entity" />
+			<spawnprojectile name="Projectile_Nymphora_Ability2" source="source_entity" target="pos0" pushentity="true" level="4" />
+			<setactivemodifierkey name="Fairy_R_SotM" entity="stack_entity" />
+			
+			<!-- Grace of the Nymph (E) -->
+			<spawnaffector name="Affector_Nymphora_Ability3_SotM" target="target_position" />
+		</onchannelend>
+	</modifier>
+</ability>

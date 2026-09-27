@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "ellonia",
+  "legacy_folder": "ellonia",
+  "avatar": "alt4",
+  "counts": {
+    "files": 143,
+    "models": 57,
+    "materials": 15,
+    "textures": 19,
+    "effects": 20,
+    "sounds": 32,
+    "icons": 6,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

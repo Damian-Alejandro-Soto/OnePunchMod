@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_ShadowBlade_Ability1"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/shadowblade/alt5/ability_01/effects/state_enemy.effect"
+	effecttype="StatusDebuff"
+
+	movespeedslow="0.25"
+	allowtransfer="true"
+
+	negativeeffect="slowed"
+>
+</state>

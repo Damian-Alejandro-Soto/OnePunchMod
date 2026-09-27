@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_FlintBeastwood"
+
+	team="Hellbourne"
+	icon="/heroes/flint_beastwood/alt11/icon.dds"
+	animatedportrait=""
+	portrait="/heroes/flint_beastwood/alt11/icon.dds"
+	model="/heroes/flint_beastwood/alt11/model.mdf"
+	skin=""
+	
+	overrideportraiteffects="true"
+	passiveeffect=""
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/flint_beastwood/alt11/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/flint_beastwood/alt11/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/flint_beastwood/alt11/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/flint_beastwood/alt11/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/flint_beastwood/alt11/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/flint_beastwood/alt11/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/flint_beastwood/alt11/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/flint_beastwood/alt11/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.9"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="55"
+	targetoffset="0 0 64"
+
+	category="physical"
+	difficulty="1.5"
+
+	midrating="4"
+	junglerating="0"
+	carryrating="5"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="1"
+	soloofflanerating="0"
+	rangedrating="5"
+	meleerating="0"
+
+	movespeed="295"
+	turnrate="630"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-.94"
+	magicarmor="5.0"
+
+	inventory0="Ability_FlintBeastwood1"
+	inventory1="Ability_FlintBeastwood2"
+	inventory2="Ability_FlintBeastwood3"
+	inventory3="Ability_FlintBeastwood4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="170"
+	attackcooldown="1700"
+	attackdamagemin="16"
+	attackdamagemax="23"
+	attacknumanims="2"
+	attackoffset="0 150 100"
+	attackprojectile="Projectile_FlintBeastwoodAttack"
+	attackrange="550"
+	attackstarteffect=""
+	attackactioneffect="/heroes/flint_beastwood/alt11/projectile/attack_impact.effect"
+	attackimpacteffect="/heroes/flint_beastwood/alt11/projectile/impact.effect"
+	attacktype="ranged"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="agility"
+	strength="18"
+	strengthperlevel="1.7"
+	agility="21"
+	agilityperlevel="2.9"
+	intelligence="17"
+	intelligenceperlevel="2.6"
+	
+
+	previewpos="0 0 -70"
+	previewangles="0 0 0"
+	previewscale="1.5"
+	
+	storemodel="/heroes/flint_beastwood/alt11/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.6"
+	
+	
+	corpsetime="1500"
+	corpsefadetime="3000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	
+ attackanim="attack_%"
+        icon2="/heroes/flint_beastwood/alt11/icon.dds"
+        previewmodel="/heroes/flint_beastwood/alt11/preview.mdf"
+        infoheight="185"
+        portraitcampos="20 -35 15">
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_SoulscreamRing" />
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_Bottle" />
+	<recommendeditem name="Item_PowerSupply" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_Riftshards" />
+	<recommendeditem name="Item_AssassinsShroud" />
+	<recommendeditem name="Item_Frostburn" />
+	<recommendeditem name="Item_GeometersBane" />
+
+	<recommendeditem name="Item_ArclightCrown" />
+	<recommendeditem name="Item_Wingbow" />
+	
+	<onkill>
+	</onkill>
+	
+	<modifier key="Flint_E_invis"
+		idleanim="stealth"
+		boredanim=""
+	/>
+	
+	<modifier key="FlintBeastwood_Ability3_1" modpriority="81"
+		aggrorange="850"
+		sightrangeday="1885"
+		sightrangenight="885"
+	/>
+	
+	<modifier key="FlintBeastwood_Ability3_2" modpriority="82"
+		aggrorange="900"
+		sightrangeday="1965"
+		sightrangenight="965"
+	/>
+	
+	<modifier key="FlintBeastwood_Ability3_3" modpriority="83"
+		aggrorange="950"
+		sightrangeday="2045"
+		sightrangenight="1045"
+	/>
+	
+	<modifier key="FlintBeastwood_Ability3_4" modpriority="84"
+		aggrorange="1000"
+		sightrangeday="2125"
+		sightrangenight="1125"
+	>
+	</modifier>
+
+	<modifier key="ult_boost" modpriority="101"
+    >
+        <aura state="State_FlintBeastwood_Ult_Boost" radius="0" targetscheme="self"/>
+    </modifier>
+
+	<modifier key="pearl" model="/heroes/flint_beastwood/alt11/pearl/model.mdf" />
+	<modifier key="empath" model="/heroes/flint_beastwood/alt11/empath/model.mdf" />
+	<modifier key="judge" model="/heroes/flint_beastwood/alt11/judge/model.mdf" />
+	<modifier key="zephyr" model="/heroes/flint_beastwood/alt11/zephyr/model.mdf" />
+	<modifier key="chicken" model="/heroes/flint_beastwood/alt11/chicken/model.mdf" />
+	<modifier key="sushi" model="/heroes/flint_beastwood/alt11/sushi/model.mdf" />
+	<modifier key="sherif" model="/heroes/flint_beastwood/alt11/sherif/model.mdf" />
+</hero>

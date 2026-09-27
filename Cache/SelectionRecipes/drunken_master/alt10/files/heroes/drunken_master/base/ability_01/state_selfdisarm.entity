@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_DrunkenMaster_Ability1_SelfDisarm"
+
+	ishidden="true"
+	
+	icon="/heroes/drunkenmaster/alt10/ability_01/icon.dds"
+	silenced="true"
+	immobilized="true"
+	perplexed="true"
+	disarmed="true"
+	serverentity="true"
+	
+	totaldamagemultiplier="0"
+>
+	<!-- First autoattack from the skill -->	
+	<onattackdamageevent>
+		<damagesupertype supertype="attack">
+			<setvalue name="damage_attempted" a="damage_attempted" b="0.5" op="mult" /> <!-- Our attack should deal 50% of its normal damage -->
+			<setvalue name="damage_attempted" a="damage_attempted" b="20,40,60,80" op="add" /> <!-- add bonus damage -->
+		</damagesupertype>
+	</onattackdamageevent>
+</state>

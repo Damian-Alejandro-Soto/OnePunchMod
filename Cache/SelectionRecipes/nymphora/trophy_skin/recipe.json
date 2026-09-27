@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "nymphora",
+  "avatar": "trophy_skin",
+  "files": [
+    "heroes\\nymphora\\base\\hero.entity",
+    "heroes\\nymphora\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\nymphora\\base\\state_fairy_ult_boost.entity",
+    "heroes\\nymphora\\base\\state_fairy_ult_boost.entity.onepunch_ability_managed"
+  ]
+}

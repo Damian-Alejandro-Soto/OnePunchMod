@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Tarot_Ability2_Enemy"
+
+	icon="icon.tga"
+	
+	passiveeffect="/heroes/tarot/alt3/ability_02/effects/state.effect"
+
+	effecttype="StatusDebuff"
+	allowtransfer="false"
+
+	revealed="true"
+	sighted="true"
+
+	maxcharges="4"
+>
+	<aura
+		gadget="Gadget_Tarot_Ability2"
+		radius="0"
+		targetscheme="self"
+	/>
+
+	<onattackedstart>
+		<condition test="hasstate State_Tarot_Ability2_Self" entity="target_entity">
+			<compare a="charges" b="0" op="gt">
+				<hasmodifier name="Tarot_nextattackneedstobeinvis" entity="target_entity" />
+				<else>
+					<applystate name="State_Tarot_Ability2_Staff" target="target_entity" duration="4000" />	
+					<removecharge />
+				</else>
+			</compare>
+		</condition>
+	</onattackedstart>
+	
+	<onattackedpreimpact>
+		<setvalue name="combat_truestrike" a="1" />
+	</onattackedpreimpact>
+	
+	<onattackeddamageevent>
+		<setvalue name="damage_armorpiercepercent" a="damage_armorpiercepercent" b="0.2,0.3,0.4,0.5" op="add" />
+	</onattackeddamageevent>
+
+	<onkilled>
+		<expirestate name="State_Tarot_Ability2_Self" target="this_proxy_entity" />
+	</onkilled>
+	
+	<onexpired>
+		<expirestate name="State_Tarot_Ability2_Self" target="this_proxy_entity" />
+	</onexpired>
+	
+	<onframe />
+</state>

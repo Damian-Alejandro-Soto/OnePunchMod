@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Prisoner_Ability2"
+
+	icon="/heroes/prisoner/alt5/ability_02/icon.dds"
+	passiveeffect="/heroes/prisoner/alt5/ability_02/effects/restrained.effect"
+	
+	restrained="true"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	
+	sighted="true"
+	revealed="true"
+	
+	movespeedslow="0.2,0.25,0.3,0.35"
+
+	negativeeffect="restrained"
+>
+	<onframe>
+		<damage effecttype="Physical DOT" amount="25,30,35,40" b="frametime" op="mult" />
+	</onframe>
+
+	<oninflict>
+		<spawnunit name="Pet_Prisoner_Ability2" target="this_owner_position" proxy="this_owner_entity" facing="this_owner_entity" offsetspace="this_owner_entity" offset="0 -100 0" pushentity="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+		<applystate name="State_Prisoner_Ability2_Link" inflictor="this_owner_entity" target="stack_entity" continuous="true" pushentity="true"/>
+	</oninflict>
+	
+	<onrefresh>
+		<delete target="this_proxy_entity" source="" />
+		<spawnunit name="Pet_Prisoner_Ability2" target="this_owner_position" proxy="this_owner_entity" facing="this_owner_entity" offsetspace="this_owner_entity" offset="0 -100 0" pushentity="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+		<applystate name="State_Prisoner_Ability2_Link" inflictor="this_owner_entity" target="stack_entity" continuous="true" pushentity="true"/>
+	</onrefresh>
+	
+	<onorderdisjointed>
+		<order command="follow" force="true" forceduration="10000" source="this_proxy_entity" target="this_owner_entity" />
+	</onorderdisjointed>
+
+	<onexpired>
+		<kill target="this_proxy_entity" source="" />
+	</onexpired>
+</state>

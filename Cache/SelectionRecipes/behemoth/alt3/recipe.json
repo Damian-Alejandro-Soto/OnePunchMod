@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "behemoth",
+  "avatar": "alt3",
+  "files": [
+    "heroes\\behemoth\\base\\hero.entity",
+    "heroes\\behemoth\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

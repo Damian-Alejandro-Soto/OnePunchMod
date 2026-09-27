@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_MasterOfArms_Ability3_Disarm_Red"
+	icon="icon_elec.tga"
+
+	effecttype=""
+	
+	passiveeffect="/heroes/master_of_arms/alt4/ability_03/effects/disarm_sound.effect"
+	
+	attackspeed="0,-1,-2,-3,-4"
+	
+	ishidden="true"
+>
+	<onframe>
+		<hasmodifier entity="this_proxy_entity" name="MasterOfArms_Electrical">
+			<setactivemodifierkey entity="this_entity" name="MasterOfArms_Electrical" />
+		</hasmodifier>
+		<else>
+			<setactivemodifierkey entity="this_entity" name="" />
+		</else>
+	</onframe>
+	
+	<modifier key="MasterOfArms_Electrical" modpriority="101" 
+		disarmed="false"
+		attackspeed="0"
+		passiveeffect=""
+	/>
+	
+	<modifier key="MasterOfArms4_Active" modpriority="102"
+		disarmed="false"
+		attackspeed="0"
+		passiveeffect=""
+	/>
+</state>

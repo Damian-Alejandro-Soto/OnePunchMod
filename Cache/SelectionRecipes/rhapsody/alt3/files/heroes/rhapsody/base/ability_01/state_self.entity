@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rhapsody_Ability1_Self"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/rhapsody/alt3/ability_01/effects/state_self.effect"
+	modifierkey="Rhapsodystaccato"
+	
+	maxcharges="4"
+>
+
+	<oninflict>
+		<setcharges a="1,2,3,4" />
+	</oninflict>
+	
+	<onframe>
+		<compare a="charges" b="0" op="eq">
+			<expire />
+		</compare>
+		<compare a="this_proxy_entity" b="0" op="eq">
+			<expire />
+		</compare>
+	</onframe>
+	
+	<onexpired>
+		<cantarget targetscheme="enemy_units" target="this_proxy_entity" effecttype="Magic" ignoreinvulnerable="false">
+			<compare a="charges" b="0" op="gt">
+				<applystate name="State_Stunned" effecttype="Magic" target="this_proxy_entity" duration="250" />
+			</compare>
+		</cantarget>
+		<damage effecttype="Magic" target="this_proxy_entity" amount="50" b="charges" op="mult" />
+		<expirestate name="State_Rhapsody_Ability1_Self_Modifier" />
+	</onexpired>
+</state>

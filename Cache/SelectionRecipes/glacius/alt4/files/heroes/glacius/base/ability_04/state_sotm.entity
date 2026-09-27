@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Glacius_Ability4_Sotm"
+	
+	icon="/heroes/frosty/alt4/ability_02/icon.dds"
+	passiveeffect="/heroes/frosty/alt4/ability_02/effects/state.effect"
+	
+	frozen="true"
+	
+	effecttype="StatusBuff"
+	allowtransfer="false"
+>
+	<onframe />
+	
+	<ondamaged>
+		<scaledamage scale="0.50" />
+	</ondamaged>
+</state>

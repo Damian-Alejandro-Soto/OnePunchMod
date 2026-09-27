@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Andromeda_Ability2_Damage"
+
+	radius="275"
+	lifetime="1000"
+	speed="1000"
+	arcstart="180"
+	arcmid="360"
+	arcend="360"
+	arcmidpos="0.2"
+	
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	persist="false"
+
+	impacteffect="/heroes/andromeda/alt4/ability_02/effects/impact.effect"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="45,70,95,120" />
+		<applystate name="State_Andromeda_Ability2" duration="8000" />
+		
+		<!-- Staff of the Master E effect -->
+		<hasmodifier name="ult_boost" entity="source_entity">
+			<cantarget targetscheme="enemy_heroes">
+				<applystate name="State_Andromeda_Ability3_AttackRange" duration="4000" target="source_entity" />
+			</cantarget>
+		</hasmodifier>
+	</onimpact>
+</affector>

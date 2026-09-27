@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "tempest",
+  "avatar": "pog_skin2",
+  "files": [
+    "heroes\\tempest\\base\\hero.entity",
+    "heroes\\tempest\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\tempest\\base\\state_tempest_ult_boost.entity",
+    "heroes\\tempest\\base\\state_tempest_ult_boost.entity.onepunch_ability_managed"
+  ]
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_DoctorRepulsor3"
+
+	statuseffecttooltip="State_DoctorRepulsor_Ability3_Slow"
+	icon="/heroes/doctor_repulsor/alt6/ability_03/icon.dds"
+
+	anim="ability_3"
+	casttime="0"
+	castactiontime="0"
+	passiveeffect=""
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	
+	actiontype="passive"
+>
+	<onabilityimpact>
+		<compare a="accumulator" b="0" op="eq">
+			<applystate name="State_DoctorRepulsor_Ability3" continuous="true" target="source_entity" stack="true" />
+			<!-- Krosmode change -->
+			<setaccumulator entity="this_entity" value="1" />
+		</compare>			
+	</onabilityimpact>
+
+	<onattack>
+		<!-- Krosmode change -->
+		<setaccumulator entity="this_entity" value="0" />
+	</onattack>
+
+	<ondeath>
+		<!-- Krosmode change -->
+		<setaccumulator entity="this_entity" value="0" />
+	</ondeath>
+	
+	<modifier key="ult_boost" modpriority="100" />
+</ability>
+

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Myrmidon_Ability4"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/hydromancer/alt3/ability_04/effects/passive.effect"
+	
+	maxhealth="150,300,450"
+	magicarmor="3,5,7"
+	modifierkey="hydromancer_rawrmode"
+	modifierkey2="hydromancer_rawrmode1,hydromancer_rawrmode2,hydromancer_rawrmode3"
+	
+	effecttype=""
+	allowtransfer="false"
+	
+	propagatetoillusions="true"
+	dynamicprecache="effects/attack_follow_through.effect,effects/end.effect,effects/splash_damage.effect,effects/impact.effect"
+	
+>
+	<onattackstart />
+	
+	<onattackpreimpact>
+		<setvar0 a="125,175,225" /> <!-- Minimum Magic Damage on attack -->
+
+		<cantarget effecttype="Magic" targetscheme="all_units">
+			<compare a="source_attackdamage" b="var0" op="le">
+				<setvalue name="combat_basedamage" a="var0" />
+				<setvalue name="combat_additionaldamage" a="0" />
+			</compare>
+			<else>
+				<!-- Convert a percentage of the extra Attack Damage to extra Magic Damage -->
+				<setvar1 a="source_attackdamage" b="var0" op="sub" />
+				<setvar1 a="var1" b="0.7" op="mult" />
+				<setvar1 a="var0" b="var1" op="add" />
+				<setvalue name="combat_basedamage" a="var1" />
+				<setvalue name="combat_additionaldamage" a="0" />
+			</else>
+			
+			<seteffecttype name="combat_damagetype" effecttype="Magic" />
+			<seteffecttype name="combat_effecttype" effecttype="Attack Magic" />
+		</cantarget>
+
+		<targettype type="building" />
+		<else>
+			<cantarget targetscheme="enemy_units" effecttype="Physical">
+				<spawnaffector name="Affector_Myrmidon_Ability4" target="target_position" ignore="target_entity" param="var0" />
+			</cantarget>
+		</else>
+	</onattackpreimpact>
+	
+	<onattackimpact>
+		<cantarget targetscheme="all_units">
+			<applystate name="State_Myrmidon_Ability4_Slow" duration="3000" target="target_entity" disablenegativeeffectpopuponrefresh="true" />
+		</cantarget>
+
+		<!-- VFX -->
+		<setstr0 a="altavatar_path" b="effects/attack_follow_through.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_entity" target="" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/attack_follow_through.effect" source="source_entity" target=""/>
+		</else>
+	</onattackimpact>
+	
+	<onexpired>		
+		<!-- Case for illusions because their accumulator value & source_entity fields become NULL -->
+		<targettype type="illusion" source="target_entity" target="target_entity">
+			<!-- Target health -->
+			<setaccumulator entity="this_entity" value="200,300,400" />
+			<setvar0 a="target_health" b="accumulator" op="sub" />
+			<setvar0 a="var0" b="1" op="max" />
+			
+			<!-- Max health including bonus -->
+			<setvar1 a="target_maxhealth" b="accumulator" op="add" />
+			
+			<!-- Current health adjusted for no bonus -->
+			<setvar2 a="target_health" b="var1" op="div" />
+			<setvar2 a="var2" b="target_maxhealth" op="mult" />
+
+			<!-- Final adjustment to reach target health after the game rescales current health -->
+			<changehealth a="var0" b="var2" op="sub" />
+		</targettype>
+		<else>
+			<!-- Target health -->
+			<setvar0 a="source_health" b="accumulator" op="sub" />
+			<setvar0 a="var0" b="1" op="max" />
+
+			<!-- Max health including bonus -->
+			<setvar1 a="source_maxhealth" b="accumulator" op="add" />
+			
+			<!-- Current health adjusted for no bonus -->
+			<setvar2 a="source_health" b="var1" op="div" />
+			<setvar2 a="var2" b="source_maxhealth" op="mult" />
+
+			<!-- Final adjustment to reach target health after the game rescales current health -->
+			<changehealth a="var0" b="var2" op="sub" />
+		</else>
+
+		<!-- VFX -->
+		<setstr0 a="altavatar_path" b="effects/end.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_entity" target="target_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/end.effect" source="target_entity" target="target_entity" />
+		</else>
+	</onexpired>
+	
+	<modifier key="ult_boost" modpriority="90"
+		deathpersist="true"
+		magicarmor="4,6,8"
+	>
+		<onframe />
+		
+		<onattackpreimpact>
+			<setvar0 a="140,190,240" /> <!-- Minimum Magic Damage on attack -->
+
+			<cantarget effecttype="Magic" targetscheme="all_units">
+				<compare a="source_attackdamage" b="var0" op="le">
+					<setvalue name="combat_basedamage" a="var0" />
+					<setvalue name="combat_additionaldamage" a="0" />
+				</compare>
+				<else>
+					<!-- Convert a percentage of the extra Attack Damage to extra Magic Damage -->
+					<setvar1 a="source_attackdamage" b="var0" op="sub" />
+					<setvar1 a="var1" b="0.7" op="mult" />
+					<setvar1 a="var0" b="var1" op="add" />
+					<setvalue name="combat_basedamage" a="var1" />
+					<setvalue name="combat_additionaldamage" a="0" />
+				</else>
+				
+				<seteffecttype name="combat_damagetype" effecttype="Magic" />
+				<seteffecttype name="combat_effecttype" effecttype="Attack Magic" />
+			</cantarget>
+			
+			<targettype type="building" />
+			<else>
+				<cantarget targetscheme="enemy_units" effecttype="Physical">
+					<spawnaffector name="Affector_Myrmidon_Ability4" target="target_position" ignore="target_entity" param="var0" />
+				</cantarget>
+			</else>
+		</onattackpreimpact>
+	</modifier>
+</state>

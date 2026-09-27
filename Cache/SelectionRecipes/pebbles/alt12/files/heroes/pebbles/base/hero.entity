@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Pebbles"
+
+	team="Legion"
+	icon="/heroes/rocky/alt12/icon.dds"
+	portrait="/heroes/rocky/alt12/icon.dds"
+	model="/heroes/rocky/alt12/model.mdf"
+	skin=""
+
+	passiveeffect=""
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/rocky/alt12/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/rocky/alt12/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/rocky/alt12/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/rocky/alt12/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/rocky/alt12/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/rocky/alt12/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/rocky/alt12/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/rocky/alt12/sounds/voice/taunt_after.wav"
+
+	preglobalscale="1.5485"
+	modelscale="0.7"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="62"
+	targetoffset="0 0 92"
+
+	category="cc magic"
+	difficulty="2"
+
+	midrating="5"
+	junglerating="0"
+	carryrating="1"
+	hardsupportrating="0"
+	softsupportrating="3"
+	offlanerating="3"
+	soloofflanerating="3"
+	rangedrating="0"
+	meleerating="5"
+
+	movespeed="285"
+	turnrate="630"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-0.26"
+	magicarmor="5"
+
+	inventory0="Ability_Pebbles1"
+	inventory1="Ability_Pebbles2"
+	inventory2="Ability_Pebbles3"
+	inventory3="Ability_Pebbles4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="700"
+	attackactiontime="400"
+	attackcooldown="1700"
+
+	attackdamagemin="37"
+	attackdamagemax="43"
+
+	attacknumanims="2"
+	attackoffset="0 30 100"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="/heroes/rocky/alt12/effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="strength"
+	strength="24"
+	strengthperlevel="3.0"
+	agility="10"
+	agilityperlevel="1.0"
+	intelligence="17"
+	intelligenceperlevel="1.6"
+
+
+	previewpos="0 0 -60"
+	previewangles="0 0 0"
+	previewscale=".7"
+
+	storemodel="/heroes/rocky/alt12/model.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale=".95"
+
+	corpsetime="1500"
+	corpsefadetime="4000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+ attackanim="attack_%"
+        icon2="/heroes/rocky/alt12/icon.dds"
+        portraitcampos="-7 7 55"
+        previewmodel="/heroes/rocky/alt12/model.mdf"
+        previewpassiveeffect=""
+        storepassiveeffect="">
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_PortalKey" />
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_BloodChalice" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_Soultrap" />
+	<recommendeditem name="Item_RestorationStone" />
+	<recommendeditem name="Item_KuldrasSheepstick" />
+	<recommendeditem name="Item_StaffoftheMaster" />
+	<recommendeditem name="Item_IronShield" />
+	<recommendeditem name="Item_SolsBulwark" />
+	<recommendeditem name="Item_ShrunkenHead" />
+	<recommendeditem name="Item_BehemothsHeart" />
+	<recommendeditem name="Item_Codex" />
+	<recommendeditem name="Item_Hellflower" />
+	
+	<gooditemagainst name="Item_MysticVestments" />
+	<gooditemagainst name="Item_Stormspirit" />
+	<gooditemagainst name="Item_KuldrasSheepstick" />
+	<gooditemagainst name="Item_ShamansHeadress" />
+	<gooditemagainst name="Item_BarrierIdol" />
+	<gooditemagainst name="Item_AdevesCloak" />
+	<gooditemagainst name="Item_Riftshards" />
+	
+	
+
+	<modifier key="ult_boost" modpriority="100">
+		<aura state="State_Pebbles_Ult_Boost" radius="0" targetscheme="self"/>
+	</modifier>
+
+	<modifier key="iamsheeped" modpriority="1000"
+		passiveeffect=""
+	/>
+
+	<modifier key="Rocky_Grow1" modpriority="100"
+		walkanim="ability_4_walk_1"
+		preglobalscale="0.85"
+		effectscale="1.008"
+		attackdamagemin="77"
+		attackdamagemax="83"
+		selectionradius="62"
+		attackcooldown="1900"
+	 model="/heroes/rocky/alt12/Rocky_Grow1/model.mdf" modelscale="1.3" infoheight="230"/>
+	
+	<modifier key="Rocky_Grow2" modpriority="100"
+		walkanim="ability_4_walk_2"
+		preglobalscale="0.95"
+		effectscale="1.17"
+		attackdamagemin="117"
+		attackdamagemax="123"
+		selectionradius="70"
+		attackcooldown="2100"
+	 model="/heroes/rocky/alt12/Rocky_Grow2/model.mdf" modelscale="1.35" infoheight="270"/>
+	
+	<modifier key="Rocky_Grow3" modpriority="100"
+		walkanim="ability_4_walk_3"
+		preglobalscale="1.3"
+		effectscale="1.44"
+		attackdamagemin="157"
+		attackdamagemax="163"
+		selectionradius="74"
+		attackcooldown="2300"
+
+		infoheight="300"
+	 model="/heroes/rocky/alt12/Rocky_Grow3/model.mdf" modelscale="1.3"/>
+
+	<modifier key="reborn_rocky_grow1_art" model="/heroes/rocky/alt12/Rocky_Grow1/model.mdf" modelscale="1.3" preglobalscale="0.85" effectscale="1.008" infoheight="230" />
+	<modifier key="reborn_rocky_grow2_art" model="/heroes/rocky/alt12/Rocky_Grow2/model.mdf" modelscale="1.35" preglobalscale="0.95" effectscale="1.17" infoheight="270" />
+	<modifier key="reborn_rocky_grow3_art" model="/heroes/rocky/alt12/Rocky_Grow3/model.mdf" modelscale="1.3" preglobalscale="1.3" effectscale="1.44" infoheight="300" />
+</hero>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Bushwack_Ability1"
+
+	speed="3000"
+	gravity="0"
+	modelscale="1"
+	model="/shared/models/invis.mdf"
+
+	impacteffect="/heroes/bushwack/alt7/ability_01/effects/impact.effect"
+	traileffect="/heroes/bushwack/alt7/ability_01/effects/trail.effect"
+>
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<setvar0 a="source_attackdamage" b="1" op="mult" />
+				<damage effecttype="Physical" amount="45,75,105,135" b="var0" op="add" />
+				<applystate name="State_Bushwack_Ability1" target="target_entity" duration="1500" />
+				
+				<!-- Ability 4 logic -->
+				<targettype type="Boss" />
+				<else>
+					<pushtool source="this_owner_entity" name="Ability_Bushwack4" />
+					<setvar0 source="stack_entity" a="source_level" />
+					<setent0 entity="stack_proxy_entity" />
+					<setent1 entity="stack_entity" />
+					<compare a="var0" b="1" op="ge">
+						<applystate name="State_Bushwack_Ability4_Damage" target="target_entity" duration="2500" pushentity="true" statelevel="var0" />
+						<addcharges count="1" entity="stack_entity" />
+						<applystate name="State_Bushwack_Ability4_Buff" target="source_entity" duration="2500" pushentity="true" statelevel="var0" />
+						
+						<hasmodifier name="ult_boost">
+							<addcharges count="1" entity="stack_entity" />
+						</hasmodifier>
+						<else>
+							<compare source="ent0" target="target_entity" a="source_entity" b="target_entity" op="eq">
+								<addcharges count="1" entity="stack_entity" />
+							</compare>
+							<else>
+								<setcharges a="1" entity="stack_entity" />
+							</else>
+						</else>
+						<setproxy entity="ent1" target="target_entity" />
+					</compare>
+				</else>
+			</onimpact>
+		</combatevent>
+	</onimpact>
+</projectile>

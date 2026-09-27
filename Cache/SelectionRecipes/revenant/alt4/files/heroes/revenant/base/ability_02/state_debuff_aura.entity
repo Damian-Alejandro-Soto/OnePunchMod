@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Revenant_Ability2_Debuff_Aura"
+	
+	icon="/heroes/revenant/alt4/ability_02/icon.dds"
+	
+	passiveeffect="/heroes/revenant/alt4/ability_02/effects/state_debuff.effect"
+	
+	effecttype="StatusDebuff"
+	
+	magicarmor="-1,-2,-3,-4"
+>
+	<modifier key="nobossarmor" modpriority="100" condition="boss" notooltooltip="true"
+		magicarmor="0"
+	/>
+</state>

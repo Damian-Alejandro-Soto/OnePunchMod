@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Engineer_Attack"
+
+	speed="5000"
+	gravity="100"
+
+	modelscale=".35"
+	model="effects/bullet.mdf"
+
+	traileffect="/heroes/engineer/alt5/projectile/effects/trail.effect"
+	impacteffect="/heroes/engineer/alt5/projectile/effects/impact.effect"
+>
+
+</projectile>

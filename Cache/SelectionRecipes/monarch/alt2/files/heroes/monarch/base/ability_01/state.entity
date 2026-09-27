@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Monarch_Ability1"
+	
+	icon="/heroes/monarch/alt2/ability_01/icon.dds"
+	
+	passiveeffect="/heroes/monarch/alt2/ability_01/effects/state.effect"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	revealed="true"
+	
+	immobilized2="true"
+	silenced="true"
+
+	negativeeffect="silenced"
+>
+	<onframe>
+		<evaluate a="110,150,190,230" b="1.5,2,2.5,3" op="div" />
+		<evaluate a="result" b="frametime" op="mult" />
+		<damage effecttype="Magic DOT" amount="1" b="result" op="mult" />
+	</onframe>
+</state>

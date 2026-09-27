@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "demented_shaman",
+  "avatar": "alt",
+  "files": [
+    "heroes\\demented_shaman\\base\\hero.entity",
+    "heroes\\demented_shaman\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\demented_shaman\\base\\projectile\\projectile.entity",
+    "heroes\\demented_shaman\\base\\projectile\\projectile.entity.onepunch_ability_managed"
+  ]
+}

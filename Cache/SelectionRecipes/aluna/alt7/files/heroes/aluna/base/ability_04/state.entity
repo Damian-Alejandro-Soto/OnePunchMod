@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Aluna_Ability4"
+	
+	icon="../../icon.dds"
+	
+	passiveeffect="/heroes/aluna/alt7/ability_04/sound.effect"
+	effecttype=""
+	
+	castspeed="0.5"
+	
+	modifierkey="aluna_red"
+>
+	<onexpired>
+		<pushtool name="Ability_Aluna2" />
+		<deactivatemodifierkey name="aluna_red_PowerThrow" entity="stack_entity" />
+		<setcharges a="0" entity="stack_entity" />
+	</onexpired>
+
+	<modifier key="ult_boost" modpriority="100">
+		<onframe>
+			<!-- var1 is the Cooldown Reduction Rate converted to a pure time value -->
+			<!-- var1 = frametime * Cooldown_Reduction_Rate(x) * 1000 - 1000 -->		
+			<setvar0 a="3.5" /> <!-- Cooldown_Reduction_Rate(x) -->
+			
+			<setvar1 a="var0" b="1000" op="mult" />
+			<setvar1 a="var1" b="1000" op="sub" />
+			<setvar1 a="frametime" b="var1" op="mult" />
+			
+			<pushtool source="source_entity" slot="0" />
+			<reducecooldown entity="stack_entity" duration="var1" />
+			<pushtool source="source_entity" slot="1" />
+			<reducecooldown entity="stack_entity" duration="var1" />
+			<pushtool source="source_entity" slot="2" />
+			<reducecooldown entity="stack_entity" duration="var1" />
+		</onframe>
+	</modifier>
+</state>

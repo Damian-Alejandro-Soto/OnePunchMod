@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_DrunkenMaster"
+
+	team="Legion"
+	icon="/heroes/drunkenmaster/alt2/icon.dds"
+	animatedportrait=""
+	portrait="/heroes/drunkenmaster/alt2/icon.dds"
+	model="/heroes/drunkenmaster/alt2/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/drunkenmaster/effects/body.effect"
+	spawneffect=""
+	
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/drunkenmaster/alt2/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/drunkenmaster/alt2/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/drunkenmaster/alt2/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/drunkenmaster/alt2/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/drunkenmaster/alt2/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/drunkenmaster/alt2/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/drunkenmaster/alt2/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/drunkenmaster/alt2/sounds/voice/taunt_after.wav"
+	
+	infoheight="190"
+	preglobalscale="1.8"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="140"
+	boundsradius="24"
+	selectionradius="64"
+	targetoffset="0 0 92"
+
+	category="tank physical"
+	difficulty="4"
+
+	midrating="5"
+	junglerating="0"
+	carryrating="2"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="4"
+	soloofflanerating="1"
+	rangedrating="0"
+	meleerating="5"
+	
+	movespeed="300"
+	turnrate="720"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0"
+
+	armor="0.2"
+	magicarmor="5"
+
+	inventory0="Ability_DrunkenMaster1"
+	inventory1="Ability_DrunkenMaster2"
+	inventory2="Ability_DrunkenMaster3"
+	inventory3="Ability_DrunkenMaster4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="700"
+	attackactiontime="400"
+	attackcooldown="1700"
+
+	attackdamagemin="28"
+	attackdamagemax="35"
+
+	attacknumanims="4"
+	attackoffset="0 30 100"
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="strength"
+	strength="22"
+	strengthperlevel="3.0"
+	agility="14"
+	agilityperlevel="2.0"
+	intelligence="18"
+	intelligenceperlevel="1.8"
+	
+	corpsetime="1000"
+	corpsefadetime="6000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	
+
+	previewpos="0 0 -50"
+	previewangles="0 0 0"
+	previewscale="1.5"
+	
+	storemodel="/heroes/drunkenmaster/alt2/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.50"	
+
+ attackanim="attack_%"
+        icon2="/heroes/drunkenmaster/alt2/icon.dds"
+        previewmodel="/heroes/drunkenmaster/alt2/preview.mdf">
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_Bottle" />
+	<recommendeditem name="Item_GhostMarchers" />
+	<recommendeditem name="Item_AlchemistsBones" />
+	<recommendeditem name="Item_PortalKey" />
+	<recommendeditem name="Item_Codex" />
+	<recommendeditem name="Item_Frostburn" />
+	<recommendeditem name="Item_NullStone" />
+	<recommendeditem name="Item_DaemonicBreastplate" />
+	<recommendeditem name="Item_BehemothsHeart" />
+	
+	<modifier key="drunkenult" modpriority="95"
+		modelscale="1.1"
+	/>
+	
+	<modifier key="drunken_ability2_Channel1" modpriority="95"
+		walkanim="ability_2_s1"
+	/>
+	
+	<modifier key="drunken_ability2_Channel2" modpriority="96"
+		walkanim="ability_2_s2"
+	/>
+	
+	<modifier key="drunken_ability2_Channel3" modpriority="97"
+		walkanim="ability_2_s3"
+	/>
+	
+	<modifier key="drunken_ability2_Channel4" modpriority="98"
+		walkanim="ability_2_s4"
+	/>
+	
+	<modifier key="iamsheeped" modpriority="1000"
+		passiveeffect=""
+	/>
+
+	<modifier key="ult_boost" modpriority="101"
+	>
+		<aura state="State_DrunkenMaster_Ult_Boost" radius="0" targetscheme="self" />
+	</modifier>
+</hero>

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "chipper",
+  "avatar": "alt",
+  "files": [
+    "heroes\\chipper\\base\\hero.entity",
+    "heroes\\chipper\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\chipper\\base\\state_chipper_ult_boost.entity",
+    "heroes\\chipper\\base\\state_chipper_ult_boost.entity.onepunch_ability_managed"
+  ]
+}

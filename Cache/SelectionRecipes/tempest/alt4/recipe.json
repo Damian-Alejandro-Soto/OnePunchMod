@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "hero": "tempest",
+  "avatar": "alt4",
+  "files": [
+    "heroes\\tempest\\base\\hero.entity",
+    "heroes\\tempest\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\tempest\\base\\state_tempest_ult_boost.entity",
+    "heroes\\tempest\\base\\state_tempest_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\tempest\\base\\ability_01\\ability.entity",
+    "heroes\\tempest\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\tempest\\base\\ability_03\\ability_sub.entity",
+    "heroes\\tempest\\base\\ability_03\\ability_sub.entity.onepunch_ability_managed",
+    "heroes\\tempest\\base\\ability_04\\ability.entity",
+    "heroes\\tempest\\base\\ability_04\\ability.entity.onepunch_ability_managed"
+  ],
+  "dependencies": [
+    "heroes/gladiator/alt2/ability_01/effects/shark_up/model.mdf"
+  ]
+}

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_DoctorRepulsor"
+	
+	team="Hellbourne"
+	icon="icon.tga"
+	animatedportrait=""
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+
+	passiveeffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+
+	preglobalscale="1.6055"
+	infoheight="180"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="112"
+	boundsradius="32"
+	selectionradius="51"
+	targetoffset="0 0 64"
+
+	category="magic"
+	difficulty="4.5"
+	midrating="5"
+	junglerating="2"
+	carryrating="3"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="0"
+	soloofflanerating="0"
+	rangedrating="3"
+	meleerating="0"
+
+	movespeed="285"
+	turnrate="720"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="0.02"
+	magicarmor="5"
+
+	inventory0="Ability_DoctorRepulsor1"
+	inventory1="Ability_DoctorRepulsor2"
+	inventory2="Ability_DoctorRepulsor3"
+	inventory3="Ability_DoctorRepulsor4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="800"
+	attackactiontime="400"
+	attackcooldown="1700"
+	attackdamagemin="25"
+	attackdamagemax="29"
+	attacknumanims="2"
+	attackoffset="0 100 70"
+	attackprojectile="Projectile_DoctorRepulsorAttack"
+	attackrange="500"
+	attackstarteffect=""
+	attackactioneffect="projectile/effects/onattackaction.effect"
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+	
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="intelligence"
+	strength="17"
+	strengthperlevel="1.5"
+	agility="22"
+	agilityperlevel="1.5"
+	intelligence="25"
+	intelligenceperlevel="3.0"
+
+	corpsetime="900"
+	corpsefadetime="6000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+
+	previewpos="0 0 -60"
+	previewangles="0 0 0"
+	previewscale="1.2"
+
+	storemodel="model.mdf"
+	storepos="0 0 -25"
+	storeangles="0 0 0"
+	storescale="1.4"
+>
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_AmuletofExile" />
+	<recommendeditem name="Item_BloodChalice" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_Lightbrand" />
+	<recommendeditem name="Item_SorceryBoots" />
+	<recommendeditem name="Item_RingofSorcery" />
+	<recommendeditem name="Item_NomesWisdom" />
+	<recommendeditem name="Item_KuldrasSheepstick" />
+	<recommendeditem name="Item_IconoftheGoddess" />
+	<recommendeditem name="Item_ShrunkenHead" />
+	<recommendeditem name="Item_FrostfieldPlate" />
+	<recommendeditem name="Item_Hellflower" />
+	
+	<gooditemagainst name="Item_MysticVestments" />
+	<gooditemagainst name="Item_ManaBattery" />
+	<gooditemagainst name="Item_PowerSupply" />
+	<gooditemagainst name="Item_KuldrasSheepstick" />
+	<gooditemagainst name="Item_IronShield" />
+	<gooditemagainst name="Item_NullStone" />
+	<gooditemagainst name="Item_AdevesCloak" />
+	
+	
+
+	<modifier key="iamsheeped" modpriority="1000" passiveeffect="" />
+	
+	<modifier key="DoctorRepulsor_R" modpriority="100"
+		attackactiontime="0"
+		turnrate="9000"
+	>	
+	</modifier>
+</hero>

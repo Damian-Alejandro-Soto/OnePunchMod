@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Pharaoh4"
+
+	icon="../../icon.dds"
+
+	anim="ability_4_eyes"
+	casttime="100"
+	castactiontime="100"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_position"
+	casteffecttype="SuperiorMagic"
+	targetscheme="nonneutral_enemy_units"
+	manacost="150"
+	cooldowntime="80000,60000,40000"
+	casteffect="/heroes/mumra/set_ascension/ability_04/effects/cast.effect"
+	
+	range="2000,2500,3000"
+	forcerange="2000,2500,3000"
+	targetradius="125"
+	allowoutofboundscast="true"
+	
+	showlinecast="true"
+	linecastrange="2025,2525,3025"
+	linecastwidth="125"
+	
+	showrangeandradiusintooltip="true"
+	dynamicprecache="effects/impact.effect"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Pharaoh_Ability4_Marker" count="1" target="source_position" pushentity="true" facing="target_position" />
+		<spawnprojectile name="Projectile_Pharaoh_Ability4" source="source_entity" target="target_position" offset="0 96 0" offsetspace="stack_entity" />
+	</onimpact>
+	
+	<aura state="State_Pharaoh_Ability4_UltBoost" radius="0" targetscheme="self" notooltip="true" />
+	
+	<modifier key="ult_boost" modpriority="100"
+		cooldowntime="25000"
+		displayname="true"
+		interface="single_plus_one"
+	>
+	
+		
+	</modifier>
+	
+	<modifier key="krosmode" modpriority="101"
+		cooldowntype=""
+		interface="single"
+	>
+	</modifier>
+</ability>

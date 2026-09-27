@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fayde_Ability4_AntiHeal"
+
+	icon="/heroes/fade/alt6/ability_04/icon.dds"
+	passiveeffect=""
+	
+	incominghealmultiplier="-0.2,-0.4,-0.6"
+	healthregenreduction="0.2,0.4,0.6"
+	
+	effecttype=""
+	allowtransfer="false"
+>
+	<onframe />
+</state>

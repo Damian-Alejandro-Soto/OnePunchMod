@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_MasterOfArms_Ability3_Magnetic"
+	icon="/heroes/master_of_arms/alt12/ability_03/icon_mag.dds"
+
+	effecttype=""
+	
+	ishidden="true"
+	
+	passiveeffect="/heroes/master_of_arms/alt12/ability_03/effects/state_red.effect"
+	deathpersist="true"
+	
+>
+	<onframe>
+		<!-- Art stuff -->
+		<hasmodifier entity="this_proxy_entity" name="ult_boost">
+			<activatemodifierkey name="ult_boost" />
+		</hasmodifier>
+		<else>
+			<deactivatemodifierkey name="ult_boost" />
+		</else>
+		
+		<hasmodifier entity="this_proxy_entity" name="MasterOfArms_Magnetic">
+			<deactivatemodifierkey name="MasterOfArms_Electrical" />
+		</hasmodifier>
+		<else>
+			<activatemodifierkey name="MasterOfArms_Electrical" />
+		</else>
+		
+		<hasmodifier entity="this_proxy_entity" name="iamsheeped">
+			<activatemodifierkey name="iamsheeped" />
+		</hasmodifier>
+		<else>
+			<deactivatemodifierkey name="iamsheeped" />
+		</else>
+		
+		<targettype type="illusion">
+			<hasmodifier name="MasterOfArms_Electrical" entity="source_owner_entity">
+				<setactivemodifierkey entity="source_entity" name="MasterOfArms_Electrical" />
+			</hasmodifier>
+			<else>
+				<setactivemodifierkey entity="source_entity" name="MasterOfArms_Magnetic" />
+			</else>
+		</targettype>
+
+		<!-- End of art stuff -->
+	</onframe>
+	
+	<modifier key="iamsheeped" modpriority="9999"
+		passiveeffect=""
+	/>
+	
+	<modifier key="ult_boost" modpriority="100"
+		passiveeffect="/heroes/master_of_arms/alt12/ability_03/effects/state_red_boost.effect"
+	/>
+	
+	<modifier key="MasterOfArms_Electrical" modpriority="101"
+		passiveeffect=""
+	/>
+</state>

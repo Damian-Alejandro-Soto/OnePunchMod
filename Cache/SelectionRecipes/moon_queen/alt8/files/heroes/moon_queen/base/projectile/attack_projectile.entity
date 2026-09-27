@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_MoonQueenAttackAlt"
+
+	speed="900"
+	gravity="0"
+
+	modelscale="1.8"
+	model="/heroes/krixi/alt8/effects/model.mdf"
+
+	effectscale="1.8"
+	impacteffect="/heroes/krixi/alt8/effects/impact.effect"
+	traileffect="/heroes/krixi/alt8/effects/trail.effect"
+>
+</projectile>

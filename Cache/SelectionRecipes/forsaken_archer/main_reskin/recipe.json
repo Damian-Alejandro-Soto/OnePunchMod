@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "forsaken_archer",
+  "avatar": "main_reskin",
+  "files": [
+    "heroes\\forsaken_archer\\base\\hero.entity",
+    "heroes\\forsaken_archer\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

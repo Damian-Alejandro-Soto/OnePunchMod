@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_CorruptedDisciple_Ability2_Self_Damage"
+
+	icon="/heroes/corrupted_disciple/alt7/ability_02/icon.dds"
+	effecttype=""
+	passiveeffect="effects/state_self.effect"	
+	damagepercharge="1.3,2.6,3.9,5.2"
+>
+	<onrespawn>
+		<expire />
+	</onrespawn>
+</state>

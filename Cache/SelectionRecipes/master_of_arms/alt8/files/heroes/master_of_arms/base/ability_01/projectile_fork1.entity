@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_MasterOfArms_Ability1_Fork1"
+
+	speed="2500"
+	gravity="0"
+	
+	flying="true"
+	flyheight="100"
+
+	modelscale="1.7"
+	model="/shared/models/invis.mdf"
+
+	traileffect="/heroes/master_of_arms/alt8/ability_02/effects/electrical_trail.effect"
+	impacteffect=""
+>
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<compare a="target_entity" b="0" op="ne">
+					<setpos0 position="this_entity" offsetspace="this_entity" offset="565.69 565.69 0" />
+					<setpos1 position="this_entity" offsetspace="this_entity" offset="-565.69 565.69 0" />
+					<spawnprojectile name="Projectile_MasterOfArms_Ability1_Fork2" source="target_position" target="pos0" ignore="target_entity" />
+					<spawnprojectile name="Projectile_MasterOfArms_Ability1_Fork2" source="target_position" target="pos1" ignore="target_entity" />
+					
+					<cantarget effecttype="Magic">
+						<applystate name="State_MasterOfArms_Ability1_First" duration="1200,1400,1600,1800" />
+						<damage effecttype="Magic" amount="70,140,210,280" />			
+					</cantarget>
+				</compare>
+			</onimpact>
+		</combatevent>
+	</onimpact>
+</projectile>

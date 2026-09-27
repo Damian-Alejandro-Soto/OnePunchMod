@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Predator_Ability1_Restrain"
+
+	icon="/heroes/predator/frostfield/ability_01/icon.dds"
+	passiveeffect="effects/restrained.effect"
+	
+	restrained="true"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+
+	negativeeffect="restrained"
+>
+	<onframe />
+</state>

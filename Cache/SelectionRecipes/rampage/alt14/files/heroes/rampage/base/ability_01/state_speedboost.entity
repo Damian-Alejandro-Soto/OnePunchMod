@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rampage_Ability1_SpeedBoost"
+	
+	icon="/heroes/Rampage/alt14/ability_01/icon.dds"
+	passiveeffect=""
+
+	movespeed="700"
+	maxmovespeed="150"
+	
+	unitwalking="true"
+
+	slowresistance="1.0"
+>	
+	<modifier key="OnlyMidMap" modpriority="100"
+		movespeed="600"
+		maxmovespeed="350"
+	>
+	</modifier>
+	
+</state>

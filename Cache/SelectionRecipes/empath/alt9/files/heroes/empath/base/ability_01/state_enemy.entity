@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state 
+    name="State_Empath_Ability1_Enemy" 
+
+    icon="../../icon.dds"
+    passiveeffect="/heroes/empath/alt9/ability_01/effects/link.effect"
+
+    effecttype="StatusDebuff"
+    alwaystransmitdata="true"
+    dynamicprecache="effects/impact.effect"
+> 	
+	<oninflict>
+		<pushtool name="Ability_Empath1" source="this_proxy_entity" />
+		<getrange entity="stack_entity" />
+		<setaccumulator value="result" valueb="200" valueop="add" />
+	</oninflict>
+	
+	<onframe>
+		<damage effecttype="DOT" source="this_proxy_entity" amount="20,30,40,50" b="frametime" op="mult" />
+
+		<distance target="target_entity" source="this_inflictor_entity" />
+		<compare a="result" b="accumulator" op="gt">
+			<cantarget effecttype="Magic">
+				<applystate name="State_Stunned" duration="1400,1700,2000,2300" target="this_owner_entity" />
+			</cantarget>
+			
+			<!-- VFX -->
+			<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="this_owner_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/impact.effect" source="this_owner_entity" />
+			</else>
+			
+			<expirestate name="State_Empath_Ability1_Self" target="this_inflictor_entity" /> 
+			<expire /> 
+		</compare>
+	</onframe> 
+
+	<onexpired> 
+		<expirestate name="State_Empath_Ability1_Self" target="this_inflictor_entity" /> 
+	</onexpired>
+</state>

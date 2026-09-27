@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Swiftblade2"
+	
+	icon="icon.tga"
+	anim="attack_2"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	
+	casttime="0"
+	castactiontime="0"
+	frontqueue="true"
+	inheritmovement="true"
+	noninterrupting="true"
+	
+	cooldowntime="23000,20000,17000,14000"
+	manacost="50"
+
+	actiontype="target_self"
+	
+	dynamicprecache="/heroes/hiro/alt7/ability_02/effects/meleecounter.effect,../alt7/ability_02/effects/rangedcounter.effect"
+>
+	
+	<!-- Active effect -->
+	<onimpact>
+		<applystate name="State_Swiftblade_Ability2" target="source_entity" duration="1600,1900,2200,2500" pushentity="true" />
+		<setcharges a="1,2,3,4" entity="stack_entity" />
+	</onimpact>
+	
+	<!-- Passive effect -->
+	<onattackedpreimpact>
+		<combatsupertype supertype="attack">
+			<cantarget targetscheme="enemy_melee_heroes">
+				<chance threshold="0.10,0.15,0.20,0.25">
+					<damage effecttype="Physical" amount="1" b="source_attackdamage" op="mult" />
+
+					<!-- Dynamic VFX -->									
+					<setstr0 a="altavatar_path" b="effects/meleecounter.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" source="source_entity" target="target_entity" occlude="true" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/meleecounter.effect" source="source_entity" target="target_entity" occlude="true" />
+					</else>
+				</chance>
+			</cantarget>
+			
+			<cantarget targetscheme="enemy_ranged_heroes">
+				<chance threshold="0.10,0.15,0.20,0.25">
+					<spawnprojectile name="Projectile_Swiftblade_CounterAttack" source="source_entity" target="target_entity" offset="0 0 70" noresponse="true" />
+
+					<!-- Dynamic VFX -->
+					<setstr0 a="altavatar_path" b="effects/rangedcounter.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" source="source_entity" target="target_entity" occlude="true" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/rangedcounter.effect" source="source_entity" target="target_entity" occlude="true" />
+					</else>
+				</chance>
+			</cantarget>
+		</combatsupertype>
+	</onattackedpreimpact>
+	
+	<modifier key="hiro_W" modpriority="99">
+		<!-- Passive disabled while Counterattack's active state is in effect -->
+		<onattackedpreimpact />
+	</modifier>
+	
+	<modifier key="ult_boost" modpriority="100"
+	>
+		<!-- Active effect -->
+		<onimpact>
+			<applystate name="State_Swiftblade_Ability2" target="source_entity" duration="2500" pushentity="true" />
+			<setcharges a="1,2,3,4" entity="stack_entity" />
+		</onimpact>
+	</modifier>
+	
+	<modifier key="hiro_Counterstrike" modpriority="150"
+		icon="icon_b.tga"
+		ignorecooldown="true"
+		actiontype="target_entity"
+		targetscheme="enemy_units"
+		range="800"
+		manacost="0"
+		cooldowntime="0"
+	>
+		<!-- Expiration effects occur in this event so it procs Null Stone -->
+		<onpreimpact>
+			<expirestate name="State_Swiftblade_Ability2_Modifier" target="source_entity" />
+			<resettimer />
+		</onpreimpact>
+		
+		<onimpact>
+			<teleport target="target_entity" interpolate="false" facetarget="true" />
+			<applystate name="State_Swiftblade_Ability2_Slow" duration="1500" target="target_entity" />
+			<attack />
+			<order command="attack" />
+			
+			<!-- Dynamic VFX -->									
+			<setstr0 a="altavatar_path" b="effects/meleecounter.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="source_entity" target="target_entity" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/meleecounter.effect" source="source_entity" target="target_entity" occlude="true" />
+			</else>
+		</onimpact>
+	</modifier>
+</ability>

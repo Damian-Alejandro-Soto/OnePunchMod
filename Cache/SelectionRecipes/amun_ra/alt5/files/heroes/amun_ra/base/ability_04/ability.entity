@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_AmunRa4"
+
+	icon="/heroes/ra/alt5/ability_04/icon.dds"
+	
+	anim="ability_4"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+	passiveeffect=""
+	cooldowntime="210000,150000,90000"
+	actiontype="passive"
+	targetradius="375"
+	
+	modifierkey="Rault1,Rault2,Rault3"
+	dynamicprecache="effects/meteor.effect,../effects/respawn_1.effect"
+>
+
+	<ondeath propagatetoillusions="false">
+		<setaccumulator value="0" />
+
+		<!-- Other revives have priority over this one -->
+		<hasmodifier name="alt_TokenOfLife" entity="source_entity">
+			<setaccumulator value="1" />
+		</hasmodifier>
+		<else>
+			<hasmodifier name="alt_PhoenixEgg" entity="source_entity">
+				<setaccumulator value="1" />
+			</hasmodifier>
+		</else>		
+
+		<compare a="accumulator" b="0" op="eq">
+			<condition test="isready">
+				<applystate name="State_AmunRa_Ability4_Initial" duration="3000" target="source_entity" />
+				<protecteddeath target="source_entity" />
+
+				<!-- VFX -->
+				<playanim name="ability_4" target="source_entity" source="source_entity" />
+				<setstr0 a="altavatar_path" b="effects/meteor.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" source="source_position" occlude="true" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="effects/meteor.effect" source="source_position" occlude="true" />
+				</else>
+				<setstr0 a="altavatar_path" b="../effects/respawn_1.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" source="source_position" occlude="true" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="../effects/respawn_1.effect" source="source_position" occlude="true" />
+				</else>
+
+				<!-- Respawn parameters -->
+				<setrespawntime target="source_entity" a="3000" />
+				<setrespawnposition target="source_entity" position="source_position" />
+				<setvar0 a="source_mana" b="source_maxmana" op="div" />
+				<compare a="var0" b="0.5" op="ge" >
+					<evaluate a="source_maxmana" b="0.5" op="mult" />
+					<evaluate a="source_mana" b="result" op="sub" />
+					<setvar0 a="result" b="source_maxmana" op="div" />
+					<setrespawnhealthmultiplier target="source_entity" value=".8" />
+					<setrespawnmanamultiplier target="source_entity" value="var0" />
+					<startcooldown />
+				</compare>
+				<else>
+					<compare a="var0" b="0.01" op="le" >
+						<setrespawnhealthmultiplier target="source_entity" value="0.4" />
+						<setrespawnmanamultiplier target="source_entity" value="0" />
+						<startcooldown />
+					</compare>
+					<else>
+						<setvar0 a="var0" b="0.4" op="add" />
+						<setrespawnhealthmultiplier target="source_entity" value="var0" />
+						<setrespawnmanamultiplier target="source_entity" value="0" />
+						<startcooldown />
+					</else>
+				</else>
+			</condition>
+		</compare>
+	</ondeath>
+	
+	<onimpact />
+</ability>

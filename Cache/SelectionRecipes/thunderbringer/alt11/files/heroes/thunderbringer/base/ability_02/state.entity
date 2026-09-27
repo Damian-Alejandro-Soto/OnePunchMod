@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Thunderbringer_Ability2"
+
+	icon="../../icon.dds"
+
+	passiveeffect="/heroes/kunas/alt11/ability_01/effects/state.effect"
+
+	effecttype="StatusBuff"
+	allowtransfer="true"
+
+	movespeed="60,75,90,105"
+>
+</state>

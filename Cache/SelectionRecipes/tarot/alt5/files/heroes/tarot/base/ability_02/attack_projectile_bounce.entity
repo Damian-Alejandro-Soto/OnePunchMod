@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Tarot_Attack_Bounce"
+
+	speed="2200"
+	gravity="0"
+	modelscale="1"
+	model="/shared/models/invis.mdf"
+
+	impacteffect=""
+	traileffect="/heroes/tarot/alt5/projectile/trail.effect"
+>
+	<onimpact>
+	
+		<!--Sound for when the bounce happens-->
+		<setstr0 a="altavatar_path" b="effects/bounce_sound.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="this_owner_entity" target="target_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/bounce_sound.effect" source="this_owner_entity" target="target_entity" occlude="true" />
+		</else>
+		
+		<compare a="param" b="1" op="eq">		    
+			<applystate name="State_Tarot_Ability2_NoBounce" target="this_owner_entity" duration="2000" />
+			<setactivemodifierkey entity="proxy_entity" name="Tarot_nextattackneedstobeinvis" />
+			<attack source="this_owner_entity" target="target_entity" startcooldown="false" />
+		</compare>
+	</onimpact>
+</projectile>

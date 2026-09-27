@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state 
+    name="State_Berzerker_Ability1_Chained" 
+
+    icon="/heroes/berzerker/alt11/ability_01/icon.dds" 
+    passiveeffect=""
+	
+    effecttype="StatusDebuff"
+	allowtransfer="true"
+	
+	immobilized2="true"
+
+	negativeeffect="immobilized"
+>
+	<onframe>
+    	<cantarget effecttype="Physical" ignoreinvulnerable="false" />
+		<else>
+			<expire />
+		</else>
+    </onframe> 
+</state>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Arachna_Ability2"
+
+	icon="../../icon.dds"
+	
+	passiveeffect="/heroes/arachna/alt5/ability_02/effects/state.effect"
+	effecttype="StatusBuff"
+	
+	allowtransfer="true"
+	
+	magicarmor="10,20,30,40"
+>
+
+</state>

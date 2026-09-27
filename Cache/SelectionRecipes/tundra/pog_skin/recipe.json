@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "tundra",
+  "avatar": "pog_skin",
+  "files": [
+    "heroes\\tundra\\base\\hero.entity",
+    "heroes\\tundra\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\tundra\\base\\state_tundra_ult_boost.entity",
+    "heroes\\tundra\\base\\state_tundra_ult_boost.entity.onepunch_ability_managed"
+  ]
+}

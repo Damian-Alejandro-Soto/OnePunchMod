@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "hero": "torturer",
+  "avatar": "alt2",
+  "files": [
+    "heroes\\torturer\\base\\hero.entity",
+    "heroes\\torturer\\base\\hero.entity.hon_avatar_switcher_created"
+  ],
+  "dependencies": []
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_ShadowBlade_Ability4_Intelligence"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/shadowblade/alt3/ability_04/effects/shadowr/effects/passiveint.effect"
+	displaylevel="true"
+	propagatetoillusions="true"
+	
+	intelligencepercharge="1"
+	
+	modifierkey="Shadowblade_R_Int"
+	modifierkey2=""
+	deathpersist="true"
+	
+	effecttype=""
+>	
+	<onframe>
+		<targettype type="alive" target="this_owner_entity">
+			<deactivatemodifierkey name="dead" />
+			<hasmodifier name="iamsheeped" entity="this_owner_entity" >
+				<activatemodifierkey name="iamsheeped" />
+			</hasmodifier>
+			<else>
+				<deactivatemodifierkey name="iamsheeped" />
+			</else>
+		</targettype>
+		<else>
+			<activatemodifierkey name="dead" />
+			<deactivatemodifierkey name="iamsheeped" />
+		</else>
+		
+	</onframe>
+	
+	<onattackpreimpact />
+	
+	<onattackimpact />
+	
+	<modifier key="iamsheeped" modpriority="1000"
+		passiveeffect=""
+	/>
+
+	<modifier key="dead" modpriority="1000"
+		passiveeffect=""
+	/>
+
+	<modifier key="ult_boost" modpriority="101"	>
+		<!-- Int bonus passive -->
+		<onattackimpact effectdescription="true" >
+			<cantarget targetscheme="enemy_units" effecttype="Magic">
+			<setvar0 a="source_intelligence" b="0.4,0.6,0.8" op="mult" />
+			<takemana effecttype="Magic" amount="1" b="var0" op="mult" />
+			<givemana effecttype="Magic" amount="1" b="var0" op="mult" target="source_entity" />
+			<popup name="execution" a="var0" source="source_entity" target="target_entity" />
+			</cantarget>
+		</onattackimpact>
+	</modifier>
+
+	<modifier key="krosmode" modpriority="100"
+		deathpersist="false"
+	/>
+	
+</state>

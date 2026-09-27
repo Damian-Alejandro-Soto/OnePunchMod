@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_PlagueRider_Ability2"
+	icon="/heroes/diseasedrider/alt4/ability_02/icon.dds"
+
+	passiveeffect=""
+	effecttype="StatusDebuff"
+	ishidden="true"
+
+	maxcharges="20"
+	dynamicprecache="effects/slimeimpact.effect"
+>
+
+	<onframe>
+		<addcharges count="1" />
+		
+		<compare a="charges" b="20" op="ge">
+			<!-- VFX -->
+			<setstr0 a="altavatar_path" b="effects/slimeimpact.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="this_owner_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/slimeimpact.effect" source="this_owner_entity" />
+			</else>
+
+			<expire entity="this_entity" />
+			<expire entity="this_proxy_entity" />
+		</compare>
+	</onframe>
+</state>

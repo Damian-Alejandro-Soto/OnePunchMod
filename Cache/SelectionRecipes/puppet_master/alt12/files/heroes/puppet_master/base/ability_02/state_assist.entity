@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_PuppetMaster_Ability2_Assist"
+
+	icon="/heroes/puppetmaster/alt12/ability_02/icon.dds"
+	passiveeffect=""
+	
+	serverentity="true"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="false"
+>
+</state>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Martyr_Ability1"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/martyr/alt6/ability_01/effects/state.effect"
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	maxcharges="35"
+	
+	movespeedslow=".15"
+	movespeedslowpercharge=".01"
+
+	negativeeffect="slowed"
+
+>
+
+</state>

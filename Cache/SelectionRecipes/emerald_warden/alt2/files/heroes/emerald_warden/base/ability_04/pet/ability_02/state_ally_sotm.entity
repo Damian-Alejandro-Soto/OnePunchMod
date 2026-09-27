@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_EmeraldWardenpet_Ability2_Ally_Sotm"
+
+	icon="/heroes/emerald_warden/alt2/ability_04/effects/ability_02/icon.dds"
+	passiveeffect="/heroes/emerald_warden/alt2/ability_04/effects/ability_02/state.effect"
+	
+	effecttype="StatusBuff"
+	allowtransfer="true"
+>
+	<onframe>
+		<heal source="source_owner_entity" a="40" b="frametime" op="mult" ishealingovertime="true" />
+	</onframe>
+</state>

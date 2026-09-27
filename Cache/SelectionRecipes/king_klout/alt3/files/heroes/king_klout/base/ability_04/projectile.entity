@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_KingKlout_Ability4"
+
+	speed="1750"
+	flying="true"
+	flyheight="50"
+	
+	canturn="true"
+
+	modelscale="1"
+	model="/shared/models/invis.mdf"
+	traileffect="/heroes/king_klout/alt3/ability_04/effects/trail.effect"
+	effectscale="1.0"
+	impacteffect=""
+
+	touchradius="200"
+	touchradiusdiradjust="true"
+	maxtouchespertarget="1"
+	touchtargetscheme="enemy_units"
+	toucheffecttype=""
+>
+	<ontouch>
+		<!-- Distance between KingKlout and the hit target changes the damage if it's a hero. Scales up to 3000 range away -->
+		<distance source="source_entity" target="target_entity" />
+		<setparam a="result" b="3500" op="div" />
+
+		<compare a="param" b="1" op="ge"> <!-- If more than 100%, clamp it to 100% -->
+			<setparam a="1" />
+		</compare>
+		
+		<cantarget targetscheme="player_controlled_units">
+			<evaluate a="param" b="1000,1500,2000" op="mult" /> <!-- Scale up to this much time -->
+			<evaluate a="result" b="500" op="add" /> <!-- Add this time -->
+			<applystate name="State_KingKlout_Ability4" duration="result" target="target_entity" /> <!-- Fear for that duration -->
+		</cantarget>
+
+		<evaluate a="param" b="100,150,200" op="mult" /> <!-- Percent of this damage -->
+		<evaluate a="result" b="100,150,200" op="add" /> <!-- Add this damage -->
+		<damage effecttype="Magic" amount="1" b="result" op="mult" /> <!-- Deal that -->		
+
+		<cantarget targetscheme="enemy_heroes">
+			<compare a="owner_counter" b="0" op="gt">
+				<applystate name="State_KingKlout_Ability1_BigSpawn" target="source_entity" duration="1000" />
+			</compare>
+		</cantarget>
+	</ontouch>
+
+	<onimpact>
+		<kill target="this_proxy_entity" source="" />
+		<expirestate name="State_KingKlout_Ability4_Self" target="source_entity" />
+	</onimpact>
+
+	<onmapexit>
+		<forceimpact />
+	</onmapexit>
+</projectile>

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "hero": "gemini",
+  "avatar": "alt4",
+  "files": [
+    "heroes\\gemini\\base\\hero.entity",
+    "heroes\\gemini\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\gemini\\base\\ability_02\\projectile_fire1.entity",
+    "heroes\\gemini\\base\\ability_02\\projectile_fire1.entity.onepunch_ability_managed",
+    "heroes\\gemini\\base\\ability_02\\projectile_fire2.entity",
+    "heroes\\gemini\\base\\ability_02\\projectile_fire2.entity.onepunch_ability_managed",
+    "heroes\\gemini\\base\\ability_02\\projectile_ice1.entity",
+    "heroes\\gemini\\base\\ability_02\\projectile_ice1.entity.onepunch_ability_managed",
+    "heroes\\gemini\\base\\ability_02\\projectile_ice2.entity",
+    "heroes\\gemini\\base\\ability_02\\projectile_ice2.entity.onepunch_ability_managed",
+    "heroes\\gemini\\base\\ability_04\\pet_fire.entity",
+    "heroes\\gemini\\base\\ability_04\\pet_fire.entity.onepunch_ability_managed",
+    "heroes\\gemini\\base\\ability_04\\pet_ice.entity",
+    "heroes\\gemini\\base\\ability_04\\pet_ice.entity.onepunch_ability_managed",
+    "heroes\\gemini\\base\\ability_04\\pet_sotm.entity",
+    "heroes\\gemini\\base\\ability_04\\pet_sotm.entity.onepunch_ability_managed"
+  ]
+}

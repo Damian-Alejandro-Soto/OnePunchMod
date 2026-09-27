@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_ForsakenArcher"
+
+	team="Hellbourne"
+	icon="/heroes/forsaken_archer/reskin/icon.dds"
+	portrait="/heroes/forsaken_archer/reskin/icon.dds"
+	portraitcampos="0 50 20"
+	model="/heroes/forsaken_archer/reskin/model.mdf"
+	skin=""
+	
+	passiveeffect="effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	infoheight="130.59"
+	preglobalscale="1.254"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="32"
+	selectionradius="55"
+	targetoffset="0 0 64"
+
+	category="physical magic"
+	difficulty="3.5"
+
+	midrating="3"
+	junglerating="0"
+	carryrating="5"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="2"
+	soloofflanerating="0"
+	rangedrating="5"
+	meleerating="0"
+
+	movespeed="300"
+	turnrate="720"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-1"
+	magicarmor="5.0"
+
+	inventory0="Ability_ForsakenArcher1"
+	inventory1="Ability_ForsakenArcher2"
+	inventory2="Ability_ForsakenArcher3"
+	inventory3="Ability_ForsakenArcher4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="400"
+	attackcooldown="1700"
+	attackdamagemin="22"
+	attackdamagemax="28"
+	attacknumanims="2"
+	attackoffset="0 100 120"
+	attackprojectile="Projectile_ForsakenArcherAttack"
+	attackrange="550"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="agility"
+	strength="17"
+	strengthperlevel="1.9"
+	agility="22"
+	agilityperlevel="2.5"
+	intelligence="17"
+	intelligenceperlevel="2.0"
+	
+
+	previewpos="0 0 -60"
+	previewangles="0 0 0"
+	previewscale="1.0"
+	
+	storemodel="/heroes/forsaken_archer/reskin/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.05"
+	
+	corpsetime="1000"
+	corpsefadetime="2500"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+	unittype="masters_legacy_valid"
+
+        icon2="/heroes/forsaken_archer/reskin/icon.dds"
+        previewmodel="/heroes/forsaken_archer/reskin/preview.mdf">
+	<recommendeditem name="Item_ManaPotion" />	
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_SoulscreamRing" />
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_GhostMarchers" />
+	<recommendeditem name="Item_NullfireBlade" />
+	<recommendeditem name="Item_Thunderclaw" />
+	<recommendeditem name="Item_Shieldbreaker" />
+	<recommendeditem name="Item_ArclightCrown" />
+	<recommendeditem name="Item_Wingbow" />
+	<recommendeditem name="Item_FrostwolfsSkull" />
+
+	<oninflicted>
+		<entitytype type="State_Taunting" target="inflictor_entity">
+			<setproxy entity="this_entity" target="inflictor_entity" />
+		</entitytype>
+	</oninflicted>
+	
+	<modifier key="iamsheeped" modpriority="1000"
+		passiveeffect=""
+	/>
+</hero>

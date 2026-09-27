@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_DoctorRepulsor_Ability3_Slow"
+	
+	icon="/heroes/doctor_repulsor/alt10/ability_03/icon.dds"
+	passiveeffect=""
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	
+	movespeedslow="0.8"
+	attackspeed="-0.5"
+
+	negativeeffect="slowed"
+>
+</state>

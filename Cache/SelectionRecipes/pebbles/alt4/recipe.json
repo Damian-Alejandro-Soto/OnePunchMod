@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "pebbles",
+  "avatar": "alt4",
+  "files": [
+    "heroes\\pebbles\\base\\hero.entity",
+    "heroes\\pebbles\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\pebbles\\base\\ability_04\\ability.entity",
+    "heroes\\pebbles\\base\\ability_04\\ability.entity.onepunch_ability_managed"
+  ]
+}

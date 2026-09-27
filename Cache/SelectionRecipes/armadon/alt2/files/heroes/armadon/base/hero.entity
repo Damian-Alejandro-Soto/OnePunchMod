@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Armadon"
+	
+	team="Legion"
+	icon="/heroes/armadon/alt2/icon.dds"
+	portrait="/heroes/armadon/alt2/icon.dds"
+	model="/heroes/armadon/alt2/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/armadon/alt2/effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/armadon/alt2/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/armadon/alt2/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/armadon/alt2/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/armadon/alt2/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/armadon/alt2/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/armadon/alt2/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/armadon/alt2/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/armadon/alt2/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.55"
+	modelscale="1"
+	effectscale="1"
+	boundsheight="240"
+	boundsradius="36"
+	selectionradius="60"
+	targetoffset="0 0 92"
+
+	category="physical tank"
+	difficulty="1"
+
+	midrating="3"
+	junglerating="0"
+	carryrating="3"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="5"
+	soloofflanerating="2"
+	rangedrating="0"
+	meleerating="5"
+
+	movespeed="295"
+	turnrate="720"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="0.62"
+	magicarmor="5"
+
+	inventory0="Ability_Armadon1"
+	inventory1="Ability_Armadon2"
+	inventory2="Ability_Armadon3"
+	inventory3="Ability_Armadon4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="500"
+	attackcooldown="1700"
+	attackdamagemin="30"
+	attackdamagemax="40"
+	attacknumanims="2"
+	attackoffset="0 40 100"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="strength"
+	strength="22"
+	strengthperlevel="2.5"
+	agility="17"
+	agilityperlevel="1.9"
+	intelligence="15"
+	intelligenceperlevel="2.2"
+	
+
+	previewpos="0 0 -50"
+	previewangles="0 0 0"
+	previewscale="1.25"
+	
+	storemodel="/heroes/armadon/alt2/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.3"
+	
+	tiltfactor="0.5"
+	tiltspeed="25.0"
+	
+	corpsetime="500"
+	corpsefadetime="2500"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+ attackanim="attack_%"
+        icon2="/heroes/armadon/alt2/icon.dds"
+        infoheight="185"
+        previewmodel="/heroes/armadon/alt2/preview.mdf">
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_BloodChalice" />
+	<recommendeditem name="Item_PlatedGreaves" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_RingoftheTeacher" />
+	<recommendeditem name="Item_RefreshingOrnament" />
+	<recommendeditem name="Item_KuldrasSheepstick" />
+	<recommendeditem name="Item_StaffoftheMaster" />
+	<recommendeditem name="Item_IronShield" />
+	<recommendeditem name="Item_SolsBulwark" />
+	<recommendeditem name="Item_ShamansHeadress" />
+	<recommendeditem name="Item_BarbedArmor" />
+	<recommendeditem name="Item_ShieldoftheFive" />
+	<recommendeditem name="Item_BarrierIdol" />
+	<recommendeditem name="Item_FrostfieldPlate" />
+	<recommendeditem name="Item_Insanitarius" />
+	<recommendeditem name="Item_Icebrand" />
+	<recommendeditem name="Item_Frostburn" />
+	<recommendeditem name="Item_FrostwolfsSkull" />
+	<recommendeditem name="Item_FrozenLight" />
+	<recommendeditem name="Item_Dawnbringer" />
+	
+	<gooditemagainst name="Item_ManaBattery" />
+	<gooditemagainst name="Item_PowerSupply" />
+	<gooditemagainst name="Item_PlatedGreaves" />
+	<gooditemagainst name="Item_KuldrasSheepstick" />
+	<gooditemagainst name="Item_SolsBulwark" />
+	<gooditemagainst name="Item_VoidTalisman" />
+	<gooditemagainst name="Item_ShieldoftheFive" />
+	<gooditemagainst name="Item_FrostfieldPlate" />
+	<gooditemagainst name="Item_Riftshards" />
+	<gooditemagainst name="Item_NullfireBlade" />
+	
+	
+	
+	<modifier key="iamsheeped" modpriority="100"
+		passiveeffect=""
+	/>
+	
+	<modifier key="armadon_ability4_Active" modpriority="100"
+		walkanim="ability_4_boost_loop"
+	/>
+	
+	<modifier key="armadon_R_Gather" modpriority="101"
+		idleanim="ability_2_disappear"
+		walkanim="ability_2_disappear"
+	>
+	</modifier>
+
+
+	<modifier key="alt2_sin_set_bonus" preglobalscale="1.55" modelscale="1" model="/heroes/armadon/alt2/sin_set_bonus/model.mdf" infoheight="185" effectscale="1" passiveeffect="/heroes/armadon/alt2/sin_set_bonus/effects/body_sin.effect" />
+</hero>

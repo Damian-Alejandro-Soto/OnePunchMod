@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "berzerker",
+  "legacy_folder": "berzerker",
+  "avatar": "alt12",
+  "counts": {
+    "files": 128,
+    "models": 41,
+    "materials": 5,
+    "textures": 23,
+    "effects": 18,
+    "sounds": 41,
+    "icons": 6,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

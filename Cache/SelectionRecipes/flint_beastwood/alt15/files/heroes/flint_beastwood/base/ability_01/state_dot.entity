@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_FlintBeastwood_Ability1_DoT"
+
+	icon="/heroes/flint_beastwood/alt15/ability_01/icon.dds"
+	passiveeffect=""
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+>
+	<onframe>
+		<damage effecttype="Magic DOT" amount="25,50,75,100" b="frametime" op="mult" />
+	</onframe>
+
+	<oninflict>
+		<damage effecttype="Magic" amount="25,50,75,100" />
+	</oninflict>
+	
+	<onrefresh>
+		<damage effecttype="Magic" amount="25,50,75,100" />
+	</onrefresh>	
+</state>

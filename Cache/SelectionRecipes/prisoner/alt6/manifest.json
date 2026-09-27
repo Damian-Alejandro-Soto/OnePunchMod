@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "prisoner",
+  "legacy_folder": "prisoner",
+  "avatar": "alt6",
+  "counts": {
+    "files": 174,
+    "models": 59,
+    "materials": 8,
+    "textures": 26,
+    "effects": 49,
+    "sounds": 32,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

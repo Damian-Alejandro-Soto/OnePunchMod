@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Tarot"
+
+	team="Legion"
+	icon="/heroes/tarot/alt5/icon.dds"
+	portrait="/heroes/tarot/alt5/icon.dds"
+	model="/heroes/tarot/alt5/model.mdf"
+	skin=""
+		
+	passiveeffect="/heroes/tarot/alt5/effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/tarot/alt5/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/tarot/alt5/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/tarot/alt5/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/tarot/alt5/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/tarot/alt5/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/tarot/alt5/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/tarot/alt5/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/tarot/alt5/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="2.15"
+	modelscale="1.14"
+	effectscale="1"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="48"
+	targetoffset="0 0 80"
+
+	infoheight="190"
+	
+	category="physical"
+	difficulty="2.5"
+
+	midrating="1"
+	junglerating="0"
+	carryrating="5"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="0"
+	soloofflanerating="0"
+	rangedrating="5"
+	meleerating="0"
+	
+	movespeed="295"
+	turnrate="900"
+	turnsmoothing="0.05"
+	
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-0.5"
+	magicarmor="5.0"
+
+	inventory0="Ability_Tarot1"
+	inventory1="Ability_Tarot2"
+	inventory2="Ability_Tarot3"
+	inventory3="Ability_Tarot4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="300"
+	attackcooldown="1700"
+	attackdamagemin="20"
+	attackdamagemax="24"
+	attacknumanims="2"
+	attackoffset="-5 80 105"
+	attackprojectile="Projectile_Tarot_Attack"
+	attackrange="500"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="/heroes/tarot/alt5/projectile/impact.effect"
+	attacktype="ranged"
+	combattype="Hero"
+
+	aggrorange="700"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+	
+	corpsetime="8000"
+	corpsefadetime="0"
+	corpsefadeeffect=""
+
+	primaryattribute="Agility"
+	strength="18"
+	strengthperlevel="2.0"
+	agility="20"
+	agilityperlevel="3.0"
+	intelligence="19"
+	intelligenceperlevel="1.6"
+	unittype="masters_legacy_valid"
+	
+	previewmodel="/heroes/tarot/alt5/preview.mdf"
+	previewpos="0 0 -60"
+	previewangles="0 0 0"
+	previewscale="1.65"
+
+	storemodel="/heroes/tarot/alt5/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.86"
+ attackanim="attack_%"
+        icon2="/heroes/tarot/alt5/icon.dds"
+        portraitcampos="17 -50 22">
+	<!-- Tarot card promotional effects -->
+	<onspawn propagatetoillusions="false" >
+		<ownsproduct target="this_entity" product="ai.tarot_chalice">
+			<activatemodifierkey name="Promotional_1" />
+		</ownsproduct>
+		<ownsproduct target="this_entity" product="ai.tarot_rune">
+			<activatemodifierkey name="Promotional_2" />
+		</ownsproduct>
+		<ownsproduct target="this_entity" product="ai.tarot_scale">
+			<activatemodifierkey name="Promotional_3" />
+		</ownsproduct>
+	</onspawn>
+	
+	<onrespawn propagatetoillusions="false" >
+		<!-- Tarot card promotional effects -->
+		<ownsproduct target="this_entity" product="ai.tarot_chalice">
+			<activatemodifierkey name="Promotional_1" />
+		</ownsproduct>
+		<ownsproduct target="this_entity" product="ai.tarot_rune">
+			<activatemodifierkey name="Promotional_2" />
+		</ownsproduct>
+		<ownsproduct target="this_entity" product="ai.tarot_scale">
+			<activatemodifierkey name="Promotional_3" />
+		</ownsproduct>
+	</onrespawn>
+	
+	<onattackstart>
+		<hasmodifier name="Tarot_nextattackneedstobeinvis">
+			<setattackprojectile name="" />
+			<setactivemodifierkey name="" />
+			<setvalue name="combat_attackability" a="1" />
+		</hasmodifier>
+	</onattackstart>
+	
+	<!-- Staff of the Master body effect. -->
+	<modifier key="ult_boost" modpriority="100"
+		passiveeffect="effects/boost.effect"
+	/>
+
+	<modifier key="Promotional_1" modpriority="1"
+		tooleffectpath36="effects/promo_1.effect"
+	/>
+	
+	<modifier key="Promotional_2" modpriority="2"
+		tooleffectpath37="effects/promo_2.effect"
+	/>
+	
+	<modifier key="Promotional_3" modpriority="3"
+		tooleffectpath38="effects/promo_3.effect"
+	/>
+
+	<modifier key="no_orb" modpriority="100"
+		passiveeffect=""
+	/>
+
+	<modifier key="iamsheeped" modpriority="100"
+		passiveeffect=""
+	/>
+</hero>

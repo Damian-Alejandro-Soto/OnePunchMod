@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Blacksmith_Ability2"
+
+	icon="/heroes/dwarf_magi/alt6/ability_02/icon.dds"
+	passiveeffect="/heroes/dwarf_magi/alt6/ability_02/effects/state.effect"
+	
+	movespeedslow="0.15,0.20,0.25,0.30"
+	magicarmorstart="-1,-2,-3,-4"
+	magicarmormid="-1,-2,-3,-4"
+	magicarmorend="0.0"
+	magicarmorduration="5000,6000,7000,8000"
+	magicarmormidpos="0.267"
+
+	deniable="true"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+
+	negativeeffect="slowed"
+>
+	<onframe>
+		<damage effecttype="Magic DOT" amount="20,25,30,35" b="frametime" op="mult"/>
+	</onframe>
+	
+	<modifier key="nobossarmor" modpriority="100" condition="Boss" notooltooltip="true"
+		magicarmorstart="0"
+		magicarmormid="0"
+		magicarmorend="0"
+	/>	
+</state>

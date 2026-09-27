@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "andromeda",
+  "avatar": "soccer_skin",
+  "files": [
+    "heroes\\andromeda\\base\\hero.entity",
+    "heroes\\andromeda\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Cthulhuphant4"
+
+	statuseffecttooltip="State_Cthulhuphant_Ability4"
+	icon="/heroes/cthulhuphant/alt7/ability_04/icon.dds"
+	passiveeffect=""
+	impacteffect=""
+	
+	anim="taunt_1"
+	casttime="500"
+	castactiontime="0"
+	channeltime="2000"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_self"
+	ischanneling="true"
+	safechannel="true"
+	manacost="150,200,250"
+	cooldowntime="120000,110000,100000"
+	casteffecttype="Superior Magic"
+	targetradius="375,425,475"
+>
+	<onimpact />
+
+	<onchannelstart>
+		<disjoint target="source_entity" />		 
+		<applystate name="State_Cthulhuphant_Ability4" ischannel="true" />
+	</onchannelstart>
+
+	<modifier key="cthulhuphant_charging" modpriority="100"
+		disabled="true"
+	/>
+
+	</ability>

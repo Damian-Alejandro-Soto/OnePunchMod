@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "hero": "bushwack",
+  "avatar": "alt2",
+  "files": [
+    "heroes\\bushwack\\base\\hero.entity",
+    "heroes\\bushwack\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\bushwack\\base\\ability_01\\projectile.entity",
+    "heroes\\bushwack\\base\\ability_01\\projectile.entity.onepunch_ability_managed",
+    "heroes\\bushwack\\base\\ability_02\\state.entity",
+    "heroes\\bushwack\\base\\ability_02\\state.entity.onepunch_ability_managed"
+  ]
+}

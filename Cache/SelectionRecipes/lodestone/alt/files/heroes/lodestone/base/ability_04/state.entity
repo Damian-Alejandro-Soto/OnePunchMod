@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Lodestone_Ability4_Buildup"	
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/lodestone/alt/ability_04/effects/state_buildup.effect"
+	
+	impactinterval="50"
+	effecttype=""
+	
+	maxcharges="100"
+	
+	modifierkey="lodestoneult_refresherorb"
+	dynamicprecache="effects/explosion.effect,effects/rebuild_sound.effect"
+>
+	<onframe />
+	
+	<onimpact>
+		<addcharges count="1" />
+		<compare a="charges" b="100" op="ge">
+			<targettype type="alive" target="this_owner_entity" >
+				<!-- Damage -->
+				<setvar0 a="250,375,500" />
+			
+				<areaofeffect
+					radius="400"
+					targetselection="all"
+					targetscheme="enemy_nonboss_units"
+					effecttype=""
+				>
+					<cantarget effecttype="Physical" >
+						<applystate name="State_Lodestone_Ability4_Lodestone" duration="5000" />
+						<damage effecttype="Physical" amount="0.5" b="var0" op="mult" />
+					</cantarget>
+					<cantarget effecttype="Magic" >
+						<applystate name="State_Lodestone_Ability4_Lodestone" duration="5000" />
+						<damage effecttype="Magic" amount="0.5" b="var0" op="mult" />
+					</cantarget>
+				</areaofeffect>
+				<applystate name="State_Lodestone_Ability4_Lodestone" duration="5000" pushentity="true" />
+				
+				<!-- Self state adjustment with SotM -->
+				<hasmodifier name="ult_boost" entity="this_owner_entity">
+					<setactivemodifierkey name="lodestone_self_sotm" entity="stack_entity" />
+				</hasmodifier>
+				
+				<!-- VFX -->
+				<setstr0 a="altavatar_path" b="effects/explosion.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" source="source_position" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="effects/explosion.effect" source="source_position" />
+				</else>
+				<setstr0 a="altavatar_path" b="effects/rebuild_sound.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" source="this_owner_entity" target="this_owner_entity" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="effects/rebuild_sound.effect" source="this_owner_entity" target="this_owner_entity" />
+				</else>
+			</targettype>
+			<expire />
+		</compare>
+	</onimpact>
+	
+	<onexpired>
+		<expirestate name="State_Lodestone_Ability4_Counter" target="source_entity" />
+	</onexpired>
+
+	<!-- Damage reduction -->
+	<ondamaged>
+		<evaluate a="charges" b="0.01" op="mult" />
+		<setvar0 a="1" b="result" op="sub" />
+		<changedamage b="var0" op="mult" />
+	</ondamaged>
+	
+	<modifier key="ult_boost" modpriority="100">
+		<onframe>
+			<!-- Expire modifierkey after 2 seconds -->
+			<compare a="charges" b="40" op="ge">
+				<setactivemodifierkey name="lodestone_sotm" entity="this_entity" />
+			</compare>
+		</onframe>
+	</modifier>
+	
+	<modifier key="lodestone_sotm" modpriority="110"
+		modifierkey="lodestone_sotm"
+	>
+		<onframe />
+	</modifier>
+</state>

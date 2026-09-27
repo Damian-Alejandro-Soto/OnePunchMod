@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Prisoner_Ability4_Sotm"
+
+	icon="../../icon.dds"
+
+	effecttype=""
+	
+	impactinterval="2500"
+	passiveeffect="/heroes/prisoner/alt6/ability_04/effects/link_sotm.effect"
+	dynamicprecache="effects/chain_pull.effect"
+>
+	<onframe>
+		<cantarget effecttype="SuperiorPhysical" ignoreinvulnerable="true">
+			<distance source="this_owner_entity" target="this_inflictor_entity" />
+			<compare a="result" b="700" op="gt">
+				<expire />
+			</compare>
+		</cantarget>
+		<else>
+			<expire />
+		</else>
+	</onframe>
+	
+	<onimpact>
+		<spawnaffector name="Affector_Prisoner_Ability4" source="this_owner_entity" />
+		<applystate name="State_Stunned" duration="1500,2000,2500" />
+		
+		<compare source="this_inflictor_entity" target="this_owner_entity" a="source_entity" b="target_entity" op="ne">
+			<cantarget effecttype="Push">
+				<distance />
+				<!-- Subtracting 25 from distance so it will end up 25 units away from Prisoner 945 rather than colliding -->
+				<evaluate a="result" b="25" op="sub" />
+				<evaluate a="result" b="400" op="min" />
+				<setvar0 a="result" b="-4" op="mult" />
+				
+				<!-- Check to see if the force is positive; if yes, then static pull force -->
+				<compare a="var0" b="0" op="ge">
+					<push force="-100" source="this_inflictor_entity" duration="250" />
+				</compare>
+				<else>
+					<push force="var0" source="this_inflictor_entity" duration="250" />
+				</else>
+			</cantarget>
+		</compare>
+		
+		<damage effecttype="SuperiorPhysical" inflictor="this_proxy_entity" source="this_proxy_entity" amount="200,300,400" />
+		<setstr0 a="altavatar_path" b="effects/chain_pull.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_entity" target="" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/chain_pull.effect" source="target_entity" target="" occlude="true" />
+		</else>
+	</onimpact>
+	
+	<modifier key="prisoner_shortened_R" modpriority="100"
+		impactinterval="1250"
+	/>
+</state>

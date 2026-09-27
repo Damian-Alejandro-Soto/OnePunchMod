@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Pebbles_Ability1"
+
+	speed="1200"
+	gravity="0"
+
+	modelscale="1"
+	model="/shared/models/invis.mdf"
+	
+	traileffect="/heroes/rocky/trophy_skin/ability_01/effects/trail_02.effect"	
+	effectscale=""
+	impacteffect=""
+>
+
+	<onimpact>
+		<spawnaffector name="Affector_Pebbles_Ability1" target="this_position" />
+	</onimpact>
+</projectile>

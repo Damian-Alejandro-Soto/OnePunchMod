@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "kinesis",
+  "avatar": "alt",
+  "files": [
+    "heroes\\kinesis\\base\\hero.entity",
+    "heroes\\kinesis\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

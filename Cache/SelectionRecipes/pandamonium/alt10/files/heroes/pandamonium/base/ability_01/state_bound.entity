@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Pandamonium_Ability1_Bound"
+	
+	icon="/heroes/panda/alt10/ability_01/icon.dds"
+	passiveeffect=""
+
+
+	immobilized2="true"
+
+	ishidden="true"
+
+	unitwalking="true"
+	effecttype=""
+>
+	<onframe>
+		<condition test="not_hasstate State_Pandamonium_Ability1" target="this_proxy_entity">
+			<expire />
+		</condition>
+	</onframe>
+</state>

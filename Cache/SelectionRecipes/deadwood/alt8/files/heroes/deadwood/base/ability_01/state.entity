@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Deadwood_Ability1"
+
+	icon="/heroes/Deadwood/alt8/ability_01/icon.dds"
+	passiveeffect="effects/impact.effect"
+	
+	immobilized2="true"
+	armor="-1,-2,-3,-4"
+	
+	effecttype="StatusDebuff"
+
+	negativeeffect="immobilized_notimer"
+>
+	
+	<onframe>
+		<compare a="this_proxy_entity" b="0" op="eq">
+			<expire />
+		</compare>
+	</onframe>
+	
+	<modifier key="deadwood_nobossarmor" modpriority="100" condition="boss" notooltooltip="true"
+		armor="0"
+	/>
+</state>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Armadon_Ability1"
+
+	speed="1100"
+	gravity="1670"
+
+	modelscale=".3"
+	model="../ability_02/effects/spine.mdf"
+	impacteffect="/heroes/armadon/alt6/ability_01/effects/impact.effect"
+	traileffect="/heroes/armadon/alt6/ability_01/effects/trail.effect"
+>
+	<onimpact>
+		<applystate name="State_Armadon_Ability1" duration="5000" />
+	</onimpact>
+	
+	<modifier key="ult_boost">
+		<onimpact>
+			<applystate name="State_Armadon_Ability1" target="this_proxy_entity" duration="5000" />
+			
+			<!-- Bounce -->
+			<compare a="param" b="0" op="gt">
+				<setvar0 a="param" b="1" op="sub" />
+				<compare a="this_proxy_entity" b="0" op="ne">
+					<areaofeffect
+						radius="600"
+						maxtotalimpacts="1"
+						targetselection="random"
+						targetscheme="nonstealth_enemy_units"
+						center="this_position"
+						ignore="this_proxy_entity"
+					>
+						<spawnprojectile name="Projectile_Armadon_Ability1" source="this_position" target="target_position" proxy="target_entity" param="var0" />
+					</areaofeffect>
+				</compare>
+				<else>
+					<areaofeffect
+						radius="600"
+						maxtotalimpacts="1"
+						targetselection="random"
+						targetscheme="nonstealth_enemy_units"
+						center="this_position"
+					>
+						<spawnprojectile name="Projectile_Armadon_Ability1" source="this_position" target="target_position" proxy="target_entity" param="var0" />
+					</areaofeffect>
+				</else>
+			</compare>
+		</onimpact>
+	</modifier>
+
+</projectile>

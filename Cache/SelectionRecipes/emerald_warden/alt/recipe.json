@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "emerald_warden",
+  "avatar": "alt",
+  "files": [
+    "heroes\\emerald_warden\\base\\hero.entity",
+    "heroes\\emerald_warden\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\emerald_warden\\base\\ult_boost.entity",
+    "heroes\\emerald_warden\\base\\ult_boost.entity.onepunch_ability_managed"
+  ]
+}

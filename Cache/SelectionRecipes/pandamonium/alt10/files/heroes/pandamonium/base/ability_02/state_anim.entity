@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+    name="State_Pandamonium_Ability2_Animation"
+	
+    icon="/heroes/panda/alt10/ability_02/icon.dds"
+    ishidden="true"
+    effecttype=""
+    disarmed="true"
+    stunned="true"
+	
+    impactinterval="350"
+    stunnedreduction="ignore"
+>
+    <onimpact>
+        <spawnprojectile name="Projectile_Pandamonium_Ability2_Combat" source="this_proxy_entity" target="this_proxy_entity" offsetspace="this_proxy_entity" noresponse="true" />
+		<expire />
+    </onimpact>
+</state>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Jeraziah_Ability4"
+	
+	icon="../../icon.dds"
+	healthregen="15,20,25"
+
+	strengthpercharge="6,10,14"
+	maxcharges="2"
+	
+	effecttype=""
+	allowtransfer="true"
+	passiveeffect="/heroes/jereziah/hd_alt/ability_04/effects/state.effect"
+	
+	strength="6,10,14"
+>
+	<onframe />
+	
+	<modifier key="jera_R_active" modpriority="200" exclusive="true">
+		<ondamaged priority="5">
+			<damageeffecttype effecttype="Physical">
+				<scaledamage scale="0.6,0.5,0.4" />
+			</damageeffecttype>
+		</ondamaged>
+	</modifier>	
+	
+	<modifier key="ult_boost" modpriority="100"
+	>
+	</modifier>
+
+</state>

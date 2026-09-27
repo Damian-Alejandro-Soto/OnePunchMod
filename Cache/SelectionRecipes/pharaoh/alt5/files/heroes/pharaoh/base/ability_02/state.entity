@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Pharaoh_Ability2_Immunity"
+
+	ishidden="true"
+	dynamicprecache="pet/effects/expire_sound.effect"
+ passiveeffect="/heroes/mumra/alt5/ability_02/pet/effects/idle.effect">
+	<onexpired>
+		<setstr0 a="altavatar_path" b="pet/effects/expire_sound.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_position" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="pet/effects/expire_sound.effect" source="source_position" />
+		</else>
+	</onexpired>
+</state>

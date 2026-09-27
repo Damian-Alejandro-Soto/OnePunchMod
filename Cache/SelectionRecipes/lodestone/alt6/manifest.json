@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "lodestone",
+  "legacy_folder": "lodestone",
+  "avatar": "alt6",
+  "counts": {
+    "files": 152,
+    "models": 52,
+    "materials": 7,
+    "textures": 8,
+    "effects": 28,
+    "sounds": 57,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

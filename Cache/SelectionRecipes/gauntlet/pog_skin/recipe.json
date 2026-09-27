@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "gauntlet",
+  "avatar": "pog_skin",
+  "files": [
+    "heroes\\gauntlet\\base\\hero.entity",
+    "heroes\\gauntlet\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\gauntlet\\base\\state_gauntlet_ult_boost.entity",
+    "heroes\\gauntlet\\base\\state_gauntlet_ult_boost.entity.onepunch_ability_managed"
+  ]
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Swiftblade3"
+
+	icon="icon.tga"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	passiveeffect="/heroes/hiro/alt8/ability_03/effects/body.effect"
+
+	actiontype="passive"
+	modifierkey="hiro_E"
+	dynamicprecache="effects/bloodsplat.effect,effects/trail.effect"
+>
+	<onattackstart>
+		<setaccumulator value="0" />
+		<cantarget targetscheme="enemy_units" effecttype="Physical">
+			<condition test="not_hasstate State_Swiftblade_Ability1" target="source_entity" >
+				<chance threshold="0.15,0.20,0.25,0.30">
+					<!-- Remember the proc so the impact VFX can fire at onattackimpact, not here -->
+					<setaccumulator value="1" />
+					
+					<addcritical chance="1.0" multiplier="1.75" />
+					<playanim name="ability_3" speed="source_attackspeed" target="source_entity" />
+					<setstr0 a="altavatar_path" b="effects/trail.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" duration="150" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/trail.effect" duration="150" />
+					</else>
+				</chance>
+			</condition>
+		</cantarget>
+	</onattackstart>
+
+	<onattackimpact>
+		<compare a="accumulator" b="1" op="eq">
+			<cantarget targetscheme="enemy_units" effecttype="Physical">
+				<setstr0 a="altavatar_path" b="effects/bloodsplat.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="effects/bloodsplat.effect" target="target_entity" source="target_entity" />
+				</else>
+			</cantarget>
+		</compare>
+	</onattackimpact>
+
+</ability>

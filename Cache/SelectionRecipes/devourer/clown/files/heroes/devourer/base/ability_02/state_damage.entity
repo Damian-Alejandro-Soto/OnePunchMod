@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Devourer_Ability2_Damage"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/devourer/alt/ability_02/effects/state.effect"
+
+	effecttype="StatusDebuff"
+>
+	<onframe>
+		<damage effecttype="Magic DOT Interrupting" amount="30,60,90,120" b="frametime" op="mult"/>
+	</onframe>
+
+</state>

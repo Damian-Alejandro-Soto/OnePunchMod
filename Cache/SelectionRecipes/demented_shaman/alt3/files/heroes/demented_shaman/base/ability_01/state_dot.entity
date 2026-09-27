@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_DementedShaman_Ability1_Damage"
+
+	icon="/heroes/shaman/alt3/ability_01/icon.dds"
+	passiveeffect=""
+	
+	deniable="true"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+>
+	<onframe>
+		<setvar0 a="80,120,160,200" b="8" op="div" /> <!-- Damage over the time duration of the state -->
+		<setvar0 a="var0" b="frametime" op="mult" />
+		<damage effecttype="Physical DOT" amount="1" b="var0" op="mult" />
+	</onframe>
+</state>

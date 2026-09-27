@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Devourer_Ability4_Assist"
+
+	icon="/heroes/Devourer/alt14/ability_04/icon.dds"
+	passiveeffect=""
+	
+	ishidden="true"
+	serverentity="true"
+	
+	effecttype="StatusDebuff"
+>
+</state>

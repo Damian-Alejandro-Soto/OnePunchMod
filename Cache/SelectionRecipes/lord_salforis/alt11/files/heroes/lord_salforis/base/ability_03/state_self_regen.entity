@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_LordSalforis_Ability3_Self_Regen"
+
+	icon="/heroes/dreadknight/alt11/ability_03/icon.dds"
+	passiveeffect=""
+	effecttype=""
+	
+	healthregenpercharge="1"
+	
+	deathpersist="true"
+>	
+
+	<onframe />
+
+	<!-- Death persist removed for krosmode -->
+	<modifier key="krosmode" modpriority="100"
+		deathpersist="false"
+	/>
+</state>

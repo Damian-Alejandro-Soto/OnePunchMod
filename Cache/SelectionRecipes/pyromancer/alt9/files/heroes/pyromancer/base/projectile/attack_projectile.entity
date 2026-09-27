@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_PyromancerAttack"
+
+	speed="900"
+	gravity="2200"
+
+	modelscale=".7"
+	model="/shared/models/invis.mdf"
+
+	impacteffect="/heroes/pyromancer/alt9/projectile/impact.effect"
+ traileffect="/heroes/pyromancer/alt9/projectile/femme_projectile.effect">
+
+</projectile>

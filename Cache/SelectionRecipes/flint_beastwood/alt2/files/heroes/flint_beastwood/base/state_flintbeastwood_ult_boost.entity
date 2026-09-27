@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_FlintBeastwood_Ult_Boost"
+	
+	icon=""
+	passiveeffect="/heroes/flint_beastwood/alt2/effects/boost.effect"
+	
+	ishidden="true"
+	
+	effecttype=""
+>
+	<onkill>
+		<targettype type="hero">
+			<targettype type="illusion" target="source_entity" />
+			<else>
+				<targettype type="self" source="this_inflictor_entity" />
+				<else>
+					<reducecooldown duration="20000" source="this_inflictor_entity" entity="this_spawner_entity" />
+				</else>
+			</else>
+		</targettype>
+	</onkill>
+ 
+	<modifier key="iamsheeped" modpriority="1000" passiveeffect=""/>
+</state>

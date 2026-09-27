@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Scout_Ability4_SotM"
+
+	speed="4000"
+	
+	modelscale="2"
+	model="/shared/models/invis.mdf"
+
+	effectscale=".5"
+	traileffect="/heroes/scout/alt10/ability_04/effects/sotm_trail.effect"
+	impacteffect="effects/impact.effect"
+>
+	<onimpact>
+		<order command="attack" queue="back" />
+	</onimpact>
+</projectile>

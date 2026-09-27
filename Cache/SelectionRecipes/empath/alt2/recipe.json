@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hero": "empath",
+  "avatar": "alt2",
+  "files": [
+    "heroes\\empath\\base\\hero.entity",
+    "heroes\\empath\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\empath\\base\\state_empath_ult_boost.entity",
+    "heroes\\empath\\base\\state_empath_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\empath\\base\\ability_04\\ability.entity",
+    "heroes\\empath\\base\\ability_04\\ability.entity.onepunch_ability_managed",
+    "heroes\\empath\\base\\ability_04\\ability_sub.entity",
+    "heroes\\empath\\base\\ability_04\\ability_sub.entity.onepunch_ability_managed",
+    "heroes\\empath\\base\\ability_04\\state_self.entity",
+    "heroes\\empath\\base\\ability_04\\state_self.entity.onepunch_ability_managed",
+    "heroes\\empath\\base\\ability_04\\state_speed.entity",
+    "heroes\\empath\\base\\ability_04\\state_speed.entity.onepunch_ability_managed",
+    "heroes\\empath\\base\\ability_04\\state_target.entity",
+    "heroes\\empath\\base\\ability_04\\state_target.entity.onepunch_ability_managed"
+  ]
+}

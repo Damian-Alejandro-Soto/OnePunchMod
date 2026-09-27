@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Pyromancer_Ability4"
+
+	speed="2000"
+	gravity="0"
+	modelscale="0.3"
+	model="/shared/models/invis.mdf"
+
+	effectscale="1"
+	impacteffect="/heroes/pyromancer/alt10/ability_04/effects/ability_04_impact.effect"
+ traileffect="/heroes/pyromancer/alt10/ability_04/effects/trail.effect" dynamicprecache="/heroes/pyromancer/alt10/ability_04/effects/ability_04_impact.effect">
+
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<damage effecttype="Magic" amount="450,725,1000" target="this_proxy_entity" />
+				<compare a="param" b="0" op="ne">
+					<applystate name="State_Pyromancer_Ability3_Burning" duration="3000" statelevel="param" attribution="Ability_Pyromancer3" />
+				</compare>
+			</onimpact>
+		</combatevent>
+	</onimpact>
+
+	<modifier key="ult_boost" modpriority="100"
+		model="effects/spinner_boosted.mdf"
+		modelscale="1"
+		effectscale="1"
+		impacteffect=""
+	 traileffect="/heroes/pyromancer/alt10/ability_04/effects/trail_boosted.effect">
+		<onimpact>
+			<combatevent effecttype="AbilityBasedProjectile">
+				<onimpact>
+					<applystate name="State_Pyromancer_Ult_Kill" duration="100" proxy="source_entity" pushentity="true" attribution="Ability_Pyromancer4" />
+
+					<!-- Damage -->
+					<setvar0 a="750,1000,1250" />
+					<damage effecttype="Magic" amount="1" b="var0" op="mult" target="this_proxy_entity" />
+					<compare a="param" b="0" op="ne">
+						<applystate name="State_Pyromancer_Ability3_Burning" duration="3000" statelevel="param" attribution="Ability_Pyromancer3" />
+					</compare>
+
+					<areaofeffect
+						center="this_position"
+						radius="600"
+						effecttype="Magic"
+						targetselection="all"
+						targetscheme="enemy_units"
+						ignore="this_proxy_entity"
+					>
+						<!-- Deal 50% of the single-target R damage in an AoE -->
+						<damage effecttype="Magic" amount="0.5" b="var0" op="mult" source="source_entity" />
+						<compare a="param" b="0" op="ne">
+							<applystate name="State_Pyromancer_Ability3_Burning" duration="3000" statelevel="param" attribution="Ability_Pyromancer3" />
+						</compare>
+					</areaofeffect>
+
+					<!-- Dynamic visual effects: resolve against the caster's active avatar, fall back to base -->
+					<setstr0 a="altavatar_path" b="effects/ability_04_impact_staff.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" source="target_position" target="this_proxy_entity" occlude="true" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/ability_04_impact_staff.effect"  target="this_proxy_entity" occlude="true" />
+					</else>
+				</onimpact>
+			</combatevent>
+		</onimpact>
+	</modifier>
+</projectile>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_ElloniaAttack"
+
+	speed="1500"
+	gravity="0"
+	canturn="false"
+	modelscale="1.25"
+
+	model="/shared/models/invis.mdf"
+	traileffect="/heroes/ellonia/alt7/effects/trail.effect"
+	impacteffect="/heroes/ellonia/alt7/effects/impact.effect"
+>
+
+</projectile>

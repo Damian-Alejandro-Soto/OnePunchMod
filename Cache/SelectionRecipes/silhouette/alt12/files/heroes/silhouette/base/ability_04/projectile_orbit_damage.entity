@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Silhouette_Ability4_Orbit"
+
+	speed="1000"
+	
+	modelscale=".75"
+	model="/heroes/silhouette/alt12/ability_01/effects/blades/model.mdf"
+
+	effectscale="1.0"
+	impacteffect="../ability_01/effects/impact.effect"
+	traileffect="/heroes/silhouette/alt12/ability_01/effects/projectile_state.effect"
+	
+	canturn="true"
+	flying="true"
+	flyheight="50"
+	
+	orbitclockwise="true"
+	orbit="true"
+	orbitradius="100"
+	orbitspeed="135"
+	orbitmaxspeed="135"
+	orbitmaxtouchespertarget="1"
+	orbitmodelangles="0"
+	
+	touchradius="60"
+	touchtargetactivescheme="nonillusion_nonself_stealth"
+	touchtargetscheme="enemy_units"
+	toucheffecttype="Magic"
+	
+	inheritvisibilityfromtarget="true"
+	
+	disjointable="false"
+>
+	<ontouch>
+		<damage effecttype="Magic" amount="45" />
+	</ontouch>
+</projectile>

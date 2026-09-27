@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Prophet_Ability2"
+	
+	icon="../../icon.dds"
+
+	passiveeffect="/heroes/prophet/alt9/ability_02/effects/state2.effect"
+	
+	attackspeed="1.1"
+	
+	effecttype="StatusBuff"
+	allowtransfer="true"
+	
+	maxcharges="1,2,3,4"
+>
+	<onframe />
+	
+	<oninflict>
+		<addcharges count="1,2,3,4" />
+	</oninflict>
+	
+	<onrefresh>
+		<addcharges count="1,2,3,4" />
+	</onrefresh>
+	
+	<onattack>
+		<removecharge />
+		
+		<!-- VFX -->
+		<setactivemodifierkey name="Prophet_State_Ability2_1" />
+
+		<compare a="charges" b="0" op="eq" >
+			<expire />
+		</compare>
+	</onattack>
+	
+	<modifier key="Prophet_State_Ability2_1" modpriority="100"
+		passiveeffect="effects/state1.effect"
+	>
+	</modifier>
+</state>

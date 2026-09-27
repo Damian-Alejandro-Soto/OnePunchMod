@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Berzerker_Ability3_Enemy"
+
+	icon="/heroes/berzerker/alt11/ability_02/icon.dds"
+	passiveeffect="/heroes/berzerker/alt10/ability_02/effects/state_enemy.effect"
+	
+	strengthpercharge="-1"
+	maxcharges="20"
+>
+	<oninflict>
+		<addcharges count="1" />
+	</oninflict>
+	
+	<onrefresh>
+		<addcharges count="1" />
+	</onrefresh>
+</state>

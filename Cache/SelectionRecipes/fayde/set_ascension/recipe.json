@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hero": "fayde",
+  "avatar": "set_ascension",
+  "files": [
+    "heroes\\fayde\\base\\hero.entity",
+    "heroes\\fayde\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\fayde\\base\\state_fayde_ult_boost.entity",
+    "heroes\\fayde\\base\\state_fayde_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\fayde\\base\\ability_02\\state.entity",
+    "heroes\\fayde\\base\\ability_02\\state.entity.onepunch_ability_managed",
+    "heroes\\fayde\\base\\ability_02\\state_countattacks.entity",
+    "heroes\\fayde\\base\\ability_02\\state_countattacks.entity.onepunch_ability_managed",
+    "heroes\\fayde\\base\\ability_03\\state.entity",
+    "heroes\\fayde\\base\\ability_03\\state.entity.onepunch_ability_managed",
+    "heroes\\fayde\\base\\ability_04\\state_stealth.entity",
+    "heroes\\fayde\\base\\ability_04\\state_stealth.entity.onepunch_ability_managed",
+    "heroes\\fayde\\base\\ability_04\\state_umbral.entity",
+    "heroes\\fayde\\base\\ability_04\\state_umbral.entity.onepunch_ability_managed"
+  ]
+}

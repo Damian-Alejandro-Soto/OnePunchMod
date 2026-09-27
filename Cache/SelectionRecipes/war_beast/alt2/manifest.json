@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "war_beast",
+  "legacy_folder": "wolfman",
+  "avatar": "alt2",
+  "counts": {
+    "files": 99,
+    "models": 48,
+    "materials": 4,
+    "textures": 18,
+    "effects": 0,
+    "sounds": 29,
+    "icons": 3,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_SirBenzington_Ability4_Enemy_Slow"
+	
+	icon="/heroes/sir_benzington/alt8/ability_04/icon.dds"
+	passiveeffect=""
+
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	
+	movespeedslowstart="0.5"
+	movespeedslowend="0.0"
+
+	negativeeffect="slowed"
+>
+	<onframe />
+</state>

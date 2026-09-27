@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Soulstealer_Ult_Boost"
+
+	icon=""
+	passiveeffect="/heroes/soulstealer/alt2/effects/boost.effect"
+	
+	ishidden="true"
+	
+	effecttype=""
+>
+
+	<modifier key="iamsheeped" modpriority="1000" passiveeffect="" />
+</state>

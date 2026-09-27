@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Devourer_Ability4_Stage3"
+	
+	icon="/heroes/Devourer/alt13/ability_04/icon.dds"
+	
+	modifierkey="devourerult_stage1_3,devourerult_stage2_3,devourerult_stage3_3"
+	modifierkey2="devourerult_stage3"
+>
+	<onframe />
+	
+	<onexpired>
+		<applystate name="State_Devourer_Ability4_Stage2" target="source_entity" duration="1000" />
+	</onexpired>
+</state>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Silhouette_Ability2"
+
+	speed="3000"
+	gravity="0"
+
+	modelscale="4.5"
+	model="/heroes/silhouette/alt8/ability_02/effects/hand/model.mdf"
+	traileffect="/heroes/silhouette/alt8/ability_02/effects/hand_trail.effect"
+	canturn="0"
+	flying="true"
+	flyheight="40"
+	
+	
+	touchradius="80"
+	touchradiusdiradjust="true"
+	maxtouches="1"
+	touchtargetscheme="trees"
+	toucheffecttype=""
+>
+
+	<onimpact>
+		<setactivemodifierkey entity="this_owner_entity" name="" />
+		
+		<kill target="proxy_entity" source="" />
+	</onimpact>
+	
+	<ontouch>
+		<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" />
+		</else>
+		<kill target="proxy_entity" source="" />
+		<delete target="this_entity" />
+		<pushtool name="Ability_Silhouette2" />
+		<setproxy entity="stack_entity" target="target_entity" />		
+		<spawnunit name="Gadget_Silhouette_Ability2_Hooked" count="1" bind="target_entity" pushentity="true" proxy="target_entity" />
+		<applystate name="State_Silhouette_Ability2_Hookered" target="stack_entity" inflictor="this_owner_entity" duration="6000" />
+	</ontouch>
+</projectile>

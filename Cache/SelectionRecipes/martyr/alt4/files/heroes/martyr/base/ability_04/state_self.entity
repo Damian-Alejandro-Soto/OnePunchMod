@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Martyr_Self_Ability4"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/martyr/alt4/ability_04/effects/impact_self.effect"
+	
+	effecttype=""
+	
+>	
+
+</state>

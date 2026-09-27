@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Riptide_Ability3"
+	
+	effecttype=""
+	icon="/heroes/riptide/alt/ability_03/icon.dds"
+	passiveeffect=""
+
+	agility="20,30,40,50"
+	movespeed="15,30,45,60"
+	unitwalking="true"
+	
+	modifierkey="riptide_inwater"
+	
+	propagatetoillusions="true"
+	dynamicprecache="effects/start.effect,effects/end.effect"
+>
+	
+	<oninflict>
+		<pushtool name="Ability_Riptide3" />
+		<setproxy target="stack_entity" />
+			<setstr0 a="altavatar_path" b="effects/start.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_entity" target="" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/start.effect" source="source_entity" target="" />
+		</else>
+	</oninflict>
+	
+	<onexpired>
+		<hasmodifier entity="target_entity" name="riptide_ult_active" />
+			<setstr0 a="altavatar_path" b="effects/end.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_entity" target="" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/end.effect" source="source_entity" target="" />
+		</else>
+	</onexpired>
+	
+	<onframe />
+
+</state>

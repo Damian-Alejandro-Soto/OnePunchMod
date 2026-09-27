@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_PuppetMasterAttack"
+
+	speed="1125"
+	gravity="0"
+	canturn="false"
+	modelscale="2"
+
+	model="/heroes/puppetmaster/alt10/projectile/effects/projectile.mdf"
+	traileffect="/heroes/puppetmaster/alt10/projectile/effects/trail.effect"
+	impacteffect="/heroes/puppetmaster/alt10/projectile/effects/impact.effect"
+>
+</projectile>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Maliken4"
+
+	statuseffecttooltip="State_Maliken_Ability4"
+	icon="../../icon.dds"
+	anim="ability_4"
+	casttime="666"
+	castactiontime="0"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_self"
+	frontqueue="true"
+	casteffecttype="SuperiorMagic"
+	casteffect="/heroes/maliken/alt6/ability_04/effects/cast.effect"
+	
+	manacost="0"
+	cooldowntime="100000,80000,60000"
+	
+	targetradius="400"
+	dynamicprecache="effects/birth.effect"
+>
+	<onimpact>
+		<evaluate a="source_health" b="-0.25" op="mult" />
+		<changehealth a="result" op="sub" />
+		
+		<spawnaffector name="Affector_Maliken_Ability4" target="source_position" />
+		<applystate name="State_Maliken_Ability4" duration="30000" target="source_entity" />
+		
+		<!-- Art -->
+			<setstr0 a="altavatar_path" b="effects/birth.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_entity" target="" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/birth.effect" source="source_entity" target="" />
+		</else>
+		<playanim name="morph" target="source_entity" />
+	</onimpact>
+
+	<onframe />
+
+	<modifier key="ult_boost" modpriority="100"
+		cooldowntime="14000"
+	>
+	</modifier>
+</ability>

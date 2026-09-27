@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Ravenor2"
+	
+	icon="/heroes/ravenor/alt8/ability_02/icon.dds"
+	
+	statuseffecttooltip="State_Ravenor_Ability2"
+	
+	anim="ability_2"
+	casttime="0"
+	castactiontime="0"
+	inheritmovement="true"
+	frontqueue="true"
+	nonaggressive="true"
+	
+	casteffect="/heroes/ravenor/alt8/ability_02/effects/cast.effect"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_self"
+	casteffecttype="Magic"
+	
+	manacost="90,100,110,120"
+	cooldowntime="12000"
+	
+	targetradius="300"
+>
+	<onimpact>
+		<applystate name="State_Ravenor_Ability2" duration="6000" />
+	</onimpact>
+</ability>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Engineer_Ability4_Shield"
+
+	icon="../../icon.dds"
+	portrait=""
+	model="generator/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/engineer/alt2/ability_04/zapper/shield.effect"
+	spawneffect=""
+	respawneffect=""
+	selectsound=""
+	orderconfirmedsound=""
+	
+	infoheight="200"
+	infoscale="2"
+	preglobalscale="1.6"
+	modelscale="1.7"
+	effectscale="1.0"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="48"
+	targetoffset="0 0 64"
+	
+	isselectable="true"
+	iscontrollable="false"
+
+	unitwalking="true"
+	ismobile="false"
+	canrotate="false"
+
+	maxhealth="4"
+	healthregen="0"
+	maxmana="0"
+	manaregen="0"
+
+	armor="0"
+	magicarmor="0"
+	immunity="GadgetImmunity"
+
+	canattack="false"
+	
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="600"
+	sightrangenight="600"
+
+	experiencebounty="10"
+	
+	goldbountymin="100"
+	goldbountymax="100"
+	
+	drawonmap="false"
+	lifetime="6000,8000,10000"
+	showlifetime="true"
+	
+	unittype="PseudoPet EnergyFieldEngine"
+	
+	corpsetime="10"
+	corpsefadetime="2500"
+	dynamicprecache="generator/effects/death.effect,effects/state_inside.effect"
+>
+	<onspawn>
+		<areaofeffect
+			radius="475"
+			targetselection="all"
+			targetscheme="enemy_nonboss_units"
+			effecttype=""
+			ignoreinvulnerable="true"
+		>
+			<applystate name="State_Engineer_Ability4_Zap_Immunity" duration="100" proxy="this_entity" />
+		</areaofeffect>
+		<spawnaffector name="Affector_Engineer_Ability4" target="this_entity" proxy="this_entity" />
+	</onspawn>
+	
+	<ondamaged>
+		<changedamage b="1" op="min"/>
+	</ondamaged>
+
+	<onkilled>
+		<setstr0 a="altavatar_path" b="generator/effects/death.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="this_entity" target="this_entity" proxy="this_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="generator/effects/death.effect" source="this_entity" target="this_entity" proxy="this_entity" />
+		</else>
+	</onkilled>
+
+	<onexpired>
+		<setstr0 a="altavatar_path" b="generator/effects/death.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="this_entity" target="this_entity" proxy="this_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="generator/effects/death.effect" source="this_entity" target="this_entity" proxy="this_entity" />
+		</else>
+	</onexpired>
+	
+	<modifier key="ult_boost" modpriority="100">
+		<onspawn>
+			<!-- Skip applying zap immunity state so that its effects proc immediately -->
+			<spawnaffector name="Affector_Engineer_Ability4" target="this_entity" proxy="this_entity" />
+		</onspawn>
+	</modifier>
+</gadget>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chronos_Ability4_Ally_Tracker"
+
+	icon="/heroes/chronos/alt8/ability_04/icon.dds"
+	displaylevel="true"
+	passiveeffect=""
+
+	serverentity="true"
+
+	modifierkey="Chronos_ult_ally_tracker"
+>	
+</state>

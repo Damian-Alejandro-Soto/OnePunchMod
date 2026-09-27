@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "hero": "legionnaire",
+  "avatar": "alt15",
+  "files": [
+    "heroes\\legionnaire\\base\\hero.entity",
+    "heroes\\legionnaire\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\legionnaire\\base\\state_legionnaire_ult_boost.entity",
+    "heroes\\legionnaire\\base\\state_legionnaire_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\legionnaire\\base\\ability_01\\ability.entity",
+    "heroes\\legionnaire\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\legionnaire\\base\\ability_02\\state_self.entity",
+    "heroes\\legionnaire\\base\\ability_02\\state_self.entity.onepunch_ability_managed",
+    "heroes\\legionnaire\\base\\ability_02\\state_terrify.entity",
+    "heroes\\legionnaire\\base\\ability_02\\state_terrify.entity.onepunch_ability_managed",
+    "heroes\\legionnaire\\base\\ability_03\\ability.entity",
+    "heroes\\legionnaire\\base\\ability_03\\ability.entity.onepunch_ability_managed",
+    "heroes\\legionnaire\\base\\ability_04\\ability.entity",
+    "heroes\\legionnaire\\base\\ability_04\\ability.entity.onepunch_ability_managed"
+  ],
+  "dependencies": [
+    "heroes/gladiator/alt2/ability_04/effects/shark_up/normal_rxgb.dds",
+    "heroes/gladiator/alt2/ability_04/effects/shark_up/normal_s.dds"
+  ]
+}

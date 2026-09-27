@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "hero": "swiftblade",
+  "avatar": "alt3",
+  "files": [
+    "heroes\\swiftblade\\base\\hero.entity",
+    "heroes\\swiftblade\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\swiftblade\\base\\ability_01\\state.entity",
+    "heroes\\swiftblade\\base\\ability_01\\state.entity.onepunch_ability_managed",
+    "heroes\\swiftblade\\base\\ability_02\\ability.entity",
+    "heroes\\swiftblade\\base\\ability_02\\ability.entity.onepunch_ability_managed",
+    "heroes\\swiftblade\\base\\ability_02\\state.entity",
+    "heroes\\swiftblade\\base\\ability_02\\state.entity.onepunch_ability_managed"
+  ]
+}

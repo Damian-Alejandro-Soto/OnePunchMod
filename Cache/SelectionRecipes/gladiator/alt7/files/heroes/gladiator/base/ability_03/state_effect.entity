@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gladiator_Ability3_Effect"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/gladiator/alt7/ability_03/effects/state_self.effect"
+	
+	effecttype=""
+	
+	ishidden="true"
+	
+	modifierkey="ability3"
+>
+	<modifier key="iamsheeped" modpriority="1001"
+		passiveeffect=""
+	/>
+</state>

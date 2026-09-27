@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Myrmidon_Ability3"
+
+	speed="1500"
+	gravity="0"
+	
+	lifetime="1500"
+
+	modelscale="1.0"
+	model="/shared/models/invis.mdf"
+	traileffect="/heroes/hydromancer/alt6/ability_03/effects/trail.effect"
+	
+	canturn="true"
+	flying="true"
+	pathing="true"
+	flyheight="0"
+>
+	<onspawn>
+		<spawnaffector name="Affector_Myrmidon_Ability3" target="this_entity" owner="this_owner_entity" />
+	</onspawn>
+	
+	<ondeath>
+		<playanim name="idle" target="source_entity" />
+	</ondeath>	
+</projectile>

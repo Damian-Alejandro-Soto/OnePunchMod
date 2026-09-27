@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "succubus",
+  "avatar": "main_reskin",
+  "files": [
+    "heroes\\succubus\\base\\hero.entity",
+    "heroes\\succubus\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

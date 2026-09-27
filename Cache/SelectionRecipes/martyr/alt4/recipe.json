@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "hero": "martyr",
+  "avatar": "alt4",
+  "files": [
+    "heroes\\martyr\\base\\hero.entity",
+    "heroes\\martyr\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\martyr\\base\\state_martyr_ult_boost.entity",
+    "heroes\\martyr\\base\\state_martyr_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\martyr\\base\\ability_01\\ability.entity",
+    "heroes\\martyr\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\martyr\\base\\ability_01\\state.entity",
+    "heroes\\martyr\\base\\ability_01\\state.entity.onepunch_ability_managed",
+    "heroes\\martyr\\base\\ability_02\\state_target.entity",
+    "heroes\\martyr\\base\\ability_02\\state_target.entity.onepunch_ability_managed",
+    "heroes\\martyr\\base\\ability_03\\ability.entity",
+    "heroes\\martyr\\base\\ability_03\\ability.entity.onepunch_ability_managed",
+    "heroes\\martyr\\base\\ability_04\\state.entity",
+    "heroes\\martyr\\base\\ability_04\\state.entity.onepunch_ability_managed",
+    "heroes\\martyr\\base\\ability_04\\state_self.entity",
+    "heroes\\martyr\\base\\ability_04\\state_self.entity.onepunch_ability_managed"
+  ]
+}

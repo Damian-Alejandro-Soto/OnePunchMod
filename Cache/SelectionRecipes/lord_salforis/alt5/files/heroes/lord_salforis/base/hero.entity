@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_LordSalforis"
+
+	team="Hellbourne"
+	icon="/heroes/lord_salforis/icon.dds"
+	portrait="/heroes/lord_salforis/icon.dds"
+	model="/heroes/dreadknight/alt5/body_stage1/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/dreadknight/alt5/body_stage1/effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/dreadknight/alt5/body_stage1/sounds/voice_human/select_%.wav"
+	selectedflavorsound="/heroes/dreadknight/alt5/body_stage1/sounds/voice_human/select_flavour_%.wav"
+	confirmmovesound="/heroes/dreadknight/alt5/body_stage1/sounds/voice_human/move_%.wav"
+	confirmattacksound="/heroes/dreadknight/alt5/body_stage1/sounds/voice_human/attack_%.wav"
+	nomanasound="/heroes/dreadknight/alt5/body_stage1/sounds/voice_human/no_mana.wav"
+	cooldownsound="/heroes/dreadknight/alt5/body_stage1/sounds/voice_human/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/dreadknight/alt5/body_stage1/sounds/voice_human/taunt_prior.wav"
+	tauntkillsound="/heroes/dreadknight/alt5/body_stage1/sounds/voice_human/taunt_after.wav"
+	
+	preglobalscale="1.65"
+	modelscale="1.1"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="52"
+	targetoffset="0 0 92"
+
+	category="magic tank"
+	difficulty="1.5"
+
+	midrating="5"
+	junglerating="0"
+	carryrating="5"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="2"
+	soloofflanerating="0"
+	rangedrating="0"
+	meleerating="5"
+	
+	movespeed="300"
+	turnrate="540"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="1.5"
+	magicarmor="5"
+
+	inventory0="Ability_LordSalforis1"
+	inventory1="Ability_LordSalforis2"
+	inventory2="Ability_LordSalforis3"
+	inventory3="Ability_LordSalforis4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="375"
+	attackcooldown="1700"
+	attackdamagemin="28"
+	attackdamagemax="32"
+	attacknumanims="2"
+	attackoffset="0 95 60"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Strength"
+	strength="25"
+	strengthperlevel="2.6"
+	agility="10"
+	agilityperlevel="1.2"
+	intelligence="20"
+	intelligenceperlevel="2.0"
+	
+
+	previewpos="0 0 -60"
+	previewangles="0 0 0"
+	previewscale="1.7"
+	
+	storemodel="/heroes/dreadknight/alt5/body_stage1/preview.mdf"
+	storepos="0 0 -17"
+	storeangles="0 0 0"
+	storescale="1.7"
+	
+	corpsetime="750"
+	corpsefadetime="2000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+ attackanim="attack_%"
+        icon2="/heroes/lord_salforis/icon.dds"
+        infoheight="180"
+        previewmodel="/heroes/dreadknight/alt5/body_stage1/preview.mdf"
+        previewpassiveeffect="/heroes/dreadknight/alt5/body_stage1/effects/preview.effect"
+        storepassiveeffect="/heroes/dreadknight/alt5/body_stage1/effects/preview.effect"
+        portraitcampos="12 -20 15"
+        tooleffectpath0="/heroes/dreadknight/alt5/body_stage1/shrunken_heads/body.effect"
+        tooleffectkeyname0="Item_Immunity"
+        tooleffectgroup0="shrunken"
+        tooleffectpath1="/heroes/dreadknight/alt5/body_stage1/boots/body.effect"
+        tooleffectkeyname1="effect_UpgradedBoots"
+        tooleffectgroup1="boots"
+        tooleffectpath2="/heroes/dreadknight/alt5/body_stage1/bloodchalice/body_sotm.effect"
+        tooleffectkeyname2="Item_Intelligence7 Item_BloodChalice"
+        tooleffectgroup2="bloodchalice"
+        tooleffectpath3="/heroes/dreadknight/alt5/body_stage1/bloodchalice/body.effect"
+        tooleffectkeyname3="Item_BloodChalice"
+        tooleffectgroup3="bloodchalice"
+        tooleffectpath4="/heroes/dreadknight/alt5/body_stage1/dawnbringer/body_sotm.effect"
+        tooleffectkeyname4="Item_Intelligence7 Item_Dawnbringer"
+        tooleffectgroup4="dawnbringer"
+        tooleffectpath5="/heroes/dreadknight/alt5/body_stage1/dawnbringer/body.effect"
+        tooleffectkeyname5="Item_Dawnbringer"
+        tooleffectgroup5="dawnbringer"
+        tooleffectpath38="/heroes/dreadknight/alt5/body_stage1/sotm/body.effect"
+        tooleffectkeyname38="Item_Intelligence7"
+        tooleffectgroup38="weapon"
+        tooleffectpath39="/heroes/dreadknight/alt5/body_stage1/weapon/stage1/body.effect"
+        tooleffectkeyname39=""
+        tooleffectgroup39="weapon">
+	
+	<modifier key="iamsheeped" modpriority="100"
+		passiveeffect=""
+	/>
+
+	<modifier key="ult_boost" modpriority="101"
+	>
+		<aura state="State_LordSalforis_Ult_Boost" radius="0" targetscheme="self"/>
+	</modifier>
+
+	<modifier key="stage2" model="/heroes/dreadknight/alt5/body_stage2/model.mdf" passiveeffect="/heroes/dreadknight/alt5/body_stage2/effects/body.effect" preglobalscale="1.75" />
+	<modifier key="stage3" model="/heroes/dreadknight/alt5/body_stage3/model.mdf" passiveeffect="/heroes/dreadknight/alt5/body_stage3/effects/body.effect" preglobalscale="1.85" />
+	<modifier key="stage1_boots" model="/heroes/dreadknight/alt5/body_stage1/model_footprints.mdf" />
+	<modifier key="stage2_boots" model="/heroes/dreadknight/alt5/body_stage2/model_footprints.mdf" />
+	<modifier key="stage3_boots" model="/heroes/dreadknight/alt5/body_stage3/model_footprints.mdf" />
+</hero>

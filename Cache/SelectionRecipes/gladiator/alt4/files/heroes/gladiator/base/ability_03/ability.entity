@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Gladiator3"
+	
+	icon="/heroes/gladiator/alt4/ability_03/icon.dds"
+	
+	cooldowntime="10000,8000,6000,4000"
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	
+	impacteffect=""
+	casteffect=""
+	passiveeffect=""
+	
+	actiontype="passive"
+	dynamicprecache="effects/cast.effect"
+>
+	<onframe />
+	
+	<onattackstart>
+		<canactivate>
+			<!-- Anim -->
+			<cantarget targetscheme="enemy_units" effecttype="Physical">
+				<playanim name="ability_2" speed="source_attackspeed" target="source_entity" />
+			</cantarget>
+		</canactivate>
+		<else>
+			<!-- Predict: if remaining cooldown is small enough to expire during attack frontswing -->
+			<cantarget targetscheme="enemy_units" effecttype="Physical">
+				<getremainingcooldown target="this_entity" />
+				<compare a="result" b="0.5" op="le">
+					<playanim name="ability_2" speed="source_attackspeed" target="source_entity" />
+				</compare>
+			</cantarget>
+		</else>
+	</onattackstart>
+	
+	<onattackpreimpact>
+		<canactivate>
+			<isready entity="this_entity">
+				<cantarget targetscheme="enemy_buildings" />
+				<else>
+					<!-- Base bonus damage -->
+					<setvar0 a="20,40,60,80" />
+					<targettype type="ally">
+						<setvar0 a="var0" b="0.5" op="mult" />
+						<bonusdamageadd a="var0" target="" />
+					</targettype>
+					<else>
+						<bonusdamageadd a="var0" target="" />
+					</else>					
+				</else>
+			</isready>
+		</canactivate>
+	</onattackpreimpact>
+	
+	<onattackimpact>
+		<isready entity="this_entity">
+			<cantarget targetscheme="ally_units_and_structures" effecttype="Physical" />
+			<else>
+				<cantarget targetscheme="enemy_buildings" />
+				<else>
+					<cantarget targetscheme="enemy_units" effecttype="Physical">
+						<spawnaffector name="Affector_Gladiator_Ability3" target="target_position" positionmodifier="pointonline" positionorigin="source_entity" positionvalue="380,420,460,500" />
+						<splashdamage a="total_adjusted_damage" b="1" op="mult" radius="380,420,460,500" effecttype="Splash Cleave" targetscheme="enemy_units" />
+						<startcooldown />
+						
+						<!-- VFX -->
+						<setstr0 a="altavatar_path" b="effects/cast.effect" op="add" />
+						<exists path="str0">
+							<playeffectdynamic effect="str0" target="" source="source_entity" />
+						</exists>
+						<else>
+							<playeffectdynamic effect="effects/cast.effect" target="" source="source_entity" />
+						</else>
+					</cantarget>
+				</else>
+			</else>
+		</isready>
+	</onattackimpact>
+
+	<modifier key="ready" modpriority="90" condition="ready"
+	>
+		<onframe>
+			<targettype type="alive" target="this_owner_entity">
+				<applystate name="State_Gladiator_Ability3_Effect" target="source_entity" continuous="true" timeout="frametime" />
+			</targettype>
+		</onframe>
+	</modifier>
+</ability>

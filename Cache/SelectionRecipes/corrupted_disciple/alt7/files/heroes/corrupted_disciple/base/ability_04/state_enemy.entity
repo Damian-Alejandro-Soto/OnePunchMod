@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_CorruptedDisciple_Ability4_Enemy"
+
+	icon="/heroes/corrupted_disciple/alt7/ability_04/icon.dds"
+	
+	armorpercharge="-1"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+>
+	<oninflict>
+		<addcharges count="1" />
+	</oninflict>
+	
+	<onrefresh>
+		<addcharges count="1" />
+	</onrefresh>
+	
+	<modifier key="nobossarmor" modpriority="100" condition="Boss" notooltooltip="true"
+		armorpercharge="0"
+	/>
+</state>

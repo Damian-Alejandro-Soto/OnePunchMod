@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Glacius_Ability2"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/frosty/alt5/ability_02/effects/state.effect"
+	
+	revealed="true"
+	immobilized2="true"
+	disarmed="true"
+	frozen="true"
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	
+	modifierkey="Frosty2_Frozen"
+>
+	<onframe>
+		<damage effecttype="Magic DOT" amount="85" b="frametime" op="mult" />
+	</onframe>	
+</state>

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "amun_ra",
+  "legacy_folder": "ra",
+  "avatar": "trophy_skin",
+  "counts": {
+    "files": 13,
+    "models": 6,
+    "materials": 1,
+    "textures": 5,
+    "effects": 1,
+    "sounds": 0,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

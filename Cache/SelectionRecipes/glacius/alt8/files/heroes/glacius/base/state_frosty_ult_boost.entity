@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Glacius_Ult_Boost"
+
+	icon=""
+	passiveeffect="/heroes/frosty/alt8/effects/boost.effect"
+	
+	ishidden="true"
+	
+	effecttype=""
+>
+	<modifier key="iamsheeped" modpriority="100"
+		passiveeffect=""
+	/>
+</state>

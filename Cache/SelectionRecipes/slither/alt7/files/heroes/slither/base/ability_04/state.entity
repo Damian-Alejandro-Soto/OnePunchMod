@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Slither_Ability4"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/ebulus/alt7/ability_04/effects/state.effect"
+	
+	effecttype="ForceTransferrable"
+	allowtransfer="true"
+>
+	<onframe>
+		<damage effecttype="Magic DOT" amount="35,55,75" b="frametime" op="mult" nonlethal="true" />
+	</onframe>
+	
+	<onattackedpostimpact>
+		<entitytype target="inflictor_entity" type="Projectile_SlitherWardAttack">
+			<changeduration entity="this_entity" b="1000" op="add" />
+		</entitytype>
+	</onattackedpostimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+		passiveeffect="/heroes/ebulus/alt7/ability_04/effects/state_boost.effect"
+		deniable="true"
+	>
+		<onframe>
+			<damage effecttype="Magic DOT" amount="60,90,120" b="frametime" op="mult" />
+		</onframe>
+	</modifier>
+</state>

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "hero": "voodoo_jester",
+  "avatar": "alt5",
+  "files": [
+    "heroes\\voodoo_jester\\base\\hero.entity",
+    "heroes\\voodoo_jester\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\voodoo_jester\\base\\ability_01\\projectile.entity",
+    "heroes\\voodoo_jester\\base\\ability_01\\projectile.entity.onepunch_ability_managed",
+    "heroes\\voodoo_jester\\base\\ability_01\\projectile_bounce.entity",
+    "heroes\\voodoo_jester\\base\\ability_01\\projectile_bounce.entity.onepunch_ability_managed",
+    "heroes\\voodoo_jester\\base\\ability_02\\state_buff.entity",
+    "heroes\\voodoo_jester\\base\\ability_02\\state_buff.entity.onepunch_ability_managed",
+    "heroes\\voodoo_jester\\base\\ability_02\\state_buff_aura.entity",
+    "heroes\\voodoo_jester\\base\\ability_02\\state_buff_aura.entity.onepunch_ability_managed",
+    "heroes\\voodoo_jester\\base\\ability_02\\state_debuff.entity",
+    "heroes\\voodoo_jester\\base\\ability_02\\state_debuff.entity.onepunch_ability_managed",
+    "heroes\\voodoo_jester\\base\\ability_02\\state_debuff_aura.entity",
+    "heroes\\voodoo_jester\\base\\ability_02\\state_debuff_aura.entity.onepunch_ability_managed",
+    "heroes\\voodoo_jester\\base\\ability_03\\state.entity",
+    "heroes\\voodoo_jester\\base\\ability_03\\state.entity.onepunch_ability_managed"
+  ]
+}

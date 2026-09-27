@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_SuccubusAttack"
+
+	speed="900"
+	gravity="2000"
+
+	model="/shared/models/invis.mdf"
+	modelscale="1.0"
+
+	impacteffect="/heroes/succubis/alt7/projectile/impact.effect"
+	traileffect="/heroes/succubis/alt7/projectile/trail.effect"
+>
+	
+	
+	
+
+</projectile>

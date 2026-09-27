@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Midas_Attack"
+
+	speed="900"
+	gravity="1000"
+
+	model="/core/null/invis.mdf"
+	modelscale="1.75"
+
+	traileffect="/heroes/midas/alt6/projectile/trail.effect"
+	impacteffect="/heroes/midas/alt6/projectile/impact.effect"
+>
+</projectile>

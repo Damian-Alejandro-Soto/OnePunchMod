@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "flint_beastwood",
+  "avatar": "alt3",
+  "files": [
+    "heroes\\flint_beastwood\\base\\hero.entity",
+    "heroes\\flint_beastwood\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\flint_beastwood\\base\\state_flintbeastwood_ult_boost.entity",
+    "heroes\\flint_beastwood\\base\\state_flintbeastwood_ult_boost.entity.onepunch_ability_managed"
+  ]
+}

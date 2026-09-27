@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "hero": "bubbles",
+  "avatar": "trophy_skin03",
+  "files": [
+    "heroes\\bubbles\\base\\hero.entity",
+    "heroes\\bubbles\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\bubbles\\base\\ult_boost.entity",
+    "heroes\\bubbles\\base\\ult_boost.entity.onepunch_ability_managed",
+    "heroes\\bubbles\\base\\ability_01\\ability.entity",
+    "heroes\\bubbles\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\bubbles\\base\\ability_01\\gadget.entity",
+    "heroes\\bubbles\\base\\ability_01\\gadget.entity.onepunch_ability_managed",
+    "heroes\\bubbles\\base\\ability_02\\ability.entity",
+    "heroes\\bubbles\\base\\ability_02\\ability.entity.onepunch_ability_managed",
+    "heroes\\bubbles\\base\\ability_02\\state.entity",
+    "heroes\\bubbles\\base\\ability_02\\state.entity.onepunch_ability_managed",
+    "heroes\\bubbles\\base\\ability_03\\state.entity",
+    "heroes\\bubbles\\base\\ability_03\\state.entity.onepunch_ability_managed",
+    "heroes\\bubbles\\base\\ability_04\\state.entity",
+    "heroes\\bubbles\\base\\ability_04\\state.entity.onepunch_ability_managed",
+    "heroes\\bubbles\\base\\projectile\\projectile.entity",
+    "heroes\\bubbles\\base\\projectile\\projectile.entity.onepunch_ability_managed"
+  ]
+}

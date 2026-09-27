@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_FlintBeastwood_Ability3_Fade"
+
+	icon="/heroes/flint_beastwood/alt15/ability_03/icon.dds"
+	passiveeffect=""
+	ishidden="true"
+	
+	impactinterval="100"
+	
+	effecttype="StatusStealth"
+	allowtransfer="false"
+	
+>
+	<oninflict>
+		<setaccumulator value="0" />
+	</oninflict>
+	
+	<onattack>
+		<setaccumulator value="0" />
+		<expire />
+		<starttimer entity="this_spawner_entity" duration="1500" />
+	</onattack>
+	
+	<onactivatepreimpact>
+		<setaccumulator value="0" />
+		<expire />
+		<starttimer entity="this_spawner_entity" duration="1500" />
+	</onactivatepreimpact>
+	
+	<onchannelframe>
+		<setaccumulator value="0" />
+		<expire />
+		<starttimer entity="this_spawner_entity" duration="1500" />
+	</onchannelframe>
+		
+	<onimpact>
+		<setaccumulator value="accumulator" valueb="100" valueop="add" />
+		<compare a="accumulator" b="1500" op="ge">
+			<applystate name="State_FlintBeastwood_Ability3" continuous="true" proxy="this_proxy_entity" />
+			<expire />
+		</compare>
+	</onimpact>
+</state>

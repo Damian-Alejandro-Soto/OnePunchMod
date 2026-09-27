@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "hero": "magmus",
+  "avatar": "set_ascension",
+  "files": [
+    "heroes\\magmus\\base\\hero.entity",
+    "heroes\\magmus\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\magmus\\base\\ability_01\\projectile.entity",
+    "heroes\\magmus\\base\\ability_01\\projectile.entity.onepunch_ability_managed",
+    "heroes\\magmus\\base\\ability_01\\projectileb.entity",
+    "heroes\\magmus\\base\\ability_01\\projectileb.entity.onepunch_ability_managed",
+    "heroes\\magmus\\base\\ability_01\\state.entity",
+    "heroes\\magmus\\base\\ability_01\\state.entity.onepunch_ability_managed",
+    "heroes\\magmus\\base\\ability_01\\state_enemy.entity",
+    "heroes\\magmus\\base\\ability_01\\state_enemy.entity.onepunch_ability_managed",
+    "heroes\\magmus\\base\\ability_02\\ability.entity",
+    "heroes\\magmus\\base\\ability_02\\ability.entity.onepunch_ability_managed",
+    "heroes\\magmus\\base\\ability_02\\state.entity",
+    "heroes\\magmus\\base\\ability_02\\state.entity.onepunch_ability_managed",
+    "heroes\\magmus\\base\\ability_02\\state_damageeffects.entity",
+    "heroes\\magmus\\base\\ability_02\\state_damageeffects.entity.onepunch_ability_managed"
+  ]
+}

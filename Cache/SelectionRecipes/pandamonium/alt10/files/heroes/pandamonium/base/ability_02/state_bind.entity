@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Pandamonium_Ability2_Bind"
+
+	icon="/heroes/panda/alt10/ability_02/icon.dds"
+	
+	stunned="true"
+	stunnedreduction="ignore"
+	
+	passiveeffect="/heroes/panda/alt10/ability_02/effects/launch.effect"
+	effecttype=""
+>
+
+</state>

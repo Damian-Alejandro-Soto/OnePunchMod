@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "hero": "lord_salforis",
+  "avatar": "alt5",
+  "files": [
+    "heroes\\lord_salforis\\base\\hero.entity",
+    "heroes\\lord_salforis\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\lord_salforis\\base\\state_lordsalforis_ult_boost.entity",
+    "heroes\\lord_salforis\\base\\state_lordsalforis_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\lord_salforis\\base\\ability_01\\state_debuff.entity",
+    "heroes\\lord_salforis\\base\\ability_01\\state_debuff.entity.onepunch_ability_managed",
+    "heroes\\lord_salforis\\base\\ability_02\\state.entity",
+    "heroes\\lord_salforis\\base\\ability_02\\state.entity.onepunch_ability_managed",
+    "heroes\\lord_salforis\\base\\ability_04\\ability.entity",
+    "heroes\\lord_salforis\\base\\ability_04\\ability.entity.onepunch_ability_managed",
+    "heroes\\lord_salforis\\base\\ability_04\\state.entity",
+    "heroes\\lord_salforis\\base\\ability_04\\state.entity.onepunch_ability_managed"
+  ]
+}

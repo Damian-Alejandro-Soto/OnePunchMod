@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Ophelia4"
+
+	icon="../../icon.dds"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+	
+	anim="ability_4"
+	casttime="800"
+	castactiontime="300"
+
+	actiontype="global"
+	casteffecttype="SuperiorMagic GlobalAbility"
+	targetscheme="ally_heroes"
+	
+	
+	manacost="200,300,400"
+	cooldowntime="120000"
+	
+	dynamicprecache="/heroes/ophelia/ability_04/effects/cast.effect,effects/cast2.effect,effects/cast_self.effect,../alt4/ability_04/effects/cast_boost.effect"
+>
+	
+	<onaction>
+		<!-- Dynamic visual effects -->
+		<setstr0 a="altavatar_path" b="effects/cast2.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/cast2.effect" source="target_entity" occlude="true" />
+		</else>
+		<setstr1 a="altavatar_path" b="effects/cast_self.effect" op="add" />
+		<exists path="str1">
+			<playeffectdynamic effect="str1" source="target_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/cast_self.effect" source="target_entity" occlude="true" />
+		</else>
+		
+		<!--voice over for ability use -->
+		<setstr2 a="altavatar_path" b="effects/cast2.effect" op="add" />
+		<exists path="str2">
+			<playeffectdynamic effect="str2" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/cast2.effect" />
+		</else>
+	</onaction>
+
+	<onimpact>
+		<heal a="250,350,450" />
+		
+		<areaofeffect
+			center="source_entity"
+			global="true"
+			targetscheme="my_other_units"
+			targetselection="all"
+			effecttype="SuperiorMagic"
+		>
+			<heal a="600,900,1200" />
+			
+			<!-- Dynamic visual effects -->
+			<setstr0 a="altavatar_path" b="effects/cast.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="target_entity" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/cast.effect" source="target_entity" occlude="true" />
+			</else>
+		</areaofeffect>		
+		
+		<!-- Dynamic visual effects -->
+		<setstr0 a="altavatar_path" b="effects/cast.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/cast.effect" source="target_entity" occlude="true" />
+		</else>
+	</onimpact>
+</ability>

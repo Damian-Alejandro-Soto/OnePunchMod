@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Predator_Ability2"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/predator/alt8/ability_02/effects/state_in.effect"
+	immunitytype="MagicImmunity1"
+	armor="2,4,6,8"
+	
+	modifierkey="activation_modifier"
+	dynamicprecache="effects/state_out.effect"
+>
+	<onexpired>
+		<!-- Art -->
+		<setstr0 a="altavatar_path" b="effects/state_out.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="source_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/state_out.effect" target="source_entity" />
+		</else>
+	</onexpired>
+</state>

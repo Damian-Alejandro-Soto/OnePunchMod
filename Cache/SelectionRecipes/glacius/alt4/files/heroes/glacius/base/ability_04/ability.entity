@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Glacius4"
+
+	icon="/heroes/frosty/alt4/ability_04/icon.dds"
+	statuseffecttooltip="State_Glacius_Ability4"
+	
+	anim="ability_4"
+	casttime="0"
+	castactiontime="0"
+	channeltime="6000"
+	casteffect=""
+	casteffecttype="SuperiorMagic"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="self_position"
+	targetscheme="enemy_units"
+	ischanneling="true"
+	targetradius="700"
+	targetmaterial="/shared/materials/area_cast_indicator_simple.material"
+	
+	manacost="200,300,400"
+	cooldowntime="120000,105000,90000"
+	dynamicprecache="effects/area.effect,effects/area_boost.effect,../ability_01/effects/impact.effect,effects/impacts.effect,effects/state.effect"
+>
+	<onchannelstart>
+		<applystate name="State_Glacius_Ability4_Self" target="source_entity" ischannel="true" />
+		<spawnaffector name="Affector_Glacius_Ability4_1" target="source_entity" ischannel="true" />
+		<spawnaffector name="Affector_Glacius_Ability4_2" target="source_entity" ischannel="true" />
+		<spawnaffector name="Affector_Glacius_Ability4_3" target="source_entity" ischannel="true" />
+		<spawnaffector name="Affector_Glacius_Ability4_4" target="source_entity" ischannel="true" />
+	</onchannelstart>
+	
+	<onimpact />
+
+	<modifier key="ult_boost" modpriority="100">
+		<onimpact />
+		
+		<onchannelstart>
+			<!-- Effects of Ability1 -->
+			<setstr0 a="altavatar_path" b="../ability_01/effects/impact.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="target_position" target="" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="../ability_01/effects/impact.effect" source="target_position" target="" occlude="true" />
+			</else>
+			
+			<areaofeffect
+				radius="700"
+				targetselection="all"
+				targetscheme="enemy_units"
+				effecttype="Magic"
+			>
+				<applystate name="State_Glacius_Ability4" duration="frametime" pushentity="true" />
+				<setcharges a="0" entity="stack_entity" />
+			</areaofeffect>	
+			
+			<applystate name="State_Glacius_Ability4_Self" target="source_entity" ischannel="true" />
+			<spawnaffector name="Affector_Glacius_Ability4_1" target="source_entity" ischannel="true" />
+			<spawnaffector name="Affector_Glacius_Ability4_2" target="source_entity" ischannel="true" />
+			<spawnaffector name="Affector_Glacius_Ability4_3" target="source_entity" ischannel="true" />
+			<spawnaffector name="Affector_Glacius_Ability4_4" target="source_entity" ischannel="true" />
+			<applystate name="State_Glacius_Ability4_Sotm" target="source_entity" ischannel="true" />
+		</onchannelstart>
+	</modifier>
+</ability>

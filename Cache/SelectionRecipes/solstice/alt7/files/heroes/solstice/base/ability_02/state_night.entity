@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Solstice_Ability2_Night"
+
+	icon="icon_b.tga"
+	
+	passiveeffect="/heroes/solstice/alt7/ability_02/effects/state_frenzy.effect"
+	
+	damage="15,30,45,60"
+	movespeed="15,30,45,60"
+	allowtransfer="true"
+	effecttype="StatusBuff"
+>
+	
+</state>

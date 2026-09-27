@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Drunkenmaster_Ability3_Channel"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/drunkenmaster/alt7/ability_03/effects/state_channel.effect"
+	
+	impactinterval="250"
+	
+	effecttype=""
+	allowtransfer="false"
+>
+	<onimpact>
+		<pushtool name="Ability_DrunkenMaster3" />
+		<addcharges count="2,3,4,5" entity="stack_entity" />
+		<starttimer duration="2000" entity="stack_entity" />
+		
+		<!-- Cooldown reduction -->
+		<pushtool name="Ability_DrunkenMaster1" />
+		<reducecooldown duration="500" entity="stack_entity" />
+		<pushtool name="Ability_DrunkenMaster2" />
+		<reducecooldown duration="500" entity="stack_entity" />
+	</onimpact>	
+</state>

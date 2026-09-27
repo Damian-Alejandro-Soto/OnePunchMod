@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_SirBenzington_Ability2"
+	
+	passiveeffect="/heroes/sir_benzington/alt11/ability_02/effects/charge_1.effect,../alt11/ability_02/effects/charge_2.effect,../alt11/ability_02/effects/charge_3.effect"
+
+	ishidden="true"
+>	
+	<onexpired>
+		<setcharges entity="proxy_entity" a="0" />
+	</onexpired>
+</state>

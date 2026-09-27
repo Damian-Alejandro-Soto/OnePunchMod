@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "electrician",
+  "avatar": "pog_skin",
+  "files": [
+    "heroes\\electrician\\base\\hero.entity",
+    "heroes\\electrician\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

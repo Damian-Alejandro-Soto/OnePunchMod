@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_SilhouetteAttack3"
+
+	speed="1200"
+	gravity="0"
+	modelscale="1.1"
+	model="/heroes/silhouette/alt10/projectile/effects/shuriken/shuriken.mdf"
+
+	impacteffect="/heroes/silhouette/alt10/projectile/effects/quick_attack_impact.effect"
+	traileffect="/heroes/silhouette/alt10/projectile/effects/quick_attack_trail.effect"
+>
+	
+</projectile>

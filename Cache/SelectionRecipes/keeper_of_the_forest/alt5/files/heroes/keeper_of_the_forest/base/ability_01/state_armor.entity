@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_KeeperOfTheForest_Ability1_Armor"
+
+	icon="icon2.tga"
+	passiveeffect="/heroes/treant/alt5/ability_01/effects/armor.effect"
+
+	armor="3,4,5,6"
+	healthregen="3,4,5,6"
+	effecttype="StatusBuff"
+	allowtransfer="true"
+	modifierkey="Treant1_Shielded"
+>
+	
+	<modifier key="treant_Q_building" modpriority="100" condition="building" 
+		armor="3,4,5,6"
+		healthregen="3,4,5,6"
+		
+		passiveeffect="/heroes/treant/alt5/ability_01/effects/armor_building.effect"
+	/>
+</state>

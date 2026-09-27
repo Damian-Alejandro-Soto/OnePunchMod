@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fayde_Ability3"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/fade/alt5/ability_03/effects/state.effect"
+
+	unitwalking="true"
+	
+	effecttype="StatusBuff"
+	allowtransfer="true"
+
+	singletargetimmune="true"
+	singletargetimmuneallowowner="true"
+
+	immunitytype="AttackImmunity"
+>
+	
+	<onframe />
+</state>

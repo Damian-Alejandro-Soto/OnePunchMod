@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Deadwood_Ability2_Slow"
+
+	icon="/heroes/Deadwood/alt9/ability_02/icon.dds"
+	passiveeffect=""
+
+	movespeedslowstart="0.75"
+	movespeedslowend="0.0"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+>
+	<onframe />
+</state>

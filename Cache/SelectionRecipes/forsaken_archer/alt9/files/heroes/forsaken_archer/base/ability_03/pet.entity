@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Pet_ForsakenArcher_Ability3_Other"
+	
+	icon="/heroes/forsaken_archer/alt9/ability_03/icon.dds"
+	portrait="../../icon.dds"
+	model="/heroes/forsaken_archer/alt9/ability_03/pet/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/forsaken_archer/alt9/ability_03/pet/effects/passive.effect"
+	spawneffect="pet/effects/spawn.effect"
+
+	preglobalscale="1.5"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="36"
+	targetoffset="0 0 54"
+
+	movespeed="0"
+	turnrate="320"
+	ismobile="false"
+
+	maxhealth="20"
+	healthregen="0"
+	invulnerable="true"
+	maxmana="0"
+	manaregen="0"
+	diewithowner="false"
+	iscontrollable="false"
+	isselectable="false"
+	unitwalking="true"
+
+	armor="0"
+	magicarmor="0"
+
+	inventory0=""
+	inventory1=""
+	inventory2=""
+	inventory3=""
+	inventory4=""
+	inventory5=""
+	inventory6=""
+	inventory7=""
+
+	attackduration="1000"
+	attackactiontime="250"
+	attackcooldown="5000"
+	attackdamagemin="1"
+	attackdamagemax="1"
+	attacknumanims="2"
+	attackoffset="0 30 100"
+	attackprojectile="Projectile_ForsakenArcherAttack"
+	attackrange="1500"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="pet/effects/impact.effect"
+	attacktargetscheme="visible_enemy_objects_and_gadgets"
+	attackeffecttype="Magic"
+	attacktype="ranged"
+	combattype="Hero"
+
+	sightrangeday="1000"
+	sightrangenight="600"
+	
+	corpsetime="0"
+	corpsefadetime="0"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	
+	lifetime="1500"
+	unittype="no_Overhead_Visuals AntiTP FA_Skeleton"
+	
+	noblockneutralspawn="true" 
+>
+	<onspawn>
+		<order command="attack" source="this_entity" target="this_proxy_entity" />
+	</onspawn>
+
+	<!-- Converting attack type and damage -->
+    <onattackpreimpact>
+		<cantarget effecttype="Magic" targetscheme="all_units">
+			<seteffecttype name="combat_damagetype" effecttype="Magic" />
+			<seteffecttype name="combat_effecttype" effecttype="Attack Magic" />
+		</cantarget>
+	</onattackpreimpact>
+	
+	<onattackingdamageevent>
+		<setvar0 source="this_owner_entity" a="source_attackdamage" b="0.2,0.3,0.4,0.5" op="mult" />
+		<setvalue name="damage_attempted" a="var0" />
+	</onattackingdamageevent>
+	
+	<onframe>
+		<targettype type="alive" source="this_proxy_entity" target="this_proxy_entity" />
+		<else>
+			<kill target="this_entity" source="" />
+		</else>
+	</onframe>
+	
+	<onexpired>
+		<delete target="this_entity" />
+	</onexpired>
+
+</pet>

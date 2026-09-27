@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Defiler_SoundTrack"
+
+	ishidden="true"
+	icon="../../icon.dds"
+    passiveeffect="/heroes/defiler/alt3/ability_04/effects/sound_state.effect"
+	modifierkey=""
+>	
+</state>

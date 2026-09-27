@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_ShadowBlade_Ability3_Morph_Krosmode"
+
+	icon="/heroes/shadowblade/alt7/ability_03/icon.dds"
+	passiveeffect=""
+	ishidden="true"
+
+	propagatetoillusions="true"
+	
+	effecttype=""
+
+	attackrange="600"
+	morphattacktype="ranged"
+	morphattackprojectile="Projectile_ShadowBlade_Ability3"
+	morphpriority="100"
+>
+	<onframe>
+		<hasmodifier entity="this_owner_entity" name="shadowe" />
+		<else>
+			<expire />
+		</else>
+	</onframe>
+	
+	<oninflict>
+		<addcharges count="1" />
+	</oninflict>
+	
+	<onrefresh>
+		<addcharges count="1" />
+	</onrefresh>
+	
+	<onattackimpact propagatetoillusions="false">
+		<targettype type="building" />
+		<else>
+			<!-- Magic Damage & Stun -->
+			<compare a="charges" b="0" op="gt">
+				<cantarget targetscheme="enemy_units">
+					<cantarget effecttype="Magic">
+						<applystate name="State_Stunned" duration="600,800,1000,1200" />
+						<damage effecttype="Magic" amount="16,24,32,40" />
+					</cantarget>
+					
+					<setcharges a="0" />
+					<pushtool name="Ability_ShadowBlade3" />
+					<resettimer entity="stack_entity" />
+				</cantarget>
+			</compare>
+			
+			<!-- Regular Bonus Damage -->
+			<setvar0 a="source_intelligence" b="0.2,0.4,0.6,0.8" op="mult" />
+			<damage effecttype="Magic" amount="1" b="var0" op="mult" />
+			<popup name="execution" a="var0" source="target_entity" target="source_entity" />
+		</else>
+	</onattackimpact>
+</state>

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "kraken",
+  "legacy_folder": "kraken",
+  "avatar": "alt2",
+  "counts": {
+    "files": 72,
+    "models": 24,
+    "materials": 3,
+    "textures": 10,
+    "effects": 5,
+    "sounds": 30,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

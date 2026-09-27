@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_DrunkenMaster_Ability1_Trees"
+	
+	icon="/heroes/drunkenmaster/alt10/ability_01/icon.dds"
+	ishidden="true"
+	stunned="true"
+	stunnedreduction="ignore"
+	
+>
+	<onframe>
+		<killtrees radius="60" />
+	</onframe>	
+</state>

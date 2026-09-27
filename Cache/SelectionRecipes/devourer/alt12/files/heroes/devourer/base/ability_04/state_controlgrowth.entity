@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Devourer_Ability4_ControlGrowth"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/devourer/alt12/ability_04/effects/state.effect"
+	ishidden="true"
+	impactinterval="950"
+>
+	<onimpact>
+		<condition test="hasstate State_Devourer_Ability4_Stage2" target="source_entity">
+			<applystate name="State_Devourer_Ability4_Stage3" duration="7000" />
+			<expirestate name="State_Devourer_Ability4_Stage2" />
+		</condition>
+		<condition test="hasstate State_Devourer_Ability4_Stage1" target="source_entity">
+			<condition test="not_hasstate State_Devourer_Ability4_Stage2" target="source_entity">
+				<applystate name="State_Devourer_Ability4_Stage2" duration="7000" />
+				<expirestate name="State_Devourer_Ability4_Stage1" />
+			</condition>
+		</condition>
+		<condition test="not_hasstate State_Devourer_Ability4_Stage3" target="source_entity">
+			<condition test="not_hasstate State_Devourer_Ability4_Stage2" target="source_entity">
+				<applystate name="State_Devourer_Ability4_Stage1" duration="7000" />
+			</condition>
+		</condition>
+		
+		<setaccumulator value="0" />
+	</onimpact>	
+</state>

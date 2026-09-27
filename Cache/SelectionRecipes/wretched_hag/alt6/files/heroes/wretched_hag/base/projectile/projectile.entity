@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_WretchedHagAttack"
+
+	speed="1500"
+	gravity="0"
+	canturn="false"
+	modelscale="1.0"
+
+	model="/shared/models/invis.mdf"
+	traileffect="/heroes/babayaga/alt6/projectile/effects/trail.effect"
+	impacteffect="/heroes/babayaga/alt6/projectile/effects/impact.effect"
+>
+
+</projectile>

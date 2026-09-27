@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Vindicator_Ability3_Aura"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/vindicator/alt7/ability_03/effects/aura.effect"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="false"
+	
+	movespeedslow="0.5"
+	negativeeffect="slowed"
+>
+
+</state>

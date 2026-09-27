@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chronos_Ult_Boost"
+
+	icon=""
+	passiveeffect="/heroes/chronos/alt9/effects/boost.effect"
+	
+	ishidden="true"
+	
+	effecttype=""
+>
+	<modifier key="iamsheeped" modpriority="101"
+		passiveeffect=""
+	/>		
+</state>

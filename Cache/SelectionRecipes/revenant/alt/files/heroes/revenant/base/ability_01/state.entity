@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Revenant_Ability1"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/revenant/alt/ability_01/effects/state_buff.effect"
+	
+	impactinterval="5000"
+	maxcharges="2"
+
+	effecttype="StatusBuff"
+	allowtransfer="true"
+	dynamicprecache="effects/impact.effect"
+>		
+	<onframe />
+	
+	<oninflict>
+		<setcharges a="2" />
+	</oninflict>
+	
+	<onrefresh>
+		<setcharges a="2" />
+	</onrefresh>
+	
+	<onimpact>
+		<compare a="charges" b="1" op="gt">
+			<changeduration b="5000" op="max" />
+		</compare>
+		<removecharge />
+	</onimpact>
+	
+	<onattackimpact>
+		<cantarget targetscheme="enemy_units" effecttype="Magic">
+			<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="target_entity" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/impact.effect" source="target_entity" occlude="true" />
+			</else>
+			<applystate name="State_Revenant_Ability1_Slow" duration="4000" inflictor="this_proxy_entity" />
+			<damage effecttype="Magic" amount="50,80,110,140" />
+		</cantarget>	
+		
+		<cantarget targetscheme="all_buildings" />
+		<else>
+			<cantarget effecttype="Magic">
+				<removecharge />
+				<compare a="charges" b="1" op="ge" >
+					<changeduration b="5000" op="max" />
+				</compare>
+			</cantarget>
+		</else>
+
+		<compare a="charges" b="0" op="eq" >
+			<expire />
+		</compare>
+	</onattackimpact>
+
+	<modifier key="Revenant_Ability4_2" modpriority="110" attackspeed="1.20" />
+	<modifier key="Revenant_Ability4_3" modpriority="110" attackspeed="1.20" />
+	<modifier key="Revenant_Ability4_1boost" modpriority="110" attackspeed="1.20" />
+	<modifier key="Revenant_Ability4_2boost" modpriority="110" attackspeed="1.20" />
+	<modifier key="Revenant_Ability4_3boost" modpriority="110" attackspeed="1.20" />
+</state>

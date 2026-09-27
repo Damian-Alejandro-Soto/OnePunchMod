@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Gadget_Arachna_Ability4_Spiderling_SOTM"
+
+	icon="../../icon.dds"
+	portrait="../../icon.dds"
+	model="/heroes/arachna/alt4/summon/model.mdf"
+	skin=""
+	
+	
+	
+	passiveeffect="effects/spiderling.effect"
+	spawneffect="../summon/effects/spawn.effect"
+	
+	
+	
+	
+	preglobalscale="2.5"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	isselectable="true"
+	iscontrollable="false"
+	selectionradius="40"
+	targetoffset="0 0 0"
+	
+	maxhealth="2"
+	armor="5"
+	healthregen="0"
+
+	movespeed="550"
+	turnrate="900"
+	turnsmoothing="0.05"
+
+	
+	unitwalking="true"
+	
+
+	deathtime="0"
+	corpsetime="2000"
+
+	deathnumanims="1"
+	deathanim="death_%"
+	
+	expirenumanims="1"
+	expireanim="death_%"	
+	immunity="GadgetImmunity"
+	
+	canattack="true"
+	ismobile="true"
+	attackduration="1000"
+	attackactiontime="500"
+	attackcooldown="1000"
+	attackdamagemin="38,75,113"
+	attackdamagemax="38,75,113"
+	attacknumanims="1"
+	attackoffset="0 60 100"
+	attackprojectile=""
+	attackrange="100"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="../summon/effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	drawonmap="true"
+	sightrangeday="600"
+	sightrangenight="600"
+	
+	unittype="ArachnaPet PseudoPet"
+	goldbountymin="60"
+	goldbountymax="70"
+	
+	lifetime="15000"
+	showlifetime="true"
+>
+	<onframe>
+		<cantarget ignoreinvulnerable="false" target="this_proxy_entity" />
+		<else>
+			<order command="attack" force="true" forceduration="15000" source="target_entity" target="this_proxy_entity" />
+		</else>
+		
+		<targettype type="alive" target="this_proxy_entity" />
+		<else>
+			<kill target="this_entity" source="" />
+		</else>
+		<compare a="this_proxy_entity" b="0" op="eq">
+			<kill target="this_entity" source="" />
+		</compare>		
+	</onframe>
+	
+	<ondamaged>
+		<changedamage b="1" op="min"/>
+	</ondamaged>
+	
+	<onspawn>
+		<order command="attack" force="true" forceduration="15000" source="target_entity" target="this_proxy_entity" />
+	</onspawn>
+	
+	<onattackimpact>
+		<applystate name="State_Arachna_Ability4" source="this_owner_entity" inflictor="this_owner_entity" target="target_entity" duration="1500" disablenegativeeffectpopuponrefresh="true" />
+	</onattackimpact>
+	
+	<modifier key="rapidfire" modpriority="100"
+		healthregenreduction="1.0"
+	>
+	</modifier>
+</pet>

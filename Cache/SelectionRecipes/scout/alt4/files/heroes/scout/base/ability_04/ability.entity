@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Scout4"
+
+	icon="../../icon.dds"
+	statuseffecttooltip="State_Scout_Ability4_Slow"
+	
+	anim="ability_4channel"
+	casttime="300"
+	castactiontime="300"
+	channeltime="1500"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	casteffecttype="SuperiorMagic"
+	targetscheme="enemy_nonboss_units"
+	ischanneling="true"
+	deferchannelcost="true"
+	deferchannelimpact="true"
+	
+	manacost="125,175,225"
+	cooldowntime="50000,40000,30000"
+	
+	range="1500,2000,2500"
+	
+	showareacast="true"
+	areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+	
+	modifierkey="scout_Ult"
+
+	targetpriorities="enemy_heroes"
+	
+	dynamicprecache="/heroes/scout/alt4/ability_04/effects/fire.effect"
+>
+	<onchannelstart>
+		<applystate name="State_Scout_Ability4_Self" target="source_entity" ischannel="true" />
+		<spawnunit name="Gadget_Scout_Ability4" target="target_entity" bind="target_entity" pushentity="true" ischannel="true" />
+		<setproxy entity="this_entity" target="stack_entity" />		
+	</onchannelstart>
+	
+	<onchannelframe>
+		<getrange />
+		<setvar0 a="result" b="300" op="add" />
+			
+		<distance />
+		<compare a="result" b="var0" op="gt">
+			<breakchannel />
+		</compare>
+	</onchannelframe>
+	
+	<onchannelbreak>
+		<kill target="this_proxy_entity" source="" />
+	</onchannelbreak>
+	
+	<onchannelend>
+		<spawnprojectile name="Projectile_Scout_Ability4" source="source_entity" offset="0 0 80" target="target_entity" noresponse="true" />
+		<!-- <expirestate name="State_Scout_Ability1" target="source_entity" />  -->
+		<kill target="this_proxy_entity" source="" />
+		
+		<playanim name="ability_4fire" variations="0" target="source_entity" />
+		
+		<!-- Dynamic visual effects -->
+		<setstr0 a="altavatar_path" b="effects/fire.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_entity" target="" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/fire.effect" source="source_entity" target="" occlude="true" />
+		</else>
+	</onchannelend>
+	
+	<onimpact />
+	
+	<checkcost />
+	
+	<modifier key="ult_boost" modpriority="2"
+		range="3500"
+	>
+		<onimpact />
+		
+		<onchannelframe>
+			<getrange />
+			<setvar0 a="result" b="300" op="add" />
+			
+			<distance />
+			<compare a="result" b="var0" op="gt">
+				<breakchannel />
+			</compare>
+		</onchannelframe>
+	</modifier>
+	
+	<modifier key="Scout4_Tether" modpriority="3"
+		range="4000"
+		actiontype="no_target"
+		ischanneling="false"
+		ignorecooldown="true"
+		anim=""
+		icon="icon_b.tga"
+		casttime="0"
+		castactiontime="0"
+		manacost="0"
+		cooldowntime="0"
+		activatescheme="movement"
+		noresponse="true"
+	>
+		<checkcost>
+			<!-- Our state holds the proxy, so we need to get the proxy from the state! -->
+			<!-- The ability does not hold the proxy because it would then not play nicely with our proxy vision gadget -->
+			<foreachstate>
+				<entitytype type="State_Scout_Ability4_Tether" target="target_entity">
+					<pushentityproxy entity="target_entity" />
+					<!-- Our target is now stack_entity -->
+					
+					<!-- Only check range if the proxy target is still valid; if dead/deleted, let onimpact handle cleanup -->
+					<compare a="stack_entity" b="0" op="ne">
+						<distance source="source_entity" target="stack_entity" />
+						<compare a="result" b="4000" op="gt">
+							<invalidate />
+						</compare>
+					</compare>
+				</entitytype>
+			</foreachstate>
+		</checkcost>
+		
+		<onimpact>
+			<foreachstate>
+				<entitytype type="State_Scout_Ability4_Tether" target="target_entity">
+					<pushentityproxy entity="target_entity" />
+					<!-- Our target is now stack_entity -->
+					<compare a="stack_entity" b="0" op="ne">
+						<spawnprojectile name="Projectile_Scout_Ability4_SotM" target="stack_entity" bind="source_entity" bindturn="true" noresponse="true" />
+						<disjoint target="source_entity" />
+					</compare>
+					<!-- Always expire the tether state when sub-ability is activated, even if proxy is dead/deleted -->
+					<expirestate name="State_Scout_Ability4_Tether" target="source_entity"/>
+				</entitytype>
+			</foreachstate>
+		</onimpact>
+		
+	</modifier>
+</ability>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_SlitherWardAttack"
+
+	speed="900"
+	gravity="1000"
+	canturn="false"
+
+	model="/shared/models/invis.mdf"
+
+	traileffect="/heroes/ebulus/alt2/ability_02/gadget/projectile/trail.effect"
+	impacteffect="/heroes/ebulus/alt2/ability_02/gadget/projectile/impact.effect"
+>
+
+</projectile>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chipper_Ult_Boost"
+
+	icon=""
+	passiveeffect="/heroes/chipper/alt3/effects/boost.effect"
+	
+	ishidden="true"
+	
+	effecttype=""
+>
+
+</state>

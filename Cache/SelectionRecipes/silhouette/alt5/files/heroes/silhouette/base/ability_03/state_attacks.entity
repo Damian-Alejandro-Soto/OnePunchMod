@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Silhouette_Ability3"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/silhouette/alt5/ability_03/effects/state_self.effect"
+
+	attackspeed="4.0"
+	
+	effecttype="StatusBuff"
+	allowtransfer="true"
+>
+	<oninflict>
+		<setcharges a="2" />
+	</oninflict>
+	
+	<onrefresh>
+		<setcharges a="2" />
+	</onrefresh>
+
+	<onattackstart>
+		<setattackprojectile name="Projectile_SilhouetteAttack3" />
+	</onattackstart>
+	
+	<onattack>
+		<addcharges count="-1" />
+		<compare a="charges" b="0" op="eq">
+			<expire />
+		</compare>
+	</onattack>
+</state>

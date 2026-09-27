@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Pestilence_Ability1"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/pestilence/alt7/ability_01/effects/sprint.effect"
+	
+	movespeedmultiplier="0.15,0.3,0.45,0.6"
+	unitwalking="true"
+
+	impactinterval="50"
+	
+	modifierkey="sprint"
+	modifierkey2="pestilence_ability1_Flying"
+	
+	effecttype="StatusBuff"
+	allowtransfer="true"
+	
+	dynamicprecache=""
+>
+	<oninflict>
+		<setcharges entity="this_proxy_entity" a="1" />
+		<setactivemodifierkey name="" />
+	</oninflict>
+	
+	<onrefresh>
+		<setcharges entity="this_proxy_entity" a="1" />
+		<setactivemodifierkey name="" />
+	</onrefresh>
+
+	<onimpact>
+		<compare a="lifetime" b="50" op="le">
+			<startcooldown duration="10000,9000,8000,7000" entity="this_proxy_entity" />
+		</compare>
+	</onimpact>
+	
+	<onexpired>
+		<setcharges entity="this_proxy_entity" a="0" />
+
+		<!-- Needed in the event that the state is purged (when onimpact doesn't trigger) -->
+		<startcooldown duration="10000,9000,8000,7000" entity="this_proxy_entity" />
+		<setactivemodifierkey entity="this_proxy_entity" name="" />
+	</onexpired>
+	
+	<modifier key="pestilence_ability1_Disabled" modpriority="200"
+		movespeedmultiplier="0.075,0.15,0.225,0.3"
+		modifierkey2=""
+	>
+	</modifier>
+</state>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Kane_Ability4_Arena"
+	
+	model="/shared/models/invis.mdf"
+	icon=""
+	portrait=""
+	
+	passiveeffect="/heroes/kane/alt11/ability_04/effects/arena.effect"
+	
+	invulnerable="true"
+	drawonmap="false"
+	isselectable="false"
+	iscontrollable="false"
+
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+	canattack="false"
+
+	deathtime="0"
+	corpsetime="0"
+	dynamicprecache="effects/arena_impact.effect,effects/arena_expire.effect"
+>
+	<onspawn>
+		<setstr0 a="altavatar_path" b="effects/arena_impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_position" target="target_position" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/arena_impact.effect" source="target_position" target="target_position" />
+		</else>
+	</onspawn>
+	
+	<onframe>
+		<compare a="this_proxy_entity" b="0" op="eq" >
+			<kill source="" />
+		</compare>
+		<else>
+			<distance source="this_entity" target="this_owner_entity" />
+			<compare a="result" b="200" op="ge">
+				<kill source="" />
+				<deactivatemodifierkey name="arena_active" entity="this_proxy_entity" />
+				<pushentity entity="this_proxy_entity" />
+				<applystate name="State_Kane_Ability4_Enemy" target="stack_proxy_entity" pushentity="true" />
+				<deactivatemodifierkey name="arena_active" entity="stack_entity" />
+			</compare>
+			<else>
+				<pushentity entity="this_proxy_entity" />
+				<distance source="this_entity" target="stack_proxy_entity" />
+				<compare a="result" b="200" op="ge">
+					<kill source="" />
+					<deactivatemodifierkey name="arena_active" entity="this_proxy_entity" />
+					<pushentity entity="this_proxy_entity" />
+					<applystate name="State_Kane_Ability4_Enemy" target="stack_proxy_entity" pushentity="true" />
+					<deactivatemodifierkey name="arena_active" entity="stack_entity" />
+				</compare>
+			</else>
+		</else>
+	</onframe>
+	
+	<ondeath>
+		<setstr0 a="altavatar_path" b="effects/arena_expire.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_position" target="target_position" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/arena_expire.effect" source="target_position" target="target_position" />
+		</else>
+	</ondeath>
+</gadget>
+

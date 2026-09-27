@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_PuppetMaster_Ability1"
+	
+	icon="/heroes/puppetmaster/alt12/ability_01/icon.dds"
+	
+	restrained="true"
+	passiveeffect="effects/restrained.effect"
+	effecttype="StatusDebuff"
+	alwaystransmitdata="true"
+	
+	negativeeffect="restrained"
+>
+	<onframe>
+		<condition test="not_hasstate State_PuppetMaster_Ability1_PushImmunity">
+			<push force="-80,-100,-120,-140" frame="true" source="this_proxy_position" />
+		</condition>
+		<condition test="hasstate State_PuppetMaster_Ability1_ImmobilePush">
+			<push force="-500" frame="true" source="this_proxy_position" />
+		</condition>
+		<distance source="this_proxy_entity" target="this_owner_entity" />
+		<compare a="result" b="500" op="gt">
+			<expire />
+		</compare>
+	</onframe>
+	
+	<onexpired>
+		<setstr0 a="altavatar_path" b="effects/expire_audio.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_entity" target="" />
+		</exists>
+		<kill target="this_proxy_entity" source="" />
+	</onexpired>	
+</state>

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "hero": "vindicator",
+  "avatar": "alt10",
+  "files": [
+    "heroes\\vindicator\\base\\hero.entity",
+    "heroes\\vindicator\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\vindicator\\base\\ability_01\\ability.entity",
+    "heroes\\vindicator\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\vindicator\\base\\ability_01\\state.entity",
+    "heroes\\vindicator\\base\\ability_01\\state.entity.onepunch_ability_managed",
+    "heroes\\vindicator\\base\\ability_02\\ability.entity",
+    "heroes\\vindicator\\base\\ability_02\\ability.entity.onepunch_ability_managed",
+    "heroes\\vindicator\\base\\ability_02\\projectile.entity",
+    "heroes\\vindicator\\base\\ability_02\\projectile.entity.onepunch_ability_managed",
+    "heroes\\vindicator\\base\\ability_03\\gadget.entity",
+    "heroes\\vindicator\\base\\ability_03\\gadget.entity.onepunch_ability_managed",
+    "heroes\\vindicator\\base\\ability_03\\state.entity",
+    "heroes\\vindicator\\base\\ability_03\\state.entity.onepunch_ability_managed",
+    "heroes\\vindicator\\base\\ability_04\\ability.entity",
+    "heroes\\vindicator\\base\\ability_04\\ability.entity.onepunch_ability_managed",
+    "heroes\\vindicator\\base\\ability_04\\state.entity",
+    "heroes\\vindicator\\base\\ability_04\\state.entity.onepunch_ability_managed",
+    "heroes\\vindicator\\base\\projectile\\projectile.entity",
+    "heroes\\vindicator\\base\\projectile\\projectile.entity.onepunch_ability_managed"
+  ]
+}

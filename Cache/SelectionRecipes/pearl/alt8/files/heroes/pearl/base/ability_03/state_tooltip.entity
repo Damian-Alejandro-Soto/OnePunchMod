@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Pearl_Ability3_Tooltip"
+
+	icon="/heroes/pearl/alt8/ability_03/icon.dds"
+	passiveeffect=""
+
+>
+	<onframe />
+</state>

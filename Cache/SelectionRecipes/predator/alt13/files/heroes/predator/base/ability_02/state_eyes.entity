@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Predator_Ability2_Eyes"
+
+	passiveeffect="/heroes/predator/alt13/ability_02/effects/state_eyes.effect"
+	ishidden="true"
+	allowtransfer="false"
+>
+	
+	<!-- This state is used purely for the glowing eye effect -->
+</state>

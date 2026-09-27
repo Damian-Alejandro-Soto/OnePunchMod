@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Magmus_Ability1_Enemy"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/magmar/alt12/ability_01/effects/impact.effect"
+	ishidden="true"
+	
+	stunned="true"
+	stunnedreduction="ignore"
+	impactinterval="450"
+	
+>
+	
+	<onimpact>
+		<applystate name="State_Stunned" duration="1650" />
+		<damage effecttype="Magic" amount="100,160,220,280" />
+	</onimpact>
+</state>

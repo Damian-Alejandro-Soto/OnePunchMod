@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Legionnaire_Ult_Boost"
+
+	icon=""
+	passiveeffect="/heroes/legionnaire/alt5/effects/boost.effect"
+	
+	ishidden="true"
+	
+	effecttype=""
+>
+
+	<modifier key="iamsheeped" modpriority="1000" passiveeffect=""/>
+</state>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Behemoth2"
+
+	statuseffecttooltip="State_Behemoth_Ability2"
+	icon="../../icon.dds"
+	anim="ability_2"
+	casttime="700"
+	castactiontime="500"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_self"
+	frontqueue="true"
+	casteffecttype=""
+	
+	manacost="50"
+	cooldowntime="8000,7000,6000,5000"
+	
+	targetscheme=""
+	
+	dynamicprecache="/heroes/behemoth/alt/ability_02/effects/cast.effect"
+	
+	modifierkey="Behemoth_W1,Behemoth_W2,Behemoth_W3,Behemoth_W4"
+>
+	<onimpact>
+		<applystate name="State_Behemoth_Ability2" duration="14000" target="source_entity" />
+		
+		<!-- Dynamic visual effects -->
+			<setstr0 a="altavatar_path" b="effects/cast.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_position" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/cast.effect" source="target_position" occlude="true" />
+		</else>
+		
+		<!-- Niche case fix for Misfit/Plushie Behemoth in their night forms due to multiple modifiers -->
+		<!-- Start cooldown on Behemoth W sub -->
+		<pushtool name="Ability_Behemoth2_Sub" />
+		<startcooldown duration="8000,7000,6000,5000" entity="stack_entity" />
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+		interface="single_plus_one"
+	>
+		<onimpact>
+			<applystate name="State_Behemoth_Ability2" duration="14000" target="source_entity" />
+			
+			<!-- Dynamic visual effects -->
+			<setstr0 a="altavatar_path" b="effects/cast.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="target_position" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/cast.effect" source="target_position" occlude="true" />
+			</else>
+			
+			<!-- Start cooldown on Behemoth W sub -->
+			<pushtool name="Ability_Behemoth2_Sub" />
+			<startcooldown duration="8000,7000,6000,5000" entity="stack_entity" />
+		</onimpact>
+	</modifier>
+</ability>

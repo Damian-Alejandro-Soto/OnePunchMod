@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_PlagueRider4"
+
+	icon="/heroes/diseasedrider/alt/ability_04/icon.dds"
+	
+	statuseffecttooltip="State_PlagueRider_Ability4"
+	anim="ability_4"
+	casttime="1100"
+	castactiontime="400"
+	casteffect=""
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	targetscheme="nonstealth_enemy_units"
+	casteffecttype="SuperiorMagic"
+
+	manacost="200,350,500"
+	cooldowntime="100000,80000,60000"
+	
+	range="750"
+	
+	targetradius="600"
+	targetmaterial="/shared/materials/area_cast_indicator_simple.material"
+	
+	showareacast="true"
+	areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+	
+	showrangeandradiusintooltip="true"
+
+	targetpriorities="enemy_heroes"
+	dynamicprecache="effects/impact.effect"
+>
+	
+	<onimpact>
+		<applystate name="State_Stunned_Static" duration="100" target="target_entity" />
+		<spawnprojectile name="Projectile_PlagueRider_Ability4" source="source_entity" target="target_entity" proxy="target_entity" param="10" />
+	</onimpact>
+
+	<modifier key="ult_boost" modpriority="100">
+		<onimpact>
+			<applystate name="State_Stunned_Static" duration="100" target="target_entity" />
+			<spawnprojectile name="Projectile_PlagueRider_Ability4" source="source_entity" target="target_entity" proxy="target_entity" param="10000" />
+		</onimpact>
+	</modifier>
+</ability>

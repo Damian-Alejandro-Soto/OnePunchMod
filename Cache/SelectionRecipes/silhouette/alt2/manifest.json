@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "silhouette",
+  "legacy_folder": "silhouette",
+  "avatar": "alt2",
+  "counts": {
+    "files": 101,
+    "models": 39,
+    "materials": 7,
+    "textures": 8,
+    "effects": 16,
+    "sounds": 31,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

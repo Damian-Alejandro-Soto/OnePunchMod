@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "hammerstorm",
+  "legacy_folder": "hammerstorm",
+  "avatar": "alt",
+  "counts": {
+    "files": 68,
+    "models": 25,
+    "materials": 1,
+    "textures": 6,
+    "effects": 2,
+    "sounds": 34,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

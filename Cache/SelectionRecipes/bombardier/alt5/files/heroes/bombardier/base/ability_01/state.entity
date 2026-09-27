@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bombardier_Ability1"
+
+	icon="../../icon.dds"
+
+	effecttype=""
+	allowtransfer="true"
+	
+	impactinterval="2000"
+	passiveeffect="/heroes/bomb/alt5/ability_01/effects/stuckbomb.effect"
+	dynamicprecache="/heroes/bomb/alt5/ability_01/effects/explosion_unit.effect"
+>
+	
+	<aura
+		gadget="Gadget_Bombardier_Ability1_Reveal"
+		radius="0"
+		targetscheme="self"
+	/>
+	
+	<onspawn>
+	</onspawn>
+	
+	<onimpact>
+		<addcharges count="1" />
+		<addcharges entity="this_proxy_entity" />
+		<compare a="charges" b="3" op="eq">
+			<popup name="max" source="target_entity" target="source_entity" />
+			<expire />
+		</compare>
+		<else>
+			<popup name="timer_hero" a="charges" source="target_entity" target="source_entity" />
+		</else>
+	</onimpact>
+	
+	<onexpired>
+		<compare a="dispelled" b="0" op="eq">
+			<setvar0 a="charges" b=".1" op="mult" />
+			<setvar1 a="var0" b="1" op="add" />
+			<setvar2 a="charges" b="1000" op="mult" />
+			<!-- Minimum stun time of 0.2s -->
+			<setvar2 a="var2" b="200" op="max" />
+			
+			<areaofeffect
+				radius="250"
+				targetselection="all"
+				targetscheme="enemy_units"
+				effecttype="Magic"
+			>
+				<compare a="var2" b="0" op="ne">
+					<applystate name="State_Stunned" duration="var2" />
+				</compare>
+				<damage effecttype="Magic" amount="100,180,260,340" />
+			</areaofeffect>
+			<setstr0 a="altavatar_path" b="effects/explosion_unit.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" target="target_position" source="target_entity" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/explosion_unit.effect" target="target_position" source="target_entity" occlude="true" />
+			</else>
+			<setcharges entity="this_proxy_entity" a="0" />
+		</compare>
+			
+		<expirestate name="State_Bombardier_Ability1_Modifier" target="source_entity" />
+	</onexpired>
+	
+	<modifier key="Bomb1_Ally"
+		effecttype="StatusBuff"
+	/>
+	
+	<modifier key="Bomb1_Enemy"
+		effecttype="StatusDebuff"
+	/>
+</state>

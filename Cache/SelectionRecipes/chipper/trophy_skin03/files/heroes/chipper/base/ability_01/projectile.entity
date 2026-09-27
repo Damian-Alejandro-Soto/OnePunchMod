@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Chipper_Ability1"
+
+	speed="1200"
+	gravity="0"
+
+	modelscale="3.5"
+	model="/heroes/chipper/trophy_skin/model_03/ability_01/effects/missile/model.mdf"
+	traileffect="/heroes/chipper/trophy_skin/model_03/ability_01/effects/trail.effect"
+	canturn="0"
+	deatheffect="/heroes/chipper/trophy_skin/model_03/ability_01/effects/death.effect"
+	
+	flying="true"
+	flyheight="120"
+
+	touchradius="75"
+	touchradiusdiradjust="true"
+	maxtouches="1"
+	touchtargetscheme="enemy_units"
+	toucheffecttype="Magic"
+ dynamicprecache="/heroes/chipper/trophy_skin/model_03/ability_01/effects/impact.effect">
+	<onspawn>
+		
+		<spawnunit name="Gadget_Chipper_Ability1_Marker" target="this_owner_entity" proxy="this_proxy_entity" pushentity="true" duration="-1" />
+		<setproxy entity="this_entity" target="stack_entity" />
+	</onspawn>
+	
+	<onimpact>
+		<kill target="this_proxy_entity" source="" />
+	</onimpact>
+	
+	<ontouch>
+		<!-- Dynamic visual effects -->
+		<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="target_entity" source="target_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" occlude="true" />
+		</else>
+
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<cantarget effecttype="Magic">
+					<applystate name="State_Stunned_Static" duration="100" />
+				</cantarget>
+				
+				<!-- Bonus damage based on Distance travelled -->
+				<distance source="this_proxy_entity" />
+				<setvar0 a="result" />
+				<setvar0 a="var0" b="150" op="sub" /> <!-- Subtract 150 to prevent point blank rockets from gaining a bonus -->
+				
+				<compare a="var0" b="2000" op="ge">
+					<targettype type="Boss">
+						<damage effecttype="Magic" amount="90,100,110,120" />
+					</targettype>
+					<else>
+						<evaluate a="target_maxhealth" b="0.07" op="mult" />
+						<damage effecttype="Magic" amount="90,100,110,120" b="result" op="add" />
+					</else>					
+				</compare>
+				<else>
+					<damage effecttype="Magic" amount="90,100,110,120" />
+				</else>				
+				
+				<condition target="target_entity" test="hasstate State_Chipper_Ability2">
+					<applystate name="State_Chipper_Ability1" duration="5000" />
+				</condition>
+
+				<spawnunit name="Gadget_Chipper_Ability1_Reveal_Linger" count="1" target="target_position" />
+			</onimpact>
+		</combatevent>
+		<delete target="this_entity" />
+		<kill target="proxy_entity" source="" />
+	</ontouch>
+
+	<modifier key="ult_boost" modpriority="101"
+	>
+		<onimpact>
+			<kill target="this_proxy_entity" source="" />
+		</onimpact>
+
+		<ontouch>
+			<!-- Dynamic visual effects -->
+			<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" target="target_entity" source="target_entity" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" occlude="true" />
+			</else>
+
+			<combatevent effecttype="AbilityBasedProjectile">
+				<onimpact>
+					<!-- Bonus damage based on Distance travelled -->
+					<distance source="this_proxy_entity" />
+					<setvar0 a="result" />
+					<setvar0 a="var0" b="150" op="sub" /> <!-- Subtract 150 to prevent point blank rockets from gaining a bonus -->
+
+					<compare a="var0" b="2000" op="ge">
+						<targettype type="Boss">
+							<damage effecttype="Magic" amount="90,105,120,135" />
+						</targettype>
+						<else>
+							<evaluate a="target_maxhealth" b="0.07" op="mult" />
+							<damage effecttype="Magic" amount="90,105,120,135" b="result" op="add" />
+						</else>
+					</compare>
+					<else>
+						<damage effecttype="Magic" amount="90,105,120,135" />
+					</else>
+					<cantarget effecttype="Magic">
+						<applystate name="State_Stunned_Static" duration="100" />
+					</cantarget>
+					<condition target="target_entity" test="hasstate State_Chipper_Ability2">
+						<applystate name="State_Chipper_Ability1" duration="5000" />
+					</condition>
+
+					<!-- AoE -->
+					<areaofeffect
+						center="target_entity"
+						radius="250"
+						targetselection="all"
+						targetscheme="enemy_units"
+						effecttype="Magic"
+						maximpactspertarget="1"
+						ignore="target_entity"
+					>
+						<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+						<exists path="str0">
+							<playeffectdynamic effect="str0" target="target_entity" source="target_entity" occlude="true" />
+						</exists>
+						<else>
+							<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" occlude="true" />
+						</else>
+
+						<damage effecttype="Magic" amount="90,105,120,135" />
+
+						<condition target="target_entity" test="hasstate State_Chipper_Ability2">
+							<applystate name="State_Chipper_Ability1" duration="5000" />
+						</condition>
+					</areaofeffect>
+					<spawnunit name="Gadget_Chipper_Ability1_Reveal_Linger" count="1" target="target_position" />
+				</onimpact>
+			</combatevent>
+			
+			<delete target="this_entity" />
+			<kill target="proxy_entity" source="" />
+		</ontouch>
+	</modifier>
+
+	<!-- Midwars-only changes -->
+	<modifier key="OnlyMidMap" modpriority="102"
+	>
+		<onimpact>
+			<kill target="this_proxy_entity" source="" />
+		</onimpact>
+
+		<ontouch>
+			<!-- Dynamic visual effects -->
+			<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" target="target_entity" source="target_entity" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" occlude="true" />
+			</else>
+
+			<combatevent effecttype="AbilityBasedProjectile">
+				<onimpact>
+					<cantarget effecttype="Magic">
+						<applystate name="State_Stunned_Static" duration="100" />
+					</cantarget>
+					
+					<!-- Bonus damage based on Distance travelled -->
+					<distance source="this_proxy_entity" />
+					<setvar0 a="result" />
+					<setvar0 a="var0" b="150" op="sub" /> <!-- Subtract 150 to prevent point blank rockets from gaining a bonus -->
+
+					<hasmodifier name="ult_boost">
+						<compare a="var0" b="2250" op="ge">
+							<targettype type="Boss">
+								<damage effecttype="Magic" amount="90,105,120,135" />
+							</targettype>
+							<else>
+								<evaluate a="target_maxhealth" b="0.04" op="mult" />
+								<damage effecttype="Magic" amount="90,105,120,135" b="result" op="add" />
+							</else>
+						</compare>
+						<else>
+							<damage effecttype="Magic" amount="90,105,120,135" />
+						</else>
+
+						<!-- AoE -->
+						<areaofeffect
+							center="target_entity"
+							radius="250"
+							targetselection="all"
+							targetscheme="enemy_units"
+							effecttype="Magic"
+							maximpactspertarget="1"
+							ignore="target_entity"
+						>
+							<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+							<exists path="str0">
+								<playeffectdynamic effect="str0" target="target_entity" source="target_entity" occlude="true" />
+							</exists>
+							<else>
+								<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" occlude="true" />
+							</else>
+
+							<damage effecttype="Magic" amount="90,105,120,135" />
+
+							<condition target="target_entity" test="hasstate State_Chipper_Ability2">
+								<applystate name="State_Chipper_Ability1" duration="5000" />
+							</condition>
+						</areaofeffect>
+					</hasmodifier>
+					<else>
+						<compare a="var0" b="2250" op="ge">
+							<targettype type="Boss">
+								<damage effecttype="Magic" amount="90,100,110,120" />
+							</targettype>
+							<else>
+								<evaluate a="target_maxhealth" b="0.04" op="mult" />
+								<damage effecttype="Magic" amount="90,100,110,120" b="result" op="add" />
+							</else>
+						</compare>
+						<else>
+							<damage effecttype="Magic" amount="90,100,110,120" />
+						</else>
+					</else>
+
+					<condition target="target_entity" test="hasstate State_Chipper_Ability2">
+						<applystate name="State_Chipper_Ability1" duration="5000" />
+					</condition>
+
+					<spawnunit name="Gadget_Chipper_Ability1_Reveal_Linger" count="1" target="target_position" />
+				</onimpact>
+			</combatevent>
+			<delete target="this_entity" />
+			<kill target="proxy_entity" source="" />
+		</ontouch>
+	</modifier>
+</projectile>

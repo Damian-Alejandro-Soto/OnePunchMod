@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_KeeperOfTheForest"
+
+	team="Legion"
+	icon="/heroes/treant/alt2/icon.dds"
+	portrait="/heroes/treant/alt2/icon.dds"
+	model="/heroes/treant/alt2/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/treant/alt2/effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/treant/alt2/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/treant/alt2/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/treant/alt2/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/treant/alt2/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/treant/alt2/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/treant/alt2/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/treant/alt2/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/treant/alt2/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="2.0"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="160"
+	boundsradius="24"
+	selectionradius="64"
+	targetoffset="0 0 92"
+
+	category="tank muc"
+	difficulty="2.5"
+
+	midrating="0"
+	junglerating="5"
+	carryrating="0"
+	hardsupportrating="2"
+	softsupportrating="2"
+	offlanerating="3"
+	soloofflanerating="4"
+	rangedrating="0"
+	meleerating="5"
+
+	movespeed="300"
+	turnrate="630"
+	turnsmoothing="0.1"
+
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="0.60"
+	magicarmor="5"
+
+	inventory0="Ability_KeeperOfTheForest1"
+	inventory1="Ability_KeeperOfTheForest2"
+	inventory2="Ability_KeeperOfTheForest3"
+	inventory3="Ability_KeeperOfTheForest4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="700"
+	attackactiontime="480"
+	attackcooldown="1700"
+
+	attackdamagemin="32"
+	attackdamagemax="40"
+
+	attacknumanims="2"
+	attackoffset="0 30 100"
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="/heroes/treant/alt2/effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="strength"
+	strength="25"
+	strengthperlevel="3.3"
+	agility="15"
+	agilityperlevel="1.7"
+	intelligence="17"
+	intelligenceperlevel="1.8"
+	
+	portraitcampos="0 10 25"
+	
+	corpsetime="2800"
+	corpsefadetime="5000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	
+
+	previewpos="0 0 -50"
+	previewangles="0 0 0"
+	previewscale="1.4"
+	
+	storemodel="/heroes/treant/alt2/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.8"
+
+ attackanim="attack_%"
+        icon2="/heroes/treant/alt2/icon.dds"
+        previewmodel="/heroes/treant/alt2/preview.mdf">
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_PortalKey" />
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_BloodChalice" />
+	<recommendeditem name="Item_PlatedGreaves" />
+	<recommendeditem name="Item_GhostMarchers" />
+	<recommendeditem name="Item_RingoftheTeacher" />
+	<recommendeditem name="Item_RefreshingOrnament" />
+	<recommendeditem name="Item_AbyssalSkull" />
+	<recommendeditem name="Item_RestorationStone" />
+	<recommendeditem name="Item_KuldrasSheepstick" />
+	<recommendeditem name="Item_Energizer" />
+	<recommendeditem name="Item_IronShield" />
+	<recommendeditem name="Item_SolsBulwark" />
+	<recommendeditem name="Item_ShamansHeadress" />
+	<recommendeditem name="Item_BarbedArmor" />
+	<recommendeditem name="Item_DaemonicBreastplate" />
+	<recommendeditem name="Item_ShieldoftheFive" />
+	<recommendeditem name="Item_BarrierIdol" />
+	<recommendeditem name="Item_Insanitarius" />
+	<recommendeditem name="Item_Hellflower" />
+	
+	<gooditemagainst name="Item_PlatedGreaves" />
+	<gooditemagainst name="Item_Stormspirit" />
+	<gooditemagainst name="Item_KuldrasSheepstick" />
+	<gooditemagainst name="Item_SandScepter" />
+	<gooditemagainst name="Item_ShrunkenHead" />
+	<gooditemagainst name="Item_ShieldoftheFive" />
+	<gooditemagainst name="Item_Riftshards" />
+	<gooditemagainst name="Item_GeometersBane" />
+	<gooditemagainst name="Item_NullfireBlade" />
+	
+	
+	
+	<modifier key="natures_vengence" modpriority="100"
+		attackanim="ability_3_attack_1"
+		attacknumanims="1"
+		walkanim="ability_3_walk_1"
+		idleanim="ability_3_idle_1"
+	/>
+
+	<modifier key="ult_boost" modpriority="101"
+    >
+        <aura state="State_KeeperOfTheForest_Ult_Boost" radius="0" targetscheme="self"/>
+    </modifier>
+</hero>

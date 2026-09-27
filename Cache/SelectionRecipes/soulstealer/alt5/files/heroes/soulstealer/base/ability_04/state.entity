@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Soulstealer_Ability4"
+
+	icon="/heroes/soulstealer/alt5/ability_04/icon.dds"
+	passiveeffect="effects/state.effect"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+
+	movespeedslow="0.25"
+	basedamagemultiplier="-0.25"	
+
+	negativeeffect="slowed"
+>
+
+</state>

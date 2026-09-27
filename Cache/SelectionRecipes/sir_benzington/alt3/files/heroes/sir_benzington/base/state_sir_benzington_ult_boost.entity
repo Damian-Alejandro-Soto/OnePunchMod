@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Sir_Benzington_Ult_Boost"
+
+	icon=""
+	passiveeffect="/heroes/sir_benzington/alt3/effects/boost.effect"
+	
+	ishidden="true"
+	
+	effecttype=""
+>
+
+</state>

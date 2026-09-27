@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Prophet_Ability2"
+
+	speed="2250"
+	gravity="0"
+
+	flying="true"
+	flyheight="80"
+	
+	modelscale="1"
+	model="/shared/models/invis.mdf"
+	traileffect="/heroes/prophet/alt9/ability_02/effects/trail.effect"
+	effectscale="1.0"
+	impacteffect="/heroes/prophet/alt9/ability_02/effects/impact.effect"
+>
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<hasmodifier entity="target_entity" name="Prophet_Ability4_Buff">
+					<spawnaffector name="Affector_Prophet_Ability2_Split" target="target_position" proxy="target_entity" ignore="target_entity" />
+					<applystate name="State_Prophet_Ability2" duration="5000" />
+					<heal a="80,120,140,160" target="target_entity" />
+				</hasmodifier>
+				<else>
+					<applystate name="State_Prophet_Ability2" duration="5000" />
+					<heal a="80,120,140,160" target="target_entity" />
+				</else>
+			</onimpact>
+		</combatevent>
+	</onimpact>
+</projectile>

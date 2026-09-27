@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_ForsakenArcher_Ability1"
+
+	radius="225"
+	
+	lifetime="700"
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	
+	impactdelay="700"
+	
+	persist="true"
+ icon="/heroes/forsaken_archer/alt9/ability_01/icon.dds">
+	<onexpired>
+		<!-- VFX -->
+		<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="this_position" target="" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impact.effect" source="this_position" target="" occlude="true" />
+		</else>
+	</onexpired>
+	
+	<onimpact>
+		<applystate name="State_ForsakenArcher_Ability1" duration="1500,1750,2000,2250" />
+		<damage effecttype="Magic" amount="85,150,215,280" />
+	</onimpact>
+</affector>

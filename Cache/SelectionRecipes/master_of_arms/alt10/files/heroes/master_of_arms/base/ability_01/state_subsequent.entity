@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_MasterOfArms_Ability1_Subsequent"
+	icon="icon.tga"
+
+	passiveeffect="/heroes/master_of_arms/alt10/ability_01/effects/state_zap_slow.effect"
+	
+	movespeedslowstart="0.4"
+	movespeedslowmid="0.2"
+	movespeedslowend="0.0"
+	movespeedslowmidpos="0.5"
+	negativeeffect="slowed"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	modifierkey="MasterOfArms1_Debuff"
+>
+</state>

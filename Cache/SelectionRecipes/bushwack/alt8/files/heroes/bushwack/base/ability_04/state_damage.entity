@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bushwack_Ability4_Damage"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/bushwack/alt8/ability_04/effects/state.effect"
+	
+	revealed="true"
+	deniable="true"
+
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	
+	attackspeedpercharge="-0.10,-0.15,-0.20"
+	
+	impactinterval="50"
+>
+	<!-- If attackspeedpercharge is changed, also change the # of charges in onimpact - this controls when the -AS cap sets in! -->
+
+	<onframe>
+		<setvar0 a="charges" b="6,10,14" op="mult" />
+		<setvar0 a="var0" b="frametime" op="mult" />
+		
+		<targettype type="Boss">
+			<setvar1 a="6,10,14" b="frametime" op="mult" /> <!-- Max damage on Bosses -->
+			<setvar0 a="var0" b="var1" op="min" />
+			<damage effecttype="Physical DOT" amount="1" b="var0" op="mult" />
+		</targettype>
+		<else>
+			<damage effecttype="Physical DOT" amount="1" b="var0" op="mult" />
+		</else>
+	</onframe>
+
+	<onimpact>
+		<compare a="charges" b="4,3,2" op="ge">
+			<setactivemodifierkey name="Bushwack4_Capped" entity="this_entity" />
+		</compare>
+	</onimpact>
+	
+	<modifier key="Bushwack4_Capped" modpriority="3"
+		attackspeed="-0.5"
+		attackspeedpercharge="0"
+	>
+		<onimpact />
+	</modifier>
+	
+	<modifier key="ult_boost" modpriority="100"
+		sighted="true"
+	>	
+	</modifier>
+</state>

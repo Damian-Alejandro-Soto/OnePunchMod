@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Riptide_Ability4_AgilityDamage"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/riptide/alt4/ability_04/effects/state_ally.effect"
+
+	effecttype=""
+	
+	damagepercharge="1"
+	movespeed="20,30,40"
+>
+	<oninflict>
+		<setvar0 source="this_proxy_entity" a="source_agility" />
+		<setaccumulator value="var0" />
+		<setvar1 a="var0" b="0.15,0.25,0.35" op="mult" />
+		<setcharges a="var1" />
+	</oninflict>
+	
+	<onframe>
+		<setvar0 source="this_proxy_entity" a="source_agility" />
+		<compare a="accumulator" b="var0" op="eq" />
+		<else>
+			<setaccumulator value="var0" />
+			<setvar1 a="var0" b="0.15,0.25,0.35" op="mult" />
+			<setcharges a="var1" />
+		</else>
+	</onframe>	
+
+</state>

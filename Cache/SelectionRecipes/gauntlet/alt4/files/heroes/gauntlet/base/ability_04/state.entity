@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gauntlet_Ability4"
+
+	icon="/heroes/gauntlet/alt4/ability_04/icon.dds"
+	passiveeffect="/heroes/gauntlet/alt4/ability_04/effects/state.effect"
+	impacteffect="effects/purge_impact.effect"
+	ishidden="true"
+	
+	effecttype=""
+	revealed="true"
+>
+	<onframe />
+</state>

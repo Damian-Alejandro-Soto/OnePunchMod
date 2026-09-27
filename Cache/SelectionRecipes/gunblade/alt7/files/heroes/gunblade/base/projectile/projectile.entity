@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_StrafeAttack"
+
+	speed="1500"
+	gravity="0"
+	canturn="false"
+	modelscale=".3"
+
+	model="/heroes/gunblade/base/ability_01/effects/projectile/bullet.mdf"
+	traileffect="effects/trail.effect"
+	impacteffect="/heroes/gunblade/alt7/effects/impact.effect"
+>
+
+</projectile>

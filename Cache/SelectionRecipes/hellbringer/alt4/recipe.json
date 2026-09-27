@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "hero": "hellbringer",
+  "avatar": "alt4",
+  "files": [
+    "heroes\\hellbringer\\base\\hero.entity",
+    "heroes\\hellbringer\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\hellbringer\\base\\ability_03\\ability.entity",
+    "heroes\\hellbringer\\base\\ability_03\\ability.entity.onepunch_ability_managed",
+    "heroes\\hellbringer\\base\\ability_04\\ability.entity",
+    "heroes\\hellbringer\\base\\ability_04\\ability.entity.onepunch_ability_managed",
+    "heroes\\hellbringer\\base\\ability_04\\affector.entity",
+    "heroes\\hellbringer\\base\\ability_04\\affector.entity.onepunch_ability_managed",
+    "heroes\\hellbringer\\base\\summon\\pet.entity",
+    "heroes\\hellbringer\\base\\summon\\pet.entity.onepunch_ability_managed",
+    "heroes\\hellbringer\\base\\summon\\ability_04\\projectile.entity",
+    "heroes\\hellbringer\\base\\summon\\ability_04\\projectile.entity.onepunch_ability_managed"
+  ],
+  "dependencies": []
+}

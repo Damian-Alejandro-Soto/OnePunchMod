@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_SandWraith_Ability1_Track"
+
+	speed="857.14"
+	gravity="0"
+
+	modelscale="1.5"
+	model="/heroes/sand_wraith/alt9/ability_01/effects/skull.mdf"
+	traileffect="/heroes/sand_wraith/alt9/ability_01/effects/trail.effect"
+	canturn="0"
+	flying="true"
+	flyheight="90"
+	
+	touchradius="120"
+	maxtouchespertarget="1"
+	touchtargetscheme="enemy_units"
+	toucheffecttype="Magic"
+ dynamicprecache="/heroes/sand_wraith/alt9/ability_01/effects/impact.effect">
+	<onspawn>
+	</onspawn>
+	
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<applystate name="State_SandWraith_Ability1_Sticky" target="target_entity" duration="8000" />
+				<spawnaffector name="Affector_SandWraith_Ability1_Sticky" target="target_entity" />
+				<spawnaffector name="Affector_SandWraith_Ability1_VisionSticky" target="target_entity" />
+			</onimpact>
+		</combatevent>
+	</onimpact>
+	
+	<ontouch>
+		<damage effecttype="Magic" amount="70,120,170,220" />
+		
+		<!-- Dynamic visual effects -->
+		<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="target_entity" source="target_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" occlude="true" />
+		</else>		
+	</ontouch>
+</projectile>

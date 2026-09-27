@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Magebane1"
+
+	icon="../../icon.dds"
+	
+	anim="ability_1"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="passive"
+	
+	dynamicprecache="/heroes/javaras/alt4/ability_01/effects/state.effect"
+>
+	<onlearn>
+		<setscriptvalue name="state_effect" value="" entity="this_entity" />
+	</onlearn>
+	
+	<!-- Needed for Rift Wars -->
+	<onattackpreimpact propagatetoillusions="true">
+		<hasmodifier name="krosmode">
+			<cantarget targetscheme="enemy_units" effecttype="Magic">
+				<compare a="target_mana" b="0" op="gt">
+					<targettype type="illusion" target="source_entity">						
+						<setvar0 a="target_maxmana" b="0.024,0.036,0.048,0.06" op="mult" />
+						<setvar0 a="var0" b="10,16,23,30" op="add" />
+						<setvar0 a="var0" b="3" op="div" />
+						<takemana amount="var0" />
+						<damage effecttype="Physical" amount="0.6" b="result" op="mult" />
+						<popup name="manaburn" source="target_entity" target="source_entity" a="result" b="0.6" op="div" />
+					</targettype>
+					<else>
+						<setvar0 a="target_maxmana" b="0.024,0.036,0.048,0.06" op="mult" />
+						<setvar0 a="var0" b="10,16,23,30" op="add" />
+						<takemana amount="var0" />
+						<damage effecttype="Physical" amount="0.6" b="result" op="mult" />
+						<popup name="manaburn" source="target_entity" target="source_entity" a="result" b="0.6" op="div" />
+					</else>
+				</compare>
+			</cantarget>
+			<else>
+				<!-- Enemy is Magic Immune -->
+				<cantarget targetscheme="enemy_units" effecttype="SuperiorMagic">
+					<compare a="target_mana" b="0" op="gt">
+						<targettype type="illusion" target="source_entity">						
+							<setvar0 a="target_maxmana" b="0.024,0.036,0.048,0.06" op="mult" />
+							<setvar0 a="var0" b="10,16,23,30" op="add" />
+							<setvar0 a="var0" b="3" op="div" />
+							<setvar0 a="var0" b="0.33" op="mult" /> <!-- Penalty Multiplier if Magic Immune -->
+							<takemana amount="var0" />
+							<damage effecttype="Physical" amount="0.6" b="result" op="mult" />
+							<popup name="manaburn" source="target_entity" target="source_entity" a="result" b="0.6" op="div" />
+						</targettype>
+						<else>
+							<setvar0 a="target_maxmana" b="0.024,0.036,0.048,0.06" op="mult" />
+							<setvar0 a="var0" b="10,16,23,30" op="add" />
+							<setvar0 a="var0" b="0.33" op="mult" /> <!-- Penalty Multiplier if Magic Immune -->
+							<takemana amount="var0" />
+							<damage effecttype="Physical" amount="0.6" b="result" op="mult" />
+							<popup name="manaburn" source="target_entity" target="source_entity" a="result" b="0.6" op="div" />
+						</else>
+					</compare>
+				</cantarget>
+			</else>
+			
+			<!-- Mana Combustion VFX -->
+			<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/impact.effect" occlude="true" />
+			</else>
+		</hasmodifier>
+	</onattackpreimpact>	
+
+	<onattackimpact propagatetoillusions="true">
+		<hasmodifier name="krosmode" />
+		<else>
+			<cantarget targetscheme="enemy_units" effecttype="Magic">
+				<compare a="target_mana" b="0" op="gt">
+					<targettype type="illusion" target="source_entity">			
+						<setvar0 a="target_maxmana" b="0.024,0.036,0.048,0.06" op="mult" />
+						<setvar0 a="var0" b="10,16,23,30" op="add" />
+						<setvar0 a="var0" b="3" op="div" />
+						<takemana amount="var0" />
+						<damage effecttype="Physical" amount="0.6" b="result" op="mult" />
+						<popup name="manaburn" source="target_entity" target="source_entity" a="result" b="0.6" op="div" />
+					</targettype>
+					<else>
+						<setvar0 a="target_maxmana" b="0.024,0.036,0.048,0.06" op="mult" />
+						<setvar0 a="var0" b="10,16,23,30" op="add" />
+						<takemana amount="var0" />
+						<damage effecttype="Physical" amount="0.6" b="result" op="mult" />
+						<popup name="manaburn" source="target_entity" target="source_entity" a="result" b="0.6" op="div" />
+					</else>
+					
+					<!-- Dynamic visual effects -->
+					<getscriptvalue name="state_effect" destvar="str0" entity="this_entity" />
+					<setstr1 a="" />
+					<comparestrings a="str0" b="str1" op="ne">
+						<playeffectdynamic effect="str0" source="source_entity" target="target_entity" occlude="true" />
+					</comparestrings>
+
+					<!-- Avatar attack state VFX -->
+					<setstr3 a="altavatar_path" b="effects/state.effect" op="add" />
+					<exists path="str3">
+						<playeffectdynamic effect="str3" source="source_entity" target="target_entity" occlude="true" />
+					</exists>
+
+					<!-- Mana Combustion VFX -->
+					<setstr2 a="altavatar_path" b="effects/impact.effect" op="add" />
+					<exists path="str2">
+						<playeffectdynamic effect="str2" occlude="true" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/impact.effect" occlude="true" />
+					</else>
+				</compare>
+			</cantarget>
+			<else>
+				<!-- Enemy is Magic Immune -->
+				<cantarget targetscheme="enemy_units" effecttype="SuperiorMagic">
+					<compare a="target_mana" b="0" op="gt">
+						<targettype type="illusion" target="source_entity">						
+							<setvar0 a="target_maxmana" b="0.024,0.036,0.048,0.06" op="mult" />
+							<setvar0 a="var0" b="10,16,23,30" op="add" />
+							<setvar0 a="var0" b="3" op="div" />
+							<setvar0 a="var0" b="0.33" op="mult" /> <!-- Penalty Multiplier if Magic Immune -->
+							<takemana amount="var0" />
+							<damage effecttype="Physical" amount="0.6" b="result" op="mult" />
+							<popup name="manaburn" source="target_entity" target="source_entity" a="result" b="0.6" op="div" />
+						</targettype>
+						<else>
+							<setvar0 a="target_maxmana" b="0.024,0.036,0.048,0.06" op="mult" />
+							<setvar0 a="var0" b="10,16,23,30" op="add" />
+							<setvar0 a="var0" b="0.33" op="mult" /> <!-- Penalty Multiplier if Magic Immune -->
+							<takemana amount="var0" />
+							<damage effecttype="Physical" amount="0.6" b="result" op="mult" />
+							<popup name="manaburn" source="target_entity" target="source_entity" a="result" b="0.6" op="div" />
+						</else>
+						
+						<!-- Dynamic visual effects -->
+						<getscriptvalue name="state_effect" destvar="str0" entity="this_entity" />
+						<setstr1 a="" />
+						<comparestrings a="str0" b="str1" op="ne">
+							<playeffectdynamic effect="str0" source="source_entity" target="target_entity" occlude="true" />
+						</comparestrings>
+
+						<!-- Avatar attack state VFX -->
+						<setstr3 a="altavatar_path" b="effects/state.effect" op="add" />
+						<exists path="str3">
+							<playeffectdynamic effect="str3" source="source_entity" target="target_entity" occlude="true" />
+						</exists>
+
+						<!-- Mana Combustion VFX -->
+						<setstr2 a="altavatar_path" b="effects/impact.effect" op="add" />
+						<exists path="str2">
+							<playeffectdynamic effect="str2" occlude="true" />
+						</exists>
+						<else>
+							<playeffectdynamic effect="effects/impact.effect" occlude="true" />
+						</else>
+					</compare>
+				</cantarget>
+			</else>
+		</else>
+	</onattackimpact>
+</ability>

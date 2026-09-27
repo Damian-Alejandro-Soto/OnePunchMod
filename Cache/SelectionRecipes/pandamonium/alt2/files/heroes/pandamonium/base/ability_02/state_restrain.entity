@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Pandamonium_Ability2_Restrain"
+
+	icon="/heroes/panda/alt2/ability_02/icon.dds"
+	passiveeffect=""
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+
+	restrained="true"
+	
+	negativeeffect="restrained"
+>
+	<onframe />
+	
+</state>

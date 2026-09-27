@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Electrician_Ult_Boost"
+
+	icon=""
+	passiveeffect="/heroes/electrician/alt3/effects/boost.effect"
+	
+	ishidden="true"
+	
+	effecttype=""
+>
+	
+	<modifier key="iamsheeped" modpriority="100"
+			passiveeffect=""
+	/>
+</state>

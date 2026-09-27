@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "pestilence",
+  "legacy_folder": "pestilence",
+  "avatar": "alt9",
+  "counts": {
+    "files": 108,
+    "models": 30,
+    "materials": 4,
+    "textures": 15,
+    "effects": 22,
+    "sounds": 37,
+    "icons": 5,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

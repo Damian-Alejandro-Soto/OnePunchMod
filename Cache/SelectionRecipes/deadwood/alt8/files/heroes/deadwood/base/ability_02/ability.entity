@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Deadwood2"
+
+	statuseffecttooltip="State_Deadwood_Ability2"
+	icon="/heroes/deadwood/alt8/ability_02/icon.dds"
+	
+	anim="ability_2"
+	casttime="400"
+	castactiontime="400"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_self"
+	casteffecttype="Physical"
+	
+	manacost="20"
+	cooldowntime="15000"
+	
+	showareacast="true"
+	areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+>
+	<onimpact >
+		<applystate name="State_Deadwood_Ability2" duration="-1" target="source_entity" proxy="this_entity" />
+		<setcharges a="4" />
+	</onimpact>
+
+	<onattackstart />
+	
+	<onattackimpact>
+		<compare a="charges" b="1" op="eq" >
+			<spawnprojectile name="Projectile_Deadwood_Ability2" source="source_entity" target="target_entity" offset="-75 50 75" noresponse="true" param="0" />
+		</compare>
+		<removecharge />
+	</onattackimpact>
+	
+	<ondeath>
+		<setcharges a="0" />
+	</ondeath>
+	
+	<modifier key="deadwood_ihasatree" modpriority="100"
+		statuseffecttooltip="State_Deadwood_Ability2_Slow"
+		ignorecooldown="true"
+		anim="ability_2throw"
+		icon="/heroes/deadwood/alt8/ability_02/icon_replace.dds"
+		casttime="300"
+		castactiontime="300"
+		manacost="0"
+		actiontype="target_entity"
+		casteffecttype="Physical"
+		targetscheme="/heroes/deadwood/ability_02/enemy_units_and_trees"
+		range="650"
+		cooldowntime="0"
+		targetpriorities="enemy_heroes,enemy_units"
+	>
+		<activatecost>
+			<setaccumulator value="source_attackdamage" />
+			<setcharges a="0" />
+			<expirestate name="State_Deadwood_Ability2" target="this_owner_entity"/>
+		</activatecost>
+		
+		<onimpact>
+			<spawnprojectile name="Projectile_Deadwood_Ability2" source="source_entity" target="target_entity" offset="-75 50 75" noresponse="true" param="accumulator" />
+			<setaccumulator value="0" />
+		</onimpact>
+	</modifier>	
+
+	<modifier key="ult_boost" modpriority="105"
+		statuseffecttooltip="State_Deadwood_Ability2_Slow"
+		ignorecooldown="false"
+		anim="ability_2throw"
+		icon="icon_replace.tga"
+		casttime="300"
+		castactiontime="300"
+		actiontype="target_entity"
+		casteffecttype="Physical"
+		targetscheme="enemy_units_and_trees"
+		range="650"
+		manacost="20"
+		cooldowntime="15000"
+		targetpriorities="enemy_heroes,enemy_units"
+	>
+		<onimpact>
+			<setaccumulator value="source_attackdamage" />
+			<spawnprojectile name="Projectile_Deadwood_Ability2" source="source_entity" target="target_entity" offset="-75 50 75" noresponse="true" param="accumulator" />
+			<setaccumulator value="0" />
+		</onimpact>
+		
+		<aura name="Deadwood_Staff_W" state="State_Deadwood_Ability2" targetscheme="self" radius="0" effecttype="" />
+	</modifier>
+	
+</ability>

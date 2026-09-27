@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Zephyr_Ability1"
+
+	radiusstart="70"
+	radiusend="250"
+	speed="800"
+	lifetime="675"
+	arc="150"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	maximpactspertarget="1"
+	persist="true"
+	effect="effects/steamer.effect"
+ icon="/heroes/zephyr/alt8/ability_01/icon.dds">
+	<onimpact>
+		<applystate name="State_Stunned" duration="100" />
+		<spawnunit name="Gadget_Zephyr_Ability1" target="target_entity" offsetspace="this_entity" pushentity="true" offset="0 -10" />
+		<applystate name="State_Zephyr_Ability1" duration="600" />
+		<cantarget effecttype="Push">
+			<push force="625" duration="600" source="stack_entity" />
+		</cantarget>
+		<damage effecttype="Magic" amount="70,140,210,280" />
+	</onimpact>
+</affector>

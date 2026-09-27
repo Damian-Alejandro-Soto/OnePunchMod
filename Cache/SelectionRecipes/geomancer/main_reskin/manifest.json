@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "geomancer",
+  "legacy_folder": "geomancer",
+  "avatar": "main_reskin",
+  "counts": {
+    "files": 45,
+    "models": 22,
+    "materials": 2,
+    "textures": 8,
+    "effects": 13,
+    "sounds": 0,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Kane_Ability4_Enemy"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/kane/alt5/ability_04/effects/state_target.effect"
+	movespeedmultiplier="100"
+	slowresistance="1.0"
+	
+	silenced="true"
+	perplexed="true"
+	unitwalking="true"
+	cliffwalking="true"
+	sighted="true"
+	revealed="true"
+	
+	negativeeffect="taunted"
+	
+	effecttype=""
+	allowtransfer="false"
+>
+	<oninflict>
+		<aggression />
+		<order command="stop" force="true" source="this_owner_entity" target="target_entity" />
+		<order command="attack" force="true" forceduration="3500,4250,5000" source="target_entity" target="this_proxy_entity" />
+	</oninflict>
+	
+	<onrefresh>
+		<aggression />
+		<order command="attack" force="true" forceduration="3500,4250,5000" source="target_entity" target="this_proxy_entity" />
+	</onrefresh>
+	
+	<onframe>
+		<order command="attack" force="true" forceduration="3500,4250,5000" source="target_entity" target="this_proxy_entity" />
+	</onframe>
+	
+	<ondamaged />
+
+	<onexpired>
+		<order command="stop" force="true" source="this_owner_entity" target="this_owner_entity" />
+		<expirestate name="State_Kane_Ability4_Me" target="source_entity" />
+	</onexpired>
+	
+	<ondeath>
+		<targettype type="illusion" target="source_entity" />
+		<else>
+			<!-- Towers won't give Kane free Attack Damage -->
+			<targettype type="hero" target="source_entity">
+				<pushtool name="Ability_Kane4" source="this_proxy_entity" />
+				<addcharges count="4,6,8" entity="stack_entity" />
+			</targettype>
+		</else>
+	</ondeath>
+	
+	<modifier key="arena_active" modpriority="1"
+		passiveeffect=""
+	/>
+	
+	<modifier key="exited_arena" modpriority="2"
+		passiveeffect="effects/state_target.effect"
+	>
+		<onattackimpact />
+	</modifier>
+</state>

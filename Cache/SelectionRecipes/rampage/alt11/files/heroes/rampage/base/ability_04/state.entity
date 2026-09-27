@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rampage_Ability4"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/rampage/alt11/ability_04/effects/state.effect"
+
+	stunned="true"
+	stunnedreduction="ignore"
+	perplexed="true"
+	silenced="true"
+	immobilized="true"
+	disarmed="true"
+	
+	unitwalking="true"
+	treewalking="true"
+	
+	sighted="true"
+	revealed="true"
+	
+	effecttype=""
+
+	modifierkey="channeled_stun_ability"
+
+	negativeeffect="suppressed"
+	dynamicprecache="effects/drag.effect"
+>
+	<oninflict>
+		<spawnunit name="Pet_Rampage_Ability4" target="target_position" proxy="target_entity" facing="source_entity" pushentity="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+		<applystate name="State_Rampage_Ability4_Damage" target="stack_entity" continuous="true" proxy="this_owner_entity" />
+	</oninflict>
+	
+	<onframe>
+		<distance source="source_entity" target="this_owner_entity" />
+		<compare a="result" b="600" op="ge">	
+			<unbind target="this_owner_entity" />
+			<kill target="this_proxy_entity" source="" />
+			<expirestate name="State_Rampage_Ability4_Disarm" target="source_entity" />
+			<expire />
+		</compare>
+		<compare a="movement" b="0" op="gt">
+			<setstr0 a="altavatar_path" b="effects/drag.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" target="" source="source_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/drag.effect" target="" source="source_entity" />
+			</else>
+		</compare>
+		<targettype type="alive" target="source_entity" />
+		<else>
+			<expire />
+		</else>
+	</onframe>
+	
+	<onexpired>
+		<setstr0 a="altavatar_path" b="effects/drag.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="" source="source_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/drag.effect" target="" source="source_entity" />
+		</else>
+		<unbind target="this_owner_entity" />
+		<kill target="this_proxy_entity" source="" />
+		<expirestate name="State_Rampage_Ability4_Self" target="source_entity" />
+	</onexpired>
+	
+	<!-- Fixing the effect for krosmode -->
+	<modifier key="krosmode" modpriority="100"
+		passiveeffect="effects/state_krosmode.effect"
+	/>
+</state>

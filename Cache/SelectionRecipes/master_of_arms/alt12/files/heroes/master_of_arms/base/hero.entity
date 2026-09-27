@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_MasterOfArms"
+
+	team="Legion"
+	icon="/heroes/master_of_arms/alt12/icon.dds"
+	portrait="/heroes/master_of_arms/alt12/icon.dds"
+	model="/heroes/master_of_arms/alt12/model_blue.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect="/shared/effects/spawn_moa.effect"
+	respawneffect="/shared/effects/respawn_moa.effect"
+	selectedsound="/heroes/master_of_arms/alt12/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/master_of_arms/alt12/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/master_of_arms/alt12/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/master_of_arms/alt12/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/master_of_arms/alt12/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/master_of_arms/alt12/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/master_of_arms/alt12/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/master_of_arms/alt12/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="0.9"
+	modelscale="1"
+	effectscale="1"
+	boundsheight="140"
+	boundsradius="24"
+	selectionradius="50"
+	targetoffset="0 0 64"
+
+	category="magic cc"
+	difficulty="3"
+
+	midrating="3"
+	junglerating="0"
+	carryrating="5"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="5"
+	soloofflanerating="0"
+	rangedrating="5"
+	meleerating="0"
+	
+	movespeed="295"
+	turnrate="720"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="0.92"
+	magicarmor="5.0"
+
+	inventory0="Ability_MasterOfArms1"
+	inventory1="Ability_MasterOfArms2"
+	inventory2="Ability_MasterOfArms3"
+	inventory3="Ability_MasterOfArms4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory7=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="250"
+	attackcooldown="1700"
+	attackdamagemin="19"
+	attackdamagemax="25"
+	attacknumanims="2"
+	attackoffset="22 100 95"
+	attackprojectile="Projectile_MasterOfArmsAttack"
+	attackrange="500"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Agility"
+	strength="16"
+	strengthperlevel="2.0"
+	agility="21"
+	agilityperlevel="2.2"
+	intelligence="16"
+	intelligenceperlevel="2.4"
+	
+
+	previewpos="0 0 -80"
+	previewangles="0 0 0"
+	previewscale="0.9"
+	previewpassiveeffect="/heroes/master_of_arms/alt12/ability_03/effects/state_blue.effect"
+
+	storemodel="/heroes/master_of_arms/alt12/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="0.9"
+	storepassiveeffect="/heroes/master_of_arms/alt12/ability_03/effects/state_blue.effect"
+	
+	corpsetime="1750"
+	corpsefadetime="4500"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+ attackanim="attack_%"
+        icon2="/heroes/master_of_arms/alt12/icon.dds"
+        portraitcampos="-70 60 60"
+        previewmodel="/heroes/master_of_arms/alt12/preview.mdf">
+	<recommendeditem name="Item_ManaPotion" />	
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_Bottle" />
+	
+	<onspawn>
+		<setactivemodifierkey entity="this_entity" name="MasterOfArms_Electrical" />
+	</onspawn>
+	
+	<modifier key="iamsheeped" modpriority="101"
+		passiveeffect=""
+	/>
+	
+	<modifier key="MasterOfArms_Electrical" modpriority="90"
+		attackprojectile="Projectile_MasterOfArmsAttack_Electrical"
+		attackanim="attack_elec"
+		attackoffset="5 100 125"
+	 attackactioneffect="/heroes/master_of_arms/alt12/projectile/effects/electrical_attack_action.effect" model="/heroes/master_of_arms/alt12/model_blue.mdf"/>
+	
+	<modifier key="MasterOfArms_Magnetic" modpriority="90"
+		attackprojectile="Projectile_MasterOfArmsAttack_Magnetic"
+		attackanim="attack_magnetic"
+		attackoffset="5 100 95"
+		attackactioneffect="/heroes/master_of_arms/alt12/projectile/effects/magnetic_attack_action.effect"
+	 model="/heroes/master_of_arms/alt12/model_red.mdf"/>
+	
+	<modifier key="ult_boost" modpriority="100"
+		attackprojectile="Projectile_MasterOfArmsAttack_Boost"
+		attackoffset="5 100 110"
+	/>
+</hero>

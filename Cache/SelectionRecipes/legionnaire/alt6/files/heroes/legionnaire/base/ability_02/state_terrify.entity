@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Legionnaire_Ability2_Terrify"
+
+	icon="/heroes/legionnaire/alt6/ability_02/icon.dds"
+	passiveeffect="/heroes/legionnaire/alt6/ability_02/effects/state.effect"
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	
+	totaldamagemultiplier="-0.5"
+	attackspeedmultiplier="0.5"
+>
+</state>

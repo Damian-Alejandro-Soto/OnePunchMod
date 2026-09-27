@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Jeraziah_Ability2"
+	
+	icon="../../icon.dds"
+
+	passiveeffect="/heroes/jereziah/alt3/ability_02/effects/state.effect"
+	
+	immunitytype="MagicImmunity1"
+	dispellableimmunity="true"
+
+	effecttype="StatusBuff"
+	allowtransfer="true"
+	dynamicprecache="effects/state_expire.effect"
+>	
+	<aura name="jeraziahaura" state="State_Jeraziah_Ability2_Aura" radius="350" effecttype="Debuff" targetscheme="enemy_units" propagatecondition="not_stealthed" disablenegativeeffectpopuponrefresh="true" />
+
+	<onframe />
+	
+	<onexpired>
+		<setstr0 a="altavatar_path" b="effects/state_expire.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_entity " />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/state_expire.effect" source="source_entity " />
+		</else>
+		<setactivemodifierkey name="" entity="this_proxy_entity" />
+	</onexpired>
+</state>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Aluna_Ability2_Red"
+
+	speed="3000"
+	gravity="0"
+
+	modelscale="1.25"
+	model="/heroes/aluna/alt/ability_02/effects/staff.mdf"
+	
+	impacteffect="/heroes/aluna/alt/ability_02/effects/impactred.effect"
+	traileffect="/heroes/aluna/alt/ability_02/effects/trailred.effect"
+	
+	
+	canturn="false"
+	flying="true"
+	flyheight="70"
+	
+	touchradius="125"
+	maxtouchespertarget="1"
+	touchtargetscheme="enemy_units"
+	toucheffecttype="Magic"
+	touchradiusdiradjust="true"
+	
+	lifetime="8000"
+ dynamicprecache="/heroes/aluna/alt/ability_02/effects/impactred.effect">
+	<onspawn>
+	</onspawn>
+	
+	<ontouch>
+		<damage effecttype="Magic" amount="150,220,290,360" />
+		
+		<!-- Dynamic visual effects -->
+		<setstr0 a="altavatar_path" b="effects/impactred.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="target_entity" source="target_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impactred.effect" target="target_entity" source="target_entity" occlude="true" />
+		</else>
+	</ontouch>
+
+</projectile>

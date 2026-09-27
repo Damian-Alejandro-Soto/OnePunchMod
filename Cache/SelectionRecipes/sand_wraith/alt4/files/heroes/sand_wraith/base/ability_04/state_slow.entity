@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_SandWraith_Ability4_Slow"
+	
+	icon="/heroes/sand_wraith/alt4/ability_04/icon.dds"
+	passiveeffect=""
+	displaylevel="true"
+
+	movespeedslow="0.15"
+	negativeeffect="slowed"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+>
+	<onframe />
+</state>

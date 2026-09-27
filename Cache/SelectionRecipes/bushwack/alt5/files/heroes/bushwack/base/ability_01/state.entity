@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bushwack_Ability1"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/bushwack/alt5/ability_01/effects/state.effect"
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	
+	movespeedslow="0.75"
+	negativeeffect="slowed"
+>
+	<onframe />
+</state>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Shadowblade_Ult_Boost"
+
+	icon=""
+	passiveeffect="/heroes/shadowblade/alt7/effects/boost.effect"
+	
+	ishidden="true"
+	
+	effecttype=""
+>
+	<modifier key="iamsheeped" modpriority="101"
+		passiveeffect=""
+	/>
+</state>

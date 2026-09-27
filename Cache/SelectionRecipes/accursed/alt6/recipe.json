@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "hero": "accursed",
+  "avatar": "alt6",
+  "files": [
+    "heroes\\accursed\\base\\hero.entity",
+    "heroes\\accursed\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\accursed\\base\\ability_01\\ability.entity",
+    "heroes\\accursed\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\accursed\\base\\ability_02\\state.entity",
+    "heroes\\accursed\\base\\ability_02\\state.entity.onepunch_ability_managed",
+    "heroes\\accursed\\base\\ability_03\\state_debuff.entity",
+    "heroes\\accursed\\base\\ability_03\\state_debuff.entity.onepunch_ability_managed",
+    "heroes\\accursed\\base\\ability_04\\state.entity",
+    "heroes\\accursed\\base\\ability_04\\state.entity.onepunch_ability_managed"
+  ]
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Monarch_Cloud_Ability3"
+	
+	icon="../../icon.dds"
+	portrait=""
+	
+	model="/shared/models/invis.mdf"
+	passiveeffect="/heroes/monarch/alt2/ability_03/effects/aoe.effect"
+	preglobalscale="1.4"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="64"
+	isselectable="false"
+	iscontrollable="false"
+	invulnerable="true"
+	
+	drawonmap="false"
+
+	targetoffset="0 0 0"
+
+	canrotate="true"
+	ismobile="false"
+	nothreat="true"
+
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="400"
+	sightrangenight="400"
+	unitwalking="true"
+	canattack="false"
+
+	flying="false"
+	clearvision="true"
+	noblockneutralspawn="true"
+	
+	lifetime="6000"
+>
+
+</gadget>

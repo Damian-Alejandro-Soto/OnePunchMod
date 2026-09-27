@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rhapsody_Ability2_Ally"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/rhapsody/alt7/ability_02/effects/state_ally.effect"
+>
+	<onframe>
+		<!-- Base Heal per frame -->
+		<setvar0 a="10,18,26,34" b="frametime" op="mult" />
+		
+		<!-- Net Multiplier -->
+		<setaccumulator value="1" />
+		
+		<targettype type="moving" entity="target_entity">
+			<changeaccumulator b="1.25" op="mult" />
+		</targettype>
+
+		<heal a="var0" b="accumulator" op="mult" ishealingovertime="true" />
+	</onframe>
+	
+	<modifier key="rhapsody_danceeffectally" modpriority="100" condition="hero"
+		passiveeffect="effects/state_ally.effect"
+	>		
+		<aura
+			gadget="Gadget_Rhapsody_Ability2_ally_squares"
+			radius="0"
+			targetscheme="self"
+			proxy="proxy_entity_position"
+			gadgetowner="proxy_entity_position"
+		/>
+	</modifier>
+</state>

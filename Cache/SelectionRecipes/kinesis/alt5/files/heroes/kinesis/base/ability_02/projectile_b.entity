@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Kinesis_Ability2"
+
+	speed="1500"
+	flying="true"
+	flyheight="80"
+
+	modelscale="1.5"
+	model="/shared/models/invis.mdf"
+	canturn="0"
+	
+	impacteffect="/heroes/kenisis/alt5/ability_02/effects/impact_tree.effect"
+>
+	<onimpact>
+		<applystate name="State_Kinesis_Ability2_b" duration="2000" target="target_entity" />
+		<damage effecttype="Magic" amount="85,90,95,100" target="target_entity" />
+		<spawnaffector name="Affector_Kinesis_Ability2_Trees" target="target_entity" />
+		
+		<!-- Artsy Stuff -->
+		<setstr0 a="altavatar_path" b="effects/initial_impact_tree.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/initial_impact_tree.effect" target="target_entity" source="target_entity" />
+		</else>
+		
+		<expirestate name="State_Kinesis_Ability2_Tree" target="this_proxy_entity" />
+		<expirestate name="State_Kinesis_Ability4_Tree" target="this_proxy_entity" />
+		<expirestate name="State_Kinesis_Ability2" target="this_proxy_entity" />
+		<expirestate name="State_Kinesis_Ability4" target="this_proxy_entity" />
+	</onimpact>
+
+	<modifier key="ult_boost" modpriority="100">
+		<onimpact>
+			<applystate name="State_Kinesis_Ability2_b" duration="2000" target="target_entity" />
+			<damage effecttype="Magic" amount="85,90,95,100" target="target_entity" />
+			<spawnaffector name="Affector_Kinesis_Ability2_Trees" target="target_entity" />
+
+			<!-- Artsy Stuff -->
+			<setstr0 a="altavatar_path" b="effects/initial_impact_tree.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/initial_impact_tree.effect" target="target_entity" source="target_entity" />
+			</else>
+
+			<expirestate name="State_Kinesis_Ability2_Tree" target="this_proxy_entity" />
+			<expirestate name="State_Kinesis_Ability4_Tree" target="this_proxy_entity" />
+			<expirestate name="State_Kinesis_Ability2" target="this_proxy_entity" />
+			<expirestate name="State_Kinesis_Ability4" target="this_proxy_entity" />
+
+			<bounce count="2" range="400" damagemult="1" targetscheme="nonboss_visible_enemy_units" seek="closest" maxbouncespertarget="1" />
+			<compare a="result" b="0" op="eq" />
+			<else>
+				<bind target="this_proxy_entity" entity="this_entity" vertical="true" turnwithobject="true" unbindondeath="true" />
+			</else>
+		</onimpact>
+	</modifier>
+</projectile>

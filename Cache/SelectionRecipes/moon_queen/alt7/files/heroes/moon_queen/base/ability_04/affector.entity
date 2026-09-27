@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_MoonQueen_Ability4"
+
+	radius="700"
+	
+	impactinterval="600"
+	maxintervals="5,8,11"
+	maximpactsperinterval="1"
+	maximpactspertarget="4"
+	targetselection="random"
+	targetscheme="visible_enemy_units"
+	effecttype="Magic"
+	
+	effect=""
+	impacteffect="/heroes/krixi/alt7/ability_04/effects/ability_04_impact.effect"
+ dynamicprecache="/heroes/krixi/alt7/ability_04/effects/ability_04_impact.effect">
+	
+	<onimpact>
+		<damage effecttype="Magic" amount="200,250,300" />
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+		impactinterval="450"
+		maximpactspertarget="6,9,12"
+		maxintervals="6,12,18"		
+	>
+		<onimpact>
+			<!-- Main target -->
+			<applystate name="State_Stunned" duration="100" />
+			<damage effecttype="Magic" amount="200,250,300" />
+		</onimpact>
+	</modifier>
+</affector>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Devourer_Ability2_Self"
+
+	icon="/heroes/Devourer/alt13/ability_02/icon.dds"
+	passiveeffect=""
+	
+	effecttype=""
+>
+	<onframe>
+		<hasmodifier entity="this_owner_entity" name="devocantdeny">
+			<damage effecttype="Magic DOT Interrupting" amount="30,60,90,120" b="frametime" op="mult" nonlethal="true" />
+		</hasmodifier>
+		<else>
+			<damage effecttype="Magic DOT Interrupting" amount="30,60,90,120" b="frametime" op="mult" />
+		</else>
+	</onframe>
+</state>

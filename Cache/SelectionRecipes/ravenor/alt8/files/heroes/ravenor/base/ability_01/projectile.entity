@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Ravenor_Ability1"
+	
+	speed="700"
+	gravity="0"
+	
+	modelscale="1.5"
+	model="/shared/models/invis.mdf"
+	traileffect="/heroes/ravenor/alt8/ability_01/effects/trail.effect"
+	flying="true"
+	flyheight="50"
+	effectscale="1.5"
+	impacteffect="effects/impact.effect"
+	touchradius="100"
+	maxtouches="1"
+	touchtargetscheme="enemy_heroes"
+	toucheffecttype=""
+	
+	deatheffect="/heroes/ravenor/alt8/ability_01/effects/death.effect"
+	
+	lifetime="-1"
+	
+>
+	<ontouch>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<cantarget effecttype="Magic">
+					<applystate effecttype="Magic" name="State_Stunned" duration="500" />
+					<damage effecttype="Magic" amount="50,80,110,140" />
+				</cantarget>
+				<applystate name="State_Enemy_Ravenor_Ability1" target="target_entity" duration="4100" pushentity="true" />		
+				<setproxy entity="stack_entity" target="this_proxy_entity" />
+				<setproxy entity="this_proxy_entity" target="target_entity" />
+				<applystate name="State_Ravenor_Ability1" target="source_entity" proxy="target_entity" duration="4000" pushentity="true" />
+				
+				<!-- VFX -->
+				<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" source="target_position" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="effects/impact.effect" source="target_position" />
+				</else>
+			</onimpact>
+		</combatevent>
+		<else>
+			<expirestate name="State_Ravenor_Ability1" target="source_entity" />
+		</else>
+		
+		<setparam a="1" />
+		<kill target="this_entity" source="" />		
+	</ontouch>
+	
+	<ondeath>
+		<!-- Kinesis Thoughtsteal accommodation -->
+		<pushtool name="Ability_Ravenor1" />
+		<deactivatemodifierkey name="ravenor_Q_disabled" entity="stack_entity" />
+		<compare a="param" b="0" op="eq">
+			<expirestate name="State_Ravenor_Ability1" target="source_entity" />
+		</compare>
+	</ondeath>
+</projectile>

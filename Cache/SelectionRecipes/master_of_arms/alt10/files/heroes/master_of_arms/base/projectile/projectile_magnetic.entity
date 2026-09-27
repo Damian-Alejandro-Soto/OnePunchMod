@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_MasterOfArmsAttack_Magnetic"
+
+	speed="1500"
+	gravity="0"
+
+	modelscale="2"
+	model="/shared/models/invis.mdf"
+
+	traileffect="/heroes/master_of_arms/alt10/projectile/effects/projectile_magnetic.effect"
+	impacteffect="/heroes/master_of_arms/alt10/projectile/effects/projectile_magnetic_impact.effect"
+>
+	<modifier key="ult_boost" modpriority="101">
+		<aura state="Ult_Boost_MasterOfArms" radius="0" targetscheme="self" />
+	</modifier>
+</projectile>

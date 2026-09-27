@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Pearl_Ability2"
+	
+	speed="750"
+	gravity="500"
+	flying="true"
+	flyheight="100"
+	
+	modelscale="1"
+	model="/shared/models/invis.mdf"
+	touchradius="100"
+	traileffect="/heroes/pearl/alt8/ability_02/effects/trail.effect"
+	impacteffect=""
+	
+	toucheffecttype="Magic"
+	
+	touchtargetscheme="player_controlled_enemy_units"
+	maxtouchespertarget="1"
+>
+	<ondeath>
+		<areaofeffect
+			radius="275"
+			targetselection="all"
+			targetscheme="enemy_units"
+			effecttype="Magic"
+		>
+			<damage effecttype="Magic" amount="90,150,210,270" />
+			
+			<!-- VFX -->
+			<setstr0 a="altavatar_path" b="effects/impact_enemy.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="target_entity" target="target_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/impact_enemy.effect" source="target_entity" target="target_entity" />
+			</else>
+			<setstr0 a="altavatar_path" b="effects/impact_enemy.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="target_position" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/impact_enemy.effect" source="target_position" occlude="true" />
+			</else>
+		</areaofeffect>
+
+		<!-- VFX -->
+		<setstr0 a="altavatar_path" b="effects/bubble_pop.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_position" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/bubble_pop.effect" source="target_position" occlude="true" />
+		</else>
+	</ondeath>
+</projectile>

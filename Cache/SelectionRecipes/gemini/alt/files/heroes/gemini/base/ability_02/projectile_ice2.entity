@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Gemini_Ability2_Ice2"
+
+	speed="2000"
+	gravity=""
+	
+	effectscale="1"
+	modelscale="1.65"
+	canturn="true"
+	flying="true"
+	flyheight="0"
+	
+	model="/heroes/gemini/alt/frost_projectile/model.mdf"
+	impacteffect=""
+	traileffect="/heroes/gemini/alt/ability_02/effects/trailfrost.effect"
+	
+	touchradius="180"
+	maxtouchespertarget="1"
+	touchradiusdiradjust="true"
+	touchtargetscheme="enemy_units"
+	toucheffecttype="Magic"
+>
+	<ontouch>
+		<applystate name="State_Gemini_Ability2_Damage2" duration="1000" />
+	</ontouch>
+</projectile>

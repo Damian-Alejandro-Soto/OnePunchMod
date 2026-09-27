@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_PollywogPriest_Ability3_Self"
+	
+	icon="/heroes/pollywogpriest/alt7/ability_03/icon.dds"
+	passiveeffect=""
+	ishidden="true"
+	
+	alwaystransmitdata="true"
+
+	effecttype=""
+>
+	<onexpired>
+		<expire entity="this_proxy_entity" />
+	</onexpired>
+</state>

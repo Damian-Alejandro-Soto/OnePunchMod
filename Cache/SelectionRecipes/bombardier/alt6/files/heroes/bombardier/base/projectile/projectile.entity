@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Bombardier_Attack"
+
+	speed="1000"
+	gravity="2000"
+
+	modelscale="1.45"
+	model="/shared/models/invis.mdf"
+
+	traileffect="/heroes/bomb/alt6/projectile/effects/trail.effect"
+	impacteffect="/heroes/bomb/alt6/projectile/effects/impact.effect"
+>
+</projectile>

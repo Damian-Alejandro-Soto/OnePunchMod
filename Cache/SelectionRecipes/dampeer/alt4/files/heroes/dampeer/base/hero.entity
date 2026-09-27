@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Dampeer"
+
+	team="Hellbourne"
+	icon="/heroes/dampeer/alt4/icon.dds"
+	portrait="/heroes/dampeer/alt4/icon.dds"
+	model="/heroes/dampeer/alt4/model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/dampeer/alt4/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/dampeer/alt4/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/dampeer/alt4/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/dampeer/alt4/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/dampeer/alt4/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/dampeer/alt4/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/dampeer/alt4/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/dampeer/alt4/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.6"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="44"
+	targetoffset="0 0 64"
+	
+	infoheight="210"
+	category="magic"
+	difficulty="2"
+
+	midrating="5"
+	junglerating="1"
+	carryrating="4"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="3"
+	soloofflanerating="0"
+	rangedrating="0"
+	meleerating="5"
+
+	movespeed="305"
+	turnrate="720"
+	turnsmoothing="0.08"
+
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-0.68"
+	magicarmor="5.0"
+
+	inventory0="Ability_Dampeer1"
+	inventory1="Ability_Dampeer2"
+	inventory2="Ability_Dampeer3"
+	inventory3="Ability_Dampeer4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="330"
+	attackcooldown="1700"
+	attackdamagemin="27"
+	attackdamagemax="33"
+	attacknumanims="2"
+	attackoffset="0 50 170"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Agility"
+	strength="21"
+	strengthperlevel="2"
+	agility="24"
+	agilityperlevel="2.9"
+	intelligence="16"
+	intelligenceperlevel="1.4"
+	
+
+	previewpos="0 0 -70"
+	previewangles="0 0 0"
+	previewscale="1.15"
+	previewpassiveeffect=""
+	
+	storemodel="/heroes/dampeer/alt4/preview.mdf"
+	storepos="0 0 -24"
+	storeangles="0 0 0"
+	storescale="1.7"
+	storepassiveeffect=""
+	
+	portraitcampos="8 -10 20"
+	portraitangles="0 0 0"
+
+ attackanim="attack_%"
+        icon2="/heroes/dampeer/alt4/icon.dds"
+        previewmodel="/heroes/dampeer/alt4/preview.mdf">
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	<recommendeditem name="Item_LoggersHatchet" />
+	
+	<recommendeditem name="Item_SoulscreamRing" />
+	<recommendeditem name="Item_GhostMarchers" />
+	<recommendeditem name="Item_IronShield" />
+	<recommendeditem name="Item_BloodChalice" />
+	<recommendeditem name="Item_ShrunkenHead" />
+	
+	<recommendeditem name="Item_SpellShards" />
+	<recommendeditem name="Item_Frostburn" />
+	<recommendeditem name="Item_NullStone" />
+	<recommendeditem name="Item_SymbolOfRage" />
+	<recommendeditem name="Item_DaemonicBreastplate" />
+	
+	<!-- normal ability 4 effects -->
+	<modifier key="Dampeer_Soul_1" modpriority="110"
+		passiveeffect="effects/soul1.effect" 
+	/>
+	
+	<modifier key="Dampeer_Soul_2" modpriority="120"
+		passiveeffect="effects/soul2.effect"
+	/>
+	
+	<modifier key="Dampeer_Soul_3" modpriority="130"
+		passiveeffect="effects/soul3.effect"
+	/>
+
+	<!-- Staff of the Master ability 4 effects -->
+	<modifier key="Dampeer_Soul_4" modpriority="140"
+		passiveeffect="effects/soul4_boost.effect"
+	/>
+	
+	<modifier key="Dampeer_Soul_5" modpriority="150"
+		passiveeffect="effects/soul5_boost.effect"
+	/>
+	
+	<modifier key="Dampeer_Soul_6" modpriority="160"
+		passiveeffect="effects/soul6_boost.effect"
+	/>
+	
+</hero>

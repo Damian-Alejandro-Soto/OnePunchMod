@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Magebane_Ability3_Mana"
+
+	icon="../../icon.dds"
+	effecttype=""
+	allowtransfer="false"
+	
+	passiveeffect="/heroes/javaras/alt9/ability_03/effects/state.effect"
+	
+	dynamicprecache="/heroes/javaras/alt9/ability_03/effects/mana_flare_link.effect,../alt9/ability_03/effects/impact.effect"
+>
+	<onframe />
+	
+	<oninflict>
+	</oninflict>
+	
+	<onabilityimpact>
+		<compare a="combat_manacost" b="0" op="gt">
+			<setvar0 a="0.30,0.50,0.70,0.90" b="combat_manacost" op="mult" />
+			<damage amount="1" b="var0" op="mult" effecttype="Magic" target="source_entity" source="this_inflictor_entity" />
+			
+			<!-- Dynamic VFX -->
+			<setstr0 a="altavatar_path" b="effects/mana_flare_link.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="this_inflictor_entity" target="source_entity" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/mana_flare_link.effect" source="this_inflictor_entity" target="source_entity" occlude="true" />
+			</else>
+			<setstr1 a="altavatar_path" b="effects/impact.effect" op="add" />
+			<exists path="str1">
+				<playeffectdynamic effect="str1" source="source_entity" target="this_inflictor_entity" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/impact.effect" source="source_entity" target="this_inflictor_entity" occlude="true" />
+			</else>
+		</compare>
+	</onabilityimpact>
+</state>

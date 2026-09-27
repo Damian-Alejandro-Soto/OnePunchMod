@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hero": "moon_queen",
+  "avatar": "alt5",
+  "files": [
+    "heroes\\moon_queen\\base\\hero.entity",
+    "heroes\\moon_queen\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\moon_queen\\base\\ability_01\\ability.entity",
+    "heroes\\moon_queen\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\moon_queen\\base\\ability_03\\state.entity",
+    "heroes\\moon_queen\\base\\ability_03\\state.entity.onepunch_ability_managed",
+    "heroes\\moon_queen\\base\\ability_04\\ability.entity",
+    "heroes\\moon_queen\\base\\ability_04\\ability.entity.onepunch_ability_managed",
+    "heroes\\moon_queen\\base\\ability_04\\affector.entity",
+    "heroes\\moon_queen\\base\\ability_04\\affector.entity.onepunch_ability_managed",
+    "heroes\\moon_queen\\base\\ability_04\\state.entity",
+    "heroes\\moon_queen\\base\\ability_04\\state.entity.onepunch_ability_managed",
+    "heroes\\moon_queen\\base\\projectile\\attack_projectile.entity",
+    "heroes\\moon_queen\\base\\projectile\\attack_projectile.entity.onepunch_ability_managed"
+  ]
+}

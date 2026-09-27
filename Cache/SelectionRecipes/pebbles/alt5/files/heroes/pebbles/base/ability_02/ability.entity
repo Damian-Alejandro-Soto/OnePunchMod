@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Pebbles2"
+	
+	icon="../../icon.dds"
+	
+	anim="ability_2"
+	casttime="600"
+	castactiontime="0"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetradius="300"
+	targetmaterial="/shared/materials/area_cast_indicator_simple.material"
+	casteffecttype="SuperiorMagic"
+	targetscheme="all_visible_units"
+	manacost="90,100,110,120"
+	cooldowntime="13000,12000,11000,10000"
+	cooldowntype="Rocky_Toss"
+	
+	range="500,700,900,1100"
+	
+	useproxy="true"
+	proxytargetscheme="chuck_targets"
+	proxyeffecttype=""
+	proxyselectionradius="275"
+	proxyselectionmethod="closest"
+	proxytargetmaterial="/shared/materials/area_cast_indicator_simple.material"
+
+	modifierkey="Rocky_Toss1,Rocky_Toss2,Rocky_Toss3,Rocky_Toss4"
+	
+	showareacast="true"
+	areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+	
+	showrangeandradiusintooltip="true"
+	doubleactivate="true"
+	
+	dynamicprecache="/heroes/rocky/alt5/ability_02/effects/launch.effect"
+>
+	<activatecost>
+		<!-- For enemy units, throw only if they have don't have Magic or Push Immunity, otherwise throw non-hero units regardless -->
+		<targettype type="enemy" target="this_proxy_entity">
+			<cantarget effecttype="Magic Push" target="this_proxy_entity" />
+			<else>
+				<!-- Edge case: Pebbles still needs to be able to cast if the grabbed proxy
+					is a push-immune non-ancient neutral. In that case, allow the cast and
+					handle the replacement rock throw in onimpact instead of invalidating. -->
+				<hasmodifier entity="this_proxy_entity" name="neutral_pushimmunity">
+					<cantarget targetscheme="enemy_npc_nonboss_nonancient_neutral_units" target="this_proxy_entity" />
+					<else>
+						<invalidate />
+					</else>
+				</hasmodifier>
+				<else>
+					<invalidate />
+				</else>
+			</else>
+		</targettype>
+
+		<!-- For ally units, throw only if they don't have Push Immunity -->
+		<else>
+			<cantarget effecttype="Push" target="this_proxy_entity" />
+			<else>
+				<invalidate />
+			</else>
+		</else>
+	</activatecost>
+
+	<onimpact>
+		<unbind target="this_proxy_entity" />
+		
+		<!-- Edge case: if the proxy is a push-immune non-ancient neutral, do not try to
+			throw the unit itself. Spawn a rock from Pebbles and throw that instead. -->
+		<hasmodifier entity="this_proxy_entity" name="neutral_pushimmunity">
+			<cantarget targetscheme="enemy_npc_nonboss_nonancient_neutral_units" target="this_proxy_entity">
+				<spawnprojectile name="Projectile_Pebbles_Ability2_Rock" source="source_entity" target="target_entity" ignoretargetoffset="true" noresponse="true" />
+			</cantarget>
+			<else>
+				<spawnprojectile name="Projectile_Pebbles_Ability2" proxy="this_proxy_entity" source="this_proxy_entity" target="target_entity" bind="this_proxy_entity" bindstate="State_Pebbles_Ability2" ignoretargetoffset="true" noresponse="true" />
+			</else>
+		</hasmodifier>
+		<else>
+			<spawnprojectile name="Projectile_Pebbles_Ability2" proxy="this_proxy_entity" source="this_proxy_entity" target="target_entity" bind="this_proxy_entity" bindstate="State_Pebbles_Ability2" ignoretargetoffset="true" noresponse="true" />
+		</else>
+		
+		<targettype type="ally" target="this_proxy_entity">
+			<spawnunit name="Gadget_Pebbles_Ability2" mount="this_proxy_entity" />
+		</targettype>
+		
+		<!-- Dynamic visual effects -->
+		<setstr0 a="altavatar_path" b="effects/launch.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="this_proxy_position" target="" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/launch.effect" source="this_proxy_position" target="" occlude="true" />
+		</else>
+	</onimpact>
+	
+	<ondoubleactivate>
+		<useability slot="1" target="source_entity" />
+	</ondoubleactivate>
+
+	<oncancel>
+		<playanim name="idle" target="source_entity" />
+	</oncancel>
+</ability>

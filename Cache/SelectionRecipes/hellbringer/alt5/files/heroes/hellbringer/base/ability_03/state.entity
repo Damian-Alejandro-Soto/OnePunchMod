@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hellbringer_Ability3"
+	
+	icon="iconb.tga"
+	passiveeffect="/heroes/hellbringer/alt5/ability_03/effects/state.effect"
+	displaylevel="true"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+
+	magicarmor="-1,-2,-3,-4"
+	
+	movespeedslowstart="0.25"
+	movespeedslowmid="0.25"
+	movespeedslowend="0"
+	movespeedslowmidpos="0.99"
+	movespeedslowduration="5000"
+
+	negativeeffect="slowed"
+>
+	<onframe />
+	
+	<ondamaged>
+		<heal a="0.15,0.20,0.25,0.30" b="source_damage" op="mult" target="this_inflictor_entity" />
+	</ondamaged>
+	
+	<modifier key="nobossarmor" modpriority="100" condition="Boss" notooltooltip="true"
+		magicarmor="0"
+	/>
+</state>

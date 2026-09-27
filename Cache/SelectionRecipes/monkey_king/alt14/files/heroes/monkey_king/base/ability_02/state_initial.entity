@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_MonkeyKing_Ability2_Initial"
+
+	icon="../../icon.dds"
+	
+	unitwalking="true"
+	buildingwalking="true"
+	cliffwalking="true"
+	disarmed="true"
+	stunned="true"
+	
+	effecttype=""
+	ishidden="true"
+	passiveeffect="/heroes/monkey_king/alt14/ability_02/effects/launch.effect"
+	modifierkey="Speeding"
+>
+</state>

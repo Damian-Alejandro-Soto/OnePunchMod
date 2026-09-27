@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_EmeraldWarden_Ability4_Invis"
+
+	icon="/heroes/emerald_warden/alt9/ability_04/pet/icon.tga"
+	passiveeffect=""
+
+	stealthtype="hero"
+	hideshadow="true"
+>
+	<oninflict>
+		<startfade />
+	</oninflict>
+</state>

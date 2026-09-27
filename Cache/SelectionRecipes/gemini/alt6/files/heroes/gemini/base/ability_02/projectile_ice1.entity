@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Gemini_Ability2_Ice1"
+
+	lifetime="400"
+	useexactlifetime="true"
+	
+	effectscale="1"
+	modelscale="1.65"
+	canturn="true"
+	flying="true"
+	flyheight="0"
+	
+	model="/heroes/gemini/alt6/ability_02/model_trail_ice.mdf"
+	impacteffect=""
+	traileffect="/heroes/gemini/alt6/ability_02/effects/trailfrost.effect"
+	
+	touchradius="150"
+	maxtouchespertarget="1"
+	touchradiusdiradjust="true"
+	touchtargetscheme="enemy_units"
+	toucheffecttype="Magic"
+	
+	curve="5000"
+>
+	<onimpact>
+		<spawnprojectile name="Projectile_Gemini_Ability2_Ice2" source="this_entity" target="proxy_entity" proxy="proxy_entity" pushentity="true" />
+		<spawnaffector name="Affector_Gemini_Ability2_Trees" target="stack_entity" />
+	</onimpact>
+	
+	<ontouch>
+		<applystate name="State_Gemini_Ability2_Damage2" duration="1000" />
+	</ontouch>
+</projectile>

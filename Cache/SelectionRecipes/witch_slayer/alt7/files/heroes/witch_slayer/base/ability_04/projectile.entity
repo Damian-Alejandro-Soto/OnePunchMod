@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_WitchSlayer_Ability4"
+
+	speed="3000"
+	gravity="0"	
+	
+	modelscale="0.65"
+	model="/heroes/flint_beastwood/base/projectile/effects/bullet/bullet.mdf"
+	deatheffect="effects/impact.effect"
+	effectscale="1"
+	
+	impactstealth="true"
+	canturn="true"
+	
+	traileffect="/heroes/witch_slayer/alt7/ability_04/effects/trail.effect"
+	impacteffect="/heroes/witch_slayer/alt7/ability_04/effects/ability_04_impact.effect"
+>
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<cantarget targetscheme="nonillusion_enemy_heroes">
+					<applystate name="State_WitchSlayer_Ability4_Stack" target="target_entity" duration="5000" />
+				</cantarget>
+				<hasmodifier name="ult_boost">
+					<pushtool source="this_inflictor_entity" name="Ability_WitchSlayer4" />
+					<evaluate a="25" b="charges" op="mult" />
+					<setvar0 a="750,950,1150" b="result" op="add" />
+					<damage effecttype="SuperiorMagic" amount="1" b="var0" op="mult" target="this_proxy_entity" />
+					
+					<spawnunit name="Gadget_WitchSlayer_Ability4" source="source_entity" owner="source_entity" target="target_entity" facing="target_entity" angle="param" pushentity="true" duration="100" />
+					<setpos0 position="stack_entity" offsetspace="stack_entity" offset="0 100 0" />
+					<setpos0 position="stack_entity" positionend="pos0" positionmodifier="pointonline" positionvalue="200" />
+					<setpos1 position="stack_entity" positionend="pos0" positionmodifier="pointonline" positionvalue="1200" />
+
+					<spawnprojectile name="Projectile_WitchSlayer_Ability4_Sotm" source="pos0" target="pos1" param="var0" offset="0 0 0" />
+				</hasmodifier>
+				<else>
+					<evaluate a="25" b="charges" op="mult" />
+					<evaluate a="550,750,950" b="result" op="add" />
+					<damage effecttype="Magic" amount="1" b="result" op="mult" target="this_proxy_entity" />
+				</else>			
+			</onimpact>
+		</combatevent>
+	</onimpact>
+
+</projectile>

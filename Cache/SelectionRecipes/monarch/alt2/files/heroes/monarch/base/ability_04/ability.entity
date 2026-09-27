@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Monarch4"
+	
+	icon="/heroes/monarch/alt2/ability_04/icon.dds"
+
+	anim="ability_4"
+	casttime="300"
+	castactiontime="0"
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_position"
+	casteffecttype="SuperiorMagic"
+	casteffect=""
+	targetscheme="ally_units"
+	
+	manacost="150"
+	cooldowntime="85000,77500,70000"
+
+	targetradius="50,50,50"
+	range="1000,1150,1300"
+	forcerange="1050,1200,1350"
+	
+	allowoutofrangecast="false"
+	allowoutofboundscast="true"
+	
+	showlinecast="true"
+	linecastrange="1025,1175,1325"
+	linecastwidth="350,400,450"
+
+	showrangeandradiusintooltip="true"
+	dynamicprecache="effects/impact.effect"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Monarch_Ability4_Linger" count="1" target="source_position" offsetspace="source_position" pushentity="true" facing="target_position" />
+		<setproxy target="stack_entity" />
+		<spawnunit name="Gadget_Monarch_Ability4" count="1" target="stack_entity" offset="0 -350 0" offsetspace="stack_entity" pushentity="true" />
+		<spawnprojectile name="Projectile_Monarch_Ability4" source="this_proxy_entity" bind="stack_entity" bindturn="true" proxy="stack_entity" target="target_position" offset="0 -350 0" offsetspace="this_proxy_entity" />
+	</onimpact>
+
+	<modifier key="ult_boost" modpriority="105" />
+</ability>

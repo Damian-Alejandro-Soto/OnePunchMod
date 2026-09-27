@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "hero": "dampeer",
+  "avatar": "alt10",
+  "files": [
+    "heroes\\dampeer\\base\\hero.entity",
+    "heroes\\dampeer\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\dampeer\\base\\ability_01\\affector.entity",
+    "heroes\\dampeer\\base\\ability_01\\affector.entity.onepunch_ability_managed",
+    "heroes\\dampeer\\base\\ability_02\\ability.entity",
+    "heroes\\dampeer\\base\\ability_02\\ability.entity.onepunch_ability_managed",
+    "heroes\\dampeer\\base\\ability_03\\state_ally.entity",
+    "heroes\\dampeer\\base\\ability_03\\state_ally.entity.onepunch_ability_managed"
+  ]
+}

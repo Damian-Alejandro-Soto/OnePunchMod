@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Engineer"
+	
+	team="Legion"
+	icon="/heroes/engineer/alt8/icon.dds"
+	portrait="/heroes/engineer/alt8/icon.dds"
+	model="/heroes/engineer/alt8/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/engineer/alt8/effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/engineer/alt8/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/engineer/alt8/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/engineer/alt8/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/engineer/alt8/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/engineer/alt8/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/engineer/alt8/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/engineer/alt8/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/engineer/alt8/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.45"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="240"
+	boundsradius="36"
+	selectionradius="74"
+	targetoffset="0 0 92"
+
+	category="cc physical"
+	difficulty="3"
+
+	midrating="3"
+	junglerating="0"
+	carryrating="5"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="2"
+	soloofflanerating="0"
+	rangedrating="5"
+	meleerating="0"
+	
+	movespeed="295"
+	turnrate="630"
+	turnsmoothing="0.05"
+	
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="0.8"
+	magicarmor="5"
+
+	inventory0="Ability_Engineer1"
+	inventory1="Ability_Engineer2"
+	inventory2="Ability_Engineer3"
+	inventory3="Ability_Engineer4"
+	inventory4="Ability_AttributeBoost"
+	inventory5="Ability_Engineer2b"
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="450"
+	attackcooldown="1700"
+	attackdamagemin="23"
+	attackdamagemax="30"
+	attacknumanims="2"
+	attackoffset="3 110 67"
+	attackprojectile="Projectile_Engineer_Attack"
+	attackrange="500"
+	attackstarteffect=""
+	attackactioneffect="/heroes/engineer/alt8/effects/attack_impact.effect"
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+	
+	corpsetime="3300"
+	corpsefadetime="3000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+	primaryattribute="Agility"
+	strength="20"
+	strengthperlevel="2"
+	agility="18"
+	agilityperlevel="3.0"
+	intelligence="20"
+	intelligenceperlevel="2.1"
+	
+
+	previewpos="0 0 -60"
+	previewangles="0 0 0"
+	previewscale="1.4"
+	
+	storemodel="/heroes/engineer/alt8/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.6"
+
+	unittype="masters_legacy_valid"
+ attackanim="attack_%"
+        icon2="/heroes/engineer/alt8/icon.dds"
+        previewmodel="/heroes/engineer/alt8/preview.mdf"
+        portraitcampos="18 0 20"
+        storepassiveeffect="/heroes/engineer/alt8/effects/body_store.effect">
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	
+	<recommendeditem name="Item_PowerSupply" />
+	<recommendeditem name="Item_Strength5" />
+	<recommendeditem name="Item_Soulscream" />
+	<recommendeditem name="Item_EnhancedMarchers" />
+	<recommendeditem name="Item_PushStaff" />
+	<recommendeditem name="Item_PortalKey" />
+	<recommendeditem name="Item_Stealth" />
+	<recommendeditem name="Item_ManaBurn1" />
+	<recommendeditem name="Item_Protect" />
+	<recommendeditem name="Item_ArclightCrown" />
+	
+	<modifier key="ult_boost" modpriority="101"
+    >
+        <aura state="State_Engineer_Ult_Boost" radius="0" targetscheme="self"/>
+    </modifier>
+
+	<modifier key="rift_hunter" passiveeffect="/heroes/engineer/alt8/effects/Rift_Hunter.effect" />
+</hero>

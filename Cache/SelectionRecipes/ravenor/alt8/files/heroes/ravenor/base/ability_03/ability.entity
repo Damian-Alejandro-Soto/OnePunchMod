@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Ravenor3"
+	
+	icon="/heroes/ravenor/alt8/ability_03/icon.dds"	
+	statuseffecttooltip=""
+	
+	anim="ability_3"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	
+	actiontype="passive"
+	casteffecttype="Magic"
+	targetradius="400"
+	
+	maxcharges="1"
+
+	modifierkey="Ravenor_E1,Ravenor_E2,Ravenor_E3,Ravenor_E4"
+	dynamicprecache="effects/ring.effect,effects/lightning_link.effect,effects/impact.effect"
+>
+	<onimpact />
+	
+	<modifier key="Ravenor_E1">
+		<onattackimpact propagatetoillusions="false">
+			<cantarget targetscheme="enemy_units">
+				<compare a="charges" b="0" op="le">
+					<!-- Main target -->
+					<targettype type="hero">
+						<damage effecttype="Magic" amount="20"  />
+						<heal a="6" target="source_entity" />
+					</targettype>
+					<else>
+						<damage effecttype="Magic" amount="20" b="3" op="mult"  />
+						<heal a="6" b="3" op="mult" target="source_entity" />
+					</else>
+					
+					<!-- Art -->
+					<setstr0 a="altavatar_path" b="effects/lightning_link.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/lightning_link.effect" />
+					</else>
+					<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" />
+					</else>
+					<setcharges a="1" />
+				</compare>
+				<else>
+					<removecharge />
+				</else>
+			</cantarget>
+		</onattackimpact>
+	</modifier>
+	
+	<modifier key="Ravenor_E2">
+		<onattackimpact propagatetoillusions="false">
+			<cantarget targetscheme="enemy_units">
+				<compare a="charges" b="0" op="le">
+					<!-- Main target -->
+					<targettype type="hero">
+						<damage effecttype="Magic" amount="20"  />
+						<heal a="6" target="source_entity" />
+					</targettype>
+					<else>
+						<damage effecttype="Magic" amount="20" b="3" op="mult"  />
+						<heal a="6" b="3" op="mult" target="source_entity" />
+					</else>
+					
+					<!-- Art -->
+					<setstr0 a="altavatar_path" b="effects/lightning_link.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/lightning_link.effect" />
+					</else>
+					<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" />
+					</else>
+	
+					<!-- Prioritize enemy heroes, then other enemy units -->
+					<areaofeffect
+						radius="400"
+						maxtotalimpacts="1"
+						effecttype="Magic"
+						targetselection="closest"
+						targetscheme="visible_enemy_units"
+						center="target_position"
+						ignore="target_entity"
+					>
+						<targettype type="hero">
+							<damage effecttype="Magic" amount="20"  />
+							<heal a="6" target="source_entity" />
+						</targettype>
+						<else>
+							<damage effecttype="Magic" amount="20" b="3" op="mult"  />
+							<heal a="6" b="3" op="mult" target="source_entity" />
+						</else>
+						
+						<setproxy entity="this_entity" target="target_entity" />
+						
+						<!-- Art -->
+						<setstr0 a="altavatar_path" b="effects/lightning_link.effect" op="add" />
+						<exists path="str0">
+							<playeffectdynamic effect="str0" />
+						</exists>
+						<else>
+							<playeffectdynamic effect="effects/lightning_link.effect" />
+						</else>
+						<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+						<exists path="str0">
+							<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+						</exists>
+						<else>
+							<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" />
+						</else>
+					</areaofeffect>
+					<compare a="result" b="1" op="lt">
+						<evaluate a="1" b="result" op="sub" />
+						<setaccumulator value="result" />
+						<areaofeffect
+							radius="400"
+							maxtotalimpacts="accumulator"
+							effecttype="Magic"
+							targetselection="closest"
+							targetscheme="visible_enemy_units"
+							center="target_position"
+							ignore="target_entity this_proxy_entity"
+						>
+							<targettype type="hero">
+								<damage effecttype="Magic" amount="20"  />
+								<heal a="6" target="source_entity" />
+							</targettype>
+							<else>
+								<damage effecttype="Magic" amount="20" b="3" op="mult"  />
+								<heal a="6" b="3" op="mult" target="source_entity" />
+							</else>
+							
+							<!-- Art -->
+							<setstr0 a="altavatar_path" b="effects/lightning_link.effect" op="add" />
+							<exists path="str0">
+								<playeffectdynamic effect="str0" />
+							</exists>
+							<else>
+								<playeffectdynamic effect="effects/lightning_link.effect" />
+							</else>
+							<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+							<exists path="str0">
+								<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+							</exists>
+							<else>
+								<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" />
+							</else>
+						</areaofeffect>
+					</compare>			
+					
+					<setcharges a="1" />
+				</compare>
+				<else>
+					<removecharge />
+				</else>
+			</cantarget>
+		</onattackimpact>
+	</modifier>
+
+	<modifier key="Ravenor_E3">
+		<onattackimpact propagatetoillusions="false">
+			<cantarget targetscheme="enemy_units">
+				<compare a="charges" b="0" op="le">
+					<!-- Main target -->
+					<targettype type="hero">
+						<damage effecttype="Magic" amount="20"  />
+						<heal a="6" target="source_entity" />
+					</targettype>
+					<else>
+						<damage effecttype="Magic" amount="20" b="3" op="mult"  />
+						<heal a="6" b="3" op="mult" target="source_entity" />
+					</else>
+					
+					<!-- Art -->
+					<setstr0 a="altavatar_path" b="effects/lightning_link.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/lightning_link.effect" />
+					</else>
+					<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" />
+					</else>
+
+					<!-- Prioritize enemy heroes, then other enemy units -->
+					<areaofeffect
+						radius="400"
+						maxtotalimpacts="2"
+						effecttype="Magic"
+						targetselection="closest"
+						targetscheme="visible_enemy_units"
+						center="target_position"
+						ignore="target_entity"
+					>
+						<targettype type="hero">
+							<damage effecttype="Magic" amount="20"  />
+							<heal a="6" target="source_entity" />
+						</targettype>
+						<else>
+							<damage effecttype="Magic" amount="20" b="3" op="mult"  />
+							<heal a="6" b="3" op="mult" target="source_entity" />
+						</else>
+						
+						<setproxy entity="this_entity" target="target_entity" />
+						
+						<!-- Art -->
+						<setstr0 a="altavatar_path" b="effects/lightning_link.effect" op="add" />
+						<exists path="str0">
+							<playeffectdynamic effect="str0" />
+						</exists>
+						<else>
+							<playeffectdynamic effect="effects/lightning_link.effect" />
+						</else>
+						<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+						<exists path="str0">
+							<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+						</exists>
+						<else>
+							<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" />
+						</else>
+					</areaofeffect>
+					<compare a="result" b="1" op="lt">
+						<evaluate a="1" b="result" op="sub" />
+						<setaccumulator value="result" />
+						<areaofeffect
+							radius="400"
+							maxtotalimpacts="accumulator"
+							effecttype="Magic"
+							targetselection="closest"
+							targetscheme="visible_enemy_units"
+							center="target_position"
+							ignore="target_entity this_proxy_entity"
+						>
+							<targettype type="hero">
+								<damage effecttype="Magic" amount="20"  />
+								<heal a="6" target="source_entity" />
+							</targettype>
+							<else>
+								<damage effecttype="Magic" amount="20" b="3" op="mult"  />
+								<heal a="6" b="3" op="mult" target="source_entity" />
+							</else>
+							
+							<!-- Art -->
+							<setstr0 a="altavatar_path" b="effects/lightning_link.effect" op="add" />
+							<exists path="str0">
+								<playeffectdynamic effect="str0" />
+							</exists>
+							<else>
+								<playeffectdynamic effect="effects/lightning_link.effect" />
+							</else>
+							<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+							<exists path="str0">
+								<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+							</exists>
+							<else>
+								<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" />
+							</else>
+						</areaofeffect>
+					</compare>			
+					
+					<setcharges a="1" />
+				</compare>
+				<else>
+					<removecharge />
+				</else>
+			</cantarget>
+		</onattackimpact>
+	</modifier>
+
+	<modifier key="Ravenor_E4">
+		<onattackimpact propagatetoillusions="false">
+			<cantarget targetscheme="enemy_units">
+				<compare a="charges" b="0" op="le">
+					<!-- Main target -->
+					<targettype type="hero">
+						<damage effecttype="Magic" amount="20"  />
+						<heal a="6" target="source_entity" />
+					</targettype>
+					<else>
+						<damage effecttype="Magic" amount="20" b="3" op="mult"  />
+						<heal a="6" b="3" op="mult" target="source_entity" />
+					</else>
+					
+					<!-- Art -->
+					<setstr0 a="altavatar_path" b="effects/lightning_link.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/lightning_link.effect" />
+					</else>
+					<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" />
+					</else>
+
+					<!-- Prioritize enemy heroes, then other enemy units -->
+					<areaofeffect
+						radius="400"
+						maxtotalimpacts="3"
+						effecttype="Magic"
+						targetselection="closest"
+						targetscheme="visible_enemy_units"
+						center="target_position"
+						ignore="target_entity"
+					>
+						<targettype type="hero">
+							<damage effecttype="Magic" amount="20"  />
+							<heal a="6" target="source_entity" />
+						</targettype>
+						<else>
+							<damage effecttype="Magic" amount="20" b="3" op="mult"  />
+							<heal a="6" b="3" op="mult" target="source_entity" />
+						</else>
+						
+						<setproxy entity="this_entity" target="target_entity" />
+						
+						<!-- Art -->
+						<setstr0 a="altavatar_path" b="effects/lightning_link.effect" op="add" />
+						<exists path="str0">
+							<playeffectdynamic effect="str0" />
+						</exists>
+						<else>
+							<playeffectdynamic effect="effects/lightning_link.effect" />
+						</else>
+						<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+						<exists path="str0">
+							<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+						</exists>
+						<else>
+							<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" />
+						</else>
+					</areaofeffect>
+					<compare a="result" b="1" op="lt">
+						<evaluate a="1" b="result" op="sub" />
+						<setaccumulator value="result" />
+						<areaofeffect
+							radius="400"
+							maxtotalimpacts="accumulator"
+							effecttype="Magic"
+							targetselection="closest"
+							targetscheme="visible_enemy_units"
+							center="target_position"
+							ignore="target_entity this_proxy_entity"
+						>
+							<targettype type="hero">
+								<damage effecttype="Magic" amount="20"  />
+								<heal a="6" target="source_entity" />
+							</targettype>
+							<else>
+								<damage effecttype="Magic" amount="20" b="3" op="mult"  />
+								<heal a="6" b="3" op="mult" target="source_entity" />
+							</else>
+							
+							<!-- Art -->
+							<setstr0 a="altavatar_path" b="effects/lightning_link.effect" op="add" />
+							<exists path="str0">
+								<playeffectdynamic effect="str0" />
+							</exists>
+							<else>
+								<playeffectdynamic effect="effects/lightning_link.effect" />
+							</else>
+							<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+							<exists path="str0">
+								<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+							</exists>
+							<else>
+								<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" />
+							</else>
+						</areaofeffect>
+					</compare>			
+					
+					<setcharges a="1" />
+				</compare>
+				<else>
+					<removecharge />
+				</else>
+			</cantarget>
+		</onattackimpact>
+	</modifier>
+
+	<modifier key="ult_boost" modpriority="100"
+		actiontype="target_position"
+		range="1050"
+		targetradius="500"
+		manacost="0"
+		cooldowntime="45000"
+		casttime="100"
+		castactiontime="100"
+		targetmaterial="/shared/materials/area_cast_indicator_simple.material"
+		showareacast="true"
+		areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+	>
+		<onimpact>
+			<spawnaffector name="Affector_Ravenor_Ability3" target="target_position" />
+		</onimpact>
+	</modifier>
+</ability>

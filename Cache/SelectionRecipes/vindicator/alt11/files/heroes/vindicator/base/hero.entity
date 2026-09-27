@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Vindicator"
+
+	team="Legion"
+	icon="/heroes/vindicator/alt11/icon.dds"
+	portrait="/heroes/vindicator/alt11/icon.dds"
+	model="/heroes/vindicator/alt11/model.mdf"
+	skin=""
+	
+	passiveeffect="effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/vindicator/alt11/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/vindicator/alt11/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/vindicator/alt11/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/vindicator/alt11/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/vindicator/alt11/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/vindicator/alt11/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/vindicator/alt11/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/vindicator/alt11/sounds/voice/taunt_after.wav"
+	
+	infoheight="185"
+	
+	preglobalscale="0.5"
+	modelscale="1.2"
+	effectscale="1"
+	boundsheight="160"
+	boundsradius="24"
+	selectionradius="55"
+	targetoffset="0 0 64"
+	portraitcampos="-30 120 -50"
+
+	category="cc physical"
+	difficulty="3"
+
+	midrating="3"
+	junglerating="0"
+	carryrating="2"
+	hardsupportrating="5"
+	softsupportrating="4"
+	offlanerating="2"
+	soloofflanerating="0"
+	rangedrating="5"
+	meleerating="0"
+
+	movespeed="290"
+	turnrate="810"
+	turnsmoothing="0.05"
+	
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="0.46"
+	magicarmor="5"
+
+	inventory0="Ability_Vindicator1"
+	inventory1="Ability_Vindicator2"
+	inventory2="Ability_Vindicator3"
+	inventory3="Ability_Vindicator4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="400"
+	attackcooldown="1700"
+	attackdamagemin="24"
+	attackdamagemax="34"
+	attacknumanims="2"
+	attackoffset="-20 54 100"
+	attackprojectile="Projectile_Vindicator_Attack"
+	attackrange="550"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+	
+	corpsetime="3300"
+	corpsefadetime="3000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+	primaryattribute="intelligence"
+	strength="19"
+	strengthperlevel="1.8"
+	agility="17"
+	agilityperlevel="2.2"
+	intelligence="22"
+	intelligenceperlevel="2.8"
+	
+
+	previewpos="0 0 -60"
+	previewangles="0 0 0"
+	previewscale="0.5"
+
+	storemodel="/heroes/vindicator/alt11/preview.mdf"
+	storepos="0 0 -25"
+	storeangles="0 0 0"
+	storescale="0.5"
+ attackanim="attack_%"
+        icon2="/heroes/vindicator/alt11/icon.dds"
+        previewmodel="/heroes/vindicator/alt11/preview.mdf">
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_AmuletofExile" />
+	<recommendeditem name="Item_Striders" />
+	<recommendeditem name="Item_PostHaste" />
+	<recommendeditem name="Item_PegasusBoots" />
+	<recommendeditem name="Item_TabletofCommand" />
+	<recommendeditem name="Item_Stormspirit" />
+	<recommendeditem name="Item_RestorationStone" />
+	<recommendeditem name="Item_KuldrasSheepstick" />
+	<recommendeditem name="Item_SandScepter" />
+	<recommendeditem name="Item_Hellflower" />
+	
+	<gooditemagainst name="Item_KuldrasSheepstick" />
+	<gooditemagainst name="Item_IronShield" />
+	<gooditemagainst name="Item_NullStone" />
+	<gooditemagainst name="Item_Brutalizer" />
+	<gooditemagainst name="Item_SpikedBola" />
+	
+	
+	
+</hero>

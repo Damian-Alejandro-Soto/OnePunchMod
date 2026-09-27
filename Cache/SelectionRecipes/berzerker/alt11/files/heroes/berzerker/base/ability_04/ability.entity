@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Berzerker4"
+
+	icon="/heroes/berzerker/alt11/ability_04/icon.dds"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+	casteffect="effects/state_begin.effect"
+
+	actiontype="target_self"
+	frontqueue="true"
+	inheritmovement="true"
+	noninterrupting="true"
+	novoiceresponse="true"
+	nonaggressive="true"
+	anim="ability_4"
+
+	casttime="0"
+	castactiontime="0"
+	cooldowntime="70000,55000,40000"
+	noresponse="true"
+
+	nosilence="true"
+	nostun="true"
+	noforce="true"
+
+	modifierkey=""
+>
+	<onimpact>
+		<dispel type="StatusDebuff" target="source_entity" />
+		<dispel type="StatusDisable" target="source_entity" />
+		<clearforcedorders target="source_entity" />
+		<applystate name="State_Berzerker_Ability4" target="source_entity" duration="12000" />
+	</onimpact>
+</ability>

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "revenant",
+  "legacy_folder": "revenant",
+  "avatar": "alt3",
+  "counts": {
+    "files": 134,
+    "models": 43,
+    "materials": 10,
+    "textures": 13,
+    "effects": 19,
+    "sounds": 48,
+    "icons": 1,
+    "entities": 1
+  },
+  "unresolved": [],
+  "status": "clean"
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Monarch_Ability4"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/monarch/alt5/ability_04/effects/state_buff.effect"
+
+	effecttype="StatusBuff"
+	allowtransfer="true"
+	movespeed="50,75,100"
+>
+
+</state>

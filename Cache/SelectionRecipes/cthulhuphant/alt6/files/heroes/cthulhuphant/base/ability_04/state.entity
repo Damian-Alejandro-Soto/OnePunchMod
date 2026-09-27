@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<statenetaccum
+	name="State_Cthulhuphant_Ability4"
+
+	icon="../../icon.dds"
+	
+	passiveeffect="/heroes/cthulhuphant/alt6/ability_04/effects/insanity_max.effect"
+	effecttype=""
+	
+	shield="true"
+	maxaccumulator="1"
+	dynamicprecache="effects/impact.effect"
+>
+	<oninflict>
+		<setaccumulator value="0" />
+	</oninflict>
+	
+	<aura name="cthulhutauntaura" state="State_Cthulhuphant_Ability4_Taunt" radius="375,425,475" effecttype="Debuff" targetscheme="enemy_units" disablenegativeeffectpopuponrefresh="true" />
+	
+	<ondamaged>
+		<!-- Calculate damage that will be absorbed -->
+		<evaluate a="damage_attempted" b="0.4,0.45,0.5" op="mult"/>
+		<!-- Find the percentage of max health the damage has dealt -->
+		<evaluate a="result" b="source_maxhealth" op="div" />
+		<!-- Max effectiveness is reached after taking 50% of max Health as damage, thus we need to multiply the damage that's being accumulated by 2 (or divide by 0.5) -->
+		<evaluate a="result" b="2" op="mult" />
+		<evaluate a="result" b="accumulator" op="add" /> 
+		<setaccumulator value="result" />
+		<scaledamage scale="0.6,0.55,0.5" />
+	</ondamaged>
+	
+	<onexpired> 
+		<areaofeffect
+			radius="375,425,475"
+			targetselection="all"
+			targetscheme="enemy_units"
+			effecttype="Magic"
+		>
+			<expirestate name="State_Cthulhuphant_Ability4_Taunt"/>
+			<evaluate a="120,185,250" b="accumulator" op="mult" />
+			<damage effecttype="Magic" amount="120,185,250" b="result" op="add" />
+			<targettype type="hero">
+				<hasmodifier name="ult_boost" entity="source_entity">
+					<applystate name="State_Ctuhlhuphant_Ability3_Strength" duration="24000" target="source_entity" />
+				</hasmodifier>
+			</targettype>
+		</areaofeffect>
+
+		<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" />
+		</else>
+	</onexpired>
+
+	</statenetaccum>

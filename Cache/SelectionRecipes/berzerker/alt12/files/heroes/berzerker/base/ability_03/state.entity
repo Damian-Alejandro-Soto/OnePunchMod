@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Berzerker_Ability3"
+
+	icon="/heroes/berzerker/alt12/ability_02/icon.dds"
+	passiveeffect="/heroes/berzerker/alt12/ability_02/effects/state_self.effect"
+	
+	impactinterval="500"
+	strengthpercharge="1"
+	
+	maxcharges="100"
+	dynamicprecache="effects/impact.effect"
+>
+	<!-- impactinterval arms on Spawn and only fires a full interval later, so the opening
+	     pulse is mirrored here to land on the cast frame alongside the creep damage. -->
+	<oninflict>
+		<areaofeffect
+			radius="600"
+			targetselection="all"
+			targetscheme="enemy_heroes"
+			effecttype=""
+			maximpactspertarget="1"
+		>
+			<applystate name="State_Berzerker_Ability3_Enemy" target="target_entity" duration="6000" />
+			<addcharges count="1" />
+			<heal a="10" target="source_entity" />
+			<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="target_entity" target="source_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/impact.effect" source="target_entity" target="source_entity" />
+			</else>
+		</areaofeffect>
+	</oninflict>
+	
+	<onimpact>
+		<areaofeffect
+			radius="600"
+			targetselection="all"
+			targetscheme="enemy_heroes"
+			effecttype=""
+			maximpactspertarget="1"
+		>
+			<applystate name="State_Berzerker_Ability3_Enemy" target="target_entity" duration="6000" />
+			<addcharges count="1" />
+			<heal a="10" target="source_entity" />
+			<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="target_entity" target="source_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/impact.effect" source="target_entity" target="source_entity" />
+			</else>
+		</areaofeffect>
+	</onimpact>
+	
+	<onframe>
+		<hasmodifier name="iamsheeped" entity="this_owner_entity">
+			<activatemodifierkey name="iamsheeped" />
+		</hasmodifier>
+		<else>
+			<deactivatemodifierkey name="iamsheeped" />
+		</else>
+	</onframe>
+	
+	<modifier key="iamsheeped" modpriority="1000"
+		passiveeffect=""
+	/>
+	
+	<onexpired>
+		<applystate name="State_Berzerker_Ability3_Buff" target="source_entity" duration="6000" pushentity="true" />
+		<addcharges count="charges" entity="stack_entity" />
+	</onexpired>
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+
+	
+</state>

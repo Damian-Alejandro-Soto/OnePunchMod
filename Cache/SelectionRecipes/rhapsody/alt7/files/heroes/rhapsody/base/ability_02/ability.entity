@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Rhapsody2"
+	
+	icon="/heroes/rhapsody/alt7/ability_02/icon.dds"
+	
+	anim="ability_2"
+	casttime="500"
+	castactiontime="300"
+	casteffect=""
+	targetradius="400"
+	targetmaterial="/shared/materials/area_cast_indicator_pointed.material"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	casteffecttype="Magic"
+	targetscheme="all_units"
+	
+	manacost="85,95,105,115"
+	cooldowntime="15000"
+	cooldowntype="rhapsody_w"
+	
+	range="600"
+	
+	showareacast="true"
+	areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+	
+	showrangeandradiusintooltip="true"
+	
+	doubleactivate="true"
+	modifierkey="rhapsody_W1,rhapsody_W2,rhapsody_W3,rhapsody_W4"
+	modifierkey2="rhapsody_W"
+>
+	<ondoubleactivate>
+		<useability slot="1" target="source_position" />
+	</ondoubleactivate>
+	
+	<onimpact>
+		<spawnaffector name="Affector_Rhapsody_Ability2_Enemies" target="target_position" />
+		<spawnaffector name="Affector_Rhapsody_Ability2_Allies" target="target_position" />
+		<spawnunit name="Gadget_Rhapsody_Ability2" target="target_position" />
+	</onimpact>
+</ability>

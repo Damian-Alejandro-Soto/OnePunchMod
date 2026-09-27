@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "tarot",
+  "avatar": "trophy_skin",
+  "files": [
+    "heroes\\tarot\\base\\hero.entity",
+    "heroes\\tarot\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

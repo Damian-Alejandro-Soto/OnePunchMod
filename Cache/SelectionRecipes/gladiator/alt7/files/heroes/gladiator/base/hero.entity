@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Gladiator"
+
+	team="Legion"
+	icon="/heroes/gladiator/alt7/icon.dds"
+	animatedportrait=""
+	portrait="/heroes/gladiator/alt7/icon.dds"
+	model="/heroes/gladiator/alt7/model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/gladiator/alt7/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/gladiator/alt7/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/gladiator/alt7/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/gladiator/alt7/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/gladiator/alt7/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/gladiator/alt7/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/gladiator/alt7/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/gladiator/alt7/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="2"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="160"
+	boundsradius="24"
+	selectionradius="60"
+	targetoffset="0 0 92"
+
+	category="physical cc"
+	difficulty="4"
+
+	midrating="5"
+	junglerating="0"
+	carryrating="2"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="4"
+	soloofflanerating="1"
+	rangedrating="0"
+	meleerating="5"
+
+	movespeed="300"
+	turnrate="720"
+	turnsmoothing="0.1"
+
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="1.5"
+	magicarmor="5"
+
+	inventory0="Ability_Gladiator1"
+	inventory1="Ability_Gladiator2"
+	inventory2="Ability_Gladiator3"
+	inventory3="Ability_Gladiator4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="900"
+	attackactiontime="400"
+	attackcooldown="1700"
+	attackdamagemin="26"
+	attackdamagemax="36"
+	attacknumanims="2"
+	attackoffset="0 30 100"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="strength"
+	strength="24"
+	strengthperlevel="3"
+	agility="14"
+	agilityperlevel="1.2"
+	intelligence="18"
+	intelligenceperlevel="2.0"
+	
+
+	previewpos="0 0 -50"
+	previewangles="0 0 0"
+	previewscale="1.7"
+	
+	storemodel="/heroes/gladiator/alt7/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.85"
+	
+	corpsetime="2000"
+	corpsefadetime="2500"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	
+	unittype="masters_legacy_valid"
+ attackanim="attack_%"
+        portraitcampos="-10 -5 15"
+        icon2="/heroes/gladiator/alt7/icon.dds"
+        previewmodel="/heroes/gladiator/alt7/preview.mdf">
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_BloodChalice" />
+	<recommendeditem name="Item_PlatedGreaves" />
+	<recommendeditem name="Item_GhostMarchers" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_KuldrasSheepstick" />
+	<recommendeditem name="Item_IronShield" />
+	<recommendeditem name="Item_HelmoftheBlackLegion" />
+	<recommendeditem name="Item_AssassinsShroud" />
+	<recommendeditem name="Item_UltorsHeavyPlate" />
+	<recommendeditem name="Item_BehemothsHeart" />
+	<recommendeditem name="Item_Genjuro" />
+	<recommendeditem name="Item_ShieldoftheFive" />
+	<recommendeditem name="Item_FrostfieldPlate" />
+	<recommendeditem name="Item_Riftshards" />
+	<recommendeditem name="Item_RunedCleaver" />
+	<recommendeditem name="Item_Hellflower" />
+	
+	<gooditemagainst name="Item_MysticVestments" />
+	<gooditemagainst name="Item_Stormspirit" />
+	<gooditemagainst name="Item_KuldrasSheepstick" />
+	<gooditemagainst name="Item_NullStone" />
+	<gooditemagainst name="Item_Riftshards" />
+	
+	
+	
+	<modifier key="ability3" modpriority="1"
+		passiveeffect=""
+	/>
+	
+	<modifier key="iamsheeped" modpriority="100"
+		passiveeffect=""
+	/>
+</hero>

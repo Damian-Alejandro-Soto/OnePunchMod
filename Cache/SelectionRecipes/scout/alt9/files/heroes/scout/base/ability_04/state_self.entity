@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Scout_Ability4_Self"
+
+	ishidden="true"
+	
+	passiveeffect="/heroes/scout/alt9/ability_04/effects/channeling.effect"
+>
+
+</state>

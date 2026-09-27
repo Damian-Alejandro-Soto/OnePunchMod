@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_PlagueRider_Ability2_Effect"
+	
+	icon="/heroes/diseasedrider/alt6/ability_02/icon.dds"
+	passiveeffect="/heroes/diseasedrider/alt6/ability_02/effects/state_link.effect"
+
+	effecttype="StatusDebuff"
+	allowtransfer="false"
+	
+	alwaystransmitdata="true"
+
+	magicarmor="-1,-2,-3,-4"
+	restrained="true"
+	negativeeffect="restrained"
+	dynamicprecache="effects/slimeimpact.effect"
+>
+	<onframe>
+		<!-- Pull logic -->
+		<hasmodifier name="PlagueRider_W_PushImmunity" entity="this_owner_entity" />
+		<else>
+			<push force="-30" frame="true" source="this_proxy_position" />
+		</else>		
+		<hasmodifier name="PlagueRider_W_ImmobilePush" entity="this_owner_entity">
+			<push force="-500" frame="true" source="this_proxy_position" />
+		</hasmodifier>
+		
+		<!-- Expiration logic -->
+		<distance source="this_proxy_entity" target="this_owner_entity" />
+		<compare a="result" b="500" op="gt">
+			<expire />
+		</compare>
+		
+		<compare a="var0" b="500" op="ge">
+			<!-- VFX -->
+			<setstr0 a="altavatar_path" b="effects/slimeimpact.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="this_owner_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/slimeimpact.effect" source="this_owner_entity" />
+			</else>
+			<expire />
+		</compare>
+		<else>
+			<compare a="var0" b="250" op="ge">
+				<applystate name="State_PlagueRider_Ability2" target="this_owner_entity" duration="frametime" proxy="this_entity" />
+			</compare>
+		</else>		
+	</onframe>
+
+	<onexpired>
+		<kill target="this_proxy_entity" source="" />
+	</onexpired>
+</state>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Berzerker_Ability1"
+
+	speed="4000"
+	gravity="0"
+
+	modelscale="2"
+	model="effects/hook/model.mdf"
+	impacteffect=""
+	traileffect="/heroes/berzerker/alt10/ability_01/effects/trail.effect"
+	
+	canturn="false"
+	flying="true"
+	flyheight="130"
+>
+</projectile>

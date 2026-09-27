@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Magmus2"
+
+	icon="../../icon.dds"
+	statuseffecttooltip="State_Magmus_Ability2"
+	
+	anim="ability_2"
+	casttime="0"
+	castactiontime="0"
+	channeltime="60000"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	targetradius="450"
+	casteffect="/heroes/magmar/set_ascension/ability_02/effects/cast.effect"
+	
+	actiontype="target_self"
+	targetscheme="nonneutral_enemy_units"
+
+	ischanneling="true"
+	safechannel="false"
+	
+	manacost="60,50,40,30"
+	cooldowntime="40000,30000,20000,10000"
+	dynamicprecache="effects/aoe2.effect"
+ passiveeffect="/heroes/magmar/set_ascension/ability_01/effects/state.effect">
+	<onchannelstart>
+		<disjoint target="source_entity" />
+		<applystate name="State_Magmus_Ability2_Aura" target="source_entity" ischannel="true"/>
+		<spawnaffector name="Affector_Magmus_Ability2" target="source_position" ischannel="true"/>
+	</onchannelstart>
+</ability>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_EmeraldWardenpet_Ability3_Storm"
+
+	icon="/heroes/emerald_warden/alt2/ability_04/effects/ability_03/icon.dds"
+	
+	passiveeffect="/heroes/emerald_warden/alt2/ability_04/effects/ability_03/state.effect"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="false"
+	
+	movespeedslow="0.3"
+>
+	<onframe>
+		<damage effecttype="Magic DOT" amount="50" b="frametime" op="mult" source="source_owner_entity" />
+	</onframe>
+</state>

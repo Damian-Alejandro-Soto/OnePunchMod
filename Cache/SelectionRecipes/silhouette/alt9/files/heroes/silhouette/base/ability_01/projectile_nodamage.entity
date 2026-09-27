@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Silhouette_Ability1_NoDamage"
+
+	speed="1800"
+	gravity="0"
+
+	modelscale=".75"
+	model="/heroes/silhouette/alt9/ability_01/effects/dagger/model_projectile.mdf"
+
+	effectscale="1.0"
+	impacteffect="effects/impact.effect"
+	traileffect="/heroes/silhouette/alt9/ability_01/effects/projectile_trail.effect"
+	
+	canturn="true"
+	flying="true"
+	flyheight="50"
+	
+	maxtouches="1"
+	touchradius="1"
+	touchtargetscheme="enemy_units"
+	toucheffecttype="Magic"
+>
+	
+</projectile>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Martyr_Ability4_Root"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/martyr/alt6/ability_04/effects/root.effect"
+	
+	ishidden="false"
+
+	effecttype=""
+
+	immobilized2="true"
+>
+
+</state>

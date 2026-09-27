@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Kane_Ability3"
+	icon="../../icon.dds"
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	passiveeffect="/heroes/kane/alt6/ability_03/effects/state.effect"
+	
+	maxcharges="1,2,3,4"
+>
+	<onframe />
+
+	<onattackdamageevent>
+		<setvar0 a="charges" b="0.20" op="mult" />
+		<setvar1 a="1" b="var0" op="sub" />
+		<setvalue name="damage_attempted" a="damage_attempted" b="var1" op="mult" />
+	</onattackdamageevent>
+</state>

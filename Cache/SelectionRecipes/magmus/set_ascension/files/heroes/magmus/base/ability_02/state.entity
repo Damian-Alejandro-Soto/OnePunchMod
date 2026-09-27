@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Magmus_Ability2"
+	icon="/heroes/magmar/set_ascension/ability_02/icon.dds"
+
+	effecttype="StatusStealth"
+	displaylevel="true"
+	
+	dispelonaction="true"
+	
+	stealthtype="hero"
+	hideshadow="true"
+	fadetime="0"
+	unitwalking="true"
+	
+>
+</state>

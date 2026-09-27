@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_PollywogPriest_Ability1"
+
+	radiusstart="200"
+	radiusend="300"
+
+	speed="2500"
+	lifetime="312"
+	
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="visible_enemy_units"
+	effecttype="Magic"
+	
+	impacteffect="/heroes/pollywogpriest/alt6/ability_01/effects/impact.effect"
+	bridgeeffect="effects/cast.effect"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="105,170,235,300" />
+	</onimpact>
+</affector>

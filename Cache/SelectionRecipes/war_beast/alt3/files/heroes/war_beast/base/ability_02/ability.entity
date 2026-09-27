@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_WarBeast2"
+
+	icon="/heroes/wolfman/alt/ability_02/icon.dds"
+	statuseffecttooltip="State_WarBeast_Ability2"
+	statuseffecttooltip2="State_WarBeast_Ability2_Units"
+	
+	anim="ability_2"
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	
+	casttime="0"
+	castactiontime="0"
+	casteffect="effects/cast.effect"
+
+	actiontype="global"
+	targetscheme="player_controlled_ally_units"
+	casteffecttype="Magic GlobalAbility"
+	
+	frontqueue="true"
+	inheritmovement="true"
+	nonaggressive="true"
+	
+	manacost="50"
+	cooldowntime="70000,60000,50000,40000"
+	dynamicprecache="effects/impact.effect"
+>
+	<onaction>
+		<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impact.effect" />
+		</else>
+	</onaction>
+
+	<onimpact>
+		<targettype type="hero">
+			<applystate name="State_WarBeast_Ability2" duration="20000" target="target_entity"/>
+		</targettype>
+		<else>
+			<applystate name="State_WarBeast_Ability2_Units" duration="20000" target="target_entity"/>
+		</else>
+	</onimpact>
+</ability>

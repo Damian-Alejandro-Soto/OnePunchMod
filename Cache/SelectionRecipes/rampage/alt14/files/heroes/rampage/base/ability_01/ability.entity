@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Rampage1"
+
+	icon="/heroes/Rampage/alt14/ability_01/icon.dds"
+	statuseffecttooltip="State_Rampage_Ability1_Self"
+	
+	anim="ability_1"
+	casttime="1000"
+	castactiontime="250"
+	casteffect=""
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	casteffecttype="Physical"
+	range="99999"
+	
+	activatescheme="movement"
+	
+	manacost="100"
+	cooldowntime="20000"
+	
+	dontshowhovercast="true"
+	dynamicprecache="../ability_03/effects/impact.effect,../ability_03/effects/cast.effect"
+>
+	<onstart>
+		<applystate name="State_Rampage_Ability1_Perplexed" target="source_entity" duration="250" />
+	</onstart>
+	
+	<onpreimpact>
+		<applystate name="State_Rampage_Ability1_Sight" target="target_entity" duration="100" />
+		<applystate name="State_Rampage_Ability1_Disabled" target="source_entity" duration="100" />
+	</onpreimpact>
+	
+	<onimpact>
+		<resetcooldown entity="this_entity" /> <!-- Removes the cooldown since the skill is disabled, only for timer display -->
+		<order command="attack" source="source_entity" target="target_entity" queue="front" />
+		<order command="event" source="source_entity" target="target_entity" queue="front" ordername="Order_Rampage_Ability1" ignoresight="true" />
+		<spawnaffector name="Affector_Rampage_Ability1_Self" target="source_entity" source="source_entity" proxy="target_entity" pushentity="true" />
+		
+		<cantarget targetscheme="enemy_heroes">
+			<ping source="source_entity" target="target_entity" />
+			<chatmessage message="ability_rampage_charge" paramplayer1="source_entity" paramplayer2="target_entity" important="true" entity="" team="source_team" />
+		</cantarget>
+	</onimpact>
+
+	<!-- Midwars-only changes for tooltip routing -->
+	<modifier key="OnlyMidMap" modpriority="100">
+	</modifier>
+	
+	<modifier key="ult_boost" modpriority="101">
+		<!-- Copy of above for tooltips -->
+		<onimpact>
+			<resetcooldown entity="this_entity" /> <!-- Removes the cooldown since the skill is disabled, only for timer display -->
+			<order command="attack" source="source_entity" target="target_entity" queue="front" />
+			<order command="event" source="source_entity" target="target_entity" queue="front" ordername="Order_Rampage_Ability1" ignoresight="true" />
+			<spawnaffector name="Affector_Rampage_Ability1_Self" target="source_entity" source="source_entity" proxy="target_entity" pushentity="true" />
+			
+			<cantarget targetscheme="enemy_heroes">
+				<ping source="source_entity" target="target_entity" />
+				<chatmessage message="ability_rampage_charge" paramplayer1="source_entity" paramplayer2="target_entity" important="true" entity="" team="source_team" />
+			</cantarget>
+		</onimpact>
+		
+		<onkill propagatetoillusions="false" >
+			<targettype type="hero">
+				<targettype type="illusion" />
+				<else>
+					<targettype type="mimic" />
+					<else>
+						<targettype type="self" />
+						<else>
+							<targettype type="heropet" />
+							<else>
+								<reducecooldown duration="20000" />
+							</else>
+						</else>
+					</else>
+				</else>
+			</targettype>
+		</onkill>
+		
+		<onindirectkill>
+			<targettype type="hero">
+				<targettype type="illusion" />
+				<else>
+					<targettype type="mimic" />
+					<else>
+						<targettype type="self" />
+						<else>
+							<targettype type="heropet" />
+							<else>
+								<reducecooldown duration="20000" />
+							</else>
+						</else>
+					</else>
+				</else>
+			</targettype>
+		</onindirectkill>
+		
+		<onassist>
+			<targettype type="hero">
+				<targettype type="illusion" />
+				<else>
+					<targettype type="mimic" />
+					<else>
+						<targettype type="self" />
+						<else>
+							<targettype type="heropet" />
+							<else>
+								<reducecooldown duration="20000" />
+							</else>
+						</else>
+					</else>
+				</else>
+			</targettype>
+		</onassist>
+	</modifier>
+	
+	<modifier key="rampagedisabled" modpriority="150"
+		disabled="true"
+	/>
+</ability>

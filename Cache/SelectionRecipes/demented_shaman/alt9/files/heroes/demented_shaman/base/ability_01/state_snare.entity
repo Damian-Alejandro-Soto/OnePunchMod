@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_DementedShaman_Ability1_Snare"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/shaman/alt9/ability_01/effects/entangle.effect"
+
+	movespeedslowstart="0.55"
+	movespeedslowmid="0.55,0.7,0.85,1.0"
+	movespeedslowend="0.55,0.7,0.85,1.0"
+	movespeedslowmidpos="0.8"
+	movespeedslowduration="2000"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+
+	negativeeffect="slowed"
+>
+	<oninflict>
+		<applystate name="State_Stunned" duration="100" />
+		<damage effecttype="" amount="0.000001" nonlethal="true" />
+	</oninflict>
+
+	<onexpired>
+		<compare a="dispelled" b="0" op="eq">
+			<cantarget targetscheme="enemy_units">
+				<applystate name="State_Stunned" duration="300,600,900,1200" />
+				<applystate name="State_DementedShaman_Ability1_Damage" duration="8000" />
+			</cantarget>
+		</compare>
+	</onexpired>
+</state>

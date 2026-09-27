@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Pharaoh_Ability3_Explosion"
+	
+	lifetime="50"
+	radius="600"
+
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	maximpactspertarget="1"
+	
+	impacteffect="/heroes/mumra/alt6/ability_03/effects/impact.effect"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="80,120,160,200" />
+		<applystate name="State_Pharaoh_Ability3_Debuff" duration="1500" />
+	</onimpact>
+</affector>

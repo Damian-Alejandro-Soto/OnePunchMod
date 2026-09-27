@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_WitchSlayer4"
+
+	icon="../../icon.dds"
+	
+	anim="ability_4"
+	casttime="850"
+	castactiontime="300"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	casteffecttype="Magic"
+	
+	manacost="180,340,500"
+	cooldowntime="120000,85000,50000"
+	casteffect="/heroes/witch_slayer/alt7/ability_04/effects/sound.effect"
+	range="700"
+	novoiceresponse="true"
+	maxcharges="999"
+	
+	showareacast="true"
+	areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+
+	targetpriorities="enemy_heroes"
+	
+	dynamicprecache="/heroes/witch_slayer/alt7/ability_04/effects/cast.effect"
+>
+	<onlearn>
+	
+		<setstr0 a="altavatar_path" b="effects/cast.effect" op="add" />
+		<exists path="str0">
+			<setscriptvalue name="cast_effect" value="str0" entity="this_entity" />
+		</exists>
+		<else>
+				<setscriptvalue name="cast_effect" value="effects/cast.effect" entity="this_entity" />
+		</else>
+	</onlearn>
+	
+	<onimpact>
+		<spawnprojectile name="Projectile_WitchSlayer_Ability4" source="source_entity" target="target_entity" pushentity="true" noresponse="true" offset="-20 100 100" />
+		<addcharges entity="stack_entity" count="charges" />
+		<setproxy entity="stack_entity" target="target_entity" />
+	</onimpact>
+
+	<onaction>
+		<getscriptvalue name="cast_effect" destvar="str0" entity="this_entity" />
+		<playeffectdynamic effect="str0" target="source_entity" source="source_entity" occlude="true" />
+	</onaction>
+	
+	<modifier key="ult_boost" modpriority="100"
+		casteffecttype="SuperiorMagic"
+		displayname="true"
+	>
+		<onimpact>
+			<getyaw source="source_entity" target="target_entity" />
+			<spawnprojectile name="Projectile_WitchSlayer_Ability4" source="source_entity" target="target_entity" param="result" pushentity="true" noresponse="true" offset="-20 100 100" />
+			<addcharges entity="stack_entity" count="charges" />
+			<setproxy entity="stack_entity" target="target_entity" />
+		</onimpact>
+	</modifier>
+</ability>

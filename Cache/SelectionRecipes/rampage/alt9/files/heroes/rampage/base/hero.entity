@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Rampage"
+	
+
+	team="Legion"
+	icon="/heroes/rampage/alt9/icon.dds"
+	portrait="/heroes/rampage/alt9/icon.dds"
+	model="/heroes/rampage/alt9/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/rampage/alt9/effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn_rampage2.effect"
+	selectedsound="/heroes/rampage/alt9/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/rampage/alt9/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/rampage/alt9/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/rampage/alt9/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/rampage/alt9/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/rampage/alt9/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/rampage/alt9/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/rampage/alt9/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.225"
+	modelscale="1.0"
+	effectscale="1"
+	boundsheight="140"
+	boundsradius="32"
+	selectionradius="55"
+	targetoffset="0 0 64"
+
+	category="cc physical"
+	difficulty="2.5"
+
+	midrating="3"
+	junglerating="0"
+	carryrating="0"
+	hardsupportrating="0"
+	softsupportrating="3"
+	offlanerating="5"
+	soloofflanerating="4"
+	rangedrating="0"
+	meleerating="5"
+
+	movespeed="300"
+	turnrate="6000"
+	turnsmoothing="0.05"
+	
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="1.12"
+	magicarmor="5"
+
+	inventory0="Ability_Rampage1"
+	inventory1="Ability_Rampage2"
+	inventory2="Ability_Rampage3"
+	inventory3="Ability_Rampage4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="900"
+	attackactiontime="450"
+	attackcooldown="1700"
+	attackdamagemin="21"
+	attackdamagemax="31"
+	attacknumanims="2"
+	attackoffset="20 64 100"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+	
+	corpsetime="3300"
+	corpsefadetime="3000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+	primaryattribute="strength"
+	strength="24"
+	strengthperlevel="2.5"
+	agility="17"
+	agilityperlevel="1.9"
+	intelligence="15"
+	intelligenceperlevel="1.8"
+	
+
+	previewpos="0 0 -60"
+	previewangles="0 0 0"
+	previewscale="1.0"
+	
+	storemodel="/heroes/rampage/alt9/preview.mdf"
+	storepos="0 0 -30"
+	storeangles="0 0 0"
+	storescale="1.1"
+ attackanim="attack_%"
+        infoheight="225"
+        icon2="/heroes/rampage/alt9/icon.dds"
+        previewmodel="/heroes/rampage/alt9/preview.mdf"
+        storepassiveeffect="/heroes/rampage/alt9/effects/preview.effect"
+        previewpassiveeffect="/heroes/rampage/alt9/effects/preview.effect"
+        tooleffectkeyname0="Item_SolsBulwark"
+        tooleffectpath0="/heroes/rampage/alt9/upgraded_body/body.effect"
+        tooleffectgroup0="body"
+        tooleffectkeyname1="Item_DaemonicBreastplate"
+        tooleffectpath1="/heroes/rampage/alt9/upgraded_body/body.effect"
+        tooleffectgroup1="body"
+        tooleffectkeyname2=""
+        tooleffectpath2="/heroes/rampage/alt9/base_body/body.effect"
+        tooleffectgroup2="body"
+        tooleffectkeyname3="effect_UpgradedBoots"
+        tooleffectpath3="/heroes/rampage/alt9/dragon_upgraded_boots/body.effect"
+        tooleffectgroup3="boots"
+        tooleffectkeyname4="effect_Boots"
+        tooleffectpath4="/heroes/rampage/alt9/upgraded_boots/body.effect"
+        tooleffectgroup4="boots"
+        tooleffectkeyname5="effect_brand"
+        tooleffectpath5="/heroes/rampage/alt9/upgraded_weapon/body.effect"
+        tooleffectgroup5="weapon"
+        tooleffectkeyname8="Item_Insanitarius"
+        tooleffectpath8="/heroes/rampage/alt9/upgraded_helm/body.effect"
+        tooleffectgroup8="helm"
+        tooleffectkeyname9="Item_Shield2"
+        tooleffectpath9="/heroes/rampage/alt9/upgraded_helm/body.effect"
+        tooleffectgroup9="helm"
+        tooleffectkeyname10=""
+        tooleffectpath10="/heroes/rampage/alt9/base_helm/body.effect"
+        tooleffectgroup10="helm"
+        tooleffectkeyname11="Item_MagicArmor2"
+        tooleffectpath11="/heroes/rampage/alt9/dragon_upgraded_helm/body.effect"
+        tooleffectgroup11="dragonhelm"
+        tooleffectkeyname12="Item_ElderParasite"
+        tooleffectpath12="/heroes/rampage/alt9/dragon_upgraded_helm/body.effect"
+        tooleffectgroup12="dragonhelm"
+        tooleffectkeyname13=""
+        tooleffectpath13="/heroes/rampage/alt9/dragon_base_helm/body.effect"
+        tooleffectgroup13="dragonhelm"
+        tooleffectkeyname14="Item_PowerSupply"
+        tooleffectpath14="/heroes/rampage/alt9/upgraded_arms/body.effect"
+        tooleffectgroup14="arms"
+        tooleffectkeyname15="Item_BloodChalice"
+        tooleffectpath15="/heroes/rampage/alt9/upgraded_arms/body.effect"
+        tooleffectgroup15="arms"
+        tooleffectkeyname16="Item_Immunity"
+        tooleffectpath16="/heroes/rampage/alt9/dragon_upgraded_tail/body.effect"
+        tooleffectgroup16="tail"
+        tooleffectkeyname17="Item_Pierce"
+        tooleffectpath17="/heroes/rampage/alt9/dragon_upgraded_tail/body.effect"
+        tooleffectgroup17="tail"
+        tooleffectkeyname18=""
+        tooleffectpath18="/heroes/rampage/alt9/dragon_base_tail/body.effect"
+        tooleffectgroup18="tail"
+        tooleffectkeyname19="Item_BehemothsHeart"
+        tooleffectpath19="/heroes/rampage/alt9/upgraded_chest/body.effect"
+        tooleffectgroup19="chest"
+        tooleffectkeyname20="Item_PortalKey"
+        tooleffectpath20="/heroes/rampage/alt9/portalkey/body.effect"
+        tooleffectgroup20="pkey">
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_BloodChalice" />
+	<recommendeditem name="Item_GhostMarchers" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_Soultrap" />
+	<recommendeditem name="Item_KuldrasSheepstick" />
+	<recommendeditem name="Item_Energizer" />
+	<recommendeditem name="Item_IronShield" />
+	<recommendeditem name="Item_SolsBulwark" />
+	<recommendeditem name="Item_BehemothsHeart" />
+	
+	<gooditemagainst name="Item_PlatedGreaves" />
+	<gooditemagainst name="Item_Stormspirit" />
+	<gooditemagainst name="Item_KuldrasSheepstick" />
+	<gooditemagainst name="Item_VoidTalisman" />
+	<gooditemagainst name="Item_NullStone" />
+	<gooditemagainst name="Item_ShieldoftheFive" />
+	<gooditemagainst name="Item_FrostfieldPlate" />
+	<gooditemagainst name="Item_AdevesCloak" />
+	
+	
+	<!-- Midwars-only changes -->
+	<modifier key="OnlyMidMap" modpriority="100"
+		maxhealth="270"
+		armor="2.12"
+		magicarmor="7"
+	/>
+	
+
+	<modifier key="ult_boost" modpriority="101"
+    >
+        <aura state="State_Rampage_Ult_Boost" radius="0" targetscheme="self"/>
+    </modifier>
+	
+	<modifier key="iamsheeped" modpriority="1000"
+		passiveeffect=""
+	/>
+	
+	<modifier key="Rampage_Q_WarpState" modpriority="100"
+		ismobile="false"
+	/>
+
+	<modifier key="rampage_dragging" modpriority="100"
+		walkanim="ability_4_run"
+	/>
+</hero>

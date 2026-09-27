@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_MonkeyKing_Ability3"
+	
+	icon="../../icon.dds"
+	portrait="../../icon.dds"
+	model="/shared/models/invis.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	
+	
+	
+	
+	preglobalscale="1.575"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="8"
+	boundsradius="80"
+	selectionradius="80"
+	targetoffset="0 0 0"
+
+	movespeed="0"
+	turnrate="320"
+	ismobile="false"
+	canrotate="true"
+	unitwalking="true"
+	cliffwalking="true"
+	buildingwalking="true"
+	iscontrollable="false"
+	drawonmap="false"
+	treewalking="true"
+	nothreat="true"
+	invulnerable="true"
+	
+	maxhealth="0"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0"
+
+	armor="0"
+	magicarmor="0"
+	immunity="AttackImmunity"
+
+	canattack="false"
+	hoveronmap="false"
+	
+	aggrorange="600"
+	sightrangeday="300"
+	sightrangenight="300"
+
+	experiencebounty="6"
+	goldbountymin="25"
+	goldbountymax="25"
+	
+	lifetime="2000"
+	
+	unittype="MonkeyKingFlag"
+	
+	corpsetime="0"
+	noblockneutralspawn="true"
+	dynamicprecache="effects/impact_enemy.effect,effects/explosion_2.effect"
+>
+	<onexpired>
+		<spawnaffector name="Affector_MonkeyKing_Ability3" owner="source_owner_entity" target="this_position" />
+		<setstr0 a="altavatar_path" b="effects/explosion_2.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="this_position" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/explosion_2.effect" target="this_position" />
+		</else>
+	</onexpired>
+	
+</gadget>

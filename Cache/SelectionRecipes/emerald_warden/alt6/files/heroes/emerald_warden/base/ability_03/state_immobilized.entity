@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_EmeraldWarden_Ability3_Immobilized"
+	
+	immobilized2="true"
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/emerald_warden/alt6/ability_03/effects/state.effect"
+
+	negativeeffect="immobilized"
+>
+	<onframe>
+		<setvar0 a="60,70,80,90" b="frametime" op="mult" /> <!-- Damage -->
+		<targettype type="hero">
+			<damage source="this_proxy_entity" effecttype="Magic DOT" amount="1" b="var0" op="mult" />
+		</targettype>
+		<else>
+			<damage source="this_proxy_entity" effecttype="Magic DOT" amount="1.5" b="var0" op="mult" />
+		</else>		
+	</onframe>
+</state>

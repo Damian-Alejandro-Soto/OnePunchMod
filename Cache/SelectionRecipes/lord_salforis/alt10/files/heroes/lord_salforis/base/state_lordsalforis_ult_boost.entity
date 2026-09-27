@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_LordSalforis_Ult_Boost"
+
+	icon=""
+	passiveeffect="/heroes/dreadknight/alt9/effects/boost.effect"
+	
+	ishidden="true"
+	
+	effecttype=""
+>
+	<modifier key="iamsheeped" modpriority="1000" passiveeffect=""/>
+</state>

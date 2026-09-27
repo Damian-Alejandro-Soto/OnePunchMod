@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "hero": "pharaoh",
+  "avatar": "set_ascension",
+  "files": [
+    "heroes\\pharaoh\\base\\hero.entity",
+    "heroes\\pharaoh\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\pharaoh\\base\\ability_01\\ability.entity",
+    "heroes\\pharaoh\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\pharaoh\\base\\ability_01\\affector.entity",
+    "heroes\\pharaoh\\base\\ability_01\\affector.entity.onepunch_ability_managed",
+    "heroes\\pharaoh\\base\\ability_02\\ability.entity",
+    "heroes\\pharaoh\\base\\ability_02\\ability.entity.onepunch_ability_managed",
+    "heroes\\pharaoh\\base\\ability_02\\pet\\gadget.entity",
+    "heroes\\pharaoh\\base\\ability_02\\pet\\gadget.entity.onepunch_ability_managed",
+    "heroes\\pharaoh\\base\\ability_03\\ability.entity",
+    "heroes\\pharaoh\\base\\ability_03\\ability.entity.onepunch_ability_managed",
+    "heroes\\pharaoh\\base\\ability_03\\affector.entity",
+    "heroes\\pharaoh\\base\\ability_03\\affector.entity.onepunch_ability_managed",
+    "heroes\\pharaoh\\base\\ability_03\\projectile.entity",
+    "heroes\\pharaoh\\base\\ability_03\\projectile.entity.onepunch_ability_managed",
+    "heroes\\pharaoh\\base\\ability_04\\ability.entity",
+    "heroes\\pharaoh\\base\\ability_04\\ability.entity.onepunch_ability_managed",
+    "heroes\\pharaoh\\base\\ability_04\\projectile.entity",
+    "heroes\\pharaoh\\base\\ability_04\\projectile.entity.onepunch_ability_managed",
+    "heroes\\pharaoh\\base\\ability_04\\state.entity",
+    "heroes\\pharaoh\\base\\ability_04\\state.entity.onepunch_ability_managed"
+  ]
+}

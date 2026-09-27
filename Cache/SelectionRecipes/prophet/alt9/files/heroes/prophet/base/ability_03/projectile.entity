@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Prophet_Ability3"
+
+	speed="2250"
+	gravity="0"
+
+	flying="true"
+	flyheight="80"
+	
+	modelscale="1"
+	model="/shared/models/invis.mdf"
+	traileffect="/heroes/prophet/alt9/ability_03/effects/trail.effect"
+	effectscale="1.0"
+	impacteffect="/heroes/prophet/alt9/ability_03/effects/impact.effect"
+>
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile" >
+			<onimpact>
+				<hasmodifier entity="target_entity" name="Prophet_Ability4_Debuff" >
+					<spawnaffector name="Affector_Prophet_Ability3_Split" target="target_position" proxy="target_entity" ignore="target_entity" />
+					<cantarget effecttype="Magic">
+						<applystate name="State_Prophet_Ability3_Debuff" proxy="source_entity" duration="5000" />
+					</cantarget>
+				</hasmodifier>
+				<else>
+					<cantarget effecttype="Magic">
+						<applystate name="State_Prophet_Ability3_Debuff" proxy="source_entity" duration="5000" />
+					</cantarget>
+				</else>
+			</onimpact>
+		</combatevent>
+	</onimpact>
+</projectile>

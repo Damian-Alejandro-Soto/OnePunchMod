@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Gladiator_Ability4_Chariot"
+
+	speed="600"
+	gravity="0"
+
+	modelscale="1.75"
+	model="/shared/models/invis.mdf"
+	traileffect="effects/trail.effect"
+	canturn="true"
+	flying="true"
+	flyheight="0"
+	
+>
+	<onimpact>
+		<kill target="this_proxy_entity" source="" />
+	</onimpact>
+
+	<modifier key="ult_boost" modpriority="100">
+		<onspawn>
+			<spawnunit name="Gadget_Gladiator_Ability4_Center_SotM" target="this_entity" pushentity="true" proxy="this_entity" />
+			<bind entity="this_entity" target="stack_entity" />
+		</onspawn>
+	</modifier>
+</projectile>

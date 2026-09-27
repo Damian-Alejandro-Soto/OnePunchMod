@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "hero": "pandamonium",
+  "avatar": "alt6",
+  "files": [
+    "heroes\\pandamonium\\base\\hero.entity",
+    "heroes\\pandamonium\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\pandamonium\\base\\ability_02\\state_bind.entity",
+    "heroes\\pandamonium\\base\\ability_02\\state_bind.entity.onepunch_ability_managed",
+    "heroes\\pandamonium\\base\\ability_03\\state_self.entity",
+    "heroes\\pandamonium\\base\\ability_03\\state_self.entity.onepunch_ability_managed",
+    "heroes\\pandamonium\\base\\ability_04\\state.entity",
+    "heroes\\pandamonium\\base\\ability_04\\state.entity.onepunch_ability_managed"
+  ],
+  "dependencies": []
+}

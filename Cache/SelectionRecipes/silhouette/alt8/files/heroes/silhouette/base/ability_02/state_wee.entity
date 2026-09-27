@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Silhouette_Ability2_Wee"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/silhouette/alt8/ability_02/effects/grappling_trail.effect"
+
+	immobilized2="true"
+	silenced="true"
+	perplexed="true"
+
+	ishidden="true"
+
+	unitwalking="true"
+	effecttype=""
+>
+
+</state>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Pet_Gunblade_Ability4"
+
+	icon="/heroes/gunblade/alt8/ability_04/icon.dds"
+	portrait="../../icon.dds"
+	model="/shared/models/invis.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	
+	preglobalscale="1.0"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	isselectable="false"
+	iscontrollable="false"
+	selectionradius="40"
+	targetoffset="0 0 0"
+	
+	maxhealth="1"
+	armor="0"
+	healthregen="0"
+	invulnerable="true"
+	nothreat="true"
+
+	movespeed="550"
+	turnrate="900"
+	turnsmoothing="0.05"
+
+	
+	unitwalking="true"
+	treewalking="true"
+	buildingwalking="true"
+	cliffwalking="true"
+	
+	deathtime="0"
+	corpsetime="0"
+
+	immunity="GadgetImmunity"
+	
+	canattack="false"
+	ismobile="true"
+	
+	attacktype="melee"
+	combattype="Hero"
+	
+	drawonmap="false"
+	sightrangeday="600"
+	sightrangenight="600"
+	clearvision="true"
+	
+	lifetime="4000,5000,6000"
+	
+	unittype="PseudoPet"
+>
+	<onspawn>
+		<unbind target="this_owner_entity" />
+		<bind freeturn="true" target="this_owner_entity" unbindondeath="true" noninterrupting="true"/>
+		<applystate name="State_Gunblade_Ability4_Reveal" target="this_proxy_entity" duration="4000,5000,6000" proxy="this_entity" />
+		<order command="follow" force="true" source="this_entity" target="this_proxy_entity" />
+	</onspawn>
+
+	<onframe>
+		<compare a="this_proxy_entity" b="0" op="eq">
+			<expirestate name="State_Gunblade_Ability4" target="this_owner_entity" />
+			<kill target="this_entity" source="" />
+		</compare>
+		<distance source="this_proxy_entity" target="this_owner_entity" />
+		<compare a="result" b="500" op="ge">	
+			<unbind target="this_owner_entity" />
+			<expirestate name="State_Gunblade_Ability4" target="this_owner_entity" />
+			<expirestate name="State_Gunblade_Ability4_Reveal" target="this_proxy_entity" />
+			<kill target="this_entity" source="" />
+		</compare>
+	</onframe>
+</pet>

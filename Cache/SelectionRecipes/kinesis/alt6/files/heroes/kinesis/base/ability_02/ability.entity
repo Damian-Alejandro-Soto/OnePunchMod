@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Kinesis2"
+	
+	statuseffecttooltip=""
+	statuseffecttooltip2=""
+	icon="/heroes/kenisis/alt6/ability_02/icon.dds"
+	passiveeffect=""
+	
+	anim="ability_2"
+	casttime="0"
+	castactiontime="0"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="no_target"
+	frontqueue="true"
+
+	modifierkey="kinesislift1,kinesislift2,kinesislift3,kinesislift4"
+	interface="double"
+
+	noshuffle="true"
+
+	targetpriorities="enemy_heroes"
+	
+>
+	<onlearn>
+		<applystate name="State_Kinesis_Ability2_Initial_Charges" duration="50" target="source_entity" />
+	</onlearn>
+	
+	<onupgrade>
+		<pushtool name="Ability_Kinesis2_Lift" />
+		<addcharges count="1,1,1,1" entity="stack_entity" />
+	</onupgrade>
+</ability>

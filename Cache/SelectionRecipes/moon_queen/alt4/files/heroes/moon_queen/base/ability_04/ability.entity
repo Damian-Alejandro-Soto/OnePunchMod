@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_MoonQueen4"
+
+	icon="../../icon.dds"
+	
+	anim="ability_4"
+	casttime="1000"
+	castactiontime="500"
+	casteffect="/heroes/krixi/alt4/ability_04/effects/ability_04.effect"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_self"
+	targetscheme="visible_enemy_units"
+	targetradius="700"
+	casteffecttype="Magic"
+	
+	manacost="150,200,250"
+	cooldowntime="160000,140000,120000"
+	dynamicprecache="effects/ability_04_impact.effect"
+>
+	<onimpact>
+		<spawnaffector name="Affector_MoonQueen_Ability4" target="source_entity" />
+		<applystate name="State_MoonQueen_Ability4" target="source_entity" duration="2400,4200,6000" />
+		<applystate name="State_Krixi_Ability4_Nightshift" target="source_entity" duration="6000,8000,10000" />
+	</onimpact>
+	
+	<modifier 
+		key="ult_boost" 
+		modpriority="102"
+		displayname="true"
+		cooldowntime="90000"
+	>
+		<onimpact>
+			<spawnaffector name="Affector_MoonQueen_Ability4" target="source_entity" />
+			<applystate name="State_MoonQueen_Ability4" target="source_entity" duration="2400,5000,7700" />
+			<applystate name="State_Krixi_Ability4_Nightshift" target="source_entity" duration="6000,8000,10000" />
+		</onimpact>
+	</modifier>
+</ability>

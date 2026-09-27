@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "hero": "blacksmith",
+  "avatar": "alt3",
+  "files": [
+    "heroes\\blacksmith\\base\\hero.entity",
+    "heroes\\blacksmith\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\blacksmith\\base\\state_blacksmith_ult_boost.entity",
+    "heroes\\blacksmith\\base\\state_blacksmith_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\blacksmith\\base\\ability_02\\projectile.entity",
+    "heroes\\blacksmith\\base\\ability_02\\projectile.entity.onepunch_ability_managed"
+  ]
+}

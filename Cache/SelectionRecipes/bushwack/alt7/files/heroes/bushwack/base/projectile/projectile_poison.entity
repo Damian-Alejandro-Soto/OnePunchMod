@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Bushwack_Poison"
+
+	speed="2500"
+	gravity="0"
+	modelscale="1"
+	model="/shared/models/invis.mdf"
+
+	impacteffect=""
+	traileffect="/heroes/bushwack/alt7/projectile/effects/trail_poison.effect"
+/>

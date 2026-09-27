@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "glacius",
+  "avatar": "pog_skin",
+  "files": [
+    "heroes\\glacius\\base\\hero.entity",
+    "heroes\\glacius\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

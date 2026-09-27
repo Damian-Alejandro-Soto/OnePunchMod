@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Pharaoh4_Ally"
+
+	icon="../../icon.dds"
+
+	anim="ability_4_eyes"
+	casttime="100"
+	castactiontime="100"
+	
+	baselevel="0"
+	maxlevel="3"
+	disabled="true"
+
+	actiontype="target_position"
+	casteffecttype="SuperiorMagic"
+	targetscheme="other_ally_heroes"
+	manacost="150"
+	cooldowntime="25000"
+	casteffect="/heroes/mumra/alt7/ability_04/effects/cast.effect"
+	
+	range="2000,2500,3000"
+	forcerange="2000,2500,3000"
+	targetradius="96"
+	allowoutofboundscast="true"
+	
+	showlinecast="true"
+	linecastrange="2000,2500,3000"
+	linecastwidth="96"
+	
+	showrangeandradiusintooltip="true"
+	dynamicprecache="effects/impact.effect"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Pharaoh_Ability4_Marker" count="1" target="source_position" pushentity="true" facing="target_position" />
+		<spawnprojectile name="Projectile_Pharaoh_Ability4_Boost" source="source_entity" target="target_position" offset="0 96 0" offsetspace="stack_entity" />
+	</onimpact>
+	
+	<modifier key="zing_1" modpriority="90"
+		baselevel="1"
+	/>
+	
+	<modifier key="zing_2" modpriority="90"
+		baselevel="2"
+	/>
+	
+	<modifier key="zing_3" modpriority="90"
+		baselevel="3"
+	/>
+	
+	<modifier key="ult_boost" modpriority="100"
+		disabled="false"
+	/>
+</ability>

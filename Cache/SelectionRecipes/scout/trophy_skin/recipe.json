@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "hero": "scout",
+  "avatar": "trophy_skin",
+  "files": [
+    "heroes\\scout\\base\\hero.entity",
+    "heroes\\scout\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\scout\\base\\ability_02\\gadget\\ability_detonate.entity",
+    "heroes\\scout\\base\\ability_02\\gadget\\ability_detonate.entity.onepunch_ability_managed",
+    "heroes\\scout\\base\\ability_02\\gadget\\gadget.entity",
+    "heroes\\scout\\base\\ability_02\\gadget\\gadget.entity.onepunch_ability_managed",
+    "heroes\\scout\\base\\ability_04\\ability.entity",
+    "heroes\\scout\\base\\ability_04\\ability.entity.onepunch_ability_managed",
+    "heroes\\scout\\base\\ability_04\\projectile.entity",
+    "heroes\\scout\\base\\ability_04\\projectile.entity.onepunch_ability_managed",
+    "heroes\\scout\\base\\ability_04\\projectile_sotm.entity",
+    "heroes\\scout\\base\\ability_04\\projectile_sotm.entity.onepunch_ability_managed",
+    "heroes\\scout\\base\\ability_04\\state_self.entity",
+    "heroes\\scout\\base\\ability_04\\state_self.entity.onepunch_ability_managed",
+    "heroes\\scout\\base\\ability_04\\state_slow.entity",
+    "heroes\\scout\\base\\ability_04\\state_slow.entity.onepunch_ability_managed"
+  ]
+}

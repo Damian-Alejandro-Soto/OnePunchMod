@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Devourer_Ability1"
+
+	icon="/heroes/Devourer/alt14/ability_01/icon.dds"
+
+	stunned="true"
+	stunnedreduction="ignore"
+	immobilized="true"
+	
+	effecttype=""
+>
+</state>

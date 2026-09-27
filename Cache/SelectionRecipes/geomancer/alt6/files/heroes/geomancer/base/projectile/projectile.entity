@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Geomancer_Attack"
+
+	speed="1200"
+	gravity="1000"
+
+	modelscale="0.7"
+	model="/shared/models/invis.mdf"
+	traileffect="/heroes/geomancer/alt6/projectile/effects/trail.effect"
+	
+	impacteffect="/heroes/geomancer/alt6/projectile/effects/impact.effect"
+>
+</projectile>

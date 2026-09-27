@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Blacksmith_Ability3"
+	
+	icon="/heroes/dwarf_magi/alt2/ability_03/icon.dds"
+	passiveeffect="state.effect"
+	
+	attackspeed="0.2,0.3,0.4,0.5"
+	movespeedmultiplier="0.06,0.09,0.12,0.15"
+	castspeed="0.30"
+	
+	effecttype="StatusBuff"
+	allowtransfer="true"
+>
+	<oninflict>
+		<targettype type="self" source="source_entity" target="target_entity">
+			<setactivemodifierkey name="blacksmith_E_self" entity="this_entity" />
+		</targettype>
+	</oninflict>
+	
+	<onframe />
+	
+	<modifier key="blacksmith_E_self" modpriority="100"
+		attackspeed="0.3,0.45,0.6,0.75"
+		movespeedmultiplier="0.16,0.19,0.22,0.25"
+	>
+	</modifier>
+</state>

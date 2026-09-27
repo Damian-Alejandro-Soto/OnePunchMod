@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Pharaoh_Ability2"
+
+	radius="150"
+	lifetime="-1"
+	arc="100"
+
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Push" 
+ dynamicprecache="/heroes/mumra/alt6/ability_02/pet/effects/push.effect">
+	<onspawn>
+	</onspawn>
+	
+	<onimpact>
+		<compare a="target_maxmana" b="0" op="gt">
+			<condition test="not_hasstate State_Pharaoh_Ability2_Immunity">
+				<condition test="not_hasstate State_Pharaoh_Ability2_PushImmunity">
+					<applystate name="State_Pharaoh_Ability2_PushImmunity" duration="1000" />
+					<applystate name="State_Stunned" duration="100" />
+					<push force="250" duration="1000" />
+					<setvar0 a="80,120,160,200" />
+					<damage amount="1" b="var0" op="mult" effecttype="Magic" />
+					<takemana amount="var0" b="0.5" op="mult" />
+					<playanim name="push" target="this_proxy_entity" source="this_proxy_entity" />
+					
+					<!-- Dynamic visual effects -->
+					<setstr0 a="altavatar_path" b="pet/effects/push.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" target="target_entity" source="this_proxy_entity" occlude="true" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="pet/effects/push.effect" target="target_entity" source="this_proxy_entity" occlude="true" />
+					</else>
+
+					<delete target="this_entity" />
+				</condition>
+			</condition>
+		</compare>
+	</onimpact>
+</affector>

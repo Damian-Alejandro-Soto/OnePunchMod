@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_PuppetMaster4"
+	
+	icon="/heroes/puppetmaster/alt12/ability_04/icon.dds"
+	
+	anim="ability_4"
+	casttime="0"
+	castactiontime="0"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+	
+	actiontype="target_entity"
+	casteffecttype="Magic"
+	casteffect="ragdoll/cast.effect"
+	targetscheme="enemy_units"
+	
+
+	cooldowntime="120000,110000,100000"
+	manacost="150,200,250"
+	range="600"
+	
+	attackspeed="0.15,0.30,0.45"
+	
+	showareacast="true"
+	areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+
+	targetpriorities="enemy_heroes"
+>
+	<onimpact>
+		<delayannouncer duration="2500" sourceonly="true" />
+		<delayannouncer duration="2500" source="target_entity" sourceonly="true" />
+		
+		<evaluate a="target_team" />
+		<spawnunit name="Pet_PuppetMaster_Ability4" owner="source_entity" target="source_entity" proxy="target_entity" pushentity="true" offset="0 150" facing="source_entity" team="result" />
+		<applystate name="State_PuppetMaster_Ability4_Visible" target="stack_entity" duration="-1" />
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100">
+		<onimpact>
+			<delayannouncer duration="2500" sourceonly="true" />
+			<delayannouncer duration="2500" source="target_entity" sourceonly="true" />
+			
+			<evaluate a="target_team" />
+			<spawnunit name="Pet_PuppetMaster_Ability4" owner="source_entity" target="source_entity" proxy="target_entity" pushentity="true" offset="0 150" facing="source_entity" team="result" />
+			<applystate name="State_PuppetMaster_Ability4_Visible" target="stack_entity" duration="-1" />
+		</onimpact>
+	</modifier>
+</ability>

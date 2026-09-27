@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_MasterofArms_Ability2_Chemical"
+
+	effecttype="StatusDebuff"
+	
+	icon="/heroes/master_of_arms/alt11/ability_02/icon_mag.dds"
+	passiveeffect=""
+	
+	armor="-1,-2,-3,-4"
+	movespeedslow="0.11,0.14,0.17,0.20"
+>
+	<onframe>
+		<damage effecttype="Physical DOT" amount="20,35,50,65" b="frametime" op="mult" source="source_owner_entity" />
+	</onframe>
+
+	<modifier key="moa_nobossarmor" modpriority="100" condition="Boss" notooltooltip="true"
+		armor="0"
+	/>
+</state>

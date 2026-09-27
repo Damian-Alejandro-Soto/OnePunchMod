@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Magmus_Ability2_Damageeffects"
+	icon="../../icon.dds"
+	passiveeffect="/heroes/magmar/alt4/ability_02/effects/impact.effect"
+	effecttype="StatusDebuff"
+>
+</state>

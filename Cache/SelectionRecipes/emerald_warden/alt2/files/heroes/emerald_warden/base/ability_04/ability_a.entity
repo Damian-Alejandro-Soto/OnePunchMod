@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_EmeraldWarden4_a"
+
+	icon="/heroes/emerald_warden/alt2/ability_04/effects/ability_01/icon.dds"
+	
+	actiontype="passive"
+	maxlevel="3"
+	
+	cooldowntime="8000,7000,6000"
+	
+	frontqueue="true"
+	noninterrupting="true"
+	inheritmovement="true"
+	noturntotarget="true"
+	nostun="true"
+	nosilence="true"
+	noresponse="true"
+	
+	targetradius="650"
+	
+	noshuffle="true"
+	dynamicprecache="pet/ability_01/effects/cast.effect"
+>
+	<onlearn>
+		<!-- Fixes mimic bug where Gawain attacks twice; delays the behaviour of Gawain by 2 frames -->
+		<targettype type="mimic" target="source_owner_entity">
+			<setaccumulator value="2" />
+		</targettype>
+	</onlearn>
+	
+	<onframe>
+		<compare a="accumulator" b="0" op="eq">	
+			<isready>
+				<targettype type="alive" target="source_owner_entity">
+					
+					<isstealthed entity="source_owner_entity" />
+					<else>
+						<hasmodifier name="Gawain_1" entity="source_entity" />
+						<else>
+							<pushentity searchfortarget="true" searchorigin="source_entity" radius="650" targetscheme="visible_enemy_heroes" />
+							<compare a="result" b="0" op="ne">
+								<targettype target="stack_entity" type="nothreat" />
+								<else>
+									<startcooldown />
+
+									<popup name="EmeraldWarden1" source="source_entity" target="source_entity" />
+									<setstr0 a="altavatar_path" b="pet/ability_01/effects/cast.effect" op="add" />
+									<exists path="str0">
+										<playeffectdynamic effect="str0" source="source_entity" />
+									</exists>
+									<else>
+										<playeffectdynamic effect="pet/ability_01/effects/cast.effect" source="source_entity" />
+									</else>
+
+									<spawnprojectile name="Projectile_EmeraldWardenpet_Ability1" source="source_entity" target="stack_entity" proxy="source_entity" bind="source_entity" bindturn="true" bindstate="State_EmeraldWardenpet_Ability1_Self" noresponse="true" />
+									<applystate name="State_EmeraldWardenpet_Ability1_Cooldown" duration="500" target="source_entity" />
+								</else>
+							</compare>
+						</else>
+					</else>
+				</targettype>
+			</isready>
+		</compare>
+		<else>
+			<changeaccumulator b="1" op="sub" />
+		</else>
+	</onframe>
+	
+	<modifier key="EmeraldWarden1" modpriority="90"
+		baselevel="1"
+	/>
+	
+	<modifier key="EmeraldWarden2" modpriority="90"
+		baselevel="2"
+	/>
+	
+	<modifier key="EmeraldWarden3" modpriority="90"
+		baselevel="3"
+	/>
+	
+	<modifier key="Gawain_Illusion" modpriority="101" condition="illusion"
+	>
+		<onframe />
+	</modifier>
+</ability>

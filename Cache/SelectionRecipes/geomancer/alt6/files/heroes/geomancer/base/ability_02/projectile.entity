@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Geomancer_Ability2"
+
+	speed="1000"
+	gravity="0"
+
+	modelscale="1.2"
+	model="/shared/effects/models/side_to_side/model.mdf"
+	traileffect="/heroes/geomancer/alt6/ability_02/effects/trail.effect"
+
+	canturn="true"
+	flying="true"
+	flyheight="11"
+	
+>
+</projectile>

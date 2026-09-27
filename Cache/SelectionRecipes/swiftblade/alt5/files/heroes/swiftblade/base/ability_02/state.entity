@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Swiftblade_Ability2"
+
+	icon="icon.tga"
+	passiveeffect="effects/counter_start.effect"
+	
+	maxcharges="1,2,3,4"
+	
+	effecttype="StatusBuff"
+	allowtransfer="true"
+	
+	modifierkey="hiro_W"
+	
+	dynamicprecache="/heroes/hiro/alt5/effects/ability_02/meleecounter.effect,../alt5/effects/ability_02/rangedcounter.effect"
+>
+	<oninflict>
+	</oninflict>
+
+	<onattackedpreimpact priority="1" ignoreresponsetype="Staccato">
+		<combatsupertype supertype="attack">
+			<!-- Procs vs. enemy heroes -->
+			<cantarget targetscheme="enemy_heroes">
+				<negate>					
+					<compare a="charges" b="0" op="gt">
+						<!-- Prevents infinite loop between other counterattack states -->
+						<hasmodifier name="hiro_W" entity="target_entity" />
+						<else>
+							<cantarget targetscheme="enemy_melee_heroes">
+								<applystate name="State_Swiftblade_Ability2_Crit" target="source_entity" duration="100" />
+								<attack />
+
+								<!-- Dynamic VFX -->				
+								<setstr0 a="altavatar_path" b="effects/meleecounter.effect" op="add" />
+								<exists path="str0">
+									<playeffectdynamic effect="str0" source="source_entity" target="target_entity" occlude="true" />
+								</exists>
+								<else>
+									<playeffectdynamic effect="effects/meleecounter.effect" source="source_entity" target="target_entity" occlude="true" />
+								</else>
+							</cantarget>						
+							<cantarget targetscheme="enemy_ranged_heroes">
+								<spawnprojectile name="Projectile_Swiftblade_CounterAttack_Real" source="source_entity" target="target_entity" offset="0 0 70" noresponse="true" />
+
+								<!-- Dynamic VFX -->
+								<setstr0 a="altavatar_path" b="effects/rangedcounter.effect" op="add" />
+								<exists path="str0">
+									<playeffectdynamic effect="str0" source="source_entity" target="target_entity" occlude="true" />
+								</exists>
+								<else>
+									<playeffectdynamic effect="effects/rangedcounter.effect" source="source_entity" target="target_entity" occlude="true" />
+								</else>
+							</cantarget>
+						</else>
+						
+						<!-- Staff of the Master effect -->
+						<hasmodifier name="ult_boost" entity="source_entity">
+							<changeaccumulator b="1" op="add" />
+						</hasmodifier>
+					</compare>
+					
+					<!-- For the infinite loop condition, don't remove a charge -->
+					<hasmodifier name="hiro_W" entity="target_entity" />
+					<else>
+						<removecharge />
+					</else>
+				</negate>
+			</cantarget>
+			<!-- Procs vs. other units -->
+			<else>
+				<negate />
+			</else>
+		</combatsupertype>
+	</onattackedpreimpact>
+	
+	<onframe />
+	
+	<onexpired>
+		<!-- Staff of the Master effect -->
+		<hasmodifier name="ult_boost" entity="source_entity">
+			<compare a="accumulator" b="1" op="ge">
+				<applystate name="State_Swiftblade_Ability2_Invuln" target="source_entity" duration="1000" proxy="this_entity" />
+				
+				<!-- Counter Strike active ability modifier -->
+				<applystate name="State_Swiftblade_Ability2_Modifier" target="source_entity" duration="5000" proxy="this_entity" />
+				<pushtool name="Ability_Swiftblade2" />
+				<starttimer duration="5000" entity="stack_entity" />
+			</compare>
+		</hasmodifier>
+	</onexpired>
+</state>

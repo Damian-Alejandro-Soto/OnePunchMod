@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Aluna2"
+
+	icon="/heroes/aluna/alt8/ability_02/icon.dds"
+	anim="ability_2" 
+
+	casttime="800"
+	castactiontime="750"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	targetscheme="enemy_units"
+	
+	casteffecttype="Magic"
+	casteffect="effects/cast.effect"
+	
+	manacost="95,100,105,110"
+	cooldowntime="10000"
+	range="1700"
+	targetradius="125"
+
+	forcerange="1700"
+	allowoutofboundscast="true"
+	
+	showlinecast="true"
+	linecastrange="1725"
+	linecastwidth="125"
+	
+	showrangeandradiusintooltip="true"
+	dynamicprecache="effects/impact.effect,effects/impactred.effect"
+>
+	<!-- Regular -->
+	<onimpact>
+		<spawnunit name="Gadget_Aluna_Ability2" target="source_position" pushentity="true" />
+		<spawnprojectile name="Projectile_Aluna_Ability2" target="target_position" bind="stack_entity" param="1" pushentity="true" offset="0 125 0" />
+		<spawnaffector name="Affector_Aluna_Ability2" target="stack_entity" />
+	</onimpact>
+	
+	<!-- Over 9000 -->
+	<modifier key="aluna_red" modpriority="100" range="99999" forcerange="99999" casteffect="effects/castred.effect" icon="iconb.tga"
+		linecastrange="20000"
+		linecastwidth="125"
+		dontshowhovercast="true"
+	>
+		<onimpact>
+			<spawnunit name="Gadget_Aluna_Ability2" target="source_position" pushentity="true" />
+			<spawnprojectile name="Projectile_Aluna_Ability2_Red" target="target_position" bind="stack_entity" pushentity="true" offset="0 125 0" />
+			<spawnaffector name="Affector_Aluna_Ability2" target="stack_entity" />
+		</onimpact>
+	</modifier>
+	
+	<!-- Over 9000 -->
+	<modifier key="aluna_red_PowerThrow" modpriority="100" range="99999" forcerange="99999" casteffect="effects/castred.effect" icon="iconb.tga"
+		linecastrange="20000"
+		linecastwidth="125"
+		dontshowhovercast="true"
+		
+		ignorecooldown="true"
+		cooldowntime="0"
+		
+		manacost="0"
+		maxcharges="2"
+	>
+		<onimpact>
+			<spawnunit name="Gadget_Aluna_Ability2" target="source_position" pushentity="true" />
+			<spawnprojectile name="Projectile_Aluna_Ability2_Red" target="target_position" bind="stack_entity" pushentity="true" offset="0 125 0" />
+			<spawnaffector name="Affector_Aluna_Ability2" target="stack_entity" />
+			
+			<removecharge />	
+			<compare a="charges" b="0" op="le">
+				<deactivatemodifierkey name="aluna_red_PowerThrow" />
+			</compare>
+		</onimpact>
+	</modifier>
+
+</ability>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gauntlet_Ability3"
+	icon="/heroes/gauntlet/alt4/ability_03/icon.dds"
+
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	displaylevel="true"
+	
+	movespeedslowpercharge="0.01"
+	attackspeedslowpercharge="0.01"
+	castspeedpercharge="-0.01"
+	passiveeffect=""
+	maxcharges="0,25,30,35,40"
+
+	negativeeffect="slowed"
+	dynamicprecache="effects/cast.effect"
+>
+	<onframe />
+	
+	<oninflict>
+		<!-- Art -->
+		<setstr0 a="altavatar_path" b="effects/cast.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_entity" target="" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/cast.effect" source="source_entity" target="" />
+		</else>
+	</oninflict>
+</state>

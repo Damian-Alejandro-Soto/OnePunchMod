@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gauntlet_Ability3_Self"
+	
+	icon="/heroes/gauntlet/alt4/ability_03/icon.dds"
+	effecttype="StatusBuff"
+	displaylevel="true"
+	allowtransfer="true"
+	
+	damagepercharge="1"
+>
+
+</state>

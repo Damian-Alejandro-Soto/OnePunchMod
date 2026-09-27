@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "magmus",
+  "legacy_folder": "magmar",
+  "avatar": "alt13",
+  "counts": {
+    "files": 98,
+    "models": 25,
+    "materials": 3,
+    "textures": 7,
+    "effects": 22,
+    "sounds": 41,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

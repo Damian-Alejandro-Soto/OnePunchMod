@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Prophet_Ability4"
+
+	speed="2250"
+
+	impactstealth="true"
+
+	modelscale="2"
+	model="/heroes/prophet/alt2/ability_04/projectile/effects/staff/model.mdf"
+	
+	traileffect="/heroes/prophet/alt2/ability_04/projectile/effects/trail.effect"
+	impacteffect="/heroes/prophet/alt2/ability_04/projectile/effects/impact.effect"
+>
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<!-- SotM -->
+				<hasmodifier name="ult_boost" entity="source_entity">
+					<setvar0 a="1" b="param" op="mult" />
+					<damage amount="1" b="var0" op="mult" effecttype="Physical" />
+				</hasmodifier>
+				<else>
+					<setvar0 a="0.5" b="param" op="mult" />
+					<damage amount="1" b="var0" op="mult" effecttype="Physical" />
+				</else>
+			</onimpact>
+		</combatevent>
+		<applystate name="State_Prophet_Ability4_Proc" duration="50" target="target_entity" />
+	</onimpact>
+</projectile>

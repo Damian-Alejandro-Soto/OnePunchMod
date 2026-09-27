@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Midas2"
+	
+	icon="/heroes/midas/alt7/ability_02/icon.dds"
+	
+	anim="ability_2"
+	casttime="250"
+	castactiontime="250"
+	casteffect="effects/cast.effect"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	targetradius="200"
+	targetmaterial="/shared/materials/area_cast_indicator_pointed.material"
+	
+	manacost="95,105,115,125"
+	cooldowntime="12000"
+	range="1000"
+	
+	showlinecast="true"
+	linecastrange="-1"
+	linecastmaxrange="1000"
+	linecastwidth="200"
+	
+	showareacast="true"
+	areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+	
+	showrangeandradiusintooltip="true"
+	dynamicprecache="effects/impact_heal.effect,effects/impact_damage.effect"
+
+>
+	<onimpact>
+		<spawnunit name="Gadget_Midas_Ability2" target="source_position" pushentity="true" duration="-1"/>
+		<setproxy entity="this_entity" target="stack_entity" />
+		<applystate name="State_Midas_Ability2" target="this_owner_entity" proxy="stack_entity" duration="-1" />
+		<spawnprojectile name="Projectile_Midas_Ability2" source="source_entity" bind="stack_entity" bindturn="true" proxy="stack_entity" target="target_position" />
+		<spawnaffector name="Affector_Midas_Ability2" target="stack_entity" proxy="stack_entity" />
+	</onimpact>
+	
+	<modifier key="Midas1" modpriority="95"
+		cooldowntime="11000"
+	/>
+
+	<modifier key="Midas2" modpriority="95"
+		cooldowntime="10000"
+	/>
+
+	<modifier key="Midas3" modpriority="95"
+		cooldowntime="9000"
+	/>
+</ability>

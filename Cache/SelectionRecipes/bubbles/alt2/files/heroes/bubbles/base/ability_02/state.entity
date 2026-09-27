@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bubbles_Ability2"
+
+	icon="/heroes/bubbles/alt2/ability_02/icon.dds"
+	passiveeffect="/heroes/bubbles/alt2/ability_02/effects/state.effect"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	
+	silenced="true"
+	negativeeffect="silenced"
+>
+</state>

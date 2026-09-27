@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Pet_Defiler_Ability4"
+	
+	icon="../../icon.dds"
+	portrait="../../icon.dds"
+	model="/shared/models/invis.mdf"
+	skin=""
+	
+	
+	
+	passiveeffect="/heroes/defiler/alt6/ability_04/effects/body.effect"
+	spawneffect=""
+	
+	
+	
+	iscontrollable="false"
+	
+	preglobalscale="1.17"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="8"
+	isselectable="false"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	movespeed="650"
+	maxmovespeed="650"
+	turnrate="720"
+
+	
+	invulnerable="true"
+	flying="true"
+	flyheight="0"
+	
+	diewithowner="true"
+	deathtime="0"
+	corpsetime="0"
+	
+	attackduration="0"
+	attackactiontime="0"
+	attackcooldown="2000"
+	attackdamagemin="50"
+	attackdamagemax="50"
+	attacknumanims="2"
+	attackoffset="0 60 100"
+	attackprojectile=""
+	attackrange="10"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attackeffecttype=""
+	attacktargetscheme="enemy_objects"
+	attacktype="melee"
+	combattype="Hero"
+	drawonmap="false"
+
+	aggrorange="850"
+	wanderrange="850"
+	
+	lifetime="90000"
+	unittype="PseudoPet"
+>
+	<onspawn>
+		<!-- Set Spirit lifetime here -->
+		<applystate name="State_Defiler_Ability4_Pet_Expire" target="this_entity" proxy="this_entity" duration="30000" />
+		
+		<order command="wander" source="this_entity" target="this_owner_entity" />
+		<applystate name="State_Defiler_Ability4" proxy="this_owner_entity" duration="1000" />
+	</onspawn>
+	
+	<onframe>
+		<distance source="this_entity" target="this_owner_entity" />
+		<compare a="result" b="2000" op="gt">
+			<teleport source="this_entity" target="this_owner_entity" interpolate="false" />
+		</compare>
+
+		<isstealthed entity="this_owner_entity">
+			<applystate name="State_Defiler_Ability4_Pet_Disarm" continuous="true" target="this_entity" />
+		</isstealthed>
+		<else>
+			<expirestate name="State_Defiler_Ability4_Pet_Disarm" target="this_entity" />
+		</else>
+	</onframe>
+	
+	<onattackingdamageevent>
+		<targettype type="powerup">
+			<setvalue name="damage_attempted" a="0" />
+		</targettype>
+	</onattackingdamageevent>
+	
+	<ondamage>
+		<accumulatedamage scale="1" />
+	</ondamage>
+</pet>

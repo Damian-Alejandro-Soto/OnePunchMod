@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fayde_Ability2_CountAttacks"
+	
+	ishidden="true"
+	icon="/heroes/fade/alt6/ability_02/icon.dds"
+	passiveeffect="/heroes/fade/alt6/ability_02/effects/state.effect"
+	
+	effecttype=""
+	nothreat="true"
+	invulnerable="true"
+	unitwalking="true"
+	treewalking="true"
+	cliffwalking="true"
+	buildingwalking="true"
+	
+	movespeed="550"
+	attackspeedslow="-.45"
+	unselectable="true"
+	truestrike="true"
+>
+	<onframe>
+		<cantarget targetscheme="visible_enemy_heroes" source="this_owner_entity" target="this_proxy_entity" ignoreinvulnerable="false" />
+		<else>
+			<order command="attack" force="true" forceduration="8000" source="this_owner_entity" target="this_proxy_entity" />
+		</else>
+		
+		<targettype target="this_proxy_entity" type="alive" />
+		<else>
+			<expire />
+		</else>
+		<compare a="this_proxy_entity" b="0" op="eq">
+			<expire />
+		</compare>
+	</onframe>
+	
+	<oninflict>
+		<setcharges a="1,2,3,4" />
+	</oninflict>
+	
+	<onattackimpact>
+		<damage effecttype="Magic" amount="70" source="source_owner_entity" />
+		<removecharge />
+		<compare a="charges" b="0" op="eq">
+			<expire />
+			<expirestate name="State_Fayde_Ability2_ExpirePet" target="this_proxy_entity" />
+		</compare>
+	</onattackimpact>
+	
+	<onexpired>
+		<kill target="this_owner_entity" source="" />
+	</onexpired>
+</state>

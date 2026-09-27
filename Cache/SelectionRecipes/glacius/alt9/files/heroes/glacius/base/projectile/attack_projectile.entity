@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_FrostwolfsSkully_Attack"
+
+	speed="1000"
+	gravity="0"
+
+	modelscale=".7"
+	model="/heroes/frosty/alt9/ability_01/effects/lock2_trail.mdf"
+
+	impacteffect="/heroes/frosty/alt9/projectile/impact.effect"
+>
+	
+</projectile>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Prisoner_Ability4_Slow"
+
+	icon="/heroes/prisoner/alt5/ability_04/icon.dds"
+	passiveeffect=""
+	
+	movespeedslow="0.8"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	
+	negativeeffect="slowed"
+>
+	<onframe />
+	
+	<onattackingdamageevent>
+		<compare source="this_proxy_entity" target="target_entity" a="source_entity" b="target_entity" op="eq">
+			<setvalue name="damage_attempted" a="damage_attempted" b="0.75,0.5,0.25" op="mult" />
+		</compare>
+	</onattackingdamageevent>
+</state>

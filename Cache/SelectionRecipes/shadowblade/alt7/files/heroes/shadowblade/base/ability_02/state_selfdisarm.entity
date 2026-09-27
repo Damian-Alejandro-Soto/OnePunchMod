@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_ShadowBlade_Ability2_SelfDisarm"
+
+	ishidden="true"
+	serverentity="true"
+	
+	icon="/heroes/shadowblade/alt7/ability_02/icon.dds"
+	disarmed="true"
+	silenced="true"
+	perplexed="true"
+>
+	<onexpired>
+		<targettype type="enemy" target="proxy_entity">
+			<order command="attack" source="source_entity" target="proxy_entity" />
+		</targettype>
+		<else>
+			<order command="stop" source="source_entity" />
+		</else>
+	</onexpired>
+</state>

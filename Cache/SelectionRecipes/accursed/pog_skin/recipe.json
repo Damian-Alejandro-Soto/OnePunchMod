@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "accursed",
+  "avatar": "pog_skin",
+  "files": [
+    "heroes\\accursed\\base\\hero.entity",
+    "heroes\\accursed\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

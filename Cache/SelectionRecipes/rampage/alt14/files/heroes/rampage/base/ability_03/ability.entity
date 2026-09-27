@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Rampage3"
+
+	icon="/heroes/Rampage/alt14/ability_03/icon.dds"
+	
+	passiveeffect=""
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	cooldowntime="7000"
+
+	actiontype="passive"
+	frontqueue="true"
+
+	modifierkey="rampage_ability3_Level1,rampage_ability3_Level2,rampage_ability3_Level3,rampage_ability3_Level4"
+	dynamicprecache="effects/cast.effect,effects/impact.effect"
+	
+>
+	<onimpact />
+
+	<onattackstart propagatetoillusions="false" >
+		<canactivate>
+			<cantarget targetscheme="enemy_units" effecttype="Physical">
+				<playanim name="ability_3" speed="source_attackspeed" target="source_entity" />
+				<setstr0 a="altavatar_path" b="effects/cast.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" target="source_entity" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="effects/cast.effect" target="source_entity" />
+				</else>
+			</cantarget>
+		</canactivate>
+	</onattackstart>
+	
+	<onattackpreimpact>
+		<canactivate>
+			<cantarget targetscheme="enemy_units" effecttype="Physical">
+				<isready entity="this_entity">
+					<applystate name="State_Rampage_Ability3" duration="1500,2000,2500,3000" />
+				</isready>
+			</cantarget>
+		</canactivate>
+	</onattackpreimpact>
+	
+	<onattackimpact>
+		<canactivate>
+			<cantarget targetscheme="enemy_units" effecttype="Physical">
+				<isready entity="this_entity">
+					<!-- Damage -->
+					<setvar0 a="60,90,120,150" />
+					<targettype type="illusion" target="source_entity">
+						<setvar0 a="var0" b="0.33" op="mult" />
+						<damage effecttype="Physical" amount="1" b="var0" op="mult" />
+						<evaluate a="var0" b="source_attackdamage" op="add" />
+						<popup name="execution" a="result" source="target_entity" target="target_entity" duration="1500" />
+					</targettype>
+					<else>
+						<damage effecttype="Physical" amount="1" b="var0" op="mult" />
+						<evaluate a="var0" b="source_attackdamage" op="add" />
+						<popup name="execution" a="result" source="target_entity" target="target_entity" duration="1500" />
+					</else>
+					
+					<applystate name="State_Rampage_Ability3_Self" target="source_entity" duration="1500" />
+					<startcooldown />
+					<activatemodifierkey name="rampage_ability3" />
+					
+					<!-- VFX -->
+					<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" source="target_entity" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/impact.effect" source="target_entity" />
+					</else>
+				</isready>
+			</cantarget>
+		</canactivate>
+	</onattackimpact>
+
+	<modifier key="rampage_ability3" modpriority="101"
+		passiveeffect=""
+	>
+
+		<onframe>
+			<isready>
+				<deactivatemodifierkey name="rampage_ability3" />
+			</isready>
+			<else>
+				<setvar0 a="movement" b="1" op="mult" />
+				<compare a="var0" b="0" op="gt">
+					<reducecooldown duration="var0" />
+				</compare>
+			</else>
+		</onframe>
+	</modifier>
+</ability>

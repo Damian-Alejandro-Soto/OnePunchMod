@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chipper_Ability4_DOT"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/chipper/alt3/ability_04/effects/state.effect"
+	
+	restrained="true"
+	negativeeffect="restrained"
+>
+	<onframe>
+		<damage effecttype="Magic DOT" amount="75,125,175" b="frametime" op="mult" source="source_owner_entity" />
+	</onframe>	
+</state>

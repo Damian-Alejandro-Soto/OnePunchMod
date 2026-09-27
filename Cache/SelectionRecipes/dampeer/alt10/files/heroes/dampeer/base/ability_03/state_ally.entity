@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Dampeer_Ability3_Ally"
+	
+	
+	icon="../../icon.dds"
+	
+	passiveeffect="/heroes/dampeer/alt10/ability_03/effects/state_ally.effect"
+	
+	effecttype="StatusBuff"
+	dynamicprecache="effects/lifesteal.effect"
+	
+>
+	<onframe />
+	
+	<onattackimpact>
+		<targettype type="player_controlled" target="source_entity">
+			<cantarget targetscheme="enemy_units">
+				<setstr0 a="altavatar_path" b="effects/lifesteal.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" source="source_entity" target="target_entity" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="effects/lifesteal.effect" source="source_entity" target="target_entity" />
+				</else>
+			</cantarget>
+		</targettype>
+	</onattackimpact>
+	
+	<modifier key="Dampeer_Melee" condition="melee" modpriority="100"
+		lifesteal="0.15,0.2,0.25,0.3"
+	>
+		<onattackpredamage>
+			<cantarget targetscheme="enemy_units" />
+			<else>
+				<setvalue name="combat_lifesteal" a="combat_lifesteal" b="-0.15,-0.2,-0.25,-0.3" op="add" />
+			</else>
+		</onattackpredamage>
+	</modifier>
+	
+	<modifier key="Dampeer_Ranged" condition="ranged" modpriority="100"
+		lifesteal="0.025,0.05,0.075,0.1"
+	>
+		<onattackpredamage>
+			<cantarget targetscheme="enemy_units" />
+			<else>
+				<setvalue name="combat_lifesteal" a="combat_lifesteal" b="-0.025,-0.05,-0.075,-0.1" op="add" />
+			</else>
+		</onattackpredamage>
+	</modifier>
+</state>

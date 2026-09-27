@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "arachna",
+  "avatar": "pog_skin",
+  "files": [
+    "heroes\\arachna\\base\\hero.entity",
+    "heroes\\arachna\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\arachna\\base\\state_arachna_ult_boost.entity",
+    "heroes\\arachna\\base\\state_arachna_ult_boost.entity.onepunch_ability_managed"
+  ]
+}

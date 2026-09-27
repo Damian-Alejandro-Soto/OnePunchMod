@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_SoulStealer_Ability4"
+
+	speed="1000"
+	
+	lifetime="1000"
+	persist="true"
+	
+	effect="effects/ult.effect"
+	impacteffect="/heroes/soulstealer/alt4/ability_04/effects/impact.effect"
+>
+	<onimpact />
+</affector>

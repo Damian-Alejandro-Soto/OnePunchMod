@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Zephyr_Ability4_Debuff"
+
+	icon="/heroes/zephyr/alt8/ability_04/icon.dds"
+	passiveeffect=""
+
+	movespeedslowpercharge="0.01"
+
+	negativeeffect="slowed"
+>
+	<onframe>
+		<distance target="target_entity" source="this_spawner_entity" />
+		<setvar0 a="result" b="550" op="div" />
+		<setvar0 a="1" b="var0" op="sub" />
+		<setvar0 a="var0" b="100" op="mult" />
+		<compare a="var0" b="0" op="lt">
+			<setcharges a="0" />
+		</compare>
+		<else>
+			<setcharges a="var0" />
+			<!-- 60, 90, 120 damage per second at the max -->
+			<condition test="not_hasstate State_Zephyr_Ability4_Tornado">
+				<distance target="target_entity" source="this_spawner_entity" />
+				<setvar0 a="result" b="60" op="sub" />
+				<setvar1 a="var0" b="610" op="div" />
+				<setvar1 a="1" b="var1" op="sub" />
+				<setvar0 a="var1" b="60,80,100" op="mult" />
+				<setvar0 a="var0" b="frametime" op="mult" />
+				<damage effecttype="Magic DOT" amount="1" b="var0" op="mult" target="target_entity" source="source_owner_entity" />
+			</condition>
+		</else>
+	</onframe>
+
+	<modifier key="ult_boost" modpriority="100"
+		displayname="true"
+	>
+		<onframe>
+			<distance target="target_entity" source="this_spawner_entity" />
+			<setvar0 a="result" b="825" op="div" />
+			<setvar0 a="1" b="var0" op="sub" />
+			<setvar0 a="var0" b="100" op="mult" />
+			<compare a="var0" b="0" op="lt">
+				<setcharges a="0" />
+			</compare>
+			<else>
+				<setcharges a="var0" />
+				<!-- 60, 90, 120 damage per second at the max -->
+				<condition test="not_hasstate State_Zephyr_Ability4_Tornado">
+					<distance target="target_entity" source="this_spawner_entity" />
+					<setvar0 a="result" b="90" op="sub" />
+					<setvar1 a="var0" b="915" op="div" />
+					<setvar1 a="1" b="var1" op="sub" />
+					<setvar0 a="var1" b="60,80,100" op="mult" />
+					<setvar0 a="var0" b="frametime" op="mult" />
+					<damage effecttype="Magic DOT" amount="1" b="var0" op="mult" target="target_entity" source="source_owner_entity" />
+				</condition>
+			</else>
+		</onframe>
+	</modifier>
+</state>

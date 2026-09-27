@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_MasterofArms_Ability2_Magnetic"
+
+	speed="500"
+	acceleration="400"
+	gravity="0"
+	lifetime="5000"
+
+	modelscale="3.5"
+	model="/heroes/artesia/projectile/effects/orb/orb.mdf"
+	traileffect="/heroes/chipper/ability_01/effects/trail.effect"
+	canturn="0"
+	flying="true"
+	flyheight="40"
+	
+	
+	touchradius="75"
+	touchradiusdiradjust="true"
+	maxtouches="1"
+	touchtargetscheme="enemy_units"
+	toucheffecttype=""
+>
+	<ondeath>
+		<kill target="this_proxy_entity" source="" />
+		<spawnunit name="Gadget_MasterOfArms_Ability2_Mag_Linger" count="1" target="this_position" />
+	</ondeath>
+	
+	<ontouch>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<playeffect effect="/heroes/chipper/base/ability_01/effects/impact.effect" target="target_entity" source="target_entity" />
+				<distance source="this_entity" target="this_proxy_entity" />
+				<evaluate a="result" b="3000" op="div" />
+				<evaluate a="60,120,180,240" b="result" op="mult" />
+				<setvar0 a="result" b="60,120,180,240" op="add" />
+				<damage effecttype="Magic" amount="1" b="var0" op="mult" />
+				<setvar0 a="var0" b="0.5" op="mult" />
+				<areaofeffect
+					radius="350"
+					targetselection="all"
+					targetscheme="enemy_units"
+					effecttype="Magic"
+					center="target_entity"
+					ignore="target_entity"
+				>
+					<damage effecttype="Magic" amount="1" b="var0" op="mult" />
+				</areaofeffect>
+			</onimpact>
+		</combatevent>
+		<kill target="this_entity" source="" />
+	</ontouch>
+</projectile>

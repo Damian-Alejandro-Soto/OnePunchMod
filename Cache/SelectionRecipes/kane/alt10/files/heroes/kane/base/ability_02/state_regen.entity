@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Kane_Ability2_Regen"
+
+	icon="icon_b.tga"
+	ishidden="false"
+	passiveeffect="/heroes/kane/alt10/ability_02/effects/state_regen.effect"
+	
+	effecttype=""
+	allowtransfer="false"
+	
+	impactinterval="500"
+>
+	<oninflict>
+		<!-- Delay for aura to take effect upon switching auras -->
+		<setvar0 a="target_accumulator" source="this_spawner_entity" target="this_spawner_entity" />
+		<compare a="var0" b="0.05" op="gt">
+			<setactivemodifierkey name="Kane_Regen_Off" />
+			<setaccumulator value="var0" />
+		</compare>		
+	</oninflict>
+	
+	<onframe>
+		<setaccumulator value="accumulator" valueb="0.05" valueop="sub" />
+		<compare a="accumulator" b="0" op="le">
+			<setactivemodifierkey name="" />
+			<setaccumulator value="0" />
+		</compare>
+
+		<!-- Check if unit is outside aura radius. If he is, then no regen -->		
+		<distance source="source_entity" target="target_entity" />
+		<compare a="result" b="800" op="gt">
+			<setactivemodifierkey name="Kane_Regen_Off" />
+		</compare>
+		
+		<hasmodifier name="Kane_Regen_Off" />
+		<else>
+			<setvar0 source="this_owner_entity" a="source_maxhealth" />
+			<setvar1 source="this_owner_entity" a="source_health" />
+			<setvar2 a="var0" b="var1" op="sub" />
+			<setvar3 a="var2" b="0.010,0.015,0.020,0.025" op="mult" />
+			<heal a="var3" b="frametime" op="mult" />
+		</else>
+	</onframe>
+	
+	<ondamaged priority="-10">
+		<!-- Timer via accumulator when damaged by an enemy -->
+		<compare a="source_damage" b="0" op="gt">
+			<setactivemodifierkey name="Kane_Regen_Off" />
+			<setaccumulator value="8" />
+		</compare>
+	</ondamaged>
+	
+	<onimpact>
+	</onimpact>
+	
+	<modifier key="Kane_Regen_Off" modpriority="100"
+		ishidden="true"
+	>
+		<onimpact>
+			<compare a="accumulator" b="0" op="le">				
+				<!-- Check if unit is inside aura radius. If he is, then resume regen since the unit is inside the aura radius again -->			
+				<distance source="source_entity" target="target_entity" />
+				<compare a="result" b="800" op="le">
+					<setactivemodifierkey name="" />
+				</compare>
+				<else>
+					<setactivemodifierkey name="Kane_Regen_Off" />
+				</else>
+			</compare>		
+		</onimpact>
+	</modifier>
+</state>

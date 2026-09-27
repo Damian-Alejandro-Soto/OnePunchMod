@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Solstice_Ability1_Attack"
+	
+	icon="icon_b.tga"
+	passiveeffect="/heroes/solstice/alt4/ability_01/effects/state_quick_attack.effect"
+	modifierkey="Solstice_ability1_attackspeed"
+	attackspeed="1.5,2,2.5,3"
+	effecttype="StatusBuff"
+	allowtransfer="true"
+>
+	<onframe />
+	
+	<oninflict>
+		<setcharges a="3" />
+	</oninflict>
+	
+	<onattack>
+		<removecharge />
+		<compare a="charges" b="0" op="eq">
+			<expire />
+		</compare>
+	</onattack>
+</state>

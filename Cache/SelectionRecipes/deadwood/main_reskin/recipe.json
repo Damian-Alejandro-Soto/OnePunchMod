@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "hero": "deadwood",
+  "avatar": "main_reskin",
+  "files": [
+    "heroes\\deadwood\\base\\hero.entity",
+    "heroes\\deadwood\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\deadwood\\base\\ability_02\\state.entity",
+    "heroes\\deadwood\\base\\ability_02\\state.entity.onepunch_ability_managed"
+  ],
+  "dependencies": []
+}

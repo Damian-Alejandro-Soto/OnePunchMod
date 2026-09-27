@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Pandamonium_Ability4"	
+	
+	icon="/heroes/panda/alt10/ability_04/icon.dds"
+	passiveeffect="/heroes/panda/alt10/ability_04/effects/state.effect"
+	
+	stunned="true"
+	stunnedreduction="ignore"
+	revealed="true"
+	frozen="true"
+	immobilized="true"
+	
+	effecttype=""
+	
+	modifierkey="channeled_stun_ability"
+
+	negativeeffect="suppressed"
+>
+	<onexpired>
+		<playanim name="idle" />
+	</onexpired>
+</state>

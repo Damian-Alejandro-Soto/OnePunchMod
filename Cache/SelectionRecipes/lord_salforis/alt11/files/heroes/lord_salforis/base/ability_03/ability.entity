@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_LordSalforis3"
+
+	icon="/heroes/dreadknight/alt11/ability_03/icon.dds"
+	
+	anim=""
+	targetradius="300"
+	casttime="0"
+	castactiontime="0"
+	cooldowntime="1000"
+	frontqueue="true"
+	inheritmovement="true"
+	noninterrupting="true"
+	nobreakchannel="true"
+	nonaggressive="true"
+	noresponse="true"	
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	
+	actiontype="no_target"
+
+	dynamicprecache="effects/aoe.effect"
+>
+
+	<aura state="State_LordSalforis_Ability3_EnemyRegen" radius="300" targetscheme="enemy_units" propagatecondition="not_stealthed"  />
+
+	<onlearn>
+		<setactivemodifierkey entity="this_entity" name="salforis_dmgaura_on" />
+		<setscriptvalue name="Ability_effect_AllowCheck" value="yes" entity="this_entity" owner="global"/>
+	</onlearn>
+
+	<ondeath>
+		<!-- Reset stored binding effect state, therefore, the respawn of the host unit will trigger effect playing agagin if necessary -->
+		<setscriptvalue name="Ability_effect_Active" value="" entity="this_entity" owner="global"/>
+	</ondeath>
+	
+	<modifier key="salforis_dmgaura_on" modpriority="100" >
+
+		<onimpact>
+			<setactivemodifierkey name="salforis_dmgaura_off" />
+			
+			<!-- Stop dynamic effect -->
+
+			<setscriptvalue name="Ability_effect_AllowCheck" value="no" entity="this_entity" owner="global"/>
+
+			<getscriptvalue name="Ability_effect_Active" destvar="str0" entity="this_entity" />
+			<stopeffectdynamic effect="str0" target="source_entity"/>
+			<setscriptvalue name="Ability_effect_Active" value="" entity="this_entity" owner="global"/>
+		</onimpact>
+
+		<onframe>
+			<targettype type="alive" target="source_entity">
+			
+				<getscriptvalue name="Ability_effect_AllowCheck" destvar="str0" entity="this_entity" />
+				<comparestrings a="str0" b="yes" op="eq">
+
+					<!-- Setup dynamic effect path for varying cases (avatar-aware) -->
+					<setstr0 a="altavatar_path" b="effects/aoe.effect" op="add" />
+					<exists path="str0">
+						<setscriptvalue name="Ability_effect_New" value="str0" entity="this_entity" owner="global"/>
+					</exists>
+					<else>
+						<setscriptvalue name="Ability_effect_New" value="effects/aoe.effect" entity="this_entity" owner="global"/>
+					</else>
+
+					<!-- Play new dynamic effect if changed-->
+					<getscriptvalue name="Ability_effect_New" destvar="str0" entity="this_entity" />
+					<getscriptvalue name="Ability_effect_Active" destvar="str1" entity="this_entity" />
+					<comparestrings a="str0" b="str1" op="ne">
+						<stopeffectdynamic effect="str1" target="source_entity"/>
+						<setscriptvalue name="Ability_effect_Active" value="str0" entity="this_entity" owner="global"/>
+						<playeffectdynamic effect="str0" target="source_entity" IgnoreCulling="true"/>
+					</comparestrings>
+
+				</comparestrings>
+
+				<applystate name="State_LordSalforis_Ability3_Self" target="source_entity" continuous="true" pushentity="true" /> <!-- Self Health Regen State -->
+				<setproxy entity="this_entity" target="stack_entity" />
+				<isstealthed entity="source_entity" />
+				<else>
+					<setaccumulator value="0" />
+					<areaofeffect
+						radius="300"
+						targetselection="all"
+						targetscheme="enemy_units"
+						effecttype=""
+					>
+						<setaccumulator value="accumulator" valueb="target_healthregen_prereduction" valueop="add" />
+					</areaofeffect> 
+
+					<!-- Steals 30/45/60/75% of the enemy's HP Regen -->					
+					<setvar3 a="accumulator" b="0.3,0.45,0.6,0.75" op="mult" />
+					<setcharges entity="this_proxy_entity" a="var3" />
+					
+					<areaofeffect
+						radius="300"
+						targetselection="all"
+						targetscheme="enemy_units"
+						effecttype=""
+					>
+					</areaofeffect> <!-- Checks nearby enemies -->
+					<setvar1 a="result" />
+					<setvar0 a="15,25,35,45" b="var1" op="div" />
+					<areaofeffect
+						radius="300"
+						targetselection="all"
+						targetscheme="enemy_units"
+						effecttype=""
+					> <!-- Distributes Charges for True Damage Debuff-->
+						<targettype type="illusion" target="source_entity" >
+							<compare a="var0" b="15" op="lt">
+								<damage effecttype="DOT" amount="5" b="frametime" op="mult"  />
+								<applystate name="State_LordSalforis_Ability3" continuous="true" timeout="frametime" pushentity="true"  />
+								<setcharges entity="stack_entity" a="15" />
+							</compare>
+							<else>
+								<setvar1 a="var0" b="frametime" op="mult" />
+								<damage effecttype="DOT" amount="0.33" b="var1" op="mult"  />
+								<applystate name="State_LordSalforis_Ability3" continuous="true" timeout="frametime" pushentity="true"  />
+								<setcharges entity="stack_entity" a="var0" />
+							</else>
+						</targettype>
+						<else>
+							<compare a="var0" b="15" op="lt"> 
+								<damage effecttype="DOT" amount="15" b="frametime" op="mult"  />
+								<applystate name="State_LordSalforis_Ability3" continuous="true" timeout="frametime" pushentity="true"  />
+								<setcharges entity="stack_entity" a="15" />
+							</compare>
+							<else>
+								<setvar1 a="var0" b="frametime" op="mult" />
+								<damage effecttype="DOT" amount="1" b="var1" op="mult"  />
+								<applystate name="State_LordSalforis_Ability3" continuous="true" timeout="frametime" pushentity="true"  />
+								<setcharges entity="stack_entity" a="var0" />
+							</else>
+						</else>
+					</areaofeffect>
+				</else>
+			</targettype>
+		</onframe>
+
+	</modifier>
+		
+	<modifier key="salforis_dmgaura_off" modpriority="100"
+		icon="/shared/icons/off.tga"
+		targetradius="0"
+	>
+		<onimpact>
+			<setactivemodifierkey name="salforis_dmgaura_on" />
+			<setscriptvalue name="Ability_effect_AllowCheck" value="yes" entity="this_entity" owner="global"/>
+		</onimpact>
+		
+		<onframe>
+			<applystate name="State_LordSalforis_Ability3_Self" target="source_entity" continuous="true" pushentity="true" /> <!-- Self Health Regen State -->
+			<setproxy entity="this_entity" target="stack_entity" />
+			<targettype type="alive" target="source_entity">
+				<isstealthed entity="source_entity" />
+				<else>
+					<setaccumulator value="0" />
+					<areaofeffect
+						radius="300"
+						targetselection="all"
+						targetscheme="enemy_units"
+						effecttype=""
+					>
+						<setaccumulator value="accumulator" valueb="target_healthregen_prereduction" valueop="add" />
+					</areaofeffect>
+					
+					<!-- Steals 30/45/60/75% of the enemy's HP Regen -->		
+					<setvar3 a="accumulator" b="0.3,0.45,0.6,0.75" op="mult" />
+					<setcharges entity="this_proxy_entity" a="var3" />
+				</else>
+			</targettype>
+		</onframe>
+	</modifier>
+</ability>

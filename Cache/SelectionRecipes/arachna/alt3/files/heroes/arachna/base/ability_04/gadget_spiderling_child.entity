@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Gadget_Arachna_Ability4_Spiderling_Child"
+
+	icon="../../icon.dds"
+	portrait="../../icon.dds"
+	model="/heroes/arachna/alt3/ability_04/adult_spider/model.mdf"
+	skin=""
+
+	passiveeffect=""
+	spawneffect="../summon/effects/spawn.effect"
+	
+	
+	portraitcampos="0 10 5"
+	
+	preglobalscale="2.2"
+	modelscale="1.0"
+	effectscale="1"
+	boundsheight="64"
+	boundsradius="16"
+	isselectable="true"
+	iscontrollable="true"
+	selectionradius="40"
+	targetoffset="0 0 0"
+	
+	maxhealth="250"
+	armor="3"
+	healthregen="0"
+
+	movespeed="350"
+	turnrate="900"
+	turnsmoothing="0.05"
+
+	
+	unitwalking="false"
+
+	deathtime="0"
+	corpsetime="2000"
+
+	deathnumanims="1"
+	deathanim="death_%"
+	
+	expirenumanims="1"
+	expireanim="death_%"
+	immunity=""
+	
+	canattack="true"
+	ismobile="true"
+	attackduration="1000"
+	attackactiontime="400"
+	attackcooldown="1000"
+	attackdamagemin="10,15,20"
+	attackdamagemax="10,15,20"
+	attacknumanims="1"
+	attackoffset="0 60 100"
+	attackprojectile=""
+	attackrange="100"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="../summon/effects/impact.effect"
+	attacktype="melee"
+	combattype="Melee"
+	drawonmap="true"
+	sightrangeday="600"
+	sightrangenight="600"
+	
+	unittype="summoned"
+	goldbountymin="8"
+	goldbountymax="8"
+	aggrorange="600"
+	
+	lifetime="50000"
+	showlifetime="true"
+>
+
+	<modifier key="rapidfire" modpriority="100"
+		healthregenreduction="1.0"
+	>
+	</modifier>
+</pet>

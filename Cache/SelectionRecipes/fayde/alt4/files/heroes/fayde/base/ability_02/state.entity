@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fayde_Ability2_Stunned"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/fade/alt4/ability_02/effects/state_rings.effect"
+	frozen="true"
+	stunned="true"
+	
+	ishidden="true"
+	
+	effecttype="StatusDisable"
+
+	allowtransfer="true"
+
+	negativeeffect="stunned"
+>
+	<onexpired>
+		<playanim name="idle" target="target_entity" />
+	</onexpired>
+</state>

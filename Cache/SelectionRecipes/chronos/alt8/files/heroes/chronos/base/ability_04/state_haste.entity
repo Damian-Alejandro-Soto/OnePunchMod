@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chronos_Ability4_Haste"
+
+	icon="/heroes/chronos/alt8/ability_04/icon.dds"
+	displaylevel="true"
+	passiveeffect=""
+	
+	maxmovespeed="450"
+	movespeedmultiplier="100"
+	slowresistance="1.0"
+	unitwalking="true"
+	
+	effecttype=""
+	
+	modifierkey="chronos_ability4_Haste"
+	dynamicprecache="effects/trail_sotm.effect,effects/trail.effect"
+>
+	<oninflict>
+		<pushtool name="Ability_Chronos3" />
+		<resetcooldown entity="stack_entity" />
+	</oninflict>
+	
+	<onframe>
+		<compare a="accumulator" b="0" op="gt">
+			<setaccumulator value="accumulator" valueb="1" valueop="sub" />
+		</compare>
+		<targettype type="moving" source="this_owner_entity" target="this_owner_entity">
+			<compare a="accumulator" b="0" op="eq">
+				<setaccumulator value="15" />
+				<hasmodifier name="ult_boost">
+						<setstr0 a="altavatar_path" b="effects/trail_sotm.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" source="this_owner_entity" target="" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/trail_sotm.effect" source="this_owner_entity" target="" />
+					</else>
+				</hasmodifier>
+				<else>
+						<setstr0 a="altavatar_path" b="effects/trail.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" source="this_owner_entity" target="" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/trail.effect" source="this_owner_entity" target="" />
+					</else>
+				</else>
+			</compare>
+		</targettype>
+		<else>
+			<setaccumulator value="0" />
+		</else>
+	</onframe>		
+</state>

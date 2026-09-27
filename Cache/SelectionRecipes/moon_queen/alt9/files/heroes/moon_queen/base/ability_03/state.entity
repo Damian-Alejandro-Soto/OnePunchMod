@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_MoonQueen_Ability3"
+
+	icon="/heroes/krixi/alt9/ability_03/icon.dds"
+	
+	passiveeffect="/heroes/krixi/alt9/ability_03/effects/ability_03.effect"
+	displaylevel="true"
+	
+	basedamagemultiplier="0.05,0.10,0.15,0.20"
+>
+	<!-- Switch to night state -->
+	<modifier key="krixi_night" condition="night" modpriority="101"
+		basedamagemultiplier="0.15,0.20,0.25,0.30"
+	>
+	</modifier>
+</state>

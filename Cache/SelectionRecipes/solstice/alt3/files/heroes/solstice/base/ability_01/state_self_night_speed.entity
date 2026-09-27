@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Solstice_Ability1_Self_Night_Speed"
+	
+	icon="icon_b.tga"
+	passiveeffect="/heroes/solstice/alt3/ability_01/effects/state_charge_night.effect"
+	ishidden="false"
+	
+	movespeed="350"
+	
+	unitwalking="true"
+	treewalking="true"
+	perplexed="true"
+	
+	effecttype=""
+	allowtransfer="false"
+>
+	<onframe>
+		<condition target="source_entity" test="hastrait stunned or hastrait immobilized or hastrait restrained">
+			<expire />
+		</condition>
+	</onframe>
+	
+	<onexpired>
+		<compare a="accumulator" b="1" op="eq">
+			<targettype type="alive" target="source_entity">
+				<playanim name="idle" />
+			</targettype>
+		</compare>
+	</onexpired>
+</state>

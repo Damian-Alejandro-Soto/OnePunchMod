@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Zephyr_Ability4_Tornado"
+
+	icon="/heroes/zephyr/alt8/ability_04/icon.dds"
+	
+	passiveeffect=""
+	ishidden="true"
+	
+	movespeedslow="0.99"
+	negativeeffect="slowed"
+>
+	<onframe>
+		<damage effecttype="Magic DOT" amount="60,80,100" b="frametime" op="mult" source="source_owner_entity" />
+	</onframe>
+</state>

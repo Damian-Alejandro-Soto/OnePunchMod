@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Ravenor1"
+	
+	statuseffecttooltip=""
+	icon="/heroes/ravenor/alt8/ability_01/icon.dds"
+	
+	anim="ability_1"
+	casttime="600"
+	castactiontime="100"
+	casteffect=""
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	targetscheme="enemy_heroes"
+	casteffecttype="Magic"
+	
+	range="1400"
+	forcerange="1400"
+	allowoutofrangecast="true"
+	allowoutofboundscast="true"
+	targetradius="100"
+	
+	manacost="110"
+	cooldowntime="15000,14000,13000,12000"
+	
+	showlinecast="true"
+	linecastrange="1500"
+	linecastwidth="100"
+	
+	showrangeandradiusintooltip="true"
+	dynamicprecache="effects/portout.effect,effects/arrive.effect,effects/impact.effect"
+	
+>
+	<onimpact>
+		<spawnunit name="Gadget_Ravenor_Ability1" count="1" target="source_position" pushentity="true" facing="target_position" />
+		<spawnprojectile name="Projectile_Ravenor_Ability1" source="source_entity" target="target_position" bind="stack_entity" proxy="this_entity" offset="0 100 0" />
+		
+		<!-- Kinesis Thoughtsteal accommodation -->
+		<applystate name="State_Ravenor_Ability1" target="source_entity" proxy="source_entity" duration="4000" />
+		<activatemodifierkey name="ravenor_Q_disabled" entity="this_entity" />
+	</onimpact>		
+	
+	<modifier key="Ravenor_port" modpriority="100"
+		ignorecooldown="true"
+		anim=""
+		icon="/heroes/ravenor/alt8/ability_01/icon1.dds"
+		casttime="0"
+		castactiontime="0"
+		manacost="0"
+		actiontype="no_target"
+		cooldowntime="0"
+		activatescheme="movement"
+		noresponse="true"
+	>
+		<onimpact>
+			<disjoint target="source_entity" />
+			<expirestate name="State_Ravenor_Ability1" target="this_owner_entity" />
+			<spawnaffector name="Affector_Ravenor_Ability1" target="proxy_entity" />
+			<expirestate name="State_Enemy_Ravenor_Ability1" target="proxy_entity" />
+			<expirestate name="State_Ravenor_Ability1" target="source_entity" />
+			
+			<!-- VFX -->
+			<setstr0 a="altavatar_path" b="effects/portout.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" target="source_position" source="source_position" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/portout.effect" target="source_position" source="source_position" occlude="true" />
+			</else>
+			
+			<compare a="this_proxy_entity" b="0" op="ne">
+				<teleport source="this_owner_entity" target="proxy_position" interpolate="false" />
+			</compare>
+			<setstr0 a="altavatar_path" b="effects/arrive.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="source_position" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/arrive.effect" source="source_position" occlude="true" />
+			</else>
+		</onimpact>
+	</modifier>
+	
+	<modifier key="ravenor_Q_disabled" modpriority="101"
+		disabled="true"
+	>
+	</modifier>
+</ability>

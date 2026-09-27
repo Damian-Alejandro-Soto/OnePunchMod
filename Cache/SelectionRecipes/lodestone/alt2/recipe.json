@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "hero": "lodestone",
+  "avatar": "alt2",
+  "files": [
+    "heroes\\lodestone\\base\\hero.entity",
+    "heroes\\lodestone\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\lodestone\\base\\ability_01\\ability.entity",
+    "heroes\\lodestone\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\lodestone\\base\\ability_01\\gadget.entity",
+    "heroes\\lodestone\\base\\ability_01\\gadget.entity.onepunch_ability_managed",
+    "heroes\\lodestone\\base\\ability_01\\projectile.entity",
+    "heroes\\lodestone\\base\\ability_01\\projectile.entity.onepunch_ability_managed",
+    "heroes\\lodestone\\base\\ability_01\\projectile_return.entity",
+    "heroes\\lodestone\\base\\ability_01\\projectile_return.entity.onepunch_ability_managed",
+    "heroes\\lodestone\\base\\ability_01\\state_bound.entity",
+    "heroes\\lodestone\\base\\ability_01\\state_bound.entity.onepunch_ability_managed",
+    "heroes\\lodestone\\base\\ability_01\\state_slow.entity",
+    "heroes\\lodestone\\base\\ability_01\\state_slow.entity.onepunch_ability_managed",
+    "heroes\\lodestone\\base\\ability_02\\ability.entity",
+    "heroes\\lodestone\\base\\ability_02\\ability.entity.onepunch_ability_managed",
+    "heroes\\lodestone\\base\\ability_03\\ability.entity",
+    "heroes\\lodestone\\base\\ability_03\\ability.entity.onepunch_ability_managed",
+    "heroes\\lodestone\\base\\ability_04\\state.entity",
+    "heroes\\lodestone\\base\\ability_04\\state.entity.onepunch_ability_managed",
+    "heroes\\lodestone\\base\\ability_04\\state_pierce.entity",
+    "heroes\\lodestone\\base\\ability_04\\state_pierce.entity.onepunch_ability_managed"
+  ]
+}

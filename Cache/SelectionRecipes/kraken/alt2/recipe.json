@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "hero": "kraken",
+  "avatar": "alt2",
+  "files": [
+    "heroes\\kraken\\base\\hero.entity",
+    "heroes\\kraken\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\kraken\\base\\state_kraken_ult_boost.entity",
+    "heroes\\kraken\\base\\state_kraken_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\kraken\\base\\ability_04\\ability.entity",
+    "heroes\\kraken\\base\\ability_04\\ability.entity.onepunch_ability_managed",
+    "heroes\\kraken\\base\\ability_04\\gadget_whirlpool.entity",
+    "heroes\\kraken\\base\\ability_04\\gadget_whirlpool.entity.onepunch_ability_managed"
+  ],
+  "dependencies": []
+}

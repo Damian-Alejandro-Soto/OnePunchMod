@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "blacksmith",
+  "legacy_folder": "dwarf_magi",
+  "avatar": "alt6",
+  "counts": {
+    "files": 130,
+    "models": 32,
+    "materials": 7,
+    "textures": 20,
+    "effects": 32,
+    "sounds": 39,
+    "icons": 9,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

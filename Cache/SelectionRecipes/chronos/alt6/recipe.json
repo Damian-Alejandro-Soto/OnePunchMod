@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "chronos",
+  "avatar": "alt6",
+  "files": [
+    "heroes\\chronos\\base\\hero.entity",
+    "heroes\\chronos\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\chronos\\base\\state_chronos_ult_boost.entity",
+    "heroes\\chronos\\base\\state_chronos_ult_boost.entity.onepunch_ability_managed"
+  ]
+}

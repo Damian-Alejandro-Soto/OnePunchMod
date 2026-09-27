@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state 
+    name="State_Berzerker_Ability1_Self" 
+
+    icon="/heroes/berzerker/alt11/ability_01/icon.dds" 
+    passiveeffect="/heroes/berzerker/alt10/ability_01/effects/state_self.effect" 
+
+    effecttype="" 
+    alwaystransmitdata="true"
+	
+	modifierkey=""
+	modifierkey2="Berzerker_Chain_Icon"
+>
+	<!-- Delay modifier a frame to fix an issue with onabilityimpact -->
+	<onframe>
+		<hasmodifier name="ult_boost" entity="source_entity">
+			<setactivemodifierkey name="Berzerker_Chain_Boost" />
+		</hasmodifier>
+		<else>
+			<setactivemodifierkey name="Berzerker_Chain" />
+		</else>
+		
+	</onframe>
+
+	<onexpired>
+		<expirestate name="State_Berzerker_Ability1_Enemy" target="this_proxy_entity" /> 
+        <expirestate name="State_Berzerker_Ability1_Debuff" target="this_proxy_entity" />
+		<pushtool source="this_owner_entity" name="Ability_Berzerker1" />
+        <resettimer entity="stack_entity" />
+	</onexpired>
+
+	<modifier key="Berzerker_Chain" modpriority="100"
+		modifierkey="Berzerker_Chain"
+	>
+		<onframe />
+	</modifier>
+	
+	<modifier key="Berzerker_Chain_Boost" modpriority="100"
+		modifierkey="Berzerker_Chain_Boost"
+	>
+		<onframe />
+	</modifier>
+</state>  

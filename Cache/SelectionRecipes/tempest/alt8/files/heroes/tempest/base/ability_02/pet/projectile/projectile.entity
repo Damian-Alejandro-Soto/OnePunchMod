@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Elemental_Attack"
+
+	speed="900"
+	gravity="2000"
+
+	modelscale="0.5"
+	model="effects/spinner.mdf"
+
+	traileffect="/heroes/tempest/alt8/ability_02/effects/minion/effects/trail.effect"
+	impacteffect="/heroes/tempest/alt8/ability_02/effects/minion/effects/impact.effect"
+	
+	canturn="false"
+>
+</projectile>

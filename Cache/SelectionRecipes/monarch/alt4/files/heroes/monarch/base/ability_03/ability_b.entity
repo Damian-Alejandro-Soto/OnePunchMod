@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Monarch3b"
+	
+	icon="icon2.tga"
+	
+	anim="ability_3"
+	casttime="500"
+	castactiontime="250"
+	
+	maxlevel="4"
+	baselevel="0"
+
+	actiontype="target_position"
+	casteffecttype="Magic"
+	casteffect="/heroes/monarch/alt4/ability_03/effects/cast.effect"
+	targetscheme="enemy_units"
+	
+	manacost="70"
+	cooldowntime="100000"
+
+	range="900"
+	
+	targetradius="250"
+	targetmaterial="/shared/materials/area_cast_indicator_pointed.material"
+	
+	showareacast="true"
+	areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+	showneutralspawnblockrange="true"
+	
+	notargetradius="75"
+	notargetmaterial="/shared/materials/area_cast_indicator_simple_red.material"
+	notargetscheme="trees"
+	notargetignoreinvulnerable="true"
+	showrangeandradiusintooltip="true"
+	noshuffle="true"
+>	
+	<onimpact>
+		<!-- Distance check to prevent long-range casts on the same frame -->
+		<setpos0 position="target_position" />
+		<distance target="pos0" />
+		<compare a="result" b="2200" op="lt">
+			<spawnunit name="Gadget_Monarch_Ability3_Empty" target="target_position" pushentity="true" />
+			<spawnunit name="Pet_Monarch_Ability3" offsetspace="source_entity" offset="0 80 0" target="source_entity" proxy="stack_entity" pushentity="true" />
+			<order command="move" force="true" forceduration="10000" source="stack_entity" target="target_position" />
+			<applystate name="State_Monarch_Ability3_Spawner" target="stack_entity" continuous="true" proxy="this_entity" />
+		</compare>
+		
+		<!-- Start cooldown on Monarch's E subability -->
+		<pushtool name="Ability_Monarch3" />
+		<startcooldown duration="14000" entity="stack_entity" />
+	</onimpact>
+	
+	<modifier key="Monarch_E_1" modpriority="90"
+		baselevel="1"
+		keyslot="5"
+	/>
+	
+	<modifier key="Monarch_E_2" modpriority="90"
+		baselevel="2"
+		keyslot="5"
+	/>
+	
+	<modifier key="Monarch_E_3" modpriority="90"
+		baselevel="3"
+		keyslot="5"
+	/>
+	
+	<modifier key="Monarch_E_4" modpriority="90"
+		baselevel="4"
+		keyslot="5"
+	/>
+</ability>

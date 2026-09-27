@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Magmus_Ability3"
+	icon="/heroes/magmar/alt4/ability_03/icon.dds"
+
+	effecttype="StatusDebuff"
+	displaylevel="true"
+	dynamicprecache="effects/explode.effect,effects/impact.effect"
+>
+	<ondeath>
+		<spawnaffector name="Affector_Magmus_Ability3" owner="this_inflictor_entity" source="this_inflictor_entity" target="source_position" />
+			<setstr0 a="altavatar_path" b="effects/explode.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_position" target="this_inflictor_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/explode.effect" source="source_position" target="this_inflictor_entity" occlude="true" />
+		</else>
+	</ondeath>
+</state>

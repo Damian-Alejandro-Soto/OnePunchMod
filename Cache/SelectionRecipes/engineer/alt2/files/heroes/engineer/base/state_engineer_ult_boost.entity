@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Engineer_Ult_Boost"
+	
+	passiveeffect="/heroes/engineer/alt2/effects/boost.effect"
+	effecttype=""
+	
+	ishidden="true"
+>
+	<modifier key="iamsheeped" modpriority="1000"
+		passiveeffect=""
+	/>
+</state>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Slither"
+	
+	team="Hellbourne"
+	icon="/heroes/ebulus/alt3/icon.dds"
+	portrait="/heroes/ebulus/alt3/icon.dds"
+	model="/heroes/ebulus/alt3/model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/ebulus/alt3/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/ebulus/alt3/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/ebulus/alt3/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/ebulus/alt3/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/ebulus/alt3/sounds/voice/no_mana.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/ebulus/alt3/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/ebulus/alt3/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.5"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="160"
+	boundsradius="24"
+	selectionradius="55"
+	targetoffset="0 0 64"
+
+	category="magic"
+	difficulty="2"
+
+	midrating="3"
+	junglerating="0"
+	carryrating="1"
+	hardsupportrating="2"
+	softsupportrating="3"
+	offlanerating="4"
+	soloofflanerating="0"
+	rangedrating="4"
+	meleerating="0"
+
+	movespeed="290"
+	turnrate="540"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="1"
+	magicarmor="5"
+
+	inventory0="Ability_Slither1"
+	inventory1="Ability_Slither2"
+	inventory2="Ability_Slither3"
+	inventory3="Ability_Slither4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="250"
+	attackcooldown="1700"
+	attackdamagemin="27"
+	attackdamagemax="29"
+	attacknumanims="2"
+	attackoffset="0 100 70"
+	attackprojectile="Projectile_SlitherAttack"
+	attackrange="500"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="agility"
+	strength="18"
+	strengthperlevel="1.9"
+	agility="22"
+	agilityperlevel="2.6"
+	intelligence="18"
+	intelligenceperlevel="1.8"
+	
+
+	previewpos="0 35 -50"
+	previewangles="0 0 0"
+	previewscale="2"
+
+	storemodel="/heroes/ebulus/alt3/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.4"
+	
+	corpsetime="2500"
+	corpsefadetime="2500"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+ attackanim="attack_%"
+        infoheight="170"
+        icon2="/heroes/ebulus/alt3/icon.dds"
+        previewmodel="/heroes/ebulus/alt3/preview.mdf"
+        cooldownsound="/heroes/ebulus/alt3/sounds/voice/cooldown.wav">
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_SoulscreamRing" />
+	<recommendeditem name="Item_BloodChalice" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_Lightbrand" />
+	<recommendeditem name="Item_SearingLight" />
+	<recommendeditem name="Item_SorceryBoots" />
+	<recommendeditem name="Item_RingoftheTeacher" />
+	<recommendeditem name="Item_Soultrap" />
+	<recommendeditem name="Item_RingofSorcery" />
+	<recommendeditem name="Item_KuldrasSheepstick" />
+	<recommendeditem name="Item_Energizer" />
+	<recommendeditem name="Item_SpellSunder" />
+	<recommendeditem name="Item_StaffoftheMaster" />
+	<recommendeditem name="Item_Spellshards" />
+	<recommendeditem name="Item_GrimoireofPower" />
+	
+	<gooditemagainst name="Item_MysticVestments" />
+	<gooditemagainst name="Item_Stormspirit" />
+	<gooditemagainst name="Item_KuldrasSheepstick" />
+	<gooditemagainst name="Item_BarbedArmor" />
+	<gooditemagainst name="Item_GeometersBane" />
+	
+	
+	
+	<!-- Staff of the master upgrade effect-->
+	<modifier key="ult_boost" modpriority="100"
+		passiveeffect=""
+	>
+		<aura state="State_Slither_Ult_Boost" radius="0" targetscheme="self"/>
+	</modifier>	
+</hero>

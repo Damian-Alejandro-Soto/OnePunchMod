@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Prisoner_Ability4_Self"
+	icon="/heroes/prisoner/alt5/ability_04/icon.dds"
+	effecttype=""
+	modifierkey="prisoner_bound"
+	passiveeffect="effects/state_self.effect"
+>
+
+	<modifier key="ult_boost" modpriority="100" />
+</state>

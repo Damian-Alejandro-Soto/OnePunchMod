@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_VoodooJester_Ability2_Buff_Aura"
+	
+	icon="icon.tga"	
+	passiveeffect="/heroes/voodoo/alt4/ability_02/effects/state_ally_aura.effect"
+	
+	effecttype="StatusBuff"
+	allowtransfer="false"
+>
+	<onframe>
+		<!-- Base Heal with multiplier -->
+		<evaluate a="15,25,35,45" b="0.5" op="mult" />
+		<evaluate a="result" b="frametime" op="mult" />
+		<heal a="1" b="result" op="mult" ishealingovertime="true" />
+	</onframe>
+
+	<modifier key="is_courier" condition="Courier" modpriority="100"
+		passiveeffect=""
+	/>
+</state>

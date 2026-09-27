@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_BloodHunter_Ability3_Self"
+
+	icon="../../icon.dds"
+	
+	passiveeffect="/heroes/hunter/alt8/ability_03/effects/thirst.effect"
+	
+	effecttype="StatusBuff"
+	
+	movespeedmultiplier="0.1,0.2,0.3,0.4"
+	modifierkey="bloodthirst"
+>
+	<modifier key="iamsheeped" modpriority="1000"
+		passiveeffect=""
+	/>
+</state>

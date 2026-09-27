@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_MasterOfArms_Ability2_ChemBomb"
+
+	lifetime="400"
+	useexactlifetime="true"
+	gravity="10000"
+
+	model="/heroes/master_of_arms/alt12/ability_02/effects/chem_projectile_ground/model.mdf"
+	modelscale="1.7"
+	traileffect="/heroes/master_of_arms/alt12/ability_02/effects/chem_trail.effect"
+	impacteffect=""
+>
+	<onimpact>
+		<setpos0 position="target_position" offsetspace="this_proxy_entity" offset="0 800 0" />
+		<kill target="this_proxy_entity" source="" />
+		<spawnprojectile name="Projectile_MasterOfArms_Ability2_Chem2" source="target_position" target="pos0" pushentity="true" />
+		<spawnaffector name="Affector_MasterOfArms_Ability2_Chem" target="stack_entity" />
+	</onimpact>
+</projectile>

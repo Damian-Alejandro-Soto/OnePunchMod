@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Empath5"
+
+	icon="/heroes/empath/alt2/ability_04/icon_sub.dds"
+
+	casttime="0"
+	castactiontime="0"
+	statuseffecttooltip=""
+
+	actiontype="no_target"
+	targetscheme="other_ally_heroes"
+	
+	baselevel="0"
+	maxlevel="1"
+	disabled="true"
+	
+	manacost="30"
+	cooldowntime="5000"
+>
+	<onimpact>
+		<areaofeffect
+			targetscheme="other_ally_heroes"
+			effecttype=""
+			targetselection="closest"
+			radius="30"
+			maxtotalimpacts="1"
+		>
+			<applystate name="State_Empath_Ability4_Speed" duration="2000" />
+		</areaofeffect>
+	</onimpact>
+	
+	<modifier key="Empath_Inside" modpriority="90"
+		disabled="false"
+		baselevel="1"
+		keyslot="2"
+	/>
+</ability>

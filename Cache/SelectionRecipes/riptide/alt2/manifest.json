@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "riptide",
+  "legacy_folder": "riptide",
+  "avatar": "alt2",
+  "counts": {
+    "files": 137,
+    "models": 57,
+    "materials": 9,
+    "textures": 16,
+    "effects": 26,
+    "sounds": 29,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

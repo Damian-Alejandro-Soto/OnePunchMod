@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Valkyrie2"
+
+	icon="../../icon.dds"
+	
+	anim="ability_2"
+	casttime="1330"
+	castactiontime="500"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_position"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	casteffect="/heroes/valkyrie/alt10/ability_02/effects/cast.effect"
+	
+	manacost="100"
+	cooldowntime="16000"
+
+	range="7000"
+	forcerange="7000"
+	allowoutofboundscast="true"
+	targetradius="80"
+	
+	dontshowhovercast="true"
+	showlinecast="true"
+	linecastrange="7030"
+	linecastwidth="80"
+	
+	showrangeandradiusintooltip="true"
+	dynamicprecache="effects/impact_add.effect,effects/impact.effect"
+>
+	<onlearn>
+		<hasmodifier entity="source_entity" name="track_abilities">
+			<setgameplaystat index="0" target="source_entity" a="0" /> <!-- Attempts to javelin -->
+			<setgameplaystat index="1" target="source_entity" a="0" /> <!-- javelin hits -->
+		</hasmodifier>
+	</onlearn>
+
+	<onimpact>
+		<spawnunit name="Gadget_Valkyrie_Ability2_Reveal" count="1" target="source_position" pushentity="true" />
+		<spawnprojectile name="Projectile_Valkyrie_Ability2" source="source_entity" target="target_position" bind="stack_entity" proxy="stack_entity" offset="0 140 0" />
+
+		<hasmodifier entity="source_entity" name="track_abilities">
+			<setgameplaystat index="0" target="source_entity" a="target_gameplaystat0" b="1" op="add" /> <!-- Javelin Attempt! +1 -->
+		</hasmodifier>
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="100"
+	>
+		<onimpact>
+			<spawnunit name="Gadget_Valkyrie_Ability2_Reveal" count="1" target="source_position" pushentity="true" />
+			<spawnprojectile name="Projectile_Valkyrie_Ability2" source="source_entity" target="target_position" bind="stack_entity" proxy="stack_entity" offset="0 140 0" />
+
+			<hasmodifier entity="source_entity" name="track_abilities">
+				<setgameplaystat index="0" target="source_entity" a="target_gameplaystat0" b="1" op="add" /> <!-- Javelin Attempt! +1 -->
+			</hasmodifier>
+		</onimpact>
+	</modifier>
+</ability>

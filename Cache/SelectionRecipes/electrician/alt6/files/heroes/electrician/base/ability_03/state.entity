@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Electrician_Ability3"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/electrician/alt6/ability_03/effects/state.effect"
+	effecttype="StatusBuff"
+	allowtransfer="true"
+	
+	maxcharges="3"
+
+	movespeed="25"
+	movespeedpercharge="5"
+>
+	<oninflict>
+		<givemana amount="15,20,25,30" />
+	</oninflict>
+	
+	<onrefresh>
+		<givemana amount="15,20,25,30" />
+	</onrefresh>
+	
+	<onframe />
+</state>

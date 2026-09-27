@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rampage_Ability1_Self"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/rampage/alt2/ability_01/effects/charge.effect"
+
+	movespeed="700"
+	maxmovespeed="150"
+	
+	unitwalking="true"
+	treewalking="true"
+	buildingwalking="true"
+	cliffwalking="true"
+	
+	perplexed="false"
+
+	slowresistance="1.0"
+>
+	<onframe>
+		<killtrees radius="100" />
+		
+		<!-- Put Stampede on a 10 second cooldown if the target is deleted -->
+		<compare a="this_proxy_entity" b="0" op="eq">
+			<setaccumulator value="1" />
+			<pushtool source="source_entity" name="Ability_Rampage1" />
+			<resetcooldown entity="stack_entity" />
+			<startcooldown entity="stack_entity" duration="10000" />
+
+			<expire />
+		</compare>
+	</onframe>
+
+	<modifier key="ult_boost" modpriority="100"
+		immunitytype="MagicImmunity1"
+	>
+	</modifier>
+
+	<!-- Midwars-only changes -->
+	<modifier key="OnlyMidMap" modpriority="101"
+		movespeed="600"
+		maxmovespeed="350"
+		evasion="0.35"
+	>
+	</modifier>
+</state>

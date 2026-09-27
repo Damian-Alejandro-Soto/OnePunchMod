@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Revenant_Ability1_Slow"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/revenant/alt6/ability_01/effects/state_slow.effect"
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	
+	movespeedslowpercharge="0.20"
+
+	negativeeffect="slowed"
+>
+	<oninflict>
+		<addcharges count="1" timed="true" />
+	</oninflict>
+	
+	<onrefresh>
+		<addcharges count="1" timed="true" />
+	</onrefresh>
+	
+	<onframe />
+
+</state>

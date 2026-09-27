@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Midas_Ability3"
+
+	lifetime="500"
+	useexactlifetime="true"
+	gravity="9000"
+
+	modelscale="1"
+	model="/heroes/midas/alt9/ability_03/effects/girl/girl.mdf"
+	
+	traileffect="/heroes/midas/alt9/ability_03/effects/trail.effect"
+	
+	canturn="false"
+>
+</projectile>

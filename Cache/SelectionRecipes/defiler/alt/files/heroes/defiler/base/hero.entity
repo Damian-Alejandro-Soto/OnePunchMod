@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Defiler"
+
+	team="Hellbourne"
+	icon="/heroes/defiler/alt/icon.dds"
+	animatedportrait=""
+	portrait="/heroes/defiler/alt/icon.dds"
+	model="/heroes/defiler/alt/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/defiler/alt/effects/body.effect"
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/defiler/alt/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/defiler/alt/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/defiler/alt/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/defiler/alt/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/defiler/alt/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/defiler/alt/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/defiler/alt/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/defiler/alt/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.8"
+	modelscale="1"
+	effectscale="1"
+	boundsheight="160"
+	boundsradius="24"
+	selectionradius="51"
+	targetoffset="0 0 64"
+
+	category="magic physical"
+	difficulty="2"
+
+	midrating="5"
+	junglerating="0"
+	carryrating="2"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="3"
+	soloofflanerating="0"
+	rangedrating="5"
+	meleerating="0"
+	
+	movespeed="295"
+	turnrate="630"
+	turnsmoothing="0.1"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-0.5"
+	magicarmor="5"
+
+	inventory0="Ability_Defiler1"
+	inventory1="Ability_Defiler2"
+	inventory2="Ability_Defiler3"
+	inventory3="Ability_Defiler4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="350"
+	attackcooldown="1700"
+	attackdamagemin="25"
+	attackdamagemax="31"
+	attacknumanims="2"
+	attackoffset="0 100 70"
+	attackprojectile="Projectile_DefilerAttack"
+	attackrange="525"
+	attackstarteffect="effects/attack.effect"
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="intelligence"
+	strength="23"
+	strengthperlevel="1.8"
+	agility="18"
+	agilityperlevel="1.4"
+	intelligence="20"
+	intelligenceperlevel="3"
+	
+	corpsetime="3500"
+	corpsefadetime="1000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	
+
+	previewpos="0 0 -80"
+	previewangles="0 0 0"
+	previewscale="1.7"
+	
+	storemodel="/heroes/defiler/alt/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.65"
+	
+ attackanim="attack_%"
+        icon2="/heroes/defiler/alt/icon.dds"
+        infoheight="185"
+        previewmodel="/heroes/defiler/alt/preview.mdf">
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_AmuletofExile" />
+	<recommendeditem name="Item_PlatedGreaves" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_Lightbrand" />
+	<recommendeditem name="Item_RingoftheTeacher" />
+	<recommendeditem name="Item_RefreshingOrnament" />
+	<recommendeditem name="Item_NomesWisdom" />
+	<recommendeditem name="Item_Astrolabe" />
+	<recommendeditem name="Item_Stormspirit" />
+	<recommendeditem name="Item_KuldrasSheepstick" />
+	<recommendeditem name="Item_Energizer" />
+	<recommendeditem name="Item_StaffoftheMaster" />
+	<recommendeditem name="Item_HelmoftheBlackLegion" />
+	<recommendeditem name="Item_IconoftheGoddess" />
+	<recommendeditem name="Item_ShrunkenHead" />
+	<recommendeditem name="Item_UltorsHeavyPlate" />
+	<recommendeditem name="Item_ShieldoftheFive" />
+	<recommendeditem name="Item_ArmoroftheMadMage" />
+	<recommendeditem name="Item_FrostfieldPlate" />
+	<recommendeditem name="Item_Spellshards" />
+	<recommendeditem name="Item_GrimoireofPower" />
+	
+	<gooditemagainst name="Item_MysticVestments" />
+	<gooditemagainst name="Item_ManaBattery" />
+	<gooditemagainst name="Item_PowerSupply" />
+	<gooditemagainst name="Item_KuldrasSheepstick" />
+	<gooditemagainst name="Item_IronShield" />
+	<gooditemagainst name="Item_FrostfieldPlate" />
+	
+	
+	
+	<modifier key="iamsheeped" modpriority="100"
+		passiveeffect=""
+	/>
+	
+	<modifier key="ult_boost" modpriority="100"
+	>
+		<aura state="State_Defiler_Ult_Boost" radius="0" targetscheme="self"/>
+		<onrespawn>
+			<pushtool name="Ability_Defiler4" source="source_entity" />
+			<entitytype type="Ability_Defiler4" target="stack_entity">
+				<setvar0 a="source_level" source="stack_entity" />
+				<compare a="var0" b="1" op="ge">
+					<spawnaffector name="Affector_Defiler_Ability4_Sotm" target="source_entity" proxy="this_proxy_entity" level="var0" />
+				</compare>
+			</entitytype>
+		</onrespawn>
+	</modifier>	
+</hero>

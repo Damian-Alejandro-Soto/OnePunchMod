@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_PollywogPriest_Ability3"
+	
+	icon="icon.tga"
+	passiveeffect="/heroes/pollywogpriest/alt6/ability_03/effects/target.effect"
+
+	revealed="true"
+	sighted="true"
+	stunned="true"
+	stunnedreduction="ignore"
+	frozen="true"
+	immobilized="true"
+	
+	effecttype="StatusDebuff"
+
+	modifierkey="channeled_stun_ability"
+
+	negativeeffect="suppressed"
+>
+	<onframe>
+		<damage effecttype="Magic DOT" amount="40,50,60,70" b="frametime" op="mult" />
+	</onframe>
+	
+	<onexpired>
+		<breakchannel entity="this_spawner_entity" />
+		<playanim name="idle" />
+	</onexpired>
+</state>

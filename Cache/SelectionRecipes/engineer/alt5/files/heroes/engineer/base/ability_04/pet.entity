@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Pet_Engineer_Ability4"
+	
+	icon="../../icon.dds"
+	portrait="../../icon.dds"
+	model="/heroes/engineer/alt5/ability_02/effects/turret_round/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/engineer/ability_04/effects/base_ult_alt5.effect"
+	spawneffect="/heroes/engineer/base/ability_02/effects/impact.effect"
+	respawneffect=""
+	selectsound=""
+	orderconfirmedsound=""
+	
+	preglobalscale="1.6"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="40"
+	targetoffset="0 0 64"
+
+	movespeed="0"
+	ismobile="false"
+	canrotate="false"
+	turnrate="900"
+	turnsmoothing="0.1"
+	isselectable="false"
+	iscontrollable="false"
+	
+	unitwalking="true"
+
+	maxhealth="16"
+	healthregen="0"
+	maxmana="0"
+	manaregen="0"
+	
+	healthregenreduction="1"
+	manaregenreduction="1"
+	
+	inventory0=""
+
+	armor="0"
+	magicarmor="0"
+	immunity="GadgetImmunity"
+
+	canattack="true"
+	attackdamagemin="40,60,80"
+	attackdamagemax="40,60,80"
+	attackduration="100"
+	attackactiontime="50"
+	attackcooldown="1500"
+	attackprojectile="Projectile_Engineer_Ability4_TurretAttack"
+	attackoffset="0 0 100"
+	attackrange="450"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="/heroes/engineer/base/ability_02/effects/impact.effect"
+	attacktype="ranged"
+	combattype="Hero"
+	
+	aggrorange="450"
+	sightrangeday="1000"
+	sightrangenight="1000"
+	
+	lifetime="6000,8000,10000"
+	showlifetime="true"
+	
+	goldbountymin="40,60,80"
+	goldbountymax="40,60,80"
+	experiencebounty="60,80,100"
+	dynamicprecache="effects/state_inside.effect"
+>
+	<onspawn>
+		<!-- Kill trees -->
+		<killtrees radius="250" />
+		
+		<!-- Energy field logic -->
+		<areaofeffect
+			radius="450"
+			targetselection="all"
+			targetscheme="enemy_nonboss_units"
+			effecttype=""
+			ignoreinvulnerable="true"
+		>
+			<applystate name="State_Engineer_Ability4_Zap_Immunity" duration="100" proxy="this_entity" />
+		</areaofeffect>
+		<spawnaffector name="Affector_Engineer_Ability4" target="this_entity" proxy="this_entity" />
+	</onspawn>
+	
+	<onattack>
+		<split count="25" range="450" damagemult="1" targetscheme="visible_enemy_units" fulldamageonmaintarget="true" />
+	</onattack>
+	
+	<!-- No Lifesteal on the Steam Turret -->
+	<onattackpredamage>
+		<setvalue name="combat_lifesteal" a="combat_lifesteal" b="0" op="min" />
+	</onattackpredamage>
+	
+	<ondamaged>
+		<damageeffecttype effecttype="Returned">
+			<changedamage b="0" op="min" />
+		</damageeffecttype>
+		<else>
+			<changedamage b="1" op="min" />
+			<targettype type="hero">
+				<setaccumulator value="1" />
+			</targettype>
+			<else>
+				<cantarget targetscheme="enemy_buildings">
+					<setaccumulator value="1" />
+				</cantarget>
+				<else>
+					<targettype type="Boss">
+						<setaccumulator value="1" />
+					</targettype>
+				</else>
+			</else>
+			
+			<!-- Dies in 4 hits from everything that passes true above, 16 hits for everything else -->
+			<compare a="accumulator" b="1" op="eq">
+				<evaluate a="source_maxhealth" b="4" op="div" />
+				<changedamage b="result" op="max" />
+			</compare>
+			<else>
+				<evaluate a="source_maxhealth" b="16" op="div" />
+				<changedamage b="result" op="max" />
+			</else>
+		</else>		
+		
+		<setaccumulator value="0" />
+	</ondamaged>
+	
+	<!-- No Evasion -->
+	<onattackedpreimpact>
+		<setvalue name="combat_truestrike" a="1" />
+	</onattackedpreimpact>
+	
+	<onframe>
+		<activatemodifierkey name="EngineerR_Selectable" />
+	</onframe>
+	
+	<modifier key="EngineerR_Selectable" modpriority="100"
+		isselectable="true"
+	/>
+	
+	<modifier key="ult_boost" modpriority="100"
+		attackdamagemin="80,120,160"
+		attackdamagemax="80,120,160"
+	>
+	</modifier>
+</gadget>

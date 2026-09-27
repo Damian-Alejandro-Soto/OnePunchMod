@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rampage_Ability1_Disarm"
+	
+	icon="/heroes/Rampage/alt14/ability_01/icon.dds"
+	passiveeffect=""
+	
+	disarmed="true"
+>
+</state>

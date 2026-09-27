@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Predator_Ability4_Enemy"
+
+	icon="/heroes/predator/frostfield/ability_04/icon.dds"
+	passiveeffect=""
+	
+	maxcharges="4"
+>
+	<oninflict>
+		<addcharges count="1" />
+	</oninflict>
+	
+	<onrefresh>
+		<addcharges count="1" />
+		<compare a="charges" b="4" op="ge">
+			<applystate name="State_Predator_Ability4" target="this_owner_entity" duration="8000" />
+			<applystate name="State_Predator_Ability4_Buff" target="this_proxy_entity" duration="4250" />
+			<expire />
+		</compare>
+	</onrefresh>
+
+	<modifier key="ult_boost" modpriority="100"
+		maxcharges="2"
+	>
+
+		<onrefresh>
+			<addcharges count="1" />
+			<compare a="charges" b="2" op="ge">
+				<applystate name="State_Predator_Ability4" target="this_owner_entity" duration="8000" />
+				<applystate name="State_Predator_Ability4_Buff_SOTM" target="this_proxy_entity" duration="4250" />
+				<expire />
+			</compare>
+		</onrefresh>
+
+	</modifier>
+
+</state>

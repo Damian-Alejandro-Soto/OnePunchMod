@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_ShadowBlade_Ability3_Morph"
+
+	icon="/heroes/shadowblade/alt7/ability_03/icon.dds"
+	passiveeffect="/heroes/shadowblade/alt7/ability_03/effects/state_self.effect"
+	displaylevel="true"
+	propagatetoillusions="true"
+	
+	intelligence="5,10,15,20"
+
+	modifierkey="ShadowBlade_E_Form"
+	
+	effecttype=""
+	morphpriority=""
+	
+	maxcharges="1"
+	dynamicprecache="effects/transform.effect"
+>
+	<onframe />
+
+	<onattackstart />
+	
+	<oninflict>
+		<expirestate name="State_ShadowBlade_Ability4_Morph" target="source_entity" />
+		<expirestate name="State_ShadowBlade_Ability1_Morph" target="source_entity" />
+		<expirestate name="State_ShadowBlade_Ability2_Morph" target="source_entity" />
+		<hasmodifier entity="this_owner_entity" name="krosmode">
+			<targettype source="this_owner_entity" target="this_owner_entity" type="melee">
+				<applystate name="State_ShadowBlade_Ability3_Morph_Krosmode" target="source_entity" duration="12000" pushentity="true" />
+			</targettype>
+		</hasmodifier>
+		
+		<!-- Add bonus on-attack effect indicator with a charge -->
+		<addcharges count="1" />
+	</oninflict>
+	
+	<onrefresh>
+		<addcharges count="1" />
+	</onrefresh>
+	
+	<onexpired>
+		<setstr0 a="altavatar_path" b="effects/transform.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_entity" target="source_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffect effect="effects/transform.effect" source="source_entity" target="source_entity" />
+		</else>
+	</onexpired>
+	
+	<onattackimpact propagatetoillusions="false">
+		<targettype type="building" />
+		<else>
+			<!-- Magic Damage & Stun -->
+			<compare a="charges" b="0" op="gt">
+				<cantarget targetscheme="enemy_units">
+					<cantarget effecttype="Magic">
+						<applystate name="State_Stunned" duration="600,800,1000,1200" />
+						<damage effecttype="Magic" amount="16,24,32,40" />
+					</cantarget>
+					
+					<setcharges a="0" />
+					<pushtool name="Ability_ShadowBlade3" />
+					<resettimer entity="stack_entity" />
+				</cantarget>
+			</compare>
+			
+			<!-- Regular Bonus Damage -->
+			<setvar0 a="source_intelligence" b="0.2,0.4,0.6,0.8" op="mult" />
+			<damage effecttype="Magic" amount="1" b="var0" op="mult" />
+			<popup name="execution" a="var0" source="target_entity" target="source_entity" />
+		</else>
+	</onattackimpact>
+	
+	<modifier key="iamsheeped" modpriority="1000"
+		passiveeffect=""
+	/>
+	<modifier key="krosmode" modpriority="100"
+	>
+		<onattackstart>
+			<setattackprojectile name="Projectile_ShadowBlade_Ability3" />
+		</onattackstart>
+	</modifier>
+</state>

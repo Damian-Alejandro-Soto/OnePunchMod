@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bushwack_Ability2"
+
+	ishidden="true"
+	
+	passiveeffect="/heroes/bushwack/alt2/ability_02/effects/trail.effect"
+
+	unitwalking="true"
+	effecttype=""
+>
+</state>

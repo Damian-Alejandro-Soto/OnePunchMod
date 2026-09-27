@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Gladiator_Ability3"
+
+	radius="380,420,460,500"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Physical"
+	impacteffect="/heroes/gladiator/alt12/ability_03/effects/impact.effect"
+>
+
+</affector>

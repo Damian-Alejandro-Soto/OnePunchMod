@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "monkey_king",
+  "legacy_folder": "monkey_king",
+  "avatar": "main_reskin",
+  "counts": {
+    "files": 53,
+    "models": 35,
+    "materials": 4,
+    "textures": 6,
+    "effects": 8,
+    "sounds": 0,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

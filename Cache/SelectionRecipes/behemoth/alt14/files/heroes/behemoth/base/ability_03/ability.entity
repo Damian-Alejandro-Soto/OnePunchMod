@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Behemoth3"
+
+	icon="/heroes/behemoth/alt14/ability_03/icon.dds"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="passive"
+	targetradius="280"
+	dynamicprecache="effects/impact.effect"
+>
+	
+	<onabilityimpact>
+		<entitytype type="Ability_Behemoth2_Sub" target="inflictor_entity" />
+		<else>
+			<spawnaffector name="Affector_Behemoth_Ability3" source="source_position" target="source_position" />
+		</else>
+	</onabilityimpact>			
+</ability>

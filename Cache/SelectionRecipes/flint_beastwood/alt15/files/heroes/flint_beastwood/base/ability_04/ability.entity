@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_FlintBeastwood4"
+
+	icon="/heroes/flint_beastwood/alt15/ability_04/icon.dds"
+	
+	anim="ability_4"
+	casttime="1900"
+	castactiontime="0"
+	channeltime="1700"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_entity"
+	casteffecttype="SuperiorMagic"
+	targetscheme="enemy_nonboss_units"
+	ischanneling="true"
+	deferchannelcost="true"
+	deferchannelimpact="true"
+	
+	manacost="150,250,350"
+	cooldowntime="20000,18000,16000"
+	
+	range="2000,2500,3000"
+	
+	showareacast="true"
+	areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+
+	targetpriorities="enemy_heroes"
+	dynamicprecache="effects/cast.effect,effects/attack.effect"
+>
+	<onimpact />
+
+	<onchannelstart>
+		<!-- Alt avatar stuff -->
+			<setstr0 a="altavatar_path" b="effects/cast.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="source_entity" target="" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/cast.effect" source="source_entity" target="" />
+			</else>		
+		<!-- end of alt avatar stuff -->
+		<spawnunit name="Gadget_FlintBeastwood_Ability4" target="target_entity" bind="target_entity" pushentity="true" ischannel="true" />
+		<setproxy entity="this_entity" target="stack_entity" />
+	</onchannelstart>
+	
+	<onchannelframe>
+		<distance />
+		<compare a="result" b="4000" op="gt">
+			<breakchannel />
+		</compare>
+	</onchannelframe>
+	
+	<onchannelbreak>
+		<kill target="this_proxy_entity" source="" />
+	</onchannelbreak>
+	
+	<onchannelend>
+		<spawnprojectile name="Projectile_FlintBeastwood_Ability4" offset="0 150 100" source="source_entity" target="target_entity" noresponse="true" />
+		
+		<!-- Spawn bonus projectiles if you have SotM -->		
+		<hasmodifier name="ult_boost" entity="source_entity">
+			<areaofeffect
+				radius="1500"
+				maxtotalimpacts="1"
+				targetselection="closest"
+				targetscheme="nonstealth_enemy_heroes"
+				center="target_position"
+				ignore="target_entity"
+			>
+				<spawnprojectile name="Projectile_FlintBeastwood_Ability4_SotM" offset="0 150 100" source="source_entity" target="target_entity" noresponse="true" />
+			</areaofeffect>	
+		</hasmodifier>
+		
+		<!-- start of alt avatar stuff -->
+			<setstr0 a="altavatar_path" b="effects/attack.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="source_entity" target="" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/attack.effect" source="source_entity" target="" />
+			</else>
+		<!-- end of alt avatar stuff -->
+		<kill target="this_proxy_entity" source="" />
+	</onchannelend>
+	
+	<modifier key="ult_boost" modpriority="100"
+		manacost="100,200,300"
+	>
+		<onchannelframe />
+		
+		<onkill propagatetoillusions="false">
+			<targettype type="hero">
+				<targettype type="illusion" />
+				<else>
+					<targettype type="mimic" />
+					<else>
+						<targettype type="self" />
+						<else>
+							<targettype type="heropet" />
+							<else>
+								<reducecooldown duration="30000" />
+							</else>
+						</else>
+					</else>
+				</else>
+			</targettype>
+		</onkill>
+		
+		<onimpact />
+	</modifier>	
+</ability>

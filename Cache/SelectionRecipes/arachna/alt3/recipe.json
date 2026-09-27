@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "hero": "arachna",
+  "avatar": "alt3",
+  "files": [
+    "heroes\\arachna\\base\\hero.entity",
+    "heroes\\arachna\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\arachna\\base\\state_arachna_ult_boost.entity",
+    "heroes\\arachna\\base\\state_arachna_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\arachna\\base\\ability_04\\gadget_spiderling_adult.entity",
+    "heroes\\arachna\\base\\ability_04\\gadget_spiderling_adult.entity.onepunch_ability_managed",
+    "heroes\\arachna\\base\\ability_04\\gadget_spiderling_child.entity",
+    "heroes\\arachna\\base\\ability_04\\gadget_spiderling_child.entity.onepunch_ability_managed",
+    "heroes\\arachna\\base\\ability_04\\pet.entity",
+    "heroes\\arachna\\base\\ability_04\\pet.entity.onepunch_ability_managed",
+    "heroes\\arachna\\base\\ability_04\\pet_sotm.entity",
+    "heroes\\arachna\\base\\ability_04\\pet_sotm.entity.onepunch_ability_managed",
+    "heroes\\arachna\\base\\ability_04\\projectile.entity",
+    "heroes\\arachna\\base\\ability_04\\projectile.entity.onepunch_ability_managed",
+    "heroes\\arachna\\base\\ability_04\\projectile_sotm.entity",
+    "heroes\\arachna\\base\\ability_04\\projectile_sotm.entity.onepunch_ability_managed"
+  ]
+}

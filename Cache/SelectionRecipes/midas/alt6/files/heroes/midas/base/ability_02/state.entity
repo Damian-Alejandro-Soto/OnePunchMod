@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Midas_Ability2"
+
+	icon="/heroes/midas/alt6/ability_02/icon.dds"
+	passiveeffect=""
+	displaylevel="true"
+	ishidden="true"
+	modifierkey="Midasorb"
+	effecttype=""
+>
+</state>

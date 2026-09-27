@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "doctor_repulsor",
+  "legacy_folder": "doctor_repulsor",
+  "avatar": "alt5",
+  "counts": {
+    "files": 378,
+    "models": 105,
+    "materials": 16,
+    "textures": 29,
+    "effects": 54,
+    "sounds": 174,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

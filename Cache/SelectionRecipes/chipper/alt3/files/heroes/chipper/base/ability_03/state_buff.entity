@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chipper_Ability3_Buff"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/chipper/alt3/ability_03/effects/state.effect"
+	
+	effecttype="StatusBuff"
+	allowtransfer="true"
+>
+	<oninflict>
+		<setaccumulator entity="this_entity" value="105,200,295,380" />
+	</oninflict>
+	
+	<onframe />
+	
+	<onattackeddamageevent>
+		<damageeffecttype effecttype="Magic">
+			<compare a="accumulator" b="damage_attempted" op="le">
+				<evaluate a="accumulator" b="0.5" op="mult" />
+				<givemana target="proxy_entity" amount="accumulator" b="0.5" op="mult" />
+				<setvalue name="damage_attempted" a="damage_attempted" b="accumulator" op="sub" />
+				<expire />
+				<setaccumulator value="0" />
+			</compare>
+			<else>
+				<evaluate a="damage_attempted" b="0.5" op="mult" />
+				<givemana target="proxy_entity" amount="damage_attempted" b="0.5" op="mult" />
+				<evaluate a="accumulator" b="damage_attempted" op="sub" />
+				<setaccumulator value="result" />
+				<setvalue name="damage_attempted" a="0" />
+			</else>
+		</damageeffecttype>
+		<else>
+			<damageeffecttype effecttype="SuperiorMagic">
+				<compare a="accumulator" b="damage_attempted" op="le">
+					<evaluate a="accumulator" b="0.5" op="mult" />
+					<givemana target="proxy_entity" amount="accumulator" b="0.5" op="mult" />
+					<setvalue name="damage_attempted" a="damage_attempted" b="accumulator" op="sub" />
+					<expire />
+					<setaccumulator value="0" />
+				</compare>
+				<else>
+					<evaluate a="damage_attempted" b="0.5" op="mult" />
+					<givemana target="proxy_entity" amount="damage_attempted" b="0.5" op="mult" />
+					<evaluate a="accumulator" b="damage_attempted" op="sub" />
+					<setaccumulator value="result" />
+					<setvalue name="damage_attempted" a="0" />
+				</else>
+			</damageeffecttype>
+		</else>
+	</onattackeddamageevent>	
+</state>

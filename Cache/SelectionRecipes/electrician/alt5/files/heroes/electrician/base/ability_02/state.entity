@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Electrician_Ability2"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/electrician/alt5/ability_02/effects/state.effect"
+	
+	effecttype=""
+	
+	maxcharges="999"
+	dynamicprecache="effects/on_attacked.effect,effects/state_expire.effect"
+>
+	<onframe>
+		<setcharges a="accumulator" entity="this_entity" />
+	</onframe>
+	
+	<aura name="electricianshieldaura" state="State_Electrician_Ability2_Areadamage" radius="300" targetscheme="enemy_units"  />
+	
+	<onattackedpostimpact>
+		<targettype type="enemy">
+			<setstr0 a="altavatar_path" b="effects/on_attacked.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="source_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/on_attacked.effect" source="source_entity" />
+			</else>
+		</targettype>
+	</onattackedpostimpact>
+	
+	<ondamaged>
+		<setvar0 a="source_damage" b="0.5" op="mult" />
+		<compare a="var0" b="accumulator" op="ge">
+			<evaluate a="var0" b="accumulator" op="sub" />
+			<evaluate a="result" b="var0" op="add" />
+			<changedamage b="result" op="min" />
+			<expire />
+		</compare>
+		<else>
+			<changedamage b="0.5" op="mult" />
+			<evaluate a="accumulator" b="var0" op="sub" />
+			<setaccumulator value="result" />
+		</else>
+	</ondamaged>
+	
+	<onexpired>
+		<setstr0 a="altavatar_path" b="effects/state_expire.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/state_expire.effect" source="source_entity" />
+		</else>
+	</onexpired>
+	
+	<!-- make the state stack incase you have multiple of these, also disable it working on illusions -->
+	<modifier key="krosmode" modpriority="101"
+	>
+		<aura name="electricianshieldaura" state="State_Electrician_Ability2_Areadamage" radius="300" targetscheme="enemy_units" propagatecondition="not_illusion" stack="true" />
+	</modifier>
+</state>

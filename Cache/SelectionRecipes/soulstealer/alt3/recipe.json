@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "soulstealer",
+  "avatar": "alt3",
+  "files": [
+    "heroes\\soulstealer\\base\\hero.entity",
+    "heroes\\soulstealer\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\soulstealer\\base\\state_soulstealer_ult_boost.entity",
+    "heroes\\soulstealer\\base\\state_soulstealer_ult_boost.entity.onepunch_ability_managed"
+  ]
+}

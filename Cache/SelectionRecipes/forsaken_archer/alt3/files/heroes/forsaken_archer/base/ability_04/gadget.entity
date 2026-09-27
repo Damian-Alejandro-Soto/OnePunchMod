@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<heropet
+	name="Pet_ForsakenArcher_Ability4"
+	
+	icon="../../icon.dds"
+	portrait="../../icon.dds"
+	
+	model="/heroes/forsaken_archer/alt3/ability_04/effects/pet/model.mdf"
+	passiveeffect="effects/passive.effect"
+	spawneffect="effects/spawn.effect"
+	
+	infoheight="170"
+	preglobalscale="1.9"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="48"
+	targetoffset="0 0 64"
+
+	isselectable="false"
+	iscontrollable="false"
+	
+	canrotate="true"
+	ismobile="false"
+	unitwalking="true"
+	
+	invulnerable="true"
+	
+	inventory0="Ability_ForsakenArcher4_Pet"
+
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="800"
+	sightrangenight="800"
+	
+	nothreat="true"
+	lifetime="4650"
+
+	maxhealth="100"
+	
+	corpsetime="0"
+	corpsefadetime="0"
+	
+	unittype="Uninfestable heropet"
+	noblockneutralspawn="true"
+>
+	<ondeath>
+		<delete target="this_entity" />
+	</ondeath>
+	
+	<onexpired>
+		<delete target="this_entity" />
+	</onexpired>
+	
+	<ondamaged>
+		<changedamage b="0" op="mult" />
+	</ondamaged>
+</heropet>

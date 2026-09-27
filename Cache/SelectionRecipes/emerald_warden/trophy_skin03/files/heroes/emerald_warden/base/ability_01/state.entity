@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_EmeraldWarden_Ability1"
+
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/emerald_warden/trophy_skin/ability_01/effects/state.effect"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	
+	silenced="true"
+
+	negativeeffect="silenced"
+>
+</state>

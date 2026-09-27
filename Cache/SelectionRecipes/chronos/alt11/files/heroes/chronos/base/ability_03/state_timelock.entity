@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chronos_Ability3_Timelock"
+	
+	icon="/heroes/chronos/alt11/ability_03/icon.dds"
+	passiveeffect="/heroes/chronos/alt11/ability_03/effects/lock.effect"
+	ishidden="true"
+	
+	stunned="true"
+	frozen="true"
+	
+	effecttype="StatusDisable"
+	allowtransfer="true"
+>
+	<onexpired>
+		<playanim name="idle" />
+	</onexpired>
+</state>

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "vindicator",
+  "avatar": "alt",
+  "files": [
+    "heroes\\vindicator\\base\\hero.entity",
+    "heroes\\vindicator\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\vindicator\\base\\ability_02\\projectile.entity",
+    "heroes\\vindicator\\base\\ability_02\\projectile.entity.onepunch_ability_managed"
+  ]
+}

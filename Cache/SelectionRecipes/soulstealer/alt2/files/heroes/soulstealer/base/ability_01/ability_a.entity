@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Soulstealer1a"
+
+	icon="/heroes/soulstealer/alt2/ability_01/icon.dds"
+	
+	anim="ability_1a"
+	casttime="1000"
+	castactiontime="650"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	
+	actiontype="facing"
+	targetradius="250"
+	casteffecttype="Magic"
+	targetscheme="enemy_units"
+	
+	manacost="90"
+	cooldowntime="10000"
+	
+	range="200"
+	forcerange="200"
+	showrangeandradiusintooltip="true"
+	dynamicprecache="effects/affector.effect"
+>
+	<onimpact effectdescription="true">
+		<spawnaffector name="Affector_Soulstealer_Ability1" target="target_position" />		
+	</onimpact>
+	
+	<modifier key="raze1" modpriority="90"
+		baselevel="1"
+		keyslot="0"
+	/>
+	
+	<modifier key="raze2" modpriority="90"
+		baselevel="2"
+		keyslot="0"
+	/>
+	
+	<modifier key="raze3" modpriority="90"
+		baselevel="3"
+		keyslot="0"
+	/>
+	
+	<modifier key="raze4" modpriority="90"
+		baselevel="4"
+		keyslot="0"
+	/>
+</ability>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_DoctorRepulsor_Ability2"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/doctor_repulsor/alt5/ability_02/effects/link.effect"
+
+	effecttype="StatusDebuff"
+	
+	stunned="true"
+	stunnedreduction="ignore"
+
+	modifierkey="channeled_stun_ability"
+
+	negativeeffect="stunned"
+>
+	<onframe />
+	<onexpired>
+		<delete target="this_proxy_entity" source="" />
+	</onexpired>
+
+	
+	
+</state>

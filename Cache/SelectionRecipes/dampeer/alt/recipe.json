@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "dampeer",
+  "avatar": "alt",
+  "files": [
+    "heroes\\dampeer\\base\\hero.entity",
+    "heroes\\dampeer\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

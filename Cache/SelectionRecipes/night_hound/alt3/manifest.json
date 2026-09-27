@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "night_hound",
+  "legacy_folder": "hantumon",
+  "avatar": "alt3",
+  "counts": {
+    "files": 66,
+    "models": 27,
+    "materials": 1,
+    "textures": 6,
+    "effects": 1,
+    "sounds": 29,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

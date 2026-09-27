@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_EmeraldWardenpet_Ability3_Storm_Reveal"
+
+	icon="../../../../icon.dds"
+	
+	passiveeffect="/heroes/emerald_warden/alt8/ability_04/effects/pet/ability_03/effects/state.effect"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="false"
+	
+	revealed="true"
+>
+</state>

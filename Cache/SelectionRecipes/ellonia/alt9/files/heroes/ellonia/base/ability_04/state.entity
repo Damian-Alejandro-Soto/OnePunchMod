@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Ellonia_Ability4"
+	
+	icon="../../icon.dds"
+	
+	passiveeffect="/heroes/ellonia/alt9/ability_04/effects/trail.effect"
+	
+	impactinterval="200"
+	dynamicprecache="effects/ability.effect"
+>
+	
+	<onimpact>
+		<areaofeffect
+			center="this_owner_entity"
+			radius="400"
+			targetselection="all"
+			targetscheme="enemy_units"
+			effecttype="SuperiorMagic"
+		>
+			<distance target="target_entity" source="this_owner_entity" />
+			<setvar0 a="result" />
+			<compare a="var0" b="400" op="lt">
+				<evaluate a="var0" b="400" op="div" />
+				<setvar1 a="1" b="result" op="sub" />
+				<damage effecttype="SuperiorMagic DOT" amount="70,110,150" b="var1" op="mult" />
+				<applystate name="State_Ellonia_Ability3" duration="4000" pushentity="true" disablenegativeeffectpopuponrefresh="true" />
+				<addcharges entity="stack_entity" count="2,3,4" />
+			</compare>
+		</areaofeffect>
+
+		<!-- VFX -->
+				<setstr0 a="altavatar_path" b="effects/ability.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="this_owner_entity" target="this_position" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/ability.effect" source="this_owner_entity" target="this_position" occlude="true" />
+		</else>
+	</onimpact>
+</state>

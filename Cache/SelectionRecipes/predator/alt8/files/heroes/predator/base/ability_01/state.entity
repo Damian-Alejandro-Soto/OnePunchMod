@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Predator_Ability1"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/predator/alt8/ability_01/effects/state.effect"
+	effecttype="StatusDebuff"
+
+	movespeedslow="0.4"
+	allowtransfer="true"
+
+	negativeeffect="slowed"
+>
+
+</state>

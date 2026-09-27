@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "hero": "monarch",
+  "avatar": "alt",
+  "files": [
+    "heroes\\monarch\\base\\hero.entity",
+    "heroes\\monarch\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\monarch\\base\\state_monarch_ult_boost.entity",
+    "heroes\\monarch\\base\\state_monarch_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\monarch\\base\\ability_03\\gadget.entity",
+    "heroes\\monarch\\base\\ability_03\\gadget.entity.onepunch_ability_managed",
+    "heroes\\monarch\\base\\ability_03\\gadget_cloud.entity",
+    "heroes\\monarch\\base\\ability_03\\gadget_cloud.entity.onepunch_ability_managed",
+    "heroes\\monarch\\base\\ability_03\\pet.entity",
+    "heroes\\monarch\\base\\ability_03\\pet.entity.onepunch_ability_managed"
+  ]
+}

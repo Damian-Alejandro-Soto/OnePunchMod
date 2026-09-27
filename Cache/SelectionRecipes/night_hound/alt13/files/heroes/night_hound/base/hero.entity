@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_NightHound"
+
+	team="Legion"
+	icon="/heroes/hantumon/alt13/icon.dds"
+	portrait="/heroes/hantumon/alt13/icon.dds"
+	model="/heroes/hantumon/alt13/model.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/hantumon/alt13/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/hantumon/alt13/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/hantumon/alt13/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/hantumon/alt13/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/hantumon/alt13/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/hantumon/alt13/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/hantumon/alt13/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/hantumon/alt13/sounds/voice/taunt_after.wav"
+
+	preglobalscale="2.025"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="44"
+	targetoffset="0 0 64"
+	infoheight="160"
+
+	category="physical"
+	difficulty="2"
+
+	midrating="1"
+	junglerating="0"
+	carryrating="4"
+	hardsupportrating="0"
+	softsupportrating="3"
+	offlanerating="3"
+	soloofflanerating="5"
+	rangedrating="0"
+	meleerating="5"
+
+	movespeed="305"
+	turnrate="720"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-0.86"
+	magicarmor="5"
+
+	inventory0="Ability_NightHound1"
+	inventory1="Ability_NightHound2"
+	inventory2="Ability_NightHound3"
+	inventory3="Ability_NightHound4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="400"
+	attackcooldown="1700"
+	attackdamagemin="24"
+	attackdamagemax="28"
+	attacknumanims="3"
+	attackoffset="0 0 0"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="agility"
+	strength="17"
+	strengthperlevel="2.0"
+	agility="24"
+	agilityperlevel="2.5"
+	intelligence="16"
+	intelligenceperlevel="1.3"
+
+
+	previewpos="0 0 -50"
+	previewangles="0 0 0"
+	previewscale="2.0"
+
+	storemodel="/heroes/hantumon/alt13/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="2"
+
+	portraitcampos="-8 20 33"
+
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	deathtime="1000"
+	corpsetime="4000"
+	corpsefadetime="5000"
+
+	unittype="masters_legacy_valid"
+ attackanim="attack_%">
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_IronShield" />
+	<recommendeditem name="Item_SoulscreamRing" />
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_GhostMarchers" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_ElderParasite" />
+	<recommendeditem name="Item_NullfireBlade" />
+	<recommendeditem name="Item_GeometersBane" />
+	<recommendeditem name="Item_ShrunkenHead" />
+	<recommendeditem name="Item_Wingbow" />
+</hero>

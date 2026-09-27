@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Pestilence3"
+	
+	icon="/heroes/pestilence/alt9/ability_03/icon.dds"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	cooldowntime="1500"
+	cooldowntype="bashing"
+	actiontype="passive"
+	dynamicprecache="effects/gore.effect,effects/impact.effect"
+>
+	<onattackstart>
+		<setaccumulator value="0" />
+		<canactivate>
+			<cantarget targetscheme="enemy_units" effecttype="Physical">
+				<chance threshold="0.25">
+					<isready entity="this_entity">
+						<!-- Roll the proc here so the unique attack anim plays at attack start; the
+						     damage/stun/VFX are carried to onattackimpact via the accumulator flag -->
+						<setaccumulator value="1" />
+						<playanim name="ability_3" speed="source_attackspeed" target="source_entity" />
+					</isready>
+				</chance>
+			</cantarget>
+		</canactivate>
+	</onattackstart>
+
+	<onattackimpact>
+		<compare a="accumulator" b="1" op="eq">
+			<canactivate>
+				<cantarget targetscheme="enemy_units" effecttype="Physical">
+					<isready entity="this_entity">
+						<!-- Damage -->
+						<setvar0 a="40,60,80,100" />
+
+						<!-- Illusion script -->
+						<targettype type="illusion" target="source_entity">
+							<!-- Damage -->
+							<damage effecttype="Physical" amount="0.33" b="var0" op="mult" />
+							<startcooldown />
+						</targettype>
+
+						<!-- Not illusion script -->
+						<else>
+							<!-- Stun -->
+							<targettype type="hero">
+								<applystate name="State_Stunned" duration="900,1000,1100,1200" />
+							</targettype>
+							<else>
+								<applystate name="State_Stunned" duration="2000" />
+							</else>
+
+							<!-- Damage -->
+							<damage effecttype="Physical" amount="1" b="var0" op="mult" />
+							<startcooldown />
+						</else>
+
+						<!-- VFX -->
+							<setstr0 a="altavatar_path" b="effects/gore.effect" op="add" />
+						<exists path="str0">
+							<playeffectdynamic effect="str0" source="source_entity" target="target_entity" />
+						</exists>
+						<else>
+							<playeffectdynamic effect="effects/gore.effect" source="source_entity" target="target_entity" />
+						</else>
+					</isready>
+				</cantarget>
+			</canactivate>
+		</compare>
+	</onattackimpact>
+
+	<onkill>
+		<!-- Note: cooldown here is in units of seconds (s) -->
+		<pushtool name="Ability_Pestilence3" />
+		<getcooldown target="stack_entity" />
+		<setvar0 a="result" />
+		<getremainingcooldown target="stack_entity" />
+		<setvar2 a="result" />
+		<setvar1 a="var0" b="var2" op="sub" />
+
+		<!-- If Pestilence E went on cooldown at roughly the same time as killing the LaneCreep, spawn the corpse projectile -->
+		<compare a="var1" b="0.2" op="le">
+			<cantarget targetscheme="LaneCreeps">
+				<setpos0 position="source_position" positionend="target_position" positionmodifier="pointpastline" positionvalue="700" />
+				<spawnprojectile bind="target_entity" name="Projectile_Pestilence_Ability3_CorpseAttack" source="source_position" target="pos0" proxy="source_entity" />	
+				<startcooldown />
+			</cantarget>
+		</compare>
+		<else>
+			<compare a="var2" b="0.2" op="le">
+				<cantarget targetscheme="LaneCreeps">
+					<setpos0 position="source_position" positionend="target_position" positionmodifier="pointpastline" positionvalue="700" />
+					<spawnprojectile bind="target_entity" name="Projectile_Pestilence_Ability3_CorpseAttack" source="source_position" target="pos0" proxy="source_entity" />	
+					<startcooldown />
+				</cantarget>
+			</compare>
+		</else>
+	</onkill>
+</ability>

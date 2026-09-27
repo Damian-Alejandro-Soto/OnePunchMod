@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Cthulhuphant_Ability3"
+
+	icon="/heroes/cthulhuphant/alt9/ability_03/icon.dds"
+	ishidden="true"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	
+	incominghealmultiplier="-0.3,-0.4,-0.5,-0.6"
+>
+	<onframe />
+</state>

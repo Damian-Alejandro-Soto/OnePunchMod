@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_CorruptedDisciple1"
+
+	icon="../../icon.dds"
+	
+	anim="ability_1"
+	casttime="1"
+	castactiontime="0"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="self_position"
+	targetscheme="enemy_units"
+	targetradius="800"
+	
+	casteffecttype="Magic"
+	frontqueue="true"
+	inheritmovement="true"
+	nonaggressive="true"
+	
+	manacost="125"
+	cooldowntime="13000"
+	dynamicprecache="/heroes/corrupted_disciple/alt6/ability_01/effects/ring.effect"
+	
+>	
+	<onimpact>
+		<applystate name="State_CorruptedDisciple_Ability1" duration="4000" target="source_entity" />
+		<applystate name="State_CorruptedDisciple_Ability1_Self" duration="2000" target="source_entity" />
+		<spawnaffector name="Affector_CorruptedDisciple_Ability1" target="source_entity" />
+		<spawnaffector name="Affector_CorruptedDisciple_Ability1_Timer" target="source_entity" />
+		
+		<!-- VFX -->
+		<setstr0 a="altavatar_path" b="effects/ring.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="target_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/ring.effect" target="target_entity" occlude="true" />
+		</else>
+	</onimpact>
+</ability>

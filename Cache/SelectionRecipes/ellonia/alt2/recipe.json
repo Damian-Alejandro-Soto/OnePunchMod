@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "ellonia",
+  "avatar": "alt2",
+  "files": [
+    "heroes\\ellonia\\base\\hero.entity",
+    "heroes\\ellonia\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\ellonia\\base\\state_ellonia_ult_boost.entity",
+    "heroes\\ellonia\\base\\state_ellonia_ult_boost.entity.onepunch_ability_managed"
+  ]
+}

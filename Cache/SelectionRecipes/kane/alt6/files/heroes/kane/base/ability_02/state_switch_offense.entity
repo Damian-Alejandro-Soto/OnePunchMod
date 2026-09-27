@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Kane_Ability2_Switch_Offense"
+
+	icon="../../icon.dds"
+	ishidden="false"
+	passiveeffect="/heroes/kane/alt6/ability_02/effects/switch_sound.effect"
+	
+	effecttype=""
+	allowtransfer="false"
+	impactinterval="2000"
+>
+	<onimpact>
+		<!-- Expire Kane's regen state -->
+		<areaofeffect
+			global="true"
+			targetselection="all"
+			targetscheme="ally_units"
+			effecttype=""
+			ignoreinvulnerable="true"
+		>
+			<expirestate name="State_Kane_Ability2_Regen" />
+		</areaofeffect>
+		
+		<setactivemodifierkey name="Kane_Offense" entity="this_proxy_entity" />
+		<starttimer duration="4000" entity="this_proxy_entity" />		
+		<setaccumulator value="4" entity="this_proxy_entity" />
+		
+		<playanim name="ability_3_defense" />
+	</onimpact>
+</state>

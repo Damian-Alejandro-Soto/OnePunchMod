@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Enemy_Ravenor_Ability1"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/ravenor/alt7/ability_01/effects/state.effect"
+
+	effecttype=""
+
+>	
+	<aura
+		gadget="Gadget_Ravenor_Ability1"
+		radius="0"
+		targetscheme="self"
+	/>
+	
+	<onframe>
+		<distance />
+		<compare a="result" b="3000" op="gt">
+			<expire entity="this_proxy_entity" />
+			<expire />
+			<expirestate name="State_Ravenor_Ability1" target="source_entity" />
+		</compare>
+	</onframe>
+	
+	<onexpired>
+		<expirestate name="State_Ravenor_Ability1" target="source_entity" />
+	</onexpired>
+</state>

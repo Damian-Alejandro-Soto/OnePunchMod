@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_WitchSlayer_Ability3_Self"
+	
+	icon="/heroes/witch_slayer/alt8/ability_03/icon.dds"
+	passiveeffect=""
+	ishidden="true"
+	
+	alwaystransmitdata="true"
+
+	effecttype=""
+>
+</state>

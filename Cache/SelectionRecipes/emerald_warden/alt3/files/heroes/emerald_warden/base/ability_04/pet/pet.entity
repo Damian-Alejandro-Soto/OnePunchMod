@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Pet_EmeraldWarden"
+	
+	icon="/heroes/emerald_warden/ability_04/pet/icon.dds"
+	portrait="../../../icon.dds"
+	model="/heroes/emerald_warden/alt3/ability_04/pet/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/emerald_warden/alt3/ability_04/effects/body.effect"
+	spawneffect="effects/spawn.effect"
+	
+	
+	
+	
+	preglobalscale=".7"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="32"
+	targetoffset="0 0 0"
+	iscontrollable="false"
+	invulnerable="true"
+	isselectable="false"
+	nothreat="true"
+
+	movespeed="360,400,440"
+	turnrate="450"
+	turnsmoothing="0.05"
+
+	maxmana="0"
+	manaregen="0"
+
+	armor="0"
+	magicarmor="0"
+	immunity="GadgetImmunity"
+
+	
+	inventory0="Ability_EmeraldWarden4_a"
+	inventory1="Ability_EmeraldWarden4_b"
+	inventory2="Ability_EmeraldWarden4_c"
+	inventory3=""
+	
+	canattack="false"
+	attacktargetscheme="nothing"
+	attacktype="none"
+	combattype="Melee"
+
+	aggrorange="0"
+	sightrangeday="600"
+	sightrangenight="600"
+	
+	flying="true"
+	flyheight="250"
+	clearvision="true"
+	diewithowner="true"
+	unittype="EmeraldWardenpet AntiTP no_Overhead_Visuals"
+	
+	corpsetime="0"
+	corpsefadetime="0"
+	noblockneutralspawn="true"
+
+	modifierkey="EmeraldWarden1,EmeraldWarden2,EmeraldWarden3"
+>
+	<onspawn>
+		<applystate name="State_EmeraldWarden_Ability4_Spawn" target="this_entity" duration="0" />
+	</onspawn>
+	
+	<onframe>
+		<distance source="this_entity" target="source_owner_entity" />
+		<compare a="result" b="2000" op="gt">
+			<teleport source="this_entity" target="source_owner_entity" interpolate="false" />
+		</compare>
+
+		<isstealthed entity="this_owner_entity">
+			<applystate name="State_EmeraldWarden_Ability4_Invis" continuous="true" target="this_entity" />
+		</isstealthed>
+		<else>
+			<expirestate name="State_EmeraldWarden_Ability4_Invis" target="this_entity"/>
+		</else>
+
+		<!-- delete this if our owner doesn't exist -->
+		<compare source="this_owner_entity" a="source_entity" b="0" op="eq">
+			<delete />
+		</compare>
+	</onframe>
+</pet>

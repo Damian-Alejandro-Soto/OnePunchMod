@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hero": "tempest",
+  "avatar": "alt7",
+  "files": [
+    "heroes\\tempest\\base\\hero.entity",
+    "heroes\\tempest\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\tempest\\base\\state_tempest_ult_boost.entity",
+    "heroes\\tempest\\base\\state_tempest_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\tempest\\base\\ability_01\\ability.entity",
+    "heroes\\tempest\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\tempest\\base\\ability_02\\pet\\pet.entity",
+    "heroes\\tempest\\base\\ability_02\\pet\\pet.entity.onepunch_ability_managed",
+    "heroes\\tempest\\base\\ability_02\\pet\\pet_replicate.entity",
+    "heroes\\tempest\\base\\ability_02\\pet\\pet_replicate.entity.onepunch_ability_managed",
+    "heroes\\tempest\\base\\ability_02\\pet\\projectile\\projectile.entity",
+    "heroes\\tempest\\base\\ability_02\\pet\\projectile\\projectile.entity.onepunch_ability_managed",
+    "heroes\\tempest\\base\\projectile\\projectile.entity",
+    "heroes\\tempest\\base\\projectile\\projectile.entity.onepunch_ability_managed"
+  ]
+}

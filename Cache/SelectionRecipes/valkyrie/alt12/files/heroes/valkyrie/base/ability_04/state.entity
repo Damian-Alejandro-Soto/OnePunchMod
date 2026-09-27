@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Valkyrie_Ability4"
+
+	icon="/heroes/Valkyrie/alt12/ability_04/icon.dds"	
+	passiveeffect="effects/state_fade.effect,effects/state_fade2.effect,effects/state_fade3.effect"
+	
+	movespeedmultiplier="0.10,0.12,0.14"
+	
+	stealthtype="hero"
+	hideshadow="true"
+	fadetime="2000,1750,1500"
+	
+	effecttype="StatusStealth"
+>
+	<onframe>
+		<changeaccumulator b="frametime" op="add" />
+		<compare a="accumulator" b="2,1.75,1.5" op="ge">
+			<setactivemodifierkey name="Valk_R_Faded" />
+		</compare>
+		<distance target="target_entity" source="this_inflictor_entity" />
+		<compare a="result" b="1700" op="lt">
+			<applystate name="State_Valkyrie_Ability4_Assist" duration="100" inflictor="this_proxy_entity" />
+		</compare>
+	</onframe>
+	
+	<oninflict>
+		<setaccumulator value="0" />
+		<startfade />
+		<setactivemodifierkey name="" />
+	</oninflict>
+
+	<onattack>
+		<startfade a="source_attackduration" />
+		<setaccumulator value="0" />
+		<setactivemodifierkey name="" />
+	</onattack>
+	
+	<onactivatepreimpact>
+		<startfade a="castduration" />
+		<setaccumulator value="0" />
+		<setactivemodifierkey name="" />
+	</onactivatepreimpact>
+	
+	<modifier key="Valk_R_Faded" modpriority="100"
+		passiveeffect="effects/state.effect"
+	>	
+	</modifier>
+</state>

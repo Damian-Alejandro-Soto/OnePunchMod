@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "cthulhuphant",
+  "legacy_folder": "cthulhuphant",
+  "avatar": "alt9",
+  "counts": {
+    "files": 105,
+    "models": 22,
+    "materials": 8,
+    "textures": 19,
+    "effects": 17,
+    "sounds": 39,
+    "icons": 5,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

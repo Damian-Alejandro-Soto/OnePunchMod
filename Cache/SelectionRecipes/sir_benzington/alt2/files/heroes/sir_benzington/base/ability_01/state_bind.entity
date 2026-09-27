@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_SirBenzington_Ability1_Bind"
+	
+	icon="icon.tga"
+	passiveeffect="/heroes/sir_benzington/alt2/ability_01/effects/trail.effect"
+
+	unitwalking="true"
+	stunned="true"
+	
+	effecttype=""
+	ishidden="true"
+	
+	modifierkey="benzington_ability1_Bind"
+>
+	<onexpired>
+		<targettype type="alive" target="this_owner_entity">
+			<playanim name="idle" target="this_owner_entity" />
+		</targettype>
+	</onexpired>
+</state>

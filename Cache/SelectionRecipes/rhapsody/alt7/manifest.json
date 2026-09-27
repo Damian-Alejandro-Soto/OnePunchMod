@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "rhapsody",
+  "legacy_folder": "rhapsody",
+  "avatar": "alt7",
+  "counts": {
+    "files": 146,
+    "models": 29,
+    "materials": 8,
+    "textures": 17,
+    "effects": 37,
+    "sounds": 55,
+    "icons": 9,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Legionnaire"
+	
+	
+	team="Hellbourne"
+	icon="/heroes/legionnaire/alt5/icon.dds"
+	animatedportrait=""
+	portrait="/heroes/legionnaire/alt5/icon.dds"
+	model="/heroes/legionnaire/alt5/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/legionnaire/alt5/effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/legionnaire/alt5/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/legionnaire/alt5/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/legionnaire/alt5/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/legionnaire/alt5/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/legionnaire/alt5/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/legionnaire/alt5/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/legionnaire/alt5/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/legionnaire/alt5/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.8"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="240"
+	boundsradius="36"
+	selectionradius="60"
+	targetoffset="0 0 92"
+
+	category="cc tank"
+	difficulty="2"
+
+	midrating="0"
+	junglerating="5"
+	carryrating="0"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="4"
+	soloofflanerating="0"
+	rangedrating="0"
+	meleerating="5"
+
+	movespeed="295"
+	turnrate="720"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="1.2"
+	magicarmor="5"
+
+	inventory0="Ability_Legionnaire1"
+	inventory1="Ability_Legionnaire2"
+	inventory2="Ability_Legionnaire3"
+	inventory3="Ability_Legionnaire4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="500"
+	attackcooldown="1700"
+	attackdamagemin="24"
+	attackdamagemax="28"
+	attacknumanims="2"
+	attackoffset="0 100 110"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="strength"
+	strength="25"
+	strengthperlevel="2.7"
+	agility="20"
+	agilityperlevel="2.2"
+	intelligence="17"
+	intelligenceperlevel="2.0"
+	
+
+	previewpos="0 0 -80"
+	previewangles="0 0 0"
+	previewscale="1.5"
+	
+	storemodel="/heroes/legionnaire/alt5/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.6"
+	
+	corpsetime="1000"
+	corpsefadetime="2500"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	
+	portraitcampos="-25 -4 27"
+ attackanim="attack_%"
+        icon2="/heroes/legionnaire/alt5/icon.dds"
+        previewmodel="/heroes/legionnaire/alt5/preview.mdf"
+        infoheight="175">
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_PortalKey" />
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_BloodChalice" />
+	<recommendeditem name="Item_Striders" />
+	<recommendeditem name="Item_GhostMarchers" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_PostHaste" />
+	<recommendeditem name="Item_PegasusBoots" />
+	<recommendeditem name="Item_KuldrasSheepstick" />
+	<recommendeditem name="Item_LexTalionis" />
+	<recommendeditem name="Item_StaffoftheMaster" />
+	<recommendeditem name="Item_IronShield" />
+	<recommendeditem name="Item_ShamansHeadress" />
+	<recommendeditem name="Item_BarbedArmor" />
+	<recommendeditem name="Item_HelmoftheBlackLegion" />
+	<recommendeditem name="Item_IconoftheGoddess" />
+	<recommendeditem name="Item_ShrunkenHead" />
+	<recommendeditem name="Item_UltorsHeavyPlate" />
+	<recommendeditem name="Item_BarrierIdol" />
+	
+	<gooditemagainst name="Item_PlatedGreaves" />
+	<gooditemagainst name="Item_Stormspirit" />
+	<gooditemagainst name="Item_KuldrasSheepstick" />
+	<gooditemagainst name="Item_SandScepter" />
+	<gooditemagainst name="Item_NullStone" />
+	<gooditemagainst name="Item_ShieldoftheFive" />
+	<gooditemagainst name="Item_FrostfieldPlate" />
+	<gooditemagainst name="Item_NullfireBlade" />
+	
+	
+
+	<modifier key="ult_boost" modpriority="101"
+    >
+        <aura state="State_Legionnaire_Ult_Boost" radius="0" targetscheme="self"/>
+    </modifier>
+	
+	<modifier key="iamsheeped" modpriority="100"
+		passiveeffect=""
+	/>
+	
+	<modifier key="legionnairecharging" modpriority="100"
+		walkanim="ability_2_sprint"
+		attackanim="ability_2_attack"
+		attacknumanims="1"
+		attackduration="200"
+		attackactiontime="200"
+		attackcooldown="1000"
+	/>
+
+	<modifier key="legionnaire_alt5_ability4" passiveeffect="" />
+</hero>

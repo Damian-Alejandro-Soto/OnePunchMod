@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Engineer_Ability2"
+
+	speed="1500"
+	gravity="8000"
+
+	modelscale="1.5"
+	model="/heroes/engineer/alt5/ability_02/effects/turret/model.mdf"
+	
+	traileffect="/heroes/engineer/base/ability_02/turret/projectile/trail.effect"
+	impacteffect="/heroes/alt5/ability_02/effects/impact.effect"
+>
+	<onimpact>
+		<spawnunit name="Pet_Engineer_Ability2" maxactive="1" target="target_position" />
+	</onimpact>
+
+</projectile>

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "valkyrie",
+  "legacy_folder": "valkyrie",
+  "avatar": "alt9",
+  "counts": {
+    "files": 111,
+    "models": 35,
+    "materials": 7,
+    "textures": 12,
+    "effects": 19,
+    "sounds": 38,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

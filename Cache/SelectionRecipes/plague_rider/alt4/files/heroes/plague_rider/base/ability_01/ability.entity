@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_PlagueRider1"
+
+	statuseffecttooltip="State_PlagueRider_Ability1_Slow"
+	icon="/heroes/diseasedrider/alt/ability_01/icon.dds"
+	
+	anim="ability_1"
+	casttime="1100"
+	castactiontime="400"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_entity"
+	targetscheme="enemy_units"
+	targetradius="200"
+	targetmaterial="/shared/materials/area_cast_indicator_simple.material"
+	
+	casteffecttype="Magic"
+	
+	manacost="125,150,175,200"
+	cooldowntime="8000"
+	
+	range="600"
+	
+	showareacast="true"
+	areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+	
+	showrangeandradiusintooltip="true"
+
+	targetpriorities="enemy_heroes"
+	
+	dynamicprecache="/heroes/diseasedrider/alt4/ability_01/effects/impact.effect"
+>
+	
+	<onimpact>
+		<damage amount="120,190,260,330" effecttype="Magic" />
+		<applystate name="State_PlagueRider_Ability1" target="target_entity" duration="50" />
+		<applystate name="State_PlagueRider_Ability1_Slow" target="target_entity" duration="2500,3000,3500,4000" />
+		<areaofeffect
+			radius="200"
+			targetselection="all"
+			targetscheme="enemy_units"
+			effecttype="Magic"
+			center="target_position"
+			ignore="target_entity"
+		>
+			<damage effecttype="Magic" amount="75,100,125,150" />
+			<applystate name="State_PlagueRider_Ability1_Slow" target="target_entity" duration="2500,3000,3500,4000" />
+		</areaofeffect>
+		
+		<!-- Dynamic visual effects -->
+		<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="target_entity" source="target_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" occlude="true" />
+		</else>
+	</onimpact>
+</ability>

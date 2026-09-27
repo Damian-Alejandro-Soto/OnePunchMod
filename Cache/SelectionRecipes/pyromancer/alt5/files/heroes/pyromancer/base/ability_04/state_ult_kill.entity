@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Pyromancer_Ult_Kill"
+	
+	icon=""
+	
+	ishidden="true"
+	deathpersist="true"
+	
+	dynamicprecache="/heroes/pyromancer/alt5/ability_04/effects/ability_04_impact_staff.effect"	
+>
+	<oninflict>
+		<!-- Dynamic visual effects: resolve against the caster's active avatar, fall back to base -->
+		<setstr0 a="altavatar_path" b="effects/ability_04_impact_staff.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="this_position" target="this_position" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/ability_04_impact_staff.effect" source="this_position" target="this_position" occlude="true" />
+		</else>
+	</oninflict>
+</state>

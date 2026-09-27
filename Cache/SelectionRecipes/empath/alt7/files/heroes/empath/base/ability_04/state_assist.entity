@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Empath_Ability4_Assist"
+
+	icon="/heroes/empath/alt7/ability_04/icon.dds"
+	passiveeffect=""
+	
+	serverentity="true"
+	
+	effecttype="StatusDebuff"
+>
+
+</state>

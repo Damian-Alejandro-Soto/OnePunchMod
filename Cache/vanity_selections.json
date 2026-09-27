@@ -1,0 +1,7 @@
+{
+  "announcer": "ninja",
+  "courier": "items/shared/automated_courier/kongorairlines",
+  "raven": "heroes/_innate_abilities/item_raven/twitchdrone",
+  "teleport": "heroes/_innate_abilities/item_teleportationstone/terminator",
+  "ward": "items/basic/ward_of_sight/halloween"
+}

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Predator2"
+	
+	
+	statuseffecttooltip="State_Predator_Ability2"
+	
+	icon="/heroes/predator/frostfield/ability_02/icon.dds"
+	
+	anim="ability_2"
+	casttime="100"
+	castactiontime="0"
+	
+	frontqueue="true"
+	inheritmovement="true"
+	nonaggressive="true"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	
+	actiontype="target_self"
+	manacost="75"
+	
+	cooldowntime="16000"
+
+	armor="1,2,3,4"
+>
+	<onimpact>
+		<dispel type="StatusDebuff" />
+
+		<!-- Ability immunity overrides Void Talisman's physical immunity (no simultaneous physical + magic immunity) -->
+		<expirestate name="State_VoidTalisman" target="source_entity" noexpiretrigger="true" />
+		<applystate name="State_Predator_Ability2" duration="3750,4500,5250,6000" />
+		
+		<!-- Below state is just an effect -->
+		<applystate name="State_Predator_Ability2_Eyes" duration="3750,4500,5250,6000" />
+	</onimpact>
+	
+</ability>

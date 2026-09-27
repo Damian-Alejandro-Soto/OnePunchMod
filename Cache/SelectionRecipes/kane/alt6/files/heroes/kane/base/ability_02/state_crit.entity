@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Kane_Ability2_Crit"
+
+	icon="../../icon.dds"
+	ishidden="false"
+	passiveeffect="/heroes/kane/alt6/ability_02/effects/state_crit.effect"
+	
+	effecttype=""
+	allowtransfer="false"
+	
+	criticalchance="0.1,0.2,0.3,0.4"
+	criticalmultiplier="1.5"
+>
+</state>

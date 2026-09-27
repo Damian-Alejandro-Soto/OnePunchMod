@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Pet_Engineer_Ability2"
+	
+	icon="../../icon.dds"
+	portrait="../../icon.dds"
+	model="/heroes/engineer/alt6/ability_02/effects/turret/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/engineer/alt6/ability_02/effects/base.effect"
+	spawneffect="/heroes/engineer/base/ability_02/effects/spawn.effect"
+	respawneffect=""
+	selectsound=""
+	orderconfirmedsound=""
+	
+	preglobalscale="1.55"
+	modelscale="1.0"
+	effectscale="1.0"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="40"
+	targetoffset="0 0 64"
+
+	movespeed="0"
+	ismobile="false"
+	canrotate="true"
+	turnrate="1500"
+	turnsmoothing="0.1"
+	isselectable="true"
+	iscontrollable="true"
+
+	maxhealth="12"
+	healthregen="0"
+	maxmana="0"
+	manaregen="0"
+	deniable="true"
+	
+	healthregenreduction="1"
+	manaregenreduction="1"
+	
+	cancarryitems="true"
+	diewithowner="true"
+	
+	inventory0="Ability_Engineer2_Turret_1"
+
+	armor="0"
+	magicarmor="0"
+	immunity="GadgetImmunity"
+
+	canattack="true"
+	attackdamagemin="26,44,62,80"
+	attackdamagemax="26,44,62,80"
+	
+	attackduration="100"
+	attackactiontime="50"
+	attackcooldown="1700"
+	attackprojectile="Projectile_EngineerTurretAttackBurst"
+	attackoffset="0 64 100"
+	attackrange="450,475,500,525"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="/heroes/engineer/base/ability_02/effects/impact.effect"
+	attacktype="ranged"
+	combattype="Hero"
+	
+	aggrorange="800"
+	sightrangeday="1000"
+	sightrangenight="1000"
+	
+	goldbountymin="20,40,60,80"
+	goldbountymax="20,40,60,80"
+	experiencebounty="40,60,80,100"
+	
+	unittype="SteamTurret PseudoPet"
+>
+	<onspawn>
+		<!-- Set the proxy on Engineer's W ability.entity to Ability_Engineer2_Turret -->
+		<pushtool source="this_owner_entity" name="Ability_Engineer2" />
+		<setproxy entity="stack_entity" target="this_entity" />
+		<pushtool source="this_owner_entity" name="Ability_Engineer2b" />
+		<setproxy entity="stack_entity" target="this_entity" />
+		<setent0 entity="stack_entity" />
+		<pushtool source="this_entity" name="Ability_Engineer2_Turret_1" />
+		<hasmodifier entity="ent0" name="engineer_ability2_Heroes">
+			<setactivemodifierkey entity="stack_entity" name="engineer_ability2_Heroes" />
+		</hasmodifier>
+		<else>
+			<setactivemodifierkey entity="stack_entity" name="" />
+		</else>
+		<applystate name="State_Engineer_Ability2_TurretDisabled" target="this_entity" continuous="true" />
+		
+		<!-- Bonus Attack Speed -->
+		<evaluate a="source_agility" b="0.5" op="mult" />
+		<setcharges a="result" entity="stack_entity" />
+		
+		<!-- Inventory copy -->
+		<clonebackpack />
+		<lockbackpack entity="this_entity" />
+		
+		<!-- Kill trees -->
+		<killtrees radius="250" />
+	</onspawn>
+	
+	<onattackedstart>
+		<!-- Ensure the attacker (inflictor entity) is one of our own units -->
+        <cantarget source="this_owner_entity" target="inflictor_entity" targetscheme="my_units" ignoreinvulnerable="true" />
+        <else>
+			<!-- Or an enemy, duh! -->
+			<cantarget source="this_owner_entity" target="inflictor_entity" targetscheme="enemy_objects" ignoreinvulnerable="true" />
+			<else>
+				<!-- Otherwise, don't let them attack it -->
+				<order command="stop" source="inflictor_entity" />
+			</else>
+        </else>
+    </onattackedstart>
+	
+	<!-- No Lifesteal on the Steam Turret -->
+	<onattackpredamage>
+		<setvalue name="combat_lifesteal" a="combat_lifesteal" b="0" op="min" />
+	</onattackpredamage>
+	
+	<ondamaged>
+		<damageeffecttype effecttype="Returned">
+			<changedamage b="0" op="min" />
+		</damageeffecttype>
+		<else>
+			<changedamage b="1" op="min" />
+			
+			<targettype type="hero">
+				<targettype type="melee">
+					<setaccumulator value="1" />
+				</targettype>
+				<else>
+					<setaccumulator value="2" />
+				</else>
+			</targettype>
+			<else>
+				<cantarget targetscheme="enemy_buildings">
+					<setaccumulator value="1" />
+				</cantarget>
+				<else>
+					<targettype type="Boss">
+						<setaccumulator value="1" />
+					</targettype>
+				</else>
+			</else>
+		
+		
+			<cantarget targetscheme="my_units" ignoreinvulnerable="true">
+				<!-- Engineer is trying to destroy his own turret, kill it -->
+				<kill target="this_entity" />
+			</cantarget>
+			<else>
+				<!-- Dies in 3 hits from everything that passes true above, 12 hits for everything else -->
+				<!-- Use ceil after division to avoid rounding down when maxhealth isn't evenly divisible -->
+				<compare a="accumulator" b="1" op="eq">
+					<evaluate a="source_maxhealth" b="3" op="div" />
+					<evaluate a="result" op="ceil" />
+					<changedamage b="result" op="max" />
+				</compare>
+				<compare a="accumulator" b="2" op="eq">
+					<evaluate a="source_maxhealth" b="6" op="div" />
+					<evaluate a="result" op="ceil" />
+					<changedamage b="result" op="max" />
+				</compare>
+				<else>
+					<evaluate a="source_maxhealth" b="12" op="div" />
+					<evaluate a="result" op="ceil" />
+					<changedamage b="result" op="max" />
+				</else>
+				
+				<applystate name="State_Engineer_Ability2_Regen" duration="4000" target="this_entity" />
+				<setaccumulator value="0" />
+			</else>
+		</else>
+	</ondamaged>
+	
+	<!-- No Evasion -->
+	<onattackedpreimpact>
+		<setvalue name="combat_truestrike" a="1" />
+	</onattackedpreimpact>
+	
+</pet>

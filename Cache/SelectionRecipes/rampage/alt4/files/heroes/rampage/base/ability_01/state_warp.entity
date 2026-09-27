@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rampage_Ability1_Warp"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/rampage/alt4/ability_01/effects/warp.effect"
+	ishidden="true"
+	
+	silenced="true"
+	disarmed="true"
+	perplexed="true"
+	
+	modifierkey="Rampage_Q_WarpState"
+>
+	<onframe>
+		<!-- Don't apply combat-related events via the projectile entity if Rampage is stopped before he reaches the target -->
+		<condition source="source_entity" target="source_entity" test="hastrait stunned or hastrait immobilized or hastrait restrained">
+			<expire />
+			<kill target="this_proxy_entity" source="" />
+		</condition>
+	</onframe>
+</state>

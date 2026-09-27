@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Monarch_Ability1"
+
+	speed="1400"
+	gravity="6000"
+	
+	canturn="false"
+
+	modelscale=".9"
+	model="/shared/models/invis.mdf"
+	traileffect="/heroes/monarch/alt5/ability_01/effects/trail.effect"
+	effectscale="1.0"
+	impacteffect="/heroes/monarch/alt5/ability_01/effects/impact.effect"
+>
+
+</projectile>

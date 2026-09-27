@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_PollywogPriest4"
+
+	icon="/heroes/pollywogpriest/alt7/ability_04/icon.dds"
+	
+	anim="ability_4"
+	casttime="1000"
+	castactiontime="300"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_position"
+	casteffecttype="SuperiorMagic"
+	
+	manacost="150,275,400"
+	cooldowntime="110000,100000,90000"
+
+	range="600"
+	
+	showareacast="true"
+	areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+>
+	<onimpact>
+		<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="-75 0" target="target_position" />
+		<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="75 0" target="target_position" />
+		<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="0 -75" target="target_position" />
+		<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="0 75" target="target_position" />
+		
+		<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="-70 70" target="target_position" />
+		<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="70 -70" target="target_position" />
+		<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="70 70" target="target_position" />
+		<spawnunit name="Gadget_PollywogPriestWard" count="1" offset="-70 -70" target="target_position" />
+		<starttimer duration="45000" />
+	</onimpact>
+</ability>

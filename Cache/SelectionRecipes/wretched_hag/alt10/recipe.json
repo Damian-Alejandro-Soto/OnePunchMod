@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "hero": "wretched_hag",
+  "avatar": "alt10",
+  "files": [
+    "heroes\\wretched_hag\\base\\hero.entity",
+    "heroes\\wretched_hag\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\wretched_hag\\base\\ability_01\\ability.entity",
+    "heroes\\wretched_hag\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\wretched_hag\\base\\ability_01\\projectile.entity",
+    "heroes\\wretched_hag\\base\\ability_01\\projectile.entity.onepunch_ability_managed",
+    "heroes\\wretched_hag\\base\\ability_01\\state.entity",
+    "heroes\\wretched_hag\\base\\ability_01\\state.entity.onepunch_ability_managed",
+    "heroes\\wretched_hag\\base\\ability_02\\ability.entity",
+    "heroes\\wretched_hag\\base\\ability_02\\ability.entity.onepunch_ability_managed",
+    "heroes\\wretched_hag\\base\\ability_03\\ability.entity",
+    "heroes\\wretched_hag\\base\\ability_03\\ability.entity.onepunch_ability_managed",
+    "heroes\\wretched_hag\\base\\ability_04\\ability.entity",
+    "heroes\\wretched_hag\\base\\ability_04\\ability.entity.onepunch_ability_managed",
+    "heroes\\wretched_hag\\base\\ability_04\\affector.entity",
+    "heroes\\wretched_hag\\base\\ability_04\\affector.entity.onepunch_ability_managed",
+    "heroes\\wretched_hag\\base\\ability_04\\state.entity",
+    "heroes\\wretched_hag\\base\\ability_04\\state.entity.onepunch_ability_managed",
+    "heroes\\wretched_hag\\base\\projectile\\projectile.entity",
+    "heroes\\wretched_hag\\base\\projectile\\projectile.entity.onepunch_ability_managed"
+  ]
+}

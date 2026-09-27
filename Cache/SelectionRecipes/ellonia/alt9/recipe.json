@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "hero": "ellonia",
+  "avatar": "alt9",
+  "files": [
+    "heroes\\ellonia\\base\\hero.entity",
+    "heroes\\ellonia\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\ellonia\\base\\ability_01\\ability.entity",
+    "heroes\\ellonia\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\ellonia\\base\\ability_02\\gadget.entity",
+    "heroes\\ellonia\\base\\ability_02\\gadget.entity.onepunch_ability_managed",
+    "heroes\\ellonia\\base\\ability_04\\projectile_sotm2.entity",
+    "heroes\\ellonia\\base\\ability_04\\projectile_sotm2.entity.onepunch_ability_managed",
+    "heroes\\ellonia\\base\\ability_04\\state.entity",
+    "heroes\\ellonia\\base\\ability_04\\state.entity.onepunch_ability_managed"
+  ]
+}

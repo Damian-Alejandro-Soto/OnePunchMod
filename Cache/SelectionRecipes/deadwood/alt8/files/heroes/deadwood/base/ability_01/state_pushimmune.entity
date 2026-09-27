@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Deadwood_Ability1_PushImmunity"
+
+	icon="/heroes/Deadwood/alt8/ability_01/icon.dds"
+	ishidden="true"
+	
+	passiveeffect=""
+	
+	effecttype=""
+>
+</state>

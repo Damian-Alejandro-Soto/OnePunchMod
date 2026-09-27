@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Berzerker_Ability3_Buff"
+
+	icon="/heroes/berzerker/alt12/ability_02/icon.dds"
+	passiveeffect="/heroes/berzerker/alt12/ability_02/effects/state_self.effect"
+
+	strengthpercharge="1"
+>
+	<modifier key="iamsheeped" modpriority="1000"
+		passiveeffect=""
+	/>
+</state>

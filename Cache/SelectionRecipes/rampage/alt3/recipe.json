@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "hero": "rampage",
+  "avatar": "alt3",
+  "files": [
+    "heroes\\rampage\\base\\hero.entity",
+    "heroes\\rampage\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\rampage\\base\\ability_01\\state_warp.entity",
+    "heroes\\rampage\\base\\ability_01\\state_warp.entity.onepunch_ability_managed",
+    "heroes\\rampage\\base\\ability_04\\ability.entity",
+    "heroes\\rampage\\base\\ability_04\\ability.entity.onepunch_ability_managed",
+    "heroes\\rampage\\base\\ability_04\\state.entity",
+    "heroes\\rampage\\base\\ability_04\\state.entity.onepunch_ability_managed"
+  ]
+}

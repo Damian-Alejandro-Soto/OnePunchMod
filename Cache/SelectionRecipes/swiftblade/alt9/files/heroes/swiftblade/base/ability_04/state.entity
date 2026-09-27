@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Swiftblade_Ability4"
+	
+	icon="icon.tga"
+	passiveeffect="/heroes/hiro/alt9/ability_04/effects/slash.effect"
+	
+	invulnerable="true"
+	silenced="true"
+	unitwalking="true"
+	
+	effecttype=""
+	modifierkey="Hiro_Ability4"
+	deathpersist="true"
+	
+	impactinterval="400"
+	dynamicprecache="effects/bloodsplat.effect"
+>
+
+	<onimpact>
+		<areaofeffect
+			radius="400"
+			targetselection="all"
+			targetscheme="visible_enemy_units"
+			effecttype="Physical Splash"
+		/>
+		
+		<compare a="result" b="0" op="ne">
+			<spawnaffector name="Affector_Swiftblade_Ability4" target="source_position" />
+			
+		</compare>
+		<else>
+			<expire />
+		</else>
+	</onimpact>
+</state>

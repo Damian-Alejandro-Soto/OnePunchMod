@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Prisoner4"
+
+	statuseffecttooltip="State_Prisoner_Ability4"
+	icon="../../icon.dds"
+	
+	casttime="400"
+	castactiontime="0"
+	anim="ability_4"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="self_position"
+	casteffecttype="Physical"
+	casteffect="effects/cast.effect"
+	
+	inheritmovement="true"
+	noninterrupting="true"
+	frontqueue="true"
+	nonaggressive="true"
+	
+	manacost="100,125,150"
+	cooldowntime="80000"
+	
+	targetradius="550"
+	
+	novoiceresponse="true"
+	
+	modifierkey=""
+	modifierkey2=""
+	
+	dynamicprecache="/heroes/prisoner/alt3/ability_04/effects/first_cast.effect"
+>
+	<onlearn>
+		<setstr0 a="altavatar_path" b="effects/first_cast.effect" op="add" />
+		<exists path="str0">
+			<setscriptvalue name="firstcast_effect" value="str0" entity="this_entity" />
+		</exists>
+		<else>
+			<setscriptvalue name="firstcast_effect" value="effects/first_cast.effect" entity="this_entity" />
+		</else>
+		<setstr1 a="altavatar_path" b="effects/cast.effect" op="add" />
+		<exists path="str1">
+			<setscriptvalue name="cast_effect" value="str1" entity="this_entity" />
+		</exists>
+		<else>
+			<setscriptvalue name="cast_effect" value="effects/cast.effect" entity="this_entity" />
+		</else>
+	</onlearn>
+	
+	<onimpact>
+		<areaofeffect
+			radius="550"
+			targetselection="all"
+			targetscheme="enemy_heroes"
+			effecttype="Physical"
+		>
+			<applystate name="State_Prisoner_Ability4" proxy="this_owner_entity" duration="2500" />
+			<damage effecttype="Physical" amount="100,150,200" />
+		</areaofeffect>
+		<compare a="result" b="0" op="gt" >
+			<applystate name="State_Prisoner_Ability4_Refresher" target="source_entity" duration="2500" />
+			<applystate name="State_Prisoner_Ability4_Self" target="source_entity" duration="2500" />
+		</compare>
+		
+		<!-- Art -->
+		<hasmodifier name="prisoner_unbound" />
+		<else>
+			<setactivemodifierkey entity="this_entity" name="prisoner_unbound" />
+
+			<!-- Dynamic visual effects -->
+			<getscriptvalue name="firstcast_effect" destvar="str0" entity="this_entity" />
+			<playeffectdynamic effect="str0" occlude="true" />
+		</else>
+	</onimpact>
+
+	<ondeath>
+		<areaofeffect
+			radius="800"
+			targetselection="all"
+			targetscheme="enemy_heroes"
+			effecttype=""
+		>
+			<expirestate name="State_Prisoner_Ability4" />
+		</areaofeffect>
+	</ondeath>
+
+	<onready>
+		<expirestate name="State_Prisoner_Bonus_Ability3_3" target="source_entity" />
+	</onready>
+	
+	<modifier key="prisoner_unbound" modpriority="101"
+		modifierkey="unbound"
+	/>
+	
+	<modifier key="prisoner_unbound_cloth" modpriority="101"
+		modifierkey="unbound_cloth"
+	/>
+	
+	<modifier key="prisoner_refresher" modpriority="103" 
+		disabled="true"
+	/>
+	
+	<modifier key="ult_boost" modpriority="104"
+		anim="ability_1"
+		casteffect=""
+		
+		targetradius="650"
+		range="1200"
+		actiontype="target_entity"
+		casteffecttype="SuperiorPhysical"
+		targetscheme="enemy_heroes_and_self"
+		targetmaterial="/shared/materials/area_cast_indicator_pointed.material"
+		
+		showareacast="true"
+		areacastmaterial="/shared/materials/area_cast_indicator_spokes.material"
+		
+		doubleactivate="true"
+		showrangeandradiusintooltip="true"
+	>
+		<onimpact>
+			<compare source="this_owner_entity" target="target_entity" a="source_entity" b="target_entity" op="eq">
+				<areaofeffect
+					radius="650"
+					targetselection="all"
+					targetscheme="enemy_heroes"
+					effecttype="SuperiorPhysical"
+				>
+					<applystate name="State_Prisoner_Ability4_Sotm" proxy="this_owner_entity" duration="1250" pushentity="true" />
+					<setactivemodifierkey name="prisoner_shortened_R" entity="stack_entity" />
+					<damage effecttype="SuperiorPhysical" amount="100,150,200" />
+				</areaofeffect>
+				
+				<compare a="result" b="0" op="gt" >
+					<applystate name="State_Prisoner_Ability4_Refresher" target="source_entity" duration="1250" />
+					<applystate name="State_Prisoner_Ability4_Self" target="source_entity" duration="1250" />
+				</compare>
+
+				<!-- Art -->
+				<hasmodifier name="prisoner_unbound" />
+				<else>
+					<setactivemodifierkey entity="this_entity" name="prisoner_unbound" />
+					
+					<!-- Dynamic visual effects -->
+					<getscriptvalue name="firstcast_effect" destvar="str0" entity="this_entity" />
+					<playeffectdynamic effect="str0" occlude="true" />
+				</else>
+				
+				<!-- Dynamic visual effects -->
+				<getscriptvalue name="cast_effect" destvar="str1" entity="this_entity" />
+				<playeffectdynamic effect="str1" occlude="true" />
+			</compare>
+			<else>
+				<setactivemodifierkey entity="this_entity" name="prisoner_unbound" />
+				<spawnprojectile name="Projectile_Prisoner_Ability4_Sotm" source="this_owner_entity" target="target_entity" />
+			</else>
+		</onimpact>
+	</modifier>
+</ability>

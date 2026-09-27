@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gladiator_Ability2"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/gladiator/alt12/ability_02/effects/state.effect"
+
+	effecttype=""
+	
+>
+	<onframe />
+
+	<onexpired>
+		<expirestate target="this_inflictor_entity" name="State_Gladiator_Ability2_Return" />
+		<cantarget effecttype="Magic Push" ignoreinvulnerable="false">
+			<unbind target="target_entity" />
+			<disjoint target="target_entity" />
+			<teleport source="target_entity" target="this_proxy_position" interpolate="false" />
+			<order command="stop" source="target_entity" target="target_entity" />
+		</cantarget>
+		<kill target="this_proxy_entity" source="" />
+	</onexpired>
+</state>

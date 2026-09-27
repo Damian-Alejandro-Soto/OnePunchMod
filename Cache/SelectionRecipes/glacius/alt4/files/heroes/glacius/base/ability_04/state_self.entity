@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Glacius_Ability4_Self"
+	
+	ishidden="true"
+	icon="/heroes/frosty/alt4/ability_04/icon.dds"
+>
+	<aura state="State_Glacius_Ability4" radius="700" targetscheme="enemy_units" duration="1000" />
+</state>

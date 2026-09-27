@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "hero": "drunken_master",
+  "avatar": "alt4",
+  "files": [
+    "heroes\\drunken_master\\base\\hero.entity",
+    "heroes\\drunken_master\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\drunken_master\\base\\state_drunken_boost.entity",
+    "heroes\\drunken_master\\base\\state_drunken_boost.entity.onepunch_ability_managed",
+    "heroes\\drunken_master\\base\\ability_02\\projectile.entity",
+    "heroes\\drunken_master\\base\\ability_02\\projectile.entity.onepunch_ability_managed"
+  ]
+}

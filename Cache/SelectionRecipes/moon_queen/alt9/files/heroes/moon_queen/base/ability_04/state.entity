@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_MoonQueen_Ability4"
+	
+	icon="/heroes/krixi/alt9/ability_04/icon.dds"
+	passiveeffect="/heroes/krixi/alt9/ability_04/effects/ability_04_state.effect"
+	displaylevel="true"
+	
+	movespeed="0"
+	
+	effecttype=""
+>
+</state>

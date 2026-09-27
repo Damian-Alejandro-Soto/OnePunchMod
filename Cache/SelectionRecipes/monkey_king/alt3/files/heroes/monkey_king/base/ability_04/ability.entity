@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_MonkeyKing4"
+
+	icon="/heroes/monkey_king/alt3/ability_04/icon.dds"
+	
+	anim="cloud_cast"
+
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="passive"
+	cooldowntime="5000"
+	
+	manacost="0"
+	modifierkey="MonkeyKingUlt1,MonkeyKingUlt2,MonkeyKingUlt3"
+>
+	<onimpact />
+	
+	<ondamaged priority="-10">
+		<compare a="source_damage" b="0" op="gt">
+			<targettype type="self" />
+			<else>
+				<targettype type="hero">
+					<startcooldown duration="5000" />
+					<expirestate name="State_MonkeyKing_Ability4" target="source_entity" />
+				</targettype>
+			</else>
+		</compare>
+	</ondamaged>
+	
+	<onframe>
+		<isready>
+			<targettype type="alive" target="source_entity">
+				<applystate name="State_MonkeyKing_Ability4" continuous="true" />
+			</targettype>
+		</isready>
+	</onframe>	
+</ability>

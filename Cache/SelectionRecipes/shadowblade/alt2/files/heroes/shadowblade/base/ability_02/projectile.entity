@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_ShadowBlade_Ability2"
+
+	speed="1500"
+	gravity="0"
+	
+	modelscale="1.5"
+	model="/shared/models/invis.mdf"
+	anim="ability_2a"
+	
+	impacteffect="effects/impact.effect"
+	traileffect="/heroes/shadowblade/alt2/ability_02/effects/trail.effect"
+	
+	canturn="0"
+	flying="0"
+	flyheight="0"
+	impactdistance="120"
+>
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+		    <onimpact>
+				<cantarget targetscheme="enemy_units">
+					<!-- Damage steal mechanic -->
+					<compare a="source_attackdamage" b="0" op="gt" source="target_entity">
+						<applystate name="State_Shadowblade_Ability2_Buff" duration="5000" target="source_entity" pushentity="true" />
+						
+						<!-- Base damage steal -->
+						<setvar3 a="0.1,0.2,0.3,0.4" />
+						
+						<!-- Unaffected damage steal -->
+						<targettype type="player_controlled">
+							<setvar0 source="target_entity" a="source_attackdamage" b="var3" op="mult" />
+							<addcharges entity="stack_entity" count="var0" />
+						</targettype>
+						
+						<!-- Reduced damage steal if targeting a NPC enemy player-controlled unit -->
+						<else>
+							<setvar3 a="var3" b="0.5" op="mult" />
+							<setvar0 source="target_entity" a="source_attackdamage" b="var3" op="mult" />
+							<addcharges entity="stack_entity" count="var0" />
+						</else>								
+					</compare>
+					
+					<damage effecttype="Magic" amount="70,120,170,220" target="target_entity" />
+					<playanim name="ability_2a" target="this_owner_entity" />
+					<applystate name="State_Shadowblade_Ability2_Drain" duration="5000" target="target_entity" />
+				</cantarget> 
+		    </onimpact>
+		</combatevent>
+		<expirestate name="State_ShadowBlade_Ability2_SelfDisarm" target="this_owner_entity" />
+	</onimpact>
+</projectile>

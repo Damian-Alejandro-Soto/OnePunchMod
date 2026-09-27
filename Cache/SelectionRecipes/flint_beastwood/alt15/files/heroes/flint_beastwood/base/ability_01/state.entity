@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_FlintBeastwood_Ability1"
+
+	icon="/heroes/flint_beastwood/alt15/ability_01/icon.dds"
+	passiveeffect=""
+	effecttype="StatusDebuff"
+	
+	movespeedslow="0.15,0.2,0.25,0.3"
+
+	negativeeffect="slowed"
+>	
+</state>

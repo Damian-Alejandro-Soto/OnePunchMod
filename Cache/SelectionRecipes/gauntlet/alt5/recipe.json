@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "hero": "gauntlet",
+  "avatar": "alt5",
+  "files": [
+    "heroes\\gauntlet\\base\\hero.entity",
+    "heroes\\gauntlet\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\gauntlet\\base\\state_gauntlet_ult_boost.entity",
+    "heroes\\gauntlet\\base\\state_gauntlet_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\gauntlet\\base\\ability_01\\state.entity",
+    "heroes\\gauntlet\\base\\ability_01\\state.entity.onepunch_ability_managed",
+    "heroes\\gauntlet\\base\\ability_02\\gadget_hand.entity",
+    "heroes\\gauntlet\\base\\ability_02\\gadget_hand.entity.onepunch_ability_managed",
+    "heroes\\gauntlet\\base\\ability_02\\state_link.entity",
+    "heroes\\gauntlet\\base\\ability_02\\state_link.entity.onepunch_ability_managed",
+    "heroes\\gauntlet\\base\\ability_04\\gadget.entity",
+    "heroes\\gauntlet\\base\\ability_04\\gadget.entity.onepunch_ability_managed",
+    "heroes\\gauntlet\\base\\ability_04\\projectile.entity",
+    "heroes\\gauntlet\\base\\ability_04\\projectile.entity.onepunch_ability_managed",
+    "heroes\\gauntlet\\base\\ability_04\\projectile_sotm.entity",
+    "heroes\\gauntlet\\base\\ability_04\\projectile_sotm.entity.onepunch_ability_managed",
+    "heroes\\gauntlet\\base\\ability_04\\state.entity",
+    "heroes\\gauntlet\\base\\ability_04\\state.entity.onepunch_ability_managed"
+  ]
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Fayde_Ability2_ExpirePet"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/fade/alt3/ability_02/effects/shroud_effect.effect"
+	revealed="true"
+	sighted="true"
+	ishidden="false"
+	
+	effecttype=""
+>
+	<onframe>
+		<targettype target="this_proxy_entity" type="alive" />
+		<else>
+			<expire />
+		</else>
+	</onframe>
+
+	<onexpired>
+		<kill target="this_proxy_entity" source="" />
+	</onexpired>
+	
+	<ondeath>
+		<kill target="this_proxy_entity" source="" />
+	</ondeath>
+	
+	<aura
+		gadget="Gadget_Fayde_Ability2"
+		radius="0"
+		targetscheme="self"
+	/>	
+</state>

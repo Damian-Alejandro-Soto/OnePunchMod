@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_LordSalforis_Ability4"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/dreadknight/alt5/ability_04/effects/stage1/state_enemy.effect"
+	displaylevel="true"
+
+	incominghealmultiplier="-1"
+	incominglifestealmultiplier="-1"
+	healthregenreduction="1"
+	effecttype="ForceTransferrable"
+	allowtransfer="false"
+	
+	modifierkey="salforis_ability4_Active"
+
+	maxcharges="10"
+
+	dynamicprecache="effects/special_death.effect"
+>
+	<oninflict>
+		<applystate name="State_LordSalforis_Ability4_Assist" duration="100" />
+	</oninflict>
+	
+	<ondeath>
+		<setstr0 a="altavatar_path" b="effects/special_death.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="this_owner_entity" source="this_owner_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/special_death.effect" target="this_owner_entity" source="this_owner_entity" />
+		</else>
+		<pushtool source="this_proxy_entity" name="Ability_LordSalforis4" />
+		<addcharges entity="stack_entity" count="1" />
+		<expire />
+	</ondeath>
+	
+	<onframe>
+		<damage effecttype="SuperiorMagic DOT" amount="20,35,50" b="frametime" op="mult" />
+	</onframe>
+
+	
+	<modifier key="ult_boost" modpriority="99" >		
+		<onframe>
+			<setvar0 a="charges" b="5" op="mult" />
+			<setvar0 a="var0" b="20,35,50" op="add" />
+			<setvar0 a="var0" b="frametime" op="mult" />
+			<damage effecttype="SuperiorMagic DOT" amount="0" b="var0" op="add" />
+			
+			<targettype type="alive" target="source_entity">
+				<compare a="this_proxy_entity" b="0" op="ne">
+					<distance source="this_proxy_entity" target="this_owner_entity" />
+					<compare a="result" b="900" op="le">
+						<setvar0 a="1000" b="frametime" op="mult" />
+						<changeduration b="result" op="add" />
+					</compare>
+				</compare>
+			</targettype>
+		</onframe>
+	</modifier>
+</state>

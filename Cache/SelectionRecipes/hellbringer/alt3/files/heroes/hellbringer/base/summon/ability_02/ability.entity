@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Malphas2"
+	
+	icon="/heroes/hellbringer/alt3/summon/ability_02/icon.dds"
+	
+	maxlevel="3"
+	actiontype="passive"
+	
+	targetradius="225"
+
+>
+	<aura name="Ability_Malphas2_Aura" state="State_Malphas_Ability2" radius="225" targetscheme="enemy_units" effecttype="SuperiorMagic" />
+</ability>

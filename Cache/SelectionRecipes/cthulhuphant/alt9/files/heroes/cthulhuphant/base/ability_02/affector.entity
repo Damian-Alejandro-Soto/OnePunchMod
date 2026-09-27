@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Cthulhuphant_Ability2"
+
+	radius="200"
+	arcstart="180"
+	arcmid="320"
+	arcend="360"
+	arcmidpos="0.7"
+
+	speed="1000"
+	lifetime="500"
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype=""
+	
+	destroytrees="true"
+	
+	impacteffect="/heroes/cthulhuphant/alt9/ability_02/effects/impact.effect"
+	effect="effects/shock.effect"
+>
+	<onimpact>
+		<!-- Bonus damage per wave -->
+		<setvar0 a="param" b="5,10,15,20" op="mult" />
+		
+		<!-- Base Damage -->
+		<setvar0 a="30,40,50,60" b="var0" op="add" />
+		
+		<targettype type="Mechanical">
+			<damage effecttype="SuperiorMagic" amount="1" b="var0" op="mult" />
+		</targettype>
+		<else>
+			<damage effecttype="Magic" amount="1" b="var0" op="mult" />
+		</else>
+		<targettype type="hero">
+			<hasmodifier name="ult_boost" entity="source_entity">
+				<applystate name="State_Ctuhlhuphant_Ability3_Strength" duration="24000" target="source_entity" />
+			</hasmodifier>
+		</targettype>
+	</onimpact>
+	
+</affector>

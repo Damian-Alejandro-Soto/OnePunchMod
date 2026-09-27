@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "war_beast",
+  "avatar": "alt5",
+  "files": [
+    "heroes\\war_beast\\base\\hero.entity",
+    "heroes\\war_beast\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\war_beast\\base\\ability_01\\pet\\pet.entity",
+    "heroes\\war_beast\\base\\ability_01\\pet\\pet.entity.onepunch_ability_managed"
+  ]
+}

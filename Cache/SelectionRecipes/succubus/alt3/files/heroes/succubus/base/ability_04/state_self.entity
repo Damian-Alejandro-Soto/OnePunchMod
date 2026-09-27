@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Succubus_Ability4_Self"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/succubis/alt3/ability_04/effects/state_self.effect"
+	ishidden="true"
+	
+>
+
+
+</state>

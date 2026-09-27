@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Geomancer_Ability2"
+	
+	icon="../../icon.dds"
+	
+	impactinterval="1000"
+	passiveeffect="/heroes/geomancer/alt6/ability_02/effects/state.effect"
+	
+	sighted="true"
+	revealed="true"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	
+	dynamicprecache="/heroes/geomancer/alt6/ability_02/effects/gadget.effect"
+>
+	<oninflict>
+		<setstr0 a="altavatar_path" b="effects/gadget.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_position" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/gadget.effect" source="target_position" occlude="true" />
+		</else>
+	</oninflict>
+	
+	<onimpact>
+		<setvar0 a="35,40,45,50" /> <!-- Damage -->
+		<targettype type="moving">
+			<damage effecttype="Magic" amount="0.5" b="var0" op="mult" />
+		</targettype>
+		<else>
+			<damage effecttype="Magic" amount="1" b="var0" op="mult" />
+		</else>
+		
+		<!-- Dynamic visual effects -->
+		<setstr0 a="altavatar_path" b="effects/gadget.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="" source="target_position" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/gadget.effect" target="" source="target_position" occlude="true" />
+		</else>
+	</onimpact>
+	
+	<onframe />
+</state>

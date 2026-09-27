@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+    name="State_Gunblade_Ability4_Reduced"
+	
+    ishidden="false"
+    icon="../../icon.dds"
+	
+	allowtransfer="true"
+	effecttype="StatusDebuff"
+    
+	armor="-3,-5,-7"
+	passiveeffect="/heroes/gunblade/alt9/ability_04/effects/state_enemy.effect"
+>
+	<modifier key="nobossarmor" modpriority="100" condition="Boss" notooltooltip="true"
+		armor="0"
+	/>
+
+</state>

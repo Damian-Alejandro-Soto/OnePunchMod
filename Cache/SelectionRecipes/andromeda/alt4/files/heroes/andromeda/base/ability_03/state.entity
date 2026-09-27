@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Andromeda_Ability3"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/andromeda/alt4/ability_03/effects/state.effect"
+	
+	basedamagemultiplier="0.10,0.14,0.18,0.22"
+
+	effecttype="StatusBuff"
+>
+</state>

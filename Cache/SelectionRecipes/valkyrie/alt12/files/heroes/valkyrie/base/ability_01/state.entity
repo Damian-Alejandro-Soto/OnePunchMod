@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Valkyrie_Ability1"
+
+	icon="/heroes/Valkyrie/alt12/ability_01/icon.dds"
+	
+	impactinterval="500"
+	
+	ishidden="true"
+	
+	effecttype=""
+	dynamicprecache="effects/actual_impact.effect"
+>
+	<onrefresh>
+		<changeduration b="450" op="add" />
+	</onrefresh>
+
+	<onimpact>
+		<damage effecttype="Magic" amount="75,150,225,300" />
+		
+		<!-- VFX -->
+			<setstr0 a="altavatar_path" b="effects/actual_impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_entity" target="target_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/actual_impact.effect" source="target_entity" target="target_entity" />
+		</else>
+	</onimpact>
+</state>

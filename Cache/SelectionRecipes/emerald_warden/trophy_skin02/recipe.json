@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "hero": "emerald_warden",
+  "avatar": "trophy_skin02",
+  "files": [
+    "heroes\\emerald_warden\\base\\hero.entity",
+    "heroes\\emerald_warden\\base\\hero.entity.hon_avatar_switcher_created"
+  ],
+  "dependencies": []
+}

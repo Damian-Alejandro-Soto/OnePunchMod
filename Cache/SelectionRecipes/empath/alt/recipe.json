@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "empath",
+  "avatar": "alt",
+  "files": [
+    "heroes\\empath\\base\\hero.entity",
+    "heroes\\empath\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\empath\\base\\ability_04\\state_target.entity",
+    "heroes\\empath\\base\\ability_04\\state_target.entity.onepunch_ability_managed"
+  ]
+}

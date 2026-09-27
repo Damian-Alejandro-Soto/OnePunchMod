@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Deadwood_Ability4_Buff"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/deadwood/alt7/ability_04/effects/state_buff.effect"
+	
+	strengthpercharge="1"
+
+	effecttype=""
+	allowtransfer="true"
+>	
+</state>

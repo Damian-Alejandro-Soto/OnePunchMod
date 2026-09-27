@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Hammerstorm_Ability2"
+	
+	icon="/heroes/Hammerstorm/alt11/ability_02/icon.dds"
+	passiveeffect="/heroes/hammerstorm/alt11/ability_02/effects/state.effect"
+	displaylevel="true"
+	
+	movespeedmultiplier="0.15"
+	
+	effecttype="StatusBuff"
+	allowtransfer="true"
+>
+</state>

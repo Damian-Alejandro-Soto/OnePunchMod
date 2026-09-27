@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_PuppetMaster_Ability4_Visible"
+	
+	icon="/heroes/puppetmaster/alt12/ability_04/icon.dds"
+	ishidden="true"
+	
+	sighted="true"
+	revealed="true"
+	unkillable="true"
+>
+	<onunkillabledeath>
+		<!-- Set behaviour on Voodoo Puppet -->
+		<setactivemodifierkey name="Puppet_ExpireStart" entity="this_owner_entity" />
+		<changetotallifetime entity="this_owner_entity" b="1500,2250,3000" op="set" />	
+		
+		<setactivemodifierkey name="Puppet_ExpireStart" entity="this_entity" />
+	</onunkillabledeath>
+
+	<modifier key="Puppet_ExpireStart" modpriority="100">
+		<onunkillabledeath />
+	</modifier>
+</state>

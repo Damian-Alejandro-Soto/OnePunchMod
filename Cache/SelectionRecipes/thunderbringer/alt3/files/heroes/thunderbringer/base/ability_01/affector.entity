@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+        name="Affector_Thunderbringer_Ability1"
+
+        radius="500"
+
+        impactdelay="200"
+        maximpactsperinterval="1"
+        maximpactspertarget="1"
+        targetscheme="visible_enemy_units"
+        targetselection="closest"
+        effecttype="Magic"
+        persist="true"
+
+        impacteffect="/heroes/kunas/alt3/effects/ability_01/chain_impact.effect"
+        linkeffect="effects/chain_lightning_link.effect"
+>
+        <onimpact>
+                <targettype type="alive" source="this_proxy_entity" target="this_proxy_entity">
+                        <chain count="2,4,6,8"/>
+                </targettype>
+                <else>
+                        <!-- 1 less chain if the target is already dead -->
+                        <chain count="1,3,5,7"/>
+                </else>
+                <compare a="target_entity" b="proxy_entity" op="eq" />
+                <else>
+                        <damage effecttype="Magic" amount="85,100,115,130" />
+                </else>
+        </onimpact>
+
+        <!-- Midwars-only changes -->
+        <modifier key="OnlyMidMap" modpriority="100"
+                radius="400"
+        >
+                <onimpact>
+                        <targettype type="alive" source="this_proxy_entity" target="this_proxy_entity">
+                                <chain count="3,4,5,6"/>
+                        </targettype>
+                        <else>
+                                <!-- 1 less chain if the target is already dead -->
+                                <chain count="2,3,4,5"/>
+                        </else>
+                        <compare a="target_entity" b="proxy_entity" op="eq" />
+                        <else>
+                                <damage effecttype="Magic" amount="85,100,115,130" />
+                        </else>
+                </onimpact>
+        </modifier>
+</affector>

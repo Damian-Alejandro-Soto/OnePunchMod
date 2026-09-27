@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Gadget_Scout2_2"
+
+	icon="../../../icon.dds"
+
+	casttime="0"
+	castactiontime="0"
+	frontqueue="true"
+	inheritmovement="true"
+
+	actiontype="global"
+	casteffecttype="Magic"
+
+	targetscheme="electriceyes"
+	cooldowntime="10000"
+	nosilence="true"
+	nostun="true"
+
+	dynamicprecache="/heroes/scout/trophy_skin/ability_02/effects/explosion.effect"
+>
+	<onaction>
+		<spawnaffector name="Affector_Scout_Ability2" target="source_position" />
+		<kill target="this_owner_entity" source="" />
+
+		<!-- Dynamic visual effects: resolve against the caster's active avatar, fall back to base -->
+		<setstr0 a="altavatar_path" b="../effects/explosion.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_entity" target="" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="../effects/explosion.effect" source="source_entity" target="" occlude="true" />
+		</else>
+	</onaction>
+
+	<onimpact>
+		<useability slot="5" source="source_owner_entity" />
+		<startcooldown toolname="Ability_Gadget_Scout2_2" duration="10000" />
+	</onimpact>
+</ability>

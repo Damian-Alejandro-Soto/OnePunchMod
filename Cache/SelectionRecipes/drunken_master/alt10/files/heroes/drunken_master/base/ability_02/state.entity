@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Drunkenmaster_Ability2"
+	
+	icon="/heroes/drunkenmaster/alt10/ability_02/icon.dds"
+	passiveeffect=""
+
+	stunned="true"
+	stunnedreduction="ignore"
+
+	ishidden="true"
+
+	unitwalking="true"
+	effecttype=""
+>
+</state>

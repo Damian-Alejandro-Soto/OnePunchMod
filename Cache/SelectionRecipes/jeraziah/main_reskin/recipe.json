@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "jeraziah",
+  "avatar": "main_reskin",
+  "files": [
+    "heroes\\jeraziah\\base\\hero.entity",
+    "heroes\\jeraziah\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\jeraziah\\base\\ability_02\\state.entity",
+    "heroes\\jeraziah\\base\\ability_02\\state.entity.onepunch_ability_managed"
+  ]
+}

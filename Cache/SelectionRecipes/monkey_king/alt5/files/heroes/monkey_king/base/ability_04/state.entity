@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_MonkeyKing_Ability4"
+
+	passiveeffect="/heroes/monkey_king/alt5/ability_04/effects/cloud.effect"	
+
+	icon="../../icon.dds"
+
+	modifierkey="MonkeyKingFlying"
+	effecttype=""
+	movespeedmultiplier="0.1,0.2,0.3"
+	manaregen="3,5,7"
+	
+	dynamicprecache="/heroes/monkey_king/alt5/ability_04/effects/cast.effect"
+>
+	<onframe>
+		<hasmodifier entity="this_owner_entity" name="iamsheeped">
+			<activatemodifierkey entity="this_entity" name="iamsheeped" />
+		</hasmodifier>
+		<else>
+			<deactivatemodifierkey entity="this_entity" name="iamsheeped" />
+		</else>
+		
+		<isterminated>
+			<expire />
+		</isterminated>
+	</onframe>	
+	
+	<oninflict>
+		<setstr0 a="altavatar_path" b="effects/cast.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="source_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/cast.effect" target="source_entity" occlude="true" />
+		</else>
+		<playanim name="cloud_cast" target="source_entity" />
+	</oninflict>
+
+	<onexpired>
+		<!-- Dynamic visual effects -->
+		<setstr0 a="altavatar_path" b="effects/cast.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="source_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/cast.effect" target="source_entity" occlude="true" />
+		</else>
+		
+		<playanim name="cloud_uncast" target="source_entity" />
+	</onexpired>
+	
+	<modifier key="iamsheeped" modpriority="9999"
+		passiveeffect=""
+	/>
+</state>

@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "hero": "thunderbringer",
+  "avatar": "alt8",
+  "files": [
+    "heroes\\thunderbringer\\base\\hero.entity",
+    "heroes\\thunderbringer\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\thunderbringer\\base\\ability_01\\ability.entity",
+    "heroes\\thunderbringer\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\thunderbringer\\base\\ability_01\\affector.entity",
+    "heroes\\thunderbringer\\base\\ability_01\\affector.entity.onepunch_ability_managed",
+    "heroes\\thunderbringer\\base\\ability_02\\ability.entity",
+    "heroes\\thunderbringer\\base\\ability_02\\ability.entity.onepunch_ability_managed",
+    "heroes\\thunderbringer\\base\\ability_03\\ability.entity",
+    "heroes\\thunderbringer\\base\\ability_03\\ability.entity.onepunch_ability_managed",
+    "heroes\\thunderbringer\\base\\projectile\\attack_projectile.entity",
+    "heroes\\thunderbringer\\base\\projectile\\attack_projectile.entity.onepunch_ability_managed"
+  ],
+  "dependencies": []
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chronos_Ability4"
+
+	icon="/heroes/chronos/alt8/ability_04/icon.dds"
+	displaylevel="true"
+	passiveeffect=""
+	
+	frozen="true"
+	stunned="true"
+	stunnedreduction="ignore"
+	
+	effecttype="StatusDisable"
+
+	modifierkey="channeled_stun_ability"
+	modifierkey2="chronos_ability4_Affected"
+>
+
+	<onexpired>
+		<playanim name="idle" />
+	</onexpired>
+	
+	<modifier key="ult_boost" modpriority="100"
+	>
+		<ondamaged />
+	</modifier>
+</state>

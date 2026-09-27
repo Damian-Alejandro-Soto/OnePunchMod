@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hero": "bushwack",
+  "avatar": "alt5",
+  "files": [
+    "heroes\\bushwack\\base\\hero.entity",
+    "heroes\\bushwack\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\bushwack\\base\\ability_01\\projectile.entity",
+    "heroes\\bushwack\\base\\ability_01\\projectile.entity.onepunch_ability_managed",
+    "heroes\\bushwack\\base\\ability_01\\state.entity",
+    "heroes\\bushwack\\base\\ability_01\\state.entity.onepunch_ability_managed",
+    "heroes\\bushwack\\base\\ability_02\\state.entity",
+    "heroes\\bushwack\\base\\ability_02\\state.entity.onepunch_ability_managed",
+    "heroes\\bushwack\\base\\ability_04\\state_damage.entity",
+    "heroes\\bushwack\\base\\ability_04\\state_damage.entity.onepunch_ability_managed",
+    "heroes\\bushwack\\base\\projectile\\projectile.entity",
+    "heroes\\bushwack\\base\\projectile\\projectile.entity.onepunch_ability_managed",
+    "heroes\\bushwack\\base\\projectile\\projectile_poison.entity",
+    "heroes\\bushwack\\base\\projectile\\projectile_poison.entity.onepunch_ability_managed"
+  ]
+}

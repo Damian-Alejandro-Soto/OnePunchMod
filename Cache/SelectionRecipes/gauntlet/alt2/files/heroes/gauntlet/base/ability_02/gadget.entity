@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Gauntlet_Ability2"
+
+	icon=""
+	portrait=""
+	model="/shared/models/invis.mdf"
+	passiveeffect="/heroes/gauntlet/alt2/ability_02/effects/arrows.effect"
+	
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="0"
+	sightrangenight="0"
+	
+	unitwalking="true"
+	buildingwalking="true"
+	treewalking="true"
+	cliffwalking="true"
+	antiwalking="true"
+	
+	canattack="false"
+	deathtime="0"
+	corpsetime="0"
+	invulnerable="true"
+	flying="false"
+	drawonmap="false"
+	
+	lifetime="5000"
+>
+
+</gadget>

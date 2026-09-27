@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Pestilence_Ult_Boost"
+
+	icon=""
+	passiveeffect="/heroes/pestilence/alt5/effects/boost.effect"
+	
+	ishidden="true"
+	
+	effecttype=""
+>
+
+	<modifier key="iamsheeped" modpriority="1000" passiveeffect="" />
+</state>

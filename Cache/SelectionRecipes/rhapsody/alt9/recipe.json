@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "hero": "rhapsody",
+  "avatar": "alt9",
+  "files": [
+    "heroes\\rhapsody\\base\\hero.entity",
+    "heroes\\rhapsody\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\rhapsody\\base\\state_rhapsody_ult_boost.entity",
+    "heroes\\rhapsody\\base\\state_rhapsody_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\rhapsody\\base\\ability_01\\state_self.entity",
+    "heroes\\rhapsody\\base\\ability_01\\state_self.entity.onepunch_ability_managed",
+    "heroes\\rhapsody\\base\\ability_01\\state_target.entity",
+    "heroes\\rhapsody\\base\\ability_01\\state_target.entity.onepunch_ability_managed",
+    "heroes\\rhapsody\\base\\ability_02\\gadget.entity",
+    "heroes\\rhapsody\\base\\ability_02\\gadget.entity.onepunch_ability_managed",
+    "heroes\\rhapsody\\base\\ability_02\\gadget_ally.entity",
+    "heroes\\rhapsody\\base\\ability_02\\gadget_ally.entity.onepunch_ability_managed",
+    "heroes\\rhapsody\\base\\ability_02\\gadget_enemy.entity",
+    "heroes\\rhapsody\\base\\ability_02\\gadget_enemy.entity.onepunch_ability_managed",
+    "heroes\\rhapsody\\base\\ability_02\\state_ally.entity",
+    "heroes\\rhapsody\\base\\ability_02\\state_ally.entity.onepunch_ability_managed",
+    "heroes\\rhapsody\\base\\ability_02\\state_enemy.entity",
+    "heroes\\rhapsody\\base\\ability_02\\state_enemy.entity.onepunch_ability_managed",
+    "heroes\\rhapsody\\base\\ability_03\\state.entity",
+    "heroes\\rhapsody\\base\\ability_03\\state.entity.onepunch_ability_managed",
+    "heroes\\rhapsody\\base\\ability_04\\state_buff.entity",
+    "heroes\\rhapsody\\base\\ability_04\\state_buff.entity.onepunch_ability_managed",
+    "heroes\\rhapsody\\base\\ability_04\\state_self.entity",
+    "heroes\\rhapsody\\base\\ability_04\\state_self.entity.onepunch_ability_managed",
+    "heroes\\rhapsody\\base\\projectile\\projectile.entity",
+    "heroes\\rhapsody\\base\\projectile\\projectile.entity.onepunch_ability_managed"
+  ]
+}

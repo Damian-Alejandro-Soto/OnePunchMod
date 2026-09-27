@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hero": "plague_rider",
+  "avatar": "alt7",
+  "files": [
+    "heroes\\plague_rider\\base\\hero.entity",
+    "heroes\\plague_rider\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\plague_rider\\base\\ability_01\\ability.entity",
+    "heroes\\plague_rider\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\plague_rider\\base\\ability_02\\gadget.entity",
+    "heroes\\plague_rider\\base\\ability_02\\gadget.entity.onepunch_ability_managed",
+    "heroes\\plague_rider\\base\\ability_02\\state_effect.entity",
+    "heroes\\plague_rider\\base\\ability_02\\state_effect.entity.onepunch_ability_managed",
+    "heroes\\plague_rider\\base\\ability_03\\state_buff.entity",
+    "heroes\\plague_rider\\base\\ability_03\\state_buff.entity.onepunch_ability_managed",
+    "heroes\\plague_rider\\base\\ability_04\\projectile.entity",
+    "heroes\\plague_rider\\base\\ability_04\\projectile.entity.onepunch_ability_managed",
+    "heroes\\plague_rider\\base\\projectile\\projectile.entity",
+    "heroes\\plague_rider\\base\\projectile\\projectile.entity.onepunch_ability_managed"
+  ]
+}

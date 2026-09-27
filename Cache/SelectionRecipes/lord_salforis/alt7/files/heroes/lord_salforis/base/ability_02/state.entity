@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_LordSalforis_Ability2"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/dreadknight/alt7/ability_02/effects/state.effect"
+	
+	impactinterval="1000"
+	damage="40,60,80,100"
+	movespeed="50"
+	lifesteal="0.55,0.70,0.85,1.0"
+	
+	effecttype=""
+
+	dynamicprecache="effects/attack_action.effect,effects/impact.effect,effects/lifesteal.effect"
+>
+	<onattackstart>
+		<playanim name="ability_2_attack" speed="source_attackspeed" target="source_entity" />
+		<setstr0 a="altavatar_path" b="effects/attack_action.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="source_entity" source="source_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/attack_action.effect" target="source_entity" source="source_entity" occlude="true" />
+		</else>
+	</onattackstart>
+	
+	<onattackpreimpact>
+		<cantarget targetscheme="enemy_units">
+			<seteffecttype name="combat_damagetype" effecttype="SuperiorMagic" />
+			<seteffecttype name="combat_effecttype" effecttype="Attack SuperiorMagic" />
+		</cantarget>
+	</onattackpreimpact>
+	
+	<onattackimpact>
+		<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impact.effect" source="target_entity" occlude="true" />
+		</else>
+		<setstr0 a="altavatar_path" b="effects/lifesteal.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_entity" target="target_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/lifesteal.effect" source="source_entity" target="target_entity" occlude="true" />
+		</else>
+		<expire />
+	</onattackimpact>
+	
+	<onframe>
+		<hasmodifier entity="this_owner_entity" name="iamsheeped">
+			<activatemodifierkey entity="this_entity" name="iamsheeped" />
+		</hasmodifier>
+		<else>
+			<deactivatemodifierkey entity="this_entity" name="" />
+		</else>
+	</onframe>
+	
+	<modifier key="iamsheeped" modpriority="9999"
+		passiveeffect=""
+	/>
+</state>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Lodestone_Ability1"
+	
+	lifetime="300"
+	useexactlifetime="true"
+	gravity="8000"
+	
+	modelscale="3.0"
+	model="/heroes/lodestone/alt3/ability_01/effects/weapon_projectile/projectile.mdf"
+	traileffect="/heroes/lodestone/alt3/ability_01/effects/trail.effect"
+	effectscale="1.5"
+	impacteffect=""
+	
+	
+	
+>
+	<onspawn>
+		<!-- VFX -->
+		<setstr0 a="altavatar_path" b="effects/link.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="this_entity" target="this_owner_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/link.effect" source="this_entity" target="this_owner_entity" />
+		</else>
+	</onspawn>
+	
+	<onimpact>
+		<areaofeffect
+			radius="200"
+			targetselection="all"
+			targetscheme="enemy_units"
+			effecttype="Magic"
+		>
+			<applystate name="State_Slow_Lodestone_Ability1" source="source_owner_entity" duration="2000" />
+			<damage effecttype="Magic" amount="50,90,130,170" />
+			<applystate name="State_Check_Lodestone_Ability1" target="target_entity" duration="6000" />
+		</areaofeffect>
+		<spawnunit name="Gadget_Lodestone_Ability1" target="this_position" proxy="this_proxy_entity" pushentity="true" />
+		
+		<!-- Reapply noweapon state for proxy assignment -->
+		<applystate name="State_NoWeapon_Lodestone_Ability1" target="source_entity" duration="11000" proxy="stack_entity" />
+		<applystate name="State_Teleport_Lodestone_Ability1" duration="6000" proxy="stack_entity" target="source_entity" />
+		<setproxy entity="this_proxy_entity" target="stack_entity" />
+
+		<!-- VFX -->
+		<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_position" target="" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impact.effect" source="target_position" target="" occlude="true" />
+		</else>
+	</onimpact>
+</projectile>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_BloodHunter"
+
+	team="Hellbourne"
+	icon="/heroes/hunter/alt10/icon.dds"
+	animatedportrait=""
+	portrait="/heroes/hunter/alt10/icon.dds"
+	model="/heroes/hunter/alt10/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/hunter/alt10/effects/body.effect"
+	spawneffect="" 
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/hunter/alt10/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/hunter/alt10/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/hunter/alt10/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/hunter/alt10/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/hunter/alt10/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/hunter/alt10/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/hunter/alt10/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/hunter/alt10/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="2"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="55"
+	targetoffset="0 0 92"
+
+	category="physical magic"
+	difficulty="2.5"
+
+	midrating="2"
+	junglerating="3"
+	carryrating="5"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="1"
+	soloofflanerating="0"
+	rangedrating="0"
+	meleerating="5"
+
+	movespeed="295"
+	turnrate="630"
+	turnsmoothing="0.1"
+
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="0.0"
+	magicarmor="5.0"
+
+	inventory0="Ability_BloodHunter1"
+	inventory1="Ability_BloodHunter2"
+	inventory2="Ability_BloodHunter3"
+	inventory3="Ability_BloodHunter4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="500"
+	attackcooldown="1700"
+	attackdamagemin="29"
+	attackdamagemax="35"
+	attacknumanims="2"
+	attackoffset="0 30 100"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="/heroes/hunter/alt10/effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="agility"
+	strength="22"
+	strengthperlevel="2.0"
+	agility="24"
+	agilityperlevel="3.0"
+	intelligence="18"
+	intelligenceperlevel="1.7"
+	
+
+	previewpos="0 0 -70"
+	previewangles="0 0 0"
+	previewscale="1.7"
+	
+	storemodel="/heroes/hunter/alt10/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.85"
+	
+	corpsetime="3000"
+	corpsefadetime="5500"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+ attackanim="attack_%"
+        icon2="/heroes/hunter/alt10/icon.dds"
+        portraitcampos="75 -20 20"
+        infoheight="185"
+        previewmodel="/heroes/hunter/alt10/preview.mdf">
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_ToxinClaws" />
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_SoulscreamRing" />
+	<recommendeditem name="Item_BloodChalice" />
+	<recommendeditem name="Item_AlchemistsBones" />
+	<recommendeditem name="Item_Firebrand" />
+	<recommendeditem name="Item_GhostMarchers" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_Stormspirit" />
+	<recommendeditem name="Item_KuldrasSheepstick" />
+	<recommendeditem name="Item_Energizer" />
+	<recommendeditem name="Item_IronShield" />
+	<recommendeditem name="Item_AssassinsShroud" />
+	<recommendeditem name="Item_ShrunkenHead" />
+	<recommendeditem name="Item_Genjuro" />
+	<recommendeditem name="Item_Wingbow" />
+	<recommendeditem name="Item_FrostfieldPlate" />
+	<recommendeditem name="Item_MadfredsBrassKnuckles" />
+	<recommendeditem name="Item_TwinBlades" />
+	<recommendeditem name="Item_Icebrand" />
+	<recommendeditem name="Item_Frostburn" />
+	<recommendeditem name="Item_FrostwolfsSkull" />
+	<recommendeditem name="Item_FrozenLight" />
+	<recommendeditem name="Item_Dawnbringer" />
+	
+	<gooditemagainst name="Item_KuldrasSheepstick" />
+	<gooditemagainst name="Item_VoidTalisman" />
+	<gooditemagainst name="Item_NullStone" />
+	<gooditemagainst name="Item_Wingbow" />
+	<gooditemagainst name="Item_FrostfieldPlate" />
+	
+	
+	
+	<modifier key="iamsheeped" modpriority="101"
+		passiveeffect=""
+	/>
+	
+	<modifier key="bloodthirst" modpriority="100"
+		idleanim="ability_3_idle"
+		attackanim="ability_3_attack"
+		attacknumanims="1"
+		walkanim="ability_3_walk"
+		passiveeffect="ability_03/effects/thirst.effect"
+	/>
+	
+	<modifier key="ult_boost" modpriority="100">
+		<aura state="State_BloodHunter_Ult_Boost" radius="0" targetscheme="self" continuous="false" />
+	</modifier>
+</hero>

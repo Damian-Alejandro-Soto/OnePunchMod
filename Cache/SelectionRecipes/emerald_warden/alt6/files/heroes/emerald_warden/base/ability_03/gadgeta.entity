@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_EmeraldWarden_Ability3"
+	
+	icon="../../icon.dds"
+	portrait="../../icon.dds"
+	modelscale="1"
+	model="/heroes/emerald_warden/alt6/ability_03/effects/center_model/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/emerald_warden/alt6/ability_03/effects/area.effect"
+	spawneffect="effects/spawn.effect"
+	
+	
+	
+	unitwalking="true"
+	treewalking="true"
+	nothreat="true"
+	infoheight="100"
+	
+	isselectable="true"
+	iscontrollable="true"
+	invulnerable="false"
+	
+	preglobalscale="1.0"
+	effectscale="1.0"
+	boundsheight="38"
+	boundsradius="10"
+	selectionradius="26"
+	targetoffset="0 0 0"
+	
+	maxhealth="1"
+	deniable="true"
+	
+	inventory0=""
+	inventory1=""
+	inventory2="Ability_Gadget_EmeraldWarden3"
+
+	canrotate="false"
+	ismobile="false"
+	flying="false"
+	clearvision="false"
+	drawonmap="false"
+	
+	sightrangeday="400"
+	sightrangenight="400"
+
+	attacktype="none"
+	
+	deathtime="0"
+	corpsetime="0"
+	corpsefadetime="0"
+	immunity="GadgetImmunity"
+	
+	lifetime="300000"
+	showlifetime="true"
+	
+	blocking="false"
+	
+	goldbountymin="20"
+	goldbountymax="20"
+	
+	isdragselectablemulti="false"
+	noglobalselect="false"
+	noblockneutralspawn="true"
+	
+	unittype="EmeraldWarden_Trap"
+>
+	<onattackedstart>
+		<!-- Ensure the attacker (inflictor entity) is one of our own units (this_owner_entity aka Hero_EmeraldWarden) -->
+        <cantarget source="this_owner_entity" target="inflictor_entity" targetscheme="my_units" ignoreinvulnerable="true" />
+        <else>
+			<!-- Or an enemy, duh! -->
+			<cantarget source="this_owner_entity" target="inflictor_entity" targetscheme="enemy_units" ignoreinvulnerable="true" />
+			<else>
+				<!-- Otherwise, don't let them attack it -->
+				<order command="stop" source="inflictor_entity" />
+			</else>
+        </else>
+    </onattackedstart>
+	
+	<onkilled>
+		<cantarget targetscheme="enemy_units" target="target_entity" ignoreinvulnerable="true" >
+		</cantarget>
+		<else>
+			<spawnunit name="Gadget_EmeraldWarden_Ability3b" count="1" target="this_position" pushentity="true" />
+			<areaofeffect
+				radius="175"
+				targetselection="all"
+				targetscheme="enemy_nonboss_units"
+				effecttype="Magic"
+				center="this_position"
+			>
+				<applystate name="State_EmeraldWarden_Ability3_Immobilized" duration="1500,2000,2500,3000" target="target_entity" proxy="this_proxy_entity" />
+			</areaofeffect>
+		</else>
+	</onkilled>
+	
+	<onexpired>
+		<pushtool name="Ability_EmeraldWarden3" source="this_owner_entity" />
+		<removecharge entity="stack_entity" />
+	</onexpired>
+	
+	<ondeath>
+		<pushtool name="Ability_EmeraldWarden3" source="this_owner_entity" />
+		<removecharge entity="stack_entity" />
+	</ondeath>
+</gadget>

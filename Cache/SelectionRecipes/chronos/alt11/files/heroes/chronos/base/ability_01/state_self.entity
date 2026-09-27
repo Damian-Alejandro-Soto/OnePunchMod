@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chronos_Ability1_Self"
+
+	icon="/heroes/chronos/alt11/ability_01/icon.dds"
+	
+	invulnerable="true"
+	disarmed="true"
+	stunned="true"
+	stunnedreduction="ignore"
+	
+	passiveeffect=""
+	
+	effecttype=""
+>
+</state>

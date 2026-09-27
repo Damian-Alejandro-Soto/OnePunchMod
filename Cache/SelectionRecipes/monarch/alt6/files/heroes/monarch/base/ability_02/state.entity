@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Monarch_Ability2"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/monarch/alt6/ability_02/effects/state.effect"
+	immobilized2="true"
+	disarmed="true"
+	frozen="true"
+	effecttype="StatusBuff"
+	allowtransfer="true"
+	revealed="true"
+	
+	morphmodel="/heroes/monarch/base/ability_02/effects/cocoon/model.mdf"
+	morphpriority="1"
+	morphmodelscale="1"
+	morphpreglobalscale="1"
+
+	modifierkey="iamsheeped"
+	modifierkey2="monarch_ability2_Affected"
+	dynamicprecache="effects/death.effect,effects/fade_out.effect"
+>
+	<onframe>
+		<heal a="15,30,45,60" b="frametime" op="mult" ishealingovertime="true" />
+	</onframe>
+	
+	<oninflict>
+		<heal a="90" />
+	</oninflict>
+	
+	<onrefresh>
+		<heal a="90" />
+	</onrefresh>
+	
+	<ondamaged priority="5">		
+		<scaledamage scale="0.65,0.55,0.45,0.35" />
+	</ondamaged>
+	
+	<onexpired>
+		<playanim name="idle" />
+		<setactivemodifierkey entity="this_proxy_entity" name="" />
+
+		<!-- VFX -->
+		<setstr0 a="altavatar_path" b="effects/death.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="target_position" source="target_position" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/death.effect" target="target_position" source="target_position" occlude="true" />
+		</else>
+		<setstr0 a="altavatar_path" b="effects/fade_out.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="target_entity" source="target_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/fade_out.effect" target="target_entity" source="target_entity" />
+		</else>
+	</onexpired>
+</state>

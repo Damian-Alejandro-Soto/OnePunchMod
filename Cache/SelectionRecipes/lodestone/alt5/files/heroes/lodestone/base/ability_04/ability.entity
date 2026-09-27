@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Lodestone4"
+	statuseffecttooltip="State_Lodestone_Ability4_Lodestone"
+	
+	icon="/heroes/lodestone/alt5/ability_04/icon.dds"
+	
+	anim="ability_4"
+	casttime="1000"
+	castactiontime="400"
+	casteffect="/heroes/lodestone/alt5/ability_04/effects/cast.effect"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+
+	actiontype="target_self"
+	targetscheme="self"
+	casteffecttype=""
+
+	frontqueue="true"
+	inheritmovement="true"
+	noninterrupting="true"
+	nonaggressive="true"
+	
+	manacost="125,175,225"
+	cooldowntime="90000,75000,60000"
+	
+	targetradius="400"
+	
+>
+	<onimpact>
+		<applystate name="State_Lodestone_Ability4_Buildup" duration="5000" />		
+		<applystate name="State_Lodestone_Ability4_Counter" duration="5000" />
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="90">
+		<onimpact>
+			<applystate name="State_Lodestone_Ability4_Buildup" duration="5000" />
+			<applystate name="State_Lodestone_Ability4_Counter" duration="5000" />
+			<starttimer duration="2000" />
+		</onimpact>
+	</modifier>
+	
+	<modifier key="lodestone_sotm" modpriority="2000"
+		ignorecooldown="true"
+		manacost="0"
+		noresponse="true"
+	>
+		<onimpact>
+			<applystate name="State_Lodestone_Ability4_Buildup" target="source_entity" pushentity="true" />
+			<setcharges a="100" entity="stack_entity" />
+		</onimpact>
+	</modifier>
+</ability>

@@ -1,0 +1,1071 @@
+2026-09-22 16:11:13 | STARTUP_BEGIN force=False
+2026-09-22 16:11:13 | inventory elapsed=0.460s cache_hit=True
+2026-09-22 16:11:13 | avatar_selections_loaded present=True count=108
+2026-09-22 16:11:33 | legacy_avatar_names elapsed=0.007s 
+2026-09-22 16:11:33 | cleanup_old_overrides elapsed=0.000s 
+2026-09-22 16:11:40 | startup_reapply_selected elapsed=6.730s count=108
+2026-09-22 16:11:40 | render_grid elapsed=0.012s 
+2026-09-22 16:11:40 | STARTUP_END elapsed=27.029s heroes=108 choices=1290
+2026-09-22 16:12:41 | apply_avatar elapsed=1.448s slither alt3 fields=0
+2026-09-22 16:12:47 | apply_avatar elapsed=0.183s chipper warforged fields=4
+2026-09-22 16:12:56 | apply_avatar elapsed=0.009s flux alt6 fields=0
+2026-09-22 16:13:16 | STARTUP_BEGIN force=False
+2026-09-22 16:13:17 | inventory elapsed=0.476s cache_hit=True
+2026-09-22 16:13:17 | avatar_selections_loaded present=True count=108
+2026-09-22 16:13:38 | legacy_avatar_names elapsed=0.006s 
+2026-09-22 16:13:38 | cleanup_old_overrides elapsed=0.000s 
+2026-09-22 16:13:44 | startup_reapply_selected elapsed=6.063s count=108
+2026-09-22 16:13:44 | render_grid elapsed=0.010s 
+2026-09-22 16:13:44 | STARTUP_END elapsed=27.378s heroes=108 choices=1290
+2026-09-22 16:15:16 | apply_avatar elapsed=0.008s andromeda soccer_skin fields=0
+2026-09-22 16:23:25 | STARTUP_BEGIN force=False
+2026-09-22 16:23:25 | inventory elapsed=0.474s cache_hit=True
+2026-09-22 16:23:25 | avatar_selections_loaded present=True count=108
+2026-09-22 16:23:48 | legacy_avatar_names elapsed=0.008s 
+2026-09-22 16:23:48 | cleanup_old_overrides elapsed=0.000s 
+2026-09-22 16:23:48 | startup_reapply_selected elapsed=0.927s count=108
+2026-09-22 16:23:49 | render_grid elapsed=0.201s 
+2026-09-22 16:23:49 | STARTUP_END elapsed=24.032s heroes=108 choices=1290
+2026-09-22 16:24:09 | apply_avatar elapsed=0.745s ellonia alt7 fields=0
+2026-09-22 16:24:12 | STARTUP_BEGIN force=False
+2026-09-22 16:24:12 | inventory elapsed=0.433s cache_hit=True
+2026-09-22 16:24:12 | avatar_selections_loaded present=True count=108
+2026-09-22 16:24:33 | legacy_avatar_names elapsed=0.007s 
+2026-09-22 16:24:33 | cleanup_old_overrides elapsed=0.000s 
+2026-09-22 16:24:33 | startup_reapply_selected elapsed=0.020s count=1
+2026-09-22 16:24:33 | render_grid elapsed=0.184s 
+2026-09-22 16:24:33 | STARTUP_END elapsed=20.712s heroes=108 choices=1290
+2026-09-22 16:52:04 | STARTUP_BEGIN force=False
+2026-09-22 16:52:04 | inventory elapsed=0.476s cache_hit=True
+2026-09-22 16:52:04 | avatar_selections_loaded present=True count=108
+2026-09-22 16:52:04 | legacy_avatar_names elapsed=0.007s 
+2026-09-22 16:52:04 | cleanup_old_overrides elapsed=0.000s 
+2026-09-22 16:52:04 | startup_reapply_selected elapsed=0.019s count=1
+2026-09-22 16:52:04 | render_grid elapsed=0.174s 
+2026-09-22 16:52:04 | STARTUP_END elapsed=0.679s heroes=108 choices=1290
+2026-09-22 16:52:49 | STARTUP_BEGIN force=False
+2026-09-22 16:52:49 | inventory elapsed=0.435s cache_hit=True
+2026-09-22 16:52:49 | avatar_selections_loaded present=True count=108
+2026-09-22 16:52:49 | legacy_avatar_names elapsed=0.006s 
+2026-09-22 16:52:49 | cleanup_old_overrides elapsed=0.000s 
+2026-09-22 16:52:49 | startup_reapply_selected elapsed=0.019s count=1
+2026-09-22 16:52:49 | render_grid elapsed=0.174s 
+2026-09-22 16:52:49 | STARTUP_END elapsed=0.637s heroes=108 choices=1290
+2026-09-22 16:53:02 | apply_avatar elapsed=0.533s chronos alt6 fields=0
+2026-09-22 16:53:09 | apply_avatar elapsed=0.009s soul_reaper alt4 fields=0
+2026-09-22 16:53:17 | apply_avatar elapsed=1.637s drunken_master alt7 fields=0
+2026-09-22 16:53:20 | STARTUP_BEGIN force=False
+2026-09-22 16:53:20 | inventory elapsed=0.431s cache_hit=True
+2026-09-22 16:53:20 | avatar_selections_loaded present=True count=108
+2026-09-22 16:53:20 | legacy_avatar_names elapsed=0.006s 
+2026-09-22 16:53:20 | cleanup_old_overrides elapsed=0.000s 
+2026-09-22 16:53:20 | startup_reapply_selected elapsed=0.046s count=4
+2026-09-22 16:53:20 | render_grid elapsed=0.174s 
+2026-09-22 16:53:20 | STARTUP_END elapsed=0.660s heroes=108 choices=1290
+2026-09-22 17:07:57 | STARTUP_BEGIN force=False
+2026-09-22 17:07:58 | inventory elapsed=0.800s cache_hit=False
+2026-09-22 17:07:58 | avatar_selections_loaded present=True count=108
+2026-09-22 17:07:58 | prepared_avatar_names count=1449
+2026-09-22 17:07:58 | cleanup_old_overrides elapsed=0.000s 
+2026-09-22 17:07:58 | startup_reapply_selected elapsed=0.034s count=4
+2026-09-22 17:07:58 | render_grid elapsed=0.187s 
+2026-09-22 17:07:58 | STARTUP_END elapsed=1.046s heroes=108 choices=1240
+2026-09-22 17:08:12 | STARTUP_BEGIN force=False
+2026-09-22 17:08:12 | inventory elapsed=0.390s cache_hit=True
+2026-09-22 17:08:12 | avatar_selections_loaded present=True count=108
+2026-09-22 17:08:12 | prepared_avatar_names count=1449
+2026-09-22 17:08:12 | cleanup_old_overrides elapsed=0.000s 
+2026-09-22 17:08:12 | startup_reapply_selected elapsed=0.001s count=0
+2026-09-22 17:08:12 | render_grid elapsed=0.184s 
+2026-09-22 17:08:12 | STARTUP_END elapsed=0.593s heroes=108 choices=1240
+2026-09-22 17:10:36 | STARTUP_BEGIN force=False
+2026-09-22 17:10:37 | inventory elapsed=0.740s cache_hit=False
+2026-09-22 17:10:37 | avatar_selections_loaded present=True count=108
+2026-09-22 17:10:37 | prepared_avatar_names count=1469
+2026-09-22 17:10:37 | cleanup_old_overrides elapsed=0.000s 
+2026-09-22 17:10:37 | startup_reapply_selected elapsed=0.001s count=0
+2026-09-22 17:10:37 | render_grid elapsed=0.184s 
+2026-09-22 17:10:37 | STARTUP_END elapsed=0.947s heroes=108 choices=1290
+2026-09-22 17:12:25 | STARTUP_BEGIN force=False
+2026-09-22 17:12:26 | inventory elapsed=0.725s cache_hit=False
+2026-09-22 17:12:26 | avatar_selections_loaded present=True count=108
+2026-09-22 17:12:26 | prepared_avatar_names count=1469
+2026-09-22 17:12:26 | cleanup_old_overrides elapsed=0.000s 
+2026-09-22 17:12:26 | startup_reapply_selected elapsed=0.001s count=0
+2026-09-22 17:12:26 | render_grid elapsed=0.184s 
+2026-09-22 17:12:26 | STARTUP_END elapsed=0.930s heroes=108 choices=1290
+2026-09-22 17:12:35 | STARTUP_BEGIN force=False
+2026-09-22 17:12:36 | inventory elapsed=0.385s cache_hit=True
+2026-09-22 17:12:36 | avatar_selections_loaded present=True count=108
+2026-09-22 17:12:36 | prepared_avatar_names count=1469
+2026-09-22 17:12:36 | cleanup_old_overrides elapsed=0.000s 
+2026-09-22 17:12:36 | startup_reapply_selected elapsed=0.002s count=0
+2026-09-22 17:12:36 | render_grid elapsed=0.185s 
+2026-09-22 17:12:36 | STARTUP_END elapsed=0.593s heroes=108 choices=1290
+2026-09-22 17:16:09 | STARTUP_BEGIN force=False
+2026-09-22 17:16:10 | inventory elapsed=0.816s cache_hit=False
+2026-09-22 17:16:10 | avatar_selections_loaded present=True count=108
+2026-09-22 17:16:10 | prepared_avatar_names count=1129
+2026-09-22 17:16:10 | cleanup_old_overrides elapsed=0.000s 
+2026-09-22 17:16:10 | startup_reapply_selected elapsed=0.001s count=0
+2026-09-22 17:16:10 | render_grid elapsed=0.184s 
+2026-09-22 17:16:10 | STARTUP_END elapsed=1.022s heroes=108 choices=1290
+2026-09-22 17:16:37 | STARTUP_BEGIN force=False
+2026-09-22 17:16:37 | inventory elapsed=0.439s cache_hit=True
+2026-09-22 17:16:37 | avatar_selections_loaded present=True count=108
+2026-09-22 17:16:37 | prepared_avatar_names count=1129
+2026-09-22 17:16:37 | cleanup_old_overrides elapsed=0.000s 
+2026-09-22 17:16:37 | startup_reapply_selected elapsed=0.001s count=0
+2026-09-22 17:16:37 | render_grid elapsed=0.184s 
+2026-09-22 17:16:37 | STARTUP_END elapsed=0.642s heroes=108 choices=1290
+2026-09-22 18:04:42 | STARTUP_BEGIN force=False
+2026-09-22 18:04:42 | inventory elapsed=0.445s cache_hit=True
+2026-09-22 18:04:42 | avatar_selections_loaded present=True count=108
+2026-09-22 18:04:42 | prepared_avatar_names count=1129
+2026-09-22 18:04:42 | cleanup_old_overrides elapsed=0.000s 
+2026-09-22 18:04:42 | startup_reapply_selected elapsed=0.001s count=0
+2026-09-22 18:04:43 | render_grid elapsed=0.185s 
+2026-09-22 18:04:43 | STARTUP_END elapsed=0.653s heroes=108 choices=1290
+2026-09-22 18:05:25 | STARTUP_BEGIN force=False
+2026-09-22 18:05:26 | inventory elapsed=0.438s cache_hit=True
+2026-09-22 18:05:26 | avatar_selections_loaded present=True count=108
+2026-09-22 18:05:26 | prepared_avatar_names count=1129
+2026-09-22 18:05:26 | cleanup_old_overrides elapsed=0.000s 
+2026-09-22 18:05:26 | startup_reapply_error andromeda soccer_skin: name '_resolve_legacy_logical_path' is not defined
+2026-09-22 18:05:28 | startup_reapply_error chronos trophy_skin03: name '_resolve_legacy_logical_path' is not defined
+2026-09-22 18:05:33 | startup_reapply_error riptide alt8: name '_resolve_legacy_logical_path' is not defined
+2026-09-22 18:05:33 | startup_reapply_error solstice alt7: name '_resolve_legacy_logical_path' is not defined
+2026-09-22 18:05:34 | startup_reapply_error zephyr pog_skin: name '_resolve_legacy_logical_path' is not defined
+2026-09-22 18:05:34 | startup_reapply_selected elapsed=8.072s count=103
+2026-09-22 18:05:34 | render_grid elapsed=0.194s 
+2026-09-22 18:05:34 | STARTUP_END elapsed=8.730s heroes=108 choices=1290
+2026-09-22 18:07:09 | apply_avatar elapsed=2.469s master_of_arms alt6 fields=0
+2026-09-22 18:21:40 | STARTUP_BEGIN force=False
+2026-09-22 18:21:40 | inventory elapsed=0.514s cache_hit=True
+2026-09-22 18:21:40 | avatar_selections_loaded present=True count=108
+2026-09-22 18:21:40 | prepared_avatar_names count=1129
+2026-09-22 18:21:40 | cleanup_old_overrides elapsed=0.000s 
+2026-09-22 18:21:48 | startup_reapply_selected elapsed=7.927s count=108
+2026-09-22 18:21:48 | render_grid elapsed=0.028s 
+2026-09-22 18:21:48 | STARTUP_END elapsed=8.491s heroes=108 choices=1290
+2026-09-22 18:22:06 | STARTUP_BEGIN force=False
+2026-09-22 18:22:06 | inventory elapsed=0.448s cache_hit=True
+2026-09-22 18:22:06 | avatar_selections_loaded present=True count=108
+2026-09-22 18:22:06 | prepared_avatar_names count=1129
+2026-09-22 18:22:06 | cleanup_old_overrides elapsed=0.000s 
+2026-09-23 01:45:42 | STARTUP_BEGIN force=False
+2026-09-23 01:45:48 | inventory elapsed=5.295s cache_hit=True
+2026-09-23 01:45:48 | avatar_selections_loaded present=True count=108
+2026-09-23 01:45:48 | prepared_avatar_names count=1129
+2026-09-23 01:45:48 | cleanup_old_overrides elapsed=0.000s 
+2026-09-23 01:45:58 | startup_reapply_selected elapsed=9.686s count=108
+2026-09-23 01:45:58 | render_grid elapsed=0.094s 
+2026-09-23 01:45:58 | STARTUP_END elapsed=15.583s heroes=108 choices=1290
+2026-09-23 04:27:08 | STARTUP_BEGIN force=False
+2026-09-23 04:27:11 | inventory elapsed=2.971s cache_hit=True
+2026-09-23 04:27:11 | avatar_selections_loaded present=True count=108
+2026-09-23 04:27:11 | prepared_avatar_names count=1129
+2026-09-23 04:27:11 | cleanup_old_overrides elapsed=0.000s 
+2026-09-23 04:27:23 | sync_mod_overlay elapsed=0.203s 
+2026-09-23 04:27:23 | startup_reapply_selected elapsed=12.284s count=108
+2026-09-23 04:27:23 | render_grid elapsed=0.090s 
+2026-09-23 04:27:23 | STARTUP_END elapsed=15.652s heroes=108 choices=1290
+2026-09-23 04:33:58 | STARTUP_BEGIN force=False
+2026-09-23 04:33:58 | inventory elapsed=0.483s cache_hit=True
+2026-09-23 04:33:58 | avatar_selections_loaded present=True count=108
+2026-09-23 04:33:58 | prepared_avatar_names count=1129
+2026-09-23 04:33:58 | cleanup_old_overrides elapsed=0.000s 
+2026-09-23 04:34:07 | sync_mod_overlay elapsed=0.205s 
+2026-09-23 04:34:07 | startup_reapply_selected elapsed=9.095s count=108
+2026-09-23 04:34:07 | render_grid elapsed=0.027s 
+2026-09-23 04:34:07 | STARTUP_END elapsed=9.623s heroes=108 choices=1290
+2026-09-23 04:39:43 | STARTUP_BEGIN force=False
+2026-09-23 04:39:48 | inventory elapsed=4.828s cache_hit=True
+2026-09-23 04:39:48 | avatar_selections_loaded present=True count=108
+2026-09-23 04:39:48 | prepared_avatar_names count=1129
+2026-09-23 04:39:48 | cleanup_old_overrides elapsed=0.000s 
+2026-09-23 04:40:00 | sync_mod_overlay elapsed=0.286s 
+2026-09-23 04:40:00 | startup_reapply_selected elapsed=11.984s count=108
+2026-09-23 04:40:00 | render_grid elapsed=0.096s 
+2026-09-23 04:40:00 | STARTUP_END elapsed=17.292s heroes=108 choices=1290
+2026-09-23 04:40:38 | apply_avatar elapsed=0.379s pollywog_priest classic fields=4
+2026-09-23 04:40:42 | apply_avatar elapsed=1.388s pollywog_priest alt4 fields=0
+2026-09-23 05:10:11 | apply_avatar elapsed=0.324s andromeda soccer_skin fields=0
+2026-09-23 05:10:13 | apply_avatar elapsed=0.194s arachna alt5 fields=0
+2026-09-23 05:10:22 | apply_avatar elapsed=0.202s blood_hunter alt9 fields=0
+2026-09-23 05:10:28 | apply_avatar elapsed=0.192s bushwack alt2 fields=0
+2026-09-23 05:10:33 | apply_avatar elapsed=1.168s chronos trophy_skin03 fields=0
+2026-09-23 05:10:35 | apply_avatar elapsed=0.194s corrupted_disciple alt2 fields=0
+2026-09-23 05:15:20 | apply_avatar elapsed=1.029s andromeda alt fields=0
+2026-09-23 05:16:28 | apply_avatar elapsed=1.446s emerald_warden alt9 fields=0
+2026-09-23 16:09:25 | STARTUP_BEGIN force=False
+2026-09-23 16:09:34 | inventory elapsed=8.651s cache_hit=True
+2026-09-23 16:09:34 | avatar_selections_loaded present=True count=108
+2026-09-23 16:09:35 | prepared_avatar_names count=1129
+2026-09-23 16:09:35 | cleanup_old_overrides elapsed=0.000s 
+2026-09-23 16:09:55 | sync_mod_overlay elapsed=0.474s 
+2026-09-23 16:09:55 | startup_reapply_selected elapsed=19.862s count=108
+2026-09-23 16:09:55 | render_grid elapsed=0.283s 
+2026-09-23 16:09:55 | STARTUP_END elapsed=29.798s heroes=108 choices=1290
+2026-09-23 19:01:04 | apply_avatar elapsed=1.309s arachna alt4 fields=0
+2026-09-23 19:01:27 | apply_avatar elapsed=1.368s chipper alt2 fields=0
+2026-09-23 19:01:43 | apply_avatar elapsed=1.731s glacius alt9 fields=0
+2026-09-23 19:02:59 | apply_avatar elapsed=1.486s slither alt4 fields=0
+2026-09-23 19:03:04 | apply_avatar elapsed=0.191s soulstealer alt7 fields=0
+2026-09-23 19:03:17 | apply_avatar elapsed=2.278s swiftblade alt3 fields=0
+2026-09-23 19:03:30 | apply_avatar elapsed=1.403s prisoner alt4 fields=0
+2026-09-23 19:22:06 | apply_avatar elapsed=2.599s defiler alt3 fields=0
+2026-09-23 19:31:27 | apply_avatar elapsed=1.310s war_beast alt fields=0
+2026-09-23 19:31:31 | apply_avatar elapsed=0.201s tundra alt4 fields=0
+2026-09-23 19:31:43 | apply_avatar elapsed=1.609s ravenor alt8 fields=0
+2026-09-23 19:31:53 | apply_avatar elapsed=1.910s rampage alt2 fields=0
+2026-09-23 19:31:57 | apply_avatar elapsed=0.270s rampage alt2 fields=0
+2026-09-23 19:32:04 | apply_avatar elapsed=1.469s prisoner alt5 fields=0
+2026-09-23 19:32:19 | apply_avatar elapsed=0.579s predator frostfield fields=4
+2026-09-23 19:32:24 | apply_avatar elapsed=1.802s pharaoh alt9 fields=0
+2026-09-23 19:32:29 | apply_avatar elapsed=1.887s pestilence alt9 fields=0
+2026-09-23 19:32:32 | apply_avatar elapsed=0.596s pebbles terminator fields=4
+2026-09-23 19:32:38 | apply_avatar elapsed=1.693s pandamonium alt11 fields=0
+2026-09-23 19:32:43 | apply_avatar elapsed=1.709s maliken alt4 fields=0
+2026-09-23 19:32:52 | apply_avatar elapsed=2.730s magmus alt12 fields=0
+2026-09-23 19:33:00 | apply_avatar elapsed=1.191s magebane alt9 fields=0
+2026-09-23 19:33:06 | apply_avatar elapsed=1.983s lord_salforis alt11 fields=0
+2026-09-23 19:33:11 | apply_avatar elapsed=1.329s lodestone alt6 fields=0
+2026-09-23 19:33:21 | apply_avatar elapsed=2.442s legionnaire alt7 fields=0
+2026-09-23 19:33:30 | apply_avatar elapsed=0.937s kraken alt3 fields=0
+2026-09-23 19:33:34 | apply_avatar elapsed=0.952s king_klout alt2 fields=0
+2026-09-23 19:33:41 | apply_avatar elapsed=1.803s keeper_of_the_forest alt7 fields=0
+2026-09-23 19:33:52 | apply_avatar elapsed=2.416s kane alt12 fields=0
+2026-09-23 19:34:01 | apply_avatar elapsed=1.522s jeraziah alt3 fields=0
+2026-09-23 19:34:14 | apply_avatar elapsed=2.053s hammerstorm alt13 fields=0
+2026-09-23 19:34:24 | apply_avatar elapsed=2.209s gladiator alt6 fields=0
+2026-09-23 19:34:29 | apply_avatar elapsed=2.029s gauntlet alt10 fields=0
+2026-09-23 19:34:37 | apply_avatar elapsed=0.986s flux alt5 fields=0
+2026-09-23 19:34:47 | apply_avatar elapsed=1.036s electrician alt3 fields=0
+2026-09-23 19:34:52 | apply_avatar elapsed=0.200s drunken_master alt8 fields=0
+2026-09-23 19:35:04 | apply_avatar elapsed=1.423s deadwood alt8 fields=0
+2026-09-23 19:35:09 | apply_avatar elapsed=1.175s cthulhuphant alt4 fields=0
+2026-09-23 19:35:19 | apply_avatar elapsed=1.711s berzerker alt fields=0
+2026-09-23 19:35:30 | apply_avatar elapsed=2.996s behemoth alt16 fields=0
+2026-09-23 19:35:37 | apply_avatar elapsed=1.610s armadon alt8 fields=0
+2026-09-23 19:35:44 | apply_avatar elapsed=1.606s amun_ra alt4 fields=0
+2026-09-23 19:35:57 | apply_avatar elapsed=1.360s accursed alt5 fields=0
+2026-09-23 19:36:16 | apply_avatar elapsed=0.241s wretched_hag alt8 fields=0
+2026-09-23 19:36:26 | apply_avatar elapsed=2.125s witch_slayer alt8 fields=0
+2026-09-23 19:36:34 | apply_avatar elapsed=1.181s voodoo_jester alt4 fields=0
+2026-09-23 19:36:44 | apply_avatar elapsed=1.829s vindicator alt fields=0
+2026-09-23 19:36:50 | apply_avatar elapsed=1.197s torturer alt3 fields=0
+2026-09-23 19:36:59 | apply_avatar elapsed=1.888s thunderbringer alt2 fields=0
+2026-09-23 19:37:03 | apply_avatar elapsed=1.624s tempest alt7 fields=0
+2026-09-23 19:37:08 | apply_avatar elapsed=1.400s succubus alt2 fields=0
+2026-09-23 19:37:11 | apply_avatar elapsed=0.199s soul_reaper alt4 fields=0
+2026-09-23 19:37:22 | apply_avatar elapsed=1.047s riftwalker alt3 fields=0
+2026-09-23 19:37:29 | apply_avatar elapsed=2.304s rhapsody alt fields=0
+2026-09-23 19:37:36 | apply_avatar elapsed=1.250s revenant alt fields=0
+2026-09-23 19:37:46 | apply_avatar elapsed=1.971s pyromancer alt8 fields=0
+2026-09-23 19:37:56 | apply_avatar elapsed=2.607s puppet_master alt5 fields=0
+2026-09-23 19:38:04 | apply_avatar elapsed=0.218s prophet alt5 fields=0
+2026-09-23 19:38:15 | apply_avatar elapsed=1.230s pollywog_priest alt7 fields=0
+2026-09-23 19:38:26 | apply_avatar elapsed=1.381s plague_rider alt3 fields=0
+2026-09-23 19:38:34 | apply_avatar elapsed=1.953s pearl alt2 fields=0
+2026-09-23 19:38:43 | apply_avatar elapsed=1.208s ophelia alt2 fields=0
+2026-09-23 19:38:54 | apply_avatar elapsed=1.448s nymphora alt2 fields=0
+2026-09-23 19:39:02 | apply_avatar elapsed=0.221s myrmidon alt7 fields=0
+2026-09-23 19:39:11 | apply_avatar elapsed=1.553s monarch alt7 fields=0
+2026-09-23 19:39:21 | apply_avatar elapsed=1.788s midas alt9 fields=0
+2026-09-23 19:39:29 | apply_avatar elapsed=1.350s martyr alt5 fields=0
+2026-09-23 19:39:37 | apply_avatar elapsed=1.354s kinesis alt3 fields=0
+2026-09-23 19:39:48 | apply_avatar elapsed=0.227s hellbringer alt7 fields=0
+2026-09-23 19:39:57 | apply_avatar elapsed=3.697s glacius alt3 fields=0
+2026-09-23 19:40:04 | apply_avatar elapsed=1.218s geomancer alt5 fields=0
+2026-09-23 19:40:12 | apply_avatar elapsed=2.041s fayde alt7 fields=0
+2026-09-23 19:40:18 | apply_avatar elapsed=2.099s empath alt4 fields=0
+2026-09-23 19:40:23 | apply_avatar elapsed=1.527s ellonia alt3 fields=0
+2026-09-23 19:40:30 | apply_avatar elapsed=2.601s doctor_repulsor alt5 fields=0
+2026-09-23 19:40:40 | apply_avatar elapsed=1.514s demented_shaman alt9 fields=0
+2026-09-23 19:40:47 | apply_avatar elapsed=1.257s chipper alt4 fields=0
+2026-09-23 19:40:55 | apply_avatar elapsed=2.479s bubbles alt10 fields=0
+2026-09-23 19:41:03 | apply_avatar elapsed=1.270s blacksmith alt6 fields=0
+2026-09-23 19:41:15 | apply_avatar elapsed=0.213s aluna alt7 fields=0
+2026-09-23 19:41:25 | apply_avatar elapsed=1.785s zephyr alt7 fields=0
+2026-09-23 19:41:37 | apply_avatar elapsed=2.391s valkyrie alt8 fields=0
+2026-09-23 19:41:52 | apply_avatar elapsed=1.969s tarot alt6 fields=0
+2026-09-23 19:41:57 | apply_avatar elapsed=0.261s soulstealer alt7 fields=0
+2026-09-23 19:42:08 | apply_avatar elapsed=2.326s sir_benzington alt10 fields=0
+2026-09-23 19:42:18 | apply_avatar elapsed=2.220s silhouette alt13 fields=0
+2026-09-23 19:42:26 | apply_avatar elapsed=2.071s shadowblade alt7 fields=0
+2026-09-23 19:42:33 | apply_avatar elapsed=0.423s scout frostfield fields=4
+2026-09-23 19:42:39 | apply_avatar elapsed=1.926s sand_wraith alt10 fields=0
+2026-09-23 19:42:46 | apply_avatar elapsed=1.646s riptide alt2 fields=0
+2026-09-23 19:42:54 | apply_avatar elapsed=0.223s nomad alt13 fields=0
+2026-09-23 19:43:00 | apply_avatar elapsed=0.221s night_hound alt5 fields=0
+2026-09-23 19:43:05 | apply_avatar elapsed=0.633s moon_queen eclipse fields=4
+2026-09-23 19:43:10 | apply_avatar elapsed=0.236s monkey_king alt6 fields=0
+2026-09-23 19:43:19 | apply_avatar elapsed=2.540s master_of_arms alt7 fields=0
+2026-09-23 19:43:24 | apply_avatar elapsed=0.870s madman alt8 fields=0
+2026-09-23 19:43:40 | apply_avatar elapsed=0.638s gunblade hunter fields=4
+2026-09-23 19:43:46 | apply_avatar elapsed=1.586s gemini alt4 fields=0
+2026-09-23 19:44:00 | apply_avatar elapsed=1.838s forsaken_archer alt7 fields=0
+2026-09-23 19:44:14 | apply_avatar elapsed=1.885s flint_beastwood alt4 fields=0
+2026-09-23 19:44:23 | apply_avatar elapsed=1.725s engineer alt4 fields=0
+2026-09-23 19:44:33 | apply_avatar elapsed=0.247s emerald_warden alt9 fields=0
+2026-09-23 19:44:37 | apply_avatar elapsed=0.240s dark_lady alt2 fields=0
+2026-09-23 19:44:44 | apply_avatar elapsed=0.210s dampeer alt8 fields=0
+2026-09-23 19:44:58 | apply_avatar elapsed=1.611s chronos alt11 fields=0
+2026-09-23 19:45:05 | apply_avatar elapsed=1.208s bushwack alt3 fields=0
+2026-09-23 19:45:09 | apply_avatar elapsed=0.231s arachna alt5 fields=0
+2026-09-23 19:56:09 | STARTUP_BEGIN force=False
+2026-09-23 19:56:11 | inventory elapsed=1.372s cache_hit=True
+2026-09-23 19:56:11 | avatar_selections_loaded present=True count=108
+2026-09-23 19:56:11 | prepared_avatar_names count=1129
+2026-09-23 19:56:11 | cleanup_old_overrides elapsed=0.000s 
+2026-09-23 19:56:18 | sync_mod_overlay elapsed=0.187s 
+2026-09-23 19:56:18 | startup_reapply_selected elapsed=6.818s count=108
+2026-09-23 19:56:18 | render_grid elapsed=0.076s 
+2026-09-23 19:56:18 | STARTUP_END elapsed=8.596s heroes=108 choices=1290
+2026-09-23 19:56:23 | apply_avatar elapsed=0.189s defiler alt3 fields=0
+2026-09-23 20:06:18 | apply_avatar elapsed=1.808s defiler alt5 fields=0
+2026-09-23 20:15:37 | apply_avatar elapsed=0.186s defiler default fields=1
+2026-09-23 20:18:42 | apply_avatar elapsed=1.189s defiler alt2 fields=0
+2026-09-23 20:20:37 | STARTUP_BEGIN force=False
+2026-09-23 20:20:37 | inventory elapsed=0.536s cache_hit=True
+2026-09-23 20:20:37 | avatar_selections_loaded present=True count=108
+2026-09-23 20:20:37 | prepared_avatar_names count=1129
+2026-09-23 20:20:37 | cleanup_old_overrides elapsed=0.000s 
+2026-09-23 20:20:44 | sync_mod_overlay elapsed=0.190s 
+2026-09-23 20:20:44 | startup_reapply_selected elapsed=6.332s count=108
+2026-09-23 20:20:44 | render_grid elapsed=0.033s 
+2026-09-23 20:20:44 | STARTUP_END elapsed=6.926s heroes=108 choices=1290
+2026-09-23 21:10:25 | apply_avatar elapsed=1.317s defiler set_ascension fields=0
+2026-09-23 21:17:21 | apply_avatar elapsed=4.332s devourer alt10 fields=0
+2026-09-23 22:09:01 | STARTUP_BEGIN force=False
+2026-09-23 22:09:06 | inventory elapsed=4.336s cache_hit=True
+2026-09-23 22:09:06 | avatar_selections_loaded present=True count=108
+2026-09-23 22:09:06 | prepared_avatar_names count=1129
+2026-09-23 22:09:06 | cleanup_old_overrides elapsed=0.000s 
+2026-09-23 22:09:15 | sync_mod_overlay elapsed=0.207s 
+2026-09-23 22:09:15 | startup_reapply_selected elapsed=8.920s count=108
+2026-09-23 22:09:15 | render_grid elapsed=0.093s 
+2026-09-23 22:09:15 | STARTUP_END elapsed=13.786s heroes=108 choices=1290
+2026-09-23 22:22:30 | STARTUP_BEGIN force=False
+2026-09-23 22:22:30 | inventory elapsed=0.473s cache_hit=True
+2026-09-23 22:22:30 | avatar_selections_loaded present=True count=108
+2026-09-23 22:22:30 | prepared_avatar_names count=1129
+2026-09-23 22:22:30 | cleanup_old_overrides elapsed=0.000s 
+2026-09-23 22:22:36 | sync_mod_overlay elapsed=0.413s 
+2026-09-23 22:22:36 | startup_reapply_selected elapsed=5.791s count=108
+2026-09-23 22:22:36 | render_grid elapsed=0.030s 
+2026-09-23 22:22:36 | STARTUP_END elapsed=6.312s heroes=108 choices=1290
+2026-09-23 22:28:24 | STARTUP_BEGIN force=False
+2026-09-23 22:28:24 | inventory elapsed=0.453s cache_hit=True
+2026-09-23 22:28:24 | avatar_selections_loaded present=True count=108
+2026-09-23 22:28:24 | prepared_avatar_names count=1129
+2026-09-23 22:28:24 | cleanup_old_overrides elapsed=0.000s 
+2026-09-23 22:28:30 | sync_mod_overlay elapsed=0.185s 
+2026-09-23 22:28:30 | startup_reapply_selected elapsed=5.680s count=108
+2026-09-23 22:28:30 | render_grid elapsed=0.031s 
+2026-09-23 22:28:30 | STARTUP_END elapsed=6.183s heroes=108 choices=1290
+2026-09-23 22:33:51 | STARTUP_BEGIN force=False
+2026-09-23 22:33:51 | inventory elapsed=0.515s cache_hit=True
+2026-09-23 22:33:51 | avatar_selections_loaded present=True count=108
+2026-09-23 22:33:51 | prepared_avatar_names count=1129
+2026-09-23 22:33:51 | cleanup_old_overrides elapsed=0.000s 
+2026-09-23 22:33:58 | sync_mod_overlay elapsed=0.200s 
+2026-09-23 22:33:58 | startup_reapply_selected elapsed=6.321s count=108
+2026-09-23 22:33:58 | render_grid elapsed=0.033s 
+2026-09-23 22:33:58 | STARTUP_END elapsed=6.891s heroes=108 choices=1290
+2026-09-23 22:38:39 | STARTUP_BEGIN force=False
+2026-09-23 22:38:39 | inventory elapsed=0.513s cache_hit=True
+2026-09-23 22:38:39 | avatar_selections_loaded present=True count=108
+2026-09-23 22:38:39 | prepared_avatar_names count=1129
+2026-09-23 22:38:39 | cleanup_old_overrides elapsed=0.000s 
+2026-09-23 22:38:46 | sync_mod_overlay elapsed=0.221s 
+2026-09-23 22:38:46 | startup_reapply_selected elapsed=7.159s count=108
+2026-09-23 22:38:46 | render_grid elapsed=0.037s 
+2026-09-23 22:38:46 | STARTUP_END elapsed=7.735s heroes=108 choices=1290
+2026-09-23 23:00:59 | STARTUP_BEGIN force=False
+2026-09-23 23:00:59 | inventory elapsed=0.460s cache_hit=True
+2026-09-23 23:00:59 | avatar_selections_loaded present=True count=108
+2026-09-23 23:00:59 | prepared_avatar_names count=1131
+2026-09-23 23:00:59 | cleanup_old_overrides elapsed=0.000s 
+2026-09-23 23:01:08 | sync_mod_overlay elapsed=0.235s 
+2026-09-23 23:01:08 | startup_reapply_selected elapsed=8.797s count=108
+2026-09-23 23:01:08 | render_grid elapsed=0.031s 
+2026-09-23 23:01:08 | STARTUP_END elapsed=9.306s heroes=108 choices=1290
+2026-09-23 23:24:04 | STARTUP_BEGIN force=False
+2026-09-23 23:24:05 | inventory elapsed=0.548s cache_hit=True
+2026-09-23 23:24:05 | avatar_selections_loaded present=True count=108
+2026-09-23 23:24:05 | prepared_avatar_names count=1131
+2026-09-23 23:24:05 | cleanup_old_overrides elapsed=0.000s 
+2026-09-23 23:24:11 | sync_mod_overlay elapsed=0.192s 
+2026-09-23 23:24:11 | startup_reapply_selected elapsed=6.688s count=108
+2026-09-23 23:24:11 | render_grid elapsed=0.033s 
+2026-09-23 23:24:11 | STARTUP_END elapsed=7.290s heroes=108 choices=1290
+2026-09-23 23:55:19 | STARTUP_BEGIN force=False
+2026-09-23 23:55:19 | inventory elapsed=0.565s cache_hit=True
+2026-09-23 23:55:19 | avatar_selections_loaded present=True count=108
+2026-09-23 23:55:19 | prepared_avatar_names count=1131
+2026-09-23 23:55:19 | cleanup_old_overrides elapsed=0.000s 
+2026-09-23 23:55:26 | sync_mod_overlay elapsed=0.264s 
+2026-09-23 23:55:26 | startup_reapply_selected elapsed=6.683s count=108
+2026-09-23 23:55:26 | render_grid elapsed=0.173s 
+2026-09-23 23:55:26 | STARTUP_END elapsed=7.445s heroes=108 choices=1290
+2026-09-24 00:21:57 | STARTUP_BEGIN force=False
+2026-09-24 00:21:57 | inventory elapsed=0.449s cache_hit=True
+2026-09-24 00:21:57 | avatar_selections_loaded present=True count=108
+2026-09-24 00:21:57 | prepared_avatar_names count=1131
+2026-09-24 00:21:57 | cleanup_old_overrides elapsed=0.000s 
+2026-09-24 00:22:02 | sync_mod_overlay elapsed=0.181s 
+2026-09-24 00:22:02 | startup_reapply_selected elapsed=5.332s count=108
+2026-09-24 00:22:03 | render_grid elapsed=0.122s 
+2026-09-24 00:22:03 | STARTUP_END elapsed=5.922s heroes=108 choices=1290
+2026-09-24 00:22:28 | STARTUP_BEGIN force=False
+2026-09-24 00:22:29 | inventory elapsed=0.448s cache_hit=True
+2026-09-24 00:22:29 | avatar_selections_loaded present=True count=108
+2026-09-24 00:22:29 | prepared_avatar_names count=1131
+2026-09-24 00:22:29 | cleanup_old_overrides elapsed=0.000s 
+2026-09-24 00:22:36 | sync_mod_overlay elapsed=0.182s 
+2026-09-24 00:22:36 | startup_reapply_selected elapsed=7.519s count=108
+2026-09-24 00:22:36 | render_grid elapsed=0.119s 
+2026-09-24 00:22:36 | STARTUP_END elapsed=8.105s heroes=108 choices=1290
+2026-09-24 00:31:08 | STARTUP_BEGIN force=False
+2026-09-24 00:31:08 | inventory elapsed=0.510s cache_hit=True
+2026-09-24 00:31:08 | avatar_selections_loaded present=True count=108
+2026-09-24 00:31:08 | prepared_avatar_names count=1131
+2026-09-24 00:31:08 | cleanup_old_overrides elapsed=0.000s 
+2026-09-24 00:31:14 | sync_mod_overlay elapsed=0.883s 
+2026-09-24 00:31:14 | startup_reapply_selected elapsed=6.244s count=108
+2026-09-24 00:31:15 | render_grid elapsed=0.170s 
+2026-09-24 00:31:15 | STARTUP_END elapsed=6.945s heroes=108 choices=1290
+2026-09-24 00:41:07 | STARTUP_BEGIN force=False
+2026-09-24 00:58:51 | STARTUP_BEGIN force=False
+2026-09-24 00:58:56 | inventory elapsed=4.439s cache_hit=True
+2026-09-24 00:58:56 | avatar_selections_loaded present=True count=108
+2026-09-24 00:58:56 | prepared_avatar_names count=1131
+2026-09-24 00:58:56 | cleanup_old_overrides elapsed=0.000s 
+2026-09-24 00:59:04 | sync_mod_overlay elapsed=0.234s 
+2026-09-24 00:59:04 | startup_reapply_selected elapsed=7.530s count=108
+2026-09-24 00:59:04 | render_grid elapsed=0.239s 
+2026-09-24 00:59:04 | STARTUP_END elapsed=12.661s heroes=108 choices=1290
+2026-09-24 10:28:49 | STARTUP_BEGIN force=False
+2026-09-24 10:28:55 | inventory elapsed=5.833s cache_hit=True
+2026-09-24 10:28:55 | avatar_selections_loaded present=True count=108
+2026-09-24 10:28:56 | prepared_avatar_names count=1131
+2026-09-24 10:28:56 | cleanup_old_overrides elapsed=0.000s 
+2026-09-24 10:29:07 | sync_mod_overlay elapsed=0.217s 
+2026-09-24 10:29:07 | startup_reapply_selected elapsed=11.502s count=108
+2026-09-24 10:29:07 | render_grid elapsed=0.230s 
+2026-09-24 10:29:07 | STARTUP_END elapsed=18.060s heroes=108 choices=1290
+2026-09-24 10:39:38 | apply_avatar elapsed=0.212s accursed alt5 fields=0
+2026-09-24 11:17:52 | STARTUP_BEGIN force=False
+2026-09-24 13:58:07 | STARTUP_BEGIN force=False
+2026-09-24 13:58:12 | inventory elapsed=4.555s cache_hit=True
+2026-09-24 13:58:12 | avatar_selections_loaded present=True count=108
+2026-09-24 13:58:12 | prepared_avatar_names count=1131
+2026-09-24 13:58:12 | cleanup_old_overrides elapsed=0.000s 
+2026-09-24 13:58:19 | sync_mod_overlay elapsed=0.284s 
+2026-09-24 13:58:19 | startup_reapply_selected elapsed=7.171s count=108
+2026-09-24 13:58:19 | render_grid elapsed=0.192s 
+2026-09-24 13:58:19 | STARTUP_END elapsed=12.347s heroes=108 choices=1290
+2026-09-24 15:00:33 | STARTUP_BEGIN force=False
+2026-09-24 15:00:33 | inventory elapsed=0.447s cache_hit=True
+2026-09-24 15:00:33 | avatar_selections_loaded present=True count=108
+2026-09-24 15:00:34 | prepared_avatar_names count=1131
+2026-09-24 15:00:34 | cleanup_old_overrides elapsed=0.000s 
+2026-09-24 15:00:40 | sync_mod_overlay elapsed=0.556s 
+2026-09-24 15:00:40 | startup_reapply_selected elapsed=6.553s count=108
+2026-09-24 15:00:40 | render_grid elapsed=0.127s 
+2026-09-24 15:00:40 | STARTUP_END elapsed=7.147s heroes=108 choices=1290
+2026-09-24 21:43:45 | STARTUP_BEGIN force=False
+2026-09-24 21:43:50 | inventory elapsed=5.383s cache_hit=True
+2026-09-24 21:43:50 | avatar_selections_loaded present=True count=108
+2026-09-24 21:43:51 | prepared_avatar_names count=1131
+2026-09-24 21:43:51 | cleanup_old_overrides elapsed=0.000s 
+2026-09-24 21:44:00 | sync_mod_overlay elapsed=0.248s 
+2026-09-24 21:44:00 | startup_reapply_selected elapsed=9.182s count=108
+2026-09-24 21:44:00 | render_grid elapsed=0.397s 
+2026-09-24 21:44:00 | STARTUP_END elapsed=15.451s heroes=108 choices=1290
+2026-09-25 12:24:20 | STARTUP_BEGIN force=False
+2026-09-25 12:24:25 | inventory elapsed=5.124s cache_hit=True
+2026-09-25 12:24:25 | avatar_selections_loaded present=True count=108
+2026-09-25 12:24:25 | prepared_avatar_names count=1131
+2026-09-25 12:24:25 | cleanup_old_overrides elapsed=0.000s 
+2026-09-25 12:24:37 | sync_mod_overlay elapsed=0.246s 
+2026-09-25 12:24:37 | startup_reapply_selected elapsed=11.248s count=108
+2026-09-25 12:24:37 | render_grid elapsed=0.208s 
+2026-09-25 12:24:37 | STARTUP_END elapsed=17.056s heroes=108 choices=1290
+2026-09-25 13:11:20 | STARTUP_BEGIN force=False
+2026-09-25 13:11:21 | inventory elapsed=0.604s cache_hit=True
+2026-09-25 13:11:21 | avatar_selections_loaded present=True count=108
+2026-09-25 13:11:21 | prepared_avatar_names count=1131
+2026-09-25 13:11:21 | cleanup_old_overrides elapsed=0.000s 
+2026-09-25 13:11:28 | sync_mod_overlay elapsed=0.218s 
+2026-09-25 13:11:28 | startup_reapply_selected elapsed=6.831s count=108
+2026-09-25 13:11:28 | render_grid elapsed=0.127s 
+2026-09-25 13:11:28 | STARTUP_END elapsed=7.599s heroes=108 choices=1290
+2026-09-25 13:11:41 | STARTUP_BEGIN force=False
+2026-09-25 13:11:41 | inventory elapsed=0.471s cache_hit=True
+2026-09-25 13:11:41 | avatar_selections_loaded present=True count=108
+2026-09-25 13:11:41 | prepared_avatar_names count=1131
+2026-09-25 13:11:41 | cleanup_old_overrides elapsed=0.000s 
+2026-09-25 13:11:47 | sync_mod_overlay elapsed=0.211s 
+2026-09-25 13:11:47 | startup_reapply_selected elapsed=5.749s count=108
+2026-09-25 13:11:47 | render_grid elapsed=0.145s 
+2026-09-25 13:11:47 | STARTUP_END elapsed=6.386s heroes=108 choices=1290
+2026-09-25 13:16:36 | STARTUP_BEGIN force=False
+2026-09-25 13:16:37 | inventory elapsed=0.433s cache_hit=True
+2026-09-25 13:16:37 | avatar_selections_loaded present=True count=108
+2026-09-25 13:16:37 | prepared_avatar_names count=1131
+2026-09-25 13:16:37 | cleanup_old_overrides elapsed=0.000s 
+2026-09-25 13:16:42 | sync_mod_overlay elapsed=0.197s 
+2026-09-25 13:16:42 | startup_reapply_selected elapsed=5.505s count=108
+2026-09-25 13:16:42 | render_grid elapsed=0.116s 
+2026-09-25 13:16:42 | STARTUP_END elapsed=6.074s heroes=108 choices=1290
+2026-09-25 13:56:18 | STARTUP_BEGIN force=False
+2026-09-25 13:56:18 | inventory elapsed=0.448s cache_hit=True
+2026-09-25 13:56:18 | avatar_selections_loaded present=True count=108
+2026-09-25 13:56:18 | prepared_avatar_names count=1131
+2026-09-25 13:56:18 | cleanup_old_overrides elapsed=0.000s 
+2026-09-25 13:58:31 | sync_mod_overlay elapsed=0.443s 
+2026-09-25 13:58:31 | startup_reapply_selected elapsed=132.524s count=108
+2026-09-25 13:58:31 | render_grid elapsed=0.176s 
+2026-09-25 13:58:31 | STARTUP_END elapsed=133.170s heroes=108 choices=1290
+2026-09-25 18:20:50 | STARTUP_BEGIN force=False
+2026-09-25 18:20:51 | inventory elapsed=0.793s cache_hit=True
+2026-09-25 18:20:51 | avatar_selections_loaded present=True count=108
+2026-09-25 18:20:51 | prepared_avatar_names count=1155
+2026-09-25 18:20:51 | cleanup_old_overrides elapsed=0.000s 
+2026-09-25 18:20:59 | sync_mod_overlay elapsed=0.414s 
+2026-09-25 18:20:59 | startup_reapply_selected elapsed=8.307s count=108
+2026-09-25 18:20:59 | render_grid elapsed=0.202s 
+2026-09-25 18:20:59 | STARTUP_END elapsed=9.326s heroes=108 choices=1290
+2026-09-25 18:22:12 | STARTUP_BEGIN force=False
+2026-09-25 18:22:12 | inventory elapsed=0.411s cache_hit=True
+2026-09-25 18:22:12 | avatar_selections_loaded present=True count=108
+2026-09-25 18:22:13 | prepared_avatar_names count=1155
+2026-09-25 18:22:13 | cleanup_old_overrides elapsed=0.000s 
+2026-09-25 18:24:10 | sync_mod_overlay elapsed=0.551s 
+2026-09-25 18:24:10 | startup_reapply_selected elapsed=117.401s count=108
+2026-09-25 18:24:10 | render_grid elapsed=0.169s 
+2026-09-25 18:24:10 | STARTUP_END elapsed=118.001s heroes=108 choices=1290
+2026-09-25 18:39:41 | STARTUP_BEGIN force=False
+2026-09-25 18:39:41 | inventory elapsed=0.468s cache_hit=True
+2026-09-25 18:39:41 | avatar_selections_loaded present=True count=108
+2026-09-25 18:39:41 | prepared_avatar_names count=1155
+2026-09-25 18:39:41 | cleanup_old_overrides elapsed=0.000s 
+2026-09-25 18:39:51 | sync_mod_overlay elapsed=0.299s 
+2026-09-25 18:39:51 | startup_reapply_selected elapsed=9.797s count=108
+2026-09-25 18:39:51 | render_grid elapsed=0.137s 
+2026-09-25 18:39:51 | STARTUP_END elapsed=10.429s heroes=108 choices=1290
+2026-09-25 18:47:44 | STARTUP_BEGIN force=False
+2026-09-25 18:47:45 | inventory elapsed=0.461s cache_hit=True
+2026-09-25 18:47:45 | avatar_selections_loaded present=True count=108
+2026-09-25 18:47:45 | prepared_avatar_names count=1155
+2026-09-25 18:47:45 | cleanup_old_overrides elapsed=0.000s 
+2026-09-25 18:47:49 | sync_mod_overlay elapsed=0.232s 
+2026-09-25 18:47:49 | startup_reapply_selected elapsed=4.336s count=108
+2026-09-25 18:47:49 | render_grid elapsed=0.132s 
+2026-09-25 18:47:49 | STARTUP_END elapsed=4.950s heroes=108 choices=1290
+2026-09-25 21:57:14 | STARTUP_BEGIN force=False
+2026-09-25 21:57:15 | inventory elapsed=0.608s cache_hit=True
+2026-09-25 21:57:15 | avatar_selections_loaded present=True count=108
+2026-09-25 21:57:15 | prepared_avatar_names count=1110
+2026-09-25 21:57:15 | cleanup_old_overrides elapsed=0.000s 
+2026-09-25 21:57:21 | sync_mod_overlay elapsed=0.219s 
+2026-09-25 21:57:21 | startup_reapply_selected elapsed=6.469s count=108
+2026-09-25 21:57:22 | render_grid elapsed=0.204s 
+2026-09-25 21:57:22 | STARTUP_END elapsed=7.307s heroes=108 choices=1290
+2026-09-25 22:01:20 | STARTUP_BEGIN force=False
+2026-09-25 22:01:20 | inventory elapsed=0.565s cache_hit=True
+2026-09-25 22:01:20 | avatar_selections_loaded present=True count=108
+2026-09-25 22:01:20 | prepared_avatar_names count=1110
+2026-09-25 22:01:20 | cleanup_old_overrides elapsed=0.000s 
+2026-09-25 22:03:05 | sync_mod_overlay elapsed=0.360s 
+2026-09-25 22:03:05 | startup_reapply_selected elapsed=104.782s count=108
+2026-09-25 22:03:05 | render_grid elapsed=0.160s 
+2026-09-25 22:03:05 | STARTUP_END elapsed=105.527s heroes=108 choices=1290
+2026-09-25 22:18:55 | apply_avatar elapsed=0.484s pollywog_priest alt7 fields=0
+2026-09-25 22:51:44 | STARTUP_BEGIN force=False
+2026-09-25 22:51:49 | inventory elapsed=5.317s cache_hit=True
+2026-09-25 22:51:49 | avatar_selections_loaded present=True count=108
+2026-09-25 22:51:49 | prepared_avatar_names count=1110
+2026-09-25 22:51:49 | cleanup_old_overrides elapsed=0.000s 
+2026-09-25 22:53:40 | sync_mod_overlay elapsed=0.326s 
+2026-09-25 22:53:40 | startup_reapply_selected elapsed=110.743s count=108
+2026-09-25 22:53:40 | render_grid elapsed=0.209s 
+2026-09-25 22:53:40 | STARTUP_END elapsed=116.289s heroes=108 choices=1290
+2026-09-25 22:56:40 | group_avatar_action elapsed=101.871s action=random done=108 total=108 skipped_bad=35
+2026-09-25 23:01:47 | apply_avatar elapsed=0.304s geomancer alt5 fields=0
+2026-09-25 23:03:11 | apply_avatar elapsed=0.205s wretched_hag alt4 fields=0
+2026-09-25 23:07:45 | apply_avatar elapsed=0.881s armadon pog_skin fields=0
+2026-09-25 23:07:52 | apply_avatar elapsed=0.205s armadon alt7 fields=0
+2026-09-25 23:24:42 | STARTUP_BEGIN force=False
+2026-09-25 23:24:42 | inventory elapsed=0.594s cache_hit=True
+2026-09-25 23:24:42 | avatar_selections_loaded present=True count=108
+2026-09-25 23:24:42 | prepared_avatar_names count=1110
+2026-09-25 23:24:42 | cleanup_old_overrides elapsed=0.000s 
+2026-09-25 23:24:48 | sync_mod_overlay elapsed=0.216s 
+2026-09-25 23:24:48 | startup_reapply_selected elapsed=5.329s count=108
+2026-09-25 23:24:48 | render_grid elapsed=0.193s 
+2026-09-25 23:24:48 | STARTUP_END elapsed=6.135s heroes=108 choices=1290
+2026-09-25 23:47:22 | apply_avatar elapsed=0.733s andromeda alt2 fields=0
+2026-09-25 23:47:27 | apply_avatar elapsed=0.697s arachna alt3 fields=0
+2026-09-25 23:47:33 | apply_avatar elapsed=1.850s blood_hunter alt10 fields=0
+2026-09-25 23:47:38 | apply_avatar elapsed=0.748s bushwack alt8 fields=0
+2026-09-25 23:47:47 | apply_avatar elapsed=1.175s chronos alt8 fields=0
+2026-09-25 23:47:54 | apply_avatar elapsed=0.981s corrupted_disciple alt7 fields=0
+2026-09-25 23:48:04 | apply_avatar elapsed=1.002s dampeer alt5 fields=0
+2026-09-25 23:48:13 | apply_avatar elapsed=1.354s dark_lady alt5 fields=0
+2026-09-25 23:48:20 | apply_avatar elapsed=1.891s emerald_warden alt7 fields=0
+2026-09-25 23:48:26 | apply_avatar elapsed=0.202s engineer alt4 fields=0
+2026-09-25 23:48:36 | apply_avatar elapsed=0.211s flint_beastwood alt4 fields=0
+2026-09-25 23:48:42 | apply_avatar elapsed=1.347s forsaken_archer alt10 fields=0
+2026-09-25 23:48:46 | apply_avatar elapsed=0.201s gemini alt4 fields=0
+2026-09-25 23:48:52 | apply_avatar elapsed=1.059s gunblade alt8 fields=0
+2026-09-25 23:49:01 | apply_avatar elapsed=0.196s madman alt4 fields=0
+2026-09-25 23:49:13 | apply_avatar elapsed=1.428s monkey_king alt3 fields=0
+2026-09-25 23:49:20 | apply_avatar elapsed=1.258s moon_queen alt7 fields=0
+2026-09-25 23:49:29 | apply_avatar elapsed=1.295s night_hound alt2 fields=0
+2026-09-25 23:49:36 | apply_avatar elapsed=0.212s nomad alt13 fields=0
+2026-09-25 23:49:47 | apply_avatar elapsed=0.196s riptide alt2 fields=0
+2026-09-25 23:49:55 | apply_avatar elapsed=0.243s sand_wraith alt11 fields=0
+2026-09-25 23:50:04 | apply_avatar elapsed=1.174s scout alt9 fields=0
+2026-09-25 23:50:15 | apply_avatar elapsed=1.065s aluna alt8 fields=0
+2026-09-25 23:50:24 | apply_avatar elapsed=1.174s blacksmith alt4 fields=0
+2026-09-25 23:50:29 | apply_avatar elapsed=0.227s bombardier alt11 fields=0
+2026-09-25 23:50:37 | apply_avatar elapsed=0.213s bubbles alt10 fields=0
+2026-09-25 23:50:45 | apply_avatar elapsed=0.757s chipper alt3 fields=0
+2026-09-25 23:50:49 | apply_avatar elapsed=0.218s defiler alt2 fields=0
+2026-09-25 23:51:03 | apply_avatar elapsed=1.221s demented_shaman alt3 fields=0
+2026-09-25 23:51:11 | apply_avatar elapsed=1.179s doctor_repulsor alt4 fields=0
+2026-09-25 23:51:20 | apply_avatar elapsed=0.193s ellonia alt3 fields=0
+2026-09-25 23:51:30 | apply_avatar elapsed=1.215s empath alt2 fields=0
+2026-09-25 23:51:39 | apply_avatar elapsed=1.465s fayde alt fields=0
+2026-09-25 23:51:48 | apply_avatar elapsed=0.918s geomancer alt6 fields=0
+2026-09-25 23:51:58 | apply_avatar elapsed=1.772s glacius alt4 fields=0
+2026-09-25 23:52:05 | apply_avatar elapsed=1.223s hellbringer alt2 fields=0
+2026-09-25 23:52:11 | apply_avatar elapsed=1.293s kinesis alt7 fields=0
+2026-09-25 23:52:17 | apply_avatar elapsed=0.720s martyr alt4 fields=0
+2026-09-25 23:52:26 | apply_avatar elapsed=0.269s midas alt9 fields=0
+2026-09-25 23:52:35 | apply_avatar elapsed=0.215s monarch alt7 fields=0
+2026-09-25 23:52:43 | apply_avatar elapsed=1.969s myrmidon alt8 fields=0
+2026-09-25 23:52:47 | apply_avatar elapsed=0.198s nymphora alt2 fields=0
+2026-09-25 23:52:55 | apply_avatar elapsed=0.221s ophelia alt5 fields=0
+2026-09-25 23:53:05 | apply_avatar elapsed=0.976s pearl alt3 fields=0
+2026-09-25 23:53:13 | apply_avatar elapsed=0.229s plague_rider alt3 fields=0
+2026-09-25 23:53:29 | apply_avatar elapsed=0.398s pollywog_priest penguin fields=4
+2026-09-25 23:53:37 | apply_avatar elapsed=1.142s prophet alt6 fields=0
+2026-09-25 23:53:46 | apply_avatar elapsed=2.279s puppet_master alt fields=0
+2026-09-25 23:53:53 | apply_avatar elapsed=1.029s pyromancer alt7 fields=0
+2026-09-25 23:53:58 | apply_avatar elapsed=0.209s revenant alt3 fields=0
+2026-09-25 23:54:07 | apply_avatar elapsed=0.261s riftwalker alt3 fields=0
+2026-09-25 23:54:12 | apply_avatar elapsed=0.219s soul_reaper alt4 fields=0
+2026-09-25 23:54:16 | apply_avatar elapsed=0.216s succubus alt2 fields=0
+2026-09-25 23:54:23 | apply_avatar elapsed=0.206s tempest alt2 fields=0
+2026-09-25 23:54:31 | apply_avatar elapsed=1.552s thunderbringer alt9 fields=0
+2026-09-25 23:54:37 | apply_avatar elapsed=1.090s torturer alt fields=0
+2026-09-25 23:54:44 | apply_avatar elapsed=0.191s vindicator alt fields=0
+2026-09-25 23:54:51 | apply_avatar elapsed=0.389s voodoo_jester hallowed fields=4
+2026-09-25 23:55:01 | apply_avatar elapsed=1.226s witch_slayer alt6 fields=0
+2026-09-25 23:55:05 | apply_avatar elapsed=1.255s wretched_hag alt fields=0
+2026-09-25 23:55:12 | apply_avatar elapsed=0.977s accursed alt fields=0
+2026-09-25 23:55:25 | apply_avatar elapsed=1.892s amun_ra alt6 fields=0
+2026-09-25 23:55:33 | apply_avatar elapsed=0.211s armadon alt8 fields=0
+2026-09-25 23:55:43 | apply_avatar elapsed=0.377s behemoth frostfield_twitch fields=4
+2026-09-25 23:55:49 | apply_avatar elapsed=1.017s berzerker alt2 fields=0
+2026-09-25 23:55:52 | apply_avatar elapsed=1.145s cthulhuphant alt7 fields=0
+2026-09-25 23:56:01 | apply_avatar elapsed=0.889s deadwood alt9 fields=0
+2026-09-25 23:56:04 | apply_avatar elapsed=0.214s devourer alt10 fields=0
+2026-09-25 23:56:10 | apply_avatar elapsed=1.788s drunken_master alt2 fields=0
+2026-09-25 23:56:16 | apply_avatar elapsed=0.707s electrician alt5 fields=0
+2026-09-25 23:56:21 | apply_avatar elapsed=0.603s flux alt3 fields=0
+2026-09-25 23:56:30 | apply_avatar elapsed=1.090s gauntlet alt8 fields=0
+2026-09-25 23:56:46 | apply_avatar elapsed=1.174s gladiator alt fields=0
+2026-09-25 23:56:55 | apply_avatar elapsed=1.015s hammerstorm alt3 fields=0
+2026-09-25 23:57:00 | apply_avatar elapsed=1.543s jeraziah alt2 fields=0
+2026-09-25 23:57:10 | apply_avatar elapsed=1.493s kane alt9 fields=0
+2026-09-25 23:57:18 | apply_avatar elapsed=0.210s keeper_of_the_forest alt7 fields=0
+2026-09-25 23:57:22 | apply_avatar elapsed=0.194s king_klout alt2 fields=0
+2026-09-25 23:57:27 | apply_avatar elapsed=0.659s kraken alt6 fields=0
+2026-09-25 23:57:33 | apply_avatar elapsed=0.206s legionnaire alt7 fields=0
+2026-09-25 23:57:35 | apply_avatar elapsed=0.221s lodestone alt6 fields=0
+2026-09-25 23:57:40 | apply_avatar elapsed=1.544s lord_salforis alt4 fields=0
+2026-09-25 23:57:46 | apply_avatar elapsed=1.169s magebane alt fields=0
+2026-09-25 23:57:54 | apply_avatar elapsed=1.883s magmus alt2 fields=0
+2026-09-25 23:58:01 | apply_avatar elapsed=1.187s maliken alt9 fields=0
+2026-09-25 23:58:12 | apply_avatar elapsed=0.726s moraxus alt fields=0
+2026-09-25 23:58:20 | apply_avatar elapsed=0.213s pandamonium alt11 fields=0
+2026-09-25 23:58:31 | apply_avatar elapsed=0.213s pebbles alt10 fields=0
+2026-09-25 23:58:39 | apply_avatar elapsed=0.891s pestilence alt2 fields=0
+2026-09-25 23:58:47 | apply_avatar elapsed=1.928s pharaoh alt7 fields=0
+2026-09-25 23:58:53 | apply_avatar elapsed=1.256s predator alt12 fields=0
+2026-09-25 23:59:06 | apply_avatar elapsed=0.228s prisoner alt4 fields=0
+2026-09-25 23:59:15 | apply_avatar elapsed=0.996s rampage alt4 fields=0
+2026-09-25 23:59:21 | apply_avatar elapsed=0.855s ravenor alt5 fields=0
+2026-09-25 23:59:34 | apply_avatar elapsed=1.783s solstice alt10 fields=0
+2026-09-25 23:59:38 | apply_avatar elapsed=0.200s tundra alt4 fields=0
+2026-09-25 23:59:42 | apply_avatar elapsed=0.195s war_beast alt fields=0
+2026-09-26 01:01:33 | STARTUP_BEGIN force=False
+2026-09-26 01:01:39 | inventory elapsed=6.388s cache_hit=True
+2026-09-26 01:01:39 | avatar_selections_loaded present=True count=108
+2026-09-26 01:01:39 | prepared_avatar_names count=1110
+2026-09-26 01:01:39 | cleanup_old_overrides elapsed=0.000s 
+2026-09-26 01:01:46 | sync_mod_overlay elapsed=0.190s 
+2026-09-26 01:01:46 | startup_reapply_selected elapsed=6.858s count=108
+2026-09-26 01:01:47 | render_grid elapsed=0.185s 
+2026-09-26 01:01:47 | STARTUP_END elapsed=13.453s heroes=108 choices=1290
+2026-09-26 01:01:53 | STARTUP_BEGIN force=False
+2026-09-26 01:01:54 | inventory elapsed=0.616s cache_hit=True
+2026-09-26 01:01:54 | avatar_selections_loaded present=True count=108
+2026-09-26 01:01:54 | prepared_avatar_names count=1110
+2026-09-26 01:01:54 | cleanup_old_overrides elapsed=0.000s 
+2026-09-26 01:01:58 | sync_mod_overlay elapsed=0.176s 
+2026-09-26 01:01:58 | startup_reapply_selected elapsed=4.270s count=108
+2026-09-26 01:01:58 | render_grid elapsed=0.134s 
+2026-09-26 01:01:58 | STARTUP_END elapsed=5.040s heroes=108 choices=1290
+2026-09-26 01:45:15 | STARTUP_BEGIN force=False
+2026-09-26 01:45:22 | inventory elapsed=6.910s cache_hit=True
+2026-09-26 01:45:22 | avatar_selections_loaded present=True count=108
+2026-09-26 01:45:22 | prepared_avatar_names count=1110
+2026-09-26 01:45:22 | cleanup_old_overrides elapsed=0.000s 
+2026-09-26 01:45:30 | sync_mod_overlay elapsed=0.264s 
+2026-09-26 01:45:30 | startup_reapply_selected elapsed=7.435s count=108
+2026-09-26 01:45:30 | render_grid elapsed=0.205s 
+2026-09-26 01:45:30 | STARTUP_END elapsed=14.574s heroes=108 choices=1290
+2026-09-26 01:45:50 | apply_avatar elapsed=3.293s emerald_warden alt5 fields=0
+2026-09-26 01:45:55 | apply_avatar elapsed=1.290s bushwack alt fields=0
+2026-09-26 01:46:15 | apply_avatar elapsed=0.195s berzerker alt fields=0
+2026-09-26 01:46:22 | apply_avatar elapsed=1.738s deadwood alt5 fields=0
+2026-09-26 01:46:30 | apply_avatar elapsed=2.966s devourer alt6 fields=0
+2026-09-26 01:46:56 | apply_avatar elapsed=5.465s magmus alt9 fields=0
+2026-09-26 01:47:11 | apply_avatar elapsed=2.170s legionnaire alt3 fields=0
+2026-09-26 01:47:18 | apply_avatar elapsed=2.604s hammerstorm alt7 fields=0
+2026-09-26 01:47:28 | apply_avatar elapsed=3.626s pharaoh alt2 fields=0
+2026-09-26 01:47:33 | apply_avatar elapsed=0.240s maliken alt5 fields=0
+2026-09-26 01:56:18 | STARTUP_BEGIN force=False
+2026-09-26 01:56:20 | inventory elapsed=2.099s cache_hit=True
+2026-09-26 01:56:20 | avatar_selections_loaded present=True count=108
+2026-09-26 01:56:20 | prepared_avatar_names count=1110
+2026-09-26 01:56:20 | cleanup_old_overrides elapsed=0.000s 
+2026-09-26 01:56:26 | sync_mod_overlay elapsed=0.211s 
+2026-09-26 01:56:26 | startup_reapply_selected elapsed=6.344s count=108
+2026-09-26 01:56:27 | render_grid elapsed=0.185s 
+2026-09-26 01:56:27 | STARTUP_END elapsed=8.650s heroes=108 choices=1290
+2026-09-26 01:56:41 | apply_avatar elapsed=2.885s slither alt6 fields=0
+2026-09-26 01:56:52 | apply_avatar elapsed=4.975s flint_beastwood alt5 fields=0
+2026-09-26 01:56:59 | apply_avatar elapsed=0.227s flint_beastwood alt4 fields=0
+2026-09-26 02:18:35 | apply_avatar elapsed=3.483s plague_rider alt6 fields=0
+2026-09-26 02:18:44 | apply_avatar elapsed=1.895s plague_rider alt8 fields=0
+2026-09-26 17:25:45 | STARTUP_BEGIN force=False
+2026-09-26 17:26:00 | inventory elapsed=15.756s cache_hit=True
+2026-09-26 17:26:00 | avatar_selections_loaded present=True count=108
+2026-09-26 17:26:00 | prepared_avatar_names count=1110
+2026-09-26 17:26:00 | cleanup_old_overrides elapsed=0.000s 
+2026-09-26 17:26:13 | sync_mod_overlay elapsed=0.288s 
+2026-09-26 17:26:13 | startup_reapply_selected elapsed=12.263s count=108
+2026-09-26 17:26:13 | render_grid elapsed=0.197s 
+2026-09-26 17:26:13 | STARTUP_END elapsed=28.249s heroes=108 choices=1290
+2026-09-26 18:07:53 | STARTUP_BEGIN force=False
+2026-09-26 18:07:59 | inventory elapsed=6.070s cache_hit=True
+2026-09-26 18:07:59 | avatar_selections_loaded present=True count=108
+2026-09-26 18:07:59 | prepared_avatar_names count=1110
+2026-09-26 18:07:59 | cleanup_old_overrides elapsed=0.000s 
+2026-09-26 18:08:05 | sync_mod_overlay elapsed=0.234s 
+2026-09-26 18:08:05 | startup_reapply_selected elapsed=6.211s count=108
+2026-09-26 18:08:05 | render_grid elapsed=0.181s 
+2026-09-26 18:08:05 | STARTUP_END elapsed=12.481s heroes=108 choices=1290
+2026-09-26 18:33:50 | STARTUP_BEGIN force=False
+2026-09-26 18:33:51 | inventory elapsed=1.131s cache_hit=False
+2026-09-26 18:33:51 | avatar_selections_loaded present=True count=108
+2026-09-26 18:33:51 | prepared_avatar_names count=1110
+2026-09-26 18:33:51 | cleanup_old_overrides elapsed=0.000s 
+2026-09-26 18:33:58 | sync_mod_overlay elapsed=0.219s 
+2026-09-26 18:33:58 | startup_reapply_selected elapsed=6.287s count=108
+2026-09-26 18:33:58 | render_grid elapsed=0.142s 
+2026-09-26 18:33:58 | STARTUP_END elapsed=7.580s heroes=108 choices=1290
+2026-09-26 18:35:48 | STARTUP_BEGIN force=False
+2026-09-26 18:35:48 | inventory elapsed=0.618s cache_hit=True
+2026-09-26 18:35:48 | avatar_selections_loaded present=True count=108
+2026-09-26 18:35:48 | prepared_avatar_names count=1110
+2026-09-26 18:35:48 | cleanup_old_overrides elapsed=0.000s 
+2026-09-26 18:40:03 | sync_mod_overlay elapsed=0.499s 
+2026-09-26 18:40:03 | startup_reapply_selected elapsed=255.211s count=108
+2026-09-26 18:40:04 | render_grid elapsed=0.155s 
+2026-09-26 18:40:04 | STARTUP_END elapsed=256.004s heroes=108 choices=1290
+2026-09-26 19:36:49 | apply_avatar elapsed=0.444s vindicator alt fields=0
+2026-09-26 21:09:46 | STARTUP_BEGIN force=False
+2026-09-26 21:09:48 | inventory elapsed=2.364s cache_hit=False
+2026-09-26 21:09:48 | avatar_selections_loaded present=True count=108
+2026-09-26 21:09:48 | prepared_avatar_names count=1110
+2026-09-26 21:09:48 | cleanup_old_overrides elapsed=0.000s 
+2026-09-26 21:09:55 | sync_mod_overlay elapsed=0.222s 
+2026-09-26 21:09:55 | startup_reapply_selected elapsed=6.586s count=108
+2026-09-26 21:09:55 | render_grid elapsed=0.196s 
+2026-09-26 21:09:55 | STARTUP_END elapsed=9.168s heroes=108 choices=1290
+2026-09-27 00:23:55 | STARTUP_BEGIN force=False
+2026-09-27 00:23:56 | inventory elapsed=1.398s cache_hit=False
+2026-09-27 00:23:56 | avatar_selections_loaded present=True count=108
+2026-09-27 00:23:56 | prepared_avatar_names count=1118
+2026-09-27 00:23:56 | cleanup_old_overrides elapsed=0.000s 
+2026-09-27 00:24:03 | sync_mod_overlay elapsed=0.275s 
+2026-09-27 00:24:03 | startup_reapply_selected elapsed=7.100s count=108
+2026-09-27 00:24:04 | render_grid elapsed=0.194s 
+2026-09-27 00:24:04 | STARTUP_END elapsed=8.717s heroes=108 choices=1309
+2026-09-27 00:44:31 | group_avatar_action elapsed=40.622s action=random done=108 total=108 skipped_bad=136
+2026-09-27 00:44:45 | apply_avatar elapsed=0.220s scout alt13 fields=0
+2026-09-27 00:44:50 | apply_avatar elapsed=0.211s sir_benzington alt10 fields=0
+2026-09-27 00:44:57 | apply_avatar elapsed=0.217s andromeda alt6 fields=0
+2026-09-27 00:45:02 | apply_avatar elapsed=0.396s voodoo_jester hallowed fields=4
+2026-09-27 00:45:07 | apply_avatar elapsed=0.382s solstice twins fields=4
+2026-09-27 00:45:12 | apply_avatar elapsed=0.315s tundra alt5 fields=0
+2026-09-27 00:45:18 | apply_avatar elapsed=0.201s keeper_of_the_forest alt fields=0
+2026-09-27 00:50:13 | apply_avatar elapsed=0.209s wretched_hag alt6 fields=0
+2026-09-27 00:51:49 | apply_avatar elapsed=0.386s demented_shaman demonic fields=4
+2026-09-27 00:52:45 | apply_avatar elapsed=0.228s kane alt5 fields=0
+2026-09-27 00:52:50 | apply_avatar elapsed=0.211s ophelia alt fields=0
+2026-09-27 00:52:56 | apply_avatar elapsed=1.308s madman scary fields=0
+2026-09-27 00:53:01 | apply_avatar elapsed=0.197s scout alt9 fields=0
+2026-09-27 00:53:07 | apply_avatar elapsed=0.224s nymphora alt6 fields=0
+2026-09-27 00:53:16 | apply_avatar elapsed=0.213s maliken alt2 fields=0
+2026-09-27 00:53:25 | apply_avatar elapsed=0.226s torturer alt2 fields=0
+2026-09-27 00:53:50 | apply_avatar elapsed=0.226s arachna alt4 fields=0
+2026-09-27 00:53:54 | apply_avatar elapsed=0.243s blood_hunter alt7 fields=0
+2026-09-27 00:54:02 | apply_avatar elapsed=0.391s bushwack cesspool fields=4
+2026-09-27 00:54:07 | apply_avatar elapsed=0.241s chronos alt11 fields=0
+2026-09-27 00:54:11 | apply_avatar elapsed=0.232s corrupted_disciple alt8 fields=0
+2026-09-27 00:54:16 | apply_avatar elapsed=0.207s dampeer alt7 fields=0
+2026-09-27 00:54:23 | apply_avatar elapsed=0.205s dark_lady alt fields=0
+2026-09-27 00:54:33 | apply_avatar elapsed=0.388s emerald_warden demon fields=4
+2026-09-27 00:54:36 | apply_avatar elapsed=0.267s engineer alt fields=0
+2026-09-27 00:54:46 | apply_avatar elapsed=0.226s flint_beastwood alt4 fields=0
+2026-09-27 00:54:50 | apply_avatar elapsed=0.202s forsaken_archer alt5 fields=0
+2026-09-27 00:54:53 | apply_avatar elapsed=0.211s gemini alt3 fields=0
+2026-09-27 00:54:59 | apply_avatar elapsed=0.208s madman alt2 fields=0
+2026-09-27 00:55:06 | apply_avatar elapsed=4.129s master_of_arms alt11 fields=0
+2026-09-27 00:55:09 | apply_avatar elapsed=0.301s monkey_king alt9 fields=0
+2026-09-27 00:55:12 | apply_avatar elapsed=0.220s moon_queen alt9 fields=0
+2026-09-27 00:55:17 | apply_avatar elapsed=0.241s night_hound alt3 fields=0
+2026-09-27 00:55:22 | apply_avatar elapsed=0.301s nomad alt6 fields=0
+2026-09-27 00:55:26 | apply_avatar elapsed=0.211s riptide alt2 fields=0
+2026-09-27 00:55:33 | apply_avatar elapsed=2.014s sand_wraith alt10 fields=0
+2026-09-27 00:55:42 | apply_avatar elapsed=0.251s scout alt4 fields=0
+2026-09-27 00:55:47 | apply_avatar elapsed=0.228s silhouette alt2 fields=0
+2026-09-27 00:55:51 | apply_avatar elapsed=0.204s sir_benzington alt10 fields=0
+2026-09-27 00:55:55 | apply_avatar elapsed=0.202s slither alt3 fields=0
+2026-09-27 00:56:00 | apply_avatar elapsed=0.259s soulstealer alt fields=0
+2026-09-27 00:56:05 | apply_avatar elapsed=0.302s swiftblade alt2 fields=0
+2026-09-27 00:56:13 | apply_avatar elapsed=0.232s tarot alt2 fields=0
+2026-09-27 00:56:20 | apply_avatar elapsed=0.229s valkyrie alt9 fields=0
+2026-09-27 00:56:27 | apply_avatar elapsed=0.219s zephyr alt6 fields=0
+2026-09-27 00:56:33 | apply_avatar elapsed=0.225s aluna alt4 fields=0
+2026-09-27 00:56:38 | apply_avatar elapsed=0.217s blacksmith alt6 fields=0
+2026-09-27 00:56:42 | apply_avatar elapsed=0.223s bombardier alt5 fields=0
+2026-09-27 00:56:47 | apply_avatar elapsed=0.233s bubbles alt12 fields=0
+2026-09-27 00:56:51 | apply_avatar elapsed=1.139s chipper trophy_skin01 fields=0
+2026-09-27 00:56:54 | apply_avatar elapsed=0.223s defiler alt4 fields=0
+2026-09-27 00:56:59 | apply_avatar elapsed=0.213s demented_shaman alt2 fields=0
+2026-09-27 00:57:03 | apply_avatar elapsed=0.220s doctor_repulsor alt5 fields=0
+2026-09-27 00:57:09 | apply_avatar elapsed=0.224s ellonia alt4 fields=0
+2026-09-27 00:57:14 | apply_avatar elapsed=0.305s empath alt3 fields=0
+2026-09-27 00:57:18 | apply_avatar elapsed=0.225s fayde alt5 fields=0
+2026-09-27 00:57:24 | apply_avatar elapsed=1.636s geomancer main_reskin fields=0
+2026-09-27 00:57:34 | apply_avatar elapsed=3.822s glacius female fields=0
+2026-09-27 00:57:39 | apply_avatar elapsed=0.267s hellbringer alt4 fields=0
+2026-09-27 00:57:44 | apply_avatar elapsed=0.218s kinesis alt3 fields=0
+2026-09-27 01:21:01 | STARTUP_BEGIN force=False
+2026-09-27 01:21:05 | inventory elapsed=3.320s cache_hit=True
+2026-09-27 01:21:05 | avatar_selections_loaded present=True count=108
+2026-09-27 01:21:05 | prepared_avatar_names count=1118
+2026-09-27 01:21:05 | cleanup_old_overrides elapsed=0.000s 
+2026-09-27 01:25:23 | sync_mod_overlay elapsed=0.774s 
+2026-09-27 01:25:23 | startup_reapply_selected elapsed=258.410s count=108
+2026-09-27 01:25:23 | render_grid elapsed=0.268s 
+2026-09-27 01:25:23 | STARTUP_END elapsed=262.018s heroes=108 choices=1309
+2026-09-27 01:58:09 | apply_avatar elapsed=0.295s cthulhuphant alt7 fields=0
+2026-09-27 02:02:20 | apply_avatar elapsed=0.274s swiftblade alt2 fields=0
+2026-09-27 12:16:18 | STARTUP_BEGIN force=False
+2026-09-27 12:16:26 | inventory elapsed=7.344s cache_hit=False
+2026-09-27 12:16:26 | avatar_selections_loaded present=True count=108
+2026-09-27 12:16:26 | prepared_avatar_names count=1118
+2026-09-27 12:16:26 | cleanup_old_overrides elapsed=0.000s 
+2026-09-27 12:17:03 | sync_mod_overlay elapsed=0.334s 
+2026-09-27 12:17:03 | startup_reapply_selected elapsed=37.172s count=108
+2026-09-27 12:17:03 | render_grid elapsed=0.235s 
+2026-09-27 12:17:03 | STARTUP_END elapsed=44.780s heroes=108 choices=1309
+2026-09-27 12:49:57 | STARTUP_BEGIN force=False
+2026-09-27 12:49:58 | inventory elapsed=1.757s cache_hit=False
+2026-09-27 12:49:58 | avatar_selections_loaded present=True count=108
+2026-09-27 12:49:58 | prepared_avatar_names count=1110
+2026-09-27 12:49:58 | cleanup_old_overrides elapsed=0.000s 
+2026-09-27 12:50:28 | sync_mod_overlay elapsed=0.428s 
+2026-09-27 12:50:28 | startup_reapply_selected elapsed=29.827s count=108
+2026-09-27 12:50:28 | render_grid elapsed=0.227s 
+2026-09-27 12:50:28 | STARTUP_END elapsed=31.861s heroes=108 choices=1309
+2026-09-27 12:50:36 | apply_avatar elapsed=0.312s monkey_king alt9 fields=0
+2026-09-27 12:50:40 | STARTUP_BEGIN force=False
+2026-09-27 12:50:40 | inventory elapsed=0.575s cache_hit=True
+2026-09-27 12:50:40 | avatar_selections_loaded present=True count=108
+2026-09-27 12:50:40 | prepared_avatar_names count=1110
+2026-09-27 12:50:40 | cleanup_old_overrides elapsed=0.000s 
+2026-09-27 12:51:00 | sync_mod_overlay elapsed=0.448s 
+2026-09-27 12:51:00 | startup_reapply_selected elapsed=19.485s count=108
+2026-09-27 12:51:00 | render_grid elapsed=0.221s 
+2026-09-27 12:51:00 | STARTUP_END elapsed=20.307s heroes=108 choices=1309
+2026-09-27 12:51:35 | STARTUP_BEGIN force=False
+2026-09-27 12:51:36 | inventory elapsed=0.570s cache_hit=True
+2026-09-27 12:51:36 | avatar_selections_loaded present=True count=108
+2026-09-27 12:51:36 | prepared_avatar_names count=1110
+2026-09-27 12:51:36 | cleanup_old_overrides elapsed=0.000s 
+2026-09-27 12:51:55 | sync_mod_overlay elapsed=0.389s 
+2026-09-27 12:51:55 | startup_reapply_selected elapsed=19.304s count=108
+2026-09-27 12:51:55 | render_grid elapsed=0.197s 
+2026-09-27 12:51:55 | STARTUP_END elapsed=20.096s heroes=108 choices=1309
+2026-09-27 12:58:30 | STARTUP_BEGIN force=False
+2026-09-27 12:58:31 | inventory elapsed=0.578s cache_hit=True
+2026-09-27 12:58:31 | avatar_selections_loaded present=True count=108
+2026-09-27 12:58:31 | prepared_avatar_names count=1110
+2026-09-27 12:58:31 | cleanup_old_overrides elapsed=0.000s 
+2026-09-27 12:58:50 | sync_mod_overlay elapsed=0.358s 
+2026-09-27 12:58:50 | startup_reapply_selected elapsed=19.324s count=108
+2026-09-27 12:58:50 | render_grid elapsed=0.194s 
+2026-09-27 12:58:50 | STARTUP_END elapsed=20.122s heroes=108 choices=1309
+2026-09-27 13:06:55 | STARTUP_BEGIN force=False
+2026-09-27 13:06:55 | inventory elapsed=0.535s cache_hit=True
+2026-09-27 13:06:55 | avatar_selections_loaded present=True count=108
+2026-09-27 13:06:55 | prepared_avatar_names count=1110
+2026-09-27 13:06:55 | cleanup_old_overrides elapsed=0.000s 
+2026-09-27 13:06:56 | sync_mod_overlay elapsed=0.293s 
+2026-09-27 13:06:56 | render_grid elapsed=0.181s 
+2026-09-27 13:06:56 | STARTUP_END elapsed=1.032s heroes=108 choices=1309
+2026-09-27 13:07:01 | STARTUP_BEGIN force=False
+2026-09-27 13:07:02 | inventory elapsed=0.534s cache_hit=True
+2026-09-27 13:07:02 | avatar_selections_loaded present=True count=108
+2026-09-27 13:07:02 | prepared_avatar_names count=1110
+2026-09-27 13:07:02 | cleanup_old_overrides elapsed=0.000s 
+2026-09-27 13:07:02 | sync_mod_overlay elapsed=0.243s 
+2026-09-27 13:07:02 | render_grid elapsed=0.174s 
+2026-09-27 13:07:02 | STARTUP_END elapsed=0.974s heroes=108 choices=1309
+2026-09-27 13:07:14 | STARTUP_BEGIN force=False
+2026-09-27 13:07:14 | inventory elapsed=0.528s cache_hit=True
+2026-09-27 13:07:14 | avatar_selections_loaded present=True count=108
+2026-09-27 13:07:14 | prepared_avatar_names count=1110
+2026-09-27 13:07:14 | cleanup_old_overrides elapsed=0.000s 
+2026-09-27 13:07:14 | sync_mod_overlay elapsed=0.285s 
+2026-09-27 13:07:15 | render_grid elapsed=0.180s 
+2026-09-27 13:07:15 | STARTUP_END elapsed=1.015s heroes=108 choices=1309
+2026-09-27 13:11:22 | STARTUP_BEGIN force=False
+2026-09-27 13:11:22 | inventory elapsed=0.592s cache_hit=True
+2026-09-27 13:11:22 | avatar_selections_loaded present=True count=108
+2026-09-27 13:11:22 | prepared_avatar_names count=1110
+2026-09-27 13:11:22 | cleanup_old_overrides elapsed=0.000s 
+2026-09-27 13:11:23 | sync_mod_overlay elapsed=0.338s 
+2026-09-27 13:11:23 | render_grid elapsed=0.174s 
+2026-09-27 13:11:23 | STARTUP_END elapsed=1.127s heroes=108 choices=1309
+2026-09-27 13:11:26 | apply_avatar elapsed=0.407s swiftblade alt6 fields=0
+2026-09-27 13:11:34 | apply_avatar elapsed=0.248s swiftblade alt2 fields=0
+2026-09-27 13:14:09 | STARTUP_BEGIN force=False
+2026-09-27 13:14:09 | inventory elapsed=0.538s cache_hit=True
+2026-09-27 13:14:09 | avatar_selections_loaded present=True count=108
+2026-09-27 13:14:09 | prepared_avatar_names count=1110
+2026-09-27 13:14:09 | cleanup_old_overrides elapsed=0.000s 
+2026-09-27 13:14:09 | sync_mod_overlay elapsed=0.027s 
+2026-09-27 13:14:10 | render_grid elapsed=0.169s 
+2026-09-27 13:14:10 | STARTUP_END elapsed=0.757s heroes=108 choices=1309
+2026-09-27 13:18:43 | STARTUP_BEGIN force=False
+2026-09-27 13:18:48 | inventory elapsed=4.783s cache_hit=True
+2026-09-27 13:18:48 | avatar_selections_loaded present=True count=108
+2026-09-27 13:18:48 | prepared_avatar_names count=1110
+2026-09-27 13:18:48 | cleanup_old_overrides elapsed=0.000s 
+2026-09-27 13:18:49 | sync_mod_overlay elapsed=0.503s 
+2026-09-27 13:18:49 | render_grid elapsed=0.190s 
+2026-09-27 13:18:49 | STARTUP_END elapsed=5.504s heroes=108 choices=1309
+2026-09-27 14:26:10 | STARTUP_BEGIN force=False
+2026-09-27 14:26:10 | inventory elapsed=0.509s cache_hit=True
+2026-09-27 14:26:10 | avatar_selections_loaded present=True count=108
+2026-09-27 14:26:10 | prepared_avatar_names count=1110
+2026-09-27 14:26:10 | cleanup_old_overrides elapsed=0.000s 
+2026-09-27 14:26:10 | sync_mod_overlay elapsed=0.216s 
+2026-09-27 14:26:11 | render_grid elapsed=0.155s 
+2026-09-27 14:26:11 | STARTUP_END elapsed=0.901s heroes=108 choices=1309
+2026-09-27 14:26:53 | group_avatar_action elapsed=37.832s action=reload done=108 total=108 skipped_bad=0
+2026-09-27 17:14:28 | apply_avatar elapsed=0.691s geomancer alt5 fields=0
+2026-09-27 17:14:32 | apply_avatar elapsed=0.270s chipper alt3 fields=0
+2026-09-27 17:14:37 | apply_avatar elapsed=0.254s monarch alt fields=0
+2026-09-27 17:14:41 | apply_avatar elapsed=0.259s riptide alt3 fields=0
+2026-09-27 17:14:45 | apply_avatar elapsed=0.241s keeper_of_the_forest alt4 fields=0
+2026-09-27 17:14:51 | apply_avatar elapsed=0.272s electrician alt2 fields=0
+2026-09-27 17:14:56 | apply_avatar elapsed=0.265s behemoth alt10 fields=0
+2026-09-27 17:15:05 | apply_avatar elapsed=2.813s pollywog_priest alt4 fields=0
+2026-09-27 17:15:14 | apply_avatar elapsed=5.078s solstice alt5 fields=0
+2026-09-27 17:15:18 | apply_avatar elapsed=0.357s moon_queen alt9 fields=0
+2026-09-27 17:15:22 | apply_avatar elapsed=0.245s chipper alt fields=0
+2026-09-27 17:15:27 | apply_avatar elapsed=0.466s blacksmith plinko fields=4
+2026-09-27 17:15:30 | apply_avatar elapsed=0.263s silhouette alt4 fields=0
+2026-09-27 17:15:34 | apply_avatar elapsed=0.251s riptide classic fields=0
+2026-09-27 17:15:43 | apply_avatar elapsed=3.956s devourer clown fields=0
+2026-09-27 17:15:47 | apply_avatar elapsed=1.378s devourer clown fields=0
+2026-09-27 17:15:50 | apply_avatar elapsed=1.384s devourer clown fields=0
+2026-09-27 17:15:53 | apply_avatar elapsed=0.452s devourer freakshow fields=4
+2026-09-27 17:15:55 | apply_avatar elapsed=0.253s devourer alt15 fields=0
+2026-09-27 17:15:58 | apply_avatar elapsed=1.411s devourer clown fields=0
+2026-09-27 17:16:00 | apply_avatar elapsed=0.258s devourer alt11 fields=0
+2026-09-27 17:16:04 | apply_avatar elapsed=0.252s devourer alt2 fields=0
+2026-09-27 17:16:08 | apply_avatar elapsed=0.257s berzerker alt2 fields=0
+2026-09-27 17:16:14 | apply_avatar elapsed=0.254s bubbles alt7 fields=0
+2026-09-27 17:16:19 | apply_avatar elapsed=0.271s myrmidon alt7 fields=0
+2026-09-27 17:16:25 | apply_avatar elapsed=0.314s forsaken_archer alt8 fields=0
+2026-09-27 17:16:31 | apply_avatar elapsed=3.395s shadowblade alt fields=0
+2026-09-27 17:16:35 | apply_avatar elapsed=0.250s blacksmith alt3 fields=0
+2026-09-27 17:16:39 | apply_avatar elapsed=0.247s wretched_hag alt fields=0
+2026-09-27 17:16:44 | apply_avatar elapsed=0.265s thunderbringer alt11 fields=0
+2026-09-27 17:16:49 | apply_avatar elapsed=0.251s deadwood alt2 fields=0
+2026-09-27 17:16:53 | apply_avatar elapsed=0.348s behemoth alt4 fields=0
+2026-09-27 17:16:58 | apply_avatar elapsed=0.260s glacius alt3 fields=0
+2026-09-27 17:17:03 | apply_avatar elapsed=0.276s monkey_king alt4 fields=0
+2026-09-27 17:17:07 | apply_avatar elapsed=0.275s sand_wraith alt4 fields=0
+2026-09-27 17:17:13 | apply_avatar elapsed=0.270s monarch alt4 fields=0
+2026-09-27 17:17:18 | apply_avatar elapsed=0.266s armadon alt8 fields=0
+2026-09-27 17:17:23 | apply_avatar elapsed=0.355s amun_ra alt4 fields=0
+2026-09-27 17:17:34 | apply_avatar elapsed=0.430s pebbles golden fields=4
+2026-09-27 17:20:52 | STARTUP_BEGIN force=False
+2026-09-27 17:20:57 | inventory elapsed=5.427s cache_hit=True
+2026-09-27 17:27:00 | STARTUP_BEGIN force=False
+2026-09-27 17:27:01 | inventory elapsed=0.514s cache_hit=True
+2026-09-27 17:27:01 | avatar_selections_loaded present=True count=108
+2026-09-27 17:27:01 | prepared_avatar_names count=1110
+2026-09-27 17:27:01 | cleanup_old_overrides elapsed=0.000s 
+2026-09-27 17:27:01 | sync_mod_overlay elapsed=0.379s 
+2026-09-27 17:27:01 | render_grid elapsed=0.232s 
+2026-09-27 17:27:01 | STARTUP_END elapsed=1.153s heroes=108 choices=1309
+2026-09-27 17:27:49 | apply_avatar elapsed=0.305s legionnaire alt7 fields=0
+2026-09-27 17:39:48 | apply_avatar elapsed=0.268s legionnaire alt13 fields=0
+2026-09-27 17:48:54 | STARTUP_BEGIN force=False
+2026-09-27 17:48:55 | inventory elapsed=1.176s cache_hit=True
+2026-09-27 17:48:55 | avatar_selections_loaded present=True count=108
+2026-09-27 17:48:55 | prepared_avatar_names count=1110
+2026-09-27 17:48:55 | cleanup_old_overrides elapsed=0.000s 
+2026-09-27 17:48:55 | sync_mod_overlay elapsed=0.270s 
+2026-09-27 17:48:56 | render_grid elapsed=0.182s 
+2026-09-27 17:48:56 | STARTUP_END elapsed=1.650s heroes=108 choices=1309
+2026-09-27 17:49:19 | apply_avatar elapsed=0.286s gladiator alt3 fields=0
+2026-09-27 17:49:25 | apply_avatar elapsed=0.273s midas alt4 fields=0
+2026-09-27 17:49:32 | apply_avatar elapsed=0.284s scout alt10 fields=0
+2026-09-27 17:49:37 | apply_avatar elapsed=0.589s moon_queen eclipse fields=4
+2026-09-27 17:49:43 | apply_avatar elapsed=0.264s armadon alt fields=0
+2026-09-27 17:49:50 | apply_avatar elapsed=2.155s deadwood main_reskin fields=0
+2026-09-27 17:49:52 | apply_avatar elapsed=0.290s monarch alt7 fields=0
+2026-09-27 17:49:59 | apply_avatar elapsed=0.288s bubbles alt6 fields=0
+2026-09-27 17:50:04 | apply_avatar elapsed=0.271s swiftblade alt7 fields=0
+2026-09-27 17:50:10 | apply_avatar elapsed=0.271s andromeda alt fields=0
+2026-09-27 17:50:21 | apply_avatar elapsed=2.115s geomancer main_reskin fields=0
+2026-09-27 17:50:25 | apply_avatar elapsed=0.273s torturer alt fields=0
+2026-09-27 17:50:31 | apply_avatar elapsed=0.274s myrmidon alt8 fields=0
+2026-09-27 17:50:35 | apply_avatar elapsed=0.280s pearl alt5 fields=0
+2026-09-27 19:45:38 | STARTUP_BEGIN force=False
+2026-09-27 19:45:39 | inventory elapsed=1.173s cache_hit=True
+2026-09-27 19:45:39 | avatar_selections_loaded present=True count=108
+2026-09-27 19:45:39 | prepared_avatar_names count=1110
+2026-09-27 19:45:39 | cleanup_old_overrides elapsed=0.000s 
+2026-09-27 19:45:39 | sync_mod_overlay elapsed=0.060s 
+2026-09-27 19:45:39 | render_grid elapsed=0.168s 
+2026-09-27 19:45:39 | STARTUP_END elapsed=1.421s heroes=108 choices=1309

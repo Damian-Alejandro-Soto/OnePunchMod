@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Torturer_Ability4_Pulse"
+
+	radiusstart="50"
+	radiusend="400"
+	
+	innerradiusoffset="75"
+	
+	lifetime="500"
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	persist="true"
+	impacteffect=""
+	effect="effects/cast.effect"
+	canturn="false"
+ dynamicprecache="/heroes/xalynx/alt6/ability_04/effects/impact_base.effect,../alt6/ability_04/effects/impact_upgrade.effect">
+	<onspawn>
+		<!-- Dynamic impact effect -->
+	</onspawn>
+	
+	<onimpact>
+		<hasmodifier name="ult_boost">
+			<damage effecttype="Magic" amount="90,165,240" />
+		</hasmodifier>
+		<else>
+			<damage effecttype="Magic" amount="65,120,175" />
+		</else>
+		
+		<!-- Dynamic impact effect -->
+		<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_entity" target="" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impact.effect" source="target_entity" target="" occlude="true" />
+		</else>
+	</onimpact>
+</affector>

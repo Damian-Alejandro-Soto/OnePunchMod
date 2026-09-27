@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "hero": "maliken",
+  "avatar": "alt6",
+  "files": [
+    "heroes\\maliken\\base\\hero.entity",
+    "heroes\\maliken\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\maliken\\base\\state_maliken_ult_boost.entity",
+    "heroes\\maliken\\base\\state_maliken_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\maliken\\base\\ability_01\\gadget.entity",
+    "heroes\\maliken\\base\\ability_01\\gadget.entity.onepunch_ability_managed",
+    "heroes\\maliken\\base\\ability_04\\ability.entity",
+    "heroes\\maliken\\base\\ability_04\\ability.entity.onepunch_ability_managed",
+    "heroes\\maliken\\base\\projectile\\projectile.entity",
+    "heroes\\maliken\\base\\projectile\\projectile.entity.onepunch_ability_managed"
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Deadwood_Ability3_Buff"
+
+	icon="/heroes/Deadwood/alt8/ability_03/icon.dds"
+	passiveeffect="/heroes/deadwood/alt8/ability_03/effects/state.effect"
+
+	movespeed="30,45,60,75"
+	slowresistance="0.25,0.5,0.75,1"
+	
+	effecttype="StatusBuff"
+	allowtransfer="true"
+>
+</state>

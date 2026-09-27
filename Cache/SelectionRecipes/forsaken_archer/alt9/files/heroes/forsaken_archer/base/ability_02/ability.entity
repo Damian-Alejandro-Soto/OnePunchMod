@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_ForsakenArcher2"
+	
+	icon="/heroes/forsaken_archer/alt9/ability_02/icon.dds"
+	
+	anim=""
+	casttime="0"
+	castactiontime="0"
+	passiveeffect=""
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	activatescheme="canattack"
+	actiontype="attack_toggle"
+	targetscheme="visible_enemy_units"
+	casteffecttype="Attack"
+
+	frontqueue="true"
+	inheritmovement="true"
+	noninterrupting="true"
+	nobreakchannel="true"
+	nonaggressive="true"
+
+	noresponse="true"
+	cooldowntime="0"	
+	manacost="0"
+	activemanacost="0"
+	toggleoffmanacost="0"
+	keeptoggleonwhendead="true"
+	propagatetoggledtoillusions="true"
+	
+	nostun="true"
+
+	attackspeed="0.15,0.20,0.25,0.30"
+>
+	<onattack>
+		<condition test="istoggled">
+			<!-- Required to allow the skill to stack with Attack Modifiers -->
+			<setvalue name="combat_attackability" a="0" />
+			<split count="4" damagemult="0.15,0.3,0.45,0.6" targetscheme="visible_enemy_units" fulldamageonmaintarget="true" />
+		</condition>
+	</onattack>
+
+</ability>

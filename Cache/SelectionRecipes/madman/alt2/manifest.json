@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "madman",
+  "legacy_folder": "scar",
+  "avatar": "alt2",
+  "counts": {
+    "files": 70,
+    "models": 25,
+    "materials": 3,
+    "textures": 8,
+    "effects": 5,
+    "sounds": 29,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

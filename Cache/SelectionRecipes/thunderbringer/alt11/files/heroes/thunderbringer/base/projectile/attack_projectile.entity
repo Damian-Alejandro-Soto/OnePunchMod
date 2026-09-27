@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_ThunderbringerAttack"
+
+	speed="1100"
+	gravity="2200"
+
+	modelscale="2.0"
+	model="/heroes/kunas/alt11/projectile/model.mdf"
+
+	impacteffect="/heroes/kunas/alt11/projectile/effects/impact.effect"
+ traileffect="/heroes/kunas/alt11/projectile/effects/trail.effect">
+</projectile>

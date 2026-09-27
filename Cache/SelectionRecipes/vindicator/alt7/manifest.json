@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "vindicator",
+  "legacy_folder": "vindicator",
+  "avatar": "alt7",
+  "counts": {
+    "files": 104,
+    "models": 25,
+    "materials": 3,
+    "textures": 6,
+    "effects": 21,
+    "sounds": 49,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

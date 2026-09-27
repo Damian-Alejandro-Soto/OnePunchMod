@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gladiator_Ability4_Damage"
+	
+	icon="/heroes/gladiator/alt4/ability_04/icon.dds"
+	passiveeffect=""
+
+	effecttype=""
+>
+	<onframe>
+		<changehealth a="accumulator" ishealingovertime="true" />
+	</onframe>
+</state>

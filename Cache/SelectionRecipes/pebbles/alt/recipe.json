@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "hero": "pebbles",
+  "avatar": "alt",
+  "files": [
+    "heroes\\pebbles\\base\\hero.entity",
+    "heroes\\pebbles\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\pebbles\\base\\state_ult_boost.entity",
+    "heroes\\pebbles\\base\\state_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\pebbles\\base\\ability_01\\affector.entity",
+    "heroes\\pebbles\\base\\ability_01\\affector.entity.onepunch_ability_managed"
+  ]
+}

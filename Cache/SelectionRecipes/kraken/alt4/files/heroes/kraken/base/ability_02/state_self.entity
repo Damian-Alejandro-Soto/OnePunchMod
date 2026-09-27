@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Kraken_Ability2_Self"
+	
+	icon="../../icon.dds"
+	
+	stunned="true"
+	stunnedreduction="ignore"
+	
+	passiveeffect="/heroes/kraken/alt4/ability_02/effects/charge_state.effect"
+	
+	modifierkey="kraken_ability2_Charging"
+	
+	effecttype=""
+>
+	
+	<onframe>
+		<targettype type="immobilized" source="this_owner_entity" target="this_owner_entity">
+			<unbind target="this_owner_entity" />
+
+			<pushentity entity="this_proxy_entity" />
+			<delete target="stack_proxy_entity" />
+			<delete target="this_proxy_entity" />
+			<expire />
+		</targettype>
+	</onframe>
+	
+</state>

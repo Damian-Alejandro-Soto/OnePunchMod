@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pet
+	name="Pet_Hellbringer_Ability3_Attacking"
+	
+	icon="iconb.tga"
+	portrait="../../icon.dds"
+	model="/heroes/hellbringer/alt2/ability_03/demon/model.mdf"
+	passiveeffect=""
+	skin=""
+	
+	spawneffect=""
+	
+	
+	
+	
+	preglobalscale="1"
+	modelscale="1.3"
+	effectscale="1.0"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="32"
+	targetoffset="0 0 0"
+	iscontrollable="false"
+	invulnerable="true"
+	isselectable="true"
+	nothreat="true"
+
+	movespeed="150"
+	maxmovespeed="1600"
+	turnrate="4500"
+	turnsmoothing=".2"
+
+	maxmana="0"
+	manaregen="0"
+
+	armor="0"
+	magicarmor="0"
+	immunity="GadgetImmunity"
+
+	
+	inventory0=""
+	inventory1=""
+	inventory2=""
+	inventory3=""
+	
+	canattack="false"
+	attacktargetscheme="nothing"
+	attacktype="none"
+	combattype="Melee"
+
+	aggrorange="0"
+	sightrangeday="0"
+	sightrangenight="0"
+	
+	unitwalking="true"
+	flying="false"
+	flyheight="120"
+	wanderrange="150"
+	clearvision="true"
+	diewithowner="false"
+	
+	corpsetime="0"
+	corpsefadetime="0"
+	deathtime="0"
+	
+	inheritvisibilityfromowner="false"
+	unittype="AntiTP no_Overhead_Visuals"
+	
+	noblockneutralspawn="true"
+>
+
+</pet>

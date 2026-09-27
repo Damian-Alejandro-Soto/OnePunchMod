@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "magebane",
+  "avatar": "alt",
+  "files": [
+    "heroes\\magebane\\base\\hero.entity",
+    "heroes\\magebane\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

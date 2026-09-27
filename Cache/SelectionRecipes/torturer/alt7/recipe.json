@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "hero": "torturer",
+  "avatar": "alt7",
+  "files": [
+    "heroes\\torturer\\base\\hero.entity",
+    "heroes\\torturer\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\torturer\\base\\state_xalynx_ult_boost.entity",
+    "heroes\\torturer\\base\\state_xalynx_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\torturer\\base\\ability_01\\ability.entity",
+    "heroes\\torturer\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\torturer\\base\\ability_01\\affector.entity",
+    "heroes\\torturer\\base\\ability_01\\affector.entity.onepunch_ability_managed",
+    "heroes\\torturer\\base\\ability_03\\affector.entity",
+    "heroes\\torturer\\base\\ability_03\\affector.entity.onepunch_ability_managed",
+    "heroes\\torturer\\base\\ability_04\\affector_pulse.entity",
+    "heroes\\torturer\\base\\ability_04\\affector_pulse.entity.onepunch_ability_managed"
+  ]
+}

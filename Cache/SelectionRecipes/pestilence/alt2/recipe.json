@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "pestilence",
+  "avatar": "alt2",
+  "files": [
+    "heroes\\pestilence\\base\\hero.entity",
+    "heroes\\pestilence\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\pestilence\\base\\state_pestilence_ult_boost.entity",
+    "heroes\\pestilence\\base\\state_pestilence_ult_boost.entity.onepunch_ability_managed"
+  ]
+}

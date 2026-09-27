@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Vindicator_Attack"
+
+	speed="1000"
+	gravity="1000"
+
+	modelscale="0.5"
+	model="/heroes/vindicator/alt7/projectile/effects/model.mdf"
+
+	traileffect="/heroes/vindicator/alt7/projectile/effects/trail.effect"
+	impacteffect="/heroes/vindicator/alt7/projectile/effects/impact.effect"
+>
+
+</projectile>

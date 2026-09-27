@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "defiler",
+  "avatar": "pog_skin",
+  "files": [
+    "heroes\\defiler\\base\\hero.entity",
+    "heroes\\defiler\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

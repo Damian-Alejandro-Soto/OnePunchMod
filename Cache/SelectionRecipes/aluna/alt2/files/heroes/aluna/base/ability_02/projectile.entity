@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Aluna_Ability2"
+
+	speed="3000"
+	gravity="0"
+
+	modelscale="1.25"
+	model="/heroes/aluna/alt2/ability_02/effects/staff.mdf"
+	
+	impacteffect="/heroes/aluna/alt2/ability_02/effects/impact.effect"
+	traileffect="/heroes/aluna/alt2/ability_02/effects/trail.effect"
+	deatheffect="/heroes/aluna/alt2/ability_02/effects/death.effect"
+	
+	canturn="false"
+	flying="true"
+	flyheight="70"
+	
+	touchradius="125"
+	maxtouchespertarget="1"
+	touchtargetscheme="enemy_units"
+	toucheffecttype="Magic"
+	touchradiusdiradjust="true"
+	
+	lifetime="600"
+ dynamicprecache="/heroes/aluna/alt2/ability_02/effects/impact.effect">
+	<onspawn>
+	</onspawn>
+	
+	<ontouch>
+		<damage effecttype="Magic" amount="150,220,290,360" b="param" op="mult" />
+		<setparam a="param" b="0.9" op="mult" />
+		
+		<!-- Dynamic visual effects -->
+		<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="target_entity" source="target_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impact.effect" target="target_entity" source="target_entity" occlude="true" />
+		</else>
+	</ontouch>
+	
+</projectile>

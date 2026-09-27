@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_SandWraith4"
+
+	icon="/heroes/sand_wraith/alt9/ability_04/icon.dds"
+	
+	maxlevel="3"
+	requiredlevel="6,11,16"
+	
+	anim="ability_4"
+	actiontype="self_position"
+	targetscheme="nonillusion_enemy_heroes"
+	ignoreinvulnerable="true"
+	
+	casteffecttype="GlobalAbility"
+
+	casttime="100"
+	castactiontime="100"
+	casteffect=""
+	cooldowntime="130000,120000,110000"
+	manacost="150"
+	dynamicprecache="effects/spawn.effect,effects/fear.effect"
+>
+	<onaction>
+		<!-- Art -->
+		<setstr0 a="altavatar_path" b="effects/spawn.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/spawn.effect" />
+		</else>
+	</onaction>
+	
+	<onimpact>
+		<areaofeffect
+			global="true"
+			targetselection="all"
+			targetscheme="nonillusion_enemy_heroes"
+			effecttype=""
+		>		
+			<spawnillusion
+				owner="source_entity"
+				source="source_entity"
+				target="target_entity"
+				count="1"
+				lifetime="4000,5000,6000"
+				receivedamagemultiplier="2.5"
+				inflictdamagemultiplier="0.4"
+				spawneffect=""
+				
+				playdeathanim="true"
+				pushentity="true"
+				uncontrollable="true"
+			/>
+			<setproxy entity="stack_entity" target="target_entity" />
+			<order command="follow" source="stack_entity" target="target_entity" />
+			<applystate name="State_SandWraith_Ability4_Illusion" target="stack_entity" proxy="target_entity" duration="-1" />
+			<applystate name="State_SandWraith_Ability4_Illusion_Pause" target="stack_entity" duration="1000" proxy="target_entity" />
+			<applystate name="State_SandWraith_Ability4_Sight" target="target_entity" proxy="stack_entity" duration="4000,5000,6000" />
+		</areaofeffect>
+
+		<starttimer duration="4000,5000,6000" />
+		<applystate name="State_SandWraith_Ability4_AbilitySwitch" target="source_entity" duration="4000,5000,6000" />
+	</onimpact>
+	
+	<modifier key="ult_boost" modpriority="90"
+	>	
+		<onimpact>
+			<areaofeffect
+				global="true"
+				targetselection="all"
+				targetscheme="nonillusion_enemy_heroes"
+				effecttype="StatusDebuff"
+			>
+				<spawnillusion
+					owner="source_entity"
+					source="source_entity"
+					target="target_entity"
+					count="1"
+					lifetime="4000,5000,6000"
+					receivedamagemultiplier="2.5"
+					inflictdamagemultiplier="0.4"
+					spawneffect=""
+					
+					playdeathanim="true"
+					pushentity="true"
+					uncontrollable="true"
+				/>
+				<setproxy entity="stack_entity" target="target_entity" />
+				<order command="follow" source="stack_entity" target="target_entity" />
+				<applystate name="State_SandWraith_Ability4_Illusion" target="stack_entity" proxy="target_entity" duration="-1" />
+				<applystate name="State_SandWraith_Ability4_Illusion_Pause" target="stack_entity" duration="1000" proxy="target_entity" />
+				<applystate name="State_SandWraith_Ability4_Sight" target="target_entity" proxy="stack_entity" duration="4000,5000,6000" />
+			</areaofeffect>
+
+			<starttimer duration="4000,5000,6000" />
+			<applystate name="State_SandWraith_Ability4_AbilitySwitch" target="source_entity" duration="4000,5000,6000" />
+		</onimpact>
+	</modifier>
+	
+
+	<modifier key="SandWraith4_Active" modpriority="100"
+		anim=""
+		ignorecooldown="true"
+		icon="/heroes/sand_wraith/alt9/ability_04/icon_b.dds"
+		actiontype="target_entity"
+		targetscheme="/heroes/sand_wraith/ability_04/my_illusions"
+		allowoutofrangecast="true"
+		range="99999"
+		manacost="0"
+		casttime="0"
+		castactiontime="0"
+		dontshowhovercast="true"
+		activatescheme="movement"
+	>
+		<onaction>
+			<!-- This event is needed if this ability gets blocked, e.g. by Null Stone -->
+			<expirestate name="State_SandWraith_Ability4_AbilitySwitch" target="source_entity" />
+			<resettimer />
+		</onaction>
+
+		<onimpact>
+			<pushentity searchfortarget="true" searchorigin="target_position" radius="99999" targetscheme="my_illusions" ignoreinvulnerable="true"/>
+			<compare a="stack_entity" b="0" op="ne">
+				<delete target="stack_entity" />
+				<disjoint target="source_entity" />
+				<teleport source="source_entity" target="stack_position" interpolate="false" />
+				<pushentityproxy entity="stack_entity" />
+				<order command="attack" source="source_entity" target="stack_entity" />
+				<resettimer />
+				
+				<hasmodifier name="ult_boost">
+					<spawnaffector name="Affector_SandWraith_Ability4" target="source_position" />
+					
+					<!-- Art -->
+					<setstr0 a="altavatar_path" b="effects/fear.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" source="source_position" target="source_position" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/fear.effect" source="source_position" target="source_position" />
+					</else>
+				</hasmodifier>
+
+				<expirestate name="State_SandWraith_Ability4_AbilitySwitch" target="source_entity" />
+			</compare>
+		</onimpact>
+	</modifier>
+</ability>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Devourer_Ability4_Stage1"
+	
+	icon="/heroes/Devourer/alt13/ability_04/icon.dds"
+	
+	modifierkey="devourerult_stage1_1,devourerult_stage2_1,devourerult_stage3_1"
+	modifierkey2="devourerult_stage1"
+>
+	<onframe />
+</state>

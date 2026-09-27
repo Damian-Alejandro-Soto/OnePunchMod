@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "andromeda",
+  "avatar": "alt3",
+  "files": [
+    "heroes\\andromeda\\base\\hero.entity",
+    "heroes\\andromeda\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\andromeda\\base\\ability_01\\projectile.entity",
+    "heroes\\andromeda\\base\\ability_01\\projectile.entity.onepunch_ability_managed"
+  ]
+}

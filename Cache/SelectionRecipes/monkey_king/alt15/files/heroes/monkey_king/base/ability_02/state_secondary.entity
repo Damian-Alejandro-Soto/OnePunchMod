@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_MonkeyKing_Ability2_Secondary"
+
+	icon="/heroes/monkey_king/alt15/ability_02/icon.dds"
+	ishidden="true"
+	
+	unitwalking="true"
+	buildingwalking="true"
+	cliffwalking="true"
+	disarmed="true"
+	
+	passiveeffect=""
+	effecttype=""
+	modifierkey="Speeding"
+>
+	
+</state>

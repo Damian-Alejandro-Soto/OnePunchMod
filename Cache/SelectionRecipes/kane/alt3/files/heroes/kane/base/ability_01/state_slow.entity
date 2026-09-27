@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Kane_Ability1_Slow"
+
+	icon="../../icon.dds"
+	ishidden="false"
+	passiveeffect="/heroes/kane/alt3/ability_01/effects/state.effect"
+	
+	movespeedslow=".2"
+	
+	negativeeffect="slowed"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+>
+</state>

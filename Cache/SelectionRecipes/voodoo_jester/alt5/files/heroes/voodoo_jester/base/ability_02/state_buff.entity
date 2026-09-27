@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_VoodooJester_Ability2_Buff"
+	
+	icon="icon.tga"
+	
+	passiveeffect="/heroes/voodoo/alt5/ability_02/effects/state_ally.effect"
+
+	effecttype="StatusBuff"
+	allowtransfer="true"
+>
+	<aura
+		gadget="Gadget_VoodooJester_Ability2_Ally"
+		radius="0"
+		targetscheme="self"
+	/>
+	
+	<aura name="voodoobuffaura" state="State_VoodooJester_Ability2_Buff_Aura" radius="500" effecttype="" targetscheme="other_ally_units" />
+	
+	<onframe>
+		<heal a="15,25,35,45" b="frametime" op="mult" ishealingovertime="true" />
+	</onframe>
+
+	<!-- make the aura stack -->
+	<modifier key="krosmode" modpriority="101"
+	>
+		<aura name="voodoobuffaura" state="State_VoodooJester_Ability2_Buff_Aura" radius="500" effecttype="Buff" targetscheme="ally_units" stack="true" />
+	</modifier>
+</state>

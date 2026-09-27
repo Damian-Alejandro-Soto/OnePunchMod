@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hero": "geomancer",
+  "avatar": "alt4",
+  "files": [
+    "heroes\\geomancer\\base\\hero.entity",
+    "heroes\\geomancer\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\geomancer\\base\\ability_01\\state.entity",
+    "heroes\\geomancer\\base\\ability_01\\state.entity.onepunch_ability_managed",
+    "heroes\\geomancer\\base\\ability_04\\gadget.entity",
+    "heroes\\geomancer\\base\\ability_04\\gadget.entity.onepunch_ability_managed",
+    "heroes\\geomancer\\base\\ability_04\\projectile.entity",
+    "heroes\\geomancer\\base\\ability_04\\projectile.entity.onepunch_ability_managed",
+    "heroes\\geomancer\\base\\ability_04\\state.entity",
+    "heroes\\geomancer\\base\\ability_04\\state.entity.onepunch_ability_managed",
+    "heroes\\geomancer\\base\\ability_04\\state_disabled.entity",
+    "heroes\\geomancer\\base\\ability_04\\state_disabled.entity.onepunch_ability_managed",
+    "heroes\\geomancer\\base\\projectile\\projectile.entity",
+    "heroes\\geomancer\\base\\projectile\\projectile.entity.onepunch_ability_managed"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "riftwalker",
+  "legacy_folder": "riftmage",
+  "avatar": "alt4",
+  "counts": {
+    "files": 124,
+    "models": 26,
+    "materials": 5,
+    "textures": 13,
+    "effects": 39,
+    "sounds": 41,
+    "icons": 9,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

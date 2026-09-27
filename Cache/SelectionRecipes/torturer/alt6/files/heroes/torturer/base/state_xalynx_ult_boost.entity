@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Torturer_Ult_Boost"
+
+	icon=""
+	passiveeffect="/heroes/xalynx/alt6/effects/boost.effect"
+	
+	ishidden="true"
+	
+	effecttype=""
+>
+	<modifier key="iamsheeped" modpriority="1000"
+		passiveeffect=""
+	/>
+</state>

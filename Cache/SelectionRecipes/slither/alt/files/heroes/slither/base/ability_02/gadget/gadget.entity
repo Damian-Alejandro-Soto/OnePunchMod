@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Slither_Ability2"
+	
+	icon="/heroes/ebulus/alt/ability_02/icon.dds"
+	portrait="../../../icon.dds"
+	model="/heroes/ebulus/alt/ability_02/gadget/ward.mdf"
+	skin=""
+	
+	passiveeffect=""
+	spawneffect=""
+	
+	
+	
+	
+	preglobalscale="1.2"
+	infoheight="150"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="20"
+	targetoffset="0 0 64"
+
+	movespeed="0"
+	turnrate="320"
+	ismobile="false"
+	canrotate="true"
+	unitwalking="false"
+	
+	maxhealth="60,110,160,210"
+	healthregen="0"
+	maxmana="0"
+	manaregen="0"
+
+	armor="0"
+	magicarmor="0"
+	immunity="GadgetImmunity"
+
+	canattack="true"
+	hoveronmap="false"
+	
+	attackduration="800"
+	attackactiontime="250"
+	attackcooldown="1500"
+	attackdamagemin="10,20,30,40"
+	attackdamagemax="10,20,30,40"
+	attacknumanims="1"
+	attackoffset="0 25 80"
+	attackprojectile="Projectile_SlitherWardAttack"
+	attackrange="600"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Ranged"
+	
+	aggrorange="600"
+	sightrangeday="650"
+	sightrangenight="650"
+
+	experiencebounty="6"
+	goldbountymin="10"
+	goldbountymax="15"
+	
+	portraitcampos="0 0 0"
+	
+	lifetime="40000"
+	showlifetime="true"
+	
+	unittype="PseudoPet"
+	
+	corpsetime="2000"
+>
+
+</gadget>

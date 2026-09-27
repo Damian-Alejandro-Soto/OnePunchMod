@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "hero": "keeper_of_the_forest",
+  "avatar": "alt4",
+  "files": [
+    "heroes\\keeper_of_the_forest\\base\\hero.entity",
+    "heroes\\keeper_of_the_forest\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\keeper_of_the_forest\\base\\ability_02\\pet.entity",
+    "heroes\\keeper_of_the_forest\\base\\ability_02\\pet.entity.onepunch_ability_managed",
+    "heroes\\keeper_of_the_forest\\base\\ability_03\\pet.entity",
+    "heroes\\keeper_of_the_forest\\base\\ability_03\\pet.entity.onepunch_ability_managed",
+    "heroes\\keeper_of_the_forest\\base\\ability_04\\pet\\pet.entity",
+    "heroes\\keeper_of_the_forest\\base\\ability_04\\pet\\pet.entity.onepunch_ability_managed"
+  ]
+}

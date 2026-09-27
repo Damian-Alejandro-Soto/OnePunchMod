@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_KeeperOfTheForest_Ability4"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/treant/alt7/ability_04/effects/state.effect"
+	
+	disarmed="true"
+	immobilized2="true"
+	revealed="true"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+
+	negativeeffect="immobilized"
+>
+	<onframe />
+	
+	<modifier key="kotf_R_active" modpriority="100" exclusive="true">
+		<onframe>
+			<damage effecttype="Magic DOT" amount="125" b="frametime" op="mult"/>
+		</onframe>
+	</modifier>
+	
+	<onexpired>
+		<!-- If purged, then apply the unpurgeable duration at a reduced duration -->
+		<compare a="dispelled" b="1" op="eq">
+			<setvar0 a="lifetime_remaining" b="0.2" op="mult" />
+			<applystate name="State_KeeperOfTheForest_Ability4_Unpurgeable" target="target_entity" duration="var0" />
+		</compare>
+	</onexpired>
+</state>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Gauntlet_Ability4"
+
+	speed="1000"
+	gravity="0"
+
+	canturn="true"
+	flying="true"
+	flyheight="80"
+ impacteffect="/heroes/gauntlet/alt5/ability_04/effects/impact.effect">
+	<onspawn>
+		<setparam a="0"/>
+	</onspawn>
+	
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<dispel target="target_entity" type="StatusBuff" />
+				<applystate name="State_Stunned" target="target_entity" duration="1500" />
+				<applystate name="State_Gauntlet_Ability4" target="target_entity" duration="1500" />
+				
+				<!-- Damage -->
+				<hasmodifier name="ult_boost">
+					<damage effecttype="Magic" amount="450,600,750" />
+				</hasmodifier>
+				<else>
+					<damage effecttype="Magic" amount="300,450,600" />
+				</else>	
+			</onimpact>
+		</combatevent>
+		
+		<!-- Art -->
+		<setstr0 a="altavatar_path" b="effects/link.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="proxy_entity" target="target_entity" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/link.effect" source="proxy_entity" target="target_entity" />
+		</else>
+		<kill target="proxy_entity" source="" />
+		<expirestate name="State_Gauntlet_NoHand" target="this_owner_entity"/>
+	</onimpact>
+</projectile>

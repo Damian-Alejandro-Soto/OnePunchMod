@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Glacius3"
+	
+	icon="/heroes/frosty/alt6/ability_03/icon.dds"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	
+	manaregen="1.0"
+	dontshowhovercast="true"
+	actiontype="passive"
+>
+	<aura name="frostyaura" state="State_Glacius_Ability3" radius="9999" targetscheme="ally_heroes" ignoreinvulnerable="true" />
+
+	<!-- Make the aura stack and not work with illusions -->
+	<modifier key="krosmode" modpriority="101"
+	>
+		<aura name="frostyaura" state="State_Glacius_Ability3" radius="9999" targetscheme="ally_heroes" propagatecondition="not_illusion" ignoreinvulnerable="true" stack="true" />
+	</modifier>
+</ability>

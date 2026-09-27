@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Slither_Ability_02_Seed"
+
+	speed="2000"
+	gravity="15000"
+
+	modelscale="1.5"
+	model="../ability_01/effects/model.mdf"
+	
+	traileffect="/heroes/ebulus/alt4/ability_02/effects/trail.effect"
+>
+	<onimpact>
+		<spawnunit name="Gadget_Slither_Ability2" count="1" target="target_position" />
+	</onimpact>
+</projectile>

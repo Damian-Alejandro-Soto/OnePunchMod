@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "hero": "dampeer",
+  "avatar": "alt7",
+  "files": [
+    "heroes\\dampeer\\base\\hero.entity",
+    "heroes\\dampeer\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\dampeer\\base\\ability_01\\affector.entity",
+    "heroes\\dampeer\\base\\ability_01\\affector.entity.onepunch_ability_managed",
+    "heroes\\dampeer\\base\\ability_02\\ability.entity",
+    "heroes\\dampeer\\base\\ability_02\\ability.entity.onepunch_ability_managed"
+  ],
+  "dependencies": [
+    "heroes/andromeda/ability_03/effects/orbit.mdf",
+    "heroes/flint_beastwood/alt12/ability_01/effects/star/model.mdf",
+    "heroes/hellbringer/ability_04/effects/star.mdf"
+  ]
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Armadon_Ability4"
+
+	speed="1500"
+	gravity="0"
+
+	modelscale="1.5"
+	model="/shared/models/invis.mdf"
+	traileffect="/heroes/armadon/alt3/ability_04/trail.effect"
+	effectscale="1.0"
+>
+	<onimpact>
+			<setstr0 a="altavatar_path" b="effects/cast_end.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="source_position" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/cast_end.effect" target="source_position" occlude="true" />
+		</else>
+		<pushtool name="Ability_Armadon2" />
+		<setvar0 a="source_level" source="stack_entity" />
+		<spawnaffector name="Affector_Armadon_Ability2" target="source_position" level="var0" />
+		
+		<pushtool name="Ability_Armadon1" />
+		<setvar0 a="source_level" source="target_entity" />
+		<areaofeffect
+			radius="650"
+			center="this_position"
+			targetscheme="enemy_units"
+			targetselection="all"
+			effecttype="Magic"			
+		>
+			<!-- No bounce from SotM R as it would be way too powerful with 2+ targets -->
+			<spawnprojectile name="Projectile_Armadon_Ability1" target="target_entity" level="var0" proxy="target_entity" param="0" />
+		</areaofeffect>
+		
+		<!-- W Visuals -->
+				<setstr0 a="altavatar_path" b="../ability_02/effects/cast.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_entity" target="source_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="../ability_02/effects/cast.effect" source="source_entity" target="source_entity" occlude="true" />
+		</else>
+	</onimpact>	
+	
+</projectile>

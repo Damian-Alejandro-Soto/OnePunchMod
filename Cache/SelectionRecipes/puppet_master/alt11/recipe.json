@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "hero": "puppet_master",
+  "avatar": "alt11",
+  "files": [
+    "heroes\\puppet_master\\base\\hero.entity",
+    "heroes\\puppet_master\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\puppet_master\\base\\ability_01\\gadget.entity",
+    "heroes\\puppet_master\\base\\ability_01\\gadget.entity.onepunch_ability_managed",
+    "heroes\\puppet_master\\base\\ability_02\\ability.entity",
+    "heroes\\puppet_master\\base\\ability_02\\ability.entity.onepunch_ability_managed",
+    "heroes\\puppet_master\\base\\ability_02\\state_expire.entity",
+    "heroes\\puppet_master\\base\\ability_02\\state_expire.entity.onepunch_ability_managed",
+    "heroes\\puppet_master\\base\\ability_03\\projectile.entity",
+    "heroes\\puppet_master\\base\\ability_03\\projectile.entity.onepunch_ability_managed",
+    "heroes\\puppet_master\\base\\ability_04\\pet.entity",
+    "heroes\\puppet_master\\base\\ability_04\\pet.entity.onepunch_ability_managed"
+  ]
+}

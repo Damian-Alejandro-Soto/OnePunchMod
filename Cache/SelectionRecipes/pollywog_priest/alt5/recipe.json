@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hero": "pollywog_priest",
+  "avatar": "alt5",
+  "files": [
+    "heroes\\pollywog_priest\\base\\hero.entity",
+    "heroes\\pollywog_priest\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\pollywog_priest\\base\\ability_01\\ability.entity",
+    "heroes\\pollywog_priest\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\pollywog_priest\\base\\ability_01\\affector.entity",
+    "heroes\\pollywog_priest\\base\\ability_01\\affector.entity.onepunch_ability_managed",
+    "heroes\\pollywog_priest\\base\\ability_02\\ability.entity",
+    "heroes\\pollywog_priest\\base\\ability_02\\ability.entity.onepunch_ability_managed",
+    "heroes\\pollywog_priest\\base\\ability_02\\state.entity",
+    "heroes\\pollywog_priest\\base\\ability_02\\state.entity.onepunch_ability_managed",
+    "heroes\\pollywog_priest\\base\\ability_04\\gadget_ward.entity",
+    "heroes\\pollywog_priest\\base\\ability_04\\gadget_ward.entity.onepunch_ability_managed",
+    "heroes\\pollywog_priest\\base\\projectile\\attack_projectile.entity",
+    "heroes\\pollywog_priest\\base\\projectile\\attack_projectile.entity.onepunch_ability_managed"
+  ]
+}

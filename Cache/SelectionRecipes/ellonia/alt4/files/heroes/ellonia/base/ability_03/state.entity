@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Ellonia_Ability3"
+
+	icon="/heroes/ellonia/alt4/ability_03/iconfrost.dds"
+	passiveeffect="/heroes/ellonia/alt4/ability_03/effects/state_slow_ability3.effect"
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+	movespeedslowpercharge="0.02"
+
+	negativeeffect="slowed"
+>
+	
+	<onimpact />
+</state>

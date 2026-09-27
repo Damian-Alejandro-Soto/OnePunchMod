@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Solstice"
+	
+	team="Legion"
+	icon="/heroes/solstice/alt5/icon.dds"
+	portrait="/heroes/solstice/alt5/icon.dds"
+	model="/heroes/solstice/alt5/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/solstice/alt5/effects/dayform.effect"
+	spawneffect=""
+	
+	selectedsound="/heroes/solstice/alt5/sounds/voice_day/select_%.wav"
+	selectedflavorsound="/heroes/solstice/alt5/sounds/voice_day/select_flavour_%.wav"
+	confirmmovesound="/heroes/solstice/alt5/sounds/voice_day/move_%.wav"
+	confirmattacksound="/heroes/solstice/alt5/sounds/voice_day/attack_%.wav"
+	nomanasound="/heroes/solstice/alt5/sounds/voice_day/no_mana.wav"
+	cooldownsound="/heroes/solstice/alt5/sounds/voice_day/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/solstice/alt5/sounds/voice_day/taunt_prior.wav"
+	tauntkillsound="/heroes/solstice/alt5/sounds/voice_day/taunt_after.wav"
+	
+	preglobalscale="1.9"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="140"
+	boundsradius="24"
+	selectionradius="62"
+	targetoffset="0 0 92"
+	infoheight="200"
+
+	category="physical magic"
+	difficulty="2.5"
+
+	midrating="2"
+	junglerating="5"
+	carryrating="3"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="4"
+	soloofflanerating="0"
+	rangedrating="0"
+	meleerating="5"
+	
+	movespeed="310"
+	turnrate="1080"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="0.2"
+	magicarmor="5"
+
+	inventory0="Ability_Solstice1"
+	inventory1="Ability_Solstice2"
+	inventory2="Ability_Solstice3"
+	inventory3="Ability_Solstice4"
+	inventory4="Ability_AttributeBoost"
+	inventory5="Ability_Solstice4a"
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="500" 
+	attackcooldown="1700"
+	attackdamagemin="26"
+	attackdamagemax="30"
+	attacknumanims="2"
+	attackoffset="0 0 100"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="strength"
+	strength="25"
+	strengthperlevel="2.8"
+	agility="18"
+	agilityperlevel="2.0"
+	intelligence="16"
+	intelligenceperlevel="1.6"
+
+	corpsetime="2000"
+	corpsefadetime="2000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	
+	previewpassiveeffect="/heroes/solstice/alt5/effects/dayform_store.effect"
+
+	previewpos="0 0 -50"
+	previewangles="0 0 0"
+	previewscale="1.8"
+	
+	storepassiveeffect="/heroes/solstice/alt5/effects/dayform_store.effect"
+	storemodel="/heroes/solstice/alt5/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 -10"
+	storescale="1.6"
+ attackanim="attack_%"
+        icon2="/heroes/solstice/alt5/icon.dds"
+        portraitcampos="1 10 6"
+        previewmodel="/heroes/solstice/alt5/preview.mdf"
+        tooleffectkeyname0="effect_UpgradedBoots"
+        tooleffectpath0="/heroes/solstice/alt5/ultimate_legs/body.effect"
+        tooleffectgroup0="legs"
+        tooleffectkeyname1=""
+        tooleffectpath1="/heroes/solstice/alt5/base_legs/body.effect"
+        tooleffectgroup1="legs"
+        tooleffectkeyname2="effect_brand"
+        tooleffectpath2="/heroes/solstice/alt5/ultimate_weapon/body.effect"
+        tooleffectgroup2="weapon"
+        tooleffectkeyname3="Item_GrimoireOfPower"
+        tooleffectpath3="/heroes/solstice/alt5/ultimate_weapon/body.effect"
+        tooleffectgroup3="weapon"
+        tooleffectkeyname4="Item_Pierce"
+        tooleffectpath4="/heroes/solstice/alt5/ultimate_weapon/body.effect"
+        tooleffectgroup4="weapon"
+        tooleffectkeyname5="Item_Brutalizer"
+        tooleffectpath5="/heroes/solstice/alt5/ultimate_weapon/body.effect"
+        tooleffectgroup5="weapon"
+        tooleffectkeyname7="Item_Critical1"
+        tooleffectpath7="/heroes/solstice/alt5/ultimate_weapon/body.effect"
+        tooleffectgroup7="weapon"
+        tooleffectkeyname8=""
+        tooleffectpath8="/heroes/solstice/alt5/base_weapon/body.effect"
+        tooleffectgroup8="weapon"
+        tooleffectkeyname9="Item_Energizer"
+        tooleffectpath9="/heroes/solstice/alt5/ultimate_cape/body.effect"
+        tooleffectgroup9="cape"
+        tooleffectkeyname10="Item_PowerSupply"
+        tooleffectpath10="/heroes/solstice/alt5/ultimate_cape/body.effect"
+        tooleffectgroup10="cape"
+        tooleffectkeyname11="Item_Stealth"
+        tooleffectpath11="/heroes/solstice/alt5/ultimate_cape/body.effect"
+        tooleffectgroup11="cape"
+        tooleffectkeyname12="Item_Sasuke"
+        tooleffectpath12="/heroes/solstice/alt5/ultimate_cape/body.effect"
+        tooleffectgroup12="cape"
+        tooleffectkeyname13="Item_Shield2"
+        tooleffectpath13="/heroes/solstice/alt5/ultimate_cape/body.effect"
+        tooleffectgroup13="cape"
+        tooleffectkeyname14="Item_BehemothsHeart"
+        tooleffectpath14="/heroes/solstice/alt5/ultimate_cape/body.effect"
+        tooleffectgroup14="cape"
+        tooleffectkeyname15=""
+        tooleffectpath15="/heroes/solstice/alt5/base_cape/body.effect"
+        tooleffectgroup15="cape"
+        tooleffectkeyname16="Item_Protect"
+        tooleffectpath16="/heroes/solstice/alt5/ultimate_arms/body.effect"
+        tooleffectgroup16="arms"
+        tooleffectkeyname17="Item_SolsBulwark"
+        tooleffectpath17="/heroes/solstice/alt5/ultimate_arms/body.effect"
+        tooleffectgroup17="arms"
+        tooleffectkeyname18="Item_DaemonicBreastplate"
+        tooleffectpath18="/heroes/solstice/alt5/ultimate_arms/body.effect"
+        tooleffectgroup18="arms"
+        tooleffectkeyname19="Item_Gloves3"
+        tooleffectpath19="/heroes/solstice/alt5/ultimate_arms/body.effect"
+        tooleffectgroup19="arms"
+        tooleffectkeyname20="Item_Insanitarius"
+        tooleffectpath20="/heroes/solstice/alt5/ultimate_arms/body.effect"
+        tooleffectgroup20="arms"
+        tooleffectkeyname21="Item_Excruciator"
+        tooleffectpath21="/heroes/solstice/alt5/ultimate_arms/body.effect"
+        tooleffectgroup21="arms"
+        tooleffectkeyname22=""
+        tooleffectpath22="/heroes/solstice/alt5/base_arms/body.effect"
+        tooleffectgroup22="arms"
+        tooleffectkeyname23="Item_Immunity"
+        tooleffectpath23="/heroes/solstice/alt5/ultimate_head/body.effect"
+        tooleffectgroup23="head"
+        tooleffectkeyname24="Item_LifeSteal5"
+        tooleffectpath24="/heroes/solstice/alt5/ultimate_head/body.effect"
+        tooleffectgroup24="head"
+        tooleffectkeyname25="Item_ElderParasite"
+        tooleffectpath25="/heroes/solstice/alt5/ultimate_head/body.effect"
+        tooleffectgroup25="head"
+        tooleffectkeyname26="Item_Shield2"
+        tooleffectpath26="/heroes/solstice/alt5/ultimate_head/body.effect"
+        tooleffectgroup26="head"
+        tooleffectkeyname27="Item_BehemothsHeart"
+        tooleffectpath27="/heroes/solstice/alt5/ultimate_head/body.effect"
+        tooleffectgroup27="head"
+        tooleffectkeyname28="Item_WhisperingHelm"
+        tooleffectpath28="/heroes/solstice/alt5/ultimate_head/body.effect"
+        tooleffectgroup28="head"
+        tooleffectkeyname29=""
+        tooleffectpath29="/heroes/solstice/alt5/base_head/body.effect"
+        tooleffectgroup29="head"
+        tooleffectkeyname=""
+        tooleffectpath=""
+        tooleffectgroup="">
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+
+	<recommendeditem name="Item_HomecomingStone" />
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_AbyssalSkull" />
+	
+	<recommendeditem name="Item_Puzzlebox" />
+	<recommendeditem name="Item_Insanitarius" />
+	<recommendeditem name="Item_Shieldbreaker" />
+	<recommendeditem name="Item_ShrunkenHead" />
+	<recommendeditem name="Item_DaemonicBreastplate" />
+	<recommendeditem name="Item_BehemothsHeart" />
+	<recommendeditem name="Item_SymbolOfRage" />
+	
+	<onspawn>
+		<applystate name="State_Solstice_DayFX" continuous="true" />
+		<applystate name="State_Solstice_Spawn_Mute" target="source_entity" duration="3000" ignoreinvulnerable="true" />
+	</onspawn>
+	
+	<modifier key="ult_boost" modpriority="101"
+    >
+        <aura state="State_Solstice_Ult_Boost" radius="0" targetscheme="self"/>
+    </modifier>
+
+	<modifier key="iamsheeped" modpriority="100"
+		passiveeffect=""
+	/>
+	
+	<modifier key="Solstice_Spawn_Mute" modpriority="2"
+		selectedsound=""
+		selectedflavorsound=""
+	/>
+
+	<modifier key="Night_Solstice" modpriority="100"
+		icon2="/heroes/solstice/alt5/icon.dds"
+		portrait="/heroes/solstice/alt5/icon.dds"
+		model="/heroes/solstice/alt5/night_form/model.mdf"
+		modelscale="1.2"
+		passiveeffect="/heroes/solstice/alt5/effects/nightform.effect"
+		portraitcampos="20 -50 20"
+		
+		selectedsound="night_form/sounds/voice/select_%.wav"
+		selectedflavorsound="night_form/sounds/voice/select_flavour_%.wav"
+		confirmmovesound="night_form/sounds/voice/move_%.wav"
+		confirmattacksound="night_form/sounds/voice/attack_%.wav"
+		nomanasound="night_form/sounds/voice/no_mana.wav"
+		cooldownsound="night_form/sounds/voice/cooldown.wav"
+		tauntedsound="night_form/sounds/voice/taunt_prior.wav"
+		tauntkillsound="night_form/sounds/voice/taunt_after.wav"
+	/>
+</hero>

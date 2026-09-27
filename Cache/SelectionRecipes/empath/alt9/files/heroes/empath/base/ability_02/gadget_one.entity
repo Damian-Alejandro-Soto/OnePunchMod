@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Empath_Ability2_One"
+		
+	icon=""
+	portrait=""
+	modelscale="1"
+	model="/heroes/empath/alt9/ability_02/effects/wall/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/empath/alt9/ability_02/effects/state_gadget_one.effect"
+	spawneffect=""
+	
+	isselectable="false"
+	iscontrollable="false"
+	invulnerable="true"
+	
+	
+	unitwalking="true"
+	drawonmap="false"
+	
+	preglobalscale="1.0"
+	effectscale="1.0"
+	boundsheight="38"
+	boundsradius="42"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+	flying="false"
+	clearvision="true"
+	
+	sightrangeday="200"
+	sightrangenight="200"
+
+	attacktype="none"
+	
+	lifetime="3000,3400,3800,4200"
+	corpsetime="0"
+	deathtime="0"
+	corpsefadetime="0"
+	blocking="false"
+	noblockneutralspawn="true"
+	dynamicprecache="effects/state_gadget_expire.effect"
+	
+>
+	<onexpired>
+		<setstr0 a="altavatar_path" b="effects/state_gadget_expire.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="this_position" target="this_position" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/state_gadget_expire.effect" source="this_position" target="this_position" />
+		</else>
+	</onexpired>	
+</gadget>

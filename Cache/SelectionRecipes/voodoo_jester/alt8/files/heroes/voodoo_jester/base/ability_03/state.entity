@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_VoodooJester_Ability3"
+
+	icon="icon.tga"
+	
+	impactinterval="4000"
+	
+	passiveeffect="/heroes/voodoo/alt8/ability_03/effects/state.effect"
+	
+	effecttype="ForceTransferrable"
+	allowtransfer="true"
+>
+	<oninflict>
+		<entitytype type="Pet_PuppetMaster_Ability4">
+			<setactivemodifierkey name="voodoo_puppet" />
+		</entitytype>
+		<else>
+			<savehealth />
+		</else>
+	</oninflict>
+
+	<onframe>
+		<damage effecttype="Magic DOT" amount="8,12,16,20" b="frametime" op="mult" />
+	</onframe>
+
+	<onimpact>
+		<damage effecttype="Magic" amount="0.16,0.24,0.32,0.40" b="healthlost" op="mult" />
+		<popup name="bonus_damage" a="result" source="target_entity" target="source_entity" />
+	</onimpact>
+	
+	<modifier key="voodoo_puppet" modpriority="100">
+		<onframe>
+			<savehealth />
+			<!-- Duration increased by 1 frame to include the last tick of Cursed Ground -->
+			<evaluate a="frametime" b="1000" />
+			<changeduration b="result" op="add" />
+			<damage effecttype="Magic DOT" amount="8,12,16,20" b="frametime" op="mult" />
+			<setactivemodifierkey name="" />
+		</onframe>
+	</modifier>
+</state>

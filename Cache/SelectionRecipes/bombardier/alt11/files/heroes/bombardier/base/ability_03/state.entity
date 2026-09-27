@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Bombardier_Ability3"
+	
+	icon="/heroes/bomb/alt11/ability_03/icon.dds"
+	passiveeffect=""
+	
+	maxcharges="6"
+	
+	effecttype=""	
+	allowtransfer="false"
+	dynamicprecache="effects/explosion.effect,effects/impact.effect"
+>
+	<oninflict>
+		<!-- Damage -->
+		<setvar0 a="20,30,40,50" />
+		<damage effecttype="Magic Returned" amount="1" b="var0" op="mult" />
+		
+		<!-- Art -->
+		<setstr0 a="altavatar_path" b="effects/explosion.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_position" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/explosion.effect" source="target_position" occlude="true" />
+		</else>		
+	</oninflict>
+	
+	<onrefresh>
+		<compare a="charges" b="6" op="lt">
+			<!-- Damage -->
+			<setvar0 a="20,30,40,50" />
+			<damage effecttype="Magic Returned" amount="1" b="var0" op="mult" />
+
+			<!-- Art -->
+			<setstr1 a="altavatar_path" b="effects/impact.effect" op="add" />
+			<exists path="str1">
+				<playeffectdynamic effect="str1" source="target_position" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/impact.effect" source="target_position" occlude="true" />
+			</else>
+			<setstr0 a="altavatar_path" b="effects/explosion.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="target_position" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/explosion.effect" source="target_position" occlude="true" />
+			</else>
+		</compare>
+	</onrefresh>
+</state>

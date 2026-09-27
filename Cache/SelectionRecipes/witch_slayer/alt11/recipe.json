@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "hero": "witch_slayer",
+  "avatar": "alt11",
+  "files": [
+    "heroes\\witch_slayer\\base\\hero.entity",
+    "heroes\\witch_slayer\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\witch_slayer\\base\\state_witchslayer_ult_boost.entity",
+    "heroes\\witch_slayer\\base\\state_witchslayer_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\witch_slayer\\base\\ability_02\\state.entity",
+    "heroes\\witch_slayer\\base\\ability_02\\state.entity.onepunch_ability_managed",
+    "heroes\\witch_slayer\\base\\ability_03\\state.entity",
+    "heroes\\witch_slayer\\base\\ability_03\\state.entity.onepunch_ability_managed",
+    "heroes\\witch_slayer\\base\\ability_04\\ability.entity",
+    "heroes\\witch_slayer\\base\\ability_04\\ability.entity.onepunch_ability_managed",
+    "heroes\\witch_slayer\\base\\ability_04\\projectile.entity",
+    "heroes\\witch_slayer\\base\\ability_04\\projectile.entity.onepunch_ability_managed",
+    "heroes\\witch_slayer\\base\\ability_04\\state_sound.entity",
+    "heroes\\witch_slayer\\base\\ability_04\\state_sound.entity.onepunch_ability_managed",
+    "heroes\\witch_slayer\\base\\projectile\\projectile.entity",
+    "heroes\\witch_slayer\\base\\projectile\\projectile.entity.onepunch_ability_managed"
+  ]
+}

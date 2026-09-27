@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Drunkenmaster_Ability2_Buff"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/drunkenmaster/alt6/ability_02/effects/state_buff.effect"
+	
+	damage="35,50,65,80"
+	movespeed="15,20,25,30"
+	
+	effecttype="StatusBuff"
+	allowtransfer="true"
+>
+	<oninflict>
+		<!-- Drunk charges -->
+		<pushtool name="Ability_DrunkenMaster3" />
+		<compare a="source_charges" b="4" op="ge" source="stack_entity">
+			<setcharges a="source_charges" b="4" op="sub" source="stack_entity" entity="stack_entity" />
+			<setactivemodifierkey name="drunken_powerup" entity="this_entity" />
+		</compare>
+	</oninflict>
+	
+	<onrefresh>
+		<!-- Drunk charges -->
+		<pushtool name="Ability_DrunkenMaster3" />
+		<compare a="source_charges" b="4" op="ge" source="stack_entity">
+			<setcharges a="source_charges" b="4" op="sub" source="stack_entity" entity="stack_entity" />
+			<setactivemodifierkey name="drunken_powerup" entity="this_entity" />
+		</compare>
+	</onrefresh>
+	
+	<modifier key="drunken_powerup" modpriority="100"
+		movespeed="65,70,75,80"
+	>	
+	</modifier>
+</state>

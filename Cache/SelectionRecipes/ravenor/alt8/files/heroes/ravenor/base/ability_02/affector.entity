@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Ravenor_Ability2"
+	
+	radius="300"
+	
+	impactdelay="100"
+	maximpactsperinterval="1"
+	maximpactspertarget="1"
+	targetscheme="visible_enemy_units"
+	targetselection="closest"
+	effecttype="Magic"
+	persist="true"
+	
+	impacteffect="/heroes/ravenor/alt8/ability_02/effects/lightning.effect"
+	linkeffect="effects/link.effect"
+>
+	<onimpact>
+		<chain count="2,3,4,5" />
+		<damage effecttype="Magic" amount="50,75,100,125" />
+	</onimpact>
+</affector>

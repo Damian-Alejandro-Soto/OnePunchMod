@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state	
+	name="State_PuppetMaster_Ability2_Sight"
+	icon="/heroes/puppetmaster/alt12/ability_02/icon.dds"
+	ishidden="true"
+	effecttype=""
+>		
+	<aura 
+		gadget="Gadget_PuppetMaster_Ability2"
+		radius="0" 
+		targetscheme="self"
+	/>
+</state>

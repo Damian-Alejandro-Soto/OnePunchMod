@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Pyromancer_Frost_Art"
+	
+	icon=""
+	passiveeffect="/heroes/pyromancer/alt/effects/boost.effect"
+	
+	ishidden="true"
+	
+	deathpersist="true"
+	effecttype=""
+>
+
+</state>

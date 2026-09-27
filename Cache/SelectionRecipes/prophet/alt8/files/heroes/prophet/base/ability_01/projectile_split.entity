@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Prophet_Ability1_Split"
+
+	speed="2250"
+	gravity="0"
+
+	flying="true"
+	flyheight="80"
+
+	impactstealth="true"
+
+	modelscale="0.6"
+	model="/shared/models/invis.mdf"
+	traileffect="/heroes/prophet/alt8/ability_01/effects/trail.effect"
+	effectscale="0.6"
+	impacteffect=""
+>
+	<onimpact>
+		<combatevent effecttype="AbilityBasedProjectile">
+			<onimpact>
+				<applystate name="State_Prophet_Ability1" duration="4000" />
+				
+				<setvar0 a="80,130,180,230" /> <!-- Intended amount of Final Damage after the Damage % Increase -->
+				<setvar1 a="0.04,0.08,0.12,0.16" b="1" op="add" /> <!-- Damage % Increase -->
+				<setvar0 a="var0" b="var1" op="div" />
+				<damage amount="1" b="var0" op="mult" effecttype="Magic" />
+			</onimpact>
+		</combatevent>
+	</onimpact>
+</projectile>

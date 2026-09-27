@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_WitchSlayer_Ability4_Sound"
+
+	icon="../../icon.dds"
+	passiveeffect=""
+	
+	ishidden="true"
+	deathpersist="true"
+	
+	dynamicprecache="/heroes/witch_slayer/alt/ability_04/effects/impact_kill.effect"
+>
+	<oninflict>
+	</oninflict>
+	
+	<onexpired>
+		<targettype type="alive" />
+		<else>			
+			<!-- if we taunted them, don't play the sound -->
+			<compare a="this_proxy_entity" b="target_entity" op="ne">
+				<pausevoiceovers duration="4000" />
+				<delayannouncer duration="3500" />
+			</compare>
+			
+			<setstr0 a="altavatar_path" b="effects/impact_kill.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" target="source_entity" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/impact_kill.effect" target="source_entity" occlude="true" />
+			</else>
+		</else>
+	</onexpired>
+
+</state>

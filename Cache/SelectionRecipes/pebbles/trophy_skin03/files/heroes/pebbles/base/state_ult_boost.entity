@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Pebbles_Ult_Boost"
+	
+	icon=""
+	passiveeffect="/heroes/rocky/trophy_skin/effects/boost_03.effect"
+	
+	ishidden="true"
+	
+	effecttype=""
+>
+	
+	<oninflict>
+		<getcooldown target="source_entity" ability="2" />
+		<setvar0 a="result" />
+		<compare a="var0" b="0" op="gt">
+			<startcooldown toolname="Ability_Pebbles4" duration="var0" />
+		</compare>
+	</oninflict>
+	
+	<modifier key="iamsheeped" modpriority="1000"
+		passiveeffect=""
+	/>
+</state>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_MasterOfArms"
+
+	team="Legion"
+	icon="/heroes/master_of_arms/trophy_skin/icon.dds"
+	portrait="/heroes/master_of_arms/trophy_skin/icon.dds"
+	model="/heroes/master_of_arms/trophy_skin/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/master_of_arms/trophy_skin/effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.8"
+	modelscale="1"
+	effectscale="1"
+	boundsheight="140"
+	boundsradius="24"
+	selectionradius="50"
+	targetoffset="0 0 64"
+
+	category="magic cc"
+	difficulty="3"
+
+	midrating="3"
+	junglerating="0"
+	carryrating="5"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="5"
+	soloofflanerating="0"
+	rangedrating="5"
+	meleerating="0"
+	
+	movespeed="295"
+	turnrate="720"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="0.92"
+	magicarmor="5.0"
+
+	inventory0="Ability_MasterOfArms1"
+	inventory1="Ability_MasterOfArms2"
+	inventory2="Ability_MasterOfArms3"
+	inventory3="Ability_MasterOfArms4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory7=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="250"
+	attackcooldown="1700"
+	attackdamagemin="19"
+	attackdamagemax="25"
+	attacknumanims="2"
+	attackoffset="22 100 95"
+	attackprojectile="Projectile_MasterOfArmsAttack"
+	attackrange="500"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="Agility"
+	strength="16"
+	strengthperlevel="2.0"
+	agility="21"
+	agilityperlevel="2.2"
+	intelligence="16"
+	intelligenceperlevel="2.4"
+	
+
+	previewpos="0 0 -50"
+	previewangles="0 0 0"
+	previewscale="1.4"
+	previewpassiveeffect="ability_03/effects/state_blue_preview.effect"
+
+	storemodel="/heroes/master_of_arms/trophy_skin/preview.mdf"
+	storepos="0 0 -30"
+	storeangles="0 0 -10"
+	storescale="1.6"
+	storepassiveeffect="/heroes/master_of_arms/trophy_skin/effects/body_preview.effect"
+	
+	corpsetime="1750"
+	corpsefadetime="4500"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+        icon2="/heroes/master_of_arms/trophy_skin/icon.dds"
+        previewmodel="/heroes/master_of_arms/trophy_skin/preview.mdf">
+	<recommendeditem name="Item_ManaPotion" />	
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_Bottle" />
+	
+	<onspawn>
+		<setactivemodifierkey entity="this_entity" name="MasterOfArms_Electrical" />
+	</onspawn>
+	
+	<modifier key="iamsheeped" modpriority="101"
+		passiveeffect=""
+	/>
+	
+	<modifier key="MasterOfArms_Electrical" modpriority="90"
+		attackprojectile="Projectile_MasterOfArmsAttack_Electrical"
+		attackanim="attack_elec"
+		attackoffset="5 100 125"
+	/>
+	
+	<modifier key="MasterOfArms_Magnetic" modpriority="90"
+		attackprojectile="Projectile_MasterOfArmsAttack_Magnetic"
+		attackanim="attack_1_red"
+		attackoffset="5 100 95"
+		attackactioneffect="projectile/effects/magnetic_attack_action.effect"
+	/>
+	
+	<modifier key="ult_boost" modpriority="100"
+		attackprojectile="Projectile_MasterOfArmsAttack_Boost"
+		attackoffset="5 100 110"
+	/>
+</hero>

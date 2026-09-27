@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Cthulhuphant_Ability2"
+
+	icon="/heroes/cthulhuphant/alt7/ability_02/icon.dds"
+	
+	impactinterval="1000"
+	
+	effecttype=""
+	dynamicprecache="effects/shock.effect"
+>
+	
+	<oninflict>
+		<pushtool name="Ability_Cthulhuphant2" />
+		<setvar0 a="0.5" /> <!-- Lifetime (s) -->
+		<getrange entity="stack_entity" />
+		<setvar1 a="result" b="0" op="sub" /> <!-- Cast range, minus the initial spawn distance -->
+		<setvar1 a="var1" b="var0" op="div" /> <!-- Final Affector Speed, v = d/t -->		
+		<setvar0 a="var0" b="1000" op="mult" /> <!-- Lifetime (s) to (ms) -->
+		<spawnaffector name="Affector_Cthulhuphant_Ability2" target="source_position" speed="var1" lifetime="var0" />
+		<setaccumulator value="0" />
+	</oninflict>
+
+	<onimpact>
+		<pushtool name="Ability_Cthulhuphant2" />
+		<setvar0 a="0.5" /> <!-- Lifetime (s) -->
+		<getrange entity="stack_entity" />
+		<setvar1 a="result" b="0" op="sub" /> <!-- Cast range, minus the initial spawn distance -->
+		<setvar1 a="var1" b="var0" op="div" /> <!-- Final Affector Speed, v = d/t -->		
+		<setvar0 a="var0" b="1000" op="mult" /> <!-- Lifetime (s) to (ms) -->
+		<setaccumulator value="accumulator" valueb="1" valueop="add" />
+		<spawnaffector name="Affector_Cthulhuphant_Ability2" target="source_position" speed="var1" lifetime="var0" param="accumulator" />
+	</onimpact>
+</state>

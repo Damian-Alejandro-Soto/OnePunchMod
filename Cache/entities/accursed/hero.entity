@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Accursed"
+
+	team="Hellbourne"
+	icon="icon.tga"
+	animatedportrait=""
+	portrait="icon.tga"
+	model="model.mdf"
+	skin=""
+	
+	passiveeffect="effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="sounds/voice/select_%.wav"
+	selectedflavorsound="sounds/voice/select_flavour_%.wav"
+	confirmmovesound="sounds/voice/move_%.wav"
+	confirmattacksound="sounds/voice/attack_%.wav"
+	nomanasound="sounds/voice/no_mana.wav"
+	cooldownsound="sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="sounds/voice/taunt_prior.wav"
+	tauntkillsound="sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.6967"
+	modelscale="1.2"
+	effectscale="0.9"
+	boundsheight="240"
+	boundsradius="36"
+	selectionradius="60"
+	targetoffset="0 0 92"
+	infoheight="200"
+	
+	category="tank protective"
+	difficulty="1.5"
+
+	midrating="2"
+	junglerating="0"
+	carryrating="3"
+	hardsupportrating="4"
+	softsupportrating="5"
+	offlanerating="3"
+	soloofflanerating="2"
+	rangedrating="0"
+	meleerating="5"
+
+	movespeed="300"
+	turnrate="630"
+	turnsmoothing="0.1"
+
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="1.12"
+	magicarmor="5"
+
+	inventory0="Ability_Accursed1"
+	inventory1="Ability_Accursed2"
+	inventory2="Ability_Accursed3"
+	inventory3="Ability_Accursed4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1000"
+	attackactiontime="450"
+	attackcooldown="1700"
+	attackdamagemin="31"
+	attackdamagemax="33"
+	attacknumanims="3"
+	attackoffset="0 30 100"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="strength"
+	strength="23"
+	strengthperlevel="2.7"
+	agility="17"
+	agilityperlevel="1.5"
+	intelligence="26"
+	intelligenceperlevel="2.0"
+	
+
+	previewpos="0 0 -60"
+	previewangles="0 0 0"
+	previewscale="1.4"
+	
+	storemodel="model.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 0"
+	storescale="1.6"
+>
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_BloodChalice" />
+	<recommendeditem name="Item_Striders" />
+	<recommendeditem name="Item_PlatedGreaves" />
+	<recommendeditem name="Item_PostHaste" />
+	<recommendeditem name="Item_SorceryBoots" />
+	<recommendeditem name="Item_PegasusBoots" />
+	<recommendeditem name="Item_RingoftheTeacher" />
+	<recommendeditem name="Item_RefreshingOrnament" />
+	<recommendeditem name="Item_Soultrap" />
+	<recommendeditem name="Item_RingofSorcery" />
+	<recommendeditem name="Item_TabletofCommand" />
+	<recommendeditem name="Item_AbyssalSkull" />
+	<recommendeditem name="Item_Astrolabe" />
+	<recommendeditem name="Item_Stormspirit" />
+	<recommendeditem name="Item_KuldrasSheepstick" />
+	<recommendeditem name="Item_JadeSpire" />
+	<recommendeditem name="Item_StaffoftheMaster" />
+	<recommendeditem name="Item_SandScepter" />
+	<recommendeditem name="Item_SolsBulwark" />
+	<recommendeditem name="Item_ShamansHeadress" />
+	<recommendeditem name="Item_BarbedArmor" />
+	<recommendeditem name="Item_BehemothsHeart" />
+	<recommendeditem name="Item_ShieldoftheFive" />
+	<recommendeditem name="Item_BarrierIdol" />
+	<recommendeditem name="Item_Insanitarius" />
+	<recommendeditem name="Item_Brutalizer" />
+	
+	<gooditemagainst name="Item_ManaBattery" />
+	<gooditemagainst name="Item_PowerSupply" />
+	<gooditemagainst name="Item_KuldrasSheepstick" />
+	<gooditemagainst name="Item_SandScepter" />
+	<gooditemagainst name="Item_Riftshards" />
+	
+	
+	
+	<onspawn>
+		<setactivemodifierkey name="Accursed_Sound" />
+	</onspawn>
+	
+	<onrespawn>
+		<setactivemodifierkey name="Accursed_Sound" />
+	</onrespawn>
+	
+	<modifier key="iamsheeped" modpriority="1000"
+		passiveeffect=""
+	/>
+	
+	<modifier key="Accursed_E_Leveled" modpriority="100"
+		attackanim="ability_3_attack_%"
+		attacknumanims="3"
+	/>
+	
+	<!-- Staff of the master upgrade effect-->
+	<modifier key="ult_boost" modpriority="100"
+		passiveeffect="ability_04/effects/boost.effect"
+	>
+		<aura state="State_Accursed_Ult_Boost" radius="0" targetscheme="self"/>
+	</modifier>
+
+</hero>
+<!--old preglobal scale was: 1.665-->

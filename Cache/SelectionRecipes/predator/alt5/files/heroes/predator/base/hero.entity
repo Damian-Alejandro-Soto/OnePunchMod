@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Predator"
+
+	team="Legion"
+	icon="/heroes/predator/alt5/icon.dds"
+	portrait="/heroes/predator/alt5/icon.dds"
+	model="/heroes/predator/alt5/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/predator/alt5/effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn_predator.effect"
+	selectedsound="/heroes/predator/alt5/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/predator/alt5/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/predator/alt5/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/predator/alt5/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/predator/alt5/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/predator/alt5/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/predator/alt5/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/predator/alt5/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="1.8"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="140"
+	boundsradius="24"
+	selectionradius="54"
+	targetoffset="0 0 92"
+
+	movespeed="295"
+	turnrate="720"
+	turnsmoothing="0.05"
+
+	category="physical tank"
+	difficulty="1"
+
+	midrating="2"
+	junglerating="1"
+	carryrating="5"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="2"
+	soloofflanerating="0"
+	rangedrating="0"
+	meleerating="5"
+
+	maxhealth="150"
+	healthregen="1"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-1.0"
+	magicarmor="5"
+
+	inventory0="Ability_Predator1"
+	inventory1="Ability_Predator2"
+	inventory2="Ability_Predator3"
+	inventory3="Ability_Predator4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="840"
+	attackactiontime="390"
+	attackcooldown="1700"
+	attackdamagemin="30"
+	attackdamagemax="39"
+	attacknumanims="2"
+	attackoffset="85 65 110"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect="effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="strength"
+	strength="22"
+	strengthperlevel="2.5"
+	agility="18"
+	agilityperlevel="1.8"
+	intelligence="15"
+	intelligenceperlevel="1.8"
+		
+	corpsetime="2500"
+	corpsefadetime="4000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+	
+
+	previewpos="-10 0 -50"
+	previewangles="0 0 0"
+	previewscale="1.1"
+	
+	storemodel="/heroes/predator/alt5/preview.mdf"
+	storepos="0 0 -20"
+	storeangles="0 0 -25"
+	storescale="1.55"
+ attackanim="attack_%"
+        icon2="/heroes/predator/alt5/icon.dds"
+        infoheight="170"
+        previewmodel="/heroes/predator/alt5/preview.mdf"
+        storepassiveeffect="/heroes/predator/alt5/effects/body_store.effect"
+        tooleffectkeyname0="effect_Boots"
+        tooleffectpath0="/heroes/predator/alt5/upgraded_legs/body.effect"
+        tooleffectgroup0="boots"
+        tooleffectkeyname1="Item_ElderParasite"
+        tooleffectpath1="/heroes/predator/alt5/upgraded_spine/body.effect"
+        tooleffectgroup1="hair"
+        tooleffectpath2="/heroes/predator/alt5/base_hair/body.effect"
+        tooleffectgroup2="hair"
+        tooleffectkeyname3="Item_BehemothsHeart"
+        tooleffectpath3="/heroes/predator/alt5/upgraded_shoulders/body.effect"
+        tooleffectkeyname4="Item_SolsBulwark"
+        tooleffectpath4="/heroes/predator/alt5/upgraded_horns/body.effect"
+        tooleffectgroup4="horns"
+        tooleffectkeyname5="Item_DaemonicBreastplate"
+        tooleffectpath5="/heroes/predator/alt5/upgraded_horns/body.effect"
+        tooleffectgroup5="horns"
+        tooleffectkeyname7="effect_FireBrand"
+        tooleffectpath7="/heroes/predator/alt5/upgraded_weapon/body.effect"
+        tooleffectgroup7="brand"
+        tooleffectkeyname8="effect_IceBrand"
+        tooleffectpath8="/heroes/predator/alt5/upgraded_weapon/body.effect"
+        tooleffectgroup8="brand"
+        tooleffectpath9="/heroes/predator/alt5/base_weapon/body.effect"
+        tooleffectgroup9="brand"
+        tooleffectkeyname10="Item_Brutalizer"
+        tooleffectpath10="/heroes/predator/alt5/upgraded_guts/body.effect"
+        tooleffectgroup10="guts"
+        tooleffectkeyname11="Item_Pierce"
+        tooleffectpath11="/heroes/predator/alt5/upgraded_guts/body.effect"
+        tooleffectgroup11="guts"
+        tooleffectkeyname12="Item_Insanitarius"
+        tooleffectpath12="/heroes/predator/alt5/upgraded_guts/body.effect"
+        tooleffectgroup12="guts">
+	<recommendeditem name="Item_ManaPotion" />
+	<recommendeditem name="Item_MinorTotem" />
+	<recommendeditem name="Item_RunesOfTheBlight" />
+	<recommendeditem name="Item_HealthPotion" />
+	<recommendeditem name="Item_HomecomingStone" />
+	
+	<recommendeditem name="Item_FortifiedBracer" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_GhostMarchers" />
+	<recommendeditem name="Item_Insanitarius" />
+	<recommendeditem name="Item_Frostburn" />
+	<recommendeditem name="Item_ElderParasite" />
+	<recommendeditem name="Item_DaemonicBreastplate" />
+	<recommendeditem name="Item_Shieldbreaker" />
+	<recommendeditem name="Item_BehemothsHeart" />
+
+	<modifier key="Predator_E_Leveled" modpriority="100"
+		attackanim="ability_3_attack_%"
+		attacknumanims="2"
+	/>
+
+	<modifier key="iamsheeped" modpriority="100"
+		passiveeffect=""
+	/>
+	
+	<modifier key="ult_boost" modpriority="100">
+		<aura state="State_Predator_Ult_Boost" radius="0" targetscheme="self" continuous="false" />
+	</modifier>
+
+	<modifier key="alt5_footsteps" model="/heroes/predator/alt5/model_footsteps.mdf" />
+</hero>

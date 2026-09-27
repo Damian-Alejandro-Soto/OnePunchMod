@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_MasterOfArms_Ability1_First"
+	icon="icon.tga"
+
+	passiveeffect="/heroes/master_of_arms/alt10/ability_01/effects/state_zap.effect"
+	
+	stunned="true"
+	allowtransfer="true"
+	effecttype="StatusDisable"
+
+	negativeeffect="stunned"
+	
+	modifierkey="MasterOfArms1_Debuff"
+>
+</state>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Nymphora_Ability1"
+	
+	icon="../../icon.dds"
+	portrait=""
+	model="/shared/models/invis.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/fairy/alt7/ability_01/effects/charge.effect"
+	spawneffect=""
+	
+	isselectable="false"
+	iscontrollable="false"
+	invulnerable="true"
+	
+	
+	
+	deathtime="0"
+	corpsetime="0"
+	
+	preglobalscale="1.12"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="64"
+	boundsradius="16"
+	selectionradius="20"
+	targetoffset="0 0 0"
+
+	canrotate="false"
+	ismobile="false"
+	flying="false"
+	unitwalking="true"
+	cliffwalking="true"
+	buildingwalking="true"
+	treewalking="true"
+	
+	drawonmap="true"
+	hoveronmap="true"
+	
+	lifetime="3000"
+
+	immunity="GadgetImmunity"
+
+	attacktype="none"
+	noblockneutralspawn="true"
+	
+	dynamicprecache="/heroes/fairy/alt7/ability_01/effects/damageimpact.effect,../alt7/ability_01/effects/healimpact.effect,effects/death.effect"
+>
+	<onspawn>
+		<setaccumulator value="40" /> <!-- Initial Damage/Heal -->
+	</onspawn>
+	
+	<onframe>
+		<evaluate a="30,50,70,90" b="frametime" op="mult" />
+		<changeaccumulator b="result" op="add" />
+	</onframe>
+	
+	<ondeath>
+		<areaofeffect
+			center="this_position"
+			radius="425"
+			targetscheme="all_units"
+			targetselection="all"
+			effecttype="SuperiorMagic"
+		>
+			<targettype type="ally">
+				<heal source="this_owner_entity" a="accumulator" />
+				
+				<!-- VFX -->
+				<setstr0 a="altavatar_path" b="effects/healimpact.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" source="target_entity" target="" occlude="true" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="effects/healimpact.effect" source="target_entity" target="" occlude="true" />
+				</else>
+			</targettype>
+			<else>
+				<damage effecttype="Magic" source="source_owner_entity" amount="1" b="accumulator" op="mult" />
+				
+				<!-- VFX -->
+				<setstr0 a="altavatar_path" b="effects/damageimpact.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" source="target_entity" target="" occlude="true" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="effects/damageimpact.effect" source="target_entity" target="" occlude="true" />
+				</else>
+			</else>
+		</areaofeffect>
+		
+		<!-- VFX/SFX on Death/Expiration -->
+		<setstr0 a="altavatar_path" b="effects/death.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="this_position" target="" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/death.effect" source="this_position" target="" occlude="true" />
+		</else>
+	</ondeath>
+	
+	<onexpired>
+		<areaofeffect
+			center="this_position"
+			radius="425"
+			targetscheme="all_units"
+			targetselection="all"
+			effecttype="Magic"
+		>
+			<targettype type="ally">
+				<heal source="this_owner_entity" a="accumulator" />
+				
+				<!-- VFX -->
+				<setstr0 a="altavatar_path" b="effects/healimpact.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" source="target_entity" target="" occlude="true" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="effects/healimpact.effect" source="target_entity" target="" occlude="true" />
+				</else>
+			</targettype>
+			<else>
+				<damage effecttype="Magic" source="source_owner_entity" amount="1" b="accumulator" op="mult" />
+				
+				<!-- VFX -->
+				<setstr0 a="altavatar_path" b="effects/damageimpact.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" source="target_entity" target="" occlude="true" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="effects/damageimpact.effect" source="target_entity" target="" occlude="true" />
+				</else>
+			</else>
+		</areaofeffect>
+		
+		<!-- VFX/SFX on Death/Expiration -->
+		<setstr0 a="altavatar_path" b="effects/death.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="this_position" target="" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/death.effect" source="this_position" target="" occlude="true" />
+		</else>
+	</onexpired>
+</gadget>

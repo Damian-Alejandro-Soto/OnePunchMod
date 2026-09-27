@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Rhapsody_Ability2_ally_squares"
+	
+	model="/shared/models/invis.mdf"
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	iscontrollable="false"
+	canrotate="false"
+	ismobile="false"
+	effectscale="1"
+
+	attacktype="none"
+
+	deathtime="0"
+	corpsetime="0"
+	
+	invulnerable="true"
+	flying="true"
+	drawonmap="false"
+	
+	passiveeffect="/heroes/rhapsody/alt/ability_02/effects/state_ally_gadget.effect"
+	
+	noblockneutralspawn="true" 
+
+>
+
+</gadget>

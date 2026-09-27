@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "glacius",
+  "legacy_folder": "frosty",
+  "avatar": "female",
+  "counts": {
+    "files": 67,
+    "models": 26,
+    "materials": 2,
+    "textures": 6,
+    "effects": 2,
+    "sounds": 31,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

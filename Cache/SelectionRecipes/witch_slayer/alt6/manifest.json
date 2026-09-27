@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "witch_slayer",
+  "legacy_folder": "witch_slayer",
+  "avatar": "alt6",
+  "counts": {
+    "files": 316,
+    "models": 155,
+    "materials": 15,
+    "textures": 34,
+    "effects": 34,
+    "sounds": 78,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

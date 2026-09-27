@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Arachna2"
+
+	statuseffecttooltip="State_Arachna_Ability2"
+	icon="/heroes/arachna/alt2/ability_02/icon.dds"
+	anim="ability_2"
+	casttime="1000"
+	castactiontime="0"
+
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="target_self"
+	frontqueue="true"
+	casteffecttype=""
+	inheritmovement="true"
+	nonaggressive="true"
+	
+	manacost="50"
+	cooldowntime="20000"
+	
+	nostun="false,false,false,true"
+	nosilence="false,false,false,true"
+>
+	<onimpact>
+		<dispel type="StatusDebuff" />
+		<applystate name="State_Arachna_Ability2" duration="5000" target="source_entity"/>
+	</onimpact>
+</ability>

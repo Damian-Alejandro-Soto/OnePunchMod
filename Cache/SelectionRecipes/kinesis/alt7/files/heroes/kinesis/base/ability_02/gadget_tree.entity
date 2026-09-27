@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Kinesis2_Tree"
+	
+	icon=""
+	portrait=""
+	model="/shared/models/invis.mdf"
+	passiveeffect="/heroes/kenisis/alt7/ability_02/effects/tree_state.effect"
+
+	preglobalscale="1"
+	modelscale="1.75"
+	effectscale="0.9"
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	iscontrollable="false"
+	selectionradius="0"
+	targetoffset="0 0 0"
+
+	canturn="true"
+	canrotate="true"
+	ismobile="false"
+
+	movespeed="350"
+	turnrate="900"
+
+	attacktype="none"
+	combattype="Ranged"
+
+	sightrangeday="0"
+	sightrangenight="0"
+
+	deathtime="0"
+	corpsetime="0"
+	
+	flying="true"
+	
+	invulnerable="true"
+	drawonmap="false"
+	unitwalking="true"
+	treewalking="true"
+	buildingwalking="true"
+	cliffwalking="true"
+	
+	lifetime="8000"
+	
+	unittype="Levitated"
+>
+	<modifier key="Kinesis_Tree_Moves"
+		ismobile="true"
+	>
+
+		<onframe>
+			<order command="follow" force="true" source="this_entity" target="this_owner_entity" />
+		</onframe>
+
+	</modifier>
+</gadget>

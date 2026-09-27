@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_MonkeyKing_Ability2"
+
+	radius="250"
+	
+	lifetime="300"
+	maximpactspertarget="1"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	persist="true"
+ dynamicprecache="/heroes/monkey_king/alt9/ability_02/effects/impact.effect">
+	<onspawn>
+		<setstr0 a="altavatar_path" b="effects/aoe_impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="this_position" target="this_position" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/aoe_impact.effect" source="this_position" target="this_position" occlude="true" />
+		</else>
+	</onspawn>
+	
+	<onimpact>
+		<!-- Dynamic visual effects -->
+		<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="this_position" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impact.effect" target="this_position" occlude="true" />
+		</else>
+
+		<applystate name="State_MonkeyKing_Ability2_Slow" duration="2000" effecttype="Physical" />
+		<applystate name="State_MonkeyKing_Ability2_Damage" duration="3000" effecttype="Physical" />
+	</onimpact>
+</affector>

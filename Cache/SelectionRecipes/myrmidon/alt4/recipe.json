@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "myrmidon",
+  "avatar": "alt4",
+  "files": [
+    "heroes\\myrmidon\\base\\hero.entity",
+    "heroes\\myrmidon\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

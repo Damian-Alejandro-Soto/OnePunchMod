@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "master_of_arms",
+  "avatar": "alt2",
+  "files": [
+    "heroes\\master_of_arms\\base\\hero.entity",
+    "heroes\\master_of_arms\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

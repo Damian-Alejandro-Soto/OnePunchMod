@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Gemini_Ability2_Fire2"
+
+	speed="2000"
+	gravity=""
+	
+	effectscale="1"
+	modelscale="1.65"
+	canturn="true"
+	flying="true"
+	flyheight="0"
+	
+	model="/heroes/gemini/alt4/ability_02/model_trail_fire.mdf"
+	impacteffect=""
+	traileffect="/heroes/gemini/alt4/ability_02/effects/trailfire.effect"
+	
+	touchradius="180"
+	maxtouchespertarget="1"
+	touchradiusdiradjust="true"
+	touchtargetscheme="enemy_units"
+	toucheffecttype="Magic"
+>
+	<onimpact>
+		<expirestate name="State_Gemini_Ability2" target="target_owner_entity" />
+		<kill target="proxy_entity" source="" />
+	</onimpact>
+	
+	<ontouch>
+		<applystate name="State_Gemini_Ability2_Damage1" duration="1000" />
+	</ontouch>
+</projectile>

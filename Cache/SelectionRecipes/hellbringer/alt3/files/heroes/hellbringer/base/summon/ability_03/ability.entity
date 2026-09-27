@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Malphas3"
+
+	icon="/heroes/hellbringer/alt3/summon/ability_03/icon.dds"
+	
+	maxlevel="3"
+
+	actiontype="passive"
+	attackspeed="0.2,0.4,0.6"
+>
+	<onframe />
+</ability>

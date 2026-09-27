@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_ShadowBlade_Ability2_Morph"
+
+	icon="/heroes/shadowblade/alt7/ability_02/icon.dds"
+	passiveeffect=""
+	displaylevel="true"
+	propagatetoillusions="true"
+	
+	movespeed="25,30,35,40"
+	agility="4,8,12,16"
+
+	modifierkey="ShadowBlade_W_Form"
+	
+	effecttype=""
+	dynamicprecache="effects/transform.effect"
+>
+	<onframe />
+	
+	<oninflict>
+		<expirestate name="State_ShadowBlade_Ability1_Morph" target="source_entity" />
+		<expirestate name="State_ShadowBlade_Ability3_Morph" target="source_entity" />
+	</oninflict>
+	
+	<onexpired>
+		<setstr0 a="altavatar_path" b="effects/transform.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_entity" target="source_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffect effect="effects/transform.effect" source="source_entity" target="source_entity" />
+		</else>
+	</onexpired>
+	
+	<modifier key="iamsheeped" modpriority="1000"
+		passiveeffect=""
+	/>
+</state>

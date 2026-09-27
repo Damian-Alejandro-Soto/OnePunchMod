@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chipper_Ability2_Tooltip"
+	
+	icon="../../icon.dds"
+	passiveeffect="/heroes/chipper/trophy_skin/model_02/ability_02/effects/state.effect"
+>
+</state>

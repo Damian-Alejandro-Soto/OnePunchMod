@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "magmus",
+  "avatar": "alt3",
+  "files": [
+    "heroes\\magmus\\base\\hero.entity",
+    "heroes\\magmus\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\magmus\\base\\ability_01\\state.entity",
+    "heroes\\magmus\\base\\ability_01\\state.entity.onepunch_ability_managed"
+  ]
+}

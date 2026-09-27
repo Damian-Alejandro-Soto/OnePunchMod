@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hero": "ophelia",
+  "avatar": "alt5",
+  "files": [
+    "heroes\\ophelia\\base\\hero.entity",
+    "heroes\\ophelia\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\ophelia\\base\\state_ophelia_ult_boost.entity",
+    "heroes\\ophelia\\base\\state_ophelia_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\ophelia\\base\\ability_02\\ability.entity",
+    "heroes\\ophelia\\base\\ability_02\\ability.entity.onepunch_ability_managed",
+    "heroes\\ophelia\\base\\ability_02\\state.entity",
+    "heroes\\ophelia\\base\\ability_02\\state.entity.onepunch_ability_managed",
+    "heroes\\ophelia\\base\\ability_03\\ability.entity",
+    "heroes\\ophelia\\base\\ability_03\\ability.entity.onepunch_ability_managed",
+    "heroes\\ophelia\\base\\ability_04\\ability.entity",
+    "heroes\\ophelia\\base\\ability_04\\ability.entity.onepunch_ability_managed",
+    "heroes\\ophelia\\base\\projectile\\projectile.entity",
+    "heroes\\ophelia\\base\\projectile\\projectile.entity.onepunch_ability_managed"
+  ]
+}

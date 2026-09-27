@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Magebane_Ability4"
+
+	radius="800"
+	
+	targetselection="closest"
+	targetscheme="enemy_heroes"
+	effecttype="Magic"
+ dynamicprecache="/heroes/javaras/alt4/ability_04/effects/impact_mini.effect">
+	<onspawn>
+	</onspawn>
+	
+	<onimpact>
+		<compare a="param" b="0" op="eq">
+			<delete target="this_entity" source="" />
+		</compare>
+		<else>
+			<hasmodifier name="Javaras_R_Marked" entity="target_entity" />
+			<else>
+				<damage effecttype="Magic" amount="0.6" b="param" op="mult" />
+				<setparam a="0" />
+				
+				<!-- Dynamic VFX -->
+				<setstr0 a="altavatar_path" b="effects/impact_mini.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" source="target_entity" target="target_entity" occlude="true" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="effects/impact_mini.effect" source="target_entity" target="target_entity" occlude="true" />
+				</else>
+			</else>
+		</else>		
+	</onimpact>
+</affector>

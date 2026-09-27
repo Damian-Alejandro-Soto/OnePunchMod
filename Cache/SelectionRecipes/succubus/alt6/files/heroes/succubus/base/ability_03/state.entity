@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Succubus_Ability3"
+
+	icon="../../icon.dds"
+	
+	impactinterval="1000"
+	
+	immunitytype="IndirectImmunity"
+	modifierkey="Succubus_E_active"
+	
+	passiveeffect="/heroes/succubis/alt6/ability_03/effects/state.effect"
+	stunned="true"
+	frozen="true"
+	smackable="true"
+
+	nothreat="true"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+
+	negativeeffect="frozen"
+	dynamicprecache="effects/impact.effect"
+>
+	<onframe />
+	
+	<oninflict>
+		<damage effecttype="" amount="0.000001" source="this_proxy_entity" />
+	</oninflict>
+	
+	<onattackedstart>
+		<cantarget targetscheme="enemy_non_player_controlled_creeps">
+			<order command="stop" force="true" source="target_entity" />
+		</cantarget>
+		<else>
+			<cantarget targetscheme="all" effecttype="Magic">
+				<applystate name="State_Succubus_Ability3" duration="3000" inflictor="this_proxy_entity" proxy="this_proxy_entity"  />
+				<applystate name="State_Succubus_Ability3_Invulnerable" inflictor="this_proxy_entity" proxy="this_proxy_entity" duration="1000"  />
+				<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+				<exists path="str0">
+					<playeffectdynamic effect="str0" source="target_entity" />
+				</exists>
+				<else>
+					<playeffectdynamic effect="effects/impact.effect" source="target_entity" />
+				</else>
+				<expirestate name="State_Succubus_Ability3" target="source_entity" />
+			</cantarget>
+		</else>
+	</onattackedstart>
+
+	<ondamaged>
+		<compare a="source_damage" b="0" op="gt">
+			<condition test="not_entity_type State_Succubus_Ability3" target="inflictor_entity" >
+				<expire />
+			</condition>
+		</compare>
+	</ondamaged>
+	
+	<onimpact>
+		<damage effecttype="" amount="0.000001" source="this_proxy_entity" />
+		<setaccumulator value="1" />
+		<cantarget targetscheme="enemy_units">
+			<changehealth a="-30" />
+			<compare a="target_health" b="30" op="le">
+				<kill target="target_entity" source="this_proxy_entity" />
+			</compare>
+		</cantarget>
+	</onimpact>
+	
+	<onexpired>
+		<playanim name="idle" target="target_entity" />
+	</onexpired>
+	
+	
+	
+	
+	
+	
+</state>

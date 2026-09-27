@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Hammerstorm3"
+
+	icon="/heroes/Hammerstorm/alt11/ability_03/icon.dds"
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+
+	actiontype="no_target"
+	frontqueue="true"
+	inheritmovement="true"
+	noninterrupting="true"
+	nobreakchannel="true"
+	nonaggressive="true"
+	
+	casttime="0"
+	castactiontime="0"
+	cooldowntime="1000"
+	cooldowntype="hammerstormcleave"
+	noresponse="true"
+	
+	targetradius="450"
+	
+    toolvalue1="30,40,50,60"
+	dynamicprecache="effects/impact.effect,effects/splash_damage.effect"
+>
+	<onlearn>
+		<setactivemodifierkey name="on" />
+	</onlearn>
+	
+	<onimpact />
+	
+	<onattackimpact />
+	
+	<modifier key="off" modpriority="100"
+		icon="/shared/icons/off.tga"
+		displayname="true"
+	>
+		<onimpact>
+			<setactivemodifierkey name="on" />
+		</onimpact>
+		
+		<onattackimpact />
+		
+		<onframe />
+	</modifier>
+	
+	<modifier key="on" modpriority="100"
+		displayname="true"
+	>
+		<onimpact>
+			<setactivemodifierkey name="off" />
+		</onimpact>
+		
+		<onattackimpact>
+				<setstr0 a="altavatar_path" b="ability_03/effects/impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_entity" target="source_entity" />
+		</exists>
+		<else>
+			<setstr1 a="altavatar_path" b="effects/impact.effect" op="add" />
+			<exists path="str1">
+				<playeffectdynamic effect="str1" source="target_entity" target="source_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/impact.effect" source="target_entity" target="source_entity" />
+			</else>
+		</else>
+			<cantarget targetscheme="enemy_units">
+				<splashdamage a="total_adjusted_damage" b="0.3,0.4,0.5,0.6" op="mult" radius="450" effecttype="Physical Splash Cleave" targetscheme="enemy_units" centerontarget="true" />
+				<pushentity entity="target_entity" />
+				
+				<!-- Art for cleave -->
+				<setpos0 position="source_entity" positionend="stack_position" positionmodifier="pointonline" positionvalue="350" />
+				<areaofeffect
+					targetselection="all"
+					targetscheme="enemy_units"
+					center="target_entity"
+					radius="450"
+					effecttype="Physical Splash Cleave"
+					ignore="stack_entity"
+				>
+					<!-- playeffect doesn't work if the modifier has no name. -->
+				<setstr0 a="altavatar_path" b="ability_03/effects/splash_damage.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_entity" target="stack_entity" />
+		</exists>
+		<else>
+			<setstr1 a="altavatar_path" b="effects/splash_damage.effect" op="add" />
+			<exists path="str1">
+				<playeffectdynamic effect="str1" source="target_entity" target="stack_entity" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/splash_damage.effect" source="target_entity" target="stack_entity" />
+			</else>
+		</else>
+				</areaofeffect>
+			</cantarget>
+		</onattackimpact>
+		
+		<onframe />
+	</modifier>	
+</ability>

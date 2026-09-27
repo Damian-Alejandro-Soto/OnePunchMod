@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "rampage",
+  "legacy_folder": "rampage",
+  "avatar": "alt8",
+  "counts": {
+    "files": 72,
+    "models": 21,
+    "materials": 3,
+    "textures": 9,
+    "effects": 9,
+    "sounds": 30,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

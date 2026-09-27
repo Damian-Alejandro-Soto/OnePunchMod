@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Pebbles_Ability1"
+
+	radius="200"
+	lifetime="1000"
+	impactdelay="200"
+	impactinterval="250"
+	maxintervals="4"
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	impacteffect="effects/stun_impact.effect"
+	destroytrees="true"
+ dynamicprecache="/heroes/rocky/alt/ability_01/effects/affector.effect">
+	<onspawn>
+		<!-- VFX -->
+		<setstr0 a="altavatar_path" b="effects/area_impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_position" target="" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/area_impact.effect" source="target_position" target="" occlude="true" />
+		</else>
+	</onspawn>
+	
+	<oninterval>
+			<!-- VFX -->
+		<setstr0 a="altavatar_path" b="effects/affector.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_position" target="" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/affector.effect" source="target_position" target="" occlude="true" />
+		</else>	
+	</oninterval>
+
+	<onimpact>
+		<applystate name="State_Stunned" duration="1250" />
+		<applystate name="State_Pebbles_Ability1" duration="250" />
+		<damage effecttype="Magic" amount="25,40,55,70" />
+	</onimpact>
+</affector>

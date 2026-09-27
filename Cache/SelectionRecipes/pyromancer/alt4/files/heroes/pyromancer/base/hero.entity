@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Pyromancer"
+
+	team="Legion"
+	icon="/heroes/pyromancer/alt4/icon.dds"
+	portrait="/heroes/pyromancer/alt4/icon.dds"
+	model="/heroes/pyromancer/alt4/model.mdf"
+	skin=""
+	
+	passiveeffect="/heroes/pyromancer/alt4/effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn_pyromancer.effect"
+	selectedsound="/heroes/pyromancer/alt4/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/pyromancer/alt4/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/pyromancer/alt4/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/pyromancer/alt4/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/pyromancer/alt4/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/pyromancer/alt4/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/pyromancer/alt4/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/pyromancer/alt4/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="2.3"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="112"
+	boundsradius="24"
+	selectionradius="55"
+	targetoffset="0 0 92"
+
+	category="magic"
+	difficulty="2"
+
+	midrating="5"
+	junglerating="0"
+	carryrating="2"
+	hardsupportrating="2"
+	softsupportrating="5"
+	offlanerating="3"
+	soloofflanerating="0"
+	rangedrating="4"
+	meleerating="0"
+
+	movespeed="295"
+	turnrate="630"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="0.25"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="-0.7"
+	magicarmor="5"
+
+	inventory0="Ability_Pyromancer1"
+	inventory1="Ability_Pyromancer2"
+	inventory2="Ability_Pyromancer3"
+	inventory3="Ability_Pyromancer4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="1200"
+	attackactiontime="450"
+	attackcooldown="1700"
+	attackdamagemin="22"
+	attackdamagemax="26"
+	attacknumanims="2"
+	attackoffset="0 30 150"
+	attackprojectile="Projectile_PyromancerAttack_Alt4"
+	attackrange="525"
+	attackstarteffect=""
+	attackactioneffect=""
+	attackimpacteffect=""
+	attacktype="ranged"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="800"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+	
+	corpsetime="4000"
+	corpsefadetime="3000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+
+	primaryattribute="intelligence"
+	strength="18"
+	strengthperlevel="1.5"
+	agility="16"
+	agilityperlevel="1.5"
+	intelligence="24"
+	intelligenceperlevel="3.2"
+	
+
+	previewpos="0 0 -130"
+	previewangles="0 0 0"
+	previewscale="2.5"
+	
+	storemodel="/heroes/pyromancer/alt4/preview.mdf"
+	storepos="0 0 -25"
+	storeangles="0 0 0"
+	storescale="2.0"
+ attackanim="attack_%"
+        icon2="/heroes/pyromancer/alt4/icon.dds"
+        infoheight="205"
+        previewmodel="/heroes/pyromancer/alt4/preview.mdf"
+        previewpassiveeffect="/heroes/pyromancer/alt4/effects/body_store.effect"
+        storepassiveeffect="/heroes/pyromancer/alt4/effects/body_store.effect"
+        tooleffectkeyname0="effect_Boots"
+        tooleffectpath0="/heroes/pyromancer/alt4/upgraded_boots/body.effect"
+        tooleffectgroup0="boots"
+        tooleffectkeyname1=""
+        tooleffectpath1="/heroes/pyromancer/alt4/base_boots/body.effect"
+        tooleffectgroup1="boots"
+        tooleffectkeyname2="effect_GraveLocket"
+        tooleffectpath2="/heroes/pyromancer/alt4/upgraded_helm/body.effect"
+        tooleffectgroup2="helm"
+        tooleffectkeyname3="Item_SacrificialStone"
+        tooleffectpath3="/heroes/pyromancer/alt4/upgraded_helm/body.effect"
+        tooleffectgroup3="helm"
+        tooleffectkeyname4=""
+        tooleffectpath4="/heroes/pyromancer/alt4/base_helm/body.effect"
+        tooleffectgroup4="helm"
+        tooleffectkeyname5="Item_SpellShards"
+        tooleffectpath5="/heroes/pyromancer/alt4/upgraded_chest/body.effect"
+        tooleffectgroup5="chest"
+        tooleffectkeyname6="Item_GrimoireOfPower"
+        tooleffectpath6="/heroes/pyromancer/alt4/upgraded_chest/body.effect"
+        tooleffectgroup6="chest"
+        tooleffectkeyname7=""
+        tooleffectpath7="/heroes/pyromancer/alt4/base_chest/body.effect"
+        tooleffectgroup7="chest"
+        tooleffectkeyname8="Item_Intelligence7 Item_ManaBattery"
+        tooleffectpath8="/heroes/pyromancer/alt4/upgraded_arms/boost.effect"
+        tooleffectgroup8="weapon"
+        tooleffectkeyname9="Item_Intelligence7 Item_PowerSupply"
+        tooleffectpath9="/heroes/pyromancer/alt4/upgraded_arms/boost.effect"
+        tooleffectgroup9="weapon"
+        tooleffectkeyname10="Item_Intelligence7"
+        tooleffectpath10="/heroes/pyromancer/alt4/base_weapon/boost.effect"
+        tooleffectgroup10="weapon"
+        tooleffectkeyname11="Item_ManaBattery"
+        tooleffectpath11="/heroes/pyromancer/alt4/upgraded_arms/body.effect"
+        tooleffectgroup11="weapon"
+        tooleffectkeyname12="Item_PowerSupply"
+        tooleffectpath12="/heroes/pyromancer/alt4/upgraded_arms/body.effect"
+        tooleffectgroup12="weapon"
+        tooleffectkeyname13=""
+        tooleffectpath13="/heroes/pyromancer/alt4/base_weapon/body.effect"
+        tooleffectgroup13="weapon"
+        tooleffectkeyname14="Item_Intelligence7 Item_PushStaff"
+        tooleffectpath14="/heroes/pyromancer/alt4/upgraded_back/boost.effect"
+        tooleffectgroup14="back"
+        tooleffectkeyname15="Item_PushStaff"
+        tooleffectpath15="/heroes/pyromancer/alt4/upgraded_back/body.effect"
+        tooleffectgroup15="back"
+        tooleffectkeyname16=""
+        tooleffectpath16="/heroes/pyromancer/alt4/base_back/body.effect"
+        tooleffectgroup16="back"
+        tooleffectkeyname17="Item_PushStaff effect_Boots"
+        tooleffectpath17="/heroes/pyromancer/alt4/upgraded_boots_tube/body.effect"
+        tooleffectgroup17=""
+        tooleffectkeyname18="Item_PushStaff Item_SpellShards"
+        tooleffectpath18="/heroes/pyromancer/alt4/upgraded_chest_tube/body.effect"
+        tooleffectgroup18="chest_tube"
+        tooleffectkeyname19="Item_PushStaff Item_GrimoireOfPower"
+        tooleffectpath19="/heroes/pyromancer/alt4/upgraded_chest_tube/body.effect"
+        tooleffectgroup19="chest_tube"
+        tooleffectkeyname20="Item_PushStaff Item_PowerSupply"
+        tooleffectpath20="/heroes/pyromancer/alt4/upgraded_weapon_tube/body.effect"
+        tooleffectgroup20="">
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_PortalKey" />
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_AmuletofExile" />
+	<recommendeditem name="Item_Striders" />
+	<recommendeditem name="Item_GhostMarchers" />
+	<recommendeditem name="Item_Steamboots" />
+	<recommendeditem name="Item_PostHaste" />
+	<recommendeditem name="Item_Lightbrand" />
+	<recommendeditem name="Item_SorceryBoots" />
+	<recommendeditem name="Item_PegasusBoots" />
+	<recommendeditem name="Item_RingoftheTeacher" />
+	<recommendeditem name="Item_Soultrap" />
+	<recommendeditem name="Item_RingofSorcery" />
+	<recommendeditem name="Item_TabletofCommand" />
+	<recommendeditem name="Item_Stormspirit" />
+	<recommendeditem name="Item_RestorationStone" />
+	<recommendeditem name="Item_KuldrasSheepstick" />
+	<recommendeditem name="Item_JadeSpire" />
+	<recommendeditem name="Item_StaffoftheMaster" />
+	<recommendeditem name="Item_IconoftheGoddess" />
+	<recommendeditem name="Item_Spellshards" />
+	<recommendeditem name="Item_Codex" />
+	<recommendeditem name="Item_Hellflower" />
+	<recommendeditem name="Item_GrimoireofPower" />
+	
+	<gooditemagainst name="Item_MysticVestments" />
+	<gooditemagainst name="Item_ManaBattery" />
+	<gooditemagainst name="Item_PowerSupply" />
+	<gooditemagainst name="Item_Stormspirit" />
+	<gooditemagainst name="Item_KuldrasSheepstick" />
+	<gooditemagainst name="Item_IronShield" />
+	<gooditemagainst name="Item_ShamansHeadress" />
+	<gooditemagainst name="Item_NullStone" />
+	<gooditemagainst name="Item_BarrierIdol" />
+	<gooditemagainst name="Item_AdevesCloak" />
+	
+	
+	
+	<modifier key="iamsheeped" modpriority="999"
+		passiveeffect=""
+	/>
+	
+	<!-- Staff of the master upgrade effect -->
+	<modifier key="ult_boost" modpriority="100"
+		passiveeffect=""
+		attackprojectile="Projectile_PyromancerAttack"
+	>
+		<aura state="State_Pyromancer_Ult_Boost_Art" radius="0" targetscheme="self"/>
+	</modifier>
+
+	<modifier key="alt4_flamethrower" idleanim="idle_flamethrower" attackanim="attack_%_flamethrower" attackprojectile="Projectile_PyromancerAttack_Alt4_Flamethrower" />
+	<modifier key="alt4_jetpack" model="/heroes/pyromancer/alt4/model_flying.mdf" />
+</hero>

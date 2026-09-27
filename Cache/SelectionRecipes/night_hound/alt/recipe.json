@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "night_hound",
+  "avatar": "alt",
+  "files": [
+    "heroes\\night_hound\\base\\hero.entity",
+    "heroes\\night_hound\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

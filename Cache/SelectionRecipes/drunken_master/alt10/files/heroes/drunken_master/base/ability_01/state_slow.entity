@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_DrunkenMaster_Ability1_Slow"
+	
+	icon="/heroes/drunkenmaster/alt10/ability_01/icon.dds"
+	
+	effecttype="StatusDebuff"
+	passiveeffect="/heroes/drunkenmaster/alt10/ability_01/effects/state_slow.effect"
+	
+	movespeedslow="0.15,0.20,0.25,0.30"
+	allowtransfer="true"
+>
+	<oninflict>
+		<!-- Drunk charges -->
+		<pushtool name="Ability_DrunkenMaster3" />
+		<compare a="source_charges" b="6" op="ge" source="stack_entity">
+			<setcharges a="source_charges" b="6" op="sub" source="stack_entity" entity="stack_entity" />
+			<setactivemodifierkey name="drunken_powerup" entity="this_entity" />
+		</compare>
+	</oninflict>
+	
+	<modifier key="drunken_powerup" modpriority="100"
+		movespeedslow="0.45,0.50,0.55,0.6"
+	>
+		<oninflict />
+	</modifier>
+</state>

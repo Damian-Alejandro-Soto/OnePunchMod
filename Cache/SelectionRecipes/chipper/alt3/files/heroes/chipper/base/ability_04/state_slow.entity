@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chipper_Ability4_Slow"
+
+	icon="../../icon.dds"
+	
+	movespeedslowstart="0.8"
+	movespeedslowmid="0.5"
+	movespeedslowend="0.0"
+	movespeedslowduration="2000,3000,4000"
+	movespeedslowmidpos="0.5"
+	
+	passiveeffect="/heroes/chipper/alt3/ability_04/effects/state.effect"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+>
+	<onframe />
+</state>

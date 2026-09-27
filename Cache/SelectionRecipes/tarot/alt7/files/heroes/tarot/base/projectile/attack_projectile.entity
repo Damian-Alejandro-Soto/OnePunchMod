@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Tarot_Attack"
+
+	speed="2200"
+	gravity="0"
+	modelscale="1"
+	model="/shared/models/invis.mdf"
+
+	impacteffect=""
+	traileffect="/heroes/tarot/alt7/projectile/trail.effect"
+>
+	<onimpact>
+		<compare a="param" b="1" op="eq">
+			<setactivemodifierkey entity="proxy_entity" name="Tarot_nextattackneedstobeinvis" />
+			<attack source="this_owner_entity" target="target_entity" startcooldown="false" />
+		</compare>
+	</onimpact>
+</projectile>

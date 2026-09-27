@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_EmeraldWarden4_b"
+
+	icon="/heroes/emerald_warden/alt9/ability_04/effects/ability_02/icon.dds"
+	
+	actiontype="passive"
+	maxlevel="3"
+	
+	cooldowntime="35000"
+	
+	frontqueue="true"
+	noninterrupting="true"
+	inheritmovement="true"
+	noturntotarget="true"
+	nostun="true"
+	nosilence="true"
+	
+	noresponse="true"
+	
+	noshuffle="true"
+	dynamicprecache="pet/ability_02/effects/impact.effect,../../demon/ability_04/pet/ability_02/effects/impact.effect"
+>
+
+	<onframe>
+		<compare a="source_level" b="2" op="ge" source="this_entity">
+			<isready>
+				<targettype type="alive" target="source_owner_entity">
+					<isstealthed entity="source_owner_entity" />
+					<else>
+						<hasmodifier name="Gawain_2" entity="source_entity" />
+						<else>
+							<setvar0 a="source_health_percent" source="source_owner_entity" />
+							<compare a="var0" b="0.4" op="lt">
+								<popup name="EmeraldWarden2" source="source_owner_entity" target="source_owner_entity" />
+	
+								<setstr0 a="altavatar_path" b="pet/ability_02/effects/impact.effect" op="add" />
+								<exists path="str0">
+									<playeffectdynamic effect="str0" target="source_owner_entity" source="source_owner_entity" />
+								</exists>
+								<else>
+									<playeffectdynamic effect="pet/ability_02/effects/impact.effect" target="source_owner_entity" source="source_owner_entity" />
+								</else>
+								
+								<applystate name="State_EmeraldWardenpet_Ability2" duration="5000" target="source_owner_entity" />
+								<expirestate name="State_EmeraldWardenpet_Ability2_Hero" target="source_owner_entity" />
+								
+								<pushentity entity="source_entity" />
+								<hasmodifier name="ult_boost" entity="stack_proxy_entity">
+									<areaofeffect
+										radius="400"
+										targetselection="all"
+										targetscheme="ally_heroes"
+										effecttype=""
+										ignore="source_owner_entity"
+									>
+										<applystate name="State_EmeraldWardenpet_Ability2_Ally_Sotm" duration="5000" />
+									</areaofeffect>
+								</hasmodifier>
+								
+								<applystate name="State_EmeraldWardenpet_Ability2_Cooldown" duration="500" target="source_entity" />
+								<startcooldown />
+							</compare>
+						</else>
+					</else>
+				</targettype>
+			</isready>
+		</compare>
+	</onframe>
+	
+	<modifier key="Gawain_Illusion" modpriority="101" condition="illusion"
+	>
+		<onframe />
+	</modifier>
+</ability>

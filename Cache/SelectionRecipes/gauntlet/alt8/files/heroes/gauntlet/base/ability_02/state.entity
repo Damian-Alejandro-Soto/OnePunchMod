@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gauntlet_Ability2"
+
+	icon="../../icon.dds"
+
+	stunned="true"
+	stunnedreduction="ignore"
+	immobilized="true"
+	ishidden="true"
+	
+	effecttype=""
+ passiveeffect="/heroes/gauntlet/alt8/ability_02/effects/sound_impact.effect">
+
+</state>

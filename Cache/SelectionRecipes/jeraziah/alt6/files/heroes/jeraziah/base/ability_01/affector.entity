@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Jeraziah_Ability1"
+
+	radius="300"
+	
+	maximpactspertarget="1"
+	targetscheme="enemy_units"
+	targetselection="all"
+	effecttype="Magic Splash"
+	
+	impacteffect="/heroes/jereziah/alt6/ability_01/effects/impact_damage.effect"
+	linkeffect=""
+>
+</affector>

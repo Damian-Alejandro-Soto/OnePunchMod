@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "corrupted_disciple",
+  "avatar": "pog_skin",
+  "files": [
+    "heroes\\corrupted_disciple\\base\\hero.entity",
+    "heroes\\corrupted_disciple\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\corrupted_disciple\\base\\state_corrupteddisciple_ult_boost.entity",
+    "heroes\\corrupted_disciple\\base\\state_corrupteddisciple_ult_boost.entity.onepunch_ability_managed"
+  ]
+}

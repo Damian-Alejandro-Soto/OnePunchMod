@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "keeper_of_the_forest",
+  "legacy_folder": "treant",
+  "avatar": "alt",
+  "counts": {
+    "files": 27,
+    "models": 21,
+    "materials": 2,
+    "textures": 2,
+    "effects": 2,
+    "sounds": 0,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

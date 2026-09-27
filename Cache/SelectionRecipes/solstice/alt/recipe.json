@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "hero": "solstice",
+  "avatar": "alt",
+  "files": [
+    "heroes\\solstice\\base\\hero.entity",
+    "heroes\\solstice\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\solstice\\base\\state_solstice_ult_boost.entity",
+    "heroes\\solstice\\base\\state_solstice_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\solstice\\base\\ability_01\\state_attack.entity",
+    "heroes\\solstice\\base\\ability_01\\state_attack.entity.onepunch_ability_managed",
+    "heroes\\solstice\\base\\ability_01\\state_self.entity",
+    "heroes\\solstice\\base\\ability_01\\state_self.entity.onepunch_ability_managed",
+    "heroes\\solstice\\base\\ability_01\\state_selfarmor.entity",
+    "heroes\\solstice\\base\\ability_01\\state_selfarmor.entity.onepunch_ability_managed",
+    "heroes\\solstice\\base\\ability_01\\state_self_night_speed.entity",
+    "heroes\\solstice\\base\\ability_01\\state_self_night_speed.entity.onepunch_ability_managed",
+    "heroes\\solstice\\base\\ability_02\\state_night.entity",
+    "heroes\\solstice\\base\\ability_02\\state_night.entity.onepunch_ability_managed"
+  ]
+}

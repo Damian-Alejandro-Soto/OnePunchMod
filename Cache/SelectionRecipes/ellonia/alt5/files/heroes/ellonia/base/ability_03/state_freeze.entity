@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Ellonia_Ability3_Freeze"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/ellonia/alt5/ability_03/effects/state_freeze.effect"
+	effecttype="StatusDisable"
+	allowtransfer="true"
+
+	frozen="true"
+	
+	stunned="true"
+
+	negativeeffect="stunned"
+>
+
+	<onexpired>
+		<playanim name="idle" />
+	</onexpired>
+</state>

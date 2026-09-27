@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "hero": "kinesis",
+  "avatar": "alt4",
+  "files": [
+    "heroes\\kinesis\\base\\hero.entity",
+    "heroes\\kinesis\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\kinesis\\base\\ability_01\\ability.entity",
+    "heroes\\kinesis\\base\\ability_01\\ability.entity.onepunch_ability_managed",
+    "heroes\\kinesis\\base\\ability_02\\ability.entity",
+    "heroes\\kinesis\\base\\ability_02\\ability.entity.onepunch_ability_managed",
+    "heroes\\kinesis\\base\\ability_02\\gadget_tree.entity",
+    "heroes\\kinesis\\base\\ability_02\\gadget_tree.entity.onepunch_ability_managed",
+    "heroes\\kinesis\\base\\ability_02\\projectile_b.entity",
+    "heroes\\kinesis\\base\\ability_02\\projectile_b.entity.onepunch_ability_managed",
+    "heroes\\kinesis\\base\\ability_02\\projectile_b_tree.entity",
+    "heroes\\kinesis\\base\\ability_02\\projectile_b_tree.entity.onepunch_ability_managed",
+    "heroes\\kinesis\\base\\ability_03\\ability.entity",
+    "heroes\\kinesis\\base\\ability_03\\ability.entity.onepunch_ability_managed",
+    "heroes\\kinesis\\base\\ability_03\\state.entity",
+    "heroes\\kinesis\\base\\ability_03\\state.entity.onepunch_ability_managed",
+    "heroes\\kinesis\\base\\ability_04\\ability.entity",
+    "heroes\\kinesis\\base\\ability_04\\ability.entity.onepunch_ability_managed",
+    "heroes\\kinesis\\base\\ability_04\\gadget.entity",
+    "heroes\\kinesis\\base\\ability_04\\gadget.entity.onepunch_ability_managed",
+    "heroes\\kinesis\\base\\projectile\\projectile.entity",
+    "heroes\\kinesis\\base\\projectile\\projectile.entity.onepunch_ability_managed"
+  ]
+}

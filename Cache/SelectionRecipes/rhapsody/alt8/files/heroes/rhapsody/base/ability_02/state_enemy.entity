@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rhapsody_Ability2_Enemy"
+
+	icon="../../icon.dds"
+	passiveeffect=""
+>	
+	<onframe>
+		<!-- Base Magic Damage per frame -->
+		<setvar0 a="18,27,36,45" b="frametime" op="mult" />
+
+		<!-- Net Multiplier -->
+		<setaccumulator value="1" />
+		
+		<targettype type="moving" entity="target_entity">
+			<changeaccumulator b="0.75" op="mult" />
+		</targettype>
+
+		<setvar0 a="var0" b="accumulator" op="mult" />
+		<damage effecttype="Magic DOT" amount="1" b="var0" op="mult" />
+	</onframe>
+	
+	<modifier key="rhapsody_danceeffectenemy" modpriority="100" condition="hero"
+		passiveeffect="/heroes/rhapsody/alt10/ability_02/effects/state_enemy.effect"
+	>		
+		<aura
+			gadget="Gadget_Rhapsody_Ability2_enemy"
+			radius="0"
+			targetscheme="self"
+			proxy="proxy_entity_position"
+			gadgetowner="proxy_entity_position"
+		/>
+	</modifier>
+</state>

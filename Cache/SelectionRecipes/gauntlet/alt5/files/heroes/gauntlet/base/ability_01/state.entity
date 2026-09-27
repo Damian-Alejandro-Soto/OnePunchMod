@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Gauntlet_Ability1"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/gauntlet/alt5/ability_01/effects/state.effect"
+	
+	modifierkey="gauntlet_charged"
+	
+	movespeed="60,80,100,120"
+
+	effecttype=""
+	dynamicprecache="effects/impact.effect"
+>		
+	<oninflict>
+		<setaccumulator value="0" />
+		
+		<!-- Kinesis Thoughtsteal accommodation -->
+		<entitytype type="Hero_Kinesis" target="source_entity">
+			<setactivemodifierkey name="kinesis_Q_active" entity="this_entity" />
+		</entitytype>
+	</oninflict>
+	
+	<onframe />
+	
+	<onattackimpact>
+		<cantarget targetscheme="enemy_units">
+			<setaccumulator value="1" entity="this_entity" />
+			<setproxy entity="this_entity" target="target_entity" />
+			<!-- Art -->
+		<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="target_position" target="target_position" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impact.effect" source="target_position" target="target_position" occlude="true" />
+		</else>
+			<damage effecttype="Magic" amount="115,180,245,310" />
+			<areaofeffect
+				radius="250"
+				targetselection="all"
+				targetscheme="enemy_units"
+				effecttype="Magic"
+				center="this_proxy_entity"
+				ignore="this_proxy_entity"
+			>
+				<damage effecttype="Magic Splash" amount="115,180,245,310" />
+				<distance source="this_proxy_entity" target="target_entity" />
+				<evaluate a="275" b="result" op="sub" />
+				<evaluate a="result" b="11" op="mult" />
+				<push force="result" duration="50" source="this_proxy_entity" />
+			</areaofeffect>
+			<expire />
+		</cantarget>
+	</onattackimpact>
+	
+	<onexpired>
+		<compare a="accumulator" b="0" op="eq" >			
+			<pushtool name="Ability_Gauntlet1" source="source_entity" />
+			
+			<!-- 50% Reduced Cooldown and Mana Cost on Gauntlet Q -->
+			<compare a="stack_entity" b="0" op="ne">
+				<givemana amount="40,47.5,55,62.5" target="source_entity" />
+				<resetcooldown entity="stack_entity" />
+				<getcooldown target="source_entity" ability="0" />
+				<evaluate a="result" b="0.5" op="mult" />
+				<evaluate a="result" b="1000" op="mult" />
+				<startcooldown entity="stack_entity" duration="result" />
+			</compare>
+		</compare>
+	</onexpired>
+	
+	<modifier key="kinesis_Q_active" modpriority="100"
+		passiveeffect="effects/state_kinesis.effect"
+	/>
+</state>

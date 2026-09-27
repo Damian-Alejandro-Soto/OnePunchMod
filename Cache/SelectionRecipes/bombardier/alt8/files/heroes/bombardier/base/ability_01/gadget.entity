@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Bombardier_Ability1"
+	
+	model="/heroes/bomb/alt8/ability_01/effects/model/model.mdf"
+	passiveeffect="/heroes/bomb/alt8/ability_01/effects/passive.effect"
+
+	sightrangeday="500"
+	sightrangenight="500"
+	
+	selectionradius="40"
+	boundsheight="64"
+	boundsradius="16"
+
+	deathtime="0"
+	corpsetime="0"
+	
+	unitwalking="true"
+	invulnerable="false"
+	flying="false"
+	drawonmap="false"
+	
+	lifetime="8200"
+	
+	maxhealth="2"
+	healthregen="0"
+	maxmana="0"
+	manaregen="0"
+	
+	
+	nothreat="true"
+	
+	armor="0"
+	magicarmor="0"
+	immunity="GadgetImmunity"
+	
+	canattack="false"
+	attacktype="ranged"
+	
+	aggrorange="0"
+	
+	iscontrollable="false"
+>
+	<ondamaged>
+		<compare a="accumulator" b="1" op="eq">
+			<changedamage b="1" op="min"/>
+			<setaccumulator entity="this_proxy_entity" value="1" />
+		</compare>
+		<else>
+			<changedamage b="1" op="min"/>
+			<setaccumulator value="1" />
+		</else>
+	</ondamaged>
+	
+	<ondeath>
+		<expirestate name="State_Bombardier_Ability1_Modifier" target="source_owner_entity" />
+	</ondeath>
+</gadget>

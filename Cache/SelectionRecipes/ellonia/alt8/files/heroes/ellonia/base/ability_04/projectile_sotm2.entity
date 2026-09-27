@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_Ellonia_Ability4_Reverse"
+
+	speed="1500"
+	gravity="0"
+	flying="true"
+	flyheight="50"
+
+	modelscale="1"
+	model="/shared/models/invis.mdf"
+	
+	traileffect="/heroes/ellonia/alt8/ability_04/effects/trail_sotm.effect"
+	deatheffect="effects/death.effect"
+	
+	touchtargetscheme="enemy_units"
+	toucheffecttype="Magic"
+
+	touchradius="300"
+	maxtouchespertarget="1"
+	impacteffect=""
+	
+>
+	<ontouch>
+		<applystate name="State_Ellonia_Ability3" target="target_entity" duration="4000" pushentity="true" statelevel="4" />
+		<addcharges entity="stack_entity" count="0" />
+		<setparam a="result" />
+		
+		<evaluate a="10" b="param" op="mult" />
+		<evaluate a="130" b="result" op="add" /> <!-- Final Damage -->
+		<evaluate a="result" b="550" op="min" /> <!-- Cap the Damage -->		
+		<damage effecttype="Magic" amount="1" b="result" op="mult" />
+		<popup name="execution" source="target_entity" target="target_entity" a="result" />		
+		
+		<setparam a="param" b="40" op="min" /> <!-- Cap param for stun duration calculations -->
+		<setvar0 a="50" b="param" op="mult" />
+		<setvar1 a="result" b="1000" op="add" />
+		<applystate name="State_Ellonia_Ability3_Freeze" duration="var1" />
+		
+		<popup name="seconds_decimal" source="target_entity" target="target_entity" a="var1" b="1000" op="div" />
+		
+		<setcharges entity="stack_entity" count="0" />
+		<expirestate name="State_Ellonia_Ability3" target="target_entity" />
+	</ontouch>
+
+	<onimpact>
+		<kill target="this_proxy_entity" source="" />
+	</onimpact>
+</projectile>

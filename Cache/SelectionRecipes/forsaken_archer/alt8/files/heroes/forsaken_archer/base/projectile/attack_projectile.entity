@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_ForsakenArcherAttack"
+
+	speed="1050"
+	gravity="800"
+
+	modelscale=".5"
+	model="/shared/models/invis.mdf"
+
+	traileffect="/heroes/forsaken_archer/alt8/projectile/effects/arrow_trail.effect"
+	impacteffect="/heroes/forsaken_archer/alt8/projectile/effects/impact.effect"
+>
+	
+</projectile>

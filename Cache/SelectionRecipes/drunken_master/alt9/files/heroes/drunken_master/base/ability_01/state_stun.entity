@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_DrunkenMaster_Ability1_Stun"
+
+	ishidden="true"
+	
+	icon="../../icon.dds"
+	frozen="true"
+	stunned="true"
+	stunnedreduction="ignore"
+	unitwalking="true"
+	
+	effecttype="StatusDisable"
+
+	modifierkey="channeled_stun_ability"
+	
+	passiveeffect="/heroes/drunkenmaster/alt9/ability_01/effects/stun.effect"
+
+	negativeeffect="suppressed"
+>
+	<onexpired>
+		<targettype type="alive" target="this_owner_entity">
+			<playanim name="idle" target="this_owner_entity" />
+		</targettype>
+		
+		<expirestate name="State_DrunkenMaster_Ability1_CircleDisarm" target="source_entity" />
+		<delete target="this_proxy_entity" source="" />
+	</onexpired>
+	
+	<ondeath>
+		<expirestate name="State_DrunkenMaster_Ability1_CircleDisarm" target="source_entity" />
+	</ondeath>
+</state>

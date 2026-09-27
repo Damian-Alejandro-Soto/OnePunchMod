@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Hammerstorm_Ability2"
+
+	radius="600"
+	impactdelay="0"
+	targetselection="all"
+	targetscheme="ally_units"
+	effecttype=""
+ icon="/heroes/Hammerstorm/alt11/ability_02/icon.dds" casteffect="/heroes/hammerstorm/alt11/ability_02/effects/cast.effect">
+	<onimpact>
+		<applystate name="State_Hammerstorm_Ability2" duration="5000" />
+		<cantarget targetscheme="ally_heroes">
+			<applystate name="State_Hammerstorm_Ability2_Armor" duration="5000" />
+		</cantarget>
+	</onimpact>
+</affector>

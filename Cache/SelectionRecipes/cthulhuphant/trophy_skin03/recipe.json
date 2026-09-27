@@ -1,0 +1,13 @@
+{
+  "version": 1,
+  "hero": "cthulhuphant",
+  "avatar": "trophy_skin03",
+  "files": [
+    "heroes\\cthulhuphant\\base\\hero.entity",
+    "heroes\\cthulhuphant\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\cthulhuphant\\base\\ability_03\\ability.entity",
+    "heroes\\cthulhuphant\\base\\ability_03\\ability.entity.onepunch_ability_managed",
+    "heroes\\cthulhuphant\\base\\ability_04\\state.entity",
+    "heroes\\cthulhuphant\\base\\ability_04\\state.entity.onepunch_ability_managed"
+  ]
+}

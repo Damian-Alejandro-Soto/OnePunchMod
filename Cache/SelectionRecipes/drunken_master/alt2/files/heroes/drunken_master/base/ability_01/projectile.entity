@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectile
+	name="Projectile_DrunkenMaster_Ability1"
+
+	speed="1700"
+	gravity="0"
+	
+	modelscale="1.0"
+	model="/shared/models/invis.mdf"
+	impacteffect=""
+	traileffect="/heroes/drunkenmaster/alt2/ability_01/effects/trail.effect"
+	
+	canturn="false"
+	flying="false"
+	flyheight="0"
+	impactdistance="80"
+>
+	<onimpact>
+		<targettype type="alive" target="target_entity">
+			<targettype type="alive" target="source_entity">
+				<compare a="target_entity" b="0" op="ne">
+					<distance />
+                    <compare a="result" b="500" op="lt">
+						<attack />
+						<getyaw />
+						
+						<!-- Will be removed when orbiting projectiles swap from theta to yaw -->
+						<setvar0 a="result" b="90" op="sub" />
+						
+						<spawnprojectile
+							name="Projectile_DrunkenMaster_Ability1_Orbit"
+							source="source_entity"
+							target="target_entity"
+							noresponse="true"
+							bind="source_entity"
+							orbitstartingtheta="var0"
+							pushentity="true"
+						/>
+						<applystate name="State_DrunkenMaster_Ability1_Stun" duration="1500" target="target_entity" proxy="stack_entity" />
+						<applystate name="State_DrunkenMaster_Ability1_CircleDisarm" duration="1500" target="source_entity" proxy="target_entity" />
+						<playanim name="ability_1_circle" target="proxy_entity" />
+					</compare>
+				</compare>
+			</targettype>
+		</targettype>
+	</onimpact>
+</projectile>

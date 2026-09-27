@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Soulstealer_Ability3"
+	
+	icon="/heroes/soulstealer/alt5/ability_03/icon.dds"
+	passiveeffect=""
+	
+	armor="-3,-4,-5,-6"
+	
+	effecttype=""
+>
+	<modifier key="nobossarmor" modpriority="100" condition="Boss" notooltooltip="true"
+		armor="0"
+	/>
+</state>

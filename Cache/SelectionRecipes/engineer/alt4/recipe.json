@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "hero": "engineer",
+  "avatar": "alt4",
+  "files": [
+    "heroes\\engineer\\base\\hero.entity",
+    "heroes\\engineer\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\engineer\\base\\state_engineer_ult_boost.entity",
+    "heroes\\engineer\\base\\state_engineer_ult_boost.entity.onepunch_ability_managed",
+    "heroes\\engineer\\base\\ability_01\\projectile.entity",
+    "heroes\\engineer\\base\\ability_01\\projectile.entity.onepunch_ability_managed",
+    "heroes\\engineer\\base\\ability_02\\pet.entity",
+    "heroes\\engineer\\base\\ability_02\\pet.entity.onepunch_ability_managed",
+    "heroes\\engineer\\base\\ability_02\\projectile.entity",
+    "heroes\\engineer\\base\\ability_02\\projectile.entity.onepunch_ability_managed",
+    "heroes\\engineer\\base\\ability_02\\projectile_turretburst.entity",
+    "heroes\\engineer\\base\\ability_02\\projectile_turretburst.entity.onepunch_ability_managed",
+    "heroes\\engineer\\base\\ability_04\\gadget_shield.entity",
+    "heroes\\engineer\\base\\ability_04\\gadget_shield.entity.onepunch_ability_managed",
+    "heroes\\engineer\\base\\ability_04\\pet.entity",
+    "heroes\\engineer\\base\\ability_04\\pet.entity.onepunch_ability_managed",
+    "heroes\\engineer\\base\\ability_04\\projectile_sotm.entity",
+    "heroes\\engineer\\base\\ability_04\\projectile_sotm.entity.onepunch_ability_managed",
+    "heroes\\engineer\\base\\ability_04\\projectile_turretattack.entity",
+    "heroes\\engineer\\base\\ability_04\\projectile_turretattack.entity.onepunch_ability_managed"
+  ]
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chronos_Ability3_Attack"
+	
+	icon="/heroes/chronos/alt8/ability_03/icon.dds"
+	passiveeffect="/heroes/chronos/alt8/ability_03/effects/lock.effect"
+	
+	ishidden="true"
+	
+	impactinterval="150"
+	
+	effecttype=""
+>
+	
+	<onimpact>
+		<attack target="this_proxy_entity" startcooldown="false" />
+		<expire />
+	</onimpact>	
+</state>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<affector
+	name="Affector_Dampeer_Ability1"
+
+	radius="250"
+	
+	targetselection="all"
+	targetscheme="enemy_units"
+	effecttype="Magic"
+	maximpactspertarget="1"
+
+	dynamicprecache="/heroes/dampeer/alt4/ability_01/effects/impact.effect"
+>
+	<onspawn>
+		<setstr0 a="altavatar_path" b="effects/cast.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" occlude="true" source="source_position" target="source_position" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/cast.effect" occlude="true" source="source_position" target="source_position" />
+		</else>
+	</onspawn>
+
+	<onimpact>
+		<!-- Bonus damage and fear per charge -->
+		<setvar0 a="param" b="40" op="mult" />
+		<setvar1 a="param" b="250" op="mult" />
+		
+		<!-- Fear duration -->
+		<setvar1 a="var1" b="1000" op="add" />
+		
+		<damage effecttype="Magic" amount="75,125,175,225" b="var0" op="add" />
+		<applystate name="State_Dampeer_Ability1_Fear" duration="var1" target="target_entity" pushentity="true" />
+		
+		<!-- Dynamic visual effects -->
+		<setstr0 a="altavatar_path" b="effects/impact.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="" source="target_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/impact.effect" target="" source="target_entity" occlude="true" />
+		</else>
+	</onimpact>
+</affector>

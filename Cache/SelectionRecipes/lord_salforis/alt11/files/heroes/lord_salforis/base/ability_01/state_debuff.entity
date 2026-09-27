@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_LordSalforis_Ability1_Debuff"
+
+	icon="/heroes/dreadknight/alt11/ability_01/icon.dds"
+	passiveeffect="/heroes/dreadknight/alt11/ability_01/effects/state_enemy.effect"
+	displaylevel="true"
+	
+	effecttype="StatusDebuff"
+	allowtransfer="true"
+
+	incominghealmultiplier="-0.5"
+>
+</state>

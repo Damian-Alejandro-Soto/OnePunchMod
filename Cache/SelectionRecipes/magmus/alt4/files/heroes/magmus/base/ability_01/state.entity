@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Magmus_Ability1_Self"
+	
+	icon="/heroes/magmar/alt4/ability_01/icon.dds"
+	
+	passiveeffect="/heroes/magmar/alt4/ability_01/effects/state.effect"
+	disarmed="true"
+	stunned="true"
+	stunnedreduction="ignore"
+	invulnerable="true"
+	dynamicprecache="effects/steam.effect"
+>
+	<onexpired>
+		<playanim name="emerge" target="source_entity" />
+		<setstr0 a="altavatar_path" b="effects/steam.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" target="source_entity" occlude="true" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/steam.effect" target="source_entity" occlude="true" />
+		</else>
+	</onexpired>
+</state>

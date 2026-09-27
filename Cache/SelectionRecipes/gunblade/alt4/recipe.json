@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "gunblade",
+  "avatar": "alt4",
+  "files": [
+    "heroes\\gunblade\\base\\hero.entity",
+    "heroes\\gunblade\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\gunblade\\base\\ability_02\\state.entity",
+    "heroes\\gunblade\\base\\ability_02\\state.entity.onepunch_ability_managed"
+  ]
+}

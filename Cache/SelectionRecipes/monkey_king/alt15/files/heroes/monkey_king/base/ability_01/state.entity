@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_MonkeyKing_Ability1"
+
+	icon="/heroes/monkey_king/alt15/ability_01/icon.dds"
+
+	effecttype=""
+	allowtransfer="false"
+	modifierkey="CloudCutter"
+>
+	
+	<onexpired>		
+		<pushtool name="Ability_MonkeyKing1" />
+		<setcharges a="0" entity="stack_entity" />
+	</onexpired>
+	
+</state>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hero
+	name="Hero_Electrician"
+	
+	team="Hellbourne"
+	icon="/heroes/electrician/alt3/icon.dds"
+	portrait="/heroes/electrician/alt3/icon.dds"
+	model="/heroes/electrician/alt3/model.mdf"
+	skin=""
+	
+	passiveeffect="effects/body.effect"
+	spawneffect=""
+	respawneffect="/shared/effects/respawn.effect"
+	selectedsound="/heroes/electrician/alt3/sounds/voice/select_%.wav"
+	selectedflavorsound="/heroes/electrician/alt3/sounds/voice/select_flavour_%.wav"
+	confirmmovesound="/heroes/electrician/alt3/sounds/voice/move_%.wav"
+	confirmattacksound="/heroes/electrician/alt3/sounds/voice/attack_%.wav"
+	nomanasound="/heroes/electrician/alt3/sounds/voice/no_mana.wav"
+	cooldownsound="/heroes/electrician/alt3/sounds/voice/cooldown.wav"
+	announcersound="sounds/voice/hero_select.wav"
+	tauntedsound="/heroes/electrician/alt3/sounds/voice/taunt_prior.wav"
+	tauntkillsound="/heroes/electrician/alt3/sounds/voice/taunt_after.wav"
+	
+	preglobalscale="2.25"
+	modelscale="1.0"
+	effectscale="0.9"
+	boundsheight="160"
+	boundsradius="24"
+	selectionradius="55"
+	targetoffset="0 0 64"
+	
+	category="tank cc"
+	difficulty="2.5"
+
+	midrating="5"
+	junglerating="0"
+	carryrating="2"
+	hardsupportrating="0"
+	softsupportrating="0"
+	offlanerating="2"
+	soloofflanerating="0"
+	rangedrating="0"
+	meleerating="5"
+	
+	movespeed="300"
+	turnrate="540"
+	turnsmoothing="0.05"
+
+	maxhealth="150"
+	healthregen="1.00"
+	maxmana="0"
+	manaregen="0.01"
+
+	armor="0.68"
+	magicarmor="5"
+
+	inventory0="Ability_Electrician1"
+	inventory1="Ability_Electrician2"
+	inventory2="Ability_Electrician3"
+	inventory3="Ability_Electrician4"
+	inventory4="Ability_AttributeBoost"
+	inventory5=""
+	inventory6=""
+	inventory8=""
+	inventory9=""
+	inventory10=""
+	inventory11=""
+	inventory12=""
+
+	attackduration="950"
+	attackactiontime="500"
+	attackcooldown="1700"
+	attackdamagemin="30"
+	attackdamagemax="38"
+	attacknumanims="2"
+	attackoffset="0 30 100"
+	attackprojectile=""
+	attackrange="150"
+	attackstarteffect=""
+	attackactioneffect="effects/attack.effect"
+	attackimpacteffect="/heroes/electrician/alt3/effects/impact.effect"
+	attacktype="melee"
+	combattype="Hero"
+	unittype="masters_legacy_valid"
+
+	aggrorange="600"
+	sightrangeday="1800"
+	sightrangenight="800"
+	wanderrange="250"
+
+	primaryattribute="strength"
+	strength="23"
+	strengthperlevel="2.4"
+	agility="13"
+	agilityperlevel="2.0"
+	intelligence="25"
+	intelligenceperlevel="1.8"
+	
+
+	previewpos="-5 0 -50"
+	previewangles="0 0 0"
+	previewscale="1.55"
+	
+	storemodel="/heroes/electrician/alt3/model_store.mdf"
+	storepos="0 0 -17"
+	storeangles="0 0 0"
+	storescale="2.0"
+	
+	storepassiveeffect=""
+	previewpassiveeffect=""
+	
+	corpsetime="3000"
+	corpsefadetime="5000"
+	corpsefadeeffect="/shared/effects/corpse_sink.effect"
+ attackanim="attack_%"
+        icon2="/heroes/electrician/alt3/icon.dds"
+        previewmodel="/heroes/electrician/alt3/preview.mdf">
+	<recommendeditem name="Item_LoggersHatchet" />
+	<recommendeditem name="Item_Marchers" />
+	<recommendeditem name="Item_MysticVestments" />
+	<recommendeditem name="Item_PlatedGreaves" />
+	<recommendeditem name="Item_GhostMarchers" />
+	<recommendeditem name="Item_SorceryBoots" />
+	<recommendeditem name="Item_RingofSorcery" />
+	<recommendeditem name="Item_NomesWisdom" />
+	<recommendeditem name="Item_Astrolabe" />
+	<recommendeditem name="Item_Puzzlebox" />
+	<recommendeditem name="Item_ShamansHeadress" />
+	<recommendeditem name="Item_BarbedArmor" />
+	<recommendeditem name="Item_HelmoftheBlackLegion" />
+	<recommendeditem name="Item_IconoftheGoddess" />
+	<recommendeditem name="Item_UltorsHeavyPlate" />
+	<recommendeditem name="Item_BehemothsHeart" />
+	<recommendeditem name="Item_DaemonicBreastplate" />
+	<recommendeditem name="Item_BarrierIdol" />
+	<recommendeditem name="Item_ArmoroftheMadMage" />
+	<recommendeditem name="Item_FrostfieldPlate" />
+	
+	<gooditemagainst name="Item_ShrunkenHead" />
+	<gooditemagainst name="Item_AdevesCloak" />
+	<gooditemagainst name="Item_Riftshards" />
+	
+	<!-- Staff of the master upgrade effect -->
+	<modifier key="ult_boost" modpriority="100"
+		passiveeffect=""
+	>
+		<aura state="State_Electrician_Ult_Boost" radius="0" targetscheme="self"/>
+	</modifier>
+</hero>

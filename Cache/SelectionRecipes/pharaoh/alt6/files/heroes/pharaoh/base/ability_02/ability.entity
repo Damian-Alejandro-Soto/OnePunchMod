@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ability
+	name="Ability_Pharaoh2"
+
+	icon="/heroes/mumra/alt6/ability_02/icon.dds"
+	
+	anim="ability_2"
+	casttime="0"
+	castactiontime="0"
+	casteffect=""
+	
+	maxlevel="4"
+	requiredlevel="1,3,5,7"
+	
+	actiontype="no_target"
+	targetradius="240"
+
+	cooldowntime="15000"
+	manacost="50,60,70,80"
+>
+
+	<onpreimpact>
+		<areaofeffect
+			radius="280"
+			targetselection="all"
+			targetscheme="all_other_heroes"
+			center="source_entity"
+			effecttype="Push"
+		>
+			<targettype type="ally">
+				<teleport source="target_entity" target="source_position" interpolate="true" noninterrupting="true" />
+			</targettype>
+			<else>
+				<teleport source="target_entity" target="source_position" interpolate="true" />
+			</else>
+		</areaofeffect>
+	</onpreimpact>
+	
+	<onimpact>
+		<spawnaffector name="Affector_Pharaoh_Ability2_Immune" target="source_position" />
+		<applystate name="State_Pharaoh_Ability2_Modifier" owner="this_owner_entity" target="this_owner_entity" duration="3000,4000,5000,6000" />
+		<applystate name="State_Pharaoh_Ability2_Delay" target="this_owner_entity" duration="500" />
+		<spawnunit name="Gadget_Pharaoh_Ability2" target="source_position" owner="this_owner_entity" count="1" offset="220 0" facing="source_entity" angle="180" fixedposition="true" snaptargettogrid="32" />
+		<spawnunit name="Gadget_Pharaoh_Ability2" target="source_position" owner="this_owner_entity" count="1" offset="191 141" facing="source_entity" angle="180" fixedposition="true" snaptargettogrid="32" />
+		<spawnunit name="Gadget_Pharaoh_Ability2" target="source_position" owner="this_owner_entity" count="1" offset="-70 220" facing="source_entity" angle="180" fixedposition="true" snaptargettogrid="32" />
+		<spawnunit name="Gadget_Pharaoh_Ability2" target="source_position" owner="this_owner_entity" count="1" offset="70 220" facing="source_entity" angle="180" fixedposition="true" snaptargettogrid="32" />
+		<spawnunit name="Gadget_Pharaoh_Ability2" target="source_position" owner="this_owner_entity" count="1" offset="-191 141" facing="source_entity" angle="180" fixedposition="true" snaptargettogrid="32" />
+		<spawnunit name="Gadget_Pharaoh_Ability2" target="source_position" owner="this_owner_entity" count="1" offset="-220 0" facing="source_entity" angle="180" fixedposition="true" snaptargettogrid="32" />
+		<spawnunit name="Gadget_Pharaoh_Ability2" target="source_position" owner="this_owner_entity" count="1" offset="-191 -141" facing="source_entity" angle="180" fixedposition="true" snaptargettogrid="32" />
+		<spawnunit name="Gadget_Pharaoh_Ability2" target="source_position" owner="this_owner_entity" count="1" offset="70 -220" facing="source_entity" angle="180" fixedposition="true" snaptargettogrid="32" />
+		<spawnunit name="Gadget_Pharaoh_Ability2" target="source_position" owner="this_owner_entity" count="1" offset="-70 -220" facing="source_entity" angle="180" fixedposition="true" snaptargettogrid="32" />
+		<spawnunit name="Gadget_Pharaoh_Ability2" target="source_position" owner="this_owner_entity" count="1" offset="191 -141" facing="source_entity" angle="180" fixedposition="true" snaptargettogrid="32" />
+	</onimpact>
+	
+	<modifier key="pharaoh_ability2_Delay" modpriority="90"
+		disabled="true"
+	>
+	</modifier>
+	
+	<modifier key="mumra_W_active" modpriority="100"
+		icon="/shared/icons/off.tga"
+		ignorecooldown="true"
+		manacost="0"
+		
+		frontqueue="true"
+		inheritmovement="true"
+		noninterrupting="true"
+		noresponse="true"
+	>	
+		<onpreimpact />
+
+		<onimpact>
+			<areaofeffect
+				global="true"
+				targetscheme="Pharaoh_Mummies"
+				targetselection="all"
+				ignoreinvulnerable="true"
+				effecttype=""
+			>
+				<kill target="target_entity" source="" />
+			</areaofeffect>
+			
+			<expirestate name="State_Pharaoh_Ability2_Modifier" />
+		</onimpact>
+	</modifier>
+</ability>

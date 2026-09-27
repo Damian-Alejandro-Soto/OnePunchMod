@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Rampage_Ability1_Cooldown"
+	
+	serverentity="false"
+
+	icon="/heroes/Rampage/alt14/ability_01/icon.dds"
+	passiveeffect=""
+
+	slowresistance="1.0"
+>
+	<onframe />
+	
+	<oninflict>
+		<setaccumulator value="0" />
+	</oninflict>
+	
+	<onexpired>
+		<compare a="accumulator" b="0" op="eq">
+			<startcooldown entity="this_proxy_entity" duration="10000" />
+		</compare>
+	</onexpired>
+</state>

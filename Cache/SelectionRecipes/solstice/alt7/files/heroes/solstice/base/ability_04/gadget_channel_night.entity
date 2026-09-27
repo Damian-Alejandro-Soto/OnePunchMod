@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gadget
+	name="Gadget_Solstice_Ability4_Channel_Night"
+	
+	model="/shared/models/invis.mdf"
+	icon="../../icon.dds"
+	
+	boundsheight="0"
+	boundsradius="0"
+	isselectable="false"
+	canrotate="false"
+	ismobile="false"
+	effectscale="1"
+
+	attacktype="none"
+
+	lifetime="3000"
+	deathtime="0"
+	corpsetime="0"
+	
+	invulnerable="true"
+	flying="true"
+	flyheight="100"
+	
+	sightrangeday="0"
+	sightrangenight="0"
+	
+	drawonmap="false"
+	
+	passiveeffect="/heroes/solstice/alt7/ability_04/effects/channel_night.effect"
+	alwaysvisible="true"
+	hidden="true"
+	
+	stealthtype="unrevealable"
+	fadetime="0"
+>
+	
+</gadget>

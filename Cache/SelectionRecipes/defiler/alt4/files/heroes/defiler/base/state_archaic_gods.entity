@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Archaic_Gods"
+
+	icon=""
+	passiveeffect="/heroes/zephyr/alt4/effects/archaic.effect"
+	
+	ishidden="true"
+	
+	effecttype=""
+>
+	<modifier key="iamsheeped" modpriority="300"
+		passiveeffect=""
+	/>
+</state>

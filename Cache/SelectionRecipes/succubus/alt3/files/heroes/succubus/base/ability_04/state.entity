@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Succubus_Ability4"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/succubis/alt3/ability_04/effects/state.effect"
+	
+	stunned="true"
+	stunnedreduction="ignore"
+	frozen="true"
+	immobilized="true"
+	
+	sighted="true"
+	revealed="true"
+	
+	impactinterval="1000"
+	
+	effecttype=""
+
+	modifierkey="channeled_stun_ability"
+
+	negativeeffect="suppressed"
+>
+	<onimpact>
+		<damage effecttype="Magic" amount="100,160,220" />
+	</onimpact>
+	
+	<onframe>
+		<setvar0 a="0.05" b="target_maxmana" op="mult" />
+		<evaluate a="var0" b="frametime" op="mult" />
+		<takemana target="target_entity" amount="1" b="result" op="mult" />
+		<givemana target="source_entity" amount="result" />
+	</onframe>
+	
+	<onexpired>
+		<applystate name="State_Succubus_Ability4_Assist" target="target_entity" duration="50" />
+		<playanim name="idle" target="target_entity" />
+	</onexpired>
+	
+	<modifier key="ult_boost" modpriority="100"
+		passiveeffect="/heroes/succubis/alt3/ability_04/effects/state_boost.effect"
+	>
+		
+		<onframe>
+			<setvar0 a="0.05" b="target_maxmana" op="mult" />
+			<evaluate a="var0" b="frametime" op="mult" />
+			<takemana target="target_entity" amount="1" b="result" op="mult" />
+			<givemana target="source_entity" amount="result" />
+			
+			<!-- Dispel if Succubus is dead, Stunned, Silenced, or deleted, or if the target is outside of the leash range -->
+			<distance />
+			<compare a="result" b="1200" op="gt">
+				<expire />
+			</compare>
+			<else>
+				<targettype type="alive" source="source_entity" target="source_entity">
+					<targettype type="stunned" source="source_entity" target="source_entity">
+						<expire />
+					</targettype>
+					<else>
+						<targettype type="silenced" source="source_entity" target="source_entity">
+							<expire />
+						</targettype>
+						<else>
+							<compare a="source_entity" b="0" op="eq">
+								<expire />
+							</compare>
+						</else>
+					</else>
+				</targettype>
+				<else>
+					<expire />
+				</else>
+			</else>
+			
+			<cantarget target="target_entity" ignoreinvulnerable="false" />
+			<else>
+				<expire />
+			</else>
+		</onframe>
+		
+		<onexpired>
+			<hidechannelbar toolname="Ability_Succubus4" target="source_entity" />
+			<applystate name="State_Succubus_Ability4_Assist" source="source_owner_entity" target="target_entity" duration="50" />
+			<playanim name="idle" target="target_entity" />
+		</onexpired>
+	</modifier>
+</state>

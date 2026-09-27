@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Jeraziah_Ability2_Assist"
+
+	icon="/heroes/jereziah/alt9/ability_02/icon.dds"
+	passiveeffect=""
+	
+	serverentity="true"
+	
+	effecttype="StatusDebuff"
+	
+
+>
+</state>

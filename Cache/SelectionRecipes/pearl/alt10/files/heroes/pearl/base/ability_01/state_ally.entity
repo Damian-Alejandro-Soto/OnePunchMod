@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Pearl_Ability1_Ally"
+	
+	icon="/heroes/pearl/alt10/ability_01/icon.dds"
+	
+	passiveeffect="/heroes/pearl/alt10/ability_01/effects/state.effect"
+	
+	effecttype="StatusBuff"
+	allowtransfer="true"
+	effectinheritsstart="true"
+	dynamicprecache="effects/explosion.effect,effects/impact_enemy.effect"
+>
+	<onframe />
+	
+	<oninflict>
+		<dispel type="StatusDebuff" />
+	</oninflict>
+	
+	<onrefresh>
+		<dispel type="StatusDebuff" />
+	</onrefresh>
+	
+	<onexpired>
+		<compare a="dispelled" b="0" op="eq">			
+			<!-- VFX -->
+			<setstr0 a="altavatar_path" b="effects/explosion.effect" op="add" />
+			<exists path="str0">
+				<playeffectdynamic effect="str0" source="this_owner_entity" occlude="true" />
+			</exists>
+			<else>
+				<playeffectdynamic effect="effects/explosion.effect" source="this_owner_entity" occlude="true" />
+			</else>
+			
+			<areaofeffect
+				radius="400"
+				targetselection="all"
+				targetscheme="enemy_units"
+				effecttype=""
+				center="this_owner_entity"
+			>
+				<cantarget target="target_entity" effecttype="Magic" ignoresoftimmunity="true">
+					<dispel type="StatusBuff" />
+					<!-- VFX -->
+					<setstr0 a="altavatar_path" b="effects/impact_enemy.effect" op="add" />
+					<exists path="str0">
+						<playeffectdynamic effect="str0" source="this_owner_entity" occlude="true" />
+					</exists>
+					<else>
+						<playeffectdynamic effect="effects/impact_enemy.effect" source="this_owner_entity" occlude="true" />
+					</else>
+					
+					<applystate name="State_Second_Pearl_Ability1" duration="600,900,1200,1500" />
+					<damage effecttype="Magic" amount="80,120,160,200" />
+				</cantarget>
+			</areaofeffect>
+		</compare>
+	</onexpired>
+</state>

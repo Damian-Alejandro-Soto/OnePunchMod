@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Solstice_Ability1_Enemy_Night"
+	
+	icon="icon_b.tga"
+	passiveeffect="/heroes/solstice/alt9/ability_01/effects/state_enemy_slow.effect"
+	ishidden="false"
+	
+	movespeedslow="0.35"
+	allowtransfer="true"
+	effecttype="StatusDebuff"
+
+	negativeeffect="slowed"
+>
+
+</state>

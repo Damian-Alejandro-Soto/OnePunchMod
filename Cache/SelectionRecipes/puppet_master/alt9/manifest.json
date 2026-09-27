@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "app": "One Punch Mod | Hero Arena",
+  "hero": "puppet_master",
+  "legacy_folder": "puppetmaster",
+  "avatar": "alt9",
+  "counts": {
+    "files": 127,
+    "models": 48,
+    "materials": 9,
+    "textures": 10,
+    "effects": 17,
+    "sounds": 43,
+    "icons": 1,
+    "entities": 0
+  },
+  "unresolved": [],
+  "status": "clean"
+}

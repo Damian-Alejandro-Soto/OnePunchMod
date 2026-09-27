@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Prophet_Art"
+	
+	ishidden="true"
+	deathpersist="true"
+	propagatetoillusions="true"
+>
+	<onframe>
+		<compare target="this_proxy_entity" a="target_charges" b="3" op="eq">
+			<setactivemodifierkey name="Prophet_Ability4_3" />
+		</compare>
+		<compare target="this_proxy_entity" a="target_charges" b="2" op="eq">
+			<setactivemodifierkey name="Prophet_Ability4_2" />
+		</compare>
+		<compare target="this_proxy_entity" a="target_charges" b="1" op="eq" >
+			<setactivemodifierkey name="Prophet_Ability4_1" />
+		</compare>
+		<compare target="this_proxy_entity" a="target_charges" b="0" op="eq">
+			<setactivemodifierkey name="" />
+		</compare>
+	</onframe>
+	
+	<modifier key="Prophet_Ability4_3" modpriority="100"
+		passiveeffect="/heroes/prophet/alt4/ability_04/effects/state_self3.effect"
+	/>
+	
+	<modifier key="Prophet_Ability4_2" modpriority="100"
+		passiveeffect="/heroes/prophet/alt4/ability_04/effects/state_self2.effect"
+	/>
+	
+	<modifier key="Prophet_Ability4_1" modpriority="100"
+		passiveeffect="/heroes/prophet/alt4/ability_04/effects/state_self1.effect"
+	/>
+</state>

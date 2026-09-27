@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "hero": "chronos",
+  "avatar": "alt3",
+  "files": [
+    "heroes\\chronos\\base\\hero.entity",
+    "heroes\\chronos\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\chronos\\base\\ability_03\\state.entity",
+    "heroes\\chronos\\base\\ability_03\\state.entity.onepunch_ability_managed",
+    "heroes\\chronos\\base\\ability_03\\state_attack.entity",
+    "heroes\\chronos\\base\\ability_03\\state_attack.entity.onepunch_ability_managed",
+    "heroes\\chronos\\base\\ability_03\\state_timelock.entity",
+    "heroes\\chronos\\base\\ability_03\\state_timelock.entity.onepunch_ability_managed"
+  ]
+}

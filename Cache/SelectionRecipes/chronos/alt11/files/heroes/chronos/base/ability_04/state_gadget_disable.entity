@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Chronos_Ability4_GadgetDisable"
+
+	icon="/heroes/chronos/alt11/ability_04/icon.dds"
+	displaylevel="true"
+	passiveeffect=""
+	
+	frozen="true"
+	stunned="true"
+	stunnedreduction="ignore"
+>
+	<onframe />
+</state>

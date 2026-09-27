@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<state
+	name="State_Maliken_Ability4"
+
+	icon="../../icon.dds"
+	passiveeffect="/heroes/maliken/alt5/ability_04/effects/wings_large.effect"
+	displaylevel="true"
+	propagatetoillusions="true"
+
+	modifierkey="malikenult_1,malikenult_2,malikenult_3"
+	modifierkey2="malikenult"
+	
+	effecttype=""
+	maxcharges="60"
+
+	impactinterval="100"
+	dynamicprecache="effects/cast.effect"
+>
+	<modifier key="maliken_armor_bonus" modpriority="100" armor="5,10,15" />
+
+	<oninflict>
+		<setcharges a="60" />
+		<activatemodifierkey name="maliken_armor_bonus" />
+	</oninflict>
+	
+	<onrefresh>
+		<setcharges a="60" />
+		<activatemodifierkey name="maliken_armor_bonus" />
+	</onrefresh>
+	
+	<onimpact>
+		<removecharge />
+		<compare a="charges" b="0" op="le">
+			<deactivatemodifierkey name="maliken_armor_bonus" />
+		</compare>
+	</onimpact>
+
+	<onframe />
+	
+	<onattackimpact>
+		<cantarget targetscheme="enemy_units">
+			<splashdamage a="total_adjusted_damage" b="0.15,0.25,0.35" op="mult" radius="75" effecttype="Physical Splash Cleave" targetscheme="enemy_units" centerontarget="true" />
+			<splashdamage a="total_adjusted_damage" b="0.15,0.25,0.35" op="mult" radius="200" effecttype="Physical Splash Cleave" targetscheme="enemy_units" centerontarget="true" />
+			<splashdamage a="total_adjusted_damage" b="0.20,0.25,0.3" op="mult" radius="350" effecttype="Physical Splash Cleave" targetscheme="enemy_units" centerontarget="true" />
+			
+			<areaofeffect
+				targetselection="all"
+				targetscheme="enemy_units"
+				center="target_entity"
+				radius="350"
+				effecttype="Physical Splash Cleave"
+				ignore="target_entity"
+			>
+				<!-- playeffect doesn't work if the modifier has no name. -->
+				<playeffect effect="/shared/effects/splash_damage.effect" source="target_entity" target="stack_entity"/>
+			</areaofeffect>
+		</cantarget>
+	</onattackimpact>
+	
+	<onexpired>
+			<setstr0 a="altavatar_path" b="effects/cast.effect" op="add" />
+		<exists path="str0">
+			<playeffectdynamic effect="str0" source="source_entity" target="" />
+		</exists>
+		<else>
+			<playeffectdynamic effect="effects/cast.effect" source="source_entity" target="" />
+		</else>
+	</onexpired>
+	
+	<modifier key="krosmode" modpriority="100"
+		morphmodel="/heroes/maliken/base/ability_04/model.mdf"
+		morphpreglobalscale="1.64"
+		morphattackprojectile="Projectile_MalikenAttack"
+		morphattackcooldown="1700"
+		morphattackoffset="0 100 70"
+		morphattackrange="600"
+		morphattacktype="ranged"
+		morphattackimpacteffect=""
+
+		morphpriority="100"
+	/>
+</state>

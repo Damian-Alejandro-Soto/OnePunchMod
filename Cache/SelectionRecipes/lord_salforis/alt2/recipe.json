@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "hero": "lord_salforis",
+  "avatar": "alt2",
+  "files": [
+    "heroes\\lord_salforis\\base\\hero.entity",
+    "heroes\\lord_salforis\\base\\hero.entity.hon_avatar_switcher_created",
+    "heroes\\lord_salforis\\base\\state_lordsalforis_ult_boost.entity",
+    "heroes\\lord_salforis\\base\\state_lordsalforis_ult_boost.entity.onepunch_ability_managed"
+  ]
+}

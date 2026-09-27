@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "magmus",
+  "avatar": "scorpion",
+  "files": [
+    "heroes\\magmus\\base\\hero.entity",
+    "heroes\\magmus\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}

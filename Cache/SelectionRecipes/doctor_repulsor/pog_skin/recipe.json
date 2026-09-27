@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "hero": "doctor_repulsor",
+  "avatar": "pog_skin",
+  "files": [
+    "heroes\\doctor_repulsor\\base\\hero.entity",
+    "heroes\\doctor_repulsor\\base\\hero.entity.hon_avatar_switcher_created"
+  ]
+}
