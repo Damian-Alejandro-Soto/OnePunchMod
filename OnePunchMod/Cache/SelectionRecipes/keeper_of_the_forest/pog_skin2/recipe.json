@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "keeper_of_the_forest",
-  "avatar": "pog_skin2",
-  "files": [
-    "heroes\\keeper_of_the_forest\\base\\hero.entity",
-    "heroes\\keeper_of_the_forest\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

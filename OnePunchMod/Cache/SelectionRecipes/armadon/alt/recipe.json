@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "armadon",
-  "avatar": "alt",
-  "files": [
-    "heroes\\armadon\\base\\hero.entity",
-    "heroes\\armadon\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

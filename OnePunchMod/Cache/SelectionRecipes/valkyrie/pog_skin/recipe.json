@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "valkyrie",
-  "avatar": "pog_skin",
-  "files": [
-    "heroes\\valkyrie\\base\\hero.entity",
-    "heroes\\valkyrie\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

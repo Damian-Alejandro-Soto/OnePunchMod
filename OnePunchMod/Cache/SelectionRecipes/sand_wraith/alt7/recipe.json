@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "sand_wraith",
-  "avatar": "alt7",
-  "files": [
-    "heroes\\sand_wraith\\base\\hero.entity",
-    "heroes\\sand_wraith\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

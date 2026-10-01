@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "geomancer",
-  "avatar": "soccer_skin",
-  "files": [
-    "heroes\\geomancer\\base\\hero.entity",
-    "heroes\\geomancer\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

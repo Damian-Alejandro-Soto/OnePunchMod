@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "bombardier",
-  "avatar": "alt",
-  "files": [
-    "heroes\\bombardier\\base\\hero.entity",
-    "heroes\\bombardier\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

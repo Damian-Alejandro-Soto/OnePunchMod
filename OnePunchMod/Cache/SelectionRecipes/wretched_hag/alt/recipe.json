@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "wretched_hag",
-  "avatar": "alt",
-  "files": [
-    "heroes\\wretched_hag\\base\\hero.entity",
-    "heroes\\wretched_hag\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

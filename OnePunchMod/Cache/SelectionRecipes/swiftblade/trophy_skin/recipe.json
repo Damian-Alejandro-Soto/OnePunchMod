@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "swiftblade",
-  "avatar": "trophy_skin",
-  "files": [
-    "heroes\\swiftblade\\base\\hero.entity",
-    "heroes\\swiftblade\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

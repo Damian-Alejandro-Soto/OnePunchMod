@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<state
-	name="State_Engineer_Ability4_FenceLink"
-	icon="../../icon.dds"
-	ishidden="false"
-	passiveeffect="/heroes/engineer/alt3/ability_04/zapper/link.effect"
->
-
-</state>
