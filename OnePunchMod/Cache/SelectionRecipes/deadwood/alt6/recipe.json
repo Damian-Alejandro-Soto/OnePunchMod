@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "deadwood",
-  "avatar": "alt6",
-  "files": [
-    "heroes\\deadwood\\base\\hero.entity",
-    "heroes\\deadwood\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

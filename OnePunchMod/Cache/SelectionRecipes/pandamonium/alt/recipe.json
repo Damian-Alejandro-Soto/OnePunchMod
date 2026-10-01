@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "pandamonium",
-  "avatar": "alt",
-  "files": [
-    "heroes\\pandamonium\\base\\hero.entity",
-    "heroes\\pandamonium\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

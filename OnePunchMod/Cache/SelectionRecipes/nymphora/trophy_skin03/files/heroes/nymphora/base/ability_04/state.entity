@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<state
-	name="State_Nymphora_Ability4"
-	
-	icon="../../icon.dds"
-	passiveeffect="/heroes/fairy/trophy_skin/ability_04/state.effect"
->
-
-</state>

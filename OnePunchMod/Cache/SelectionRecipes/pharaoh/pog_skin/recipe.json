@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "pharaoh",
-  "avatar": "pog_skin",
-  "files": [
-    "heroes\\pharaoh\\base\\hero.entity",
-    "heroes\\pharaoh\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

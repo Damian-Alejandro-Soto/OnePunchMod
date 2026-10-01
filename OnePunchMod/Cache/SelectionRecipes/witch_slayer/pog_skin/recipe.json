@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "witch_slayer",
-  "avatar": "pog_skin",
-  "files": [
-    "heroes\\witch_slayer\\base\\hero.entity",
-    "heroes\\witch_slayer\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

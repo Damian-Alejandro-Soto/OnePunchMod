@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "dark_lady",
-  "avatar": "pog_skin",
-  "files": [
-    "heroes\\dark_lady\\base\\hero.entity",
-    "heroes\\dark_lady\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

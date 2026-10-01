@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "kane",
-  "avatar": "alt8",
-  "files": [
-    "heroes\\kane\\base\\hero.entity",
-    "heroes\\kane\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

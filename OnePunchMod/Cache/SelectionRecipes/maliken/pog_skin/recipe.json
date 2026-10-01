@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "maliken",
-  "avatar": "pog_skin",
-  "files": [
-    "heroes\\maliken\\base\\hero.entity",
-    "heroes\\maliken\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

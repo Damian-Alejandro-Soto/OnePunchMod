@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "predator",
-  "avatar": "alt5",
-  "files": [
-    "heroes\\predator\\base\\hero.entity",
-    "heroes\\predator\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

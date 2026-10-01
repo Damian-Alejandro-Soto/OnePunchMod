@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "magmus",
-  "avatar": "pog_skin",
-  "files": [
-    "heroes\\magmus\\base\\hero.entity",
-    "heroes\\magmus\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

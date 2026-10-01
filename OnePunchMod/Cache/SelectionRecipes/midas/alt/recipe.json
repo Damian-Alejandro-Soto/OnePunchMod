@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "midas",
-  "avatar": "alt",
-  "files": [
-    "heroes\\midas\\base\\hero.entity",
-    "heroes\\midas\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}

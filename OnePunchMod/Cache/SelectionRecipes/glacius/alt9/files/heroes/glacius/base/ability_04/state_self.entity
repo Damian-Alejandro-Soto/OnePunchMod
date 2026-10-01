@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<state
-	name="State_Glacius_Ability4_Self"
-	
-	ishidden="true"
-	icon="../../icon.dds"
- passiveeffect="/heroes/frosty/alt9/ability_04/effects/state_self.effect">
-	<aura state="State_Glacius_Ability4" radius="700" targetscheme="enemy_units" duration="1000" />
-</state>

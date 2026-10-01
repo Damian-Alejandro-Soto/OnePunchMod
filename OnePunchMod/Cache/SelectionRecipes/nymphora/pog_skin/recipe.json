@@ -1,9 +1,0 @@
-{
-  "version": 1,
-  "hero": "nymphora",
-  "avatar": "pog_skin",
-  "files": [
-    "heroes\\nymphora\\base\\hero.entity",
-    "heroes\\nymphora\\base\\hero.entity.hon_avatar_switcher_created"
-  ]
-}
