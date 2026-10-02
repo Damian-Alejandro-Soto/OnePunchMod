@@ -2,7 +2,7 @@
 
 # ⚔️ OnePunchMod
 
-### <Short tagline describing what OnePunchMod does>
+### 
 
 *A modern mod/tool for Heroes of Newerth.*
 
@@ -20,6 +20,24 @@
 </div>
 
 ---
+
+## 📥 Download
+
+
+1. Download the mod and install at **<Game Directory>/OnePunchMod**:
+   Option 1. Installer (.exe) https://github.com/Damian-Alejandro-Soto/OnePunchMod/blob/main/OnePunchMod/OnePunchMod1.0.exe
+   Option 2. Manual Installer (.zip) https://github.com/Damian-Alejandro-Soto/OnePunchMod/blob/main/OnePunchMod/OnePunchMod1.0.zip
+
+2. Download the legacy assets and unzip at **<Game Directory>/OnePunchMod**:
+   Option 1. MEGA 	https://mega.nz/file/6h4S1DCQ#sl0ZlxXCh56DZ0MSx1WfkHx6GFQPuw_wyRrVmS68xW8
+   Option 2. MediaFire 	https://www.mediafire.com/file/jh9hx55260mud1e/PreparedAssets1.0.zip/file
+   Option 3. pCloud 	https://u.pcloud.link/publink/show?code=XZiFa4JZUkr6qzVByjfLI288qzq9zBhQjGg7
+   Option 4. GoogleDrive 	https://drive.google.com/file/d/1EXtOCIHrCRJ5kFfpSg_9bYn2WqLrdOiE/view?usp=drive_link
+
+   3. Start the tool
+   Option 1. Use the launcher at your desktop.
+   Option 2. Run on cmd `start "" pythonw.exe "one_punch_mod.py"`
+
 
 
 ## 📸 Media
@@ -50,18 +68,6 @@ https://youtu.be/uVfdayG_0vk
 
 ---
 
-## 📥 Download
-
-### Latest Release
-
-**Version:** `<VERSION>`
-
-📦 **[Download OnePunchMod](<DOWNLOAD_URL>)**
-
-> [!IMPORTANT]
-> <Add any important information users should know before downloading.>
-
-The complete package is approximately **<SIZE> GB**.
 
 ---
 
