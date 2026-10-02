@@ -136,18 +136,6 @@ Contributions, suggestions, and improvements are welcome.
 
 ---
 
-## ❤️ Credits
-
-**OnePunchMod**
-
-Created by **SirDaemian**
-
-### Special Thanks
-
-- Testers will be named here.
-
----
-
 <div align="center">
 
 <br>
