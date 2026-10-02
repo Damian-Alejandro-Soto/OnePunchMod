@@ -2,8 +2,6 @@
 
 # ⚔️ OnePunchMod
 
-### 
-
 *A modern mod/tool for Heroes of Newerth.*
 
 <br>
@@ -23,54 +21,78 @@
 
 ## 📥 Download
 
+### 1. Download OnePunchMod
 
-1. Download the mod and install at **<Game Directory>/OnePunchMod**:
-   Option 1. Installer (.exe) https://github.com/Damian-Alejandro-Soto/OnePunchMod/blob/main/OnePunchMod/OnePunchMod1.0.exe
-   Option 2. Manual Installer (.zip) https://github.com/Damian-Alejandro-Soto/OnePunchMod/blob/main/OnePunchMod/OnePunchMod1.0.zip
+Download the mod and install it at **`<Game Directory>/OnePunchMod`**.
 
-2. Download the legacy assets and unzip at **<Game Directory>/OnePunchMod**:
-   Option 1. MEGA 	https://mega.nz/file/6h4S1DCQ#sl0ZlxXCh56DZ0MSx1WfkHx6GFQPuw_wyRrVmS68xW8
-   Option 2. MediaFire 	https://www.mediafire.com/file/jh9hx55260mud1e/PreparedAssets1.0.zip/file
-   Option 3. pCloud 	https://u.pcloud.link/publink/show?code=XZiFa4JZUkr6qzVByjfLI288qzq9zBhQjGg7
-   Option 4. GoogleDrive 	https://drive.google.com/file/d/1EXtOCIHrCRJ5kFfpSg_9bYn2WqLrdOiE/view?usp=drive_link
+**Option 1 — [Installer (.exe)](https://github.com/Damian-Alejandro-Soto/OnePunchMod/blob/main/OnePunchMod/OnePunchMod1.0.exe)**
 
-   3. Start the tool
-   Option 1. Use the launcher at your desktop.
-   Option 2. Run on cmd `start "" pythonw.exe "one_punch_mod.py"`
+**Option 2 — [Manual Installer (.zip)](https://github.com/Damian-Alejandro-Soto/OnePunchMod/blob/main/OnePunchMod/OnePunchMod1.0.zip)**
 
 
+### 2. Download the Legacy Assets
+
+Download the legacy assets and unzip them at **`<Game Directory>/OnePunchMod`**.
+
+**Option 1 — [MEGA](https://mega.nz/file/6h4S1DCQ#sl0ZlxXCh56DZ0MSx1WfkHx6GFQPuw_wyRrVmS68xW8)**
+
+**Option 2 — [MediaFire](https://www.mediafire.com/file/jh9hx55260mud1e/PreparedAssets1.0.zip/file)**
+
+**Option 3 — [pCloud](https://u.pcloud.link/publink/show?code=XZiFa4JZUkr6qzVByjfLI288qzq9zBhQjGg7)**
+
+**Option 4 — [Google Drive](https://drive.google.com/file/d/1EXtOCIHrCRJ5kFfpSg_9bYn2WqLrdOiE/view?usp=drive_link)**
+
+
+### 3. Start the Tool
+
+**Option 1 — Desktop Launcher**
+
+Use the OnePunchMod launcher created on your desktop.
+
+**Option 2 — Command Line**
+
+Run:
+
+`start "" pythonw.exe "one_punch_mod.py"`
+
+---
 
 ## 📸 Media
 
-https://youtu.be/uVfdayG_0vk
-
-<img src="/Images/1P_Mod_UI_001.jpg" width="500" alt="OnePunchMod">
-<img src="/Images/1P_Mod_In-Game_001.jpg" width="500" alt="OnePunchMod">
-<img src="/Images/1P_Mod_In-Game_002.jpg" width="500" alt="OnePunchMod">
-<img src="/Images/1P_Mod_In-Game_003.jpg" width="500" alt="OnePunchMod">
-<img src="/Images/1P_Mod_In-Game_004.jpg" width="500" alt="OnePunchMod">
-<img src="/Images/1P_Mod_In-Game_005.jpg" width="500" alt="OnePunchMod">
 
 
 <div align="center">
 
-### Main Interface
-
-<img src="<PATH_TO_SCREENSHOT>" width="750" alt="OnePunchMod Main Interface">
+<a href="/Images/1P_Mod_UI_001.jpg">
+  <img src="/Images/1P_Mod_UI_001.jpg" width="280" alt="OnePunchMod UI">
+</a>
+&nbsp;
+<a href="/Images/1P_Mod_In-Game_001.jpg">
+  <img src="/Images/1P_Mod_In-Game_001.jpg" width="280" alt="OnePunchMod In-Game Screenshot 1">
+</a>
+&nbsp;
+<a href="/Images/1P_Mod_In-Game_002.jpg">
+  <img src="/Images/1P_Mod_In-Game_002.jpg" width="280" alt="OnePunchMod In-Game Screenshot 2">
+</a>
 
 <br><br>
 
-### <Feature / Screen Name>
+<a href="/Images/1P_Mod_In-Game_003.jpg">
+  <img src="/Images/1P_Mod_In-Game_003.jpg" width="280" alt="OnePunchMod In-Game Screenshot 3">
+</a>
+&nbsp;
+<a href="/Images/1P_Mod_In-Game_004.jpg">
+  <img src="/Images/1P_Mod_In-Game_004.jpg" width="280" alt="OnePunchMod In-Game Screenshot 4">
+</a>
+&nbsp;
+<a href="/Images/1P_Mod_In-Game_005.jpg">
+  <img src="/Images/1P_Mod_In-Game_005.jpg" width="280" alt="OnePunchMod In-Game Screenshot 5">
+</a>
 
-<img src="<PATH_TO_SCREENSHOT>" width="750" alt="OnePunchMod Screenshot">
+https://youtu.be/uVfdayG_0vk
+<a href="[/Images/1P_Mod_In-Game_005.jpg](https://youtu.be/uVfdayG_0vk)"></a>
 
 </div>
-
----
-
-
----
-
 
 ---
 
@@ -78,7 +100,8 @@ https://youtu.be/uVfdayG_0vk
 
 1. Start the tool.
 2. Select the avatar you want for your characters.
-3. Click "PLAY".
+3. Click **"PLAY"**.
+
 ---
 
 ## 🐛 Bug Reports & Feature Requests
@@ -109,10 +132,7 @@ Contributions, suggestions, and improvements are welcome.
 4. Commit your changes.
 5. Open a Pull Request.
 
-```bash
-git checkout -b feature/my-new-feature
-```
-
+`git checkout -b feature/my-new-feature`
 
 ---
 
@@ -124,20 +144,18 @@ Created by **SirDaemian**
 
 ### Special Thanks
 
-- testers will be named here.
+- Testers will be named here.
 
 ---
 
 <div align="center">
 
+<br>
+
+[Download](https://github.com/Damian-Alejandro-Soto/OnePunchMod/tree/main/OnePunchMod) • [Report a Bug](../../issues) • [Request a Feature](../../issues)
 
 <br>
 
-[Download](<https://github.com/Damian-Alejandro-Soto/OnePunchMod/tree/main/OnePunchMod>) • [Report a Bug](../../issues) • [Request a Feature](../../issues)
-
-<br>
-
-nostalgia for the old hon.
-
+*nostalgia for the old hon.*
 
 </div>
