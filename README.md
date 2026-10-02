@@ -15,30 +15,19 @@
 
 <br>
 
-<img src="OnePunchMod/Image_OnePunchMod_001.png" width="500" alt="OnePunchMod">
+<img src="../Images/Image_OnePunchMod_001.png" width="500" alt="OnePunchMod">
 
 </div>
 
 ---
 
-## 🎮 About OnePunchMod
 
-**OnePunchMod** is <brief description of the project>.
+## 📸 Media
 
-<Explain what problem the project solves, what it changes in Heroes of Newerth, and why you created it.>
+https://youtu.be/uVfdayG_0vk
 
-### Highlights
+<img src="../Images/Image_OnePunchMod_001.png" width="500" alt="OnePunchMod">
 
-- ⚡ <Main feature>
-- 🎨 <Main feature>
-- 🛠️ <Main feature>
-- 🎮 <Main feature>
-- 🚀 <Main feature>
-- 💾 <Main feature>
-
----
-
-## 📸 Screenshots
 
 <div align="center">
 
