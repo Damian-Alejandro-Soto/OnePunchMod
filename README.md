@@ -15,7 +15,7 @@
 
 <br>
 
-<img src="../Images/Image_OnePunchMod_001.png" width="500" alt="OnePunchMod">
+<img src="/Images/Image_OnePunchMod_001.png" width="500" alt="OnePunchMod">
 
 </div>
 
@@ -26,7 +26,12 @@
 
 https://youtu.be/uVfdayG_0vk
 
-<img src="../Images/Image_OnePunchMod_001.png" width="500" alt="OnePunchMod">
+<img src="/Images/1P_Mod_UI_001.jpg" width="500" alt="OnePunchMod">
+<img src="/Images/1P_Mod_In-Game_001.jpg" width="500" alt="OnePunchMod">
+<img src="/Images/1P_Mod_In-Game_002.jpg" width="500" alt="OnePunchMod">
+<img src="/Images/1P_Mod_In-Game_003.jpg" width="500" alt="OnePunchMod">
+<img src="/Images/1P_Mod_In-Game_004.jpg" width="500" alt="OnePunchMod">
+<img src="/Images/1P_Mod_In-Game_005.jpg" width="500" alt="OnePunchMod">
 
 
 <div align="center">
@@ -42,14 +47,6 @@ https://youtu.be/uVfdayG_0vk
 <img src="<PATH_TO_SCREENSHOT>" width="750" alt="OnePunchMod Screenshot">
 
 </div>
-
----
-
-## 🎥 Demo
-
-See OnePunchMod in action:
-
-▶️ **[Watch the demo on YouTube](<YOUTUBE_URL>)**
 
 ---
 
@@ -253,21 +250,6 @@ Contributions, suggestions, and improvements are welcome.
 git checkout -b feature/my-new-feature
 ```
 
----
-
-## 📜 License
-
-<Describe the license or usage terms here.>
-
-See [`LICENSE`](LICENSE) for more information.
-
----
-
-## ⚠️ Disclaimer
-
-OnePunchMod is an independent community project.
-
-<Add any appropriate disclaimer concerning Heroes of Newerth, its trademarks, assets, original developers/publishers, etc.>
 
 ---
 
@@ -275,28 +257,24 @@ OnePunchMod is an independent community project.
 
 **OnePunchMod**
 
-Created by **Damian Alejandro Soto**
+Created by **SirDaemian**
 
 ### Special Thanks
 
-- <Person / project / community>
-- <Libraries or tools used>
-- <Other credits>
+- testers will be named here.
 
 ---
 
 <div align="center">
 
-### ⚔️ OnePunchMod
-
-**<Your final slogan/tagline>**
 
 <br>
 
-[Download](<DOWNLOAD_URL>) • [Report a Bug](../../issues) • [Request a Feature](../../issues)
+[Download](<https://github.com/Damian-Alejandro-Soto/OnePunchMod/tree/main/OnePunchMod>) • [Report a Bug](../../issues) • [Request a Feature](../../issues)
 
 <br>
 
-Made with ❤️ for the Heroes of Newerth community.
+nostalgia for the old hon.
+
 
 </div>
